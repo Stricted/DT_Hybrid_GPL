@@ -1,0 +1,18 @@
+[settings]
+functionname=hi_kernel_codec_hlp_debug_readreg;  
+attributenum=6;
+attributeflagflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<ui_port_id>     type<uint>   range<0x0,0xFFFFFFFF>  default<0>;
+attribute=alias<ui_reg_addr>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x0>; /*全局模块*/
+attribute=alias<ui_reg_len>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x0>;/*bit0:7,每个比特对应hi_dbglevel_e枚举*/
+attribute=alias<ui_reg1>          type<uint>  range<0x0,0xFFFFFFFF> 	      default<0>;/* 0x0: 关闭不输出; 0x1: 输出所有信息; 0x2: 只输出失败信息; 0x3: 只输出成功信息*/
+attribute=alias<ui_reg2>        type<uint>  range<0x0,0xFFFFFFFF> 	      default<0>;/* 0x0: 关闭不输出; 0x1: 输出所有信息; */
+attribute=alias<ui_reg3>         type<uint>  range<0x0,0xFFFFFFFF> 	      default<0>;
+attribute=alias<ui_reg4>      type<uint>   range<0x0,0xFFFFFFFF>  default<0>;
+
+[help]
+usage: codec_debug
+	codec_debug -v kcmdtype 0xF2003303 ui_port_id 0 ui_reg_addr 0x73  ui_reg_len 0x2  打开全局开关输出所有调试信息 			
+	   

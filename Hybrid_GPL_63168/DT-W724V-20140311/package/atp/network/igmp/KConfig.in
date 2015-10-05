@@ -1,0 +1,64 @@
+config IGMP
+	tristate "IGMP"
+	default y
+config IGMP_SNOOPING
+	tristate "IGMP Snooping"
+	default y
+	depends on IGMP
+config BR_IGMP_STATISTIC
+	bool "IGMP support statistic"
+	default n	
+	depends on IGMP
+config IGMP_ENG_DT
+	bool "IGMP support DT ENG STAT"
+	default n	
+	depends on IGMP
+config IGMP_SSM
+	bool "IGMP support DT SSM requirement"
+	default n	
+	depends on IGMP
+config IGMP_MAX_MSF
+    int "IGMP max source for v3"
+    help
+      igmp max source number
+    default 10
+    depends on IGMP
+config IGMP_MAX_GROUP_NUMBER
+    int "IGMP max groups number"
+    help
+      igmp max groups number
+    default 32
+    depends on IGMP
+config DT_IGMP_ENG
+	bool "IGMP support DT ENG STAT"
+	default n	
+	depends on IGMP 
+	depends on ATP_KERNEL_3_4
+config DT_IGMP_QQIC
+	bool "IGMP support DT QQIC"
+	default n	
+	depends on IGMP 
+	depends on ATP_KERNEL_3_4
+config ATP_IGMP_SSM
+	bool "IGMP support SSM requirement"
+	default n	
+	depends on IGMP
+	depends on ATP_KERNEL_3_4
+config ATP_IGMP
+	bool "ATP IGMP requirement"
+	default n	
+	depends on ATP_KERNEL_3_4
+config ATP_IGMP_DROP_LEAVE_LAN2LAN
+	bool "Drop IGMP leave packet from LAN to LAN"
+	help
+		Drop IGMP leave packet from LAN to LAN
+	default n
+	depends on IGMP
+	depends on ATP_KERNEL_3_4
+config ATP_IGMP_CONTROL_REPORT_NUM
+	bool "Control report number by proc for igmp v3"
+	help
+		Control report number by proc for igmp v3
+	default n
+	depends on IGMP
+	depends on ATP_KERNEL_3_4

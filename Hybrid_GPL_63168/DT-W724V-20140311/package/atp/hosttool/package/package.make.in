@@ -1,0 +1,257 @@
+#############################################################
+#
+# PKGIMAGE
+#
+#############################################################
+
+PKGIMAGE_DEPENDENCIES = atptypes host-atppkg-clean host-atppkg host-sign host-imagecmd
+
+ifneq ($(BROADCOM_CHIP),)
+	PKGIMAGE_DEPENDENCIES += bcmpkg
+endif
+
+ifneq ($(MTK_CHIP),)
+	PKGIMAGE_DEPENDENCIES += mlzma
+endif
+
+ifneq ($(QUALCOMM_CHIP),)
+	PKGIMAGE_DEPENDENCIES += qlzma
+endif
+
+### Version and change logs area
+PKGIMAGE_VERSION = V1.01
+
+define PKGIMAGE_CHANGELOGS
+V1.01:
+	1. First release by sunbo.
+	
+endef
+#############################################################
+
+PKGIMAGE_LICENSE="Huawei private"
+MAIN_FAC_LEN = $(shell expr $(ATP_KILO_SIZE) \* \( $(ATP_BHAL_MAIN_KERNEL_SIZE) + $(ATP_BHAL_MAIN_FS_SIZE) \))
+SLAVE_FAC_LEN = $(shell expr $(ATP_KILO_SIZE) \* \( $(ATP_BHAL_SLAVE_KERNEL_SIZE) + $(ATP_BHAL_SLAVE_FS_SIZE) \) )
+REALEASE_LEN = $(shell expr $(ATP_KILO_SIZE) \* \( $(ATP_BHAL_RESERVED_SIZE) \))
+TAT_LEN = $(shell expr $(ATP_KILO_SIZE) \* \( $(ATP_BHAL_MAIN_TAG_SIZE) \))
+CONFIG_LEN = $(shell expr $(ATP_KILO_SIZE) \* \( $(ATP_BHAL_CURRENT_CONFIG_SIZE) + $(ATP_BHAL_CUSTOMIZE_CONFIG_SIZE) + $(ATP_BHAL_FACTORY_CONFIG_SIZE) + $(ATP_BHAL_TEMP_PARAM_SIZE) + $(ATP_BHAL_TR069_CERT_AUTH_FILE_SIZE) + $(ATP_BHAL_LOG_AREA_SIZE) + $(ATP_BHAL_CRASH_DUMP_SIZE) + $(ATP_BHAL_PPP_SESSION_SIZE) + $(ATP_BHAL_DECT_PHONEBOOK_SIZE) + $(ATP_BHAL_DECT_CALIBRATE_SIZE) \) )
+
+BOOTLOADER_LEN = $(shell expr $(ATP_KILO_SIZE) \* \( $(ATP_BHAL_BOOTLOADER_SIZE) \))
+
+MAIN_KERNEL_LEN = $(shell expr $(ATP_KILO_SIZE) \* \( $(ATP_BHAL_MAIN_KERNEL_SIZE) \))
+MAIN_FS_LEN = $(shell expr $(ATP_KILO_SIZE) \* \( $(ATP_BHAL_MAIN_FS_SIZE) \))
+SLAVE_KERNEL_LEN = $(shell expr $(ATP_KILO_SIZE) \* \( $(ATP_BHAL_SLAVE_KERNEL_SIZE) \))
+SLAVE_FS_LEN = $(shell expr $(ATP_KILO_SIZE) \* \( $(ATP_BHAL_SLAVE_FS_SIZE) \))
+MODULE_FS_LEN = $(shell expr $(ATP_KILO_SIZE) \* \( $(ATP_BHAL_MODULE_FS_SIZE) \))
+CURRENT_CONFIG_LEN = $(shell expr $(ATP_KILO_SIZE) \* \( $(ATP_BHAL_CURRENT_CONFIG_SIZE) \))
+
+TOTAL_FLASH_LEN = $(shell expr $(ATP_KILO_SIZE) \* \( $(ATP_BHAL_FLASH_TOTAL_SIZE) \))
+
+define PACKAGE_PRE_PROC_CMD
+	$(DECT_IMAGE_PRE)
+	$(I2C_IMAGE_PRE)
+	$(SD5115_BOOT_IMAGE_PRE)
+	$(LTE_IMAGE_PRE)
+endef
+
+define PKGIMAGE_INSTALL_HEADER_CMDS
+	
+endef
+
+ifneq ($(BR2_TARGET_ROOTFS_JFFS2),)
+define PKGIMAGE_BUILD_CMDS
+	# create config.ini
+	$(GEN_INI_CMD)
+	# nandflash block size must larger than cferom.bin(set menuconfig can solve)
+	$(BUILD_PRE_BOOTLOADER_CMD)
+	# copy external image to BIN_DIR
+	$(PACKAGE_PRE_PROC_CMD)
+# for support 4.12 NANDFLASH	
+#nandflash	
+	dd if=/dev/zero of=$(BINARIES_DIR)/file128k.tmp bs=1k count=1280
+	cd $(BINARIES_DIR);\
+	$(PACKAGE_CRC_CMD) $(ROOTFS_FILE_NAME) rootfs.crc.tmp;\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -b $(ATP_CHIP_NAME) $(BOARD_ID) $(VOICE_BOARD_ID) $(SYSTEM_TYPE) -c 0 rootfs.crc.tmp $(BINARIES_DIR)/$(ROOTFS_FILE_NAME);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 0 $(ATP_BHAL_BOOTLOADER_SIZE) -f 1 $(ATP_BHAL_MAIN_TAG_SIZE) -f 2 $(ATP_BHAL_SLAVE_TAG_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 3 $(ATP_BHAL_MAIN_KERNEL_SIZE) -f 4 $(ATP_BHAL_MAIN_FS_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 5 $(ATP_BHAL_SLAVE_KERNEL_SIZE) -f 6 $(ATP_BHAL_SLAVE_FS_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 7 $(ATP_BHAL_MAIN_WEB_FS_SIZE) -f 8 $(ATP_BHAL_SLAVE_WEB_FS_SIZE) -f 9 $(ATP_BHAL_MIDDLEWARE_FS_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 10 $(ATP_BHAL_MODULE_FS_SIZE) -f 11 $(ATP_BHAL_RESERVED_SIZE) -f 12 $(ATP_BHAL_CURRENT_CONFIG_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 13 $(ATP_BHAL_CUSTOMIZE_CONFIG_SIZE) -f 14 $(ATP_BHAL_FACTORY_CONFIG_SIZE) -f 15 $(ATP_BHAL_TEMP_PARAM_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 16 $(ATP_BHAL_TR069_CERT_AUTH_FILE_SIZE) -f 17 $(ATP_BHAL_LOG_AREA_SIZE) -f 18 $(ATP_BHAL_CRASH_DUMP_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 19 $(ATP_BHAL_PPP_SESSION_SIZE) -f 20 $(ATP_BHAL_DECT_PHONEBOOK_SIZE) -f 21 $(ATP_BHAL_DECT_CALIBRATE_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 22 $(ATP_BHAL_CONFIG_RESERVED_SIZE) -f 23 $(ATP_BHAL_CONFIG_BACK_SIZE) -f 24 $(ATP_BHAL_CONFIG_BACK_RESERVED_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 25 $(ATP_BHAL_FIXED_PARAM_SIZE) -f 26 $(ATP_BHAL_WLANRF_PARAM_SIZE) -f 27 $(ATP_BHAL_UPG_FLAG_SIZE) -f 28 $(ATP_BHAL_BBT_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 29 $(ATP_BHAL_FLASH_TOTAL_SIZE);\
+	$(if $(BUILD_IMAGE_SIGN),$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -s $(BUILD_UPG_KEY2_KEYSIZE) $(BUILD_UPG_KEY1_ALGID) $(BINARIES_DIR)/$(ROOTFS_FILE_NAME) ,echo "");\
+	cat rootfs.hdr.tmp file128k.tmp | head --bytes=$(FLASH_NAND_BLOCK_SIZE) > rootfs.hdr.a.tmp;\
+	$(PACKAGE_GENFACTORYCFG_CMD)  currentcfg config/currentcfg;\
+	$(ROOTFS_JFFS2_CMD_EX) -e $(CONFIG_LEN) -r config -o currentcfg.jffs2;\
+	$(IMAGE_SIGN_CMD) -s -i $(ROOTFS_FILE_NAME) -o $(ROOTFS_FILE_NAME);\
+	cat cferom.bin file128k.tmp | head --bytes=$(BOOTLOADER_LEN) > cferom.tmp;\
+
+	#readme.txt
+	cp $(TOPDIR)/package/atp/hosttool/package/imagecmd/readme.txt $(BINARIES_DIR)/readme.txt;
+	
+	#remote.lte (生成LTE升级包的动作需要放在生成升级包之前)
+	$(BUILD_REMOTE_LTE_IAMGE_CMD)
+	
+	#release.bin
+	$(BUILD_RELEASE_IAMGE_CMD)
+	
+	#debug.bin
+	$(BUILD_DEBUG_IAMGE_CMD)
+	
+	#acs.bin
+	$(BUILD_ACS_IAMGE_CMD)
+	
+	#release_lte.bin
+	$(BUILD_RELEASE_IAMGE_LTE_CMD)
+	
+	#debug_lte.bin
+	$(BUILD_DEBUG_IAMGE_LTE_CMD)
+	
+	#acs_lte.bin
+	$(BUILD_ACS_IAMGE_LTE_CMD)
+	
+	#multcast.bin (不包含telnet,这个需要配置相应的.config,与release版本的.config相同,包含bootloader的会恢复默认配置，不包含bootloader的不会恢复默认配置)
+	$(BUILD_MULTCAST_NOT_RESTORE_DEFAULT_IAMGE_CMD)
+	
+	#multcast.bin (不包含telnet,这个需要配置相应的.config,与debug版本的.config相同,必定会恢复默认配置)
+	$(BUILD_MULTCAST_RESTORE_DEFAULT_IAMGE_CMD)
+	
+	#multcast.bin (包含telnet,需要平时编译的.config,与debug版本的.config相同,配置会被组播专用配置替换,现象会组播后打开telent)
+	$(BUILD_MULTCAST_WITH_MULTI_CFG_IAMGE_CMD)
+	
+	#factory.w
+	$(BUILD_FACTORY_IAMGE_CMD)
+	
+	#dect.w
+	$(DECT_IMAGE_CMD)
+	
+	#config
+	$(BUILD_CONFIG_IMAGE_CMD)
+	
+	#clean
+	@rm -f $(BINARIES_DIR)/FF	
+	@rm -f $(BINARIES_DIR)/$(ROOTFS_FILE_NAME)
+	@rm -f $(BINARIES_DIR)/*.tmp
+	@rm -f $(BINARIES_DIR)/*.info
+	@rm -f $(BINARIES_DIR)/*.info2
+	@rm -f $(BINARIES_DIR)/$(HGW_PRODUCTNAME)$(HGW_SOFTVERSION)_product.w
+	@rm -f $(BINARIES_DIR)/*.jffs2
+	@rm -f $(BINARIES_DIR)/*.xml
+	@rm -f $(BINARIES_DIR)/eraseconfig
+	@echo -e "Nand Flash. Done!"
+endef
+else
+# norflash is followed:
+ifneq ($(HTML_PARTITION),)
+define PKGIMAGE_BUILD_CMDS
+	# create config.ini
+	$(GEN_INI_CMD)
+	# nandflash block size must larger than cferom.bin(set menuconfig can solve)
+	$(if $(FLASH_NAND_FIRST_BLOCK_WITH_CFERAM),$(BOOTLOADER_SIZE_COMPARE),echo "")
+	dd if=/dev/zero of=$(BINARIES_DIR)/file128k.tmp bs=1k count=128
+	cd $(BINARIES_DIR);\
+	$(PACKAGE_CRC_CMD) $(ATP_LINUX_FILENAME) kernel.crc.tmp;\
+	$(PACKAGE_CRC_CMD) $(ROOTFS_FILE_NAME) rootfs.crc.tmp;\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -b $(ATP_CHIP_NAME) $(BOARD_ID) $(VOICE_BOARD_ID) $(SYSTEM_TYPE) -c 0 rootfs.crc.tmp $(BINARIES_DIR)/$(ROOTFS_FILE_NAME) -c 1 kernel.crc.tmp $(BINARIES_DIR)/$(ATP_LINUX_FILENAME);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 0 $(ATP_BHAL_BOOTLOADER_SIZE) -f 1 $(ATP_BHAL_MAIN_TAG_SIZE) -f 2 $(ATP_BHAL_SLAVE_TAG_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 3 $(ATP_BHAL_MAIN_KERNEL_SIZE) -f 4 $(ATP_BHAL_MAIN_FS_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 5 $(ATP_BHAL_SLAVE_KERNEL_SIZE) -f 6 $(ATP_BHAL_SLAVE_FS_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 7 $(ATP_BHAL_MAIN_WEB_FS_SIZE) -f 8 $(ATP_BHAL_SLAVE_WEB_FS_SIZE) -f 9 $(ATP_BHAL_MIDDLEWARE_FS_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 10 $(ATP_BHAL_MODULE_FS_SIZE) -f 11 $(ATP_BHAL_RESERVED_SIZE) -f 12 $(ATP_BHAL_CURRENT_CONFIG_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 13 $(ATP_BHAL_CUSTOMIZE_CONFIG_SIZE) -f 14 $(ATP_BHAL_FACTORY_CONFIG_SIZE) -f 15 $(ATP_BHAL_TEMP_PARAM_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 16 $(ATP_BHAL_TR069_CERT_AUTH_FILE_SIZE) -f 17 $(ATP_BHAL_LOG_AREA_SIZE) -f 18 $(ATP_BHAL_CRASH_DUMP_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 19 $(ATP_BHAL_PPP_SESSION_SIZE) -f 20 $(ATP_BHAL_DECT_PHONEBOOK_SIZE) -f 21 $(ATP_BHAL_DECT_CALIBRATE_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 22 $(ATP_BHAL_CONFIG_RESERVED_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 23 $(ATP_BHAL_FIXED_PARAM_SIZE) -f 24 $(ATP_BHAL_WLANRF_PARAM_SIZE) -f 25 $(ATP_BHAL_UPG_FLAG_SIZE) -f 26 $(ATP_BHAL_BBT_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 27 $(ATP_BHAL_FLASH_TOTAL_SIZE);\
+	$(if $(BUILD_IMAGE_SIGN),$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -s $(BUILD_UPG_KEY2_KEYSIZE) $(BUILD_UPG_KEY1_ALGID) $(BINARIES_DIR)/$(ROOTFS_FILE_NAME) ,echo "");\
+	cat rootfs.hdr.tmp file128k.tmp | head --bytes=$(PKGIMAGE_FLASH_BLOCK_SIZE) > rootfs.hdr.a.tmp;\
+	$(PACKAGE_GENFACTORYCFG_CMD)  currentcfg config/currentcfg;\
+	$(IMAGE_SIGN_CMD) -s -i $(ROOTFS_FILE_NAME) -o $(ROOTFS_FILE_NAME);\
+	cat cferom.bin file128k.tmp | head --bytes=$(BOOTLOADER_LEN) > cferom.tmp;\
+
+	#readme.txt
+	cp $(TOPDIR)/package/atp/hosttool/package/imagecmd/readme.txt $(BINARIES_DIR)/readme.txt;
+
+	#release.bin
+	$(BUILD_RELEASE_IAMGE_CMD)
+	
+	#multcast.bin (配置会被组播专用配置替换)
+	$(BUILD_MULTCAST_WITH_MULTI_CFG_IAMGE_CMD)
+	
+	#factory.w
+	$(BUILD_FACTORY_IAMGE_CMD)
+	
+	#clean
+	@rm -f $(BINARIES_DIR)/FF	
+	#@rm -f $(BINARIES_DIR)/$(ROOTFS_FILE_NAME)
+	@rm -f $(BINARIES_DIR)/*.tmp
+	@rm -f $(BINARIES_DIR)/*.info
+	@rm -f $(BINARIES_DIR)/*.info2
+	@rm -f $(BINARIES_DIR)/$(HGW_PRODUCTNAME)$(HGW_SOFTVERSION)_product.w
+	@rm -f $(BINARIES_DIR)/*.jffs2
+	@rm -f $(BINARIES_DIR)/*.xml
+	@rm -f $(BINARIES_DIR)/eraseconfig
+	@echo -e "Nand Flash. Done!"
+endef
+else
+define PKGIMAGE_BUILD_CMDS
+	# create config.ini
+	$(GEN_INI_CMD)
+	# nandflash block size must larger than cferom.bin(set menuconfig can solve)
+	$(if $(FLASH_NAND_FIRST_BLOCK_WITH_CFERAM),$(BOOTLOADER_SIZE_COMPARE),echo "")
+	dd if=/dev/zero of=$(BINARIES_DIR)/file128k.tmp bs=1k count=128
+	cd $(BINARIES_DIR);\
+	$(PACKAGE_CRC_CMD) $(ATP_LINUX_FILENAME) kernel.crc.tmp;\
+	$(PACKAGE_CRC_CMD) $(ROOTFS_FILE_NAME) rootfs.crc.tmp;\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -b $(ATP_CHIP_NAME) $(BOARD_ID) $(VOICE_BOARD_ID) $(SYSTEM_TYPE) -c 0 rootfs.crc.tmp $(BINARIES_DIR)/$(ROOTFS_FILE_NAME) -c 1 kernel.crc.tmp $(BINARIES_DIR)/$(ATP_LINUX_FILENAME);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 0 $(ATP_BHAL_BOOTLOADER_SIZE) -f 1 $(ATP_BHAL_MAIN_TAG_SIZE) -f 2 $(ATP_BHAL_SLAVE_TAG_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 3 $(ATP_BHAL_MAIN_KERNEL_SIZE) -f 4 $(ATP_BHAL_MAIN_FS_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 5 $(ATP_BHAL_SLAVE_KERNEL_SIZE) -f 6 $(ATP_BHAL_SLAVE_FS_SIZE) -f 7 $(ATP_BHAL_MIDDLEWARE_FS_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 8 $(ATP_BHAL_MODULE_FS_SIZE) -f 9 $(ATP_BHAL_RESERVED_SIZE) -f 10 $(ATP_BHAL_CURRENT_CONFIG_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 11 $(ATP_BHAL_CUSTOMIZE_CONFIG_SIZE) -f 12 $(ATP_BHAL_FACTORY_CONFIG_SIZE) -f 13 $(ATP_BHAL_TEMP_PARAM_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 14 $(ATP_BHAL_TR069_CERT_AUTH_FILE_SIZE) -f 15 $(ATP_BHAL_LOG_AREA_SIZE) -f 16 $(ATP_BHAL_CRASH_DUMP_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 17 $(ATP_BHAL_PPP_SESSION_SIZE) -f 18 $(ATP_BHAL_DECT_PHONEBOOK_SIZE) -f 19 $(ATP_BHAL_DECT_CALIBRATE_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 20 $(ATP_BHAL_FIXED_PARAM_SIZE) -f 21 $(ATP_BHAL_WLANRF_PARAM_SIZE) -f 22 $(ATP_BHAL_UPG_FLAG_SIZE) -f 23 $(ATP_BHAL_BBT_SIZE);\
+	$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -f 24 $(ATP_BHAL_FLASH_TOTAL_SIZE);\
+	$(if $(BUILD_IMAGE_SIGN),$(PACKAGE_GENHEAD_CMD) -i rootfs.hdr.tmp -s $(BUILD_UPG_KEY2_KEYSIZE) $(BUILD_UPG_KEY1_ALGID) $(BINARIES_DIR)/$(ROOTFS_FILE_NAME) ,echo "");\
+	cat rootfs.hdr.tmp file128k.tmp | head --bytes=$(PKGIMAGE_FLASH_BLOCK_SIZE) > rootfs.hdr.a.tmp;\
+	$(PACKAGE_GENFACTORYCFG_CMD)  currentcfg config/currentcfg;\
+	$(IMAGE_SIGN_CMD) -s -i $(ROOTFS_FILE_NAME) -o $(ROOTFS_FILE_NAME);\
+	cat cferom.bin > cferom.tmp;\
+
+	#readme.txt
+	cp $(TOPDIR)/package/atp/hosttool/package/imagecmd/readme.txt $(BINARIES_DIR)/readme.txt;
+
+	#release.bin
+	$(BUILD_RELEASE_IAMGE_CMD)
+	
+	#multcast.bin (配置会被组播专用配置替换)
+	$(BUILD_MULTCAST_WITH_MULTI_CFG_IAMGE_CMD)
+	
+	#factory.w
+	$(BUILD_FACTORY_IAMGE_CMD)
+	
+	#clean
+	@rm -f $(BINARIES_DIR)/FF	
+	@rm -f $(BINARIES_DIR)/$(ROOTFS_FILE_NAME)
+	@rm -f $(BINARIES_DIR)/*.tmp
+	@rm -f $(BINARIES_DIR)/*.info
+	@rm -f $(BINARIES_DIR)/*.info2
+	@rm -f $(BINARIES_DIR)/$(HGW_PRODUCTNAME)$(HGW_SOFTVERSION)_product.w
+	@rm -f $(BINARIES_DIR)/*.jffs2
+	@rm -f $(BINARIES_DIR)/*.xml
+	@rm -f $(BINARIES_DIR)/eraseconfig
+	@echo -e "Nand Flash. Done!"
+endef
+endif
+endif
+
+define PKGIMAGE_INSTALL_TARGET_CMDS
+	
+endef
+
+$(eval $(call ATPTARGETS,package/atp/hosttool/package,pkgimage,targets))

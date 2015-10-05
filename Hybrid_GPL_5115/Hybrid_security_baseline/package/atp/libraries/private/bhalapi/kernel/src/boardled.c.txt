@@ -1,0 +1,1900 @@
+/*
+<:copyright-Huawei
+ Copyright 2008 Huawei. All Rights Reserved.
+:>
+ */
+
+/***************************************************************************
+ * File Name  : Led.c
+ *
+ * Description: This file contains Linux character device driver entry
+ *              for the Led related ioctl calls: add led, delete led,modify led etc.
+ *
+ *
+ **************************************************************************/
+#include <linux/version.h>
+#include <linux/init.h>
+#include <linux/errno.h>
+#include <linux/module.h>
+#include <linux/list.h>
+#include <linux/if.h>
+#include <linux/fs.h>
+//#include <linux/timer.h>
+#include <linux/netdevice.h>
+//#include <linux/delay.h>
+#include "atpconfig.h"
+#if defined (CONFIG_MIPS_TC3162U)
+#define printf	printk
+#define LED_MAX_NO				32
+
+#define LED_SPEED_FAST_BNO		2
+#define LED_SPEED_MED_BNO		5
+#define LED_SPEED_SLOW_BNO		10
+#define LED_SPEED_VERY_SLOW_BNO	20
+#define LED_SPEED_SLOWLY_BNO	30
+
+#define LED_OFF(x) 		VPint(CR_GPIO_DATA) |= (1<<(x))
+#define LED_ON(x) 		VPint(CR_GPIO_DATA) &= ~(1<<(x))
+#define LED_OEN(x)		do { VPint(CR_GPIO_CTRL) |= (1<<((x)*2)); VPint(CR_GPIO_ODRAIN) |= (1<<(x)); } while(0)
+#define LED_IEN(x)		do { VPint(CR_GPIO_CTRL) &= ~(0x00000003 << ((x) * 2)); \
+				VPint(CR_GPIO_ODRAIN) &= ~(0x00000001 << (x)); } while(0)
+// debug macro
+#if 1
+#define LED_DBG(x)
+#define LED_DBG_W(x, y)
+#define LED_DBG_B(x, y)
+#define LED_DBG_L(x, y)
+#else
+static int led_dbg = 0;
+
+#define LED_DBG 		if(led_dbg&0x01) dbg_pline_1
+#define LED_DBG_W 		if(led_dbg&0x01) dbg_plinew_1
+#define LED_DBG_B 		if(led_dbg&0x01) dbg_plineb_1
+#define LED_DBG_L 		if(led_dbg&0x01) dbg_plinel_1
+#endif
+#define REST_GPIO_TC 0
+#define WPS_GPIO_TC 1
+#define WLAN_SWITCH_GPIO_TC 2
+
+#define GPIO_BASE_ADDRESS       CR_GPIO_BASE    
+#define GPIO_CTRL_REG_ADRRESS   CR_GPIO_CTRL
+#define GPIO_DATA_REG_ADRRESS   CR_GPIO_DATA
+#define GPIO_OUT_ENABLE_REG_ADRRESS   CR_GPIO_ODRAIN
+
+#define REG32(reg)   (*(volatile unsigned int *)((unsigned int)reg))
+#endif
+
+
+
+#if defined (SUPPORT_HG612) || defined (SUPPORT_HG620)|| defined (SUPPORT_HG610)
+#include <bcm_map_part.h>
+#endif
+
+#ifdef CONFIG_MIPS_TC3162U 
+#include <bhalplat.h>
+
+#endif
+
+#include "boardled.h"
+
+#define TIMER_1HZ_TIMES 8
+#define TIMER_INTERVAL_125MS        (HZ / TIMER_1HZ_TIMES)              /*125ms*/
+#define LED_DELAY_TIME              (((1000) / TIMER_1HZ_TIMES) * 2)    /*250ms*/
+#define BUFFER_LEN 256
+
+int ethwan_interface_state = 0; /* add for hg231f internet led by f00110348 */
+
+static int blinkCountDown = 0;
+static int stateBeforeBlinkOnce = LED_STATE_OFF;
+
+/*start of modify by j00127542 20091015 for A36D08340*/
+bool LedTest = FALSE;
+EXPORT_SYMBOL(LedTest);
+/*end of modify by j00127542 20091015 for A36D08340*/
+
+/*
+Note:这里把各个芯片方案的USB点灯统一，包括U盘、数据卡、打印机等等，
+如果没有特殊情况，请按照这个方案进行添加修改，尽量避免用各个芯片宏隔，以便维护管理和移植。
+Add start for USB device led, DTS2010061800769, l67944, 20100625,
+*/
+int g_USB_PROBE = 0;
+EXPORT_SYMBOL(g_USB_PROBE);
+/*Add end, l67944, 20100625*/
+
+typedef struct
+{
+    int         iUsed;
+    LED_INFO_ST stLedInfo;
+} BOARD_LED_ST;
+
+/***********************************************************************
+ * 函数声明
+ **********************************************************************/
+static int __init          Led_module_init(void);
+static void __exit         Led_module_uninit(void);
+
+int                        led_register(LED_INFO_ST stLedInfo);
+int                        led_unregister(LED_NAME enName);
+
+void                       led_freq_change(LED_NAME enName, LED_FREQ_EN enFreq, LED_FREQ_EN enOnLst);
+void                       led_state_change(LED_NAME enName, LED_STATE_EN enState);
+
+int                        led_init(LED_INFO_ST* pstLedInfo);
+int                        led_act(LED_INFO_ST* pstLedInfo, LED_STATE_EN enLedState);
+int                        led_process(LED_INFO_ST* pstLedInfo);
+void                       led_timer_start(void);
+void                       led_run(void);
+void                       led_gpio_mode(LED_GPIO_EN enGpio);
+void                       led_gpio_dir(LED_GPIO_EN enGpio, LED_GPIO_DIR_EN enDir);
+void                       led_gpio_act(LED_GPIO_EN enGpio, LED_GPIO_ACT_EN enAct);
+
+int                        netdev_led_add(LED_NAME enLedName, LED_NAME enLedNameFail, u8* pDevName);
+int                        netdev_led_del(LED_NAME enLedName, LED_NAME enLedNameFail, u8* pDevName);
+
+int                        netdev_led_state_change(LED_NAME enLedName, LED_NAME enLedNameFail,
+                                                   u8* pDevName, LED_STATE_EN enStat);
+int                        netdev_led_process(void);
+
+/* 需要监控网络设备的流量来点灯的LED初始化 */
+int                        netdev_led_init(void);
+
+/* 为LED装备测试提供接口 */
+
+/* 禁用LED闪烁, 所有LED熄灭 */
+void                       set_led_all_disable(void);
+
+/* 禁用LED闪烁, 所有LED点亮 */
+void                       set_led_all_active(void);
+
+/* 启用LED闪烁, 所有LED恢复当前状态 */
+void                       set_led_all_enable(void);
+
+#if defined (SUPPORT_HG612) ||defined (SUPPORT_HG620)||defined (SUPPORT_HG610)
+void                       led_lan_enable(void);
+void                       led_lan_disable(void);
+void                       led_lan_all_active(void);
+void                       led_lan_all_inactive(void);
+#endif
+
+int                        led_open( struct inode *inode, struct file *filp );
+int                        led_ioctl( struct inode *inode, struct file *flip,
+                                      unsigned int command, unsigned long arg );
+ssize_t                    led_read(struct file *filp, char __user *buffer, size_t count, loff_t *ppos);
+void led_blinkOnce_timer_start(void);
+void led_blinkOnce_timer_expire(void);
+int led_toggle(LED_INFO_ST* pstLedInfo);
+
+
+/***********************************************************************
+ * 变量定义
+ **********************************************************************/
+
+extern struct net_device * __dev_get_by_name(const char *name);
+
+/**********************************************************************/
+
+BOARD_LED_ST g_stBoardLed[MAX_BOARD_LED];
+struct rw_semaphore g_GpioLedSem;
+
+LED_NDEV_ST g_stNetDevLed;
+struct rw_semaphore g_NetDevLedSem;
+
+/***********************************************************************
+ * GPIO预定义
+ **********************************************************************/
+
+#ifdef SUPPORT_HG53X
+LED_INFO_ST g_stLedPreDefine[] =
+{
+    /*enLedName,enLedGPIO,enGpioAct,enLedState,enCurState,enFreq,unOnLstIntvl,unTdd,fpHwLedCtl*/
+    {LED_NAME_INET,         GPIO_14, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_INET_FAIL,    GPIO_13, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+#ifdef SUPPORT_DOUBLE_POWERLED
+	{LED_NAME_POWER_GREEN,  GPIO_8,  GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+	{LED_NAME_POWER_RED,    GPIO_11, GPIO_ACT_LOW, LED_STATE_ON,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+#endif
+    /* HG532STC版本的LAN LED和HG532a的USB LED使用的GPIO一致 */
+#ifdef SUPPORT_LANPORT_4IN1_LED
+	{LED_NAME_LAN_4IN1,     GPIO_9, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+#else
+    {LED_NAME_USB,          GPIO_9, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+#endif
+};
+
+#elif defined (SUPPORT_HG23X) || defined (SUPPORT_HG231F) || defined (SUPPORT_HG232F)
+LED_INFO_ST g_stLedPreDefine[] =
+{
+    /*enLedName,enLedGPIO,enGpioAct,enLedState,enCurState,enFreq,unOnLstIntvl,unTdd,fpHwLedCtl*/
+    {LED_NAME_USB,       GPIO_9,  GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_INET,      GPIO_14, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_INET_FAIL, GPIO_13, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+};
+
+#elif defined (SUPPORT_HG256)  // usb use controller by DWC_OTG Driver
+/* Ralink实际GPIO Bit对应关系参考下表 */
+LED_INFO_ST g_stLedPreDefine[] =
+{
+    /*enLedName,enLedGPIO,enGpioAct,enLedState,enCurState,enFreq,unOnLstIntvl,unTdd,fpHwLedCtl*/
+    {LED_NAME_POWER_GREEN, GPIO_8,  GPIO_ACT_LOW, LED_STATE_ON, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},   /* 实际电路接GPIO 9 */
+    {LED_NAME_POWER_RED,   GPIO_11, GPIO_ACT_LOW, LED_STATE_OFF, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},  /* 实际电路接GPIO 8 */
+    {LED_NAME_USB,       GPIO_9,   GPIO_ACT_LOW, LED_STATE_OFF, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},   /* 实际电路接GPIO 12 */
+    {LED_NAME_INET,      GPIO_14,  GPIO_ACT_LOW, LED_STATE_OFF, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},   /* 实际电路接GPIO 13 */
+    {LED_NAME_INET_FAIL, GPIO_13,  GPIO_ACT_LOW, LED_STATE_OFF, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},   /* 实际电路接GPIO 11 */
+    //{LED_NAME_VOIP,      GPIO_5,   GPIO_ACT_LOW, LED_STATE_OFF, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+};
+
+#elif defined (SUPPORT_HG612)
+
+LED_INFO_ST g_stLedPreDefine[] =
+{
+    /*enLedName,enLedGPIO,enGpioAct,enLedState,enCurState,enFreq,unOnLstIntvl,unTdd,fpHwLedCtl*/
+    {LED_NAME_POWER,     GPIO_22, GPIO_ACT_LOW, LED_STATE_BLINK, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_BATTERY,   GPIO_23, GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_ADSL_LINK, GPIO_2,  GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_MAINTAIN,  GPIO_5,  GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_LAN1_ACT,  GPIO_17, GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_LAN2_ACT,  GPIO_15, GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_LAN3_ACT,  GPIO_13, GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_LAN4_ACT,  GPIO_11, GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_LAN1_LINK, GPIO_16, GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_LAN2_LINK, GPIO_27, GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_LAN3_LINK, GPIO_12, GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_LAN4_LINK, GPIO_10, GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+
+    /*
+        LAN1, LAN2的GPIO为硬件控制,但由于HG612在禁用所有LED的情况下还需要用软件配置LAN的GPIO
+        本模块暂时还不支持这种模式,所以对LAN1, LAN2的LED进行了特殊处理
+     */
+};
+
+#elif defined (SUPPORT_HG620)
+LED_INFO_ST g_stLedPreDefine[] =
+{
+    /*enLedName,enLedGPIO,enGpioAct,enLedState,enCurState,enFreq,unOnLstIntvl,unTdd,fpHwLedCtl*/
+    {LED_NAME_POWER,     GPIO_22, GPIO_ACT_LOW, LED_STATE_BLINK, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_ADSL_LINK, GPIO_2,  GPIO_ACT_LOW, LED_STATE_BLINK, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_USB,       GPIO_11,  GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_INET,      GPIO_5, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_WPS,       GPIO_10,  GPIO_ACT_LOW, LED_STATE_OFF, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+};
+#elif defined (SUPPORT_HG610)
+LED_INFO_ST g_stLedPreDefine[] =
+{
+    /*enLedName,enLedGPIO,enGpioAct,enLedState,enCurState,enFreq,unOnLstIntvl,unTdd,fpHwLedCtl*/
+    {LED_NAME_POWER,     GPIO_22, GPIO_ACT_LOW, LED_STATE_BLINK, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_ADSL_LINK, GPIO_2,  GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+};
+
+#elif defined (SUPPORT_HG521)
+LED_INFO_ST g_stLedPreDefine[]=
+{
+    /*enLedName,enLedGPIO,enGpioAct,enLedState,enCurState,enFreq,unOnLstIntvl,unTdd,fpHwLedCtl*/
+    {LED_NAME_INET,      GPIO_9,  GPIO_ACT_LOW,  LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_INET_FAIL, GPIO_12, GPIO_ACT_LOW,  LED_STATE_ON,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+};
+#elif defined (SUPPORT_HG530)
+/*Start Modify by lKF33113 For Adapter HG530 Led 2011-03-21*/
+LED_INFO_ST g_stLedPreDefine[]=
+{
+    /*enLedName,enLedGPIO,enGpioAct,enLedState,enCurState,enFreq,unOnLstIntvl,unTdd,fpHwLedCtl*/
+    {LED_NAME_ADSL_ACT, GPIO_5,  GPIO_ACT_LOW, LED_STATE_ON,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},    
+    {LED_NAME_INET, GPIO_6,  GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+/* w69233 Fix DTS2011072002987: support for Malaysia TM Internet fail red led */
+#ifdef SUPPORT_ATP_TM
+    {LED_NAME_INET_FAIL, GPIO_7,  GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+#endif
+/* w69233 Fix DTS2011072002987: support for Malaysia TM Internet fail red led */
+    {LED_NAME_WPS, GPIO_8,  GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},        
+};
+#elif defined (SUPPORT_HG532E)
+LED_INFO_ST g_stLedPreDefine[]=
+{
+    {LED_NAME_ADSL_ACT, GPIO_5,  GPIO_ACT_LOW, LED_STATE_ON,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},    
+    {LED_NAME_INET, GPIO_6,  GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_INET_FAIL, GPIO_7,  GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_WPS, GPIO_8,  GPIO_ACT_LOW, LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},        
+};
+#elif defined (SUPPORT_HG532C)
+LED_INFO_ST g_stLedPreDefine[]=
+{
+    {LED_NAME_POWER_GREEN,     GPIO_13, GPIO_ACT_LOW, LED_STATE_ON, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_POWER_RED,     GPIO_26, GPIO_ACT_LOW, LED_STATE_OFF, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_INET_FAIL,      GPIO_23,  GPIO_ACT_LOW,  LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_INET,       GPIO_27, GPIO_ACT_LOW,  LED_STATE_OFF,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_USB,       GPIO_28, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},    
+};
+
+#elif defined (SUPPORT_WS311)
+LED_INFO_ST g_stLedPreDefine[]=
+{
+    /*enLedName,enLedGPIO,enGpioAct,enLedState,enCurState,enFreq,unOnLstIntvl,unTdd,fpHwLedCtl*/
+    /* wifi ap led */
+    {LED_NAME_WIFI_AP,      GPIO_0,  GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_ON,  FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    /* wifi sta led */
+    {LED_NAME_WIFI_STA,     GPIO_10, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    /* wifi repeat led */
+    {LED_NAME_WIFI_REPEAT,  GPIO_12, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_ON,  FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    /* wps led */
+    {LED_NAME_WPS,          GPIO_14, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_ON,  FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    /* usb led */
+    {LED_NAME_USB,          GPIO_11, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_ON,  FREQ_2HZ, FREQ_4HZ, 0, NULL},
+};
+#elif defined(SUPPORT_WS312) || defined (SUPPORT_PT220)
+LED_INFO_ST g_stLedPreDefine[]=
+{
+    {LED_NAME_MAINTAIN,       GPIO_9,  GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_WAN,      	  GPIO_12, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_4HZ, FREQ_8HZ, 0, NULL},
+    {LED_NAME_POWER_GREEN,    GPIO_13, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+};
+#elif defined (SUPPORT_WS311A)
+LED_INFO_ST g_stLedPreDefine[]=
+{
+    {LED_NAME_INET,          41, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_WIFI,          42, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_WPS,           11, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_LAN_4IN1,      44, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+};
+
+#elif defined (SUPPORT_HG536A)
+/*Our gpio from 0-12, but GPIO_0 enum value is 1, so we should decrease 1*/
+LED_INFO_ST g_stLedPreDefine[]=
+{
+    {LED_NAME_USB,      GPIO_10-1, GPIO_ACT_LOW,  LED_STATE_OFF,   LED_STATE_OFF,  FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_WPS,      GPIO_9 -1, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_ADSL_ACT, GPIO_6 -1, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_INET,     GPIO_7 -1, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+ };
+/* BEGIN: Added by c106292, 2010/1/28   PN:  WUMING TELMEX  特性开发*/
+#elif defined (SUPPORT_HG538)
+/*Our gpio from 0-12, but GPIO_0 enum value is 1, so we should decrease 1*/
+LED_INFO_ST g_stLedPreDefine[]=
+{
+ };
+/* BEGIN: Added by c106292, 2010/1/28   PN:  WUMING TELMEX  特性开发*/
+#elif defined (SUPPORT_HG523A)
+/*Start of Change by z00175982 Add led test equip 2011-04-09 */
+LED_INFO_ST g_stLedPreDefine[]=
+{
+    /*enLedName,enLedGPIO,enGpioAct,enLedState,enCurState,enFreq,unOnLstIntvl,unTdd,fpHwLedCtl*/
+    //{LED_NAME_INET,      GPIO_9,  GPIO_ACT_LOW,  LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    //{LED_NAME_INET_FAIL, GPIO_12, GPIO_ACT_LOW,  LED_STATE_ON,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_POWER_GREEN, GPIO_14 -1, GPIO_ACT_LOW, LED_STATE_ON,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_ADSL_LINK, GPIO_24 -1,  GPIO_ACT_LOW, LED_STATE_OFF, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_INET,     GPIO_28 -1, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_WPS,      GPIO_25 -1, GPIO_ACT_LOW, LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+};
+/*End of Change by z00175982 Add led test equip 2011-04-09 */
+
+#elif defined (SUPPORT_HG533)
+/* Ralink实际GPIO Bit对应关系参考下表 */
+LED_INFO_ST g_stLedPreDefine[] =
+{
+    /*enLedName,enLedGPIO,enGpioAct,enLedState,enCurState,enFreq,unOnLstIntvl,unTdd,fpHwLedCtl*/
+    {LED_NAME_POWER_GREEN, GPIO_17, GPIO_ACT_LOW, LED_STATE_ON,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_INET,        GPIO_19, GPIO_ACT_LOW, LED_STATE_OFF, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+  //{LED_NAME_INET_FAIL,   GPIO_20, GPIO_ACT_LOW, LED_STATE_ON,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_USB,         GPIO_38, GPIO_ACT_LOW, LED_STATE_OFF, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_WPS,         GPIO_39, GPIO_ACT_LOW, LED_STATE_OFF, LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+};
+#elif defined (SUPPORT_HG523)|| defined (SUPPORT_HG521A)
+LED_INFO_ST g_stLedPreDefine[]=
+{
+    /*enLedName,enLedGPIO,enGpioAct,enLedState,enCurState,enFreq,unOnLstIntvl,unTdd,fpHwLedCtl*/
+    {LED_NAME_INET,      GPIO_9,  GPIO_ACT_LOW,  LED_STATE_OFF,  LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+    {LED_NAME_INET_FAIL, GPIO_12, GPIO_ACT_LOW,  LED_STATE_ON,   LED_STATE_OFF, FREQ_2HZ, FREQ_4HZ, 0, NULL},
+};
+/* END:   Added by c106292, 2010/1/28 */
+#else
+
+#endif
+
+int g_LedTimerOn = FALSE;
+int g_LedTimerPause = FALSE;
+int g_LedBlinkOnceTimerOn = FALSE;
+int g_LedEnable = TRUE;
+
+struct timer_list g_LedTimer, g_LedBlinkOnceTimer;;
+static struct file_operations led_fops =
+{
+    open:       led_open,
+    ioctl:      led_ioctl,
+    read:       led_read,
+};
+
+
+/***********************************************************************
+ * Function Name: led_register
+ * Description  : register a led to led control module
+ **********************************************************************/
+int led_register(LED_INFO_ST stLedInfo)
+{
+    unsigned int i;
+    int index = -1;
+    int iRet = FALSE;
+
+    //防止多个进程同时注册
+
+    down_write(&g_GpioLedSem);
+    for (i = 0; i < MAX_BOARD_LED; i++)
+    {
+        if ((TRUE == g_stBoardLed[i].iUsed)
+            && (g_stBoardLed[i].stLedInfo.enLedName == stLedInfo.enLedName))
+        {
+            LED_OUTPUT("Error: Led %d has been registered before", stLedInfo.enLedName);
+            index = -1;
+            break;
+        }
+
+        if (FALSE == g_stBoardLed[i].iUsed)
+        {
+            index = i;
+        }
+    }
+
+    if (MAX_BOARD_LED >= index)
+    {
+        LED_OUTPUT("Led has been full.");
+    }
+    else if (index >= 0)
+    {
+        memcpy(&(g_stBoardLed[index].stLedInfo), &stLedInfo, sizeof(LED_INFO_ST));
+
+        iRet = led_init(&(g_stBoardLed[index].stLedInfo));
+
+        if (FALSE == iRet)
+        {
+            memset(&(g_stBoardLed[index].stLedInfo), 0, sizeof(LED_INFO_ST));
+            g_stBoardLed[index].iUsed = FALSE;               //多余语句
+        }
+        else
+        {
+            g_stBoardLed[index].iUsed = TRUE;
+        }
+    }
+
+    up_write(&g_GpioLedSem);
+
+    if (FALSE == iRet)
+    {
+        LED_OUTPUT("Led %d register fail", stLedInfo.enLedName);
+    }
+    else
+    {
+        LED_OUTPUT("Led %d register sucess", stLedInfo.enLedName);
+    }
+
+    return iRet;
+}
+
+/***********************************************************************
+ * Function Name: led_unregister
+ * Description  : delete a led from led control module
+ **********************************************************************/
+int led_unregister(LED_NAME enName)
+{
+    unsigned int i;
+    int iRet = FALSE;
+
+    down_write(&g_GpioLedSem);
+    for (i = 0; i < MAX_BOARD_LED; i++)
+    {
+        if ((TRUE == g_stBoardLed[i].iUsed)
+            && (g_stBoardLed[i].stLedInfo.enLedName == enName))
+        {
+            g_stBoardLed[i].iUsed = FALSE;
+            led_act(&(g_stBoardLed[i].stLedInfo), LED_STATE_OFF);
+            memset(&(g_stBoardLed[i].stLedInfo), 0, sizeof(LED_INFO_ST));
+            g_stBoardLed[i].iUsed = FALSE;
+            iRet = TRUE;
+            break;
+        }
+    }
+
+    up_write(&g_GpioLedSem);
+
+    if (FALSE == iRet)
+    {
+        LED_OUTPUT("Led %d unregister fail", enName);
+    }
+    else
+    {
+        LED_OUTPUT("Led %d unregister sucess", enName);
+    }
+
+    return iRet;
+}
+
+/***********************************************************************
+ * Function Name: led_freq_change
+ * Description  : change the led frequence
+ **********************************************************************/
+void led_freq_change(LED_NAME enName, LED_FREQ_EN enFreq, TIMER_DIDA unOnLst)
+{
+    int i;
+
+    down_write(&g_GpioLedSem);
+    for (i = 0; i < MAX_BOARD_LED; i++)
+    {
+        if ((TRUE == g_stBoardLed[i].iUsed)
+            && (g_stBoardLed[i].stLedInfo.enLedName == enName))
+        {
+            break;
+        }
+    }
+
+    if ((i < MAX_BOARD_LED)
+        && (unOnLst < (TIMER_DIDA)enFreq)
+    )    /*get the timer*/
+    {
+        g_LedTimerPause = TRUE;
+
+        g_stBoardLed[i].stLedInfo.enFreq = enFreq;
+        g_stBoardLed[i].stLedInfo.unOnLstIntvl = unOnLst;
+
+        if (LED_STATE_BLINK == g_stBoardLed[i].stLedInfo.enLedState)
+        {
+            led_init(&(g_stBoardLed[i].stLedInfo));
+        }
+
+        g_LedTimerPause = FALSE;
+    }
+
+    up_write(&g_GpioLedSem);
+}
+
+/***********************************************************************
+ * Function Name: led_state_change
+ * Description  : change the state of led
+ **********************************************************************/
+void led_state_change(LED_NAME enName, LED_STATE_EN enState)
+{
+    unsigned int i;
+    int iRet = FALSE;
+
+    if (enState >= LED_STATE_END)
+    {
+        return;
+    }
+
+	/*START ADD: wKF20151 for usb transport error 2010-07-23*/
+    local_bh_disable();
+    /*END ADD: wKF20151 for usb transport error 2010-07-23*/
+    down_write(&g_GpioLedSem);
+    for (i = 0; i < MAX_BOARD_LED; i++)
+    {
+        if ((TRUE == g_stBoardLed[i].iUsed)
+            && (g_stBoardLed[i].stLedInfo.enLedName == enName))
+        {
+            break;
+        }
+    }
+
+    if (i < MAX_BOARD_LED)/*get the timer*/
+    {
+        LED_OUTPUT("Led %d change state ,old=0x%x,new=0x%x", g_stBoardLed[i].stLedInfo.enLedName
+                                                                , g_stBoardLed[i].stLedInfo.enLedState,enState);
+        if (enState != g_stBoardLed[i].stLedInfo.enLedState)
+        {
+            g_LedTimerPause = TRUE;
+
+            g_stBoardLed[i].stLedInfo.enLedState = enState;
+            if (LED_STATE_BLINKONCE == enState)
+            {
+                if (g_stBoardLed[i].stLedInfo.enCurState == LED_STATE_BLINK)
+                    ;
+                else
+                {
+                    blinkCountDown = 4;
+                    stateBeforeBlinkOnce = g_stBoardLed[i].stLedInfo.enCurState;
+                }
+            }
+
+            iRet = led_init(&(g_stBoardLed[i].stLedInfo));
+
+            if (FALSE == iRet)
+            {
+                g_stBoardLed[i].stLedInfo.enLedState = LED_STATE_OFF;
+                led_act(&(g_stBoardLed[i].stLedInfo), LED_STATE_OFF);
+            }
+
+            g_LedTimerPause = FALSE;
+        }
+    }
+
+    up_write(&g_GpioLedSem);
+	/*START ADD: wKF20151 for usb transport error 2010-07-23*/
+    local_bh_enable();
+    /*END ADD: wKF20151 for usb transport error 2010-07-23*/
+}
+
+/***********************************************************************
+ * Function Name: led_init
+ * Description  : initial a led struction
+ **********************************************************************/
+int led_init(LED_INFO_ST* pstLedInfo)
+{
+    int iRet = TRUE;
+    char acRst[BUFFER_LEN] = {0};
+
+    if (pstLedInfo->enLedGPIO >= GPIO_END)
+    {
+        sprintf(acRst, "LED GPIO error\n");
+        iRet = FALSE;
+    }
+
+    if (pstLedInfo->enGpioAct >= GPIO_ACT_END)
+    {
+        strcat(acRst, "LED GPIO act error\n");
+        iRet = FALSE;
+    }
+
+    if (pstLedInfo->enLedName >= LED_NAME_END)
+    {
+        strcat(acRst, "Led Name error");
+        iRet = FALSE;
+    }
+
+    if (pstLedInfo->enLedState >= LED_STATE_END)
+    {
+        strcat(acRst, "Led state error");
+        iRet = FALSE;
+    }
+
+    if (LED_STATE_BLINK == pstLedInfo->enLedState)
+    {
+        if (pstLedInfo->enFreq >= FREQ_END)
+        {
+            strcat(acRst, "Led Frequence error");
+            iRet = FALSE;
+        }
+
+        if (pstLedInfo->unOnLstIntvl >= (TIMER_DIDA)pstLedInfo->enFreq)
+        {
+            strcat(acRst, "Led Frequence occupy error");
+            iRet = FALSE;
+        }
+    }
+
+    if (FALSE == iRet)
+    {
+        LED_OUTPUT("LED %d init fail\n%s\n", pstLedInfo->enLedName, acRst);
+        return iRet;
+    }
+/*SYS Reset gpio 0
+WPS Push Button gpio 1
+WLAN Switch Button gpio 2*/
+#ifdef CONFIG_MIPS_TC3162U
+    LED_IEN(REST_GPIO_TC);
+    LED_IEN(WPS_GPIO_TC);
+#ifdef CONFIG_LCDSPI 
+    LED_OEN(WLAN_SWITCH_GPIO_TC);
+#else
+    LED_IEN(WLAN_SWITCH_GPIO_TC);
+#endif
+#endif
+
+    if (GPIO_NOT != pstLedInfo->enLedGPIO)
+    {
+        led_gpio_mode(pstLedInfo->enLedGPIO);
+        led_gpio_dir(pstLedInfo->enLedGPIO, GPIO_OUTPUT);
+    }
+
+    led_act(pstLedInfo, LED_STATE_OFF);
+
+    pstLedInfo->enCurState = LED_STATE_OFF;
+    pstLedInfo->unTdd = 0;
+
+    LED_OUTPUT("LED %d init ok\n", pstLedInfo->enLedName);
+
+    return TRUE;
+}
+
+/***********************************************************************
+ * Function Name: led_act
+ * Description  : this function is used to do the led on/off action
+ **********************************************************************/
+int led_act(LED_INFO_ST* pstLedInfo, LED_STATE_EN enLedState)
+{
+    if (GPIO_NOT == pstLedInfo->enLedGPIO)
+    {
+        if (NULL != pstLedInfo->fpHwLedCtl)
+        {
+            pstLedInfo->fpHwLedCtl(enLedState, pstLedInfo->enFreq);
+        }
+    }
+    else
+    {
+        if (LED_STATE_OFF == enLedState)
+        {
+            led_gpio_act(pstLedInfo->enLedGPIO, !pstLedInfo->enGpioAct);
+        }
+        else if (LED_STATE_ON == enLedState)
+        {
+            led_gpio_act(pstLedInfo->enLedGPIO, pstLedInfo->enGpioAct);
+        }
+        else
+        {
+            LED_OUTPUT("error! Not support.");
+            return FALSE;
+        }
+    }
+
+    return TRUE;
+}
+
+/***********************************************************************
+ * Function Name: led_process
+ * Description  : led state machine process
+ **********************************************************************/
+int led_process(LED_INFO_ST* pstLedInfo)
+{
+    static LED_STATE_EN temp = LED_STATE_OFF;
+    static int cnt =0 ;
+    //LED_OUTPUT("LED %d ,ledstat=%d,curstat=%d", pstLedInfo->enLedName,pstLedInfo->enLedState,pstLedInfo->enCurState);
+    if (LED_NAME_END != pstLedInfo->enLedName)
+    {
+        switch (pstLedInfo->enLedState)
+        {
+        case LED_STATE_ON:
+        {
+            if (LED_STATE_ON != pstLedInfo->enCurState)
+            {
+                led_act(pstLedInfo, LED_STATE_ON);
+                pstLedInfo->enCurState = LED_STATE_ON;
+            }
+
+            break;
+        }
+
+        case LED_STATE_OFF:
+        {
+            if (LED_STATE_OFF != pstLedInfo->enCurState)
+            {
+                led_act(pstLedInfo, LED_STATE_OFF);
+                pstLedInfo->enCurState = LED_STATE_OFF;
+            }
+
+            break;
+        }
+
+        case LED_STATE_BLINK:
+        {
+            if ((GPIO_NOT == pstLedInfo->enLedGPIO)
+                && (LED_STATE_BLINK != pstLedInfo->enCurState))
+            {
+                led_act(pstLedInfo, LED_STATE_BLINK);
+                pstLedInfo->enCurState = LED_STATE_BLINK;
+            }
+            else if (GPIO_NOT != pstLedInfo->enLedGPIO)
+            {
+                switch (pstLedInfo->enCurState)
+                {
+                case LED_STATE_ON:
+                {
+                    if (0 == pstLedInfo->unTdd)
+                    {
+                        pstLedInfo->unTdd = (TIMER_DIDA)pstLedInfo->enFreq - pstLedInfo->unOnLstIntvl;
+                        led_act(pstLedInfo, LED_STATE_OFF);
+                        pstLedInfo->enCurState = LED_STATE_OFF;
+                        pstLedInfo->unTdd--;
+                    }
+                    else
+                    {
+                        pstLedInfo->unTdd--;
+                    }
+
+                    break;
+                }
+                case LED_STATE_OFF:
+                {
+                    if (0 == pstLedInfo->unTdd)
+                    {
+                        pstLedInfo->unTdd = pstLedInfo->unOnLstIntvl;
+                        led_act(pstLedInfo, LED_STATE_ON);
+                        pstLedInfo->enCurState = LED_STATE_ON;
+                        pstLedInfo->unTdd--;
+                    }
+                    else
+                    {
+                        pstLedInfo->unTdd--;
+                    }
+
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+                }
+            }
+
+            break;
+        }
+        case LED_STATE_BLINKONCE:
+        {
+            if (0 < blinkCountDown--)
+            {
+                led_toggle(pstLedInfo);
+            }
+            else
+            {
+                blinkCountDown = 0;
+                pstLedInfo->enLedState = stateBeforeBlinkOnce;
+                pstLedInfo->enCurState = LED_STATE_BLINKONCE;
+                stateBeforeBlinkOnce = LED_STATE_ON;
+                led_process(pstLedInfo);
+            }
+            break;
+        }
+        default:
+        {
+            break;
+        }
+        }
+    }
+
+    return TRUE;
+}
+
+/***********************************************************************
+ * Function Name: led_blinkOnce_Timer_Start
+ * Description  : led timer state
+ **********************************************************************/
+void led_blinkOnce_timer_start(void)
+{
+    if(g_LedBlinkOnceTimerOn)
+       return;
+
+    init_timer(&g_LedBlinkOnceTimer);
+    g_LedBlinkOnceTimer.function = (void*)led_blinkOnce_timer_expire;
+    g_LedBlinkOnceTimer.expires = jiffies + TIMER_INTERVAL_125MS; 
+    add_timer(&g_LedBlinkOnceTimer);
+    g_LedBlinkOnceTimerOn = TRUE;
+}
+
+/***********************************************************************
+ * Function Name: led_blinkOnce_Timer_Expire
+ * Description  : led timer state
+ **********************************************************************/
+void led_blinkOnce_timer_expire(void)
+{
+    g_LedBlinkOnceTimerOn = FALSE;
+}
+
+/***********************************************************************
+ * Function Name: led_timer_start
+ * Description  : led timer state
+ **********************************************************************/
+void led_timer_start(void)
+{
+    if (g_LedTimerOn)
+    {
+        return;
+    }
+
+    init_timer(&g_LedTimer);
+    g_LedTimer.function = (void*)led_run;
+    g_LedTimer.expires = jiffies + TIMER_INTERVAL_125MS;        // timer expires in ~100ms
+    add_timer (&g_LedTimer);
+
+    g_LedTimerOn = TRUE;
+}
+
+/***********************************************************************
+ * Function Name: led_run
+ * Description  : led timer callback
+ **********************************************************************/
+void led_run(void)
+{
+    int i = 0;
+    static int times = 0;
+
+    g_LedTimerOn = FALSE;
+
+    times++;
+
+    if (TIMER_1HZ_TIMES == times)
+    {
+        times = 0;
+        netdev_led_process();
+    }
+
+    if (g_LedTimerPause != TRUE)
+    {
+        down_read(&g_GpioLedSem);
+        for (i = 0; i < MAX_BOARD_LED; i++)
+        {
+            if (TRUE == g_stBoardLed[i].iUsed)
+            {
+                //LED_OUTPUT("process %d led", i);
+                led_process(&(g_stBoardLed[i].stLedInfo));
+            }
+        }
+
+        up_read(&g_GpioLedSem);
+    }
+
+    if (TRUE == g_LedEnable)
+    {
+        led_timer_start();
+    }
+}
+
+/***********************************************************************
+ * Function Name: led_ioctl
+ * Description  : boardled device ioctl interface
+ **********************************************************************/
+int led_ioctl( struct inode *inode, struct file *flip,
+               unsigned int command, unsigned long arg )
+{
+    LED_INFO_ST stLedInfo;
+    LED_NETDEV_ST stInetInfo;
+    int iRet = 0;
+
+    LED_OUTPUT("led_ioctl:cmd=0x%x", command);
+
+    switch (command)
+    {
+    case BOARDLED_IOCTL_ADD:
+    case BOARDLED_IOCTL_DEL:
+    case BOARDLED_IOCTL_STATCHG:
+    case BOARDLED_IOCTL_FREQCHG:
+    {
+        iRet = copy_from_user((void*)&stLedInfo, (void*)arg, sizeof(LED_INFO_ST));
+        if (0 != iRet)
+        {
+            return iRet;
+        }
+
+        break;
+    }
+    case BOARDLED_IOCTL_NETLED_ADD:
+    case BOARDLED_IOCTL_NETLED_DEL:
+    case BOARDLED_IOCTL_NETLED_STATCHG:
+    {
+        iRet = copy_from_user((void*)&stInetInfo, (void*)arg, sizeof(LED_NETDEV_ST));
+        if (0 != iRet)
+        {
+            return iRet;
+        }
+
+        break;
+    }
+    case BOARDLED_IOCTL_LED_ENABLE:
+    case BOARDLED_IOCTL_LED_DISABLE:
+    case BOARDLED_IOCTL_LED_ALL_ACTIVE:
+/*start of modify by j00127542 20091015 for A36D08340*/
+    case BOARDLED_IOCTL_LED_EQUIPMENT:
+/*end of modify by j00127542 20091015 for A36D08340*/
+        break;
+    default:
+        return -1;
+    }
+
+    switch (command)
+    {
+    case BOARDLED_IOCTL_ADD:
+    {
+        iRet = led_register(stLedInfo);
+        break;
+    }
+    case BOARDLED_IOCTL_DEL:
+    {
+        iRet = led_unregister(stLedInfo.enLedName);
+        break;
+    }
+    case BOARDLED_IOCTL_STATCHG:
+    {
+        led_state_change(stLedInfo.enLedName, stLedInfo.enLedState);
+        iRet = TRUE;
+        break;
+    }
+    case BOARDLED_IOCTL_FREQCHG:
+    {
+        led_freq_change(stLedInfo.enLedName, stLedInfo.enFreq, stLedInfo.unOnLstIntvl);
+        iRet = TRUE;
+        break;
+    }
+    case BOARDLED_IOCTL_NETLED_ADD:
+    {
+        iRet = netdev_led_add(stInetInfo.enLedName, stInetInfo.enLedNameFail, stInetInfo.acNetDev);
+        break;
+    }
+    case BOARDLED_IOCTL_NETLED_DEL:
+    {
+        iRet = netdev_led_del(stInetInfo.enLedName, stInetInfo.enLedNameFail, stInetInfo.acNetDev);
+        break;
+    }
+    case BOARDLED_IOCTL_NETLED_STATCHG:
+    {
+        iRet = netdev_led_state_change(stInetInfo.enLedName, stInetInfo.enLedNameFail,
+                                       stInetInfo.acNetDev, stInetInfo.enNetState);
+        break;
+    }
+    case BOARDLED_IOCTL_LED_ENABLE:
+    {
+        set_led_all_enable();
+        iRet = TRUE;
+        break;
+    }
+    case BOARDLED_IOCTL_LED_DISABLE:
+    {
+        set_led_all_disable();
+        iRet = TRUE;
+        break;
+    }
+    case BOARDLED_IOCTL_LED_ALL_ACTIVE:
+    {
+        set_led_all_active();
+        iRet = TRUE;
+        break;
+    }
+/*start of modify by j00127542 20091015 for A36D08340*/
+    case BOARDLED_IOCTL_LED_EQUIPMENT:
+    {
+        LedTest = TRUE;
+        iRet = TRUE;
+        break;
+    }
+/*end of modify by j00127542 20091015 for A36D08340*/
+    default:
+    {
+        iRet = FALSE;
+        break;
+    }
+    }
+
+    if (TRUE == iRet)
+    {
+        return 0;
+    }
+    else
+    {
+        return -1;
+    }
+}
+
+/***********************************************************************
+ * Function Name: led_open
+ * Description  : boardled device open interface
+ **********************************************************************/
+int led_open( struct inode *inode, struct file *filp )
+{
+    return 0;
+}
+
+/***********************************************************************
+ * Function Name: led_read
+ * Description  : boardled device read interface
+ **********************************************************************/
+ssize_t led_read(struct file *filp, char __user *buffer, size_t count, loff_t *ppos)
+{
+    return 0;
+}
+
+/***********************************************************************
+ * Function Name: netdev_led_init
+ * Description  : led which blink base net device init function
+ **********************************************************************/
+int netdev_led_init(void)
+{
+    init_rwsem(&g_NetDevLedSem);
+    INIT_LIST_HEAD(&(g_stNetDevLed.list));
+    return TRUE;
+}
+
+/***********************************************************************
+ * Function Name: netdev_led_add
+ * Description  : register a netdev led to boardled module
+ **********************************************************************/
+int netdev_led_add(LED_NAME enLedName, LED_NAME enLedNameFail, unsigned char* pDevName)
+{
+    LED_NDEV_ST* pLedst = NULL;
+
+    LED_NDEV_PARAS_ST* pLedParast = NULL;
+
+    if ((NULL == pDevName) || (pDevName[0] == '\0') || (strlen(pDevName) >= NET_DEV_NAME_LEN)
+        || (enLedName >= LED_NAME_END) || (enLedNameFail >= LED_NAME_END))
+    {
+        LED_OUTPUT("parameters error!");
+        return FALSE;
+    }
+
+    list_for_each_entry(pLedst, &(g_stNetDevLed.list), list)
+    {
+        if (pLedst->enLedName == enLedName)
+        {
+            list_for_each_entry(pLedParast, &(pLedst->stLedDev.list), list)
+            {
+                if (0 == strcmp(pLedParast->acNetDev, pDevName))
+                {
+                    LED_OUTPUT("found the same LED and the same dev\n");
+                    return FALSE;
+                }
+            }
+
+            pLedParast = kzalloc(sizeof(LED_NDEV_PARAS_ST), GFP_KERNEL);
+            if (NULL == pLedParast)
+            {
+                return FALSE;
+            }
+
+            down_write(&g_NetDevLedSem);
+            list_add_tail(&(pLedParast->list), &(pLedst->stLedDev.list));
+            memcpy(pLedParast->acNetDev, pDevName, sizeof(pLedParast->acNetDev));
+            pLedParast->enNDevLedState = LED_STATE_OFF;
+            pLedParast->last_rx = 0;
+            pLedParast->trans_start = 0;
+            up_write(&g_NetDevLedSem);
+
+            return TRUE;
+        }
+    }
+
+    pLedst = kzalloc(sizeof(LED_NDEV_ST), GFP_KERNEL);
+    if (NULL == pLedst)
+    {
+        return FALSE;
+    }
+
+    down_write(&g_NetDevLedSem);
+    list_add_tail(&(pLedst->list), &(g_stNetDevLed.list));
+
+    pLedst->enLedName = enLedName;
+    pLedst->enLedNameFail = enLedNameFail;
+    pLedst->enLedCurState = LED_STATE_OFF;
+    pLedst->enLedOldState = LED_STATE_END;
+    INIT_LIST_HEAD(&(pLedst->stLedDev.list));
+
+    pLedParast = kzalloc(sizeof(LED_NDEV_PARAS_ST), GFP_KERNEL);
+    if (NULL == pLedParast)
+    {
+        up_write(&g_NetDevLedSem);
+        return FALSE;
+    }
+
+    list_add_tail(&(pLedParast->list), &(pLedst->stLedDev.list));
+
+    memcpy(pLedParast->acNetDev, pDevName, sizeof(pLedParast->acNetDev));
+    pLedParast->last_rx = 0;
+    pLedParast->trans_start = 0;
+
+    up_write(&g_NetDevLedSem);
+    LED_OUTPUT("add led dev success\n");
+
+    return TRUE;
+}
+
+/***********************************************************************
+ * Function Name: netdev_led_del
+ * Description  : unregister a netdev led from boardled module
+ **********************************************************************/
+int netdev_led_del(LED_NAME enLedName, LED_NAME enLedNameFail, unsigned char* pDevName)
+{
+    LED_NDEV_ST* pLedst = NULL;
+    LED_NDEV_PARAS_ST* pLedParast = NULL;
+
+    struct list_head *head = NULL;
+
+    u8 del_all_dev_flag = FALSE;
+
+    if ((NULL == pDevName) || (enLedName >= LED_NAME_END) || (enLedNameFail >= LED_NAME_END))
+    {
+        return FALSE;
+    }
+
+    /* 输入为空字符串时, 表示删除对应的LED链表 */
+    if (pDevName[0] == '\0')
+    {
+        del_all_dev_flag = TRUE;
+    }
+
+    down_write(&g_NetDevLedSem);
+
+    list_for_each_entry(pLedst, &(g_stNetDevLed.list), list)
+    {
+        if (pLedst->enLedName == enLedName)
+        {
+            head = &(pLedst->stLedDev.list);
+
+            /* start of edit by l67530 for delete list, A36D06446. 2009-04-21 */
+            /* 如果需要删除全部节点则逐个取出删除后释放 */
+            if (del_all_dev_flag == TRUE)
+            {
+                while (!list_empty(head))
+                {
+                    pLedParast = list_entry(head->next, LED_NDEV_PARAS_ST, list);
+
+                    list_del(&pLedParast->list);
+                    kfree(pLedParast);
+                }
+            }
+            else
+            {
+                /* 否则遍历链表,匹配设备节点名称后删除释放 */
+                list_for_each_entry(pLedParast, head, list)
+                {
+                    if (0 == strcmp(pLedParast->acNetDev, pDevName))
+                    {
+                        list_del(&pLedParast->list);
+                        kfree(pLedParast);
+                        break;
+                    }
+                }
+            }
+            /* end of edit by l67530 for delete list, A36D06446. 2009-04-21 */
+
+            if (list_empty(head))
+            {
+                /* 在若删除了所有节点, 将对应的LED熄灭 */
+                led_state_change(pLedst->enLedName, LED_STATE_OFF);
+                led_state_change(pLedst->enLedNameFail, LED_STATE_OFF);
+
+                list_del(&(pLedst->list));
+                kfree(pLedst);
+            }
+
+            break;
+        }
+    }
+
+    up_write(&g_NetDevLedSem);
+
+    return TRUE;
+}
+
+/***********************************************************************
+ * Function Name: netdev_led_state_change
+ * Description  : change a led state which base on net device
+ **********************************************************************/
+int netdev_led_state_change(LED_NAME enLedName, LED_NAME enLedNameFail,
+                            unsigned char* pDevName, LED_STATE_EN enStat)
+{
+    PLED_NDEV_ST pLedst = NULL;
+    PLED_NDEV_PARAS_ST pLedParast = NULL;
+
+    unsigned char flag_found = FALSE;
+
+    if ((NULL == pDevName) || (enLedName >= LED_NAME_END) || (enLedNameFail >= LED_NAME_END))
+    {
+        return FALSE;
+    }
+
+    if ((LED_STATE_OFF != enStat) && (LED_STATE_ON != enStat))
+    {
+        return FALSE;
+    }
+
+    down_write(&g_NetDevLedSem);
+
+    list_for_each_entry(pLedst, &(g_stNetDevLed.list), list)
+    {
+        if (pLedst->enLedName == enLedName)
+        {
+            list_for_each_entry(pLedParast, &(pLedst->stLedDev.list), list)
+            {
+                if (0 == strcmp(pDevName, pLedParast->acNetDev))
+                {
+                    LED_OUTPUT("\nChange %s to %d", pDevName, enStat);
+                    pLedParast->enNDevLedState = enStat;
+                    flag_found = TRUE;
+                    break;
+                }
+            }
+            break;
+        }
+    }
+
+    up_write(&g_NetDevLedSem);
+
+    if (TRUE == flag_found)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+
+/***********************************************************************
+ * Function Name: netdev_led_process
+ * Description  : netdev led state machine process
+ **********************************************************************/
+int netdev_led_process()
+{
+    LED_NDEV_ST* pLedst = NULL;
+    LED_NDEV_PARAS_ST* pLedParast = NULL;
+
+    struct net_device *pDev = NULL;
+    unsigned int iflag = 0; /* add for hg231f internet led by f00110348 */
+#if defined (SUPPORT_CHIP_RT3350) || defined (SUPPORT_CHIP_RT3352)
+    static unsigned int uiGreenFlag = 0;
+#endif
+
+    /* start add for hg231f internet led by f00110348 */
+#if defined (SUPPORT_HG232F) || defined (SUPPORT_HG231F) || defined (SUPPORT_HG256)
+/*start of modify by j00127542 20091015 for A36D08340*/
+    if ((0 == ethwan_interface_state) && (FALSE == LedTest))
+/*end of modify by j00127542 20091015 for A36D08340*/
+    {
+        led_state_change(LED_NAME_INET, LED_STATE_OFF);
+        led_state_change(LED_NAME_INET_FAIL, LED_STATE_OFF);
+        return TRUE;
+    }
+#endif   
+    /* end add for hg231f internet led by f00110348 */
+    down_read(&g_NetDevLedSem);
+
+    list_for_each_entry(pLedst, &(g_stNetDevLed.list), list)
+    {
+        iflag = 1; /* add for hg231f internet led by f00110348 */
+        if (list_empty(&(pLedst->stLedDev.list)))
+        {
+            pLedst->enLedCurState = LED_STATE_OFF;
+        }
+        else
+        {
+            //初始化为Fail
+            pLedst->enLedCurState = LED_STATE_FAIL;
+
+            list_for_each_entry(pLedParast, &(pLedst->stLedDev.list), list)
+            {
+                if (LED_STATE_ON == pLedParast->enNDevLedState)
+                {
+                    pLedst->enLedCurState = LED_STATE_ON;
+                }
+
+                pDev = __dev_get_by_name(pLedParast->acNetDev);
+                if (NULL != pDev)
+                {
+                    if ((pDev->last_rx != pLedParast->last_rx)
+                        || (pDev->trans_start != pLedParast->trans_start))
+                    {
+                        pLedst->enLedCurState = LED_STATE_BLINK;
+                        pLedParast->last_rx = pDev->last_rx;
+                        pLedParast->trans_start = pDev->trans_start;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (pLedst->enLedOldState == pLedst->enLedCurState)
+        {
+            continue;
+        }
+
+        pLedst->enLedOldState = pLedst->enLedCurState;
+
+        switch (pLedst->enLedCurState)
+        {
+        case LED_STATE_OFF:
+        {
+            led_state_change(pLedst->enLedName, LED_STATE_OFF);
+            led_state_change(pLedst->enLedNameFail, LED_STATE_OFF);
+            break;
+        }
+        case LED_STATE_ON:
+        {
+            led_state_change(pLedst->enLedName, LED_STATE_ON);
+            led_state_change(pLedst->enLedNameFail, LED_STATE_OFF);
+            break;
+        }
+        case LED_STATE_BLINK:
+        {
+            led_state_change(pLedst->enLedName, LED_STATE_BLINK);
+            led_state_change(pLedst->enLedNameFail, LED_STATE_OFF);
+            break;
+        }
+        case LED_STATE_FAIL:
+        {
+            led_state_change(pLedst->enLedName, LED_STATE_OFF);
+            led_state_change(pLedst->enLedNameFail, LED_STATE_ON);
+            break;
+        }
+        default:
+            break;
+        }
+    }
+    /* start add for hg231f internet led by f00110348 */
+#if defined (SUPPORT_HG232F) || defined (SUPPORT_HG231F)  || defined (SUPPORT_HG256)
+/*start of modify by j00127542 20091015 for A36D08340*/
+    if ((0 == iflag) && (1 == ethwan_interface_state) && (FALSE == LedTest))
+/*end of modify by j00127542 20091015 for A36D08340*/
+    {
+        led_state_change(LED_NAME_INET, LED_STATE_OFF);
+        led_state_change(LED_NAME_INET_FAIL, LED_STATE_ON);
+    }
+#endif 
+
+#if defined (SUPPORT_CHIP_RT3350) || defined (SUPPORT_CHIP_RT3352)
+    if (0 == uiGreenFlag)
+    {
+        led_state_change(LED_NAME_POWER_GREEN, LED_STATE_ON);
+        uiGreenFlag = 1;
+    }
+#endif
+    /* end add for hg231f internet led by f00110348 */
+    up_read(&g_NetDevLedSem);
+    return TRUE;
+}
+
+/***********************************************************************
+ * Function Name: set_led_all_disable
+ * Description  : disable all the led, be shutdown every time.
+ **********************************************************************/
+void set_led_all_disable(void)
+{
+    int i = 0;
+
+    g_LedEnable = FALSE;
+
+    /*延时2个周期, 防止LED状态变化,确保熄灭所有LED时定时器是关闭的*/
+    mdelay(LED_DELAY_TIME);
+
+    for (i = 0; i < MAX_BOARD_LED; i++)
+    {
+        if (TRUE == g_stBoardLed[i].iUsed)
+        {
+            led_act(&(g_stBoardLed[i].stLedInfo), LED_STATE_OFF);
+        }
+    }
+
+#if defined (SUPPORT_HG612) ||defined (SUPPORT_HG620)||defined (SUPPORT_HG610)
+    led_lan_disable();
+    led_lan_all_inactive();
+#endif
+}
+
+/***********************************************************************
+ * Function Name: set_led_all_enable
+ * Description  : enable all the led. going to the state themself .
+ **********************************************************************/
+void set_led_all_enable(void)
+{
+    int i = 0;
+
+    for (i = 0; i < MAX_BOARD_LED; i++)
+    {
+        if (TRUE == g_stBoardLed[i].iUsed)
+        {
+            g_stBoardLed[i].stLedInfo.enCurState = LED_STATE_OFF;
+        }
+    }
+
+    g_LedEnable = TRUE;
+
+#if defined (SUPPORT_HG612) ||defined (SUPPORT_HG620)||defined (SUPPORT_HG610)
+    led_lan_enable();
+#endif
+    led_run();
+}
+
+/***********************************************************************
+ * Function Name: set_led_all_active
+ * Description  : active all the led. be lighted every time
+ **********************************************************************/
+void set_led_all_active(void)
+{
+    int i = 0;
+
+    g_LedEnable = FALSE;
+
+    /*延时2个周期, 防止LED状态变化,确保点亮所有LED时定时器是关闭的*/
+    mdelay(LED_DELAY_TIME);
+
+    for (i = 0; i < MAX_BOARD_LED; i++)
+    {
+        if (TRUE == g_stBoardLed[i].iUsed)
+        {
+            led_act(&(g_stBoardLed[i].stLedInfo), LED_STATE_ON);
+        }
+    }
+
+#if defined (SUPPORT_HG612) ||defined (SUPPORT_HG620)||defined (SUPPORT_HG610)
+    led_lan_disable();
+    led_lan_all_active();
+#endif
+}
+
+/***********************************************************************
+ * Function Name: Led_module_init
+ * Description  : the boardled module init function
+ **********************************************************************/
+static int __init Led_module_init()
+{
+    int i   = 0;
+    int j   = 0;
+    int ret = 0;
+
+    ret = register_chrdev(LED_DRV_MAJOR, "boardled", &led_fops );
+    if (ret < 0)
+    {
+        LED_OUTPUT("Register hwled marjor %d fail", LED_DRV_MAJOR);
+        return -1;
+    }
+
+    init_rwsem(&g_GpioLedSem);
+
+    memset(g_stBoardLed, 0, sizeof(g_stBoardLed));
+    
+/* start of add by zKF24772 for reset, lcd, wps */
+#ifdef CONFIG_LCDSPI
+    LED_IEN(REST_GPIO_TC);
+    LED_IEN(WPS_GPIO_TC);
+#endif
+/* end of add by zKF24772 for reset, lcd, wps */
+    
+    for (i = 0; i < MAX_BOARD_LED; i++)
+    {
+        g_stBoardLed[i].iUsed = FALSE;
+    }
+
+    for (i = 0, j = 0; i < sizeof(g_stLedPreDefine) / sizeof(LED_INFO_ST); i++)
+    {
+        if ((LED_NAME_END != g_stLedPreDefine[i].enLedName)
+            && (LED_NAME_NULL != g_stLedPreDefine[i].enLedName))
+        {
+            memcpy(&(g_stBoardLed[j].stLedInfo), &(g_stLedPreDefine[i]), sizeof(LED_INFO_ST));
+
+            if (FALSE == led_init(&(g_stBoardLed[j].stLedInfo)))
+            {
+                memset(&(g_stBoardLed[j].stLedInfo), 0, sizeof(LED_INFO_ST));
+                g_stBoardLed[i].iUsed = FALSE;
+            }
+            else
+            {
+                g_stBoardLed[j].iUsed = TRUE;
+                j++;
+            }
+        }
+    }
+
+    netdev_led_init();
+
+    led_run();
+
+    printk("\nLed_module_init ok");
+
+    return 0;
+}
+
+/***********************************************************************
+ * Function Name: Led_module_uninit
+ * Description  : the led module exit function
+ **********************************************************************/
+static void __exit Led_module_uninit()
+{
+    int i = 0;
+
+    del_timer (&g_LedTimer);
+
+    down_read(&g_GpioLedSem);
+    for (i = 0; i < MAX_BOARD_LED; i++)
+    {
+        if (TRUE == g_stBoardLed[i].iUsed)
+        {
+            led_act(&(g_stBoardLed[i].stLedInfo), LED_STATE_OFF);
+            g_stBoardLed[i].iUsed = FALSE;
+        }
+    }
+
+    up_read(&g_GpioLedSem);
+
+    unregister_chrdev(LED_DRV_MAJOR, "boardled");
+}
+
+/*These function need to be rewrite at different board*/
+
+#if defined (CONFIG_ATP_SUPPORT_RT3052) || defined (CONFIG_ATP_SUPPORT_RT3352)
+
+#define RALINK_SYSCTL_BASE              0xB0000000
+#define RALINK_SYSCTL_ADDR              RALINK_SYSCTL_BASE              // system control
+#define RALINK_REG_GPIOMODE             (RALINK_SYSCTL_ADDR + 0x60)
+#define RALINK_PIO_BASE                 0xB0000600
+#define RALINK_PRGIO_ADDR               RALINK_PIO_BASE                 // Programmable I/O
+#define RALINK_REG_PIOPOL               (RALINK_PRGIO_ADDR + 0x28)
+
+#define RALINK_GPIOMODE_I2C             0x01
+#define RALINK_GPIOMODE_SPI             0x02
+#define RALINK_GPIOMODE_UARTF           0x1C
+#define RALINK_GPIOMODE_UARTL           0x20
+#define RALINK_GPIOMODE_JTAG            0x40
+#define RALINK_GPIOMODE_MDIO            0x80
+#define RALINK_GPIOMODE_SDRAM           0x100
+#define RALINK_GPIOMODE_RGMII           0x200
+
+#define RALINK_REG_PIODATA(x)           (x > 24 ? (x > 40 ? (RALINK_PRGIO_ADDR + 0x70) : (RALINK_PRGIO_ADDR + 0x48)) : (RALINK_PRGIO_ADDR + 0x20))
+#define RALINK_REG_PIODIR(x)            (x > 24 ? (x > 40 ? (RALINK_PRGIO_ADDR + 0x74) : (RALINK_PRGIO_ADDR + 0x4C)) : (RALINK_PRGIO_ADDR + 0x24))
+#define RALINK_GPIO(x)                  (1 << ((x > 24 ? (x > 40 ? (x - 40) : (x - 24)) : x) - 1))
+
+void led_gpio_mode(LED_GPIO_EN enGpio)
+{
+#if defined(SUPPORT_HG533)
+    u32 gpio_mode;
+    
+    /* Change I2C/JTAG/LNA_G/PA_G from normal mode to GPIO mode */
+    gpio_mode = (*(volatile u32 *)(RALINK_REG_GPIOMODE));
+    gpio_mode |= ((1 << 0) | (7 << 2) | (1 << 6) | (1 << 18) | (1 << 20));
+    *(volatile u32 *)(RALINK_REG_GPIOMODE) = gpio_mode;
+#endif
+}
+
+void led_gpio_dir(LED_GPIO_EN enGpio, LED_GPIO_DIR_EN enDir)
+{
+    unsigned long tmp, dir_bit;
+
+    dir_bit = RALINK_GPIO(enGpio);
+
+    if (GPIO_INPUT == enDir)
+    {
+        tmp  = (*(volatile u32 *)(RALINK_REG_PIODIR(enGpio)));
+        tmp &= ~(dir_bit);
+        *(volatile u32 *)(RALINK_REG_PIODIR(enGpio)) = tmp;
+    }
+    else if (GPIO_OUTPUT == enDir)
+    {
+        tmp  = (*(volatile u32 *)(RALINK_REG_PIODIR(enGpio)));
+        tmp |= (dir_bit);
+        *(volatile u32 *)(RALINK_REG_PIODIR(enGpio)) = tmp;
+    }
+    else
+    {
+        LED_OUTPUT("error gpio dir 0x%x", enDir);
+    }
+}
+
+void led_gpio_act(LED_GPIO_EN enGpio, LED_GPIO_ACT_EN enAct)
+{
+    unsigned int led_gpio_value;
+
+    led_gpio_value = (*(volatile u32 *)(RALINK_REG_PIODATA(enGpio)));
+
+    if (GPIO_ACT_LOW == enAct)
+    {
+        led_gpio_value &= ~RALINK_GPIO(enGpio);
+    }
+    else if (GPIO_ACT_HIGH == enAct)
+    {
+        led_gpio_value |= RALINK_GPIO(enGpio);
+    }
+
+    *(volatile u32 *)(RALINK_REG_PIODATA(enGpio)) = led_gpio_value;
+}
+
+int led_toggle(LED_INFO_ST* pstLedInfo)
+{
+}
+
+#elif defined (SUPPORT_HG612) || defined (SUPPORT_HG620)||defined (SUPPORT_HG610)
+
+ #define LED_GPIO_NUM_TO_MASK(x) ((((x) - 1) < 32) ? (1 << ((x) - 1)) : (0))
+
+/* toggle the led and return the current ledState */
+int led_toggle(LED_INFO_ST* pstLedInfo)
+{
+    volatile unsigned long *gpio_io_reg = &GPIO->GPIOio;
+    unsigned long mask = LED_GPIO_NUM_TO_MASK(pstLedInfo->enLedGPIO);
+
+    if (GPIO_USRDEF <= pstLedInfo->enLedGPIO)
+    {
+        return -1;
+    }
+
+    GPIO->GPIODir |= mask;
+    if (GPIO->GPIOio & mask)
+    {
+        *gpio_io_reg &= ~mask;
+    }
+    else
+    {
+        *gpio_io_reg |= mask;
+    }
+
+    return 0;
+}   
+
+void led_gpio_dir(LED_GPIO_EN enGpio, LED_GPIO_DIR_EN enDir)
+{
+    volatile unsigned long *gpio_dir_reg = &GPIO->GPIODir;
+
+    if (GPIO_OUTPUT == enDir)
+    {
+        *gpio_dir_reg |= LED_GPIO_NUM_TO_MASK(enGpio);
+    }
+    else if (GPIO_INPUT == enDir)
+    {
+        *gpio_dir_reg &= ~(LED_GPIO_NUM_TO_MASK(enGpio));
+    }
+    else
+    {
+        LED_OUTPUT("error gpio dir 0x%x", enDir);
+    }
+}
+
+void led_gpio_act(LED_GPIO_EN enGpio, LED_GPIO_ACT_EN enAct)
+{
+    volatile unsigned long *gpio_io_reg = &GPIO->GPIOio;
+    unsigned long mask = LED_GPIO_NUM_TO_MASK(enGpio);
+
+    if (GPIO_USRDEF <= enGpio)
+    {
+        /* 这里用来对自定义的gpio进行处理,如注释内容 */
+
+        /*
+        if (GPIO_USRDEFUSB == enGpio)
+        {
+        }
+         */
+        return;
+    }
+
+    if (GPIO_ACT_LOW == enAct)
+    {
+        *gpio_io_reg &= ~mask;
+    }
+    else if (GPIO_ACT_HIGH == enAct)
+    {
+        *gpio_io_reg |= mask;
+    }
+}
+
+void led_gpio_mode(LED_GPIO_EN enGpio)
+{
+    /* bcm6368 中将gpio_mode对应mask置为0表示GPIO功能 */
+    volatile unsigned long *gpio_mode = &GPIO->GPIOMode;
+
+    *gpio_mode &= ~(LED_GPIO_NUM_TO_MASK(enGpio));
+}
+
+void led_lan_enable()
+{
+    GPIO->GPIOMode |= (GPIO_MODE_EPHY0_LED | GPIO_MODE_EPHY1_LED
+                       | GPIO_MODE_EPHY2_LED | GPIO_MODE_EPHY3_LED);
+}
+
+void led_lan_disable()
+{
+    GPIO->GPIOMode &= ~(GPIO_MODE_EPHY0_LED | GPIO_MODE_EPHY1_LED
+                        | GPIO_MODE_EPHY2_LED | GPIO_MODE_EPHY3_LED);
+}
+
+void led_lan_all_active()
+{
+    led_gpio_act(GPIO_6, GPIO_ACT_LOW);
+    led_gpio_act(GPIO_7, GPIO_ACT_LOW);
+    led_gpio_act(GPIO_8, GPIO_ACT_LOW);
+    led_gpio_act(GPIO_9, GPIO_ACT_LOW);
+}
+
+void led_lan_all_inactive()
+{
+    led_gpio_act(GPIO_6, !GPIO_ACT_LOW);
+    led_gpio_act(GPIO_7, !GPIO_ACT_LOW);
+    led_gpio_act(GPIO_8, !GPIO_ACT_LOW);
+    led_gpio_act(GPIO_9, !GPIO_ACT_LOW);
+}
+
+#elif defined (SUPPORT_CHIP_RTL8672)
+
+#define GPIO_FUNC_INPUT 	0x0001  /*data input*/
+#define GPIO_FUNC_OUTPUT 	0x0002	/*data output*/
+
+int led_toggle(LED_INFO_ST* pstLedInfo)
+{
+}
+
+void led_gpio_mode(LED_GPIO_EN enGpio)
+{
+}
+
+void led_gpio_dir(LED_GPIO_EN enGpio,LED_GPIO_DIR_EN enDir)
+{
+}
+
+void led_gpio_act(LED_GPIO_EN enGpio,LED_GPIO_ACT_EN enAct)
+{
+    gpioConfig(enGpio, GPIO_FUNC_OUTPUT);
+
+    if ( GPIO_ACT_LOW == enAct )
+    {
+        gpioClear( enGpio);
+    }
+    else if( GPIO_ACT_HIGH == enAct )
+    {
+        gpioSet( enGpio);
+    }
+}
+
+#elif defined (CONFIG_MIPS_TC3162U)
+/*This variable will renew in wifi driver*/
+volatile int g_RT3092_TC3162U_WPS_STATE = 0;
+
+EXPORT_SYMBOL(g_RT3092_TC3162U_WPS_STATE);
+
+
+
+int led_toggle(LED_INFO_ST* pstLedInfo)
+{
+	//printk(KERN_EMERG"\n----------------\nBoardled.c: led_toggle Entered( ) \n-----------------------------------\n");	
+
+}
+
+void led_gpio_mode(LED_GPIO_EN enGpio)
+{
+    LED_OEN(enGpio);
+}
+
+void led_gpio_dir(LED_GPIO_EN enGpio,LED_GPIO_DIR_EN enDir)
+{
+	//printk(KERN_EMERG"\n-----------------------------------\nBoardled.c: led_gpio_dir( )   ==  GPIO is [%d]\n-----------------------------------\n", enGpio);	
+    LED_OEN(enGpio);
+}
+
+void led_gpio_act(LED_GPIO_EN enGpio,LED_GPIO_ACT_EN enAct)
+{
+	//printk(KERN_EMERG"\n**************************Boardled.c: led_gpio_act(  111 )**************************\n enGpio[%d]    enAct[%d]    0x%08X    0x%08X\n \n**************************Boardled.c: led_gpio_act(  111 )**************************\n", enGpio,enAct,REG32(GPIO_CTRL_REG_ADRRESS), REG32(GPIO_DATA_REG_ADRRESS));    
+     LED_OEN(enGpio);
+   // mdelay(100);
+    if(enAct == GPIO_ACT_LOW)
+	{
+		LED_ON(enGpio);	
+    }
+	else
+	{
+		LED_OFF(enGpio);	
+	}
+	//printk(KERN_EMERG"\n------------------------Boardled.c: led_gpio_act(  222 )------------------------\n  0x%08X    0x%08X\n\n------------------------Boardled.c: led_gpio_act(  222 ) ------------------------\n", REG32(GPIO_CTRL_REG_ADRRESS), REG32(GPIO_DATA_REG_ADRRESS));	
+}
+
+#else
+int led_toggle(LED_INFO_ST* pstLedInfo)
+{
+}
+
+void led_gpio_mode(LED_GPIO_EN enGpio)
+{
+}
+
+void led_gpio_dir(LED_GPIO_EN enGpio,LED_GPIO_DIR_EN enDir)
+{
+    if( GPIO_OUTPUT == enDir )
+    {
+
+    }
+    else if( GPIO_INPUT == enDir )
+    {
+
+    }
+    else
+    {
+        LED_OUTPUT("error gpio dir 0x%x",enDir);
+    }
+}
+
+void led_gpio_act(LED_GPIO_EN enGpio,LED_GPIO_ACT_EN enAct)
+{
+    if ( GPIO_ACT_LOW == enAct )
+    {
+
+    }
+    else if( GPIO_ACT_HIGH == enAct )
+    {
+
+    }
+}
+
+#endif
+
+module_init( Led_module_init );
+module_exit( Led_module_uninit );
+
+EXPORT_SYMBOL(led_register);
+EXPORT_SYMBOL(led_unregister);
+EXPORT_SYMBOL(led_state_change);
+EXPORT_SYMBOL(led_freq_change);
+EXPORT_SYMBOL(netdev_led_add);
+EXPORT_SYMBOL(netdev_led_del);
+EXPORT_SYMBOL(ethwan_interface_state);
+

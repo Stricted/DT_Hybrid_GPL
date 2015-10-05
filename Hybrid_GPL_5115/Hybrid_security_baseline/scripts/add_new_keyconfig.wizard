@@ -1,0 +1,135 @@
+#!/bin/sh
+
+echo "**** Autotools Add New KeyConfig Wizard ****"
+echo " This script will generate files to add new KeyConfig to ATP."
+
+# Usage
+# $1 - Feature path
+# $2 - Feature name
+# $3 - Feature keynum
+
+upcase_module=`echo ${2} | tr '[:lower:]' '[:upper:]'`
+
+# Generate Makefile for the test module
+touch $1/KeyConfig.in
+cat << EOF > $1/KeyConfig.in
+# Auto Gen By ATP 
+EOF
+for c in 1 2 3 4 5 6 7 8 9 10; do
+	if [ $c -gt $3 ];then
+		break;
+	fi
+prefix=BUILD_${upcase_module}_KEY$c	
+cat << EOF >> $1/KeyConfig.in
+############ KEY$c ####################
+config $prefix
+	bool "${prefix}"
+	depends on BUILD_${upcase_module}
+	select BUILD_SECLIB
+	default n
+if ${prefix}
+menu "Set ${prefix} Key"
+choice
+	prompt "Key Attribute Choice"
+	depends on ${prefix}
+	
+	config ${prefix}_SYMMETRIC
+		bool "Symmetric"
+	
+	config ${prefix}_ASYMMETRIC
+		bool "Asymmetric"
+		
+	config ${prefix}_SIGNATURE
+		bool "Signature"
+endchoice
+
+choice
+	prompt "Symmetric Algorithm Choice"
+	depends on ${prefix}_SYMMETRIC
+	help
+	  Select Symmetric Algorithm.
+
+	config ${prefix}_3DES
+		bool "3DES"
+		select BUILD_MINISSL_DES3
+				
+	config ${prefix}_AES
+		bool "AES"
+		select BUILD_MINISSL_AES
+	
+endchoice
+
+choice
+	prompt "Asymmetric Algorithm Choice"
+	depends on ${prefix}_ASYMMETRIC
+	help
+	  Select Symmetric Algorithm.
+
+	config ${prefix}_RSA
+		bool "RSA"
+		select BUILD_MINISSL_RSA
+endchoice
+	
+choice
+	prompt "Signature Algorithm Choice"
+	depends on ${prefix}_SIGNATURE
+	help
+	  Select Security Algorithm.
+
+	config ${prefix}_MD5WITHRSA
+		bool "Signature MD5 with RSA"
+		select BUILD_MINISSL_RSA
+				
+	config ${prefix}_SHA2WITHRSA
+		bool "Signature SHA2 with RSA"
+		select BUILD_MINISSL_SHA256
+		select BUILD_MINISSL_RSA
+		
+	config ${prefix}_SHA4WITHRSA
+		bool "Signature SHA4 with RSA"
+		select BUILD_MINISSL_SHA512
+		select BUILD_MINISSL_RSA
+endchoice
+
+config ${prefix}_KEYSIZE
+	int "Key Size"
+	depends on ${prefix}
+
+choice 
+	prompt "Key Store"
+	depends on ${prefix}
+	default ${prefix}_STORE_ALL_KEY
+	config ${prefix}_STORE_NO_KEY
+		bool "No Store All Key"
+	config ${prefix}_STORE_ALL_KEY
+		bool "Store All Key"
+	config ${prefix}_STORE_PUBLIC_KEY
+		bool "Store Public Key"
+		depends on !${prefix}_SYMMETRIC
+	config ${prefix}_STORE_PRIVATE_KEY
+		bool "Store Private Key"
+		depends on !${prefix}_SYMMETRIC
+endchoice
+	
+config ${prefix}_ALGID
+	hex 
+	default "0x20000" if ${prefix}_3DES
+	default "0x20001" if ${prefix}_AES
+	default "0x40000" if ${prefix}_RSA
+	default "0x80000" if ${prefix}_MD5WITHRSA
+	default "0x80001" if ${prefix}_SHA2WITHRSA
+	default "0x80002" if ${prefix}_SHA4WITHRSA
+
+config ${prefix}_STORE
+	int
+	default 0 if ${prefix}_STORE_NO_KEY
+	default 1 if ${prefix}_STORE_ALL_KEY
+	default 2 if ${prefix}_STORE_PUBLIC_KEY
+	default 3 if ${prefix}_STORE_PRIVATE_KEY
+endmenu
+endif
+	
+EOF
+done
+
+echo "Generate succeeded."

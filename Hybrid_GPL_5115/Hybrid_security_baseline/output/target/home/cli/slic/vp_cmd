@@ -1,0 +1,14 @@
+[settings]
+functionname=hi_kernel_slic_vp_cmd;  
+attributenum=5;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chip_idx>    type<uint>    range<0,0xff>      default<0x6>; /*芯片号*/
+attribute=alias<port_idx>    type<uint>    range<0,1>      default<0x0>; /*通道号*/
+
+attribute=alias<cmd>         type<uint>    range<0,0xFFFFFFFF>      default<0>;  /*寄存器基地址*/
+attribute=alias<len>         type<uint>    range<0,32>              default<1>;  /*读取长度*/
+attribute=alias<data>        type<binary>  range<0,32>              default<0>;  /*读取数据存放内存*/
+
+[help]

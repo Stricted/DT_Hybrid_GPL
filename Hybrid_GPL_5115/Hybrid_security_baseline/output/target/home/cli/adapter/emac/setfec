@@ -1,0 +1,26 @@
+[settings]
+functionname=hi_adapter_cli_emac_set_fec;
+attributenum=4;
+attributeflag = 1 ;
+
+[parameter]
+attribute=alias<direction>	type<uint>     range<0x0,0x1>     default<0>;
+attribute=alias<llid>		type<uchar>    range<0x0,0x7>       default<0>;
+attribute=alias<enable>		type<uchar>    range<0x0,0x1>       default<0>;
+attribute=alias<res>		type<ushort>    range<0x0,0x0>       default<0>;
+
+
+[help]
+typedef struct
+{
+    hi_lsw_direction_e  em_direction;   /*上行or下行选择  */
+    hi_uchar8           uc_llid;
+    hi_uchar8           uc_enable;
+    hi_ushort16         us_res;
+}hi_emac_fec_s;
+
+typedef enum
+{
+    HI_LSW_UP_E = 0,
+    HI_LSW_DOWN_E,
+}hi_lsw_direction_e;

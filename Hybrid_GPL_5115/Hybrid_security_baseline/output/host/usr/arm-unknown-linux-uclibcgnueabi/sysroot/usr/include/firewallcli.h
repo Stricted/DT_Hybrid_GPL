@@ -1,0 +1,1 @@
+#ifndef __FIREWALLCLI_H__#define __FIREWALLCLI_H__#include "atptypes.h"#ifdef SUPPORT_ATP_IPV6VOS_UINT32 ATP_CLI_DiagSetFirewallcfg(VOS_UINT32 ulArgc, VOS_CHAR   *acLastPara[]);#endif#endif

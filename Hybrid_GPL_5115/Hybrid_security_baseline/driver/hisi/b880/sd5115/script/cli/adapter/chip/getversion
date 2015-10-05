@@ -1,0 +1,11 @@
+[settings]
+functionname = hi_adapter_cli_chip_get_version;
+attributenum = 1;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<version>     type<uint>   range<0x0,0xffffffff>       default<0>;
+
+[help]
+
+

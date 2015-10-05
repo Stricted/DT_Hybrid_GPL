@@ -1,0 +1,1 @@
+cmd_net/8021q/8021q.o := /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/bin/arm-hsan-linux-uclibcgnueabi-ld -EL    -r -o net/8021q/8021q.o net/8021q/vlan.o net/8021q/vlan_dev.o net/8021q/vlan_netlink.o net/8021q/vlanproc.o 

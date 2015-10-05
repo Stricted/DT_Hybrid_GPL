@@ -1,0 +1,31 @@
+# See package/makedevs/README for details
+#
+# This device table is used to assign proper ownership and permissions
+# on various files. It doesn't create any device file, as it is used
+# in both static device configurations (where /dev/ is static) and in
+# dynamic configurations (where devtmpfs, mdev or udev are used).
+#
+# <name>				<type>	<mode>	<uid>	<gid>	<major>	<minor>	<start>	<inc>	<count>
+/bin					d	777	0	0	-	-	-	-	-
+/dev					d	777	0	0	-	-	-	-	-
+/etc					d	777	0	0	-	-	-	-	-
+/lib					d	777	0	0	-	-	-	-	-
+/mnt					d	777	0	0	-	-	-	-	-
+/proc					d	777	0	0	-	-	-	-	-
+/sbin					d	777	0	0	-	-	-	-	-
+/usr					d	777	0	0	-	-	-	-	-
+/var					d	777	0	0	-	-	-	-	-
+/bin/busybox				f	4755	0	0	-	-	-	-	-
+/bin/startbsp				f	770	0	0	-	-	-	-	-
+/lib/ld-uClibc.so.0					f	777	0	0	-	-	-	-	-
+/lib/libcrypt.so.0					f	777	0	0	-	-	-	-	-
+/lib/libc.so.0					f	777	0	0	-	-	-	-	-
+/lib/libdl.so.0					f	777	0	0	-	-	-	-	-
+/lib/libgcc_s.so.1					f	777	0	0	-	-	-	-	-
+/lib/libm.so.0					f	777	0	0	-	-	-	-	-
+/lib/libnsl.so.0					f	777	0	0	-	-	-	-	-
+/lib/libutil.so.0					f	777	0	0	-	-	-	-	-
+/lib/libpthread.so.0					f	777	0	0	-	-	-	-	-
+/lib/librt.so.0					f	777	0	0	-	-	-	-	-
+/dev/null	c	666	0	0	1	3	0	0	-
+/dev/console	c	666	0	0	5	1	-	-	-

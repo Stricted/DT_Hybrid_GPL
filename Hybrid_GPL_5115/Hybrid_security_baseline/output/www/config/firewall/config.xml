@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<fwswitch>
+		<firewallmainswitch>1</firewallmainswitch>
+		<firewallipfilterswitch>0</firewallipfilterswitch>
+		<firewallwanportpingswitch>1</firewallwanportpingswitch>
+	</fwswitch>
+	<dmz>
+		<dmzstatus>0</dmzstatus>
+		<dmzipaddress>192.168.1.100</dmzipaddress>
+	</dmz>
+	<sip>
+		<sipstatus>1</sipstatus>
+		<sipport>5060</sipport>
+	</sip>
+	<lanipfilter>
+		<wan>1</wan>
+	</lanipfilter>
+</config>

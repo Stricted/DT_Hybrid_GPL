@@ -1,0 +1,30 @@
+[settings]
+functionname=0xF7002004;
+attributenum=5;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       			type<uint>   	range<0x0,0xFFFFFFFF>  	default<0x00000F04>; /*全局模块*/
+attribute=alias<ui_llid_index>        	type<uint>   	range<0x0,0xFFFFFFFF>  	default<0x00000000>;
+attribute=alias<em_force_en>        	type<int>   	range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<em_msg_type>        	type<int>   	range<0x0,0x03>  		default<0x00000000>;
+attribute=alias<uc_data>       			type<binary>   	range<0,60>  			default<0x00000000>;
+
+
+[help]
+/* MPCP报文结构 */
+typedef struct
+{
+    /* 属于哪个LLID */
+    uint ui_llid_index;
+
+    /* 强制发送 */
+    HI_BOOL_E em_force_en;
+
+    /* 接收相关参数 */
+    HI_DP_EPON_MPCP_MSG_TYPE_E em_msg_type;
+
+    /* MPCP帧内容 由MPCP协议软件进行解析 */
+    uchar uc_data[HI_DP_MPCP_MSG_LEN];
+    
+} hi_mpcp_message_s;

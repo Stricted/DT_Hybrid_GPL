@@ -1,0 +1,22 @@
+config BUILD_ATPPKG
+	bool "ATP Package Tools"
+	default y
+	depends on BUILD_PKGIMAGE
+
+choice
+	prompt "Inifile Select"
+	config BUILD_AUTO_GEN_INI
+		bool "Auto Generate Ini File"
+		
+	config BUILD_CUSTOMER_INI
+		bool "Customer Ini File"
+	
+endchoice
+
+if BUILD_CUSTOMER_INI
+	config BUILD_CUSTOMER_INI_PATH
+	string "Customer Ini File Path"
+	default "package/atp/hosttool/package/pkg/config.ini"
+endif
+
+

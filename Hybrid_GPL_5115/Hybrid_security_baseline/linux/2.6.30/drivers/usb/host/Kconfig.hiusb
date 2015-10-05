@@ -1,0 +1,60 @@
+#
+# Hisilicon usb Host Controller Drivers
+#
+if HISI_SD5115
+
+menuconfig USB_HISI_SD5115
+	bool "hisilicon usb(ehci/ohci) family usb host device support"
+	depends on (HISI_SD5115)
+	select USB
+	select USB_ARCH_HAS_EHCI
+	select USB_ARCH_HAS_OHCI
+	help
+	  This selects the usb(ehci/ohci) family usb host device.
+
+config USB_HISI_SD5115_EHCI
+	bool "usb-ehci usb host device support"
+	depends on (USB_HISI_SD5115)
+	default y
+
+config USB_HISI_SD5115_EHCI_IOBASE
+	hex "usb-ehci IO address"
+	depends on (USB_HISI_SD5115_EHCI)
+	default "0x10A40000"
+
+config USB_HISI_SD5115_EHCI_IOSIZE
+	hex "usb-ehci IO size"
+	depends on (USB_HISI_SD5115_EHCI)
+	default "0x00010000"
+	help
+	  default is 0x10000.
+
+config USB_HISI_SD5115_EHCI_IRQNUM
+	int "usb-ehci irq number"
+	depends on (USB_HISI_SD5115_EHCI)
+	default "71"
+
+config USB_HISI_SD5115_OHCI
+	bool "usb-ohci usb host device support"
+	depends on (USB_HISI_SD5115)
+	default y
+
+config USB_HISI_SD5115_OHCI_IOBASE
+	hex "usb-ohci IO address"
+	depends on (USB_HISI_SD5115_OHCI)
+	default "0x10A50000"
+
+config USB_HISI_SD5115_OHCI_IOSIZE
+	hex "usb-ohci IO size"
+	depends on (USB_HISI_SD5115_OHCI)
+	default "0x00010000"
+	help
+	  default is 0x10000.
+
+config USB_HISI_SD5115_OHCI_IRQNUM
+	int "usb-ohci irq number"
+	depends on (USB_HISI_SD5115_OHCI)
+	default "70"
+
+endif
+

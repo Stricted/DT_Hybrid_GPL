@@ -1,0 +1,26 @@
+[settings]
+functionname=0xF7002004;
+attributenum=7;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       					type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000D1D>; /*È«¾ÖÄ£¿é*/
+attribute=alias<txprbs_sum_cnt>        			type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rxprbs_fsm_curr_st>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rxprbs_bit_err_sum_cnt>      	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rxprbs_byte_sum_cnt>        	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rxprbs_err_sum_cnt>          	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rxprbs_sum_cnt>          		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+
+[help]
+typedef struct 
+{
+    uint   txprbs_sum_cnt;             
+    uint   rxprbs_fsm_curr_st;         
+    uint   rxprbs_bit_err_sum_cnt;      
+    uint   rxprbs_byte_sum_cnt;         
+    uint   rxprbs_err_sum_cnt;          
+    uint   rxprbs_sum_cnt;    
+    
+}hi_dp_logic_prbs_cnt_s;
+

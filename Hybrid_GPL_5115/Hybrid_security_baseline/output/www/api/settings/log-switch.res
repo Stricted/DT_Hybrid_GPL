@@ -1,0 +1,1 @@
+vpath="InternetGatewayDevice.X_SyslogSwitch"E5element="CmsEnable|WebEnable|AtsEnable|QmiEnable|SmsEnable|Others1Enable|Others2Enable|Others3Enable|Others4Enable|Others5Enable"ATPelement="CmsEnable|WebEnable|AtsEnable|QmiEnable|SmsEnable|Others1Enable|Others2Enable|Others3Enable|Others4Enable|Others5Enable"

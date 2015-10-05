@@ -1,0 +1,10 @@
+#
+# Makefile for the Broadcom NAND MTD
+#
+
+obj-$(CONFIG_MTD_BRCMNAND)		+=  bcm63xx-nand.o brcmnand_base.o brcmnand_bbt.o
+## obj-$(CONFIG_MTD_BRCMNAND_EDU)		+= edu.o
+obj-$(CONFIG_MTD_BRCMNAND_CORRECTABLE_ERR_HANDLING)	+= brcmnand_cet.o
+EXTRA_CFLAGS	+= -I $(TOPDIR)/include/asm-generic -I$(INC_BRCMDRIVER_PUB_PATH)/$(BRCM_BOARD) -I$(INC_BRCMSHARED_PUB_PATH)/$(BRCM_BOARD)
+EXTRA_CFLAGS    += -I$(INC_APP_DIR) -I$(DRIVER_HUAWEI_BHAL_ADAPTER_DIR) -I$(INC_FLASHCONF_DIR) -I$(INC_DRIVER_HUAWEI_DIR)
+

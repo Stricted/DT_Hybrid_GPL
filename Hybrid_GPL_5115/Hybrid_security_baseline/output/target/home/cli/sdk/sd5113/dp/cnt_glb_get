@@ -1,0 +1,34 @@
+[settings]
+functionname=0xF7002004;
+attributenum=12;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000D00>; /*全局模块*/
+attribute=alias<wr_full_drop>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<data_buf_afull>     type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rec_buf_afull>      type<int>    range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<mcf_fifo_full>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rec_buf_fail>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<multicast_drop>     type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rec_drop>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_tdm>       		type<int>    range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_tdm>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rec>       			type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<fcs_lenerror>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+
+[help]
+typedef struct 
+{
+    uint wr_full_drop;           /* 数据FIFO满丢帧统计 */        
+    uint data_buf_afull;         /* 数据Buffer满统计 */      
+    uint rec_buf_afull;          /* REC Buffer满统计 */    
+    uint mcf_fifo_full;          /* MCF FIFO满统计 */    
+    uint rec_buf_fail;           /* REC Buffer重组失败统计 */      
+    uint multicast_drop;         /* 组播过滤帧统计 */      
+    uint rec_drop;               /* 重组失败帧统计 */         
+    uint rx_tdm;                 /* TDM下行接收帧统计 */             
+    uint tx_tdm;                 /* TDM上行接收帧统计 */          
+    uint rec;                    /* 重组成功计数 */          
+    uint fcs_lenerror;           /* MCF超长超短帧过滤计数 */
+}hi_dp_logic_glb_cnt_s;

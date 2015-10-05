@@ -1,0 +1,66 @@
+[settings]
+functionname=0xF7002004;
+attributenum=50;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       					 type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000B00>; /*全局模块*/
+attribute=alias<ui_preamble_type1_len_bit>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_preamble_type2_len_bit>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_preamble_type3_len_byte>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_preamble_type3_pattern>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_delimiter>       			 type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_onu_id>       				 type<uint>   range<0,255>  		 default<0x00000000>;
+attribute=alias<ui_dbru_unit>       			 type<uint>   range<0,0x1F>  		 default<0x6>;
+attribute=alias<ui_pee_threshold>       		 type<int>    range<0x0,0xFFFFF>  	 default<0x2F000>;
+attribute=alias<ui_fixed_delay>       			 type<uint>   range<0x0,0xFFFF>  	 default<0x17F9>;
+attribute=alias<ui_random_delay>       			 type<uint>   range<0x0,0xFFFF>  	 default<0x00000000>;
+attribute=alias<ui_tx_delay>       				 type<uint>   range<0x0,0xFF>  		 default<0x00000000>;
+attribute=alias<ui_tcont_threshold>       	     type<uint>   range<0x0,0xFFFF>  	 default<0x1600>;
+attribute=alias<ui_pre_eqd>       				 type<uint>   range<0x0,0xFFFF>  	 default<0x00000000>;
+attribute=alias<ui_eqd>       					 type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_eqd_residue>       			 type<int>    range<0,7>  			 default<0x00000000>;
+attribute=alias<ui_eqd_dec>       				 type<uint>   range<0,1>  			 default<0x00000000>;
+attribute=alias<ui_eqd_inc>       				 type<uint>   range<0,1>  			 default<0x00000000>;
+attribute=alias<em_cut_en>       				 type<int>    range<0,0xFFF>  		 default<0>;
+attribute=alias<ui_cut_len>       				 type<uint>   range<0x0,0xFFFFFFFF>  default<80>;
+attribute=alias<ui_min_cut_len>       			 type<uint>   range<0,0x1F>  	     default<10>;
+attribute=alias<em_dyinggasp_send_mode>       	 type<int>    range<0x0,0x01>  		 default<0x00000000>;
+attribute=alias<em_endian>       				 type<int>    range<0x0,0x01>  		 default<0x00000000>;
+attribute=alias<em_tx_mode_0>       			 type<int>    range<0x0,0x02>  		 default<0x00000000>;
+attribute=alias<em_active>       				 type<int>    range<0x0,0x01>  		 default<0x00000000>;
+attribute=alias<em_sd_active>       			 type<int>    range<0x0,0x01>  		 default<0x00000000>;
+attribute=alias<em_tx_sel>       				 type<int>    range<0x0,0x03>  		 default<0x00000000>;
+attribute=alias<em_swing_volt>       			 type<int>    range<0x0,0x03>  		 default<0x00000000>;
+attribute=alias<ui_err_on_threshold>       		 type<int>    range<0x0,0x3FF>  	 default<234>;
+attribute=alias<ui_err_off_threshold>       	 type<int>    range<0x0,0x3FF>  	 default<156>;
+attribute=alias<em_omcicut_en>       			 type<int>    range<0x0,0x01>  		 default<0x00000000>;
+attribute=alias<ui_txomci_tcont_num>       		 type<uint>   range<0,7>  			 default<0>;
+attribute=alias<ui_txomci_portid>       		 type<uint>   range<0x0,0xFFF>  	 default<0x00000000>;
+attribute=alias<ui_alarm_mask>       			 type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_arg_0>       				 type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<em_tx_en>       				 type<int>    range<0x0,0x01>  		 default<0x00000000>;
+attribute=alias<em_tx_mode_1>       			 type<int>    range<0x0,0x01>  		 default<0x00000000>;
+attribute=alias<ui_len>       					 type<uint>   range<8,2047>  		 default<8>;
+attribute=alias<ui_seed>       					 type<uint>   range<0x1,0x7FFFFF>  	 default<0x7FFFFF>;
+attribute=alias<ui_interval>       				 type<int>    range<0,255>  		 default<0x00000000>;
+attribute=alias<ui_gemport>       				 type<uint>   range<0,4095>  		 default<0x00000000>;
+attribute=alias<ui_tcont>       				 type<uint>   range<0,7>  		 	 default<0x00000000>;
+attribute=alias<ui_indicate_num>       			 type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_arg_1>       				 type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<em_enable>       				 type<int>    range<0x0,0x01>  		 default<0x00000000>;
+attribute=alias<ui_e1_length>       			 type<int>    range<0x0,0xFFFFFFFF>  default<0x22>;
+attribute=alias<ui_t1_length>       			 type<uint>   range<0x0,0xFFFFFFFF>  default<0x22>;
+attribute=alias<em_out_loop_en>       			 type<int>    range<0x0,0x01>  		 default<0x00000000>;
+
+[help]
+    HI_DP_DYINGGASP_SEND_MODE_E  em_dyinggasp_send_mode;    /* 逻辑是否发送Dyinggasp消息选择 */
+    HI_DP_ENDIAN_E             em_endian;                   /* 上行字序模式 */           
+    HI_DP_GPON_UP_TX_MODE_E    em_tx_mode;                  /* 发光控制 */
+    HI_LEVEL_E                 em_active;                   /* 激光器发光使能有效电平 */
+    HI_LEVEL_E                 em_sd_active;                /* 光模块发光检测电平 */
+    HI_DP_GPON_UP_TX_SEL_E     em_tx_sel;                   /* 发光信号选择 */
+    HI_DP_GPON_UP_SWING_VOLT_E em_swing_volt;               /* 差分信号幅度 */
+    uint                       ui_err_on_threshold;         /* 光模块异常发光的持续时间容忍门限 */
+    uint                       ui_err_off_threshold;        /* 光模块异常关断的持续时间容忍门限 */
+

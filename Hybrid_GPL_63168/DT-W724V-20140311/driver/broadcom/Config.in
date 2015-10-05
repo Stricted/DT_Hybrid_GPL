@@ -1,0 +1,102 @@
+choice
+	prompt "Choose broadcom chip"
+	default BCM96362
+config BCM96368
+	bool "Support broadcom BCM96368 chip"	
+	help
+	  Enable this option if you use broadcom BCM96368 chip
+
+config BCM96816
+	bool "Support broadcom BCM96816 chip"	
+	help
+	  Enable this option if you use broadcom BCM96816 chip
+
+config BCM96362
+	bool "Support broadcom BCM96362 chip"	
+	help
+	  Enable this option if you use broadcom BCM96362 chip	  
+	  
+config BCM96328
+	bool "Support broadcom BCM96328 chip"	
+	help
+	  Enable this option if you use broadcom BCM96328 chip	  
+
+config BCM963268
+	bool "Support broadcom BCM963268 chip"	
+	help
+	  Enable this option if you use broadcom BCM963268 chip	  	  	  
+
+config BCM96318
+	bool "Support broadcom BCM96318 chip"	
+	help
+	  Enable this option if you use broadcom BCM96318 chip	 
+
+endchoice
+
+config BRCM_CHIP_NAME
+	string "broadcom chip name"
+	default "bcm963268" if BCM963268
+	default "bcm96362" if BCM96362
+	default "bcm96318" if BCM96318
+
+config ATP_CHIP_NAME
+	string 
+	default BRCM_CHIP_NAME
+
+config BRCM_CHIP
+	int "broadcom chip name"
+	default 63268 if BCM963268
+	default 6362 if BCM96362
+	default 6318 if BCM96318
+	
+choice 
+	prompt "Choose broadcom release version"
+
+	default BROADCOM_RELEASE_VERSION_4_12
+	help
+	  Select Broadcom release version
+
+	config BROADCOM_RELEASE_VERSION_4_12
+		bool "Broadcom release version 4.12"
+	config BROADCOM_RELEASE_VERSION_4_12_L06
+		bool "Broadcom release version 4.12L06"
+	config BROADCOM_RELEASE_VERSION_4_12_L07
+		bool "Broadcom release version 4.12L07"
+	config BROADCOM_RELEASE_VERSION_4_12_L08
+		bool "Broadcom release version 4.12L08"
+	config BROADCOM_RELEASE_VERSION_4_13
+		bool "Broadcom release version 4.13"
+	config BROADCOM_RELEASE_VERSION_4_14_L02
+		bool "Broadcom release version 4.14L02"
+
+endchoice
+
+config BROADCOM_RELEASE_VERSION
+	string
+	default "4.12" if BROADCOM_RELEASE_VERSION_4_12
+	default "4.12L06" if BROADCOM_RELEASE_VERSION_4_12_L06
+	default "4.12L07" if BROADCOM_RELEASE_VERSION_4_12_L07
+	default "4.12L08" if BROADCOM_RELEASE_VERSION_4_12_L08
+	default "4.13" if BROADCOM_RELEASE_VERSION_4_13
+	default "4.14L02" if BROADCOM_RELEASE_VERSION_4_14_L02
+	depends on (BROADCOM_RELEASE_VERSION_4_12 ||  BROADCOM_RELEASE_VERSION_4_13 || BROADCOM_RELEASE_VERSION_4_12_L06 || BROADCOM_RELEASE_VERSION_4_12_L07 || BROADCOM_RELEASE_VERSION_4_12_L08 || BROADCOM_RELEASE_VERSION_4_14_L02)
+	help
+	  broadcom release version
+
+if BCM963268
+source "driver/broadcom/bcm963268/Config.in"
+endif
+
+
+
+config BRCM_DAYING_GASP
+	bool "Support broadcom daying gasp"
+	default n
+	help	
+	  This options enables broadcom dayinggasp
+	  
+config ATP_BRCM
+	bool "Support atp modify broadcom"
+	default y
+	help	
+	  This options enables broadcom dayinggasp	  

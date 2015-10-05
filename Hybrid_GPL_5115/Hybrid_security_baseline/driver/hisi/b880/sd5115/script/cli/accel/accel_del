@@ -1,0 +1,17 @@
+[settings]
+functionname = hi_kernel_accel_cmdtype_delitem;
+attributenum = 2;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<hw>           type<uint>    range<0,1>     default<1>;
+attribute=alias<sw>           type<uint>    range<0,1>     default<1>;
+
+[help]
+
+typedef struct
+{
+    hi_uint32 ui_hw_flag; 
+    hi_uint32 ui_sw_flag; 
+}hi_kernel_accel_cmdtype_flag_s;
+

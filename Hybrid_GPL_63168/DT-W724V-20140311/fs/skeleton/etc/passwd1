@@ -1,0 +1,9 @@
+root:x:0:0:admin:/bin:/bin/sh
+nobody:(null):0:0:tr140 user:/mnt:/bin/sh
+web:x:2073:2073:web:/bin:/bin/sh
+upnp:x:2189:2189:upnp:/bin:/bin/sh
+cwmp:x:2065:2065:Linux User:/bin:/bin/sh
+telnetd:x:2076:2076:telnetd:/bin:bin/sh
+console:x:2162:2162:console:/bin:bin/sh
+dhcps:x:2048:2048:dhcps:/bin:bin/sh
+

@@ -1,0 +1,5 @@
+config BUILD_OPENSSL_O
+	bool "Support big OpenSSL library"
+	default n
+	help
+		Encrypt library for other programs, like ipsec-tools.

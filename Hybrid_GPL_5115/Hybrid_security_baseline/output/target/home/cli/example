@@ -1,0 +1,26 @@
+[settings]
+functionname = hi_hlp_simplecmd;
+attributenum = 10;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<name1>  type<char>   range<0x0,0xFF>             default<1>;
+attribute=alias<name2>  type<short>  range<0x0,0xFFFF>           default<2>;
+attribute=alias<name3>  type<int>    range<0x0,0xFFFFFFFF>       default<3>;
+attribute=alias<name4>  type<uchar>  range<0x0,0xFF>             default<4>;
+attribute=alias<name5>  type<ushort> range<0x0,0xFFFF>           default<5>;
+attribute=alias<name6>  type<uint>   range<0x0,0xFFFFFFFF>       default<6>;
+attribute=alias<name7>  type<ip>                                 default<192.168.0.100>;
+attribute=alias<name8>  type<mask>                               default<255.255.255.0>;
+attribute=alias<name9>  type<mac>                                default<10:00:00:01:02:03>;
+attribute=alias<name10> type<string> range<0,32>                 default<\home\cli>;
+attribute=alias<name11> type<binary> range<0,32>                 default<"0x68 0x77 0x68 0x77 0x01 0x02">;
+
+[help]
+
+usage: 
+functionname = 函数名称;
+attributenum = 10; 输入的属性个数,用于检查模板是否输入正确;
+attributeflag= 1;  是否自动进行回显1:显示;0:不显示;
+				   对有特殊输出格式的函数,可以输入0,然后在函数中实现特殊输出
+

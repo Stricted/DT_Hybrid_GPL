@@ -1,0 +1,30 @@
+#
+# hisilicon spi flash controller device version 300
+#
+
+menuconfig MTD_HISI_SD5115_SFC
+	bool "hisilicon spi flash controller device driver"
+	depends on HISI_SD5115
+	help
+	  hisilicon spi flash controller device version 300.
+
+config MTD_HISI_SD5115_SFC_BUFFER_BASE_ADDRESS
+	hex "hisilicon spi flash controller read/write memory base address"
+	depends on MTD_HISI_SD5115_SFC
+	default "0x1C000000"
+
+config MTD_HISI_SD5115_SFC_REG_BASE_ADDRESS
+	hex "hisilicon spi flash controller register base address"
+	depends on MTD_HISI_SD5115_SFC
+	default "0x10A20000"
+
+config MTD_HISI_SD5115_SFC_PERIPHERY_REGBASE
+	hex "hisilicon spi flash controller periphery register base address(clk)"
+	depends on MTD_HISI_SD5115_SFC
+	default "0"
+	
+config MTD_HISI_SD5115_SFC_CHIPNUM
+	int "hisilicon spi flash controller chip number"
+	depends on MTD_HISI_SD5115_SFC
+	default 2
+

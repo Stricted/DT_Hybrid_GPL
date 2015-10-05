@@ -1,0 +1,22 @@
+[settings]
+functionname=hi_kernel_mpcp_set_silencetime;  
+attributenum=3;
+attributeflag = 4 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<llidindex>    type<char>    default<0x0>;
+attribute=alias<reason>       type<char>    default<0x0>;
+attribute=alias<res>          type<short>   default<0x0>;
+attribute=alias<timeout>      type<int>     default<0x3c>;
+
+
+[help]
+usage: 
+typedef struct
+{
+    hi_uchar8   uc_llidindex;
+    hi_uchar8   uc_reason;
+    hi_ushort16 us_res;
+    hi_uint32   ui_timeout;
+}hi_kernel_sd5113_mpcp_silence_s;
+

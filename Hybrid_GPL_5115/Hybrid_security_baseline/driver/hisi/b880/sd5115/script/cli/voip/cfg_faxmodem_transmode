@@ -1,0 +1,14 @@
+[settings]
+functionname=hi_voip_cli_cfg_faxmodem_transmode;  
+attributenum=2;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chanid>       type<uint>       range<0x0,0xFFFFFFFF>      default<0x0>   ; /*通道号*/
+attribute=alias<transmode>    type<uint>       range<0x0,0xFFFFFFFF>      default<0x0>   ; /*带内带外均不支持*/
+
+
+[help]
+usage: cfg_faxmodem_transmode                   ; 配置fax/modem信号的传输方式       
+       cfg_faxmodem_transmode -v chanid 0x1     ; 通道号
+       cfg_faxmodem_transmode -v transmode 0x1  ; 配置为带内传输

@@ -1,0 +1,3 @@
+config ATP_LEDSERVICE_PATH
+	string "ATP Ledservice Choice"
+	default "atp/hg257"

@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link type="text/css" rel="stylesheet" href="../css/main.css" />
+        <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+        <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+        <script type="text/javascript" src="../js/refresh.js"></script>
+        <script type="text/javascript" src="../js/aes128.js"></script>
+        <script type="text/javascript" src="../js/tr069.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <div id="all_content" class="body_bg_settings">
+            <input type="text" id="focus_hidden" style="display:none" value="focus">
+                            <div class="maintitle">
+                                <h1><script type="text/javascript">dw(tr069_label_tr069);</script></h1>
+                            </div>               
+                            <div >
+                                <table id="show_tr056_setting">
+                                    <tr valign="top" height="42">
+                                        <td width="250">
+                                            <script type="text/javascript">dw(tr069_setting_periodic_inform);dw(common_colon);</script>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="periodic_inform_check"/>
+                                            <script type="text/javascript">dw(common_enable);</script>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr valign="top" height="42">
+                                        <td>
+                                            <script type="text/javascript">dw(tr069_setting_periodic_inform_interval);dw(common_colon);</script>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="interval_name" id="id_interval_name" style="input_style" maxlength="10"/>
+                                        </td>
+                                        <td>
+                                            <span>[1-4294967295]</span>
+                                        </td>
+                                    </tr>
+                                    <tr valign="top" height="42">
+                                        <td>
+                                            <script type="text/javascript">dw(tr069_setting_acs_url);dw(common_colon);</script>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="acsurl_name" id="id_acs_url" style="input_style" maxlength='256'>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr valign="top" height="42">
+                                        <td>
+                                            <script type="text/javascript">dw(tr069_setting_acs_username);dw(common_colon);</script>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="id_username" name="acs_username" style="input_style" maxlength='31'/>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr valign="top" height="42">
+                                        <td>
+                                            <script type="text/javascript">dw(tr069_setting_acs_password);dw(common_colon);</script>
+                                        </td>
+                                        <td>
+                                            <input type="password" id="id_password" name="acs_password" style="input_style" maxlength='31'/>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr valign="top" height="42">
+                                        <td>
+                                            <script type="text/javascript">dw(tr069_setting_con_username);dw(common_colon);</script>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="id_conn_username" name="conn_username" style="input_style" maxlength='31'/>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr valign="top" height="42">
+                                        <td>
+                                            <script type="text/javascript">dw(tr069_setting_con_password);dw(common_colon);</script>
+                                        </td>
+                                        <td>
+                                            <input type="password" id="id_conn_password" name="conn_password" style="input_style" maxlength='31'/>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr valign="top" height="42">
+                                        <td>
+                                            <script type="text/javascript">dw(tr069_setting_con_port);dw(common_colon);</script>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="id_conn_port" name="conn_port" style="input_style" maxlength='5'/>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr valign="top" height="42">
+                                        <td>
+                                            <script type="text/javascript">dw(tr069_setting_enable);dw(common_colon);</script>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="id_enable_certificate"/>
+                                            <script type="text/javascript">dw(common_enabled);</script>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr valign="top">
+                                        <td colspan="3" style="text-align: center">
+                                            <script type="text/javascript">create_button(common_save,"btn_acs_save");</script>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id = "show_file_upload" style="display: none;">
+                                <iframe id="update_acs_path" name="update_acs_path" scrolling="no" frameborder="0" width="0" height="0"></iframe>
+                                <form method="post" action="/api/settings/tr069file" enctype="multipart/form-data" target="update_acs_path" id="path_form" name="path_form">
+                                    <table id="show_tr069_path">
+                                        <tr>
+                                            <td>
+                                                <script type="text/javascript">dw(tr069_setting_path);dw(common_colon);</script>
+                                            </td>
+                                            <td>
+                                                <input type="file" id="id_acs_path" style="width:200px;"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="text-align: center">
+                                                <script type="text/javascript">create_button(sd_label_upload,"btn_acs_upload");</script>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+        </div>
+    </body>
+</html>

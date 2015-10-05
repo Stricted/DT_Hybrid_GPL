@@ -1,0 +1,5 @@
+config BUILD_CUPS
+	bool "support cups"
+	default y
+	help
+		Select support for cups

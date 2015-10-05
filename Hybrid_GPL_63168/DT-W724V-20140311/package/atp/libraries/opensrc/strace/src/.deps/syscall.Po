@@ -1,0 +1,283 @@
+syscall.o: syscall.c defs.h config.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sgidefs.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/features.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_config.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/cdefs.h \
+ /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include/stdbool.h \
+ /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include/stdint.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/stdint.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/wchar.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/wordsize.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/inttypes.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/types.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/types.h \
+ /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include/stddef.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/typesizes.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/pthreadtypes.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/sched.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/time.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/endian.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/endian.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/byteswap.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/byteswap.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/byteswap-common.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/select.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/select.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/sigset.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/time.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/sysmacros.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/unistd.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/posix_opt.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/environments.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/confname.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/getopt.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/stdlib.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/waitflags.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/waitstatus.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/xlocale.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/locale.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_locale.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/alloca.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/stdio.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_stdio.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/wchar.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_mutex.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/pthread.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sched.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_clk_tck.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/signal.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/initspin.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/sigthread.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_pthread.h \
+ /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include/stdarg.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/stdio_lim.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/ctype.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_touplow.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/string.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/errno.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/errno.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/linux/errno.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/asm/errno.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/asm-generic/errno-base.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/signum.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/siginfo.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/sigaction.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/sigcontext.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/sigstack.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/ucontext.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/time.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/syscall.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/sysnum.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/ptrace.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/user.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_page.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/param.h \
+ /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include-fixed/limits.h \
+ /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include-fixed/syslimits.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/limits.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/posix1_lim.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/local_lim.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/linux/limits.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_local_lim.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/posix2_lim.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/xopen_lim.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/linux/param.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/asm/param.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/asm-generic/param.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/linux/ptrace.h \
+ /home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/asm/ptrace.h \
+ linux/syscall.h linux/dummy.h linux/mips/syscallent.h \
+ linux/mips/../dummy.h linux/mips/errnoent.h linux/mips/signalent.h \
+ linux/ioctlent.h
+
+defs.h:
+
+config.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sgidefs.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/features.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_config.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/cdefs.h:
+
+/opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include/stdbool.h:
+
+/opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include/stdint.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/stdint.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/wchar.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/wordsize.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/inttypes.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/types.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/types.h:
+
+/opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include/stddef.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/typesizes.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/pthreadtypes.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/sched.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/time.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/endian.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/endian.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/byteswap.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/byteswap.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/byteswap-common.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/select.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/select.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/sigset.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/time.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/sysmacros.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/unistd.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/posix_opt.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/environments.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/confname.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/getopt.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/stdlib.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/waitflags.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/waitstatus.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/xlocale.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/locale.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_locale.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/alloca.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/stdio.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_stdio.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/wchar.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_mutex.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/pthread.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sched.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_clk_tck.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/signal.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/initspin.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/sigthread.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_pthread.h:
+
+/opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include/stdarg.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/stdio_lim.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/ctype.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_touplow.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/string.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/errno.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/errno.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/linux/errno.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/asm/errno.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/asm-generic/errno-base.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/signum.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/siginfo.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/sigaction.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/sigcontext.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/sigstack.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/ucontext.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/time.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/syscall.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/sysnum.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/ptrace.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/user.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_page.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/sys/param.h:
+
+/opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include-fixed/limits.h:
+
+/opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include-fixed/syslimits.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/limits.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/posix1_lim.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/local_lim.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/linux/limits.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/uClibc_local_lim.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/posix2_lim.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/bits/xopen_lim.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/linux/param.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/asm/param.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/asm-generic/param.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/linux/ptrace.h:
+
+/home/liyupeng/hybrid_63168/BR-DT-W724V-20120918/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include/asm/ptrace.h:
+
+linux/syscall.h:
+
+linux/dummy.h:
+
+linux/mips/syscallent.h:
+
+linux/mips/../dummy.h:
+
+linux/mips/errnoent.h:
+
+linux/mips/signalent.h:
+
+linux/ioctlent.h:

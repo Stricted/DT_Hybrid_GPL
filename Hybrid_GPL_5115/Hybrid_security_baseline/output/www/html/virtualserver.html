@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" />
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+<script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+<script type="text/javascript" src="../js/refresh.js"></script>
+<script type="text/javascript" src="../js/validation.js"></script>
+<script type="text/javascript" src="../js/table.js"></script>
+<script type="text/javascript" src="../js/virtualserver.js"></script>
+<title></title>
+</head>
+<body>
+<div id="all_content" class="body_bg_settings">
+    <input type="text" id="focus_hidden" style="display:none" value="focus">
+            <div class="maintitle"><h1 id="title_label_virtualserver"><script type="text/javascript">dw(firewall_label_virtual_server);</script></h1></div>
+                <div class="main_content">
+                    <p><script type="text/javascript">dw(firewall_help_virtual_server);</script></p>
+                    <ul class="text_list">
+                        <li><script type="text/javascript">dw("<strong>" + dialup_label_ip_address + common_colon + "</strong>" + " " + firewall_help_virtual_server_ip);</script></li>
+                        <li><script type="text/javascript">dw("<strong>" + firewall_label_lan_or_wan_port + common_colon + "</strong>" + " " + firewall_help_virtual_server_port);</script></li>
+                        <li><script type="text/javascript">dw("<strong>" + firewall_label_protocol + common_colon + "</strong>" + " " + firewall_help_protocol);</script></li>
+                        <li><script type="text/javascript">dw("<strong>" + common_note + common_colon + "</strong>" + " " + security_label_firewall_reboot_hint);</script></li>
+                    </ul>
+                    <h2 class="v_servers_list">
+                        <script type="text/javascript">
+                            dw(firewall_label_vartual_servers_list);
+                        </script>
+                    </h2>
+                    <table cellpadding="0" cellspacing="0" id="service_list">
+                    <tr>
+                        <th width="80" height="30">
+                            <script type="text/javascript">
+                                dw(firewall_label_name);
+                            </script>
+                        </th>
+                        <th width="70">
+                            <script type="text/javascript">
+                                dw(firewall_label_wan_port);
+                            </script>
+                        </th>
+                        <th width="98">
+                            <script type="text/javascript">
+                                dw(firewall_label_lan_ip_address);
+                            </script>
+                        </th>
+                        <th width="80">
+                            <script type="text/javascript">
+                                dw(firewall_label_lan_port);
+                            </script>
+                        </th>
+                        <th width="70">
+                            <script type="text/javascript">
+                                dw(firewall_label_protocol);
+                            </script>
+                        </th>
+                        <th width="71">                            
+                            <script type="text/javascript">
+                                dw(firewall_label_status);
+                            </script>
+                        </th>
+                        <th width="130">
+                            <script type="text/javascript">
+                                dw(common_options);
+                            </script>
+                        </th>
+                    </tr>
+                </table><br />
+                <script type="text/javascript">create_button(common_add,"add_item");</script>
+                <div class="apply_button"> 
+                    <script type="text/javascript">
+                        create_button(common_apply,"apply");
+                    </script> 
+                </div>
+            </div>
+</div>
+</body>
+</html>

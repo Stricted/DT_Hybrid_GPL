@@ -1,0 +1,35 @@
+[settings]
+functionname = hi_kernel_dp_l2_mc_user_del_cmd;
+attributenum = 5;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<mc_id>       type<uint>    range<0x0,0xFFFFFFFF>    default<0>; 
+attribute=alias<vlan>        type<uint>    range<0x0,0xFFFFFFFF>    default<0>;
+attribute=alias<egr>         type<uint>    range<0x0,0xFFFFFFFF>    default<0>;
+attribute=alias<vlan_act>    type<uint>    range<0x0,0xFFFFFFFF>    default<0>;
+attribute=alias<valid>       type<ushort>  range<0x0,0xFFFF>        default<0>;
+
+[help]
+
+/* fufenglian 组播用户信息结构体 */
+typedef struct  
+{
+    uint                ui_vlan;        /* VLAN + PORT 表示一个用户 */
+    HI_DP_PORT_E        em_egr;
+    HI_DP_L2_VALN_REP_E em_vlan_act;   
+    HI_BOOL_E           em_valid;
+}hi_dp_l2_mc_user_info_s;
+
+
+/* 指定组播ID下的用户信息操作 */
+typedef struct  
+{
+    uint    ui_mc_id;                  /* 0 - 255 */
+
+    hi_dp_l2_mc_user_info_s  st_user;
+    
+}hi_dp_l2_mc_user_s;
+
+
+

@@ -1,0 +1,44 @@
+# /etc/profile: system-wide .profile file for the Bourne shells
+
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+export PATH
+LUA_PATH=/etc/lua/?.lua;/html/lib/?.lua
+export LUA_PATH
+
+mount -t tmpfs none /dev
+mount -t proc /proc /proc
+mount -t tmpfs none /var
+mount -t tmpfs none /tmp
+mount -t tmpfs none /mnt
+mount -t usbfs none /proc/bus/usb
+
+makedevs -d /etc/devicetable /
+
+startbsp
+
+cp /etc/passwd1 /var/passwd
+cp /etc/group1 /var/group
+
+echo 32  > /proc/sys/kernel/msgmni
+#add by wangpu for run up usbdiagd
+test -e /bin/usbdiagd && usbdiagd &
+
+echo "Loading drivers and kernel modules... "
+#add by c00164495 for HG622u multi acsurl 2011-01-30
+ echo > /var/acsurl
+ ifconfig lo 127.0.0.1 netmask 255.0.0.0 broadcast 127.255.255.255 up
+
+#add for support chinese charset and ntfs fat ntfs filesystem 
+#test -e /lib/kernel/fs/fat/fat.ko && insmod /lib/kernel/fs/fat/fat.ko
+#test -e /lib/kernel/fs/vfat/vfat.ko && insmod /lib/kernel/fs/vfat/vfat.ko
+#test -e /lib/kernel/fs/ntfs/ntfs.ko && insmod /lib/kernel/fs/ntfs/ntfs.ko
+#test -e /lib/kernel/fs/nls/nls_cp936.ko && insmod /lib/kernel/fs/nls/nls_cp936.ko
+ 
+ test -e /lib/kernel/drivers/usb/serial/option.ko && insmod /lib/kernel/drivers/usb/serial/option.ko
+ test -e /lib/kernel/fs/fuse/fuse.ko && insmod /lib/kernel/fs/fuse/fuse.ko
+
+mic 
+
+echo "Done"
+
+

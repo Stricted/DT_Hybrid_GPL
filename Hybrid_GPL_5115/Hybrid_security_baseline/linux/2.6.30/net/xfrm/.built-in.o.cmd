@@ -1,0 +1,1 @@
+cmd_net/xfrm/built-in.o :=  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/bin/arm-hsan-linux-uclibcgnueabi-ld -EL    -r -o net/xfrm/built-in.o net/xfrm/xfrm_policy.o net/xfrm/xfrm_state.o net/xfrm/xfrm_hash.o net/xfrm/xfrm_input.o net/xfrm/xfrm_output.o net/xfrm/xfrm_algo.o net/xfrm/xfrm_sysctl.o net/xfrm/xfrm_user.o 

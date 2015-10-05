@@ -1,0 +1,1 @@
+#define SKIP_CONFIG_FLASH_ERASEALL(...) __VA_ARGS__

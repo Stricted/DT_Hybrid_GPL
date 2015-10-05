@@ -1,0 +1,13 @@
+config BUILD_LIBUPNP
+    bool "Support upnp library"
+    default n
+
+if BUILD_LIBUPNP
+menu "ATP DMS Supported Selection"
+# ATP all applications
+
+config BUILD_LIBUPNP_V6
+    bool "support libupnp ipv6"
+    default n
+endmenu
+endif

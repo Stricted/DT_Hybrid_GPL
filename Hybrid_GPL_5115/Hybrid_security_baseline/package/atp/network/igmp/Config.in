@@ -1,0 +1,132 @@
+config BUILD_IGMP
+	bool "IGMP"
+ 	default y
+	help
+	  Internet Group Management Protocol
+
+if BUILD_IGMP
+menu "ATP IGMP Supported Selection"
+
+choice
+	prompt "Choose IGMP SNOOPING solution"
+	default BUILD_BR_IGMP_SNOOP
+	depends on BUILD_IGMP
+	
+	config BUILD_BR_IGMP_SNOOP
+        bool "BROADCOM IGMP snoop"
+
+	config BUILD_IGMP_SNOOPING
+        bool "ATP IGMP snooping"
+
+endchoice
+
+config BUILD_IGMP_LOGCLI
+        bool "IGMP log cli"
+        default y
+        depends on BUILD_IGMP
+
+config BUILD_IGMP_V3
+        bool "IGMP v3.0"
+        default y
+        depends on BUILD_IGMP
+        
+config BUILD_IGMP_PRI
+    bool "IGMP priority"
+    help
+      Set igmp process priority
+    default n
+    depends on BUILD_IGMP
+    
+config ATP_IGMP_PRI
+    int "IGMP value of priority"
+    help
+      Set value of priority
+    default 5
+    depends on BUILD_IGMP_PRI
+
+config BUILD_IGMP_QUERY_QQIC
+    bool "IGMP query time from qqic"
+    help
+      set igmp query from qqic
+    default n
+    depends on BUILD_IGMP
+      
+config BUILD_IGMP_SET_TOS
+    bool "IGMP tos"
+    help
+      Set igmp tos
+    default n
+    depends on BUILD_IGMP
+
+config BUILD_IGMP_SOURCE_LOG
+    bool "IGMP source log"
+    help
+      Get igmp source log
+    default n
+    depends on BUILD_IGMP
+    
+config BUILD_IGMP_MULTI_CHECK
+    bool "IGMP multi process check"
+    help
+      Check multi proces of igmp
+    default n
+    depends on BUILD_IGMP
+    
+config BUILD_IGMP_PRINT_PROXY_INFO
+    bool "IGMP info "
+    help
+      Print igmp info
+    default n
+    depends on BUILD_IGMP
+    
+config BUILD_IGMP_QUERY_LEAVE
+    bool "IGMP query for leave"
+    help
+      Sent query for leave
+    default n
+    depends on BUILD_IGMP
+    
+config ATP_IGMP_MAX_GROUP_NUMBER
+    int "IGMP max groups number"
+    help
+      igmp max groups number
+    default 32
+    depends on BUILD_IGMP
+	
+config ATP_IGMP_MAX_MSF
+    int "IGMP max source for v3"
+    help
+      igmp max source number
+    default 10
+    depends on BUILD_IGMP
+    
+config BUILD_IGMP_AUTO_SWITCH
+    bool "IGMP auto swtich"
+    help
+      igmp chose the wan to run
+    default n
+    depends on BUILD_IGMP
+
+config BUILD_DT_IGMP_AUTO_SWITCH
+    bool "IGMP auto swtich for DT"
+    help
+      igmp chose the wan to run for DT
+    default n
+    depends on BUILD_IGMP_AUTO_SWITCH
+    	
+config BUILD_IGMP_ADVANCE_PARA
+    bool "IGMP advance parameter"
+    help
+      igmp config parameter such as Robustness value
+    default n
+    depends on BUILD_IGMP
+    
+config BUILD_IGMP_PROXY_NOT_NEED_NAT
+    bool "IGMP proxy not need nat"
+    help
+      igmp proxy needn't route wan must nat enable
+    default n
+    depends on BUILD_IGMP
+    
+endmenu
+endif

@@ -1,0 +1,58 @@
+config BUILD_ETH
+	bool "ETHERNET"
+	default y
+	help
+	  Support ETHERNET
+
+if BUILD_ETH
+menu "ATP Ethernet Supported Selection"
+config BUILD_ETH_BCM_EXT_SWITCH_53125
+	bool "support BCM_EXT_SWITCH 53125"
+	default y
+	depends on BUILD_ETH
+	help
+	  support BCM_EXT_SWITCH 53125
+	  
+config BUILD_ETH_PORT_ORDER_REVERSED
+	bool "Reversed eth port order"
+	depends on BUILD_ETH
+	help
+	  different order as eth0.x. for example, port 1 is mapped to eth0.5, but port 4 is mapped to eth0.2
+
+config BUILD_ETH_EXTERNALMODEM
+	bool "Support W724v GE/DSL switch"
+	depends on BUILD_TR181
+	default n
+
+config BUILD_LINK_MANUAL_SET
+	bool "Support GE/DSL manual set"
+	depends on BUILD_ETH_EXTERNALMODEM
+	default n
+	help
+	  manual set wan link type to GE/DSL, need reboot to take effect
+
+config BUILD_LINK_AUTOSENSE
+	bool "Support GE/DSL autosense"
+	depends on BUILD_ETH_EXTERNALMODEM
+	default n
+
+config BUILD_ETH_ONE_PORT
+	bool "support eth one port"
+	depends on BUILD_ETH
+	default n	
+	help
+	  support eth one port
+
+config BUILD_ETH_LANETH_CONTROL_DHCP_ON_LAN_PORT
+	bool "Eth DHCP Lan Port Control"
+	default n
+	depends on BUILD_ETH
+	help
+	  support eth lan eth control dhcp on lan port
+	  
+source "package/atp/network/eth/service/ethcmd/Config.in"	  
+source "package/atp/network/eth/service/ethswctl/Config.in"
+source "package/atp/network/eth/wanethcms/Config.in"
+
+endmenu
+endif

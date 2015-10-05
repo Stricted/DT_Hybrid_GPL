@@ -1,0 +1,41 @@
+config BUILD_USBPRINTER
+	bool "USBPRINTER"
+	default y
+	help
+	  Select support for USBPRINTER,such as IP printer, CUPS printer
+
+config BUILD_PRINTER_NODE
+    bool "usb printer support node"
+    help
+      usb printer support node
+    default n
+    depends on BUILD_USBPRINTER
+	  
+config BUILD_USBPRINTER_IPV6
+    bool "usb printer support ipv6"
+    help
+      usb printer support ipv6
+    default y
+    depends on BUILD_USBPRINTER
+    depends on BUILD_IPV6
+
+if BUILD_USBPRINTER
+choice
+	prompt "Choose IPP type"
+	default BUILD_USBPRINTER_IPP
+	help 
+		Select IP printer type
+
+	config BUILD_USBPRINTER_IPP
+		bool "IP printer"
+		help
+		Select IP printer
+	config BUILD_CUPS
+		bool "CUPS printer"
+		help
+		Select CUPS printer
+
+endchoice
+
+
+endif

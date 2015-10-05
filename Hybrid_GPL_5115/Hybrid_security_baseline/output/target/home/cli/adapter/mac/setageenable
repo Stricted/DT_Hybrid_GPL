@@ -1,0 +1,11 @@
+[settings]
+functionname = hi_adapter_cli_lsw_mac_set_ageenable;
+attributenum = 1;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<enable>            type<uchar>    range<0x0,0x1>                default<0>;
+
+
+[help]
+enable

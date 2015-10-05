@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<!-- global模块参数 -->
+<!--  拨号成功自动打开指定主页，配置为空则不打开 --> 
+<homepage></homepage>
+<!--  默认语言 --> 
+<default_language>en-us</default_language>
+
+<!-- 产品系列E:表示MBB产品；B表示无线路由产品-->
+<product_type>B</product_type>
+<!-- WebUI参数-->
+<!--  WebUI版本号 --> 
+<version>100.001.994.18.117</version>
+<!--  自动消失的对话框消失的时间 --> 
+<dialogdisapear>3000</dialogdisapear>
+<!--  tips自动消失的时间 --> 
+<tip_disapear>3000</tip_disapear>
+<!--  页面中自动刷新数据的时间 --> 
+<update_interval>6000</update_interval> 
+    <!-- 是否支持AP station功能。 取值范围[0,1] -->
+    <ap_station_enabled>0</ap_station_enabled>
+
+    <!-- 是否支持multi_ssid功能。 取值范围[0,1] -->
+    <multi_ssid_enabled>0</multi_ssid_enabled>
+    
+    <!-- 是否需要登录-->
+    <login>1</login>
+
+    <!-- profile管理页面上是否显示autoapn-->
+    <autoapn_enabled>0</autoapn_enabled>
+
+    <!-- 是否需要页脚-->
+    <footer>1</footer>
+    
+     <!-- 是否有电池-->
+    <battery_enabled>0</battery_enabled>
+    
+     <!-- 是否有跳转至主页的continue按钮，取值范围[0,1]-->
+    <continue_button>1</continue_button>
+    
+    <!-- 输入主页地址时，是否进行特殊情况重定向-->
+    <special_redirect>0</special_redirect>
+
+    <!--主页是否进行特殊情况重定向，取值范围[0,1]-->
+    <home_redirect>0</home_redirect>
+    
+    <!--主页是否显示广告，取值范围[0,1]-->
+    <adcontent_enable>0</adcontent_enable>
+
+    <!--是否支持IPv6，取值范围[0,1]-->
+    <ipv6_enabled>1</ipv6_enabled>
+	
+	 <!--是否显示wireline wan,取值范围[0,1]-->
+    <wirelinewan_enable>1</wirelinewan_enable>
+
+    <!-- hotlinks链接定义-->
+    <hotlinks>
+        <enable>1</enable>
+    <items>
+            <item></item>
+            <item></item>
+        <item></item>
+        </items>
+    </hotlinks>
+
+    <!-- 连接状态显示-->
+    <connection>
+        <enable>1</enable>
+        <connectionstatus>1</connectionstatus>
+    </connection>
+
+    <!-- 页面菜单定义-->
+    <menu>
+        <home>home</home>
+        <quicksetup>quicksetup</quicksetup>
+        <sms>
+           <inbox>sms</inbox>
+           <sent>smssent</sent>
+           <drafts>smsdrafts</drafts>
+           <sms_center_number>messagesettings</sms_center_number>
+        </sms>
+        <!--sharing>sdcardsharing</sharing-->
+        
+        
+        <!--<ussd>ussd</ussd>-->
+        <settings>
+            <!--quicksetup>setting</quicksetup-->
+            <dialup>
+                <connections>setting</connections>
+                <profilesmgr>profilesmgr</profilesmgr>
+				<wan>wan</wan>
+                <!--mobilenetworksettings>mobilenetworksettings</mobilenetworksettings-->
+                
+            </dialup>
+                                
+            <wlan>
+                <wlansettings>wlansettings</wlansettings>
+                <wlanbridge>wlanbridge</wlanbridge>
+                <wlanmacfilter>wlanmacfilter</wlanmacfilter>
+                <wps>wps</wps>
+            </wlan>
+            <security>
+                <pincodemanagement>pincodemanagement</pincodemanagement>
+                <pincodeautovalidate>pincodeautovalidate</pincodeautovalidate>
+                <firewallswitch>firewallswitch</firewallswitch>
+                <lanipfilter>lanipfilter</lanipfilter>
+                <lanmacfilter>lanmacfilter</lanmacfilter>
+                <urlfilter>urlfilter</urlfilter>
+                <virtualserver>virtualserver</virtualserver>
+                <specialapplication>specialapplication</specialapplication>
+                <dmzsettings>dmzsettings</dmzsettings>
+                <sipalgsettings>sipalgsettings</sipalgsettings>
+                <upnp>upnp</upnp>
+                <!--nat>nat</nat-->
+                <aclsettings>aclsettings</aclsettings>
+            </security>
+            
+            <system>
+                <deviceinformation>deviceinformation</deviceinformation>
+                <wanstatus>wanstatus</wanstatus>
+                <lanstatus>lanstatus</lanstatus>
+                <modifypassword>modifypassword</modifypassword>
+                <restore>restore</restore>
+                <reboot>reboot</reboot>
+				<!--autoreboot>autoreboot</autoreboot-->
+            </system>
+
+            <dhcpmenu>
+                <ipv4dhcp>dhcp</ipv4dhcp>
+                <ipv6dhcp>ipv6dhcp</ipv6dhcp>
+                <slaac>slaac</slaac>
+                <staticaddr>staticaddr</staticaddr>
+            </dhcpmenu>
+
+            <advancedmenu>
+                <ddns>ddns</ddns>
+                <sntp>sntp</sntp>
+                <!--tr069>tr069</tr069-->
+                <!--tr111>tr111</tr111-->
+                <samba>samba</samba>
+                <!--ftp>ftp</ftp-->
+                <!--antenna>antenna</antenna-->
+                <staticroute>staticroute</staticroute>
+                <!--<ipsecvpn>ipsecvpn</ipsecvpn>-->
+                <dms>dms</dms>
+                <clip>clip</clip>
+            </advancedmenu>
+        </settings>
+
+        <maintenance>
+            <logview>maintenance</logview>
+            <configuration>configurationnew</configuration>
+            <diagnosis>diagnosis</diagnosis>
+            <onekeydiag>onekeydiag</onekeydiag>
+            <update>update</update>
+        </maintenance>
+    </menu>
+	
+    <helpurl>
+	<Item><htmlid>home</htmlid><helpurl>parameters/parameters_home</helpurl></Item>
+	<Item><htmlid>quicksetup</htmlid><helpurl>parameters/parameters_quick_setup_wizard</helpurl></Item>
+	<Item><htmlid>inbox</htmlid><helpurl>sms/sms_management</helpurl></Item>
+	<Item><htmlid>sent</htmlid><helpurl>sms/sms_management</helpurl></Item>	
+	<Item><htmlid>drafts</htmlid><helpurl>sms/sms_management</helpurl></Item>	
+	<Item><htmlid>messagesettings</htmlid><helpurl>parameters/parameters_sms_settings</helpurl></Item>	
+	<Item><htmlid>connections</htmlid><helpurl>parameters/parameters_connection</helpurl></Item>	
+	<Item><htmlid>profilesmgr</htmlid><helpurl>parameters/parameters_wireless_wan_profile</helpurl></Item>	
+	<Item><htmlid>wan</htmlid><helpurl>parameters/parameters_wireline_wan_profile</helpurl></Item>	
+	<Item><htmlid>wlansettings</htmlid><helpurl>parameters/parameters_wlan_settings</helpurl></Item>	
+	<Item><htmlid>wlanbridge</htmlid><helpurl>parameters/parameters_wlan_bridge</helpurl></Item>	
+	<Item><htmlid>wlanmacfilter</htmlid><helpurl>parameters/parameters_wlan_mac_filter</helpurl></Item>	
+	<Item><htmlid>wps</htmlid><helpurl>network/network_wps_pin</helpurl></Item>	
+	<Item><htmlid>pincodemanagement</htmlid><helpurl>pin/pin_management</helpurl></Item>	
+	<Item><htmlid>pincodeautovalidate</htmlid><helpurl>parameters/parameters_pin_auto_validate</helpurl></Item>	
+	<Item><htmlid>firewallswitch</htmlid><helpurl>parameters/parameters_firewall_switch</helpurl></Item>	
+	<Item><htmlid>lanipfilter</htmlid><helpurl>parameters/parameters_lan_ip_filter</helpurl></Item>	
+	<Item><htmlid>lanmacfilter</htmlid><helpurl>parameters/parameters_lan_mac_filter</helpurl></Item>	
+	<Item><htmlid>urlfilter</htmlid><helpurl>parameters/parameters_url_filter</helpurl></Item>	
+	<Item><htmlid>virtualserver</htmlid><helpurl>parameters/parameters_virtual_server</helpurl></Item>	
+	<Item><htmlid>specialapplication</htmlid><helpurl>parameters/parameters_special_applications</helpurl></Item>	
+	<Item><htmlid>dmzsettings</htmlid><helpurl>parameters/parameters_dmz_settings</helpurl></Item>	
+	<Item><htmlid>sipalgsettings</htmlid><helpurl>parameters/parameters_alg_settings</helpurl></Item>	
+	<Item><htmlid>upnp</htmlid><helpurl>parameters/parameters_upnp_settings</helpurl></Item>	
+	<Item><htmlid>aclsettings</htmlid><helpurl>parameters/parameters_acl_settings</helpurl></Item>	
+	<Item><htmlid>deviceinformation</htmlid><helpurl>parameters/parameters_device_info</helpurl></Item>	
+	<Item><htmlid>wanstatus</htmlid><helpurl>parameters/parameters_wan</helpurl></Item>	
+	<Item><htmlid>lanstatus</htmlid><helpurl>parameters/parameters_lan</helpurl></Item>	
+	<Item><htmlid>modifypassword</htmlid><helpurl>maintenance/maintenance_login_password</helpurl></Item>	
+	<Item><htmlid>restore</htmlid><helpurl>maintenance/maintenance_restore</helpurl></Item>	
+	<Item><htmlid>reboot</htmlid><helpurl>maintenance/maintenance_reboot</helpurl></Item>	
+	<Item><htmlid>autoreboot</htmlid><helpurl>parameters/parameters_reboot_schedule</helpurl></Item>	
+	<Item><htmlid>dhcp</htmlid><helpurl>parameters/parameters_ipv4_dhcp</helpurl></Item>	
+	<Item><htmlid>ipv6dhcp</htmlid><helpurl>parameters/parameters_ipv6_dhcp</helpurl></Item>	
+	<Item><htmlid>slaac</htmlid><helpurl>parameters/parameters_slaac</helpurl></Item>	
+	<Item><htmlid>dhcpstaticaddress</htmlid><helpurl>parameters/parameters_static_address</helpurl></Item>	
+	<Item><htmlid>ddns</htmlid><helpurl>parameters/parameters_ddns</helpurl></Item>	
+	<Item><htmlid>sntp</htmlid><helpurl>parameters/parameters_sntp</helpurl></Item>	
+	<Item><htmlid>samba</htmlid><helpurl>advanced/advanced_storage_services</helpurl></Item>	
+	<Item><htmlid>staticroute</htmlid><helpurl>parameters/parameters_static_route</helpurl></Item>	
+	<Item><htmlid>dms</htmlid><helpurl>advanced/advanced_dms</helpurl></Item>	
+	<Item><htmlid>clip</htmlid><helpurl>advanced/advanced_clip</helpurl></Item>	
+	<Item><htmlid>log</htmlid><helpurl>parameters/parameters_log</helpurl></Item>	
+	<Item><htmlid>logview</htmlid><helpurl>maintenance/maintenance_log</helpurl></Item>
+	<Item><htmlid>configuration</htmlid><helpurl>maintenance/maintenance_backup</helpurl></Item>
+	<Item><htmlid>diagnosis</htmlid><helpurl>parameters/parameters_device_status</helpurl></Item>
+	<Item><htmlid>onekeydiag</htmlid><helpurl>parameters/parameters_diagnosis</helpurl></Item>
+	<Item><htmlid>update</htmlid><helpurl>maintenance/maintenance_update</helpurl></Item>
+	<Item><htmlid>login</htmlid><helpurl>legal/instance_legal_notice_fmc_lte</helpurl></Item>
+	<Item><htmlid>faq</htmlid><helpurl>faq/faq</helpurl></Item>
+    </helpurl>
+</config>
+

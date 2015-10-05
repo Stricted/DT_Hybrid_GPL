@@ -1,0 +1,44 @@
+config BUILD_SNTP
+	bool "SNTP"
+	help
+	  Support Simple Network Time Protocol
+
+if BUILD_SNTP
+menu "ATP SNTP Supported Selection"
+
+config BUILD_SNTP_DST
+	bool "SNTP Daylight Saving Time"
+	default y
+	depends on BUILD_SNTP
+	help
+	  Select the Daylight Saving Time support
+
+config BUILD_SNTP_SYNC_FAIL_NOTIFY
+	bool "SNTP Sychronization failure notification"
+	default n
+	depends on BUILD_SNTP
+	help
+	  Select the SNTP Sychronization failure notification support
+
+config BUILD_SNTP_START_WITH_WAN
+	bool "SNTP Sychronization when WAN up"
+	default n
+	depends on BUILD_SNTP
+	help
+	  Select the SNTP Sychronization when WAN up 
+
+config BUILD_SNTP_START_TIME_CUSTOMIZED
+	bool "SNTP support customize start time"
+	default n
+	depends on BUILD_SNTP
+
+if BUILD_SNTP_START_TIME_CUSTOMIZED
+config SNTP_DEFAULT_START_TIME_STRING
+	string "SNTP default start time string"
+	default ""
+	depends on BUILD_SNTP_START_TIME_CUSTOMIZED
+endif
+
+endmenu
+
+endif

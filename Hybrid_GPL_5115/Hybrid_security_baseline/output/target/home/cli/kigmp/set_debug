@@ -1,0 +1,17 @@
+[settings]
+functionname=hi_kernel_mc_cmd_set_dbg;  
+attributenum=2;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<proto>        type<char>     range<0x0,0xff>   default<1>;
+attribute=alias<resv>         type<binary>   range<0,3>        default<0>;
+
+
+[help]
+
+typedef struct
+{
+    hi_uchar8 uc_proto;
+    hi_uchar8 uc_resv[3];
+}hi_kernel_mc_dbg_s;

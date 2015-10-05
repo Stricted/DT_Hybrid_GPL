@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="../css/main.css" type="text/css" />
+        <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../lib/jquery.cookies.2.2.0.js"></script>
+        <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+        <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+        <script type="text/javascript" src="../js/refresh.js"></script>
+        <script type="text/javascript" src="../js/redirect.js"></script>
+        <script type="text/javascript" src="../js/sms.js"></script>
+        <script type="text/javascript" src="../js/messagesetting.js"></script>
+        <title></title>
+    </head>
+
+    <body>
+    <div id="all_content" class="body_bg_sms">
+        <div class="maintitle">
+            <h1>
+            <script type="text/javascript">dw(sms_label_sms_settings);</script>
+            </h1>
+        </div>
+        <div class="main_content">
+            <table width="520" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr style="display:none">
+                    <td width="174" height="32">
+                    <script type="text/javascript">
+                        dw(sms_label_sms_save_mode);
+                        dw(common_colon);
+                    </script>
+                    </td>
+                    <td width="346">
+                    <input type="text" id="sms_savemode" class="input_select" value="" />
+                    <ul id="save_mode_list" class="select_option">
+                    </ul>
+                    </td>
+                </tr>
+                <tr id ="sms_center_number_tr" style="display:none">
+                    <td height="32">
+                    <script type="text/javascript">
+                        dw(sms_label_sms_center_number);
+                        dw(common_colon);
+                    </script>
+                    </td>
+                    <td>
+                    <input type="text" id="sms_sca" name="sca" class="sms_input" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td ></td>
+                    <td>
+                    <input type="hidden" id="sms_sca_error" />
+                    </td>
+                </tr>
+                <tr>
+                    <td height="32">
+                    <script type="text/javascript">
+                        dw(sms_label_setting_usesreport);
+                        dw(common_colon);
+                    </script>
+                    </td>
+                    <td class="radio">
+                    <input id="report_enable" class="radio" type="radio" value='0' name="usesreport"/>
+                    <span><script type="text/javascript">dw(common_enabled);</script></span>
+                    <input id="report_disable" class="radio" type="radio" value='1' name="usesreport"/>
+                    <span><script type="text/javascript">dw(common_disabled);</script></span>
+                    </td>
+                </tr>
+                <tr id ="sms_validity_tr" style="display:none">
+                    <td height="32">
+                    <script type="text/javascript">
+                        dw(sms_label_setting_validity);
+                        dw(common_colon);
+                    </script>
+                    </td>
+                    <td>
+                    <select id="sms_validity" name="validity" class="input_select">
+                    </select>
+                    </td>
+                </tr>
+                <tr style="display:none">
+                    <td height="32">
+                    <script type="text/javascript">
+                        dw(sms_label_setting_sendtype);
+                        dw(common_colon);
+                    </script>
+                    </td>
+                    <td>
+                    <input type="text" id="sms_sendtype" name="senttype" class="input_select" value="" />
+                    <ul id="senttype_list" class="select_option">
+                    </ul>
+                    </td>
+                </tr>
+                <tr style="display:none">
+                    <td height = "32">
+                        <script type="text/javascript">
+                            dw(sms_label_setting_choose_mode);
+                            dw(common_colon);
+                        </script>
+                    </td>
+                    <td>
+                        <select id="choose_mode_show" class="input_select">
+                            <option value = "0"><script type="text/javascript">dw(sms_label_select_local_message);</script></option>
+                            <option value = "1"><script type="text/javascript">dw(sms_label_select_sms_message);</script></option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <div class="apply_button" >
+                <script type="text/javascript">create_button(common_apply,"button_apply");</script>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

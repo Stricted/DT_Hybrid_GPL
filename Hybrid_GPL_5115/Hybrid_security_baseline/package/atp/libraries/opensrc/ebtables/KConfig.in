@@ -1,0 +1,9 @@
+config BRIDGE_EBT_QINQ
+	bool "ebtables support qinq"
+	default y
+
+config BRIDGE_EBT_IP_IPRANGE
+	bool "Extent the ebtables function for IP range."
+	default y
+	
+	

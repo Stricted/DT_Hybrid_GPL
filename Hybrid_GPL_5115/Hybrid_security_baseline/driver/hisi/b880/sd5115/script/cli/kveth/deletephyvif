@@ -1,0 +1,20 @@
+[settings]
+functionname=hi_kernel_vif_cmdtype_phyvif_delete;  
+attributenum=3;
+attributeflag = 1 ;   // 0:close 1:open
+
+[parameter]
+attribute=alias<ifname>       type<string>  range<0,32>      default<eth0.2>;
+attribute=alias<phyport>      type<uint>    range<0,0xFF>    default<1>;
+attribute=alias<type>         type<uint>    range<0,0xFF>    default<1>;
+
+[help]
+
+#define HI_KERNEL_VIF_NAMELEN           32
+
+typedef struct
+{
+    hi_uchar8 uc_ifname[HI_KERNEL_VIF_NAMELEN];
+    hi_uint32 ui_phyport;  
+    hi_uint32 ui_type;  
+}hi_kernel_vif_cmdtype_phyvif_s;

@@ -1,0 +1,9 @@
+dfds
+obj-$(CONFIG_HIPCIEV100) += hipcie.o
+
+hipcie-objs	:= pcie.o
+
+ifeq ($(CONFIG_PCI_DEBUG),y)
+	        EXTRA_CFLAGS += -DDEBUG
+endif
+

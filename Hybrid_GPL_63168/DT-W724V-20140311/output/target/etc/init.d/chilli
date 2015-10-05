@@ -1,0 +1,297 @@
+#! /bin/sh
+# zonap start/stop script
+### BEGIN INIT INFO
+# Provides:          zonap
+# Required-Start:    $remote_fs $syslog $network
+# Required-Stop:     $remote_fs $syslog $network
+# Default-Start:     3 4 5
+# Default-Stop:      0 2 1 6
+# Short-Description: Start daemon at boot time
+# Description:       Enable service provided by daemon.
+### END INIT INFO
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+DAEMON=/usr/sbin/chilli
+RADCONFIG=/usr/sbin/chilli_radconfig
+NAME=chilli
+DESC=chilli
+
+DNS_SERVER=172.17.2.1
+
+NASID=$(cat /etc/fon_mac)
+DEVICE=HYBRID
+VERSION=$(cat /etc/fon_version)
+REVISION=$(cat /etc/fon_revision)
+
+RADIUSADMUSR=HUADTA02-${DEVICE}-${VERSION}.${REVISION}
+RADIUSADMPWD=secret
+
+DHCPMAC=$(cat /var/fon/dhcp_mac)
+
+WANPPP=ppp256
+LANIP=$(ifconfig $WANPPP|sed -n '/inet addr/s/^[^:]*:\([0-9.]\{7,15\}\) .*/\1/p')
+
+TUNIF=tun0
+USING_CMDSOCK=1
+START_CHILLI=0
+
+WWWDIR=/etc/fon/www
+DAILYRADCONFIG=/var/fon/radconfig
+TEMPORAL_CONFFILE=/var/fon/tmp/chilli.conf
+HMCONFIGDOWNLOADED=/var/fon/fon_DownloadConfig
+
+CONFFILEBACKUP=/config/chilli.conf
+WHITELIST=/var/fon/whitelist
+WHITELISTBACKUP=/config/whitelist
+
+RADIUSIPADDR=/var/fon/fon_radiusipaddr
+PORTALIPADDR=/var/fon/fon_portalipaddr
+
+if [ -f /etc/default/chilli ] ; then
+   . /etc/default/chilli
+fi
+
+if [ -f /etc/default/fonap ] ; then
+   . /etc/default/fonap
+fi
+
+if [ -f /var/fon/fon.conf ] ; then
+   . /var/fon/fon.conf
+fi
+
+CHILLOUT_OPTS=""
+#if [ $FONAP_TUNNELS -eq 1 ]; then
+#	CHILLOUT_OPTS="--module=chillout:/tmp/chillout:"
+	# To use RADIUS for auth + acct (leave blank)
+	# To use RADIUS for acct, but not auth
+#	if [ $FONAP_NORADAUTH -eq 1 ]; then
+#		CHILLOUT_OPTS="$CHILLOUT_OPTS:noradauth"
+#		if [ $FONAP_NORADACCT -eq 1 ]; then
+#			CHILLOUT_OPTS="$CHILLOUT_OPTS:noradacct"
+#		fi
+#	fi
+#fi
+
+if [ $FONAP_FONAPI -eq 1 ]; then
+	CHILLOUT_OPTS="--module=fon-api:/usr/sbin/api-example.sh"
+fi
+
+OPTS="--dns1=$DNS_SERVER --dns2=$DNS_SERVER --uamuiport=0 \
+--radiusnasid=$NASID --dhcpif=$DHCPIF --dhcpmac=$DHCPMAC --papalwaysok \
+--localusers=/etc/fon/localusers --pidfile=/var/run/$NAME.pid \
+--challengetimeout=0 --challengetimeout2=0 --uamallowpost \
+--uamdomainfile=$WHITELIST --redirdnsreq --defidletimeout=$DEFIDLETIMEOUT \
+--net=172.17.2.0/24 --dhcpstart=1 --dhcpend=17 --tundev=$TUNIF \
+--uamanydns --swapoctets --radiusserver1=127.0.0.1 --radiusserver2=127.0.0.1 \
+--uamsecret=$UAMSECRET --interval=$INTERVAL --lease=$LEASE --leaseplus=0 \
+--maxclients=$MAXCLIENTS --fg --debug --nasmac=$NASID --domain=  \
+--macup=/etc/init.d/chilli_ipup --macdown=/etc/init.d/chilli_ipdown "
+
+# [ "$USING_CHILLOUT" = "1" ] && 
+OPTS="$OPTS $CHILLOUT_OPTS"
+[ "$USING_CMDSOCK" = "1" ] && OPTS="$OPTS --cmdsock=/var/run/chilli.sock"
+[ "$WWWDIR" != "" ] && OPTS="$OPTS --wwwdir=$WWWDIR"
+
+if [ "$START_CHILLI" != "1" ] ; then
+   echo "Chilli default off. Look at /etc/default/chilli"
+   exit 0
+fi
+
+test -f $DAEMON || exit 0
+
+mkdir -p /var/fon/tmp
+
+# check_required
+
+parse_whitelist() {
+        if [ -s $TEMPORAL_CONFFILE ]; then
+		awk '
+		BEGIN { buf="" }
+		  /^newdomain/ {
+		    s=$0
+		    sub(/^newdomain /,"",s)
+		    n=split(s,array,",");
+		    for (i=1;i<=n;i++) {
+		      d=array[i]
+		      not=0
+		      dom=""
+		      if (d ~ /^!/) {
+		        not = 1
+		        d = substr(d,2)
+		      }
+		      if (d ~ /^\*\./) {
+		        dom = "^(.*\\.)?" substr(d,3) "$\n"
+		      } else {
+		        dom = "^" d "$\n"
+		      }
+		      if (not) {
+		        printf("!%s", dom)
+		      } else {
+		        buf = buf dom
+		      }
+		    }
+ 		 }
+		END { printf("%s", buf) }
+		' $TEMPORAL_CONFFILE > $WHITELIST
+                sed /^newdomain/d -i $TEMPORAL_CONFFILE
+        fi
+}
+
+radiusconfig() {
+	killall chilli_radconfig
+        rm -rf $TEMPORAL_CONFFILE
+        $RADCONFIG -c /dev/null \
+		--radiusserver1="$RADIUSSERVER1" \
+                --radiusserver2="$RADIUSSERVER2" \
+                --radiussecret="$RADIUSSECRET" \
+                --adminuser="$RADIUSADMUSR" \
+                --adminpasswd="$RADIUSADMPWD" \
+                --radiusnasid="$NASID" \
+                --dhcpif=$DHCPIF \
+                --dhcpmac=$DHCPMAC \
+                --radiusretry="$RADIUSRETRY" \
+                --radiusretrysec="$RADIUSRETRYSEC" \
+                --radiustimeout="$RADIUSTIMEOUT" \
+				--nasip="$LANIP" \
+				--radiusretryiteration="$RADIUSRETRYITERATION" \
+				--nasmac="$NASID" \
+				--fg --debug \
+                > $TEMPORAL_CONFFILE
+
+	parse_whitelist
+	rm -fr $RADIUSIPADDR
+    
+	# Strip some options that this version of chilli
+	# will not understand (fix with profiles)
+	local ret=0
+	if [ -s $TEMPORAL_CONFFILE ]; then
+		diff $TEMPORAL_CONFFILE $CONFFILE > /dev/null
+		if [ ! $? -eq 0 ]; then 
+			echo "chilliconf is diff"
+			ret=1
+		else
+			diff $WHITELIST $WHITELISTBACKUP > /dev/null
+			if [ ! $? -eq 0 ]; then 
+				echo "whitelist is diff"
+				ret=1
+			fi	
+		fi
+	fi
+	
+	return $ret
+}
+
+saveconfig() {
+	echo "begin saveconfig"
+	cp -fr $TEMPORAL_CONFFILE $CONFFILE
+	cp -fr $CONFFILE $CONFFILEBACKUP
+	cp -fr $WHITELIST $WHITELISTBACKUP
+}	
+
+RETVAL=0
+prog="chilli"
+
+
+case "$1" in
+    start)
+	echo -n "Starting $DESC: "
+	test -f $CONFFILE || exit 0
+	/sbin/modprobe tun >/dev/null 2>&1
+	echo 1 > /proc/sys/net/ipv4/ip_forward
+	#iptables -t nat -I POSTROUTING -j MASQUERADE
+	#iptables -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+	
+	if [ "$DEBUG" != "1" ] ; then
+	    start-stop-daemon --start --quiet --pidfile /var/run/$NAME.pid --exec $DAEMON -- $OPTS 
+	else
+	    $DAEMON $OPTS --debug --fg
+	fi
+	RETVAL=$?
+	echo "$NAME."
+	;;
+    
+    checkrunning)
+	check=`start-stop-daemon --start --exec $DAEMON`
+	if [ x"$check" != x"$DAEMON already running." ] ; then
+            $0 start
+	fi
+	;;
+    
+    radconfig)
+	RADIUSTYPE=1
+	
+	radiusconfig
+	if [ $? -eq 1 ]; then
+		saveconfig
+		RADIUSTYPE=2
+	fi
+	
+	if [ -s $HMCONFIGDOWNLOADED ]; then
+		foncontrl radiusFinish $RADIUSTYPE
+	fi
+	;;
+
+    first_radconfig)
+	RADIUSTYPE=0
+	
+	radiusconfig
+	if [ $? -eq 1 ]; then
+		saveconfig
+	fi
+	
+	if [ -s $HMCONFIGDOWNLOADED ]; then
+		foncontrl radiusFinish $RADIUSTYPE
+	fi
+	;;
+	
+    restart)
+	$0 stop
+	sleep 2
+	$0 start
+	RETVAL=$?
+	;;
+    
+    stop)
+	echo -n "Stopping $DESC: "
+        # crontab -l 2>&- | grep -v $0 | crontab -
+	start-stop-daemon --oknodo --stop --quiet --pidfile /var/run/$NAME.pid --exec $DAEMON
+        #iptables -t nat -D POSTROUTING 1
+        #iptables -D FORWARD 1
+	
+	rm -fr $PORTALIPADDR
+	echo "$NAME."
+	;;
+    
+    reload)
+	$0 restart
+	;;
+    
+    force-reload)
+	$0 restart
+	;;
+    condrestart)
+	check=`start-stop-daemon --start --exec $DAEMON`
+	if [ x"$check" != x"$DAEMON already running." ] ; then
+	    $0 restart
+	    RETVAL=$?
+	fi
+	;;
+    
+    status)
+	# status chilli
+	check=`start-stop-daemon --start --exec $DAEMON`
+	if [ x"$check" == x"$DAEMON already running." ] ; then
+	    RETVAL=1
+	fi
+	RETVAL=0
+	;;
+    
+    *)
+	N=/etc/init.d/$NAME
+	echo "Usage: $N {start|stop|restart|condrestart|status|reload|radconfig}" >&2
+	exit 1
+	;;
+esac
+
+exit 0
+

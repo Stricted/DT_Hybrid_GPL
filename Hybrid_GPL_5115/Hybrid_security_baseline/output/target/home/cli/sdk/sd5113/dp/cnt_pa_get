@@ -1,0 +1,26 @@
+[settings]
+functionname=0xF7002004;
+attributenum=8;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000D04>; /*È«¾ÖÄ£¿é*/
+attribute=alias<rx_cnt>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rxeth_cnt>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rxcpu_cnt>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rxpon_cnt>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<efc_cnt>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<drop_cnt>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<nodrop_cnt>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+
+[help]
+typedef struct 
+{
+    uint rx_cnt;        
+    uint rxeth_cnt; 
+    uint rxcpu_cnt; 
+    uint rxpon_cnt; 
+    uint efc_cnt;
+    uint drop_cnt;  
+    uint nodrop_cnt;
+}hi_dp_logic_pa_cnt_s;

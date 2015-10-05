@@ -1,0 +1,36 @@
+[settings]
+functionname=0xF7002004;
+attributenum=12;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       			type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000D0D>; /*全局模块*/
+attribute=alias<total_share_uscnt>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;     /* 队列共享统计                */
+attribute=alias<get_fqid_fail>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    /* 获取FQID失败统计            */
+attribute=alias<unknown_uc>             type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    /* 未知单播统计                */
+attribute=alias<unknown_mc>             type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    /* 未知组播统计                */
+attribute=alias<drop_uc_fifo_full>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    /* 单播FIFO满丢包统计          */
+attribute=alias<drop_mc_fifo_full>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    /* 组播FIFO满丢包统计          */
+attribute=alias<drop_bc_fifo_full>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    /* 广播FIFO满丢包统计          */
+attribute=alias<bm_release_abnormal>    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    /* BM缓存释放处理异常统计      */
+attribute=alias<mcd_stp_drop>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    /* 组播复制报文STP丢弃统计     */
+attribute=alias<qm_debug0>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<qm_debug1>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+
+[help]
+/* QM 模块的统计信息:   */
+typedef struct 
+{
+    uint  total_share_uscnt;           /* 队列共享统计                */
+    uint  get_fqid_fail;              /* 获取FQID失败统计            */
+    uint  unknown_uc;                 /* 未知单播统计                */
+    uint  unknown_mc;                 /* 未知组播统计                */
+    uint  drop_uc_fifo_full;          /* 单播FIFO满丢包统计          */
+    uint  drop_mc_fifo_full;          /* 组播FIFO满丢包统计          */
+    uint  drop_bc_fifo_full;          /* 广播FIFO满丢包统计          */
+    uint  bm_release_abnormal;        /* BM缓存释放处理异常统计      */
+    uint  mcd_stp_drop;               /* 组播复制报文STP丢弃统计     */
+    uint  qm_debug0;
+    uint  qm_debug1;
+
+}hi_dp_logic_qm_cnt_s;

@@ -1,0 +1,1 @@
+vpath="InternetGatewayDevice.LANDevice.1.LANHostConfigManagement.X_DHCPv6"E5element="DHCPServerEnable|UseAllocatedWAN|AssociatedConnection|Prefix|PrefixLength|Preferredlifetime|Validlifetime|DNSServer|DomainName"ATPelement="DHCPServerEnable|UseAllocatedWAN|AssociatedConnection|Prefix|PrefixLength|Preferredlifetime|Validlifetime|DNSServer|DomainName"

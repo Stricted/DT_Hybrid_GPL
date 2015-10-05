@@ -1,0 +1,11 @@
+[settings]
+functionname=hi_kernel_codec_hlp_port_stop_ring;  
+attributenum=1;
+attributeflagflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<port_id>      		type<uint>   range<0,3>    default<0>;
+
+[help]
+usage: stop_ring -v port_id 0
+	

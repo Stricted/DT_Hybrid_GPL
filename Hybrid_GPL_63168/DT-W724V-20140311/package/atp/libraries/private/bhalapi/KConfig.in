@@ -1,0 +1,4 @@
+config HTML_PARTITION
+	bool "Equip html partition (strongly recommend)"
+	default y
+

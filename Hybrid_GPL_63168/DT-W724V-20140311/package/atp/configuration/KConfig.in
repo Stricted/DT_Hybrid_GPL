@@ -1,0 +1,5 @@
+menu "Configuration Linux Kernel Extension"
+source "package/atp/configuration/monitor/KConfig.in"
+source "package/atp/configuration/cmsmain/KConfig.in"
+endmenu
+

@@ -1,0 +1,12 @@
+[settings]
+functionname = hi_kernel_voip_close_channel;
+attributenum = 2;
+attributeflag = 1 ;
+
+[parameter]
+attribute=alias<chanid>       type<uint>    range<0x0,0xFFFFFFFF>  default<0x00000000>; /*通道号*/
+attribute=alias<handler>      type<uint>    range<0x0,0xFFFFFFFF>  default<0x00000000>; /*用户回调句柄*/
+
+[help]
+usage: closechannel                     ; 
+	     closechannel -v chanid 0x0001    ; 

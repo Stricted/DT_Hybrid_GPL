@@ -1,0 +1,15 @@
+[settings]
+functionname=hi_kernel_codec_hlp_port_set_deactive;  
+attributenum=5;
+attributeflagflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<port_id>      		type<uint>   range<0,3>    default<0>;
+attribute=alias<board_index>      	type<uint>   range<0,0>    default<0>;
+attribute=alias<sub_board_index>    type<uint>   range<0,0>    default<0>;
+attribute=alias<chip_index>      	type<uint>   range<0,0>    default<0>;
+attribute=alias<channel_index>      type<uint>   range<0,3>    default<0>;
+
+[help]
+usage: disconnect_ts -v port_id 0
+	

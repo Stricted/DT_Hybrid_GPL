@@ -1,0 +1,1 @@
+#define CONFIG_ATP_DNSDIAG 1

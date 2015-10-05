@@ -1,0 +1,11 @@
+[settings]
+functionname=hi_voip_cli_cfg_tos_dscp;  
+attributenum=0;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<dscp>      type<uchar>   range<0x0,0xff>   default<0>; /*ª·“È∫≈*/
+
+[help]
+usage: cfg_tos_dscp                ; ≈‰÷√tos     
+       cfg_tos_dscp -v dscp 0    ; tos_dscp

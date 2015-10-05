@@ -1,0 +1,126 @@
+config BUILD_WANCMS
+	bool "WAN management"
+	default y
+	select BUILD_WANVLAN
+	help
+	  Support WAN management
+
+if BUILD_WANCMS
+menu "ATP WANCMS Supported Selection"
+config ATP_WAN_NUM_MAX
+	int "MAX number of WAN connections"
+	default "16"
+	depends on BUILD_WANCMS
+	
+config BUILD_MTU
+	bool "MTU config"
+	default y
+	depends on BUILD_WANCMS
+	help
+	  Support MTU config.
+	  
+config BUILD_TCP_MSS
+	bool "TCP MSS"
+	default y
+	depends on BUILD_WANCMS
+	help
+	  Support MSS config.	  
+	  
+config BUILD_ENABLED_FOR_INTERNET
+    bool "Enable for internet"
+    depends on BUILD_WANCMS
+    default n
+ 
+config BUILD_DT_WAN_PAGE
+    bool "DT wan page"
+    depends on BUILD_WANCMS
+    default n
+
+config BUILD_WAN_HG532T_TELEFONICA_PERU_CUSTOMIZED
+	bool "wan support telefonica peru customized"
+	default n
+    
+config BUILD_IPV6_PPP_DIAL_ON_DEMAND
+    bool "Support IPv6 dial on demand"
+    depends on BUILD_WANCMS
+    default n
+    	
+config BUILD_PPP_PASSTHROUGH
+    bool "PPP passthrough"
+    depends on BUILD_WANCMS
+    default n
+	
+config BUILD_WAN_BACKUP
+    bool "WAN Backup"
+	default y
+	depends on BUILD_WANCMS
+	select BUILD_DNS_REDIRECT
+	help
+	  Support WAN backup.
+
+config BUILD_WAN_AUTO_BACKUP
+	bool "WAN Auto Backup"
+	default n
+	depends on BUILD_WANCMS && BUILD_WAN_BACKUP
+	help
+	  Support WAN Auto Backup
+
+config BUILD_WAN_ADSL_PVC_NAME
+    bool "Support ASDL WAN name as PVC:X/Y"
+	default n
+	depends on BUILD_WANCMS && BUILD_XDSL
+	help
+	  Support ASDL WAN name format is the same as PVC:X/Y.
+	  
+config BUILD_ROUTE_FORBID_DEFAULTROUTE_ON_OTHERWAN
+    bool "OTHER wan don't add default route"
+	default n
+	depends on BUILD_WANCMS
+	help
+	  OTHER wan don't add default route in the bind policy route.
+	  
+config BUILD_WAN_NAT_TYPE_SEPARATE_FROM_ENABLE
+    bool "Support Nat type seprate from enable"
+	default n
+	depends on BUILD_WANCMS
+	help
+	  Support Nat type seprate from enable.	  
+	  
+menu "Config WAN Customize Characteristics"
+	depends on BUILD_WANCMS
+config WANPPP_USERNAME_RULE_LIST
+	string "WAN PPP Username Rule Supported(Comma-separated list without space)"
+	default ""
+	depends on BUILD_WANCMS
+	
+config WANPPP_USERNAME_SPECIAL_CHAR
+	string "WAN PPP Username Spacial Char Supported"
+	default ""
+	depends on BUILD_WANCMS
+	
+config WANPPP_PASSWORD_RULE_LIST
+	string "WAN PPP Password Rule Supported(Comma-separated list without space)"
+	default ""
+	depends on BUILD_WANCMS
+
+config WANPPP_PASSWORD_SPECIAL_CHAR
+	string "WAN PPP Password Spacial Char Supported"
+	default ""
+	depends on BUILD_WANCMS
+	
+config BUILD_WANPPP_NOT_NULL_STRING
+	bool "Wan ppp username and password can not configure as null"
+	default n
+	depends on BUILD_WANCMS
+	help
+	  Support PPP Username and Password Without Null String
+	  
+config BUILD_MAC_CLONE
+	bool "MAC address clone"
+	default n
+	depends on BUILD_WANCMS
+	help
+	  Support MAC address clone
+endmenu 
+endmenu
+endif

@@ -1,0 +1,11 @@
+[settings]
+functionname=hi_kernel_mpcp_start;  
+attributenum=1;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<mac>          type<mac>                           default<00:00:00:18:20:62>;
+
+[help]
+usage: 
+

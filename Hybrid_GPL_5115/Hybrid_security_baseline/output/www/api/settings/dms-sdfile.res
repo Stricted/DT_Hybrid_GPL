@@ -1,0 +1,1 @@
+vpath="InternetGatewayDevice.Services.StorageService.{i}.LogicalVolume.{i}."E5element="DestIPAddress|GatewayIPAddress|DestSubnetMask|Interface"ATPelement="DestIPAddress|GatewayIPAddress|DestSubnetMask|Interface"multi="routes|route"index="staticrouteID"

@@ -1,0 +1,14 @@
+[settings]
+functionname=hi_voip_cli_cfg_rtcpctl;  
+attributenum=2;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chanid>       type<uint>   range<0x0,0xFFFFFFFF>    default<0x0>; /*通道号ui_chanid*/
+attribute=alias<rtcpenable>   type<uint>   range<0x0,0xFFFFFFFF>    default<0x0>; /*RTCP控制参数ui_rtcp_enable*/
+
+
+[help]
+usage: cfg_rtcpctl                   ; 配置编解码      
+       cfg_rtcpctl -v chanid 0x0     ; 通道0
+       cfg_rtcpctl -v rtcpenable 0x0 ; RTCP控制参数：0

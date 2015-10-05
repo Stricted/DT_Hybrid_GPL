@@ -1,0 +1,10 @@
+[settings]
+functionname=hi_adapter_cli_gmac_del_gemport;
+attributenum=1;
+attributeflag = 1 ;
+
+[parameter]
+attribute=alias<sfid>      type<ushort>   range<0x0,0xff>      default<1>;
+
+[help]
+sfid

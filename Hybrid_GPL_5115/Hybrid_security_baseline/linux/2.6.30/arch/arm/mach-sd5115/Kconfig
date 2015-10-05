@@ -1,0 +1,76 @@
+# define a global config variable
+config HISI_SD5115
+        bool "Hisilicon sd5115 define macro"
+        depends on 0
+
+menu "SD5115 platform feature"
+config MACH_SD5115
+	bool "Support SD5115 platform"
+	select CPU_V7
+	select ARM_GIC
+	select OUTER_CACHE
+	select OUTER_CACHE_SYNC
+	select HISI_SD5115
+	help
+	  Include support for the hisilion godbox platform.
+
+config B880_PRODUCT
+	bool "Support b880 product"
+
+menu "chip version select (for develpor only)"
+choice
+	prompt "SD5115 MPW or PILOT"
+	default HISI_SD5115_MP_MPW
+	config HISI_SD5115_MP_PILOT
+		bool "HISI_SD5115_MP_PILOT"
+	config HISI_SD5115_MP_MPW
+		bool "HISI_SD5115_MP_MPW"
+endchoice
+choice
+	prompt "SD5115 type"
+	depends on HISI_SD5115_MP_PILOT
+	default HISI_SD5115_TYPE_H
+	config HISI_SD5115_TYPE_H
+		bool "HISI_SD5115_TYPE_H"
+	config HISI_SD5115_TYPE_S
+		bool "HISI_SD5115_TYPE_S"
+	config HISI_SD5115_TYPE_T
+		bool "HISI_SD5115_TYPE_T"
+endchoice
+choice
+	prompt "SD5115 ASIC or FPGA"
+	default HISI_SD5115_AF_ASIC
+	config HISI_SD5115_AF_ASIC
+		bool "HISI_SD5115_AF_ASIC"
+	config HISI_SD5115_AF_FPGA
+		bool "HISI_SD5115_AF_FPGA"
+		depends on !HISI_SD5115_MP_MPW
+endchoice
+choice
+	prompt "SD5115 version"
+	default HISI_SD5115_VER_100
+	config HISI_SD5115_VER_100
+		bool "HISI_SD5115_VER_100"
+endchoice
+endmenu
+
+config HISILICON_KCONSOLE
+	int "Kernel console( 0 => UART0, 1 => UART1)"
+	range 0 1
+	default 0
+	help
+	  Select uart port as the default console used by kernel
+config HISILICON_EDB_LEVEL
+	int "Kernel Early-Debug Level( 0~254, 255 => Disable Early-Debug)"
+	range 0 255
+	default 255
+	help
+	  Set the debug level of Early-Debug, low level will cause more debug message
+config DEFAULT_BUSCLK
+	int "DEFAULT_BUSCLK"
+	default "50000000"
+	help
+      	Default AHB clock rate
+
+endmenu
+

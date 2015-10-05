@@ -1,0 +1,41 @@
+[settings]
+functionname=hi_kernel_ffwd_device_set;
+attributenum=6;
+attributeflag=0;
+
+[parameter]
+attribute=alias<ifname>      type<string>  range<0x0,16> 	   default<eth0>;
+attribute=alias<flags>       type<uint>    range<0x0,0xFFFFFFFF>   default<0x3>;
+attribute=alias<vlan>        type<uint>    range<0x0,0xFFFFFFFF>   default<1>;
+attribute=alias<pri>         type<uint>    range<0x0,0xFFFFFFFF>   default<1>;
+attribute=alias<l_ip>        type<ip>      range<0x0,0xFFFFFFFF>   default<0.0.0.0>;
+attribute=alias<r_ip>        type<ip>      range<0x0,0xFFFFFFFF>   default<0.0.0.0>;
+
+[help]
+/***********************************************************************************
+ *                                                                                 *
+ *         32          12   8    4    0                                            *
+ *         +---------..+----+----+----+                                            *
+ *   flags |not_used   |type|napt|mode|                                            *
+ *         +---------..+----+----+----+                                            *
+ *   type: 0 wan                                                                   *
+ *         1 lan                                                                   *
+ *                                                                                 *
+ *   napt: 0 off                                                                   *
+ *         1 on                                                                    *
+ *                                                                                 *           
+ *   mode: 0 no                                                                    *
+ *         1 software                                                              *
+ *         2 hardware                                                              *
+ *         3 hard-soft                                                             *
+ ***********************************************************************************/
+
+typedef struct hi_kernel_ffwd_dev_cmdtype
+{
+    hi_char8  ac_ifname[16];
+    hi_uint32 ui_flags;
+    hi_uint32 ui_vlan;
+    hi_uint32 ui_pri;
+    hi_uint32 ui_local_ip;
+    hi_uint32 ui_peer_ip;
+} hi_kernel_ffwd_dev_cmdtype_s;

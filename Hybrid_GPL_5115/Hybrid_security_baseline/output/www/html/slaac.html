@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+    <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+    <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+    <script type="text/javascript" src="../js/refresh.js"></script>
+    <script type="text/javascript" src="../js/slaac.js"></script>
+    <script type="text/javascript" src="../js/validation.js"></script>
+    <title></title>
+</head>
+<body>
+<div id="all_content" class="body_bg_settings">
+        <input type="text" id="focus_hidden" style="display:none" value="focus">
+                    <div class="maintitle">
+                        <h1 id="title_label_slaac"><script type="text/javascript">dw(slaac_label_slaac);</script></h1>
+                    </div>
+                    <div class="main_content">
+                        <div>
+                            <table class="slaac-content">
+                                <tr height="42" id="slaac_tr_check">
+                                    <td width="200" height="42" valign='top'>
+                                        <label><script type="text/javascript">dw(slaac_switch_option)</script> </label>
+                                    </td>
+                                    <td height="42" valign='top'>
+                                        <input type="checkbox" id="slaac_enable"/><script type="text/javascript">dw(common_enable)</script>
+                                    </td>
+                                </tr>
+                                <tr height="42" id="slaac_tr_select" class="mode_ishow" style="display: none;">
+                                    <td width="200" height="42" valign='top'>
+                                        <label><script type="text/javascript">dw(dhcp_ipv6_mode);dw(common_colon);</script> </label>
+                                    </td>
+                                    <td valign='top'  height="42" >
+                                        <select id="slaac_select" valign='top'>
+                                            <!--option value="Normal" id='manual'><script type="text/javascript">dw(common_manual)</script></option-->
+                                            <option value="UseAllocatedSubnet" id='useall'><script type="text/javascript">dw(dhcp_ipv6_label_useallocatesubnet)</script></option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr height="42" id="slaac_tr_prefix" class="tr_ishow" style="display: none;">
+                                    <td width="200" height="42"  valign='top'>
+                                        <label><script type="text/javascript">dw(dhcp_ipv6_prefix);dw(common_colon);</script> </label>
+                                    </td>
+                                    <td  valign='top'  height="42" id="td_prefix" >
+                                        <input type="text"  style="width:170px;" id="input_prefix" class="input_style" maxlength="64" />
+                                    </td>
+                                </tr>
+                                <tr height="42" id="slaac_tr_preLen" class="tr_ishow" style="display: none;">
+                                    <td width="200" height="42" valign='top' >
+                                        <label><script type="text/javascript">dw(dhcp_ipv6_prefix_length);dw(common_colon);</script> </label>
+                                    </td>
+                                    <td  valign='top' height="42"  id="td_prelen" width="170">
+                                        <input type="text" style="width:170px;" id="input_preLen" class="input_style" maxlength="64" />
+                                        <span></span>
+                                    </td>
+                                <td style="text-align: left;" valign='top'>[16-64]</td>
+                                </tr>
+                                <tr height="42" id="slaac_tr_preTime" class="tr_ishow" style="display: none;">
+                                    <td width="200" height="42" valign='top' >
+                                        <label><script type="text/javascript">dw(dhcp_ipv6_preferred);dw(common_colon);</script></label>
+                                    </td>
+                                    <td  valign='top'  height="42" id="td_pretime" width="170">
+                                        <input type="text" style="width:170px;" id="input_preTime" class="input_style" maxlength="12" />
+                                    </td>
+                                    <td style="text-align: left;" valign='top'>[600-4294967295 S]</td>
+                                </tr>
+                                <tr height="42" id="slaac_tr_validTime" class="tr_ishow" style="display: none;">
+                                    <td width="200" height="42"  valign='top'>
+                                        <label><script type="text/javascript">dw(dhcp_ipv6_valid);dw(common_colon);</script> </label>
+                                    </td>
+                                    <td valign='top' height="42" id="td_validTime" width="170" >
+                                        <input type="text" style="width:170px;" id="input_validTime" class="input_style" maxlength="12" />
+                                    </td>
+                                    <td style="text-align: left;" valign='top'>[600-4294967295 S]</td>
+                                </tr>
+                                <tr>
+                                    <td id= "useother_note" height="32" colspan ="3" style="color:red;display: none;"><script type="text/javascript">dw(lable_useother_note)</script></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="apply_button">
+                            <script type="text/javascript">create_button(common_apply,"apply_button");</script>
+                        </div>
+                    </div>
+                </div>
+</body>
+</html>

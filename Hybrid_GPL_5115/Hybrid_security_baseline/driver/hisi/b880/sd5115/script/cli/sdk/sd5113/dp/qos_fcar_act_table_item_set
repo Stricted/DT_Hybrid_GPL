@@ -1,0 +1,25 @@
+[settings]
+functionname=0xF7002004;
+attributenum=6;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000A06>; /*全局模块*/
+attribute=alias<ui_fcar_index>       type<uint>   range<0,127>  		 default<0x00000000>;
+attribute=alias<ui_cbs>       		 type<uint>   range<0x0,0x0000FFFF>  default<0x00000000>;
+attribute=alias<ui_cir>       		 type<uint>   range<0x0,0x0000FFFF>  default<0x00000000>;
+attribute=alias<ui_pbs>       		 type<uint>   range<0x0,0x0000FFFF>  default<0x00000000>;
+attribute=alias<ui_pir>       		 type<uint>   range<0x0,0x0000FFFF>  default<0x00000000>;
+
+[help]
+
+typedef struct 
+{
+    uint    ui_fcar_index;          /* 0   127 */  
+
+    uint    ui_cbs;                 /* 承诺突发尺寸    */
+    uint    ui_cir;                 /* 承诺速率        */  
+    uint    ui_pbs;                 /* 峰值突发尺寸    */   
+    uint    ui_pir;                 /* 峰值速率        */  
+    
+}hi_dp_qos_fcar_act_table_item_s;

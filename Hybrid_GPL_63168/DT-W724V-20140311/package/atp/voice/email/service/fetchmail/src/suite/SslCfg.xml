@@ -1,0 +1,5 @@
+<SslCfg port="37215" ssl_en="1" peer="0" ver="3">
+	<root>D:\software\维管工具\HandyACS_v3.3\HandyACS_v3.3\cert\suite1\cacert.pem</root>
+	<cert>D:\software\维管工具\HandyACS_v3.3\HandyACS_v3.3\cert\suite1\atp1.pem</cert>
+	<key>D:\software\维管工具\HandyACS_v3.3\HandyACS_v3.3\cert\suite1\atp1_unsecure.key</key>
+	<pwd /></SslCfg>

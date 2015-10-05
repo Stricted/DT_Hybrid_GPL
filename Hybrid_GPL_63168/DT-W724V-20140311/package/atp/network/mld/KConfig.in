@@ -1,0 +1,12 @@
+config MLD
+	tristate "MLD"
+	default y
+config MLD_SNOOPING
+	tristate "MLD Snooping"
+	default y
+	depends on MLD
+config ATP_MLD_SNOOPING
+	tristate "ATP MLD Snooping"
+	default y
+	depends on MLD
+	depends on ATP_KERNEL_3_4

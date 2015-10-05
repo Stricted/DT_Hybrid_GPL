@@ -1,0 +1,39 @@
+menu "Product Feature config"
+		
+config BUILD_NAMEFROMAMSS
+	bool "GET NAME FROM AMSS"
+	help
+	for get operator name for amss 
+	
+config BUILD_ATH3G
+	bool "ATH3G"
+	help
+	for AT H3G 
+
+config BUILD_B880_CUBE
+    bool "B880 CUBE"
+	depends on CONFIG_B880_PRODUCT	
+    help
+      B190 is B880 CUBE	
+		
+config BUILD_FORBID_ROAMING
+	bool "Disconnect when roaming"
+	help
+	for limit roaming dial up 		
+
+config BUILD_FMC_DECT
+	bool "support dect"
+	default n
+	
+config BUILD_B882
+    bool "support B882"
+	default n
+    help
+      B882 is from B890
+
+config BUILD_CHINA_TELECOM
+	bool "support China Telecom feature"
+	default n
+	
+endmenu
+

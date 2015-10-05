@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link type="text/css" rel="stylesheet" href="../css/main.css" />
+        <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+        <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>
+        <script type="text/javascript" src="../js/redirect.js"></script>        
+        <script type="text/javascript" src="../js/validation.js"></script>  
+        <script type="text/javascript" src="../js/checklogin.js"></script>     
+        <script type="text/javascript" src="../js/statistic.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <div id="all_content" class="body_bg">
+            <div id="wrapper" class="wrapper_dim">
+                <div class="wrapper_dim wrapper_filter">
+                    <div id="header"></div>
+                    <div class="content">
+                        <div class="traffic_status">
+                            <div class="status_title">
+                                <h2>
+                                <script type="text/javascript">
+                                    dw(connection_hilink_label_traffic_statistics);
+
+                                </script></h2>
+                            </div>
+                            <table width="790" align="center" cellpadding="0" cellspacing="0" class="no_station">
+                                <tr>
+                                    <th width="175">
+                                    <script type="text/javascript">
+                                        dw(common_type);
+
+                                    </script></th>
+                                    <th width="307">
+                                    <script type="text/javascript">
+                                        dw(traffic_label_current_volume);
+
+                                    </script></th>
+                                    <th width="307">
+                                    <script type="text/javascript">
+                                        dw(traffic_label_history_volume);
+
+                                    </script></th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <script type="text/javascript">
+                                        dw(down_label_download);
+
+                                    </script></td>
+                                    <td id="current_download"></td>
+                                    <td id="history_download"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <script type="text/javascript">
+                                        dw(sd_label_upload);
+
+                                    </script></td>
+                                    <td id="current_upload"></td>
+                                    <td id="history_upload"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <script type="text/javascript">
+                                        dw(common_label_total);
+
+                                    </script></td>
+                                    <td id="total_current"></td>
+                                    <td id="total_history"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <script type="text/javascript">
+                                        dw(dialup_label_duration);
+
+                                    </script></td>
+                                    <td id="current_duration"></td>
+                                    <td id="history_duration"></td>
+                                </tr>
+                            </table>
+                            <table width="790" align="center" cellpadding="0" cellspacing="0" class="have_station">
+                                <tr>
+                                    <th rowspan="2" width="160">
+                                    <script type="text/javascript">
+                                        dw(dialup_label_actions);
+                                        dw("/");
+                                        dw(dialup_label_volume);
+
+                                    </script></th>
+                                    <th colspan="2">
+                                    <script type="text/javascript">
+                                        dw(traffic_label_current_volume);
+
+                                    </script></th>
+                                    <th colspan="2">
+                                    <script type="text/javascript">
+                                        dw(traffic_label_history_volume);
+
+                                    </script></th>
+                                </tr>
+                                <tr>
+                                    <th width="130">
+                                    <script type="text/javascript">
+                                        dw(dialup_label_3g);
+
+                                    </script></th>
+                                    <th width="130">
+                                    <script type="text/javascript">
+                                        dw(dialup_label_wifi);
+
+                                    </script></th>
+                                    <th width="130">
+                                    <script type="text/javascript">
+                                        dw(dialup_label_3g);
+
+                                    </script></th>
+                                    <th width="130">
+                                    <script type="text/javascript">
+                                        dw(dialup_label_wifi);
+
+                                    </script></th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <script type="text/javascript">
+                                        dw(down_label_download);
+
+                                    </script></td>
+                                    <td id="current_download"></td>
+                                    <td id="wifi_current_download"></td>
+                                    <td id="history_download"></td>
+                                    <td id="wifi_history_download"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <script type="text/javascript">
+                                        dw(sd_label_upload);
+
+                                    </script></td>
+                                    <td id="current_upload"></td>
+                                    <td id="wifi_current_upload"></td>
+                                    <td id="history_upload"></td>
+                                    <td id="wifi_history_upload"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <script type="text/javascript">
+                                        dw(common_label_total);
+
+                                    </script></td>
+                                    <td id="total_current"></td>
+                                    <td id="wifi_total_current"></td>
+                                    <td id="total_history"></td>
+                                    <td id="wifi_total_history"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <script type="text/javascript">
+                                        dw(dialup_label_duration);
+
+                                    </script></td>
+                                    <td id="current_duration"></td>
+                                    <td id="wifi_current_duration"></td>
+                                    <td id="history_duration"></td>
+                                    <td id="wifi_history_duration"></td>
+                                </tr>
+                            </table>
+                            <div class="note">
+                                <script type="text/javascript">
+                                    dw(strid_stat_hint_declaration_volume);
+
+                                </script>
+                            </div>
+                            <div id="clear_history" class="clear_history">
+                                <script type="text/javascript">
+                                    create_button(common_clear_history, 'button_clear_history');
+
+                                </script>
+                            </div>
+                        </div>
+                        <div class="status_title">
+                            <h2>
+                            <script type="text/javascript">
+                                dw(wlan_label_wifi_clients);
+
+                            </script></h2>
+                        </div>
+                        <div class="wifi_table">
+                            <table id="table_wifiClient" class="bottom_table" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th class="bottom_id">
+                                    <script type="text/javascript">
+                                        dw(wlan_label_id);
+
+                                    </script></th>
+                                    <th class="bottom_ip">
+                                    <script type="text/javascript">
+                                        dw(dialup_label_ip_address);
+
+                                    </script></th>
+                                    <th class="bottom_host">
+                                    <script type="text/javascript">
+                                        dw(wlan_label_host_name);
+
+                                    </script></th>
+                                    <th class="bottom_mac">
+                                    <script type="text/javascript">
+                                        dw(wlan_label_mac_address);
+
+                                    </script></th>
+                                    <th class="bottom_associat">
+                                    <script type="text/javascript">
+                                        dw(dialup_label_duration);
+
+                                    </script></th>
+                                </tr>
+                            </table>
+                            <table id="ssid2_table_wifiClient" class="bottom_table_02" cellpadding="0" cellspacing="0"></table>
+                        </div>
+                    </div>
+                    <div id="footer"></div>
+                </div>
+            </div>
+        </div>
+        <noscript>
+            <div class="noscript_text">
+                Your browser does not support JavaScript.
+            </div>
+        </noscript>
+    </body>
+</html>

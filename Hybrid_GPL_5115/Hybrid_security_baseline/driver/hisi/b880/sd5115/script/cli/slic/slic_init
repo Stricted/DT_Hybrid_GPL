@@ -1,0 +1,9 @@
+[settings]
+functionname=hi_kernel_cli_zarlink_slic_init;  
+attributenum=1;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chip_idx>    type<uint>    range<0,7>      default<6>; /*Ð¾Æ¬ºÅ*/
+attribute=alias<slic_link>    type<uint>    range<0,1>      default<1>; /*Ð¾Æ¬ºÅ*/
+[help]

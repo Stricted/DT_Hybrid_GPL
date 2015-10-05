@@ -1,0 +1,30 @@
+[settings]
+commandtype=0xF8005841;
+attributenum=7;
+displayattribute = 1 ;
+
+[parameter]
+attribute=alias<fid>      type<ushort>    range<0x0,0xFFFF>      default<0>;
+attribute=alias<enable>   type<uchar>     range<0x0,0x1>   		 default<0>;
+attribute=alias<res>      type<uchar>     range<0x0,0x0>   		 default<0>;
+attribute=alias<cbs>      type<uint>      range<0x0,0xFFFFFFFF>  default<0>;
+attribute=alias<cir>      type<uint>      range<0x0,0xFFFFFFFF>  default<0>;
+attribute=alias<pbs>      type<uint>      range<0x0,0xFFFFFFFF>  default<0>;
+attribute=alias<pir>      type<uint>      range<0x0,0xFFFFFFFF>  default<0>;
+
+[help]
+typedef struct
+{
+    hi_ushort16         us_fid;
+    hi_uchar8           uc_enable;
+    hi_uchar8           uc_res;
+    hi_lsw_car_info_s   st_car;
+}hi_lsw_car_s;
+
+typedef struct
+{
+    hi_uint32 ui_cbs;
+    hi_uint32 ui_cir;
+    hi_uint32 ui_pbs;
+    hi_uint32 ui_pir;
+}hi_lsw_car_info_s;

@@ -1,0 +1,23 @@
+[settings]
+functionname=0xF7002004;
+attributenum=6;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x0000070A>; /*È«¾ÖÄ£¿é*/
+attribute=alias<ui_mc_id>       type<uint>   range<0x0,0x000000FF>  default<0x00000000>;
+attribute=alias<ui_vlan>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<em_egr>       	type<int>    range<0x0,0x08>  		default<0x00000000>;
+attribute=alias<em_vlan_act>    type<int>    range<0x0,0x02>  		default<0x00000000>;
+attribute=alias<em_valid>       type<int>    range<0x0,0x01>  		default<0x00000000>;
+
+[help]
+typedef struct  
+{
+    uint    ui_mc_id;                   /* 0 - 255 */
+    
+    uchar   uc_mac[6];       
+    ushort  us_arg;  
+    uint    ui_vlan;
+    
+}hi_dp_l2_mc_s;

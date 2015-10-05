@@ -1,0 +1,44 @@
+
+if HISI_SD5115
+
+menuconfig PCIE1_HISI_SD5115
+	bool "Hisilicon PCIE1 Express support"
+	depends on PCI
+	help
+	  Hisilicon PCI Express support
+	  
+config PCIE1_SEL
+        int "PCI Express controller1 sel"
+        depends on PCIE1_HISI_SD5115
+        range 0 1
+        default "1"        
+        help
+        PCI Express controller1 sel. Set 0 to disable controller,
+	        set 1 to let controller1 work at x1 mode.
+
+config PCIE1_DEVICES_MEM_SIZE
+        hex "Total memory size of PCI Express system devices"
+        depends on PCIE1_HISI_SD5115
+        range 0x0 0x7800000 
+        default "0x400000" 
+        help
+        All memory size requeired by all devices in pci subsystem.
+        Hisilicon PCI Express controller provide up to 128M memory
+        and io size for device.
+        Here we set memory size up to 120M, means that io size has at least 8M
+        You can change this depend on you device connected
+        to Hisilicon PCI Express controller.
+
+config PCIE1_DEVICES_CONFIG_SIZE
+        hex "Total configuration header size of PCI Express system devices"
+        depends on PCIE1_HISI_SD5115
+        range 0x0 0x10000000  
+        default 0x80000       
+        help
+        All configuration size required by devices connnect to
+        Hisilicon PCI Express controller.
+        NOTE: This will alloc memory from kernel,
+        enlarge this will require the same memory.
+        The default value is enough for most applications.
+
+endif

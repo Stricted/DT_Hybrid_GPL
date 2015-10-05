@@ -1,0 +1,84 @@
+[settings]
+commandtype      = 0xF80058D0 ;
+attributenum     = 2 ;
+displayattribute = 1 ;
+
+[parameter]
+attribute=alias<port>                       type<uint>       range<0x0,0x6>            default<1>;
+attribute=alias<st_eth_cnt>                 type<binary>     range<0,396>              default<0>;
+
+
+[help]
+typedef struct
+{
+    hi_lsw_port_e       em_port;
+    hi_lsw_eth_cnt_s    st_pm;
+}hi_lsw_eth_pm_s;
+
+/*端口号定义*/
+typedef enum
+{
+    HI_LSW_PORT_GE0_E    = 0,
+    HI_LSW_PORT_FE1_E    = 1,
+    HI_LSW_PORT_FE2_E    = 2,
+    HI_LSW_PORT_FE3_E    = 3,
+    HI_LSW_PORT_FE4_E    = 4,
+    HI_LSW_PORT_PON_E    = 5,
+    HI_LSW_PORT_CPU_E    = 6,
+    HI_LSW_PORT_MAX_E,
+}hi_lsw_port_e;
+
+typedef struct
+{
+    hi_ulonglong    ul_tx_total;        /* CPU口发包 */
+    hi_ulonglong    ul_rx_total;        /* CPU口收包 */
+    
+    hi_ulonglong   ul_rx_fcs_err;                  /* 1:FCS errors                         */
+    hi_ulonglong   ul_tx_exc_col_err;              /* 1:Excessive collision counter        */
+    hi_ulonglong   ul_tx_late_col_err;             /* 1:Late collision counter             */
+    hi_ulonglong   ul_rx_frm_too_long_err;         /* 1:Frames too long                    */
+    hi_ulonglong   ul_rx_overflow_err;             /* 1:Buffer overflows on receive        */
+    hi_ulonglong   ul_tx_overflow_err;             /* 1:Buffer overflows on transmit  SD5113中不会出现这种情况,统计始终为0 */
+    hi_ulonglong   ul_tx_single_col_err;           /* 1:Single collision frame counter     */
+    hi_ulonglong   ul_tx_multi_col_err;            /* 1:Multiple collision frame counter   */
+    hi_ulonglong   ul_sqe_err;                     /* 1:SQE counter                        */
+    hi_ulonglong   ul_tx_defferred_err;            /* 1:Deferred transmission counter      */
+    hi_ulonglong   ul_tx_intervel_mac_err;         /* 1:Internal MAC transmit error counter */
+    hi_ulonglong   ul_tx_crs_drop_err;             /* 1:Carrier sence error counter        */
+    hi_ulonglong   ul_rx_align_err;                /* 1:Alignment error counter            */
+    hi_ulonglong   ul_rx_interval_mac_err;         /* 1:Internal MAC receive error counter */
+    hi_ulonglong   ul_rx_pppoe_filter_frame;       /* 2:PPPoE filtered frame counter       */
+    hi_ulonglong   ul_rx_drop_events;              /* 3:Drop events                        */
+    hi_ulonglong   ul_rx_octets;                   /* 3:Octets                             */
+    hi_ulonglong   ul_rx_pkts;                     /* 3:Packets                            */
+    hi_ulonglong   ul_rx_undersize_pkts;           /* 3:Undersize packets                  */
+    hi_ulonglong   ul_rx_fragments;                /* 3:Fragments                          */
+    hi_ulonglong   ul_rx_jabbers;                  /* 3:Jabbers                            */
+    hi_ulonglong   ul_rx_pkts_64_octets;           /* 3:Packets 64 octets                  */
+    hi_ulonglong   ul_rx_pkts_65to127_octets;      /* 3:Packets 65 to 127 octets           */
+    hi_ulonglong   ul_rx_pkts_128to255_octets;     /* 3:Packets 128 to 255 octets          */
+    hi_ulonglong   ul_rx_pkts_256to511_octets;     /* 3:Packets 256 to 511 octets          */
+    hi_ulonglong   ul_rx_pkts_512to1023_octets;    /* 3:Packets 512 to 1023 octets         */
+    hi_ulonglong   ul_rx_pkts_1024to1518_octets;   /* 3:Packets 1024 to 1518 octets        */ 
+    hi_ulonglong   ul_rx_pkts_1519tomtu_octets;   
+    hi_ulonglong   ul_tx_pkts_64_octets;           
+    hi_ulonglong   ul_tx_pkts_65to127_octets;      
+    hi_ulonglong   ul_tx_pkts_128to255_octets;     
+    hi_ulonglong   ul_tx_pkts_256to511_octets;     
+    hi_ulonglong   ul_tx_pkts_512to1023_octets;    
+    hi_ulonglong   ul_tx_pkts_1024to1518_octets;   
+    hi_ulonglong   ul_tx_pkts_1519tomtu_octets;   
+    hi_ulonglong   ul_rx_uc_pkts;                  /* 4:EtherReceiveUnicastPkts            */
+    hi_ulonglong   ul_tx_uc_pkts;                  /* 4:EtherSendUnicastPkts               */
+    hi_ulonglong   ul_rx_bc_pkts;                  /* 3:Broadcast packets                  */
+    hi_ulonglong   ul_tx_bc_pkts;                  /* 4:EtherSendBroadcastPkts             */
+    hi_ulonglong   ul_rx_mc_pkts;                  /* 3:Multicast packets                  */
+    hi_ulonglong   ul_tx_mc_pkts;                  /* 4:EtherSendMulticastPkts             */
+    hi_ulonglong   ul_rx_pause_frame;              /* 4:EtherReceivePauseFlowCtrlFrame     */
+    hi_ulonglong   ul_tx_pause_frame;              /* 4:EtherSendPauseFlowCtrlFrame        */    
+    hi_ulonglong   ul_rx_good_pkts_octets;         /* 4:EtherReceiveGoodPktsOctets         */
+    hi_ulonglong   ul_tx_good_pkts_octets;         /* 4:EtherSendGoodPktsOctets            */
+    hi_ulonglong   ul_rx_bad_pkts_octets;          /* 4:EtherReceiveBadPktsOctets          */
+    hi_ulonglong   ul_tx_bad_pkts_octets;          /* 4:12EtherSendBadPktsOctets           */
+    hi_uint32      ui_thru;                        /* 端口透传计数 */
+}hi_lsw_eth_cnt_s;

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+    <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+    <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+    <script type="text/javascript" src="../js/refresh.js"></script>
+    <script type="text/javascript" src="../js/aclsettings.js"></script>
+    <title></title>
+</head>
+<body>
+    <div id="all_content" class="body_bg_settings">
+        <input type="text" id="focus_hidden" style="display:none" value="focus">
+                      <div class="maintitle">
+                          <h1 id="title_label_aclsettings"><script type="text/javascript">dw(acl_label_acl); </script></h1>
+                      </div>                          
+                      <div class="main_content">
+                        <table class="acl_table">
+                            <tr height="1">
+                                <th width="150"></th>
+                                <th width="60"></th>
+                                <th width="90"></th>
+                            </tr>
+                            <tr class="acl_tr">
+                                <td class="acl_td"><script type="text/javascript">dw(acl_service); </script></td>
+                                <td class="acl_td"><script type="text/javascript">dw(acl_lan); </script></td>
+                                <td class="acl_td"><script type="text/javascript">dw(acl_wan); </script> </td>
+                            </tr>
+                            <tr class="acl_tr">
+                                <td class="acl_td"><script type="text/javascript">dw(acl_http); </script> </td>
+                                <td class="acl_td"><input id="httplan" type="checkbox"/></td>
+                                <td class="acl_td"><input id="httpwan"  type="checkbox" disabled="disabled" /></td>
+                            </tr>
+                            <tr class="acl_tr">
+                                <td class="acl_td"><script type="text/javascript">dw(acl_ssl); </script> </td>
+                                <td class="acl_td"><input id="ssllan" type="checkbox"/></td>
+                                <td class="acl_td"><input id="sslwan"  type="checkbox"/></td>
+                            </tr>
+                            <tr class="acl_tr">
+                                <td class="acl_td"><script type="text/javascript">dw(acl_ftp); </script></td>
+                                <td class="acl_td"><input id="ftplan" type="checkbox"/></td>
+                                <td class="acl_td"><input id="ftpwan" type="checkbox"/></td>
+                            </tr>
+                        </table>
+                      <div class="apply_button">
+                         <script type="text/javascript">create_button(common_apply,"apply");</script>
+                     </div> 
+    </div>
+</body>
+</html>

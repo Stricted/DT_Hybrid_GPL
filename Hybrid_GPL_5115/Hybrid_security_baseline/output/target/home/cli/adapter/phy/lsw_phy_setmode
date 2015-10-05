@@ -1,0 +1,44 @@
+[settings]
+commandtype=0xF800581F;
+attributenum=2;
+displayattribute = 1 ;
+
+[parameter]
+attribute=alias<em_port>          type<uint>   range<0x0,0x7>                default<0>;
+attribute=alias<em_mode>          type<uint>   range<0x0,0x2>                default<0>;
+
+
+[help]
+typedef struct
+{
+    hi_lsw_port_e em_port;
+    hi_lsw_port_mode_e em_mode;
+}hi_lsw_port_mode_s;
+
+/*端口号定义*/
+typedef enum
+{
+    HI_LSW_PORT_GE0_E = 0,
+    HI_LSW_PORT_FE1_E   = 1,
+    HI_LSW_PORT_FE2_E   = 2,
+    HI_LSW_PORT_FE3_E   = 3,
+    HI_LSW_PORT_FE4_E   = 4,
+    HI_LSW_PORT_PON_E   = 5,
+    HI_LSW_PORT_CPU_E   = 6,
+    HI_LSW_PORT_MAX_E,
+}hi_lsw_port_e;
+
+/* 以太端口tag模式 */
+typedef enum
+{
+    HI_LSW_PORT_ETH_TAG_ACCESS_E = 0,
+    HI_LSW_PORT_ETH_TAG_TRUNK_E,
+    HI_LSW_PORT_ETH_HYBRID_E,
+}hi_lsw_port_mode_e;
+
+
+
+
+
+
+

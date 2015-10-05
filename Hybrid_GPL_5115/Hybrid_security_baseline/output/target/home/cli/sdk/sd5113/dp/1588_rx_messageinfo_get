@@ -1,0 +1,47 @@
+[settings]
+functionname=0xF7002004;
+attributenum=17;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       							type<uint>    range<0x0,0xFFFFFFFF>  default<0x00000C10>; /*全局模块*/
+attribute=alias<ui_tunnel_id>       					type<uint>    range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<uc_sync_log_message_interval>       	type<uchar>   range<0,0x000000FF>  	 default<0x00000000>;
+attribute=alias<uc_delay_resp_log_message_interval>     type<uchar>   range<0,0x000000FF>    default<0x00000000>;
+attribute=alias<uc_delay_req_log_message_interval>      type<uchar>   range<0,0x000000FF>    default<0x00000000>;
+attribute=alias<uc_pdelay_req_log_message_interval>     type<uchar>   range<0,0x000000FF>    default<0x00000000>;
+attribute=alias<uc_pdelay_resp_log_message_interval>    type<uchar>   range<0,0x000000FF>    default<0x00000000>;
+attribute=alias<uc_reserved>       						type<binary>  range<0,3>  			 default<0x00000000>;
+attribute=alias<mac_0>             			type<mac>   	  			default<00:00:00:12:34:56>;
+attribute=alias<resreved>       						type<binary>  range<0,2>  			 default<0x00000000>;
+attribute=alias<ui_sync_saip>       					type<uint>    range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<mac_1>             			type<mac>   	  			default<00:00:00:12:34:56>;
+attribute=alias<resreved>       						type<binary>  range<0,2>  			 default<0x00000000>;
+attribute=alias<ui_delay_req_saip>       				type<uint>    range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<mac_2>             			type<mac>   	  			default<00:00:00:12:34:56>;
+attribute=alias<resreved>       						type<binary>  range<0,2>  			 default<0x00000000>;
+attribute=alias<ui_pdelay_req_saip>       				type<uint>    range<0x0,0xFFFFFFFF>  default<0x00000000>;
+
+[help]
+typedef struct  
+{
+    uint  ui_tunnel_id;                              /* 通道ID               */
+
+    uchar uc_sync_log_message_interval;               /* sync报文间隔         */
+    uchar uc_delay_resp_log_message_interval;         /* delay_resp报文间隔   */
+    uchar uc_delay_req_log_message_interval;          /* delay_req报文间隔    */
+    uchar uc_pdelay_req_log_message_interval;         /* pdelay_req报文间隔   */
+    uchar uc_pdelay_resp_log_message_interval;        /* delay_resp报文间隔   */
+    uchar uc_reserved[3];
+
+    hi_mac_s st_sync_smac;                          /* sync报文的smac       */
+    uint ui_sync_saip;                              /* sync报文的saip       */
+
+    hi_mac_s st_delay_req_smac;                     /* delay_req报文的smac       */
+    uint ui_delay_req_saip;                         /* delay_req报文的saip  */
+
+    hi_mac_s st_pdelay_req_smac;                    /* pdelay_req报文的smac       */
+    uint ui_pdelay_req_saip;                        /* pdelay_req报文的smac */
+    
+}hi_dp_1588_rx_messageinfo_s;
+

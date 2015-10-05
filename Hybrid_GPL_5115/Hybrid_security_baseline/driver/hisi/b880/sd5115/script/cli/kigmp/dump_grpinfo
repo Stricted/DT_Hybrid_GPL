@@ -1,0 +1,9 @@
+[settings]
+functionname=hi_kernel_mc_cmd_dump_group;  
+attributenum=0;
+attributeflag = 0 ;   //0:close 1:open
+
+[parameter]
+
+
+[help]

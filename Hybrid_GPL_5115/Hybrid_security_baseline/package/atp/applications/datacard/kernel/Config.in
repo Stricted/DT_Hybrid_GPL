@@ -1,0 +1,6 @@
+config BUILD_AT_KERNEL
+	bool "at kernel"
+	depends on BUILD_AT
+	default n
+	help
+	  Select support for datacard service about kernel

@@ -1,0 +1,37 @@
+# ATTENTION! This does not handle 'depends', just 'select'! 
+# See package/config/util.c write_make_deps()
+#
+config_b880_product: $(BASE_TARGETS) build_usbom
+toolchain_external_custom_uclibc: $(BASE_TARGETS) toolchain_external_uclibc toolchain_has_shadow_passwords
+toolchain_external_largefile: $(BASE_TARGETS) largefile
+toolchain_external_inet_ipv6: $(BASE_TARGETS) inet_ipv6
+toolchain_external_inet_rpc: $(BASE_TARGETS) inet_rpc
+toolchain_external_wchar: $(BASE_TARGETS) use_wchar
+toolchain_external_has_threads: $(BASE_TARGETS) toolchain_has_threads
+rootfs_device_creation_dynamic_udev: $(BASE_TARGETS) udev
+build_seclib: $(BASE_TARGETS) build_ssl
+build_cfgfile_encrypt_export: $(BASE_TARGETS) build_seclib
+build_cfm_key1_aes: $(BASE_TARGETS) build_minissl_aes
+build_cfgfile_encrypt_inflash: $(BASE_TARGETS) build_seclib
+build_cfm_key2_aes: $(BASE_TARGETS) build_minissl_aes
+build_cfgfile_encrypt_param: $(BASE_TARGETS) build_seclib
+build_cfm_key3_aes: $(BASE_TARGETS) build_minissl_aes
+build_libupnp: $(BASE_TARGETS) build_pthread
+build_busybox: $(BASE_TARGETS) build_libz build_ssl
+build_at: $(BASE_TARGETS) build_atserver build_atserversdk build_atcmd build_atcmdsdk build_atshared build_vopclient
+build_tr143_upload_tcp: $(BASE_TARGETS) build_tr143_upload
+build_tr143_download_tcp: $(BASE_TARGETS) build_tr143_download
+build_tr143_udpechoplus: $(BASE_TARGETS) build_tr143_udpecho
+build_tr111_part2: $(BASE_TARGETS) build_stunc
+build_cwmp_with_ssl: $(BASE_TARGETS) build_ssl
+build_ftp_upg: $(BASE_TARGETS) build_busybox build_busybox_atp_ftp
+build_http_upg: $(BASE_TARGETS) build_busybox build_busybox_atp_wget
+build_https_upg: $(BASE_TARGETS) build_busybox build_busybox_atp_wget build_busybox_atp_wget_https
+build_package_sign: $(BASE_TARGETS) build_seclib build_sign
+build_upg_key1_md5withrsa: $(BASE_TARGETS) build_minissl_rsa
+build_wancms: $(BASE_TARGETS) build_wanvlan
+build_dhcps: $(BASE_TARGETS) build_ipcheck
+build_arpsender: $(BASE_TARGETS) build_ipcheck
+build_dns_relay_accord_addr_family: $(BASE_TARGETS) build_dns_serverlist_v4first
+build_siproxyd: $(BASE_TARGETS) build_libosip
+build_sign: $(BASE_TARGETS) build_seclib

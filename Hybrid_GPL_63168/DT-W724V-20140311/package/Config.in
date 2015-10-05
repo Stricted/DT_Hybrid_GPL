@@ -1,0 +1,11 @@
+menu "ATP Package Selection"
+
+# ATP all applications
+source "package/atp/Config.in"
+source "package/makedevs/Config.in"
+source "package/uboot-tools/Config.in"
+
+config BUILD_TRACE_CODE_DEBUG
+	bool "support trace code for debug"
+	default n
+endmenu

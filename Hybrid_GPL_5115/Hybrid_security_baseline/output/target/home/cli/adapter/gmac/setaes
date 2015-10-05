@@ -1,0 +1,17 @@
+[settings]
+functionname = hi_adapter_cli_gmac_set_aes;
+attributenum=3;
+attributeflag = 1 ;
+
+[parameter]
+attribute=alias<gemport>  type<ushort>   range<0x0,0xfff>       default<1>;
+attribute=alias<enable>   type<uchar>    range<0x0,0x1>       default<0>;
+attribute=alias<res>      type<uchar>    range<0x0,0x0>       default<0>;
+
+[help]
+typedef struct
+{
+    hi_ushort16   us_gemport;
+    hi_uchar8     uc_enable;
+    hi_uchar8     uc_res;
+}hi_gmac_aes_s;

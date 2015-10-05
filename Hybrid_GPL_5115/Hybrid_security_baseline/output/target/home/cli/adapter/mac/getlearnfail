@@ -1,0 +1,36 @@
+[settings]
+functionname = hi_adapter_cli_lsw_mac_get_learn_fail;
+attributenum = 1;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<act>            type<uint>   range<0x0,0x9>                default<0>;
+
+[help]
+typedef struct
+{
+    hi_lsw_trans_act_e em_act;
+}hi_lsw_mac_learn_fail_s;
+
+/* 统一一个转发行为枚举,用于FLOW, SPECIAL PKT, L2, L3等有转发配置的相关模块，与SDK的动作保存一致*/
+typedef enum
+{
+    HI_LSW_TRANS_FWD_E = 0,
+    HI_LSW_TRANS_DROP_E,
+    HI_LSW_TRANS_TOCPU_E,
+    HI_LSW_TRANS_TOCPU_AND_FWD_E,        
+    HI_LSW_TRANS_TOPOINT_E,    
+    HI_LSW_TRANS_THRU_E,
+
+    HI_LSW_TRANS_ROUTE_NAT_E,
+    HI_LSW_TRANS_NAPT_E,    
+
+    HI_LSW_TRANS_TOCPU_AND_THRU_E,    
+    HI_LSW_TRANS_BC_E,    
+}hi_lsw_trans_act_e;
+
+
+
+
+
+

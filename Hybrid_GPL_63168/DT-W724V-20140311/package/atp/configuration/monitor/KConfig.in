@@ -1,0 +1,5 @@
+config ATP_CONSOLE
+    tristate "Support ATP Console Monitor"
+    help
+      kernel printk redirect to userspace
+    default n

@@ -1,0 +1,23 @@
+#!/bin/bash
+TOP_DIR=`pwd`
+
+find $TARGET_DIR -name CVS | xargs rm -rf
+find $TARGET_DIR -name .svn | xargs rm -rf
+find $TARGET_DIR -name .empty | xargs rm -rf
+rm -rf $TARGET_DIR/var
+
+FLASH_NAND_FIRST_BLOCK_WITH_CFERAM=$1
+# for support 4.12 NANDFLASH
+echo "Support nand flash, use jffs2 file system."
+
+if [ $FLASH_NAND_FIRST_BLOCK_WITH_CFERAM -eq 1 ] ; then
+    rm -rf $TARGET_DIR/cferam.000	
+else
+    cp $TARGET_DIR/../images/cferam.bin $TARGET_DIR/cferam.000
+fi
+
+chmod +w $TARGET_DIR/etc/fstab
+echo -e "mtd:data\t/data\tjffs2\tdefaults\t0\t0\n" >> $TARGET_DIR/etc/fstab
+
+
+

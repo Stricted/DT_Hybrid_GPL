@@ -1,0 +1,94 @@
+config BUILD_SSL
+	bool "ATP SSL"
+	help
+	  POSIX Access Control Lists, which are used to define more
+	  fine-grained discretionary access rights for files and
+	  directories.
+	  This package also provides libacl.
+	  
+if BUILD_SSL
+menu "ATP SSL Supported Selection"
+
+# ATP all applications
+choice
+	prompt "SSL stack choice"
+	default BUILD_POLARSSL
+	help
+	  Select the SSL stack you want to use.
+
+	config BUILD_POLARSSL
+		bool "Polar SSL"
+		depends on BUILD_SSL
+	config BUILD_OPENSSL
+		bool "Open SSL"
+		depends on BUILD_SSL
+endchoice
+config BUILD_MINISSL_X509
+		bool "Mini SSL X509"
+		default y
+		depends on BUILD_POLARSSL
+	config BUILD_MINISSL_RSA
+		bool "Mini SSL RSA"
+		default y
+		depends on BUILD_POLARSSL
+	config BUILD_MINISSL_TLS
+		bool "Mini SSL TLS"
+		default y
+		depends on BUILD_POLARSSL
+	config BUILD_MINISSL_DES3
+		bool "Mini SSL DES3"
+		default y
+		depends on BUILD_POLARSSL
+	config BUILD_MINISSL_SHA256
+		bool "Mini SSL SHA256"
+		default y
+		depends on BUILD_POLARSSL
+	config BUILD_MINISSL_SHA512
+		bool "Mini SSL SHA512"
+		default n
+		depends on BUILD_POLARSSL
+		
+	config BUILD_HTTP_SSL
+		bool "Mini http ssl"
+		default y
+		depends on BUILD_POLARSSL
+	config BUILD_MINISSL_AES
+		bool "Mini ssl AES"
+		default y
+		depends on BUILD_POLARSSL
+	config BUILD_MINISSL_DSA
+		bool "Mini ssl DSA"
+		default y
+		depends on BUILD_POLARSSL
+	config BUILD_MINISSL_RC4
+		bool "Mini ssl RC4"
+		default y
+		depends on BUILD_POLARSSL
+	config BUILD_MINISSL_HMAC
+		bool "Mini ssl HMAC"
+		default y
+		depends on BUILD_POLARSSL
+	config BUILD_MINISSL_EXTRA
+		bool "Mini ssl EXTRA"
+		default y
+		depends on BUILD_POLARSSL			
+	config BUILD_MINISSL_CLIENT
+		bool "Mini ssl client"
+		default y
+		depends on BUILD_POLARSSL
+	config BUILD_MINISSL_SERVER
+		bool "Mini ssl server"
+		default y
+		depends on BUILD_POLARSSL
+	config BUILD_MINISSL_NONBLOCKING
+		bool "Mini ssl nonblocking"
+		default y
+		depends on BUILD_POLARSSL
+	config BUILD_OPENSSL_O
+		bool "openssl_O work together with IPSEC"
+		default y
+		depends on BUILD_POLARSSL
+endmenu
+endif
+
+

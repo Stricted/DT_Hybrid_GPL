@@ -1,0 +1,21 @@
+[settings]
+functionname=hi_kernel_vif_cmdtype_traffic_set;  
+attributenum=5;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<ifname>       type<string>   range<0x0,32>           default<eth0>;
+attribute=alias<car_up_indx>  type<uchar>    range<0x0,0xFF>         default<0>;
+attribute=alias<car_dn_indx>  type<uchar>    range<0x0,0xFF>         default<0>;
+attribute=alias<resv>         type<uchar>    range<0x0,0xFF>         default<0>;
+attribute=alias<pq_dn_indx>   type<uchar>    range<0x0,0xFF>         default<0>;
+
+[help]
+typedef struct
+{
+    hi_uchar8 uc_ifname[HI_KERNEL_VIF_NAMELEN];
+    hi_uchar8 uc_car_up_indx;          /*流量调度模板索引,缺省0*/
+    hi_uchar8 uc_car_dn_indx;          /*流量调度模板索引,缺省0*/
+    hi_uchar8 uc_resv;
+    hi_uchar8 uc_pq_indx;              /*流量调度模板索引,缺省0*/
+}hi_kernel_vif_cmdtype_traffic_s;

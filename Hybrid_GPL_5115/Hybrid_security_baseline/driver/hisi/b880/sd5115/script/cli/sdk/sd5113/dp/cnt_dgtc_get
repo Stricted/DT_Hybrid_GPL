@@ -1,0 +1,41 @@
+[settings]
+functionname=0xF7002004;
+attributenum=15;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       			 type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000D1A>; /*È«¾ÖÄ£¿é*/
+attribute=alias<rxploam_cnt>             type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<bip_err_cnt>             type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rxploam_dio_cnt>         type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rxploam_err_dio_cnt>     type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rxploam_drop_cnt>        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<fec_ec_byte_cnt>         type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<fec_ec_cw_cnt>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<fec_uec_cw_cnt>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<fec_cw_cnt>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<fec_seconds_cnt>         type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<sn_req_cnt>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<range_req_cnt>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<time_syn_pre_spcnt>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<time_syn_int_spcnt>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+
+[help]
+typedef struct 
+{
+    uint    rxploam_cnt;         
+    uint    bip_err_cnt;         
+    uint    rxploam_dio_cnt;     
+    uint    rxploam_err_dio_cnt; 
+    uint    rxploam_drop_cnt;    
+    uint    fec_ec_byte_cnt;     
+    uint    fec_ec_cw_cnt;       
+    uint    fec_uec_cw_cnt;      
+    uint    fec_cw_cnt;          
+    uint    fec_seconds_cnt;     
+    uint    sn_req_cnt;          
+    uint    range_req_cnt;      
+    uint    time_syn_pre_spcnt;  
+    uint    time_syn_int_spcnt;  
+
+}hi_dp_logic_dgtc_cnt_s;

@@ -1,0 +1,36 @@
+[settings]
+functionname=hi_tsensor_temp_read;  
+attributenum=1;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<temp>          type<uint>      range<0x0,0xFFFFFFFF> 	default<0>;
+
+[help]
+
+typedef struct
+{
+    HI_SYSCTL_TEMP_E em_temp;                  /* 温度*/              
+}hi_tsenser_temp_s;
+
+
+/*温度*/
+typedef enum
+{
+    HI_SYSCTL_TEMP_UNDER_N20_E = 0x0,            /*低于 －20度*/                  
+    HI_SYSCTL_TEMP_N20_TO_0_E = 0x1,            /* －20度 到0度之间*/             
+    HI_SYSCTL_TEMP_20_TO_40_E = 0x2,             /* 20度 到 40度之间*/              
+    HI_SYSCTL_TEMP_0_TO_20_E = 0x3,              /* 0度 到 20度之间*/             
+    HI_SYSCTL_TEMP_90_TO_95_E = 0x4,             /* 90度 到 95度之间*/             
+    HI_SYSCTL_TEMP_80_TO_90_E = 0x5,             /* 80度 到 90度之间*/             
+    HI_SYSCTL_TEMP_40_TO_60_E = 0x6,             /* 40度 到60度之间*/             
+    HI_SYSCTL_TEMP_60_TO_80_E = 0x7,             /* 60度 到 80度之间*/             
+    HI_SYSCTL_TEMP_OVER_145_E = 0x8,             /* 高于145度*/                
+    HI_SYSCTL_TEMP_125_TO_145_E = 0x9,           /* 125度 到 145度之间*/               
+    HI_SYSCTL_TEMP_115_TO_120_E = 0xa,            /* 115度 到 120度之间*/           
+    HI_SYSCTL_TEMP_120_TO_125_E = 0xb,           /* 120度 到 125度之间*/          
+    HI_SYSCTL_TEMP_95_TO_100_E = 0xc,             /* 95度 到 100度之间*/          
+    HI_SYSCTL_TEMP_100_TO_105_E = 0xd,             /* 100度 到 105度之间*/          
+    HI_SYSCTL_TEMP_110_TO_115_E = 0xe,             /* 110度 到 115度之间*/          
+    HI_SYSCTL_TEMP_105_TO_110_E = 0xf,             /* 105度 到 110度之间*/          
+} HI_SYSCTL_TEMP_E;

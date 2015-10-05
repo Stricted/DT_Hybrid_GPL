@@ -1,0 +1,678 @@
+Archive member included because of file (symbol)
+
+/home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(options.o)
+                              /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o (ATP_OPTION_Get)
+/home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(dhcpcstack.o)
+                              /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/clientpacket.o (ATP_DHCP_GetPacket)
+
+Allocating common symbols
+Common symbol       size              file
+
+g_stOption121       0xc00             /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/script.o
+g_stEbuf            0x80              /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+
+Discarded input sections
+
+ .reginfo       0x0000000000000000       0x18 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .reginfo       0x0000000000000000       0x18 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .reginfo       0x0000000000000000       0x18 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+ .reginfo       0x0000000000000000       0x18 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/clientpacket.o
+ .reginfo       0x0000000000000000       0x18 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/script.o
+ .reginfo       0x0000000000000000       0x18 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(options.o)
+ .reginfo       0x0000000000000000       0x18 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(dhcpcstack.o)
+ .reginfo       0x0000000000000000       0x18 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .reginfo       0x0000000000000000       0x18 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+LOAD /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+LOAD /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+LOAD /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/clientpacket.o
+LOAD /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/script.o
+LOAD /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgplutil.so
+LOAD /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a
+LOAD /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libmsgapi.so
+LOAD /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libbhalapi.so
+LOAD /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libcfmapi.so
+LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a
+LOAD /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgcc_s.so
+LOAD /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/libc.so
+START GROUP
+LOAD /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libc.so.0
+LOAD /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/uclibc_nonshared.a
+LOAD /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/ld-uClibc.so.0
+END GROUP
+LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a
+LOAD /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgcc_s.so
+LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+LOAD /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+                0x0000000000400000                PROVIDE (__executable_start, 0x400000)
+                0x0000000000400114                . = (0x400000 + SIZEOF_HEADERS)
+
+.interp         0x0000000000400114       0x14
+ *(.interp)
+ .interp        0x0000000000400114       0x14 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.reginfo        0x0000000000400128       0x18
+ *(.reginfo)
+ .reginfo       0x0000000000400128       0x18 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.dynamic        0x0000000000400140      0x100
+ *(.dynamic)
+ .dynamic       0x0000000000400140      0x100 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x0000000000400140                _DYNAMIC
+
+.hash           0x0000000000400240      0x370
+ *(.hash)
+ .hash          0x0000000000400240      0x370 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym         0x00000000004005b0      0x790
+ *(.dynsym)
+ .dynsym        0x00000000004005b0      0x790 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.dynstr         0x0000000000400d40      0x55c
+ *(.dynstr)
+ .dynstr        0x0000000000400d40      0x55c /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.gnu.version    0x000000000040129c       0xf2
+ *(.gnu.version)
+ .gnu.version   0x000000000040129c       0xf2 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.gnu.version_d  0x0000000000401390        0x0 load address 0x000000000040138e
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000000000000        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.gnu.version_r  0x0000000000401390       0x20
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000000401390       0x20 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.rel.dyn        0x00000000004013b0        0x0
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ *(.rel.dyn)
+ .rel.dyn       0x0000000000000000        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.bss       0x0000000000000000        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x00000000004013b0                PROVIDE (__rel_iplt_start, .)
+ *(.rel.iplt)
+                0x00000000004013b0                PROVIDE (__rel_iplt_end, .)
+                0x00000000004013b0                PROVIDE (__rela_iplt_start, .)
+                0x00000000004013b0                PROVIDE (__rela_iplt_end, .)
+
+.rela.dyn       0x00000000004013b0        0x0
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+                0x00000000004013b0                PROVIDE (__rel_iplt_start, .)
+                0x00000000004013b0                PROVIDE (__rel_iplt_end, .)
+                0x00000000004013b0                PROVIDE (__rela_iplt_start, .)
+ *(.rela.iplt)
+                0x00000000004013b0                PROVIDE (__rela_iplt_end, .)
+
+.rel.plt        0x00000000004013b0        0x0
+ *(.rel.plt)
+ .rel.plt       0x0000000000000000        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.rela.plt
+ *(.rela.plt)
+
+.init           0x00000000004013b0       0x6c
+ *(.init)
+ .init          0x00000000004013b0       0x1c /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x00000000004013b0                _init
+ .init          0x00000000004013cc       0x24 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .init          0x00000000004013f0       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .init          0x0000000000401410        0xc /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.plt            0x000000000040141c        0x0
+ *(.plt)
+ .plt           0x0000000000000000        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000401420     0x70d0
+                0x0000000000401420                _ftext = .
+ *(.text.unlikely .text.*_unlikely)
+ .text.unlikely
+                0x0000000000401420     0x13e4 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/script.o
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ .text.startup  0x0000000000402804     0x1864 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+                0x0000000000402804                main
+ *(.text.hot .text.hot.*)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ *fill*         0x0000000000404068        0x8 00000000
+ .text          0x0000000000404070       0x60 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x0000000000404070                __start
+ .text          0x00000000004040d0        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .text          0x00000000004040d0      0x130 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .text          0x0000000000404200     0x19d0 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+                0x00000000004053f8                ValidateNumber
+                0x000000000040549c                CheckNum
+                0x0000000000405518                ValidateIpAddress
+                0x000000000040568c                ValidateSubnetMask
+ .text          0x0000000000405bd0     0x1000 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/clientpacket.o
+                0x0000000000405e2c                DhcpcGetGreIndex
+                0x0000000000405f40                DhcpcRandomXid
+                0x000000000040601c                DhcpcCreateOption125
+                0x0000000000406264                DhcpcSendDiscover
+                0x00000000004063d8                DhcpcSendSelecting
+                0x000000000040650c                DhcpcSendRenew
+                0x0000000000406644                DhcpcSendRelease
+                0x000000000040672c                DhcpcGetKrnlPacket
+                0x0000000000406840                DhcpcGetRawPacket
+                0x0000000000406854                DhcpcMarkForQos
+                0x00000000004068b0                DhcpcListenSocket
+                0x0000000000406a14                DhcpcRawSocket
+                0x0000000000406acc                DhcpcSendDecline
+ .text          0x0000000000406bd0      0xc90 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/script.o
+                0x0000000000406bd0                DhcpClientGetMaskLen
+                0x00000000004077dc                DhcpClientRunScript
+ .text          0x0000000000407860      0x400 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(options.o)
+                0x00000000004078a4                ATP_OPTION_Get
+                0x00000000004079b0                ATP_OPTION_AddString
+                0x0000000000407a6c                ATP_OPTION_AddInteger
+                0x0000000000407bbc                ATP_OPTION_Parse
+                0x0000000000407c54                ATP_DHCPC_GetVersion
+ .text          0x0000000000407c60      0x840 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(dhcpcstack.o)
+                0x000000000040811c                ATP_DHCP_GetPacket
+                0x00000000004081c8                ATP_DHCP_SendPacket
+                0x0000000000408408                ATP_DHCP_InitPacketHeader
+ .text          0x00000000004084a0       0x50 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .text          0x00000000004084f0        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ *(.gnu.warning)
+ *(.mips16.fn.*)
+ *(.mips16.call.*)
+
+.MIPS.stubs     0x00000000004084f0      0x4c0
+ .MIPS.stubs    0x00000000004084f0      0x4c0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x00000000004084f0                ATP_MSG_SimpleBuilder
+                0x0000000000408500                bind
+                0x0000000000408510                strtok_r
+                0x0000000000408520                ATP_MSG_SendSimpleMsg
+                0x0000000000408530                __errno_location
+                0x0000000000408540                open
+                0x0000000000408550                __ctype_b_loc
+                0x0000000000408560                system
+                0x0000000000408570                usleep
+                0x0000000000408580                memcpy
+                0x0000000000408590                connect
+                0x00000000004085a0                sleep
+                0x00000000004085b0                send
+                0x00000000004085c0                sysinfo
+                0x00000000004085d0                ATP_MSG_SendMsgData
+                0x00000000004085e0                malloc
+                0x00000000004085f0                strncmp
+                0x0000000000408600                __uClibc_main
+                0x0000000000408610                ioctl
+                0x0000000000408620                recv
+                0x0000000000408630                strlen
+                0x0000000000408640                if_indextoname
+                0x0000000000408650                sendto
+                0x0000000000408660                snprintf
+                0x0000000000408670                ATP_SYS_GetInfo
+                0x0000000000408680                read
+                0x0000000000408690                select
+                0x00000000004086a0                access
+                0x00000000004086b0                getpid
+                0x00000000004086c0                fclose
+                0x00000000004086d0                setsockopt
+                0x00000000004086e0                fread
+                0x00000000004086f0                fopen
+                0x0000000000408700                time
+                0x0000000000408710                write
+                0x0000000000408720                close
+                0x0000000000408730                fputc
+                0x0000000000408740                fgets
+                0x0000000000408750                sscanf
+                0x0000000000408760                strncpy
+                0x0000000000408770                socketpair
+                0x0000000000408780                fputs
+                0x0000000000408790                ATP_UTIL_ForkProcess
+                0x00000000004087a0                unlink
+                0x00000000004087b0                memset
+                0x00000000004087c0                inet_ntoa
+                0x00000000004087d0                fprintf
+                0x00000000004087e0                ATP_DBInit
+                0x00000000004087f0                inet_addr
+                0x0000000000408800                strcspn
+                0x0000000000408810                memcmp
+                0x0000000000408820                socket
+                0x0000000000408830                fseek
+                0x0000000000408840                ATP_MSG_Recv
+                0x0000000000408850                rand
+                0x0000000000408860                exit
+                0x0000000000408870                fork
+                0x0000000000408880                strstr
+                0x0000000000408890                strcmp
+                0x00000000004088a0                waitpid
+                0x00000000004088b0                ATP_DBSetPara
+                0x00000000004088c0                ftell
+                0x00000000004088d0                free
+                0x00000000004088e0                atoi
+                0x00000000004088f0                ATP_NET_GetBaseMacAddress
+                0x0000000000408900                alarm
+                0x0000000000408910                strerror
+                0x0000000000408920                srand
+                0x0000000000408930                printf
+                0x0000000000408940                getopt_long
+                0x0000000000408950                strdup
+                0x0000000000408960                puts
+                0x0000000000408970                ATP_MSG_Init
+                0x0000000000408980                signal
+                0x0000000000408990                ATP_MSG_Send
+
+.fini           0x00000000004089b0       0x4c
+ *(.fini)
+ .fini          0x00000000004089b0       0x1c /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x00000000004089b0                _fini
+ .fini          0x00000000004089cc       0x24 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .fini          0x00000000004089f0        0xc /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+                0x00000000004089fc                PROVIDE (__etext, .)
+                0x00000000004089fc                PROVIDE (_etext, .)
+                0x00000000004089fc                PROVIDE (etext, .)
+
+.rodata         0x0000000000408a00      0xf08
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x0000000000408a00      0x6a8 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+                                        0x6cc (size before relaxing)
+ *fill*         0x00000000004090a8        0x8 00
+ .rodata        0x00000000004090b0      0x1a0 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+ .rodata.str1.4
+                0x0000000000409250       0x5e /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/clientpacket.o
+                                         0x6c (size before relaxing)
+ *fill*         0x00000000004092ae        0x2 00
+ .rodata        0x00000000004092b0       0x40 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/clientpacket.o
+ .rodata.str1.4
+                0x00000000004092f0      0x350 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/script.o
+                                        0x3c8 (size before relaxing)
+ .rodata        0x0000000000409640      0x120 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/script.o
+ .rodata.str1.4
+                0x0000000000409760      0x149 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(options.o)
+                                        0x170 (size before relaxing)
+ *fill*         0x00000000004098a9        0x7 00
+ .rodata        0x00000000004098b0       0x30 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(options.o)
+                0x00000000004098b0                g_alOptionLengths
+ .rodata.str1.4
+                0x00000000004098e0       0x28 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(dhcpcstack.o)
+
+.rodata1
+ *(.rodata1)
+
+.sdata2
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+
+.sbss2
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+
+.eh_frame_hdr   0x0000000000409908        0x0
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x0000000000000000        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.eh_frame       0x0000000000409908        0x4
+ *(.eh_frame)
+ .eh_frame      0x0000000000409908        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .eh_frame      0x0000000000409908        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x000000000040990c                . = (ALIGN (0x10000) - ((0x10000 - .) & 0xffff))
+                0x000000000041a000                . = DATA_SEGMENT_ALIGN (0x10000, 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x000000000041a000        0x0
+                0x000000000041a000                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x000000000041a000                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x000000000041a000        0x0
+                0x000000000041a000                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x000000000041a000                PROVIDE (__init_array_end, .)
+
+.fini_array     0x000000000041a000        0x0
+                0x000000000041a000                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array)
+                0x000000000041a000                PROVIDE (__fini_array_end, .)
+
+.ctors          0x000000000041a000        0x8
+ *crtbegin.o(.ctors)
+ .ctors         0x000000000041a000        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ .ctors         0x000000000041a004        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+
+.dtors          0x000000000041a008        0x8
+ *crtbegin.o(.dtors)
+ .dtors         0x000000000041a008        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ .dtors         0x000000000041a00c        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+                0x000000000041a00c                __DTOR_END__
+
+.jcr            0x000000000041a010        0x4
+ *(.jcr)
+ .jcr           0x000000000041a010        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .jcr           0x000000000041a010        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+
+.data.rel.ro    0x000000000041a014      0x118
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ .data.rel.ro.local
+                0x000000000041a014      0x118 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(options.o)
+                0x000000000041a014                g_astOptions
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+                0x000000000041a12c                . = DATA_SEGMENT_RELRO_END (., 0x0)
+
+.data           0x000000000041a130      0x130
+                0x000000000041a130                _fdata = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000000000041a130       0x10 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x000000000041a130                data_start
+                0x000000000041a130                __data_start
+ .data          0x000000000041a140        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .data          0x000000000041a140        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .data          0x000000000041a140       0x10 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+ .data.rel.local
+                0x000000000041a150      0x108 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+                0x000000000041a150                g_stClientConfig
+ *fill*         0x000000000041a258        0x8 00
+ .data          0x000000000041a260        0x0 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/clientpacket.o
+ .data          0x000000000041a260        0x0 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/script.o
+ .data          0x000000000041a260        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(options.o)
+ .data          0x000000000041a260        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(dhcpcstack.o)
+ .data          0x000000000041a260        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .data          0x000000000041a260        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.rld_map        0x000000000041a260        0x4
+ .rld_map       0x000000000041a260        0x4 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x000000000041a260                __RLD_MAP
+
+.data1
+ *(.data1)
+
+.got.plt        0x000000000041a264        0x0
+ *(.got.plt)
+ .got.plt       0x0000000000000000        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x000000000041a264                . = .
+                0x0000000000422260                _gp = (ALIGN (0x10) + 0x7ff0)
+
+.got            0x000000000041a270      0x1cc
+ *(.got)
+ .got           0x000000000041a270      0x1cc /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x000000000041a270                _GLOBAL_OFFSET_TABLE_
+
+.sdata          0x000000000041a43c        0x4
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x000000000041a43c        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+                0x000000000041a43c                __dso_handle
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+                0x000000000041a440                _edata = .
+                0x000000000041a440                PROVIDE (edata, .)
+                0x000000000041a440                __bss_start = .
+                0x000000000041a440                _fbss = .
+
+.sbss
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ *(.scommon)
+
+.bss            0x000000000041a440     0x17e0
+ *(.dynbss)
+ .dynbss        0x0000000000000000        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000000000041a440        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .bss           0x000000000041a440        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .bss           0x000000000041a440       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .bss           0x000000000041a460      0x330 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+                0x000000000041a460                g_lSwapFlags
+                0x000000000041a464                g_acSittingPath
+                0x000000000041a4a4                g_acVendorId
+ .bss           0x000000000041a790       0x10 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/clientpacket.o
+ .bss           0x000000000041a7a0      0x7f0 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/script.o
+ .bss           0x000000000041af90        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(options.o)
+ .bss           0x000000000041af90       0x10 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(dhcpcstack.o)
+                0x000000000041af90                g_ulNfMarkValue
+ .bss           0x000000000041afa0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .bss           0x000000000041afa0        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ *(COMMON)
+ COMMON         0x000000000041afa0       0x80 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+                0x000000000041afa0                g_stEbuf
+ COMMON         0x000000000041b020      0xc00 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/script.o
+                0x000000000041b020                g_stOption121
+                0x000000000041bc20                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x000000000041bc20                . = ALIGN (0x4)
+                0x000000000041bc20                . = ALIGN (0x4)
+                0x000000000041bc20                _end = .
+                0x000000000041bc20                PROVIDE (end, .)
+                0x000000000041bc20                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.pdr            0x0000000000000000      0x780
+ .pdr           0x0000000000000000       0x20 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .pdr           0x0000000000000020       0x40 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .pdr           0x0000000000000060        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .pdr           0x0000000000000060      0x280 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+ .pdr           0x00000000000002e0      0x1e0 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/clientpacket.o
+ .pdr           0x00000000000004c0       0xc0 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/script.o
+ .pdr           0x0000000000000580       0xc0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(options.o)
+ .pdr           0x0000000000000640      0x100 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(dhcpcstack.o)
+ .pdr           0x0000000000000740        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .pdr           0x0000000000000740       0x40 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.comment        0x0000000000000000       0x30
+ *(.comment)
+ .comment       0x0000000000000000       0x11 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000011       0x1f /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+                                         0x20 (size before relaxing)
+ .comment       0x0000000000000000       0x20 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+ .comment       0x0000000000000000       0x20 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/clientpacket.o
+ .comment       0x0000000000000000       0x20 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/script.o
+ .comment       0x0000000000000000       0x20 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(options.o)
+ .comment       0x0000000000000000       0x20 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(dhcpcstack.o)
+ .comment       0x0000000000000000       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .comment       0x0000000000000000       0x12 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo .zdebug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames .zdebug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges .zdebug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames .zdebug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.* .zdebug_info)
+
+.debug_abbrev
+ *(.debug_abbrev .zdebug_abbrev)
+
+.debug_line
+ *(.debug_line .zdebug_line)
+
+.debug_frame
+ *(.debug_frame .zdebug_frame)
+
+.debug_str
+ *(.debug_str .zdebug_str)
+
+.debug_loc
+ *(.debug_loc .zdebug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo .zdebug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames .zdebug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames .zdebug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames .zdebug_typenames)
+
+.debug_varnames
+ *(.debug_varnames .zdebug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes .zdebug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges .zdebug_ranges)
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ *(.gnu.attributes)
+ .gnu.attributes
+                0x0000000000000000       0x10 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .gnu.attributes
+                0x0000000000000010       0x10 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+ .gnu.attributes
+                0x0000000000000020       0x10 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/clientpacket.o
+ .gnu.attributes
+                0x0000000000000030       0x10 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/script.o
+ .gnu.attributes
+                0x0000000000000040       0x10 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(options.o)
+ .gnu.attributes
+                0x0000000000000050       0x10 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(dhcpcstack.o)
+ .gnu.attributes
+                0x0000000000000060       0x10 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+
+.gptab.sdata
+ *(.gptab.data)
+ *(.gptab.sdata)
+
+.gptab.sbss
+ *(.gptab.bss)
+ *(.gptab.sbss)
+
+.mdebug.abi32   0x000000000041bc20        0x0
+ *(.mdebug.abi32)
+ .mdebug.abi32  0x000000000041bc20        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .mdebug.abi32  0x000000000041bc20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .mdebug.abi32  0x000000000041bc20        0x0 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc.o
+ .mdebug.abi32  0x000000000041bc20        0x0 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/clientpacket.o
+ .mdebug.abi32  0x000000000041bc20        0x0 /home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/script.o
+ .mdebug.abi32  0x000000000041bc20        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(options.o)
+ .mdebug.abi32  0x000000000041bc20        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libdhcpccore.a(dhcpcstack.o)
+ .mdebug.abi32  0x000000000041bc20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .mdebug.abi32  0x000000000041bc20        0x0 /home/z00250609/724/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.mdebug.abiN32
+ *(.mdebug.abiN32)
+
+.mdebug.abi64
+ *(.mdebug.abi64)
+
+.mdebug.abiO64
+ *(.mdebug.abiO64)
+
+.mdebug.eabi32
+ *(.mdebug.eabi32)
+
+.mdebug.eabi64
+ *(.mdebug.eabi64)
+
+.gcc_compiled_long32
+ *(.gcc_compiled_long32)
+
+.gcc_compiled_long64
+ *(.gcc_compiled_long64)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(/home/z00250609/724/DT-W724V-20140311/output/package/atp/network/dhcpc/service/main/dhcpc elf32-tradbigmips)

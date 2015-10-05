@@ -1,0 +1,1 @@
+vpath="api/modem_1/mmgmm"E5element="mm_state|mm_idle_substate|gmm_state|gmm_substate"vpath="api/modem_1/cgreg"E5element="rac"

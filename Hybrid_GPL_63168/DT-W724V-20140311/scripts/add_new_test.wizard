@@ -1,0 +1,111 @@
+#!/bin/sh
+
+echo "**** Autotools Add New Test Wizard ****"
+echo " This script will generate files to add new"
+echo " test codes to ATP."
+echo
+
+# Usage
+# $1 - Feature path
+# $2 - Feature name
+
+mkdir -p $1/test
+
+upcase_module=`echo ${2} | tr '[:lower:]' '[:upper:]'`
+
+# Generate Makefile for the test module
+touch $1/test/Makefile
+cat << EOF > $1/test/Makefile
+################### depend objects
+OBJS = $2test_misc.o $2test_main.o
+
+#
+# CFLAGS
+#
+CFLAGS +=
+
+#
+# CPPFLAGS
+#
+CPPFLAGS +=
+
+#
+# LIBS
+#
+LIBS += -lstdc++ -lAutoStarDT_Linux -lDTCenter_Msg_Client -lDTCenter_Msg_Server -lDTCenter_Msg_Server_VOS -lgcov -lpthread
+
+# include the rule.mak
+include \$(TOPDIR)/package/atp/rule.mak
+
+EOF
+
+# Generate test_main.cpp for the test module
+cat << EOF > $1/test/$2test_main.cpp
+#include "llt_AutoStarUT.h"
+#include "gtest/gtest.h"
+#include <iostream>
+
+using namespace std;
+using namespace testing;
+
+int main(int argc,char **argv)
+{
+    int ret = Init_UT(argc, argv, true);
+    std::cout<<endl;
+    return ret;
+}
+
+EOF
+
+#Generate test_misc.cpp for the test module
+cat << EOF > $1/test/$2test_misc.cpp
+#include "llt_AutoStarUT.h"
+#include "gtest/gtest.h"
+#include <iostream>
+#include "atptypes.h"
+
+using namespace std;
+using namespace testing;
+
+class ${upcase_module}_MISC : public Test
+{     
+protected:
+    static void SetUpTestCase()
+    {
+        
+    }
+
+    static void TearDownTestCase()
+    {
+
+    }
+
+    void SetUp()
+    { 
+        const TestInfo* test_info = UnitTest::GetInstance()->current_test_info();
+        printf("\nrunning test %s \n",test_info->name());
+    }
+
+    void TearDown()
+    { 
+        const TestInfo* test_info = UnitTest::GetInstance()->current_test_info();
+
+        printf("\nstop    test %s \n",test_info->name());
+    }    
+
+};
+
+//使用宏TEST_F，第一个参数为测试套的名字，第二个参数为测试用例名。
+TEST_F(${upcase_module}_MISC, test_demo)
+{
+    int val;
+
+    val = 1 + 2;
+    EXPECT_EQ(3, val);  //使用gtest提供的断言宏
+    EXPECT_NE(4, val);  //使用gtest提供的断言宏
+}
+
+
+EOF
+
+echo "Generate succeeded."

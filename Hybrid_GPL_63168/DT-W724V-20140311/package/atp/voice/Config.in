@@ -1,0 +1,6 @@
+menu "Voice Services"
+	source "package/atp/voice/netpb/Config.in"
+	source "package/atp/voice/rss/Config.in"
+	source "package/atp/voice/email/Config.in"
+	source "package/atp/voice/voiper/Config.in"
+endmenu

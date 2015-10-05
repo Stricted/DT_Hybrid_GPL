@@ -1,0 +1,38 @@
+config BUILD_RADVD
+	bool "RADVD"
+        default n
+	help
+	  Router Advertisement Daemon
+	depends on BUILD_IPV6
+	  
+if BUILD_RADVD
+menu "ATP Radvd Supported Selection"
+
+config BUILD_IPV6_ULA
+    bool "IPV6_ULA"
+	    default n
+    depends on BUILD_RADVD
+
+config BUILD_RADVD_OPTION_RDNSS
+    bool "IPV6 RA SUPPORT DNS"
+	    default n
+	 help
+	  Router Advertisement Include dns
+    depends on BUILD_RADVD
+	
+config BUILD_RADVD_ULA_PREFIX_FC
+	bool "ULA support fc prefix  "
+		default n
+	depends on BUILD_RADVD
+	help
+	  Support ULA fc prefix
+    
+config BUILD_W724V_RA_CONFIG
+    bool "DT W724v RA CONFIG"
+	    default y
+    depends on BUILD_RADVD
+	
+endmenu
+endif
+
+

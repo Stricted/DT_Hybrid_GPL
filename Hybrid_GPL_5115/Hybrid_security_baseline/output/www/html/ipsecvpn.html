@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link type="text/css" rel="stylesheet" href="../css/main.css" />
+        <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+        <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+        <script type="text/javascript" src="../js/refresh.js"></script>
+        <script type="text/javascript" src="../js/aes128.js"></script>
+        <script type="text/javascript" src="../js/ipsecvpn.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <div id="all_content" class="body_bg">
+            <div id="wrapper" class="wrapper_dim">
+                <div class="wrapper_dim wrapper_filter">
+                    <div id="header" class="header"></div>
+                    <div class="content">
+                        <div class="main_left">
+                            <div id="settings_menu"></div>
+                        </div>
+                        <div class="content_right">
+                            <div class="maintitle">
+                                <h1>
+                                <script type="text/javascript">dw(ipsecvpn_label_ipsecvpn);</script>
+                                </h1>
+                            </div>
+                            <div class="main_content">
+                                <div>
+                                    <table id="vpn_show">
+                                        <tr>
+                                            <th>
+                                                <script type="text/javascript">dw(firewall_label_select);</script>
+                                            </th>
+                                            <th>
+                                                <script type="text/javascript">dw(set_ipvpn_connection);</script>
+                                            </th>
+                                            <th>
+                                                <script type="text/javascript">dw(set_ipvpn_remote_ip);</script>
+                                            </th>
+                                            <th>
+                                                <script type="text/javascript">dw(firewall_label_protocol);</script>
+                                            </th>
+                                            <th>
+                                                <script type="text/javascript">dw(common_enable);</script>
+                                            </th>
+                                            <th>
+                                                <script type="text/javascript">dw(set_ipvpn_key);</script>
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="apply_button">
+                                    <!--footer_btn-->
+                                    <script type="text/javascript">
+                                        create_button(common_add,"ipvpn_add_btn");
+                                        document.write("<span class='button_space'></span>");
+                                        create_button(common_edit,"ipvpn_edit_btn");
+                                        document.write("<span class='button_space'></span>");
+                                        create_button(common_delete,"ipvpn_del_btn");
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="footer" class="footer"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+include driver/component/*/package.mk

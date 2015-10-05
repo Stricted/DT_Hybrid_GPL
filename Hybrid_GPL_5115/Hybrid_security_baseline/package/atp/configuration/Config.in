@@ -1,0 +1,47 @@
+menu "Configuration Services"
+
+menu "ATP DATAMODEL TYPE"
+choice
+	prompt "Data Model selection"
+	default BUILD_TR098
+
+config BUILD_TR098
+	bool "TR098 data model"
+	help
+		generate atp html.	
+
+config BUILD_TR181
+	bool "TR181 data model"
+	help
+		generate bt html.
+
+endchoice
+
+config ATP_DATA_MODEL_NAME_PREFIX_D
+	string "Data Model name prefix"
+	default "InternetGatewayDevice" if BUILD_TR098
+	default "Device" if BUILD_TR098
+endmenu
+
+source "package/atp/configuration/mic/main/Config.in"
+source "package/atp/configuration/datamodel/Config.in"
+source "package/atp/configuration/default/Config.in"
+source "package/atp/configuration/sysinfo/Config.in"
+source "package/atp/configuration/service/Config.in"
+source "package/atp/configuration/tr111/Config.in"
+source "package/atp/configuration/log/Config.in"
+source "package/atp/configuration/cwmp/service/main/Config.in"
+source "package/atp/configuration/web/Config.in"
+source "package/atp/configuration/cli/service/main/Config.in"
+source "package/atp/configuration/telnetd/Config.in"
+source "package/atp/configuration/upg/Config.in"
+source "package/atp/configuration/upnp/Config.in"
+source "package/atp/configuration/sshd/Config.in"
+source "package/atp/configuration/ipping/Config.in"
+source "package/atp/configuration/traceroute/Config.in"
+source "package/atp/configuration/atpget/Config.in"
+source "package/atp/configuration/userintf/Config.in"
+source "package/atp/configuration/debug/Config.in"
+source "package/atp/configuration/syscfg/Config.in"
+source "package/atp/configuration/ltecmd/service/main/Config.in"
+endmenu

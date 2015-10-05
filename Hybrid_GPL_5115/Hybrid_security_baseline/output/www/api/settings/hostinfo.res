@@ -1,0 +1,1 @@
+vpath="InternetGatewayDevice.LANDevice.1.LANHostConfigManagement.IPv6LANHostInfo"E5element="HostIPv6Address"ATPelement="HostIPv6Address"

@@ -1,0 +1,6 @@
+source "package/atp/libraries/Config.in"
+source "package/atp/applications/Config.in"
+source "package/atp/configuration/Config.in"
+source "package/atp/network/Config.in"
+source "package/atp/voice/Config.in"
+source "package/atp/hosttool/package/Config.in"

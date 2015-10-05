@@ -1,0 +1,17 @@
+[settings]
+commandtype=0xF8005842;
+attributenum=3;
+displayattribute = 1 ;
+
+[parameter]
+attribute=alias<fid>      type<ushort>    range<0x0,0xFFFF>      default<0>;
+attribute=alias<pir>      type<uchar>     range<0x0,0x7>         default<0>;
+attribute=alias<res>      type<uchar>     range<0x0,0x0>         default<0>;
+
+[help]
+typedef struct
+{
+    hi_uchar8     uc_fid;
+    hi_uchar8     uc_pri;
+    hi_ushort16   us_res;
+}hi_lsw_flow_pri_s;

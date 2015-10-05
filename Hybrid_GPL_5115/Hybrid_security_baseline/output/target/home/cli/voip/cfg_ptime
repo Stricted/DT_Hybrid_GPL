@@ -1,0 +1,14 @@
+[settings]
+functionname=hi_voip_cli_cfgrtpptime;  
+attributenum=2;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chanid>     type<uint>   range<0,0xFFFFFFFF>     default<0>     ; /*通道号*/
+attribute=alias<ptime>      type<uint>   range<0,0xFFFFFFFF>     default<10>    ; /*配置的值：10，20，30，60*/
+
+
+[help]
+usage: cfg_ptime               ; 配置打包时长  
+       cfg_ptime -v chanid 2   ; 通道号2
+       cfg_ptime -v ptime 20   ; 打包时长20，只能配置10，20，30，60

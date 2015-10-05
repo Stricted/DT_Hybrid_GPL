@@ -1,0 +1,340 @@
+<?xml version="1.0" ?>
+<InternetGatewayDeviceConfig>
+<InternetGatewayDevice>
+<DeviceConfig X_Version="HG257TDEcfgflv100" PersistentData=""/>
+<DeviceInfo ProvisioningCode="">
+<X_ServiceManage TelnetEnable="1" TelnetPort="23"/>
+</DeviceInfo>
+<ManagementServer EnableCWMP="1" URL="http://192.168.1.112:37215" Username="hgw" Password="hgw" PeriodicInformEnable="1" PeriodicInformInterval="7200" ConnectionRequestUsername="acs" ConnectionRequestPassword="acs" X_SSLCertEnable="0" ManageableDeviceNotificationLimit="0" UDPConnectionRequestAddressNotificationLimit="0" STUNEnable="0" STUNServerAddress="" STUNServerPort="3478" STUNUsername="handy" STUNPassword="handy" STUNMaximumKeepAlivePeriod="90" STUNMinimumKeepAlivePeriod="30" X_ConnReqPort="7547">
+</ManagementServer>
+<Time Enable="0" NTPServer1="" NTPServer2="" NTPServer3="" NTPServer4="" NTPServer5="" LocalTimeZoneName="CST-8" X_Label="-1" X_RefreshInterval="86400"/>
+<UserInterface>
+<X_Web Timeout="5">
+<UserInfo NumberOfInstances="2">
+<UserInfoInstance InstanceID="1" Username="admin" Userpassword="8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"/>
+<UserInfoInstance InstanceID="2" Username="user" Userpassword="04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb"/>
+</UserInfo>
+</X_Web>
+<X_Cli>
+<UserInfo NumberOfInstances="2">
+<UserInfoInstance InstanceID="1" Username="admin" Userpassword="admin" Userlevel="0"/>
+<UserInfoInstance InstanceID="2" Username="user" Userpassword="user" Userlevel="1"/>
+</UserInfo>
+</X_Cli>
+</UserInterface>
+<X_SyslogConfig Enable="0" Level="Debug" DisplayLevel="Error" LogServerEnable="0" MainServer="" MainServerPort="514" MinorServer="" MinorServerPort="514"/>
+<TraceRouteDiagnostics>
+</TraceRouteDiagnostics>
+<X_WiFi>
+<Radio NumberOfInstances="1">
+<ObjExtention MaxInstanceNum="1"/>
+<RadioInstance InstanceID="1" Enable="1" OperatingFrequencyBand="2.4GHz"/>
+</Radio>
+</X_WiFi>
+<LANDevice NumberOfInstances="1">
+<ObjExtention MaxInstanceNum="2"/>
+<LANDeviceInstance InstanceID="1">
+<LANHostConfigManagement DHCPServerEnable="1" DHCPServerConfigurable="1" MinAddress="192.168.1.2" MaxAddress="192.168.1.254" ReservedAddresses="" DNSServers="192.168.1.1,192.168.1.1" DomainName="" IPRouters="" DHCPLeaseTime="86400" UseAllocatedWAN="Normal" AssociatedConnection="" PassthroughLease="60" PassthroughMACAddress="">
+<X_SLAAC RouterAdvertisementEnable="1" UseAllocatedWAN="UseAllocatedSubnet" AssociatedConnection="" Prefix="" PrefixLength="64" Preferredlifetime="3600" Validlifetime="7200" Interface="br0" MaxRtrAdvInterval="600" MinRtrAdvInterval="200" DefaultLifetime="1800" MOFlagAutoMode="1" ManagedFlag="0" OtherConfigFlag="0" MobileAgentFlag="0" PreferredRouterFlag="medium" NDProxyFlag="0" LinkMTU="1500" ReachableTime="0" RetransTimer="0" CurHopLimit="64" ULAAllocatedMode="ULAAuto" ULAPrefix="" ULAPrefixLength="64" ULAPreferredlifetime="3600" ULAValidlifetime="7200"/>
+<X_DHCPv6 DHCPServerEnable="1" UseAllocatedWAN="UseAllocatedSubnet" AssociatedConnection="" Prefix="" PrefixLength="64" Preferredlifetime="3600" Validlifetime="7200" DNSServer="" DomainName=""/>
+<DHCPConditionalServingPool NumberOfInstances="4">
+<ObjExtention MaxInstanceNum="4"/>
+<DHCPConditionalServingPoolInstance InstanceID="1" Enable="1" PoolOrder="1" MinAddress="0.0.0.0" MaxAddress="0.0.0.0" VendorClassID="STB" VendorClassIDExclude="0" VendorClassIDMode="Exact" ReservedAddresses="" SubnetMask="255.255.255.0" DNSServers="192.168.1.1,192.168.1.1" DomainName="" IPRouters="192.168.1.1" DHCPLeaseTime="86400" UseAllocatedWAN="Normal" AssociatedConnection="">
+</DHCPConditionalServingPoolInstance>
+<DHCPConditionalServingPoolInstance InstanceID="2" Enable="1" PoolOrder="2" MinAddress="0.0.0.0" MaxAddress="0.0.0.0" VendorClassID="Phone" VendorClassIDExclude="0" VendorClassIDMode="Exact" ReservedAddresses="" SubnetMask="255.255.255.0" DNSServers="192.168.1.1,192.168.1.1" DomainName="" IPRouters="192.168.1.1" DHCPLeaseTime="86400" UseAllocatedWAN="Normal" AssociatedConnection="">
+</DHCPConditionalServingPoolInstance>
+<DHCPConditionalServingPoolInstance InstanceID="3" Enable="1" PoolOrder="3" MinAddress="0.0.0.0" MaxAddress="0.0.0.0" VendorClassID="Camera" VendorClassIDExclude="0" VendorClassIDMode="Exact" ReservedAddresses="" SubnetMask="255.255.255.0" DNSServers="192.168.1.1,192.168.1.1" DomainName="" IPRouters="192.168.1.1" DHCPLeaseTime="86400" UseAllocatedWAN="Normal" AssociatedConnection="">
+</DHCPConditionalServingPoolInstance>
+<DHCPConditionalServingPoolInstance InstanceID="4" Enable="1" PoolOrder="4" MinAddress="0.0.0.0" MaxAddress="0.0.0.0" VendorClassID="Computer" VendorClassIDExclude="0" VendorClassIDMode="Exact" ReservedAddresses="" SubnetMask="255.255.255.0" DNSServers="192.168.1.1,192.168.1.1" DomainName="" IPRouters="192.168.1.1" DHCPLeaseTime="86400" UseAllocatedWAN="Normal" AssociatedConnection="">
+</DHCPConditionalServingPoolInstance>
+</DHCPConditionalServingPool>
+<IPInterface NumberOfInstances="1">
+<IPInterfaceInstance InstanceID="1" Enable="1" IPInterfaceIPAddress="192.168.1.1" IPInterfaceSubnetMask="255.255.255.0" IPInterfaceAddressingType="DHCP" X_RouteProtocolRx="Off" X_RIPOperation="Active"/>
+</IPInterface>
+</LANHostConfigManagement>
+<LANEthernetInterfaceConfig NumberOfInstances="4">
+<ObjExtention MaxInstanceNum="6"/>
+<LANEthernetInterfaceConfigInstance InstanceID="2" Enable="1" Name="eth0.4">
+</LANEthernetInterfaceConfigInstance>
+<LANEthernetInterfaceConfigInstance InstanceID="3" Enable="1" Name="eth0.3">
+</LANEthernetInterfaceConfigInstance>
+<LANEthernetInterfaceConfigInstance InstanceID="5" Enable="1" Name="eth0.2">
+</LANEthernetInterfaceConfigInstance>
+<LANEthernetInterfaceConfigInstance InstanceID="6" Enable="1" Name="eth0.5">
+</LANEthernetInterfaceConfigInstance>
+</LANEthernetInterfaceConfig>
+<WLANConfiguration NumberOfInstances="4">
+<WLANConfigurationInstance InstanceID="1" Enable="1" Name="" X_OperatingFrequencyBand="2.4GHz" MaxBitRate="Auto" Channel="6" AutoChannelEnable="0" RegulatoryDomain="GB" SSID="" BeaconType="11i" MACAddressControlEnabled="1" WEPKeyIndex="1" BasicEncryptionModes="WEPEncryption" BasicAuthenticationMode="None" WPAEncryptionModes="TKIPEncryption" WPAAuthenticationMode="PSKAuthentication" IEEE11iEncryptionModes="AESEncryption" IEEE11iAuthenticationMode="PSKAuthentication" SSIDAdvertisementEnabled="1" WMMEnable="0" TransmitPower="100" X_WlanStandard="b/g" X_Wlan11NBWControl="20" X_ExtensionChannel="Below" X_Wlan11NGIControl="long" X_Wlan11NHtMcs="33" X_IEEE80211hEnabled="1" X_AssociateDeviceNum="16" X_WlanMacFilterpolicy="0" X_MixedEncryptionModes="TKIPEncryption" X_MixedAuthenticationMode="PSKAuthentication" X_WlanIsolateControl="0" X_RTSThreshold="2347" X_FragThreshold="2346" X_DtimPeriod="1" X_BeaconPeriod="100">
+<WPS Enable="0" X_WPSMode="client-pin" DevicePassword="" X_PinPhrase=""/>
+<WEPKey NumberOfInstances="4">
+<WEPKeyInstance InstanceID="1" WEPKey=""/>
+<WEPKeyInstance InstanceID="2" WEPKey="2222222222222"/>
+<WEPKeyInstance InstanceID="3" WEPKey="3333333333333"/>
+<WEPKeyInstance InstanceID="4" WEPKey="4444444444444"/>
+</WEPKey>
+<PreSharedKey NumberOfInstances="1">
+<PreSharedKeyInstance InstanceID="1" PreSharedKey="" KeyPassphrase=""/>
+</PreSharedKey>
+</WLANConfigurationInstance>
+<WLANConfigurationInstance InstanceID="2" Enable="0" Name="" X_OperatingFrequencyBand="2.4GHz" MaxBitRate="Auto" Channel="6" AutoChannelEnable="0" RegulatoryDomain="GB" SSID="SSID-2" BeaconType="Basic" MACAddressControlEnabled="1" WEPKeyIndex="1" BasicEncryptionModes="WEPEncryption" BasicAuthenticationMode="None" WPAEncryptionModes="TKIPEncryption" WPAAuthenticationMode="PSKAuthentication" IEEE11iEncryptionModes="AESEncryption" IEEE11iAuthenticationMode="PSKAuthentication" SSIDAdvertisementEnabled="1" WMMEnable="0" TransmitPower="100" X_WlanStandard="b/g" X_Wlan11NBWControl="20" X_ExtensionChannel="Below" X_Wlan11NGIControl="long" X_Wlan11NHtMcs="33" X_IEEE80211hEnabled="1" X_AssociateDeviceNum="16" X_WlanMacFilterpolicy="0" X_MixedEncryptionModes="TKIPEncryption" X_MixedAuthenticationMode="PSKAuthentication" X_WlanIsolateControl="0" X_RTSThreshold="2347" X_FragThreshold="2346" X_DtimPeriod="1" X_BeaconPeriod="100">
+<WPS Enable="0" X_WPSMode="client-pin" DevicePassword="" X_PinPhrase=""/>
+<WEPKey NumberOfInstances="4">
+<WEPKeyInstance InstanceID="1" WEPKey="1111111111111"/>
+<WEPKeyInstance InstanceID="2" WEPKey="2222222222222"/>
+<WEPKeyInstance InstanceID="3" WEPKey="3333333333333"/>
+<WEPKeyInstance InstanceID="4" WEPKey="4444444444444"/>
+</WEPKey>
+<PreSharedKey NumberOfInstances="1">
+<PreSharedKeyInstance InstanceID="1" PreSharedKey="30C11B65A619C706D37367E16E08934D9140F910A129200C1A7D56C48A2D3A58" KeyPassphrase="12345678"/>
+</PreSharedKey>
+</WLANConfigurationInstance>
+<WLANConfigurationInstance InstanceID="3" Enable="0" Name="" X_OperatingFrequencyBand="2.4GHz" MaxBitRate="Auto" Channel="6" AutoChannelEnable="0" RegulatoryDomain="GB" SSID="SSID-3" BeaconType="Basic" MACAddressControlEnabled="1" WEPKeyIndex="1" BasicEncryptionModes="WEPEncryption" BasicAuthenticationMode="None" WPAEncryptionModes="TKIPEncryption" WPAAuthenticationMode="PSKAuthentication" IEEE11iEncryptionModes="AESEncryption" IEEE11iAuthenticationMode="PSKAuthentication" SSIDAdvertisementEnabled="1" WMMEnable="0" TransmitPower="100" X_WlanStandard="b/g" X_Wlan11NBWControl="20" X_ExtensionChannel="Below" X_Wlan11NGIControl="long" X_Wlan11NHtMcs="33" X_IEEE80211hEnabled="1" X_AssociateDeviceNum="16" X_WlanMacFilterpolicy="0" X_MixedEncryptionModes="TKIPEncryption" X_MixedAuthenticationMode="PSKAuthentication" X_WlanIsolateControl="0" X_RTSThreshold="2347" X_FragThreshold="2346" X_DtimPeriod="1" X_BeaconPeriod="100">
+<WPS Enable="0" X_WPSMode="client-pin" DevicePassword="" X_PinPhrase=""/>
+<WEPKey NumberOfInstances="4">
+<WEPKeyInstance InstanceID="1" WEPKey="1111111111111"/>
+<WEPKeyInstance InstanceID="2" WEPKey="2222222222222"/>
+<WEPKeyInstance InstanceID="3" WEPKey="3333333333333"/>
+<WEPKeyInstance InstanceID="4" WEPKey="4444444444444"/>
+</WEPKey>
+<PreSharedKey NumberOfInstances="1">
+<PreSharedKeyInstance InstanceID="1" PreSharedKey="55400AA491646EDFC863EB18B33D99708F831E254AD120506FECFCDFCCD4E14A" KeyPassphrase="12345678"/>
+</PreSharedKey>
+</WLANConfigurationInstance>
+<WLANConfigurationInstance InstanceID="4" Enable="0" Name="" X_OperatingFrequencyBand="2.4GHz" MaxBitRate="Auto" Channel="6" AutoChannelEnable="0" RegulatoryDomain="GB" SSID="SSID-4" BeaconType="Basic" MACAddressControlEnabled="1" WEPKeyIndex="1" BasicEncryptionModes="WEPEncryption" BasicAuthenticationMode="None" WPAEncryptionModes="TKIPEncryption" WPAAuthenticationMode="PSKAuthentication" IEEE11iEncryptionModes="AESEncryption" IEEE11iAuthenticationMode="PSKAuthentication" SSIDAdvertisementEnabled="1" WMMEnable="0" TransmitPower="100" X_WlanStandard="b/g" X_Wlan11NBWControl="20" X_ExtensionChannel="Below" X_Wlan11NGIControl="long" X_Wlan11NHtMcs="33" X_IEEE80211hEnabled="1" X_AssociateDeviceNum="16" X_WlanMacFilterpolicy="0" X_MixedEncryptionModes="TKIPEncryption" X_MixedAuthenticationMode="PSKAuthentication" X_WlanIsolateControl="0" X_RTSThreshold="2347" X_FragThreshold="2346" X_DtimPeriod="1" X_BeaconPeriod="100">
+<WPS Enable="0" X_WPSMode="client-pin" DevicePassword="" X_PinPhrase=""/>
+<WEPKey NumberOfInstances="4">
+<WEPKeyInstance InstanceID="1" WEPKey="1111111111111"/>
+<WEPKeyInstance InstanceID="2" WEPKey="2222222222222"/>
+<WEPKeyInstance InstanceID="3" WEPKey="3333333333333"/>
+<WEPKeyInstance InstanceID="4" WEPKey="4444444444444"/>
+</WEPKey>
+<PreSharedKey NumberOfInstances="1">
+<PreSharedKeyInstance InstanceID="1" PreSharedKey="6784D8C3C8E9F65E8ACA94BD76C8665761320E10B1835BFE05DA2D3E0EAA86F8" KeyPassphrase="12345678"/>
+</PreSharedKey>
+</WLANConfigurationInstance>
+</WLANConfiguration>
+<Hosts>
+</Hosts>
+</LANDeviceInstance>
+</LANDevice>
+<WANDevice NumberOfInstances="4">
+<WANDeviceInstance InstanceID="1">
+<WANCommonInterfaceConfig WANAccessType="DSL" Layer1UpstreamMaxBitRate="2000000" Layer1DownstreamMaxBitRate="24000000" WANAccessProvider="HUAWEI">
+</WANCommonInterfaceConfig>
+<WANEthernetInterfaceConfig Enable="1" MaxBitRate="Auto" DuplexMode="Auto">
+<Stats>
+<ObjExtention HideBits="30"/>
+</Stats>
+<ObjExtention HideBits="30"/>
+</WANEthernetInterfaceConfig>
+<X_WANUMTSInterfaceConfig Enable="1">
+<Stats>
+<ObjExtention HideBits="30"/>
+</Stats>
+<ObjExtention HideBits="30"/>
+</X_WANUMTSInterfaceConfig>
+</WANDeviceInstance>
+<WANDeviceInstance InstanceID="2">
+<WANCommonInterfaceConfig WANAccessType="VDSL" Layer1UpstreamMaxBitRate="2000000" Layer1DownstreamMaxBitRate="24000000" WANAccessProvider="HUAWEI">
+</WANCommonInterfaceConfig>
+<WANEthernetInterfaceConfig Enable="1" MaxBitRate="Auto" DuplexMode="Auto">
+<Stats>
+<ObjExtention HideBits="30"/>
+</Stats>
+<ObjExtention HideBits="30"/>
+</WANEthernetInterfaceConfig>
+<X_WANUMTSInterfaceConfig Enable="1">
+<Stats>
+<ObjExtention HideBits="30"/>
+</Stats>
+<ObjExtention HideBits="30"/>
+</X_WANUMTSInterfaceConfig>
+</WANDeviceInstance>
+<WANDeviceInstance InstanceID="3">
+<WANCommonInterfaceConfig WANAccessType="Ethernet" Layer1UpstreamMaxBitRate="100000000" Layer1DownstreamMaxBitRate="100000000" WANAccessProvider="HUAWEI">
+</WANCommonInterfaceConfig>
+<WANEthernetInterfaceConfig Enable="1" MaxBitRate="Auto" DuplexMode="Auto">
+</WANEthernetInterfaceConfig>
+<X_WANUMTSInterfaceConfig Enable="1">
+<Stats>
+<ObjExtention HideBits="30"/>
+</Stats>
+<ObjExtention HideBits="30"/>
+</X_WANUMTSInterfaceConfig>
+<WANConnectionDevice NumberOfInstances="1">
+<WANConnectionDeviceInstance InstanceID="1">
+<WANEthernetLinkConfig EthernetLinkStatus=""/>
+<X_WANUMTSLinkConfig Enable="0">
+<ObjExtention HideBits="30"/>
+</X_WANUMTSLinkConfig>
+<WANIPConnection NumberOfInstances="1">
+<WANIPConnectionInstance InstanceID="1" Enable="1" PossibleConnectionTypes="IP_Routed,IP_Bridged" ConnectionType="IP_Routed" Name="" AutoDisconnectTime="0" NATEnabled="1" AddressingType="DHCP" ExternalIPAddress="" SubnetMask="" DefaultGateway="" DNSEnabled="1" DNSOverrideAllowed="1" DNSServers="" MaxMTUSize="1500" MTUMode="1" MACAddress="" MACAddressOverride="0" ConnectionTrigger="AlwaysOn" RouteProtocolRx="Off" X_ServiceList="INTERNET" X_DHCPRequestIP="" X_IPv4Enable="1" X_IPv6Enable="0" X_IPv6AddressingType="SLAAC" X_IPv6DefaultGateway="" X_IPv6DNSEnabled="1" X_IPv6DNSOverrideAllowed="1" X_IPv6DNSServers="" X_IPv6Address="" X_IPv6PrefixLength="0">
+</WANIPConnectionInstance>
+</WANIPConnection>
+</WANConnectionDeviceInstance>
+</WANConnectionDevice>
+</WANDeviceInstance>
+<WANDeviceInstance InstanceID="4">
+<WANCommonInterfaceConfig WANAccessType="UMTS" Layer1UpstreamMaxBitRate="2000000" Layer1DownstreamMaxBitRate="8000000" WANAccessProvider="HUAWEI">
+</WANCommonInterfaceConfig>
+<WANEthernetInterfaceConfig Enable="1" MaxBitRate="Auto" DuplexMode="Auto">
+<Stats>
+<ObjExtention HideBits="30"/>
+</Stats>
+<ObjExtention HideBits="30"/>
+</WANEthernetInterfaceConfig>
+<X_WANUMTSInterfaceConfig Enable="1">
+</X_WANUMTSInterfaceConfig>
+</WANDeviceInstance>
+</WANDevice>
+<Layer3Forwarding X_AutoDefaultGatewayEnable="0" X_DefaultGatewayIPAddress="" DefaultConnectionService="">
+<RIP Enable="1" InterfaceSettingNumberOfEntries="0">
+<InterfaceSetting NumberOfInstances="3">
+<ObjExtention MaxInstanceNum="3"/>
+<InterfaceSettingInstance InstanceID="1" Enable="1" Interface="InternetGatewayDevice.LANDevice.1.LANHostConfigManagement.IPInterface.1" X_InterfaceSide="LAN" X_RouteProtocolRx="Off" X_RIPOperation="Passive"/>
+<InterfaceSettingInstance InstanceID="2" Enable="1" Interface="InternetGatewayDevice.LANDevice.2.LANHostConfigManagement.IPInterface.1" X_InterfaceSide="LAN" X_RouteProtocolRx="Off" X_RIPOperation="Passive"/>
+<InterfaceSettingInstance InstanceID="3" Enable="1" Interface="InternetGatewayDevice.WANDevice.3.WANConnectionDevice.1.WANIPConnection.1" X_InterfaceSide="WAN" X_RouteProtocolRx="Off" X_RIPOperation="Passive"/>
+</InterfaceSetting>
+</RIP>
+</Layer3Forwarding>
+<Layer2Bridging MaxBridgeEntries="0" MaxDBridgeEntries="0" MaxFilterEntries="0" BridgeNumberOfEntries="0" FilterNumberOfEntries="0" AvailableInterfaceNumberOfEntries="0">
+<Bridge NumberOfInstances="1">
+<ObjExtention MaxInstanceNum="2"/>
+<BridgeInstance InstanceID="1" BridgeKey="0" BridgeName="br0"/>
+</Bridge>
+<Filter NumberOfInstances="9">
+<ObjExtention MaxInstanceNum="13"/>
+<FilterInstance InstanceID="2" FilterKey="2" FilterBridgeReference="0" FilterInterface="2" SourceMACFromVendorClassIDFilter="" SourceMACFromVendorClassIDMode="" SourceMACFromClientIDFilter="" SourceMACFromUserClassIDFilter=""/>
+<FilterInstance InstanceID="3" FilterKey="3" FilterBridgeReference="0" FilterInterface="3" SourceMACFromVendorClassIDFilter="" SourceMACFromVendorClassIDMode="" SourceMACFromClientIDFilter="" SourceMACFromUserClassIDFilter=""/>
+<FilterInstance InstanceID="7" FilterKey="7" FilterBridgeReference="0" FilterInterface="5" SourceMACFromVendorClassIDFilter="" SourceMACFromVendorClassIDMode="Exact" SourceMACFromClientIDFilter="" SourceMACFromUserClassIDFilter=""/>
+<FilterInstance InstanceID="8" FilterKey="8" FilterBridgeReference="0" FilterInterface="6" SourceMACFromVendorClassIDFilter="" SourceMACFromVendorClassIDMode="Exact" SourceMACFromClientIDFilter="" SourceMACFromUserClassIDFilter=""/>
+<FilterInstance InstanceID="9" FilterKey="9" FilterBridgeReference="0" FilterInterface="7" SourceMACFromVendorClassIDFilter="" SourceMACFromVendorClassIDMode="Exact" SourceMACFromClientIDFilter="" SourceMACFromUserClassIDFilter=""/>
+<FilterInstance InstanceID="10" FilterKey="10" FilterBridgeReference="0" FilterInterface="8" SourceMACFromVendorClassIDFilter="" SourceMACFromVendorClassIDMode="Exact" SourceMACFromClientIDFilter="" SourceMACFromUserClassIDFilter=""/>
+<FilterInstance InstanceID="11" FilterKey="11" FilterBridgeReference="0" FilterInterface="9" SourceMACFromVendorClassIDFilter="" SourceMACFromVendorClassIDMode="Exact" SourceMACFromClientIDFilter="" SourceMACFromUserClassIDFilter=""/>
+<FilterInstance InstanceID="12" FilterKey="12" FilterBridgeReference="0" FilterInterface="10" SourceMACFromVendorClassIDFilter="" SourceMACFromVendorClassIDMode="Exact" SourceMACFromClientIDFilter="" SourceMACFromUserClassIDFilter=""/>
+<FilterInstance InstanceID="13" FilterKey="13" FilterBridgeReference="0" FilterInterface="11" SourceMACFromVendorClassIDFilter="" SourceMACFromVendorClassIDMode="Exact" SourceMACFromClientIDFilter="" SourceMACFromUserClassIDFilter=""/>
+</Filter>
+<AvailableInterface NumberOfInstances="9">
+<ObjExtention MaxInstanceNum="11"/>
+<AvailableInterfaceInstance InstanceID="2" AvailableInterfaceKey="2" InterfaceType="LANInterface" InterfaceReference="InternetGatewayDevice.LANDevice.1.LANEthernetInterfaceConfig.3" X_InterfaceName="eth0.3" X_InterfaceAlias="LAN2"/>
+<AvailableInterfaceInstance InstanceID="3" AvailableInterfaceKey="3" InterfaceType="LANInterface" InterfaceReference="InternetGatewayDevice.LANDevice.1.LANEthernetInterfaceConfig.2" X_InterfaceName="eth0.4" X_InterfaceAlias="LAN3"/>
+<AvailableInterfaceInstance InstanceID="5" AvailableInterfaceKey="5" InterfaceType="LANInterface" InterfaceReference="InternetGatewayDevice.LANDevice.1.WLANConfiguration.1" X_InterfaceName="wl0" X_InterfaceAlias="SSID1"/>
+<AvailableInterfaceInstance InstanceID="6" AvailableInterfaceKey="6" InterfaceType="LANInterface" InterfaceReference="InternetGatewayDevice.LANDevice.1.WLANConfiguration.2" X_InterfaceName="wl0.1" X_InterfaceAlias="SSID2"/>
+<AvailableInterfaceInstance InstanceID="7" AvailableInterfaceKey="7" InterfaceType="LANInterface" InterfaceReference="InternetGatewayDevice.LANDevice.1.WLANConfiguration.3" X_InterfaceName="wl0.2" X_InterfaceAlias="SSID3"/>
+<AvailableInterfaceInstance InstanceID="8" AvailableInterfaceKey="8" InterfaceType="LANInterface" InterfaceReference="InternetGatewayDevice.LANDevice.1.WLANConfiguration.4" X_InterfaceName="wl0.3" X_InterfaceAlias="SSID4"/>
+<AvailableInterfaceInstance InstanceID="9" AvailableInterfaceKey="9" InterfaceType="WANRouterConnection" InterfaceReference="InternetGatewayDevice.WANDevice.3.WANConnectionDevice.1.WANIPConnection.1" X_InterfaceName="nas0_0" X_InterfaceAlias="WAN1_INTERNET_R_ETH1"/>
+<AvailableInterfaceInstance InstanceID="10" AvailableInterfaceKey="10" InterfaceType="LANInterface" InterfaceReference="InternetGatewayDevice.LANDevice.1.LANEthernetInterfaceConfig.5" X_InterfaceName="eth0.2" X_InterfaceAlias="LAN1"/>
+<AvailableInterfaceInstance InstanceID="11" AvailableInterfaceKey="11" InterfaceType="LANInterface" InterfaceReference="InternetGatewayDevice.LANDevice.1.LANEthernetInterfaceConfig.6" X_InterfaceName="eth0.5" X_InterfaceAlias="LAN4"/>
+</AvailableInterface>
+</Layer2Bridging>
+<Services>
+<StorageService NumberOfInstances="1">
+<StorageServiceInstance InstanceID="1" Enable="1">
+<NetInfo HostName="" DomainName="ATP.ip"/>
+<NetworkServer AFPEnable="0" NFSEnable="0" SMBEnable="1" NetworkProtocolAuthReq="1"/>
+<FTPServer Enable="1" MaxNumUsers="6" IdleTime="60" PortNumber="21">
+<AnonymousUser Enable="0" StartingFolder="" ReadOnlyAccess="1" X_AllPath="1"/>
+</FTPServer>
+</StorageServiceInstance>
+</StorageService>
+<X_IPTV IGMPProxyEnable="0" IGMPSnoopingEnable="1" GroupNumber="32" WanList=""/>
+<X_IPTV6 MLDProxyEnable="0" MLDSnoopingEnable="1" Wan6List=""/>
+<X_IPv6 Enable="1"/>
+<VoiceService NumberOfInstances="1">
+<VoiceServiceInstance InstanceID="1" VoiceProfileNumberOfEntries="0" X_PstnEnable="1" X_PstnClipEnable="1" X_PstnNumber="" X_UmtsEnable="0" X_UmtsClipEnable="0" X_UmtsNumber="" X_CallAllPortsPrefix="**9">
+<Capabilities MaxProfileCount="15" MaxLineCount="15" MaxSessionsPerLine="3" MaxSessionCount="2" SignalingProtocols="SIP/2.0" Regions="de" RTCP="1" SRTP="0" RTPRedundancy="0" DSCPCoupled="0" EthernetTaggingCoupled="0" PSTNSoftSwitchover="1" FaxT38="1" FaxPassThrough="1" ModemPassThrough="1" ToneGeneration="0" RingGeneration="0" DigitMap="1" NumberingPlan="1" ButtonMap="1" VoicePortTests="0">
+<SIP EventSubscription="1" Role="UserAgent" Extensions="INVITE, ACK, OPTIONS, CANCEL, BYE, UPDATE, PRACK, INFO, SUBSCRIBE, NOTIFY, REFER" Transports="UDP" URISchemes="" ResponseMap="0"/>
+</Capabilities>
+<X_CommonConfig Region="DE" DigitMap="[X*ABCD].T" EnableSharpKey="1" HotLineEnable="0" HotLineIntervalTime="7" HotLineNumber="" OffHookTime="250" OnHookTime="250" MinHookFlash="80" MaxHookFlash="300" RegisterExpires="300" RegisterRetryInterval="900" X_PrackSupport="0" X_UrgencyUsePriority="1" X_SessionExpires="3600" X_MinSessionExpires="90" X_HoldMethod="0" X_InterfaceName="" TransmitGain="0" ReceiveGain="0">
+<EventSubscribe NumberOfInstances="3">
+<EventSubscribeInstance InstanceID="1" Event="MWI" ExpireTime="300"/>
+<EventSubscribeInstance InstanceID="2" Event="UA_PROFILE" ExpireTime="300"/>
+<EventSubscribeInstance InstanceID="3" Event="REG" ExpireTime="300"/>
+</EventSubscribe>
+<OptionTime OptionsType="0" IntervalTime="30"/>
+<RTP LocalPortMin="50000" LocalPortMax="50020" JitterBuffer="1" JitterBufferLength="20" PackLostCompensate="1" JitterBufferType="1">
+<RTCP TxRepeatInterval="3000"/>
+</RTP>
+<NumberingPlan InterDigitTimerShort="3000" InterDigitTimerLong="10000" StartDigitTimerStd="10000" UnResponseInterval="60000" HowlToneTime="60000" BusyToneTime="40000" X_EmergencyRoute="0" X_EmergencyRouteAccount=""/>
+</X_CommonConfig>
+<PhyInterface NumberOfInstances="2">
+<PhyInterfaceInstance InstanceID="1" InterfaceID="1" X_InCallNumber="**1" X_IncomingLineList="all" X_OutgoingLineList="auto" X_Name="Port 1" X_CFUDestPortId="-1" X_CFBDestPortId="-1" X_CFNRDestPortId="-1"/>
+<PhyInterfaceInstance InstanceID="2" InterfaceID="2" X_InCallNumber="**2" X_IncomingLineList="all" X_OutgoingLineList="auto" X_Name="Port 2" X_CFUDestPortId="-1" X_CFBDestPortId="-1" X_CFNRDestPortId="-1"/>
+</PhyInterface>
+<X_Fixed AreaCode="" BusNumber="**21" IncomingLineList="all" OutgoingLineList="auto" CFUDestPortId="-1" CFBDestPortId="-1" CFNRDestPortId="-1">
+<Line NumberOfInstances="11">
+<LineInstance InstanceID="1" ISDNNumber="" BusyOnBusy="0" CLIPEnable="1"/>
+<LineInstance InstanceID="2" ISDNNumber="" BusyOnBusy="0" CLIPEnable="1"/>
+<LineInstance InstanceID="3" ISDNNumber="" BusyOnBusy="0" CLIPEnable="1"/>
+<LineInstance InstanceID="4" ISDNNumber="" BusyOnBusy="0" CLIPEnable="1"/>
+<LineInstance InstanceID="5" ISDNNumber="" BusyOnBusy="0" CLIPEnable="1"/>
+<LineInstance InstanceID="6" ISDNNumber="" BusyOnBusy="0" CLIPEnable="1"/>
+<LineInstance InstanceID="7" ISDNNumber="" BusyOnBusy="0" CLIPEnable="1"/>
+<LineInstance InstanceID="8" ISDNNumber="" BusyOnBusy="0" CLIPEnable="1"/>
+<LineInstance InstanceID="9" ISDNNumber="" BusyOnBusy="0" CLIPEnable="1"/>
+<LineInstance InstanceID="10" ISDNNumber="" BusyOnBusy="0" CLIPEnable="1"/>
+<LineInstance InstanceID="11" ISDNNumber="" BusyOnBusy="0" CLIPEnable="1"/>
+</Line>
+</X_Fixed>
+<X_Dect Enable="1" EcoMode="0" NemoMode="0" Pin="0000">
+<Mobile NumberOfInstances="5">
+<MobileInstance InstanceID="1" IncomingLineList="all" OutgoingLineList="auto" Name="Mobile 1" Number="**61" CFUDestPortId="-1" CFBDestPortId="-1" CFNRDestPortId="-1"/>
+<MobileInstance InstanceID="2" IncomingLineList="all" OutgoingLineList="auto" Name="Mobile 2" Number="**62" CFUDestPortId="-1" CFBDestPortId="-1" CFNRDestPortId="-1"/>
+<MobileInstance InstanceID="3" IncomingLineList="all" OutgoingLineList="auto" Name="Mobile 3" Number="**63" CFUDestPortId="-1" CFBDestPortId="-1" CFNRDestPortId="-1"/>
+<MobileInstance InstanceID="4" IncomingLineList="all" OutgoingLineList="auto" Name="Mobile 4" Number="**64" CFUDestPortId="-1" CFBDestPortId="-1" CFNRDestPortId="-1"/>
+<MobileInstance InstanceID="5" IncomingLineList="all" OutgoingLineList="auto" Name="Mobile 5" Number="**65" CFUDestPortId="-1" CFBDestPortId="-1" CFNRDestPortId="-1"/>
+</Mobile>
+</X_Dect>
+<X_SipServer ServerPort="6050" MinRegisterExpires="300" SessionExpires="3600" MinSessionExpires="90">
+</X_SipServer>
+</VoiceServiceInstance>
+</VoiceService>
+<X_ALGAbility H323Enable="1" SIPEnable="0" SIPPort="5060" SIPWanPath="" RTSPEnable="1" L2TPEnable="1" IPSECEnable="1" PPTPEnable="1"/>
+<X_DmsService Enable="0">
+</X_DmsService>
+<X_iTunesServer Enable="0" Mp3Dir="" Mp3DirUTF8="" AlwaysScan="0" RescanInterval="300"/>
+</Services>
+<X_IPTunnel NumberOfInstances="2">
+<X_IPTunnelInstance InstanceID="1" Mode="4in6">
+</X_IPTunnelInstance>
+<X_IPTunnelInstance InstanceID="2" Mode="6in4">
+</X_IPTunnelInstance>
+</X_IPTunnel>
+<QueueManagement QoSEnable="0" X_BandWidth="0" MaxQueueEntries="8" MaxClassificationEntries="32" MaxAppEntries="8" MaxPolicerEntries="16" DefaultPolicer="-1" DefaultQueue="-1" DefaultDSCPMark="-1" DefaultEthernetPriorityMark="-1">
+</QueueManagement>
+<X_FireWall CurrentLevel="Low">
+<FilterMode NumberOfInstances="3">
+<ObjExtention MaxInstanceNum="3"/>
+<FilterModeInstance InstanceID="1" Level="Disable" Revisable="0">
+</FilterModeInstance>
+<FilterModeInstance InstanceID="2" Level="Low" Revisable="0">
+<IpFilter NumberOfInstances="2">
+<ObjExtention MaxInstanceNum="2"/>
+<IpFilterInstance InstanceID="1" Name="Low-Lan" Status="1" Priority="255" Interface="br+" SourceIPStart="" SourceIPEnd="" DestIPStart="" DestIPEnd="" Protocol="ALL" SourcePortStart="0" SourcePortEnd="0" DestPortStart="0" DestPortEnd="0" IPVersion="0"/>
+<IpFilterInstance InstanceID="2" Name="Low-All" Status="2" Priority="255" Interface="ALL" SourceIPStart="" SourceIPEnd="" DestIPStart="" DestIPEnd="" Protocol="ALL" SourcePortStart="0" SourcePortEnd="0" DestPortStart="0" DestPortEnd="0" IPVersion="0"/>
+</IpFilter>
+</FilterModeInstance>
+<FilterModeInstance InstanceID="3" Level="High" Revisable="0">
+<IpFilter NumberOfInstances="1">
+<IpFilterInstance InstanceID="1" Name="High-Ip" Status="2" Priority="255" Interface="ALL" SourceIPStart="" SourceIPEnd="" DestIPStart="" DestIPEnd="" Protocol="ALL" SourcePortStart="0" SourcePortEnd="0" DestPortStart="0" DestPortEnd="0" IPVersion="0"/>
+</IpFilter>
+<AppFilter NumberOfInstances="3">
+<ObjExtention MaxInstanceNum="3"/>
+<AppFilterInstance InstanceID="1" Name="DNS" Status="1" Protocol="UDP" Port="53"/>
+<AppFilterInstance InstanceID="2" Name="FTP" Status="1" Protocol="TCP" Port="21"/>
+<AppFilterInstance InstanceID="3" Name="HTTP" Status="1" Protocol="TCP" Port="80"/>
+</AppFilter>
+</FilterModeInstance>
+</FilterMode>
+</X_FireWall>
+<DosAttack SynFlooding="0" IcmpFlooding="0" ArpAttack="0"/>
+<ACL NumberOfInstances="5">
+<ObjExtention MaxInstanceNum="5"/>
+<ACLInstance InstanceID="1" X_Service="HTTP" X_Direction="LAN" X_StartIpAddr="" X_EndIpAddr=""/>
+<ACLInstance InstanceID="2" X_Service="HTTPS" X_Direction="LAN" X_StartIpAddr="" X_EndIpAddr=""/>
+<ACLInstance InstanceID="3" X_Service="ICMP" X_Direction="LAN" X_StartIpAddr="" X_EndIpAddr=""/>
+<ACLInstance InstanceID="4" X_Service="TELNET" X_Direction="LAN" X_StartIpAddr="" X_EndIpAddr=""/>
+<ACLInstance InstanceID="5" X_Service="SAMBA" X_Direction="LAN" X_StartIpAddr="" X_EndIpAddr=""/>
+</ACL>
+</InternetGatewayDevice>
+</InternetGatewayDeviceConfig>

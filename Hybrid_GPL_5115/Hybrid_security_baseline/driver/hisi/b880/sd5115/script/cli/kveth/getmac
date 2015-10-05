@@ -1,0 +1,17 @@
+[settings]
+functionname=hi_kernel_vif_cmdtype_mac_get;  
+attributenum=3;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<ifname>       type<string>   range<0x0,32>           default<eth0>;
+attribute=alias<mac >         type<mac>                              default<10:00:00:01:02:03>;
+attribute=alias<resv>         type<binary>   range<0x0,2>            default<0>;
+
+[help]
+typedef struct
+{
+    hi_uchar8 uc_ifname[HI_KERNEL_VIF_NAMELEN];
+    hi_uchar8 uc_mac[ HI_MAC_LEN ];
+    hi_uchar8 uc_resv[2];    
+}hi_kernel_vif_cmdtype_mac_s;

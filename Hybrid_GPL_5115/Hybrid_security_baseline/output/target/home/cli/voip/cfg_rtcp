@@ -1,0 +1,19 @@
+[settings]
+functionname=hi_voip_cli_cfg_rtcp;  
+attributenum=5;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chanid>           type<uint>    range<0x0,0xFFFFFFFF>  default<0x0>;     /*通道号ui_chanid*/
+attribute=alias<rtcpinterval>     type<uint>    range<0x0,0xFFFFFFFF>  default<0x0>;     /*us_rtcpinterval;     /*RTCP发送周期，单位为秒*/*/
+attribute=alias<rtcpxrenable>     type<uchar>   range<0x0,0xFF>        default<0x0>;     /*uc_rtcpxrenable;     /*扩展RTCP协议支持*/*/
+attribute=alias<rtcphrenable>     type<uchar>   range<0x0,0xFF>        default<0x0>;     /*uc_rtcphrenable;     /*VQM支持*/*/
+attribute=alias<rtcpevtenable>    type<uchar>   range<0x0,0xFF>        default<0x0>;     /*uc_rtcpevtenable;    /*事件上报使能*/*/
+
+[help]
+usage: cfg_rtcp                       ; 配置编解码      
+       cfg_rtcp -v chanid 0x0         ; 通道0
+       cfg_rtcp -v rtcpinterval  0x0  ; RTCP发送周期：0
+       cfg_rtcp -v rtcpxrenable  0x0  ; 扩展RTCP协议支持：0
+       cfg_rtcp -v rtcphrenable  0x0  ; VQM支持：0
+       cfg_rtcp -v rtcpevtenable 0x0  ; 事件上报使能：0

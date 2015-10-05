@@ -1,0 +1,1 @@
+vpath="InternetGatewayDevice.Services.StorageService.1.UserAccount.{i}"E5element="Enable|Username|Password|AllowFTPAccess|X_AllPath|X_Permissions"ATPelement="Enable|Username|Password|AllowFTPAccess|X_AllPath|X_Permissions"multi="sambas|samba"

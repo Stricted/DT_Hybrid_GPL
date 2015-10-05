@@ -1,0 +1,22 @@
+[settings]
+functionname = hi_kernel_dp_qos_epfc_map_table_item_set_cmd;
+attributenum = 4;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<egr>     type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<sfid>    type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<valid>   type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<fid>     type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+
+
+[help]
+typedef struct
+{
+    /* ¶þÎ¬Ë÷Òý Egress + sfid */
+    HI_DP_PORT_E em_egr;
+    uint         ui_sfid;
+
+    HI_BOOL_E em_vld;
+    uint      ui_fid;
+} hi_dp_qos_epfc_map_table_item_s;

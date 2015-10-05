@@ -1,0 +1,1 @@
+cmd_net/ipv6/netfilter/nf_conntrack_ipv6.o := /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/bin/mips-unknown-linux-uclibc-ld  -m elf32btsmip   -r -o net/ipv6/netfilter/nf_conntrack_ipv6.o net/ipv6/netfilter/nf_conntrack_l3proto_ipv6.o net/ipv6/netfilter/nf_conntrack_proto_icmpv6.o 

@@ -1,0 +1,1 @@
+vpath="api/modem_1/antenna"E5element="antennamode"

@@ -1,0 +1,20 @@
+[settings]
+functionname=hi_voip_cli_start_rmttrace;  
+attributenum=5;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chanid>     type<uint>   range<0x0,0xFFFFFFFF>   default<0>; /*通道号*/
+attribute=alias<srcip>      type<ip>                             default<192.168.0.100>; /*源IP*/
+attribute=alias<desip>      type<ip>                             default<192.168.0.115>; /*目的IP*/
+attribute=alias<srcport>    type<uint>   range<0x0,0xFFFFFFFF>   default<40000>; /*源端口*/
+attribute=alias<desport>    type<uint>   range<0x0,0xFFFFFFFF>   default<50000>; /*目的端口*/
+
+[help]
+usage: start_rmttrace                		  ; 开始远程抓包 
+       start_rmttrace -v chanid 0             ; channid
+       start_rmttrace -v srcip 192.168.0.1    ; 源IP
+       start_rmttrace -v desip 192.168.0.65   ; 目的IP
+       start_rmttrace -v srcport 40000        ; 源端口
+       start_rmttrace -v desport 50000        ; 目的端口
+

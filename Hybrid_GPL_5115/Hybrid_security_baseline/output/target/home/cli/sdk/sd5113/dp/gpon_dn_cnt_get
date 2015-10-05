@@ -1,0 +1,119 @@
+[settings]
+functionname=0xF7002004;
+attributenum=51;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       			type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000205>; /*全局模块*/
+attribute=alias<ui_bip_err>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_bip_interval>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_fec>       			type<int>    range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_fec_succ>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_fec_succ_byte>       type<int>    range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_fec_fail>      		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_ploam_rx>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_ploam_drop>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_ploam_crc_err>       type<int>    range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_ploam_proc>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_ploam_callback>      type<int>    range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_ploam_discard>       type<int>    range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_sn_request>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_range_request>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_gem_exceed_mtu_err>  type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_gem_defragment_succ> type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_gem_defragment_fail> type<int>    range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_omci_rx>       		type<int>    range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_omci_crc_err>       	type<int>    range<0x0,0xFFFFFFFF>  default<0x00000000>; */
+attribute=alias<ui_omci_err>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_omci_drop>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_omci_proc>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_omci_callback>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_omci_input>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_omci_output>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_omci_discard>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_tdm_rx>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_tdm_drop>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_eth_rx>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_eth_len_err>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_eth_fcs_err>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_multicast>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_multicast_drop>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_alarm_discard>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_rei_counter_alarm>   type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_los_alarm>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_lof_alarm>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_sf_alarm>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_sd_alarm>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_ploam_err_alarm>     type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_plen_err_alarm>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_bwmap_err_alarm>     type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_lcdg_err_alarm>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_ufperr_err_alarm>    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_bwcrcerr_err_alarm>  type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_spcnterr_err_alarm>  type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_bit_err_sum_cnt>     type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_err_sum_cnt>         type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_sum_cnt>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_byte_sum_cnt>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+
+[help]
+typedef struct
+{
+    uint ui_bip_err;                /* 奇偶校验错误计数 */
+    uint ui_bip_interval;           /* 指定时间间隔内奇偶校验错计数 */
+
+    uint ui_fec;                    /* FEC纠错处理总码字计数 */
+    uint ui_fec_succ;               /* FEC纠错码字成功计数 */
+    uint ui_fec_succ_byte;          /* FEC纠错成功字节计数 */
+    uint ui_fec_fail;               /* FEC纠错码字字失败计数 */
+    
+    uint ui_ploam_rx;               /* 接收PLOAM帧计数 */
+    uint ui_ploam_drop;             /* 丢弃PLOAM帧计数 */
+    uint ui_ploam_crc_err;          /* PLOAM帧CRC错计数 */
+    uint ui_ploam_proc;             /* PLOAM帧处理计数 */
+    uint ui_ploam_callback;         /* 调用回调函数计数 */
+    uint ui_ploam_discard;          /* PLOAM帧因回调函数为空处理错误丢弃计数 */ 
+    uint ui_sn_request;             /* SN请求计数 */
+    uint ui_range_request;          /* 测距请求计数 */
+
+    uint ui_gem_exceed_mtu_err;     /* 报文长度超MTU丢弃统计 */
+    uint ui_gem_defragment_succ;    /* GEM帧重组成功计数 */
+    uint ui_gem_defragment_fail;    /* GEM帧重组失败计数 */
+
+    uint ui_omci_rx;                /* 接收OMCI帧计数 */
+    uint ui_omci_crc_err;           /* OMCI帧CRC错计数 */
+    uint ui_omci_err;               /* OMCI错帧计数 */
+    uint ui_omci_drop;              /* 处理异常丢弃计数 */
+    uint ui_omci_proc;              /* OMCI帧处理计数 */
+    uint ui_omci_callback;          /* 调用回调函数计数 */
+    uint ui_omci_input;             /* OMCI入队计数 */
+    uint ui_omci_output;            /* OMCI出队计数 */
+    uint ui_omci_discard;           /* OMCI帧因队列满丢弃计数 */
+
+    uint ui_tdm_rx;                 /* 接收TDM帧计数 */
+    uint ui_tdm_drop;               /* 丢弃TDM帧计数 */
+
+    uint ui_eth_rx;                 /* 接收以太帧计数 */
+    uint ui_eth_len_err;            /* 超长、或超短以太帧丢弃统计 */
+    uint ui_eth_fcs_err;            /* FCS错以太帧丢弃统计 */
+    uint ui_multicast;              /* 接收组播帧计数 */
+    uint ui_multicast_drop;         /* 丢弃组播帧计数 */
+
+    /* 告警 */
+    uint    ui_alarm_discard; 
+    uint    ui_rei_counter_alarm;
+    uint    ui_los_alarm;
+    uint    ui_lof_alarm;
+    uint    ui_sf_alarm;
+    uint    ui_sd_alarm;
+    uint    ui_ploam_err_alarm;
+    uint    ui_plen_err_alarm;
+    uint    ui_bwmap_err_alarm;
+    uint    ui_lcdg_err_alarm;
+    uint    ui_ufperr_err_alarm;
+    uint    ui_bwcrcerr_err_alarm;
+    uint    ui_spcnterr_err_alarm;
+
+    hi_dp_gpon_dn_prbs_cnt_s st_prbs_cnt;
+    
+}hi_dp_gpon_dn_cnt_s;

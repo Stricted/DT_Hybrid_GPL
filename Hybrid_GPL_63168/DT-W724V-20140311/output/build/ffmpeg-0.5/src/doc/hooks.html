@@ -1,0 +1,598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on December, 16 2014 by texi2html 1.78 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people.
+Send bugs and suggestions to <texi2html-bug@nongnu.org>
+
+-->
+<head>
+<title>Video Hook Documentation</title>
+
+<meta name="description" content="Video Hook Documentation">
+<meta name="keywords" content="Video Hook Documentation">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.78">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.roman {font-family:serif; font-weight:normal;}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<a name="SEC1"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[ &lt; ]</td>
+<td valign="middle" align="left">[<a href="#SEC2" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[ &lt;&lt; ]</td>
+<td valign="middle" align="left">[ Up ]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[Contents]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1 class="chapter"> 1. Introduction </h1>
+
+<p><var>Please be aware that vhook is deprecated, and hence its development is
+frozen (bug fixes are still accepted).
+The substitute will be 'libavfilter', the result of our 'Video Filter API'
+Google Summer of Code project. You may monitor its progress by subscribing to
+the ffmpeg-soc mailing list at
+<a href="http://lists.mplayerhq.hu/mailman/listinfo/ffmpeg-soc">http://lists.mplayerhq.hu/mailman/listinfo/ffmpeg-soc</a>.</var>
+</p>
+<p>The video hook functionality is designed (mostly) for live video. It allows
+the video to be modified or examined between the decoder and the encoder.
+</p>
+<p>Any number of hook modules can be placed inline, and they are run in the
+order that they were specified on the ffmpeg command line.
+</p>
+<p>The video hook modules are provided for use as a base for your own modules,
+and are described below.
+</p>
+<p>Modules are loaded using the -vhook option to ffmpeg. The value of this parameter
+is a space separated list of arguments. The first is the module name, and the rest
+are passed as arguments to the Configure function of the module.
+</p>
+<p>The modules are dynamic libraries: They have different suffixes (.so, .dll, .dylib)
+depending on your platform. And your platform dictates if they need to be
+somewhere in your PATH, or in your LD_LIBRARY_PATH. Otherwise you will need to
+specify the full path of the vhook file that you are using.
+</p>
+<hr size="6">
+<a name="SEC2"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC1" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC3" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[Contents]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 1.1 null.c </h2>
+
+<p>This does nothing. Actually it converts the input image to RGB24 and then converts
+it back again. This is meant as a sample that you can use to test your setup.
+</p>
+<hr size="6">
+<a name="SEC3"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC2" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC4" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[Contents]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 1.2 fish.c </h2>
+
+<p>This implements a 'fish detector'. Essentially it converts the image into HSV
+space and tests whether more than a certain percentage of the pixels fall into
+a specific HSV cuboid. If so, then the image is saved into a file for processing
+by other bits of code.
+</p>
+<p>Why use HSV? It turns out that HSV cuboids represent a more compact range of
+colors than would an RGB cuboid.
+</p>
+<hr size="6">
+<a name="SEC4"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC3" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC5" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[Contents]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 1.3 imlib2.c </h2>
+
+<p>This module implements a text overlay for a video image. Currently it
+supports a fixed overlay or reading the text from a file. The string
+is passed through strftime() so that it is easy to imprint the date and
+time onto the image.
+</p>
+<p>This module depends on the external library imlib2, available on
+Sourceforge, among other places, if it is not already installed on
+your system.
+</p>
+<p>You may also overlay an image (even semi-transparent) like TV stations do.
+You may move either the text or the image around your video to create
+scrolling credits, for example.
+</p>
+<p>The font file used is looked for in a FONTPATH environment variable, and
+prepended to the point size as a command line option and can be specified
+with the full path to the font file, as in:
+</p><table><tr><td>&nbsp;</td><td><pre class="example">-F /usr/X11R6/lib/X11/fonts/TTF/VeraBd.ttf/20
+</pre></td></tr></table>
+<p>where 20 is the point size.
+</p>
+<p>You can specify the filename to read RGB color names from. If it is not
+specified, these defaults are used: &lsquo;<tt>/usr/share/X11/rgb.txt</tt>&rsquo; and
+&lsquo;<tt>/usr/lib/X11/rgb.txt</tt>&rsquo;
+</p>
+<p>Options:
+</p><table>
+<tr><td><p> &lsquo;<samp>-C &lt;rgb.txt&gt;</samp>&rsquo;   </p></td><td><p> The filename to read RGB color names from
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-c &lt;color&gt;</samp>&rsquo;     </p></td><td><p> The color of the text
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-F &lt;fontname&gt;</samp>&rsquo;  </p></td><td><p> The font face and size
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-t &lt;text&gt;</samp>&rsquo;      </p></td><td><p> The text
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-f &lt;filename&gt;</samp>&rsquo;  </p></td><td><p> The filename to read text from
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-x &lt;expression&gt;</samp>&rsquo;</p></td><td><p> x coordinate of text or image
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-y &lt;expression&gt;</samp>&rsquo;</p></td><td><p> y coordinate of text or image
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-i &lt;filename&gt;</samp>&rsquo;  </p></td><td><p> The filename to read a image from
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-R &lt;expression&gt;</samp>&rsquo;</p></td><td><p> Value for R color
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-G &lt;expression&gt;</samp>&rsquo;</p></td><td><p> Value for G color
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-B &lt;expression&gt;</samp>&rsquo;</p></td><td><p> Value for B color
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-A &lt;expression&gt;</samp>&rsquo;</p></td><td><p> Value for Alpha channel
+</p></td></tr>
+</table>
+
+<p>Expressions are functions of these variables:
+</p><table>
+<tr><td><p> <var>N</var> </p></td><td><p> frame number (starting at zero)
+</p></td></tr>
+<tr><td><p> <var>H</var> </p></td><td><p> frame height
+</p></td></tr>
+<tr><td><p> <var>W</var> </p></td><td><p> frame width
+</p></td></tr>
+<tr><td><p> <var>h</var> </p></td><td><p> image height
+</p></td></tr>
+<tr><td><p> <var>w</var> </p></td><td><p> image width
+</p></td></tr>
+<tr><td><p> <var>X</var> </p></td><td><p> previous x coordinate of text or image
+</p></td></tr>
+<tr><td><p> <var>Y</var> </p></td><td><p> previous y coordinate of text or image
+</p></td></tr>
+</table>
+
+<p>You may also use the constants <var>PI</var>, <var>E</var>, and the math functions available at the
+FFmpeg formula evaluator at (<a href="ffmpeg-doc.html#SEC13">ffmpeg-doc.html#SEC13</a>), except <var>bits2qp(bits)</var>
+and <var>qp2bits(qp)</var>.
+</p>
+<p>Usage examples:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">   # Remember to set the path to your fonts
+   FONTPATH=&quot;/cygdrive/c/WINDOWS/Fonts/&quot;
+   FONTPATH=&quot;$FONTPATH:/usr/share/imlib2/data/fonts/&quot;
+   FONTPATH=&quot;$FONTPATH:/usr/X11R6/lib/X11/fonts/TTF/&quot;
+   export FONTPATH
+
+   # Bulb dancing in a Lissajous pattern
+   ffmpeg -i input.avi -vhook \
+     'vhook/imlib2.dll -x W*(0.5+0.25*sin(N/47*PI))-w/2 -y H*(0.5+0.50*cos(N/97*PI))-h/2 -i /usr/share/imlib2/data/images/bulb.png' \
+     -acodec copy -sameq output.avi
+
+   # Text scrolling
+   ffmpeg -i input.avi -vhook \
+     'vhook/imlib2.dll -c red -F Vera.ttf/20 -x 150+0.5*N -y 70+0.25*N -t Hello' \
+     -acodec copy -sameq output.avi
+
+   # Date and time stamp, security-camera style:
+   ffmpeg -r 29.97 -s 320x256 -f video4linux -i /dev/video0 \
+     -vhook 'vhook/imlib2.so -x 0 -y 0 -i black-260x20.png' \
+     -vhook 'vhook/imlib2.so -c white -F VeraBd.ttf/12 -x 0 -y 0 -t %A-%D-%T' \
+     output.avi
+
+     In this example the video is captured from the first video capture card as a
+     320x256 AVI, and a black 260 by 20 pixel PNG image is placed in the upper
+     left corner, with the day, date and time overlaid on it in Vera Bold 12
+     point font. A simple black PNG file 260 pixels wide and 20 pixels tall
+     was created in the GIMP for this purpose.
+
+   # Scrolling credits from a text file
+   ffmpeg -i input.avi -vhook \
+     'vhook/imlib2.so -c white -F VeraBd.ttf/16 -x 100 -y -1.0*N -f credits.txt' \
+     -sameq output.avi
+
+     In this example, the text is stored in a file, and is positioned 100
+     pixels from the left hand edge of the video. The text is scrolled from the
+     bottom up. Making the y factor positive will scroll from the top down.
+     Increasing the magnitude of the y factor makes the text scroll faster,
+     decreasing it makes it scroll slower. Hint: Blank lines containing only
+     a newline are treated as end-of-file. To create blank lines, use lines
+     that consist of space characters only.
+
+   # Scrolling credits with custom color from a text file
+   ffmpeg -i input.avi -vhook \
+     'vhook/imlib2.so -C rgb.txt -c CustomColor1 -F VeraBd.ttf/16 -x 100 -y -1.0*N -f credits.txt' \
+     -sameq output.avi
+
+     This example does the same as the one above, but specifies an rgb.txt file
+     to be used, which has a custom-made color in it.
+
+   # Variable colors
+   ffmpeg -i input.avi -vhook \
+     'vhook/imlib2.so -t Hello -R abs(255*sin(N/47*PI)) -G abs(255*sin(N/47*PI)) -B abs(255*sin(N/47*PI))' \
+     -sameq output.avi
+
+     In this example, the color for the text goes up and down from black to
+     white.
+
+   # Text fade-out
+   ffmpeg -i input.avi -vhook \
+     'vhook/imlib2.so -t Hello -A max(0,255-exp(N/47))' \
+     -sameq output.avi
+
+     In this example, the text fades out in about 10 seconds for a 25 fps input
+     video file.
+
+   # scrolling credits from a graphics file
+   ffmpeg -sameq -i input.avi \
+     -vhook 'vhook/imlib2.so -x 0 -y -1.0*N -i credits.png' output.avi
+
+     In this example, a transparent PNG file the same width as the video
+     (e.g. 320 pixels), but very long, (e.g. 3000 pixels), was created, and
+     text, graphics, brushstrokes, etc, were added to the image. The image
+     is then scrolled up, from the bottom of the frame.
+
+</pre></td></tr></table>
+
+<hr size="6">
+<a name="SEC5"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC4" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC6" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[Contents]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 1.4 ppm.c </h2>
+
+<p>It's basically a launch point for a PPM pipe, so you can use any
+executable (or script) which consumes a PPM on stdin and produces a PPM
+on stdout (and flushes each frame). The Netpbm utilities are a series of
+such programs.
+</p>
+<p>A list of them is here:
+</p>
+<p><a href="http://netpbm.sourceforge.net/doc/directory.html">http://netpbm.sourceforge.net/doc/directory.html</a>
+</p>
+<p>Usage example:
+</p>
+<table><tr><td>&nbsp;</td><td><pre class="example">ffmpeg -i input -vhook &quot;/path/to/ppm.so some-ppm-filter args&quot; output
+</pre></td></tr></table>
+
+<hr size="6">
+<a name="SEC6"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC5" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC7" title="Next section in reading order"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[Contents]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 1.5 drawtext.c </h2>
+
+<p>This module implements a text overlay for a video image. Currently it
+supports a fixed overlay or reading the text from a file. The string
+is passed through strftime() so that it is easy to imprint the date and
+time onto the image.
+</p>
+<p>Features:
+</p><ul class="toc">
+<li>- TrueType, Type1 and others via the FreeType2 library
+</li><li>- Font kerning (better output)
+</li><li>- Line Wrap (put the text that doesn't fit one line on the next line)
+</li><li>- Background box (currently in development)
+</li><li>- Outline
+</li></ul>
+
+<p>Options:
+</p><table>
+<tr><td><p> &lsquo;<samp>-c &lt;color&gt;</samp>&rsquo;          </p></td><td><p> Foreground color of the text ('internet' way) &lt;#RRGGBB&gt; [default #FFFFFF]
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-C &lt;color&gt;</samp>&rsquo;          </p></td><td><p> Background color of the text ('internet' way) &lt;#RRGGBB&gt; [default #000000]
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-f &lt;font-filename&gt;</samp>&rsquo;  </p></td><td><p> font file to use
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-t &lt;text&gt;</samp>&rsquo;           </p></td><td><p> text to display
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-T &lt;filename&gt;</samp>&rsquo;       </p></td><td><p> file to read text from
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-x &lt;pos&gt;</samp>&rsquo;            </p></td><td><p> x coordinate of the start of the text
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-y &lt;pos&gt;</samp>&rsquo;            </p></td><td><p> y coordinate of the start of the text
+</p></td></tr>
+</table>
+
+<p>Text fonts are being looked for in a FONTPATH environment variable.
+If the FONTPATH environment variable is not available, or is not checked by
+your target (i.e. Cygwin), then specify the full path to the font file as in:
+</p><table><tr><td>&nbsp;</td><td><pre class="example">-f /usr/X11R6/lib/X11/fonts/TTF/VeraBd.ttf
+</pre></td></tr></table>
+
+<p>Usage Example:
+</p><table><tr><td>&nbsp;</td><td><pre class="example">   # Remember to set the path to your fonts
+   FONTPATH=&quot;/cygdrive/c/WINDOWS/Fonts/&quot;
+   FONTPATH=&quot;$FONTPATH:/usr/share/imlib2/data/fonts/&quot;
+   FONTPATH=&quot;$FONTPATH:/usr/X11R6/lib/X11/fonts/TTF/&quot;
+   export FONTPATH
+
+   # Time and date display
+   ffmpeg -f video4linux2 -i /dev/video0 \
+   -vhook 'vhook/drawtext.so -f VeraBd.ttf -t %A-%D-%T' movie.mpg
+
+     This example grabs video from the first capture card and outputs it to an
+     MPEG video, and places &quot;Weekday-dd/mm/yy-hh:mm:ss&quot; at the top left of the
+     frame, updated every second, using the Vera Bold TrueType Font, which
+     should exist in: /usr/X11R6/lib/X11/fonts/TTF/
+</pre></td></tr></table>
+
+<p>Check the man page for strftime() for all the various ways you can format
+the date and time.
+</p>
+<hr size="6">
+<a name="SEC7"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC6" title="Previous section in reading order"> &lt; </a>]</td>
+<td valign="middle" align="left">[ &gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Up section"> Up </a>]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC1" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[Contents]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h2 class="section"> 1.6 watermark.c </h2>
+
+<p>Command Line options:
+</p><table>
+<tr><td><p> &lsquo;<samp>-m [0|1]</samp>&rsquo;            </p></td><td><p> Mode (default: 0, see below)
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-t 000000 - FFFFFF</samp>&rsquo;  </p></td><td><p> Threshold, six digit hex number
+</p></td></tr>
+<tr><td><p> &lsquo;<samp>-f &lt;filename&gt;</samp>&rsquo;       </p></td><td><p> Watermark image filename, must be specified!
+</p></td></tr>
+</table>
+
+<p>MODE 0:
+ The watermark picture works like this (assuming color intensities 0..0xFF):
+ Per color do this:
+ If mask color is 0x80, no change to the original frame.
+ If mask color is &lt; 0x80 the absolute difference is subtracted from the
+ frame. If result &lt; 0, result = 0.
+ If mask color is &gt; 0x80 the absolute difference is added to the
+ frame. If result &gt; 0xFF, result = 0xFF.
+</p>
+<p> You can override the 0x80 level with the -t flag. E.g. if threshold is
+ 000000 the color value of watermark is added to the destination.
+</p>
+<p> This way a mask that is visible both in light and dark pictures can be made
+ (e.g. by using a picture generated by the Gimp and the bump map tool).
+</p>
+<p> An example watermark file is at:
+ <a href="http://engene.se/ffmpeg_watermark.gif">http://engene.se/ffmpeg_watermark.gif</a>
+</p>
+<p>MODE 1:
+ Per color do this:
+ If mask color &gt; threshold color then the watermark pixel is used.
+</p>
+<p>Example usage:
+</p><table><tr><td>&nbsp;</td><td><pre class="example">   ffmpeg -i infile -vhook '/path/watermark.so -f wm.gif' -an out.mov
+   ffmpeg -i infile -vhook '/path/watermark.so -f wm.gif -m 1 -t 222222' -an out.mov
+</pre></td></tr></table>
+
+<hr size="6">
+<a name="SEC_About"></a>
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC1" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[Contents]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<h1>About This Document</h1>
+<p>
+  This document was generated on <i>December, 16 2014</i> using <a href="http://www.nongnu.org/texi2html/"><i>texi2html 1.78</i></a>.
+</p>
+<p>
+  The buttons in the navigation panels have the following meaning:
+</p>
+<table border="1">
+  <tr>
+    <th> Button </th>
+    <th> Name </th>
+    <th> Go to </th>
+    <th> From 1.2.3 go to</th>
+  </tr>
+  <tr>
+    <td align="center"> [ &lt; ] </td>
+    <td align="center">Back</td>
+    <td>Previous section in reading order</td>
+    <td>1.2.2</td>
+  </tr>
+  <tr>
+    <td align="center"> [ &gt; ] </td>
+    <td align="center">Forward</td>
+    <td>Next section in reading order</td>
+    <td>1.2.4</td>
+  </tr>
+  <tr>
+    <td align="center"> [ &lt;&lt; ] </td>
+    <td align="center">FastBack</td>
+    <td>Beginning of this chapter or previous chapter</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td align="center"> [ Up ] </td>
+    <td align="center">Up</td>
+    <td>Up section</td>
+    <td>1.2</td>
+  </tr>
+  <tr>
+    <td align="center"> [ &gt;&gt; ] </td>
+    <td align="center">FastForward</td>
+    <td>Next chapter</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td align="center"> [Top] </td>
+    <td align="center">Top</td>
+    <td>Cover (top) of document</td>
+    <td> &nbsp; </td>
+  </tr>
+  <tr>
+    <td align="center"> [Contents] </td>
+    <td align="center">Contents</td>
+    <td>Table of contents</td>
+    <td> &nbsp; </td>
+  </tr>
+  <tr>
+    <td align="center"> [Index] </td>
+    <td align="center">Index</td>
+    <td>Index</td>
+    <td> &nbsp; </td>
+  </tr>
+  <tr>
+    <td align="center"> [ ? ] </td>
+    <td align="center">About</td>
+    <td>About (help)</td>
+    <td> &nbsp; </td>
+  </tr>
+</table>
+
+<p>
+  where the <strong> Example </strong> assumes that the current position is at <strong> Subsubsection One-Two-Three </strong> of a document of the following structure:
+</p>
+
+<ul>
+  <li> 1. Section One
+    <ul>
+      <li>1.1 Subsection One-One
+        <ul>
+          <li>...</li>
+        </ul>
+      </li>
+      <li>1.2 Subsection One-Two
+        <ul>
+          <li>1.2.1 Subsubsection One-Two-One</li>
+          <li>1.2.2 Subsubsection One-Two-Two</li>
+          <li>1.2.3 Subsubsection One-Two-Three &nbsp; &nbsp;
+            <strong>&lt;== Current Position </strong></li>
+          <li>1.2.4 Subsubsection One-Two-Four</li>
+        </ul>
+      </li>
+      <li>1.3 Subsection One-Three
+        <ul>
+          <li>...</li>
+        </ul>
+      </li>
+      <li>1.4 Subsection One-Four</li>
+    </ul>
+  </li>
+</ul>
+
+<hr size="1">
+<p>
+ <font size="-1">
+  This document was generated on <i>December, 16 2014</i> using <a href="http://www.nongnu.org/texi2html/"><i>texi2html 1.78</i></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

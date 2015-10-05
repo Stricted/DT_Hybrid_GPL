@@ -1,0 +1,56 @@
+[settings]
+functionname=hi_voip_cli_play_dtmf;  
+attributenum=39;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chanid>       type<uint>   range<0x0,0xFFFFFFFF>   default<0>; /*通道号*/
+attribute=alias<direction>    type<uint>   range<0x0,0xFFFFFFFF>   default<1>; /*放音方向*/
+attribute=alias<hlevel>       type<uint>   range<0x0,0xFFFFFFFF>   default<100>; /*高频电平值*/
+attribute=alias<llevel>       type<uint>   range<0x0,0xFFFFFFFF>   default<100>; /*低频电平值*/
+attribute=alias<play_time>    type<uint>   range<0x0,0xFFFFFFFF>   default<0x64>; /*OnTime时长，单位ms*/
+attribute=alias<pause_time>   type<uint>   range<0x0,0xFFFFFFFF>   default<0x64>; /*OffTime 时长，单位ms*/
+attribute=alias<dtmfnum>      type<uint>   range<0x0,0xFFFFFFFF>   default<16>; /*需要播放的DTMF个数*/
+
+attribute=alias<dtmf0>      type<char>   range<0x0,0xFF>   default<0x0>; /*DTMF音 0 */
+attribute=alias<dtmf1>      type<char>   range<0x0,0xFF>   default<0x1>; /*DTMF音 1 */
+attribute=alias<dtmf2>      type<char>   range<0x0,0xFF>   default<0x2>; /*DTMF音 2 */
+attribute=alias<dtmf3>      type<char>   range<0x0,0xFF>   default<0x3>; /*DTMF音 3 */
+attribute=alias<dtmf4>      type<char>   range<0x0,0xFF>   default<0x4>; /*DTMF音 4 */
+attribute=alias<dtmf5>      type<char>   range<0x0,0xFF>   default<0x5>; /*DTMF音 5 */
+attribute=alias<dtmf6>      type<char>   range<0x0,0xFF>   default<0x6>; /*DTMF音 6 */
+attribute=alias<dtmf7>      type<char>   range<0x0,0xFF>   default<0x7>; /*DTMF音 7 */
+attribute=alias<dtmf8>      type<char>   range<0x0,0xFF>   default<0x8>; /*DTMF音 8 */
+attribute=alias<dtmf9>      type<char>   range<0x0,0xFF>   default<0x9>; /*DTMF音 9 */
+attribute=alias<dtmf10>     type<char>   range<0x0,0xFF>   default<0xa>; /*DTMF音 * */
+attribute=alias<dtmf11>     type<char>   range<0x0,0xFF>   default<0xb>; /*DTMF音 # */
+attribute=alias<dtmf12>     type<char>   range<0x0,0xFF>   default<0xc>; /*DTMF音 A */
+attribute=alias<dtmf13>     type<char>   range<0x0,0xFF>   default<0xd>; /*DTMF音 B */
+attribute=alias<dtmf14>     type<char>   range<0x0,0xFF>   default<0xe>; /*DTMF音 C */
+attribute=alias<dtmf15>     type<char>   range<0x0,0xFF>   default<0xf>; /*DTMF音 D */
+attribute=alias<dtmf16>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf17>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf18>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf19>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf20>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf21>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf22>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf23>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf24>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf25>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf26>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf27>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf28>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf29>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf30>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+attribute=alias<dtmf31>     type<char>   range<0x0,0xFF>   default<0>; /*DTMF音  */
+
+[help]
+usage: play_dtmf                		; DTMF产生   
+       play_dtmf -v chanid 0        ; 通道号
+       play_dtmf -v direction 1     ; 放音方向
+       play_dtmf -v hlevel 100      ; 高频电平值，单位：0.1dbm
+       play_dtmf -v llevel 100      ; 低频电平值，单位：0.1dbm
+       play_dtmf -v play_time 0x64  ; OnTime时长，单位ms
+       play_dtmf -v play_time 0x64  ; OffTime 时长，单位ms
+       play_dtmf -v dtmfnum 16      ; 需要播放的DTMF个数

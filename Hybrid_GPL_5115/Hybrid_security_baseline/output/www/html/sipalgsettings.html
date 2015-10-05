@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="../css/main.css" type="text/css" />
+        <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+        <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+        <script type="text/javascript" src="../js/refresh.js"></script>
+        <script type="text/javascript" src="../js/sipalgsettings.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <div id="all_content" class="body_bg_settings">
+        <input type="text" id="focus_hidden" style="display:none" value="focus">
+                            <div class="maintitle">
+                                <h1 id="title_label_algsettings">
+                                <script type="text/javascript">dw(firewall_label_alg_settings);</script>
+                                </h1>
+                            </div>
+                            <div class="main_content">
+                                <p>
+                                    <script type="text/javascript">dw(firewall_help_sip_alg_settings);</script>
+                                </p>
+                                <div class="dmz_statue">
+                                    <table border="0" cellspacing="0" cellpadding="0">
+                                        <tr style="display:none">
+                                            <td height="32" colspan="2" align="left">
+                                            <div class="radio">
+                                                <input name="sip_sttings" id="enable_sip_l2tp" type="checkbox"/>
+                                                <span>
+                                                    <script type="text/javascript">dw(sipalg_label_enable_l2tpstatus);</script>
+                                                </span>
+                                            </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="32" colspan="2" align="left">
+                                            <div class="radio">
+                                                <input name="sip_sttings" id="enable_sip_h323" type="checkbox"/>
+                                                <span>
+                                                    <script type="text/javascript">dw(sipalg_label_enable_h323status);</script>
+                                                </span>
+                                            </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="32" colspan="2" align="left">
+                                            <div class="radio">
+                                                <input name="sip_sttings" id="enable_sip_rtsp" type="checkbox"/>
+                                                <span>
+                                                    <script type="text/javascript">dw(sipalg_label_enable_rtspstatus);</script>
+                                                </span>
+                                            </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="32" colspan="2" align="left">
+                                            <div class="radio">
+                                                <input name="sip_sttings" id="enable_sip_pptp" type="checkbox"/>
+                                                <span>
+                                                    <script type="text/javascript">dw(sipalg_label_enable_pptpstatus);</script>
+                                                </span>
+                                            </div>
+                                            </td>
+                                        </tr>
+                                        <tr style="display:none">
+                                            <td height="32" colspan="2" align="left">
+                                            <div class="radio">
+                                                <input name="sip_sttings" id="enable_sip_ftp" type="checkbox"/>
+                                                <span>
+                                                    <script type="text/javascript">dw(sipalg_label_enable_ftpstatus);</script>
+                                                </span>
+                                            </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td height="32" colspan="2" align="left">
+                                            <div class="radio">
+                                                <input name="sip_sttings" id="enable_sip_alg" type="checkbox"/>
+                                                <span>
+                                                    <script type="text/javascript">dw(firewall_label_enable_sip_alg);</script>
+                                                </span>
+                                            </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="100" height="42" valign="top">
+                                            <span id="sip_port_span">
+                                                <script type="text/javascript">dw(firewall_label_sip_port + common_colon);</script>
+                                            </span>
+                                            </td>
+                                            <td valign="top">
+                                            <input id="sip_port" type="text" maxlength="5"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="apply_button">
+                                    <script type="text/javascript">create_button(common_apply, "apply_button");</script>
+                                </div>
+                            </div>
+                        </div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+[settings]
+functionname=hi_voip_cli_cfg_simpletone;  
+attributenum=45;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<toneidx>    type<uint>   range<0x0,0xFFFFFFFF>   default<0x00>
+attribute=alias<name>       type<binary> range<0,32>          default<0x00>
+attribute=alias<mix>        type<ushort> range<0x0,0xFFFF>    default<0x00>
+attribute=alias<Reserved>   type<ushort> range<0x0,0xFFFF>    default<0x55>
+attribute=alias<rhythmnum>  type<ushort> range<0x0,0xFFFF>    default<0x01>
+attribute=alias<loop>       type<ushort> range<0x0,0xFFFF>    default<0x02>
+
+attribute=alias<ToneFreq0>  type<ushort>  range<0x0,0xFFFF>   default<0x044c>
+attribute=alias<ToneAmp0>   type<ushort>  range<0x0,0xFFFF>   default<0x64>
+attribute=alias<ToneFreq1>  type<ushort>  range<0x0,0xFFFF>   default<0xffff>
+attribute=alias<ToneAmp1>   type<ushort>  range<0x0,0xFFFF>   default<0xffff>
+attribute=alias<ToneFreq2>  type<ushort>  range<0x0,0xFFFF>   default<0xffff>
+attribute=alias<ToneAmp2>   type<ushort>  range<0x0,0xFFFF>   default<0xffff>
+attribute=alias<ToneFreq3>  type<ushort>  range<0x0,0xFFFF>   default<0xffff>
+attribute=alias<ToneAmp3>   type<ushort>  range<0x0,0xFFFF>   default<0xffff>
+
+attribute=alias<TPIndex0>   type<ushort>  range<0x0,0xFFFF>   default<0xfff0>
+attribute=alias<OnTime0>    type<ushort>  range<0x0,0xFFFF>   default<0x1f4>
+attribute=alias<OffTime0>   type<ushort>  range<0x0,0xFFFF>   default<0x1f4>
+attribute=alias<Reserved0>  type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<TPIndex1>   type<ushort>  range<0x0,0xFFFF>   default<0xffff>
+attribute=alias<OnTime1>    type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<OffTime1>   type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<Reserved1>  type<ushort>  range<0x0,0xFFFF>   default<0x00>
+
+attribute=alias<TPIndex2>   type<ushort>  range<0x0,0xFFFF>   default<0xffff>
+attribute=alias<OnTime2>    type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<OffTime2>   type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<Reserved2>  type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<TPIndex3>   type<ushort>  range<0x0,0xFFFF>   default<0xffff>
+attribute=alias<OnTime3>    type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<OffTime3>   type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<Reserved3>  type<ushort>  range<0x0,0xFFFF>   default<0x00>
+
+attribute=alias<TPIndex4>   type<ushort>  range<0x0,0xFFFF>   default<0xffff>
+attribute=alias<OnTime4>    type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<OffTime4>   type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<Reserved4>  type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<TPIndex5>   type<ushort>  range<0x0,0xFFFF>   default<0xffff>
+attribute=alias<OnTime5>    type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<OffTime5>   type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<Reserved5>  type<ushort>  range<0x0,0xFFFF>   default<0x00>
+
+attribute=alias<TPIndex6>   type<ushort>  range<0x0,0xFFFF>   default<0xffff>
+attribute=alias<OnTime6>    type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<OffTime6>   type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<Reserved6>  type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<TPIndex7>   type<ushort>  range<0x0,0xFFFF>   default<0xffff>
+attribute=alias<OnTime7>    type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<OffTime7>   type<ushort>  range<0x0,0xFFFF>   default<0x00>
+attribute=alias<Reserved7>  type<ushort>  range<0x0,0xFFFF>   default<0x00>
+
+[help]
+usage: cfg_simpletone                                 ; 配置单音信息  
+       cfg_simpletone -v toneidx 1                    ; 
+       cfg_simpletone -v name "0x6C 0x6F 0x76 0x65"   ; SimpleTone名字
+       cfg_simpletone -v mix  1                       ; 开启混音
+       cfg_simpletone -v rhythmnum  1                 ; 后面有1个节奏
+       cfg_simpletone -v loop  2                      ; 循环3次（2+1)
+       cfg_simpletone -v ToneFreq0 1100               ; 1100Hz
+       cfg_simpletone -v OnTime0 500                  ; ontime设置为500ms

@@ -1,0 +1,1 @@
+cmd_drivers/scsi/scsi_wait_scan.ko := /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/bin/arm-hsan-linux-uclibcgnueabi-ld -EL -r   --build-id -o drivers/scsi/scsi_wait_scan.ko drivers/scsi/scsi_wait_scan.o drivers/scsi/scsi_wait_scan.mod.o

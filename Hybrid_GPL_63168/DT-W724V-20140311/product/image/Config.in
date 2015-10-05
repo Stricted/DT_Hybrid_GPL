@@ -1,0 +1,202 @@
+menu "Image Name Config"
+
+config HGW_IMAGE_RELEASE_WITH_BOOTLOADER_NAME
+	string "RELEASE IMAGE WITH BOOTLOADER NAME"
+	default "$(HGW_PRODUCTNAME)$(HGW_RELEASE_CUSTOMER)_pack"
+	help
+	  set release image with bootloader name
+
+config HGW_IMAGE_RELEASE_WITHOUT_BOOTLOADER_NAME
+	string "RELEASE IMAGE WITHOUT BOOTLOADER NAME"
+	default "$(HGW_PRODUCTNAME)$(HGW_RELEASE_CUSTOMER)_main"
+	help
+	  set release image without bootloader name 
+	
+config HGW_IMAGE_DEBUG_WITH_BOOTLOADER_NAME
+	string "DEBUG IMAGE NAME WITH BOOTLADER"
+	default "$(HGW_PRODUCTNAME)$(HGW_RELEASE_ENGINEERING)_pack_debug"
+	help
+	  set debug image with bootloader name 
+
+config HGW_IMAGE_DEBUG_WITHOUT_BOOTLOADER_NAME
+	string "DEBUG IMAGE NAME WITHOUT BOOTLADER"
+	default "$(HGW_PRODUCTNAME)$(HGW_RELEASE_ENGINEERING)_main_debug"
+	help
+	  set debug image without bootloader name 
+	
+config HGW_IMAGE_ACS_WITH_BOOTLOADER_NAME
+	string "ACS IMAGE NAME WITHOUT BOOTLOADER"
+	default "$(HGW_PRODUCTNAME)$(HGW_RELEASE_ACS)_pack_acs"
+	help
+	  set acs image with bootloader name 
+	  
+config HGW_IMAGE_ACS_WITHOUT_BOOTLOADER_NAME
+	string "ACS IMAGE NAME WITHOUTOUT BOOTLOADER"
+	default "$(HGW_PRODUCTNAME)$(HGW_RELEASE_ACS)_main_acs"
+	help
+	  set acs image without bootloader name 
+	
+config HGW_IMAGE_MULTICAST_UPGRADE_NOT_RESTORE_DEFAULT_WITH_BOOTLOADER_NAME
+	string "multicast upgrade image not restore default and with bootloader name"
+	default "$(HGW_PRODUCTNAME)$(HGW_SOFTVERSION_WEB)_multicast_not_restore_default_pack"
+	help
+	  set multicast upgrade image not restore default and with bootloader name
+	  
+config HGW_IMAGE_MULTICAST_UPGRADE_NOT_RESTORE_DEFAULT_WITHOUT_BOOTLOADER_NAME
+	string "multicast upgrade image not restore default and without bootloader name"
+	default "$(HGW_PRODUCTNAME)$(HGW_SOFTVERSION_WEB)_multicast_not_restore_default_main"
+	help
+	  set multicast upgrade image not restore default and without bootloader name
+	  
+config HGW_IMAGE_MULTICAST_UPGRADE_RESTORE_DEFAULT_WITH_BOOTLOADER_NAME
+	string "multicast upgrade image restore default and with bootloader name"
+	default "$(HGW_PRODUCTNAME)$(HGW_SOFTVERSION_WEB)_multicast_restore_default_pack"
+	help
+	  set multicast upgrade image restore default and with bootloader name
+	  
+config HGW_IMAGE_MULTICAST_UPGRADE_RESTORE_DEFAULT_WITHOUT_BOOTLOADER_NAME
+	string "multicast upgrade image restore default and without bootloader name"
+	default "$(HGW_PRODUCTNAME)$(HGW_SOFTVERSION_WEB)_multicast_restore_default_main"
+	help
+	  set multicast upgrade image restore default and without bootloader name
+	  
+config HGW_IMAGE_MULTICAST_UPGRADE_USE_MULTI_CFG_WITH_BOOTLOADER_NAME
+	string "multicast upgrade image use multi cfg with bootloader name"
+	default "$(HGW_PRODUCTNAME)$(HGW_SOFTVERSION_WEB)_multicast_with_multicfg_pack"
+	help
+	  set multicast upgrade image use multi cfg with bootloader name
+	  
+config HGW_IMAGE_MULTICAST_UPGRADE_USE_MULTI_CFG_WITHOUT_BOOTLOADER_NAME
+	string "multicast upgrade image use multi cfg without bootloader name"
+	default "$(HGW_PRODUCTNAME)$(HGW_SOFTVERSION_WEB)_multicast_with_multicfg_main"
+	help
+	  set multicast upgrade image use multi cfg without bootloader name
+	
+config HGW_IMAGE_MULTICAST_UPGRADE_USE_MULTI_CFG_LTE_WITH_BOOTLOADER_NAME
+	string "multicast upgrade image use multi cfg lte with bootloader name"
+	depends on ATP_HYBRID
+	default "$(HGW_PRODUCTNAME)$(HGW_SOFTVERSION_WEB)_multicast_with_multicfg_lte_pack"
+	help
+	  set multicast upgrade image use multi cfg lte with bootloader name
+	  
+config HGW_IMAGE_MULTICAST_UPGRADE_USE_MULTI_CFG_LTE_WITHOUT_BOOTLOADER_NAME
+	string "multicast upgrade image use multi cfg lte without bootloader name"
+	depends on ATP_HYBRID
+	default "$(HGW_PRODUCTNAME)$(HGW_SOFTVERSION_WEB)_multicast_with_multicfg_lte_main"
+	help
+	  set multicast upgrade image use multi cfg lte without bootloader name
+	
+config HGW_IMAGE_FACTORY_NAME
+	string "FACTORY IMAGE NAME"
+	default "$(HGW_PRODUCTNAME)$(HGW_SOFTVERSION_WEB)_factory"
+	help
+	  set factory image name
+
+endmenu
+
+menu "Image Building Config"
+
+menu"Multcast upgrade Image Build Edit"
+	
+config BUILD_ATP_MULTCAST_NOT_RESTORE_DEFAULT
+	bool "build multcast upgrade image not restore default"
+	help
+	build multcast upgrade image not restore default
+	
+config BUILD_ATP_MULTCAST_RESTORE_DEFAULT
+	bool "build multcast upgrade image retore default"
+	help
+	build multcast upgrade image retore default
+	
+config BUILD_ATP_MULTCAST_USE_MULTI_CFG
+	bool "build multcast upgrade image use factorycfg"
+	help
+	build multcast upgrade image use factorycfg
+
+config BUILD_ATP_MULTCAST_USE_MULTI_LTE_CFG
+	bool "build multcast upgrade image use factorycfg lte"
+	depends on ATP_HYBRID
+	help
+	build multcast upgrade image use factorycfg lte
+endmenu
+
+menu"Multcast config Image Build Edit"
+	
+config BUILD_ATP_CONFIG_IAMGE
+	bool "build config image"
+	help
+	build config image 
+endmenu
+
+config BUILD_ATP_FACTORY_IMAGE
+	bool "build factory image"
+	default n
+	help
+	build factory image
+
+config BUILD_ATP_DECT_INTO_IAMGE
+	bool "build dect into image"
+	default n
+	help
+	build dect into image
+	
+config BUILD_ATP_DECT_IAMGE
+	bool "build dect image"
+	default n
+	help
+	build dect image
+	
+if 	BUILD_ATP_DECT_IAMGE
+
+choice
+	prompt "Choose dect norflash size"
+	default BUILD_DECT_NORFLASH_1M
+
+config BUILD_DECT_NORFLASH_1M
+	bool "1M"	
+	help
+	  dect norflash size is 1M
+	
+config BUILD_DECT_NORFLASH_2M
+	bool "2M"	
+	help
+	  dect norflash size is 2M
+
+endchoice
+
+config BUILD_ATP_DECT_IAMGE_SIZE
+	int
+	default 1048576 if BUILD_DECT_NORFLASH_1M
+	default 2097152 if BUILD_DECT_NORFLASH_2M
+	help
+	  This is the softversion show on the web page.	
+
+endif
+
+config BUILD_ATP_I2C_INTO_IMAGE
+	bool "build I2C into image"
+	depends on ATP_HYBRID
+	default n
+	help
+	build I2C into image
+	
+config BUILD_ATP_SD5115_BOOT_INTO_IMAGE
+	bool "build SD5115 Boot into image"
+	depends on ATP_HYBRID
+	default n
+	help
+	build SD5115 Boot into image
+	
+config BUILD_ATP_LTE_INTO_IMAGE
+	bool "build LTE into image"
+	depends on ATP_HYBRID
+	default n
+	help
+	build LTE into image
+	
+endmenu
+
+
+
+
+

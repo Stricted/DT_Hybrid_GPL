@@ -1,0 +1,11 @@
+[settings]
+functionname=hi_cli_get_glb;
+attributenum=1;
+attributeflag = 1;   //0:close 1:open
+
+[parameter]
+attribute=alias<rootpath> type<string> range<0,256>                 default<hi_cli home/cli/>;
+
+[help]
+
+

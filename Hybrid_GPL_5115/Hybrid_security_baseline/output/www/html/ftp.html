@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" />
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+<script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+<script type="text/javascript" src="../js/refresh.js"></script>
+<script type="text/javascript" src="../js/validation.js"></script>
+<script type="text/javascript" src="../js/ftp.js"></script>
+<script type="text/javascript">
+</script>
+<title></title>
+</head>
+
+<body>
+<div id="all_content" class="bodybg">
+    <input type="text" id="focus_hidden" style="display:none" value="focus">
+    <div class="maintitle">
+        <h1 id="title_label_ftpclient"><script type="text/javascript">dw(acl_ftp);</script></h1>
+    </div>
+    <div class="main_content" style="min-height:0;">
+        <h2><script type="text/javascript">dw(label_ftp_client);</script></h2>
+        <table cellpadding="0" cellspacing="0" id="ftp_client_table">
+            <tr>
+                <td><script type="text/javascript">dw(dialup_label_user_name+common_colon);</script></td>
+                <td><input type="text" id="ftp_username"  maxlength="20"  size="35"/></td>
+            </tr>
+            <tr>
+                <td><script type="text/javascript">dw(common_password+common_colon);</script></td>
+                <td><input type="password" id="ftp_password"  maxlength="20"  size="35"/></td>
+            </tr>
+            <tr>
+                <td><script type="text/javascript">dw(label_download_url+common_colon);</script></td>
+                <td><input type="text" id="ftp_downloadurl" value="ftp://"  maxlength="512"  size="35"/></td>
+            </tr>
+            <tr>
+                <td><script type="text/javascript">dw(label_port+common_colon);</script></td>
+                <td><input type="text" id="ftp_port" value="21"  maxlength="5"  size="35"/></td>
+            </tr>
+            <tr>
+                <td><script type="text/javascript">dw(samba_label_device+common_colon);</script></td>
+                <td><select id="ftp_device" class='input_select' style="width:auto;margin-left:0px"/></select></td>
+            </tr>
+            <tr>
+                <td><script type="text/javascript">dw(label_local_path+common_colon);</script></td>
+                <td><input type="text" id="ftp_localpath"  maxlength="64"  size="35"/></td>
+            </tr>
+        </table>
+        <div class="apply_button" id="apply_button">
+        <script type="text/javascript">create_button(button_download,"apply");</script> 
+        </div>
+    </div>
+    
+    <div class="main_content" style="min-height:0;">
+    <h2><script type="text/javascript">dw(label_download_history);</script></h2>
+    </div>
+    <table id="table_download_hostory" class="table_status" cellpadding="0" cellspacing="0">
+        <tr>
+            <th><script type="text/javascript">dw(dialup_label_user_name);</script></th>
+            <th><script type="text/javascript">dw(label_port);</script></th>
+            <th><script type="text/javascript">dw(label_download_url);</script></th>
+            <th><script type="text/javascript">dw(label_local_path);</script></th>
+            <th><script type="text/javascript">dw(firewall_label_status);</script></th>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

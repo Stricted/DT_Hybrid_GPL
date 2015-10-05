@@ -1,0 +1,111 @@
+[settings]
+functionname=0xF7002004;
+attributenum=49;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       							type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000D1E>; /*È«¾ÖÄ£¿é*/
+attribute=alias<em_port>                       			type<int>   range<0,1>  			default<0x00000000>;
+attribute=alias<rx_octets_ok_cnt>                       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_octets_bad_cnt>                      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_uc_pkts_cnt>                         type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_mc_pkts_cnt>                         type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_bc_pkts_cnt>                         type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_pkts_64oct_cnt>                      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_pkts_65to127_oct_cnt>                type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_pkts_128to255_oct_cnt>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_pkts_256to511_oct_cnt>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_pkts_512to1023_oct_cnt>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_pkts_1024to1518_oct_cnt>             type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_pkts_1519tomax_oct_cnt>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_fcs_err_cnt>                         type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_tagged_cnt>                          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_data_err_cnt>                        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_align_err_cnt>                       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_long_err_cnt>                        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_jabber_err_cnt>                      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_pause_cnt>                           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_unk_ctl_cnt>                         type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_very_long_err_cnt>                   type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_runt_err_cnt>                        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_short_err_cnt>                       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_octets_ok_cnt>                       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_octets_bad_cnt>                      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_uc_pks_cnt>                          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_mc_pks_cnt>                          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_bc_pks_cnt>                          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_pkts_64oct_cnt>                      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_pkts_65to127_oct_cnt>                type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_pkts_128to255_oct_cnt>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_pkts_256to511_oct_cnt>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_pkts_512to1023_oct_cnt>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_pkts_1024to1518_oct_cnt>             type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_pkts_1519tomax_oct_cnt>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_total_col_cnt>                       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_single_col_cnt>                      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_multi_col_cnt>                       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_late_col_cnt>                        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_exc_col_err_cnt>                     type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_exc_len_drop_cnt>                    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_underrun_cnt>                        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_tagged_cn>                           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_crc_err_cnt>                         type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tx_pause_cnt>                           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_overrun_cnt>                         type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<rx_lengthfield_er_cnt>                  type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+                                               
+[help]										   
+typedef struct 
+{
+    HI_DP_PORT_E    em_port;            /* GE0/GE1 */
+    
+    uint    rx_octets_ok_cnt;        
+    uint    rx_octets_bad_cnt;          
+    uint    rx_uc_pkts_cnt;             
+    uint    rx_mc_pkts_cnt;             
+    uint    rx_bc_pkts_cnt;             
+    uint    rx_pkts_64oct_cnt;          
+    uint    rx_pkts_65to127_oct_cnt;    
+    uint    rx_pkts_128to255_oct_cnt;   
+    uint    rx_pkts_256to511_oct_cnt;   
+    uint    rx_pkts_512to1023_oct_cnt;  
+    uint    rx_pkts_1024to1518_oct_cnt; 
+    uint    rx_pkts_1519tomax_oct_cnt;  
+    uint    rx_fcs_err_cnt;             
+    uint    rx_tagged_cnt;              
+    uint    rx_data_err_cnt;            
+    uint    rx_align_err_cnt;           
+    uint    rx_long_err_cnt;            
+    uint    rx_jabber_err_cnt;          
+    uint    rx_pause_cnt;               
+    uint    rx_unk_ctl_cnt;             
+    uint    rx_very_long_err_cnt;      
+    uint    rx_runt_err_cnt;            
+    uint    rx_short_err_cnt;           
+    uint    tx_octets_ok_cnt;           
+    uint    tx_octets_bad_cnt;          
+    uint    tx_uc_pks_cnt;              
+    uint    tx_mc_pks_cnt;              
+    uint    tx_bc_pks_cnt;              
+    uint    tx_pkts_64oct_cnt;          
+    uint    tx_pkts_65to127_oct_cnt;    
+    uint    tx_pkts_128to255_oct_cnt;   
+    uint    tx_pkts_256to511_oct_cnt;   
+    uint    tx_pkts_512to1023_oct_cnt;  
+    uint    tx_pkts_1024to1518_oct_cnt; 
+    uint    tx_pkts_1519tomax_oct_cnt;  
+    uint    tx_total_col_cnt;           
+    uint    tx_single_col_cnt;          
+    uint    tx_multi_col_cnt;           
+    uint    tx_late_col_cnt;            
+    uint    tx_exc_col_err_cnt;         
+    uint    tx_exc_len_drop_cnt;        
+    uint    tx_underrun_cnt;            
+    uint    tx_tagged_cn;             
+    uint    tx_crc_err_cnt;             
+    uint    tx_pause_cnt;
+    uint    rx_overrun_cnt;             
+    uint    rx_lengthfield_er_cnt;     
+
+}hi_dp_logic_ge_cnt_s;
+										   

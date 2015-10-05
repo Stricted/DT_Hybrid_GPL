@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" />
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+<script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+<script type="text/javascript" src="../js/refresh.js"></script>
+<script type="text/javascript" src="../js/validation.js"></script>
+<script type="text/javascript" src="../js/sntp.js" ></script>
+<title></title>
+</head>
+<body>
+<div id="all_content" class="body_bg_settings">
+        <input type="text" id="focus_hidden" style="display:none" value="focus">
+                <div class="maintitle">
+                    <h1 id="title_label_sntp"><script type="text/javascript">dw(sntp_label_sntp);</script></h1>
+                </div>
+                
+                <div class="main_content">
+                    <table height='32px'>
+                        <tbody>
+                            <tr> 
+                                <td class='sntp_tag'><script type="text/javascript">dw(firewall_label_status+common_colon);</script></td>
+                                <td class='sntp_content' id="sntp_status"></td>
+                            </tr>
+                            <tr> 
+                                <td class='sntp_tag'><script type="text/javascript">dw(sntp_label_currenttime+common_colon);</script></td>
+                                <td class='sntp_content' id="sntp_currenttime"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class='sntp_switch'>
+                        <tr>
+                            <td width='20px'><input type="checkbox" id="sys_switch_enable" /></td>
+                            <td width='560px'><script type="text/javascript">dw(sntp_label_synchronization);</script></td> 
+                        </tr>
+                    </table>
+
+                    <div id="sntp_settings" style="display: none;">
+                        <table class="sntp_list" >
+                            <tbody id="sntp_server_list">  
+                                <tr>
+                                    <td class="sntp_timer_server_td_text"><label id="label_sntp_TimeZone" class="sntp_tag" ><script type="text/javascript">dw(sntp_label_timezone+common_colon);</script></label></td>      
+                                    <td class="sntp_timer_server_td_input" ><select id="cboTimeZone" class="sntp_server_select" ><script type="text/javascript">writeTimeZoneList();</script></select></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class='sntp_switch' >
+                            <tr>
+                                <td width='20px'><input type="checkbox" id="daylight_switch_enable"/></td>
+                                <td width='560px'><script type="text/javascript">dw(sntp_label_daylight);</script></td>                                
+                            </tr>
+                        </table>
+
+                        <div id='daylight_switch' style="display: none;">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class='sntp_daylight_tag'><label id="label_sntp_DstStart"><script type='text/javascript'>dw(sntp_label_daylightstart + common_colon)</script></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sntp_select_content">
+                                            <select class='daylight_month' id="monthstart" ><script type="text/javascript">writemonth();</script></select>&nbsp;&nbsp;
+                                            <select class='daylight_int' id="weekstart" ><script type="text/javascript">writeweek();</script></select>&nbsp;&nbsp;
+                                            <label class='daylight_string' ><script type='text/javascript'>dw(sntp_label_week)</script></label>&nbsp;&nbsp;
+                                            <select class='daylight_weekday' id="daystart" ><script type="text/javascript">writeday();</script></select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sntp_select_content" >
+                                            <select class='daylight_int' id="hhstart" ><script type="text/javascript">writehh(24);</script></select>&nbsp;&nbsp;
+                                            <label class="daylight_string"><script type='text/javascript'>dw(dialup_label_hour)</script></label>&nbsp;&nbsp;
+                                            <select class='daylight_int' id="mmstart"><script type="text/javascript">writemm();</script></select>&nbsp;&nbsp;
+                                            <label class="daylight_string" ><script type='text/javascript'>dw(dialup_label_minute)</script></label>&nbsp;&nbsp;
+                                            <select class="daylight_int" id="ssstart"><script type="text/javascript">writess();</script></select>&nbsp;&nbsp;
+                                            <label class="daylight_string"><script type='text/javascript'>dw(sntp_label_second)</script></label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table id="dstcfgend">
+                                <tbody>
+                                    <tr>
+                                        <td class='sntp_daylight_tag' ><label id="label_sntp_DstEnd"><script type='text/javascript'>dw(sntp_label_daylightend+common_colon)</script></label></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sntp_select_content">
+                                            <select class='daylight_month' id="monthend" ><script type="text/javascript">writemonth();</script></select>&nbsp;&nbsp;
+                                            <select class='daylight_int' id="weekend" ><script type="text/javascript">writeweek();</script></select>&nbsp;&nbsp;
+                                            <label class="daylight_string"><script type="text/javascript">dw(sntp_label_week)</script></label>&nbsp;&nbsp;
+                                            <select class='daylight_weekday' id="dayend" ><script type="text/javascript">writeday();</script></select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sntp_select_content">
+                                            <select class="daylight_int" id="hhend"><script type="text/javascript">writehh(24);</script></select>&nbsp;&nbsp;
+                                            <label class="daylight_string"><script type="text/javascript">dw(dialup_label_hour)</script></label>&nbsp;&nbsp;
+                                            <select class='daylight_int' id="mmend"><script type="text/javascript">writemm();</script></select>&nbsp;&nbsp;
+                                            <label class='daylight_string'><script type="text/javascript">dw(dialup_label_minute)</script></label>&nbsp;&nbsp;
+                                            <select class='daylight_int' id="ssend"><script type="text/javascript">writess();</script></select>&nbsp;&nbsp;
+                                            <label class='daylight_string'><script type="text/javascript">dw(sntp_label_second)</script></label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table id="dstcfgoffset">
+                                <tbody>
+                                    <tr>
+                                        <td class='sntp_daylight_tag' >
+                                            <label id="label_sntp_DstOffset"><script type="text/javascript">dw(sntp_label_daylightoffset+common_colon)</script></label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sntp_select_content">
+                                            <select class='daylight_int' id="offsethh"><script type="text/javascript">writehh(4);</script></select>&nbsp;&nbsp;
+                                            <label class="daylight_string"><script type="text/javascript">dw(dialup_label_hour)</script></label>&nbsp;&nbsp;
+                                            <select class='daylight_int' id="offsetmm"><script type="text/javascript">writemm();</script></select>&nbsp;&nbsp;
+                                            <label class="daylight_string"><script type="text/javascript">dw(dialup_label_minute)</script></label>&nbsp;&nbsp;
+                                            <select class='daylight_int' id="offsetss"><script type="text/javascript">writess();</script></select>&nbsp;&nbsp;
+                                            <label class="daylight_string"><script type="text/javascript">dw(sntp_label_second)</script></label>  
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  <!-- settings end -->
+                   
+                    <div class="apply_button up_left">
+                        <script type="text/javascript">create_button(common_apply,"apply_button");</script>
+                    </div>
+                </div> <!-- main_content end -->
+</div>
+
+</body>
+</html>

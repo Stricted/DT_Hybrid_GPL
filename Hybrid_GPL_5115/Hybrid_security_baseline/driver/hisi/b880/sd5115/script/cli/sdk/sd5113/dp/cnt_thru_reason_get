@@ -1,0 +1,94 @@
+[settings]
+functionname=0xF7002004;
+attributenum=43;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000D10>; /*全局模块*/
+attribute=alias<not_thru>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 不透传                  */
+attribute=alias<efc0_matched>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc1_matched>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc2_matched>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc3_matched>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc4_matched>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc5_matched>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc6_matched>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc7_matched>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc8_matched>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc9_matched>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc10_matched>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc11_matched>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc12_matched>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc13_matched>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc14_matched>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<efc15_matched>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义EFC匹配透传       */
+attribute=alias<ge0_thru>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* GE0端口为透传模式       */
+attribute=alias<ge1_thru>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* GE1端口为透传模式       */
+attribute=alias<fe2_thru>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* FE2端口为透传模式       */
+attribute=alias<fe3_thru>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* FE3端口为透传模式       */
+attribute=alias<fe4_thru>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* FE4端口为透传模式       */
+attribute=alias<un_tag>             type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* UNTAG报文               */
+attribute=alias<vlan_tag>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* VLAN TAG报文            */
+attribute=alias<pri_tag>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* PRI UNTAG报文           */
+attribute=alias<broad_cast>         type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 广播报文                */
+attribute=alias<igmp>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 组播报文                */
+attribute=alias<arp>                type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* ARP报文                 */
+attribute=alias<rarp>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* RARP报文                */
+attribute=alias<pppoe_dis>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* PPPOE DISCOVERY报文     */
+attribute=alias<eapol>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* EAPOL报文               */
+attribute=alias<bpdu>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* BPDU报文                */
+attribute=alias<dhcp>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* DHCP报文                */
+attribute=alias<ipv6>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* IPV6报文                */
+attribute=alias<icmp>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* ICMP报文                */
+attribute=alias<eth_type0>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义类型透传          */
+attribute=alias<eth_type1>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义类型透传          */
+attribute=alias<eth_type2>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义类型透传          */
+attribute=alias<eth_type3>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 自定义类型透传          */
+attribute=alias<pppoe_ses>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* PPPOE SESSION报文       */
+attribute=alias<base_smac>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 基于SMAC透传            */
+attribute=alias<thru_1588>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;          /* 41．   1588报文透传 */
+
+[help]
+    uint  not_thru;                    /* 不透传                  */
+    uint  efc0_matched;                /* 自定义EFC匹配透传       */
+    uint  efc1_matched;                /* 自定义EFC匹配透传       */
+    uint  efc2_matched;                /* 自定义EFC匹配透传       */
+    uint  efc3_matched;                /* 自定义EFC匹配透传       */
+    uint  efc4_matched;                /* 自定义EFC匹配透传       */
+    uint  efc5_matched;                /* 自定义EFC匹配透传       */
+    uint  efc6_matched;                /* 自定义EFC匹配透传       */
+    uint  efc7_matched;                /* 自定义EFC匹配透传       */
+    uint  efc8_matched;                /* 自定义EFC匹配透传       */
+    uint  efc9_matched;                /* 自定义EFC匹配透传       */
+    uint  efc10_matched;               /* 自定义EFC匹配透传       */
+    uint  efc11_matched;               /* 自定义EFC匹配透传       */
+    uint  efc12_matched;               /* 自定义EFC匹配透传       */
+    uint  efc13_matched;               /* 自定义EFC匹配透传       */
+    uint  efc14_matched;               /* 自定义EFC匹配透传       */
+    uint  efc15_matched;               /* 自定义EFC匹配透传       */
+    uint  ge0_thru;                    /* GE0端口为透传模式       */
+    uint  ge1_thru;                    /* GE1端口为透传模式       */
+    uint  fe2_thru;                    /* FE2端口为透传模式       */
+    uint  fe3_thru;                    /* FE3端口为透传模式       */
+    uint  fe4_thru;                    /* FE4端口为透传模式       */
+    uint  un_tag;                      /* UNTAG报文               */
+    uint  vlan_tag;                    /* VLAN TAG报文            */
+    uint  pri_tag;                     /* PRI UNTAG报文           */
+    uint  broad_cast;                  /* 广播报文                */
+    uint  igmp;                        /* 组播报文                */
+    uint  arp;                         /* ARP报文                 */
+    uint  rarp;                        /* RARP报文                */
+    uint  pppoe_dis;                   /* PPPOE DISCOVERY报文     */
+    uint  eapol;                       /* EAPOL报文               */
+    uint  bpdu;                        /* BPDU报文                */
+    uint  dhcp;                        /* DHCP报文                */
+    uint  ipv6;                        /* IPV6报文                */
+    uint  icmp;                        /* ICMP报文                */
+    uint  eth_type0;                   /* 自定义类型透传          */
+    uint  eth_type1;                   /* 自定义类型透传          */
+    uint  eth_type2;                   /* 自定义类型透传          */
+    uint  eth_type3;                   /* 自定义类型透传          */
+    uint  pppoe_ses;                   /* PPPOE SESSION报文       */
+    uint  base_smac;                   /* 基于SMAC透传            */
+    uint  thru_1588;                   /* 41．   1588报文透传 */
+}hi_dp_logic_thru_reason_cnt_s;

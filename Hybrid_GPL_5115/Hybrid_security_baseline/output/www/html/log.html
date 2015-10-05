@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="../css/main.css" type="text/css" />
+        <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+        <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+        <script type="text/javascript" src="../js/refresh.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+        <script type="text/javascript" src="../js/log.js"></script>
+        <title></title>
+    </head>
+
+    <body >
+        <div id="all_content" class="body_bg_settings">
+            <div class="maintitle" >
+                <h1 id="title_label_log">
+                <script type="text/javascript">dw(advanced_label_log);</script>
+                </h1>
+            </div>
+            <div class="main_content">
+                <table cellpadding="0" cellspacing="0" border="0" width="580">
+                    <tr height="30px">
+                        <td width="300">
+                            <script type="text/javascript">dw(common_enable);</script>
+                        </td>
+                        <td width="20">
+                            <input name="enable_log" id="enable_log" type="checkbox" value=""/>
+                        </td>
+                        <td width="260">
+                        </td>
+                    </tr>
+                </table>
+                <div>
+                    <table cellpadding="0" cellspacing="0" border="0" width="580" id="log_settings" style="margin-top: 15px; display: none;">
+                        <tr height="1">
+                            <th width="300"></th><th width="280"></th>
+                        </tr>
+                        <tr height="45" valign="top">
+                            <td>
+                                <script type="text/javascript">dw(log_level);dw(common_colon);</script>
+                            </td>
+                            <td>
+                                <select id="log_level" class="input_select">
+                                    <option value="Error"><script type="text/javascript">dw(common_error);</script></option>
+                                    <option value="Warning"><script type="text/javascript">dw(log_view_level_Warning);</script></option>
+                                    <option value="Notice"><script type="text/javascript">dw(log_view_level_Notice);</script></option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr height="45" valign="top">
+                            <td>
+                                <script type="text/javascript">dw(log_server);dw(common_colon);</script>
+                            </td>
+                            <td class="radio">
+                                <input id= "logserver_enable" type="radio" value="1" name="mode"  />
+                                <span><script type="text/javascript">dw(common_enable);</script></span>
+                                <span>&nbsp;&nbsp;</span>
+                                <input id= "logserver_disable" type="radio" value="0" name="mode" />
+                                <span><script type="text/javascript">dw(common_disable);</script></span>
+                            </td>
+                        </tr>
+                        <tr height="45" valign="top">
+                            <td>
+                                <script type="text/javascript">dw(log_primary_address);dw(common_colon);</script>
+                            </td>
+                            <td>
+                                <input id="log_primary_address" name="log_primary_address" type="text" width="100%" size="20" class="input_style" maxlength="64"/>
+                            </td>
+                        </tr>
+                        <tr height="45" valign="top">
+                            <td>
+                                <script type="text/javascript">dw(log_primary_port);dw(common_colon);</script>
+                            </td>
+                            <td>
+                                <input id="log_primary_port" name="log_primary_port" type="text" width="100%" size="20" class="input_style" maxlength="5"/>
+                            </td>
+                        </tr>
+                        <tr height="45" valign="top">
+                            <td>
+                                <script type="text/javascript">dw(log_second_address);dw(common_colon);</script>
+                            </td>
+                            <td>
+                                <input id="log_second_address" name="log_second_address" type="text" width="100%" size="20" class="input_style" maxlength="64"/>
+                            </td>
+                        </tr>
+                        <tr height="45" valign="top">
+                            <td>
+                                <script type="text/javascript">dw(log_second_port);dw(common_colon);</script>
+                            </td>
+                            <td>
+                                <input id="log_second_port" name="log_second_port" type="text" width="100%" size="20" class="input_style" maxlength="5"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- <form action="log.html" target="show_html"> -->
+                <div class="apply_button"> 
+                    <script type="text/javascript">create_button(common_apply, "apply", "disable_btn");</script>
+                </div>
+                <!-- </form> -->
+                                
+            </div>
+        </div>
+    </body>
+</html>

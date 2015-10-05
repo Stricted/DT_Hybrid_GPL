@@ -1,0 +1,26 @@
+config QOS
+	tristate "QOS"
+	default y
+config QOS_IPV6
+	bool "Sure to support QOS for IPv6"
+	default y
+	depends on QOS
+config IP_PREC_TOS_REMARK
+	bool "Qos IPP Tos"
+	default y
+	depends on QOS
+	
+config NETFILTER_XT_MATCH_CONNLIMIT
+	bool "QoS Connlimit control"
+	default n
+	depends on QOS	
+	
+config DOWN_RATE_CONTROL
+	bool "Down rate control"
+	default n
+	depends on QOS	
+	
+config DT_QOS
+	bool "DT Qos"
+	default n
+

@@ -1,0 +1,1 @@
+sudo ./configure --host mips-linux CC=/opt/toolchains/uclibc-crosstools-gcc-4.2.3-3/usr/bin/mips-linux-uclibc-gcc --disable-debug

@@ -1,0 +1,27 @@
+config BUILD_BOOTLOADER_CMD
+        bool "support bootloader cmd"
+ 
+if BUILD_BOOTLOADER_CMD
+		
+choice
+	prompt "bootloder cmd edition"
+	
+config BUILD_ATP_BOOTLOADER_NO_CMD
+	bool "bootloader with no cmd"
+	help
+	bootloader with no cmd
+	
+config BUILD_ATP_BOOTLOADER_NORMAL_CMD
+	bool "bootloader with normal cmd"
+	help
+	bootloader with normal cmd:help,reset,b,r,cg,ccs,gccs,c,p.
+	
+config BUILD_ATP_BOOTLOADER_ALL_CMD
+	bool "bootloader with all cmd"
+	help
+	bootloader with all cmd:help,reset,b,r,cg,ccs,gccs,c,p,i,e...
+
+endchoice
+ 
+endif
+

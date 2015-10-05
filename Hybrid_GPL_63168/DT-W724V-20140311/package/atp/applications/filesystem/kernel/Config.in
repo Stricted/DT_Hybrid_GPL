@@ -1,0 +1,52 @@
+config BUILD_FILESYSTEM_SELECTION
+	bool "Support Filesystem selection"
+	default y
+	help
+		Select support for selection of filesystem,meanwhile it will open kernel switch
+
+if BUILD_FILESYSTEM_SELECTION
+menu "FileSystem Supported Selection"
+
+config ATP_STOSER_SUPPORTED_FILESYSTEM_TYPES
+	string  "Set storage supported filesystem types"
+	default "FAT,FAT32,NTFS,HFS+,EXT2,EXT3"
+	help
+	  Set storage supported filesystem types
+
+#支持NTFS
+config BUILD_NTFS
+	bool "SUPPORT NTFS"
+	default n
+	help
+		Select support for NTFS,meanwhile,it will open the kernel switch about NTFS
+
+#支持HFS
+config BUILD_KERNEL_HFS_FS
+	bool "SUPPORT HFS"
+	default n
+	help
+		Select support for HFS,meanwhile,it will open the kernel switch about HFS
+
+#支持HFS+
+config BUILD_KERNEL_HFSPLUS_FS
+	bool "SUPPORT HFSPLUS"
+	default n
+	help
+		Select support for HFSPLUS,meanwhile,it will open the kernel switch about HFSPLUS
+
+#支持EXT2
+config BUILD_KERNEL_EXT2_FS
+	bool "SUPPORT EXT2"
+	default n
+	help
+		Select support for EXT2,meanwhile,it will open the kernel switch about EXT2
+
+#支持EXT3
+config BUILD_KERNEL_EXT3_FS
+	bool "SUPPORT EXT3"
+	default n
+	help
+		Select support for EXT3,meanwhile,it will open the kernel switch about EXT3
+
+endmenu
+endif

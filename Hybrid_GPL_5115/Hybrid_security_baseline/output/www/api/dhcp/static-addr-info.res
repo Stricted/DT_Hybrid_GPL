@@ -1,0 +1,1 @@
+vpath="InternetGatewayDevice.LANDevice.1.LANHostConfigManagement.DHCPStaticAddress.{i}"E5element="HostEnabled|HostHw|HostIp"ATPelement="Enable|Chaddr|Yiaddr"multi="Hosts|Host"

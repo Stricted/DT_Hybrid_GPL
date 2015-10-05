@@ -1,0 +1,32 @@
+[settings]
+functionname=0xF7002004;
+attributenum=10;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000D0A>;
+attribute=alias<simp_limit>        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<qcar>        	   type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<gcar>        	   type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<q_red>        	   type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<q_yellow>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<g_red>      	   type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<g_yellow>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<classify_fail>     type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<map_fail>      	   type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+
+[help]
+/* MAP_CAR模块统计信息 */
+typedef struct 
+{
+    uint simp_limit;         /* 经过简单流量抑制的报文个数  */
+    uint qcar;               /* 经过第一级CAR的报文个数     */
+    uint gcar;               /* 经过第二级CAR的报文个数     */
+    uint q_red;              /* 第一级CAR的红色的报文个数   */
+    uint q_yellow;           /* 第一级CAR的黄色的报文个数   */
+    uint g_red;              /* 第二级CAR的红色的报文个数   */
+    uint g_yellow;           /* 第二级CAR的黄色的报文个数   */
+    uint classify_fail;
+    uint map_fail;
+    
+}hi_dp_logic_mapcar_cnt_s;

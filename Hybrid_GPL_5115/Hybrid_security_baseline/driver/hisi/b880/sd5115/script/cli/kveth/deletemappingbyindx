@@ -1,0 +1,64 @@
+[settings]
+functionname=hi_kernel_vif_cmdtype_mapping_deletebyindx;  
+attributenum=21;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<fatherifname>   type<string>   range<0x0,32>           default<eth0>;
+attribute=alias<ifname>         type<string>   range<0x0,32>           default<lan1>;
+attribute=alias<indx>           type<uint>     range<0x0,0xFFFFFFFF>   default<0>;
+attribute=alias<phyport>        type<uchar>    range<0x0,0xFF>         default<1>;
+attribute=alias<llid>           type<uchar>    range<0x0,0xFF>         default<0>;
+attribute=alias<gemportid>      type<ushort>   range<0x0,0xFFFF>       default<0>;
+attribute=alias<dmac>           type<mac>                              default<10:00:00:01:02:03>;
+attribute=alias<smac>           type<mac>      						   default<20:00:00:01:02:03>;
+attribute=alias<dip>            type<ip>  							   default<192.168.0.100>;
+attribute=alias<sip>            type<ip>   							   default<192.168.0.101>;
+attribute=alias<dport>          type<ushort>   range<0x0,0xFFFF>       default<18000>;
+attribute=alias<sport>          type<ushort>   range<0x0,0xFFFF>       default<19000>;
+attribute=alias<ethtype>        type<ushort>   range<0x0,0xFFFF>       default<0x8100>;
+attribute=alias<sessionid>      type<ushort>   range<0x0,0xFFFF>       default<0>;
+attribute=alias<tpid>          type<ushort>   range<0x0,0xFFFF>       default<0x8100>;
+attribute=alias<vlan>          type<ushort>   range<0x0,0xFFFF>       default<1>;
+attribute=alias<reason>         type<uchar>    range<0x0,0xFF>         default<0>;
+attribute=alias<ipprotocol>     type<uchar>    range<0x0,0xFF>         default<0>;
+attribute=alias<ipversion>      type<uchar>    range<0x0,0xFF>         default<4>;
+attribute=alias<iptos>          type<uchar>    range<0x0,0xFF>         default<0>;
+attribute=alias<flag>           type<uint>     range<0x0,0xFFFFFFFF>   default<0>;
+
+[help]
+typedef struct
+{
+    hi_uchar8 uc_fatherifname[HI_KERNEL_VIF_NAMELEN];
+    hi_uchar8 uc_ifname[HI_KERNEL_VIF_NAMELEN];
+    hi_uint32 ui_indx; /*接口下流索引*/
+    hi_kernel_network_vif_mapping_s st_data;
+}hi_kernel_vif_cmdtype_mapping_s;
+
+typedef struct
+{
+    hi_uchar8   uc_phyport;
+    hi_uchar8   uc_llid;
+    hi_ushort16 us_gemportid;
+
+    hi_uchar8   uc_dmac[HI_MAC_LEN];
+    hi_uchar8   uc_smac[HI_MAC_LEN];
+
+    hi_uint32   ui_dip;
+    hi_uint32   ui_sip;
+
+    hi_ushort16 us_dport;
+    hi_ushort16 us_sport;
+
+    hi_ushort16 us_ethtype;
+    hi_ushort16 us_sessionid; /*ppp会话id*/
+
+    hi_kernel_vif_vlan_s st_vlan;
+    
+    hi_uchar8   uc_reason;
+    hi_uchar8   uc_ipprotocol;
+    hi_uchar8   uc_ipversion;
+    hi_uchar8   uc_iptos;
+
+    hi_uint32   ui_flag;
+}hi_kernel_network_vif_mapping_s;

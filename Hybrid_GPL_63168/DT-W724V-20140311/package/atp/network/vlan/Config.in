@@ -1,0 +1,6 @@
+config BUILD_BCM_VLAN
+	bool "BCM VLAN"
+	default y
+	depends on BROADCOM_CHIP
+	help
+	  Support BCM VLANCTL

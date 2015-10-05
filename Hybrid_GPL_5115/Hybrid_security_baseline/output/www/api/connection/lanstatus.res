@@ -1,0 +1,1 @@
+vpath="InternetGatewayDevice.LANDevice.1.Hosts.Host.{i}"E5element="HostName|MACAddress|IPAddress|X_IPv6Address|LeaseTimeRemaining"ATPelement="HostName|MACAddress|IPAddress|X_IPv6Address|LeaseTimeRemaining"multi="Hosts|Host"

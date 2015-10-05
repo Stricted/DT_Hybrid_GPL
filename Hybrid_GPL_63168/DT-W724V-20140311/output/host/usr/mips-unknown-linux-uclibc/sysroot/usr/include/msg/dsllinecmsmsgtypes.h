@@ -1,0 +1,26 @@
+/**\file dsllinecmsmsgtypes.h
+  *
+  *\copyright 2007-2020，华为技术有限公司
+  *\author 00164468
+  *\date  2012-7-5
+*/
+
+#ifndef __ATP_DSLLINECMS_MSGTYPES_H__
+#define __ATP_DSLLINECMS_MSGTYPES_H__
+
+#define ATP_CBBID_XTMCMS_NAME "dslline"
+
+enum ATP_DSL_STATUS_EN
+{
+    ATP_DSL_STATUS_UP,
+    ATP_DSL_STATUS_TRAINING,
+    ATP_DSL_STATUS_INIT,
+    ATP_DSL_STATUS_DOWN,
+};
+enum ATP_XTMCMS_SERVICE_TYPE_EN
+{
+    ATP_DSLLINECMS_SERVICE = ATP_MSG_CATEGORY_DEF(ATP_MODULE_DSLLINECMS) + 100,
+};
+
+#endif // End of __ATP_DSLLINECMS_MSGTYPES_H__
+

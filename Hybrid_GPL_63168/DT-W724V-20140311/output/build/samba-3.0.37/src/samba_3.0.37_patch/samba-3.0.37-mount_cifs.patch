@@ -1,0 +1,71 @@
+-------------------------------------------------------------------------------
+0001-Fix-bug-5434-found-by-Ted-Percival-ted-midg3t.net.patch
+-------------------------------------------------------------------------------
+Fix bug #5434 found by Ted Percival <ted@midg3t.net>.
+
+From: Jeremy Allison <jra@samba.org>
+
+Introduced by me in the strlcpy cleanup. Ensure the
+loaded password doesn't contain the '\n' at the end.
+Jeremy.
+(This used to be commit 41984743d9e89b6568119832c35ee4c0024e43a2)
+---
+
+ source/client/mount.cifs.c |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+
+diff --git a/source/client/mount.cifs.c b/source/client/mount.cifs.c
+index c8ea867..3ef0680 100755
+--- a/source/client/mount.cifs.c
++++ b/source/client/mount.cifs.c
+@@ -253,6 +253,7 @@ static int open_cred_file(char * file_name)
+ 				for(length = 0;length<MOUNT_PASSWD_SIZE+1;length++) {
+ 					if ((temp_val[length] == '\n')
+ 					    || (temp_val[length] == '\0')) {
++						temp_val[length] = '\0';
+ 						break;
+ 					}
+ 				}
+@@ -281,6 +282,7 @@ static int open_cred_file(char * file_name)
+                                 for(length = 0;length<DOMAIN_SIZE+1;length++) {
+ 					if ((temp_val[length] == '\n')
+ 					    || (temp_val[length] == '\0')) {
++						temp_val[length] = '\0';
+ 						break;
+ 					}
+                                 }
+-------------------------------------------------------------------------------
+0002-Tidyup-to-ensure-n-is-treated-identically-in-all.patch
+-------------------------------------------------------------------------------
+Tidyup to ensure '\n' is treated identically in all cases.
+
+From: Jeremy Allison <jra@samba.org>
+
+(This used to be commit 818fbc9889af8c9fb6e7978e8ed2269a78f14404)
+---
+
+ source/client/mount.cifs.c |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+
+diff --git a/source/client/mount.cifs.c b/source/client/mount.cifs.c
+index 3ef0680..75ebb6a 100755
+--- a/source/client/mount.cifs.c
++++ b/source/client/mount.cifs.c
+@@ -230,6 +230,7 @@ static int open_cred_file(char * file_name)
+ 				for(length = 0;length<4087;length++) {
+ 					if ((temp_val[length] == '\n')
+ 					    || (temp_val[length] == '\0')) {
++						temp_val[length] = '\0';
+ 						break;
+ 					}
+ 				}
+@@ -356,6 +357,7 @@ static int get_password_from_file(int file_descript, char * filename)
+ 			break;
+ 		} else /* read valid character */ {
+ 			if((c == 0) || (c == '\n')) {
++				mountpassword[i] = '\0';
+ 				break;
+ 			} else 
+ 				mountpassword[i] = c;

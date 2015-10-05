@@ -1,0 +1,365 @@
+config BUILD_QOS
+	bool "DT QOS"
+	default n
+	select BUILD_IPROUTE2
+	select BUILD_IPROUTE2_TC
+	help
+	  Support DT_QOS 
+	  
+if BUILD_QOS
+menu "ATP QoS Supported Selection"
+
+config BUILD_DT_QOS
+	bool "DT QOS"
+	default N
+	depends on BUILD_QOS
+	help
+	  Support DT QOS
+
+config BUILD_BPMCTL
+	bool "bcm bpmctl"
+	default y
+	help
+	  Support Bcm Bpmctl Qos	
+      
+config BUILD_IQCTL
+	bool "bcm iqctl"
+	default y
+	depends on BUILD_QOS
+	help
+	  Support Bcm iqctl Qos	
+	  
+config BUILD_FAPCTL
+	bool "bcm fapctl"
+	default y
+	depends on BUILD_QOS
+	help
+	  Support Bcm Fapctl Qos	
+	  
+config BUILD_FCCTL
+	bool "bcm fcctl"
+	default y
+	depends on BUILD_QOS
+	help
+	  Support Bcm fcctl Qos			  
+endmenu
+endif	  
+
+config BUILD_QUEUE
+	bool "ATP QOS"
+	default y
+	select BUILD_IPROUTE2
+	select BUILD_IPROUTE2_TC
+	help
+	  Support TR098 QOS data model 
+	  
+  	  
+if BUILD_QUEUE
+menu "ATP QoS Supported Selection"
+	  
+config BUILD_UPLINK_QOS
+	bool "Uplink Qos"
+	default y
+	depends on BUILD_QUEUE
+	help
+	  Support Uplink Qos
+	  
+if BUILD_UPLINK_QOS
+menu "ATP Uplink_QoS Supported Selection"
+
+config BUILD_TC_QOS
+	bool "TC Qos"
+	default y
+	depends on BUILD_UPLINK_QOS
+	help
+	  Support TC qos
+	  
+if BUILD_TC_QOS
+menu "ATP TC_Qos Supported Selection"
+
+config BUILD_DRIVER_QOS
+	bool "Driver Ingress Qos"
+	default y
+	depends on BUILD_TC_QOS
+	depends on BROADCOM_CHIP
+	select DRIVER_QOS
+	help
+	  Support Driver Ingress Qos
+
+if BUILD_DRIVER_QOS
+menu "ATP Driver_Ingress_Qos Supported Selection"
+
+config BUILD_DRIVER_XTM_QOS
+	bool "XTM Uplink Qos"
+	default y
+	depends on BUILD_DRIVER_QOS
+	depends on BUILD_XDSL
+	help
+	  Support XTM Uplink Qos	
+
+config BUILD_DRIVER_ETH_QOS
+	bool "Eth Uplink Qos"
+	default y
+	depends on BUILD_DRIVER_QOS
+	depends on BUILD_WANETH
+	help
+	  Support Eth Uplink Qos	
+
+config BUILD_FAPCTL
+	bool "bcm fapctl"
+	default y
+	depends on BUILD_DRIVER_QOS
+	help
+	  Support Bcm Fapctl Qos	
+	  
+config BUILD_FCCTL
+	bool "bcm fcctl"
+	default y
+	depends on BUILD_DRIVER_QOS
+	help
+	  Support Bcm fcctl Qos		  
+endmenu
+endif
+	   	  
+config BUILD_UNIVERSAL_QOS
+	bool "Universal Ingress Qos"
+	default y
+	depends on BUILD_TC_QOS
+	help
+	  Support Universal Ingress Qos
+	  
+config BUILD_QOS_IPV6
+	bool "Universal IPv6 Qos"
+	default n
+	depends on BUILD_UNIVERSAL_QOS
+	help
+	  Support Universal IPv6 Qos 
+	  
+config BUILD_QOS_RATE_PERCENT
+	bool "qos rate percent"
+	default n
+	depends on BUILD_UNIVERSAL_QOS
+	help
+	  Support set QoS rate by percent
+
+config BUILD_UNIVERSAL_XTM_QOS
+	bool "XTM Uplink Qos"
+	default y
+	depends on BUILD_UNIVERSAL_QOS
+	depends on BUILD_XDSL
+	help
+	  Support XTM Uplink Qos	
+
+config BUILD_UNIVERSAL_ETH_QOS
+	bool "Eth Uplink Qos"
+	default y
+	depends on BUILD_UNIVERSAL_QOS
+	depends on BUILD_WANETH
+	help
+	  Support Eth Uplink Qos
+
+config BUILD_QUEUE_STATISTICS_QOS
+	bool "Queue statistics "
+	default y
+	depends on BUILD_TC_QOS
+	help
+	  Queue statistics
+
+endmenu
+endif
+
+config BUILD_FIX_TC_QOS
+	bool "Fix Queue Num"
+	default n
+	depends on BUILD_UPLINK_QOS
+	help
+	  Support Fix Queue Num
+	  
+if BUILD_FIX_TC_QOS
+menu "ATP Fix Queue Num Supported Selection"
+
+config BUILD_FIX_TC_ETH_QOS
+	bool "Eth Uplink Fix Queue Num"
+	default n
+	depends on BUILD_FIX_TC_QOS
+	depends on BUILD_WANETH
+	help
+	  Support Eth Fix Queue Num
+	  
+endmenu
+endif
+
+endmenu
+endif
+
+config BUILD_DOWNLINK_QOS
+	bool "Downlink Qos"
+	default y
+	depends on BUILD_QUEUE
+	help
+	  Support downlink qos
+
+if BUILD_DOWNLINK_QOS
+menu "ATP Downlink QoS Supported Selection"
+
+config BUILD_LANSWITCH_QOS
+	bool "Lanswitch Qos"
+	default y
+	depends on BUILD_DOWNLINK_QOS
+	help
+	  Support Lanswitch Qos
+	  	  	  	  
+config BUILD_WMM_QOS
+	bool "WMM Qos"
+	default y
+	depends on BUILD_DOWNLINK_QOS
+	help
+	  Support WMM Qos
+	  
+config BUILD_DSCP_STATISTICS_QOS
+	bool "Dscp statistics"
+	default y
+	depends on BUILD_DOWNLINK_QOS
+	depends on BROADCOM_CHIP
+	select DSCP_QOS
+	help
+	  Support Dscp statistics
+
+endmenu
+endif
+
+config BUILD_POLICER_QOS
+	bool "Traffic policer"
+	default y
+	depends on BUILD_QUEUE
+	help
+	  Support Traffic policer
+	  
+if BUILD_POLICER_QOS
+menu "ATP QoS_Policer Supported Selection"
+
+config BUILD_OPENWIFI_POLICER_QOS
+	bool "Openwifi qos policer"
+	default y
+	depends on BUILD_POLICER_QOS
+	select BUILD_OPENWIFI
+	help
+	  Support Traffic policer
+	  
+config BUILD_DOWNLINK_POLICER_QOS
+	bool "Downlink policer"
+	default n
+	depends on BUILD_POLICER_QOS
+	select DOWN_RATE_CONTROL
+	help
+	  Support Downlink Traffic policer	  
+	  
+endmenu
+endif
+	  	  	  	    
+config BUILD_CLASS_QOS
+	bool "Flow Classification"
+	default y
+	depends on BUILD_QUEUE
+	help
+	  Support Flow Classification 
+	  
+if BUILD_CLASS_QOS
+menu "ATP QoS_Classfication Supported Selection"
+
+config BUILD_APP_CLASS_QOS
+	bool "App Classification"
+	default y
+	depends on BUILD_CLASS_QOS
+	depends on BUILD_UPLINK_QOS
+	help
+	  Support App Classification 
+
+if BUILD_APP_CLASS_QOS
+menu "ATP QoS_App_Classfication Supported Selection"
+
+config BUILD_TR069_CLASS_QOS
+	bool "Tr069 Classification"
+	default y
+	depends on BUILD_APP_CLASS_QOS
+	help
+	  Support Tr069 Classification
+
+config BUILD_VOICE_CLASS_QOS
+	bool "Voice Classification"
+	default y
+	depends on BUILD_APP_CLASS_QOS
+	help
+	  Support Voice Classification
+
+config BUILD_DT_CLASS_QOS
+	bool "DT Classification"
+	default y
+	depends on BUILD_APP_CLASS_QOS
+	depends on BUILD_XDSL
+	help
+	  Support DT Classification
+
+endmenu
+endif
+	  
+config BUILD_PKT_CLASS_QOS
+	bool "Packet Classification"
+	default y
+	depends on BUILD_CLASS_QOS
+	depends on BUILD_UPLINK_QOS
+	help
+	  Support Packet Classification
+	  	
+if BUILD_PKT_CLASS_QOS
+menu "ATP QoS_Packet_Classfication Supported Selection"
+
+config BUILD_NORM_CLASS_QOS
+	bool "Common Classification"
+	default y
+	depends on BUILD_PKT_CLASS_QOS
+	help
+	  Support Common Classification	 
+
+config BUILD_DOWNLINK_CLASS_QOS
+	bool "Uplink&Downlink Classification"
+	default n
+	depends on BUILD_PKT_CLASS_QOS
+	help
+	  Support Uplink&Downlink Classification	 
+
+config BUILD_QOS_IPV6
+	bool "IPv6 Qos"
+	default n
+	depends on BUILD_PKT_CLASS_QOS
+	help
+	  Support IPv6 Qos 
+	  
+config BUILD_VENDORID_CLASS_QOS
+	bool "VendorID Classification"
+	default y
+	depends on BUILD_PKT_CLASS_QOS
+	help
+	  Support Common Classification	
+
+
+endmenu
+endif
+
+endmenu
+endif
+
+endmenu
+endif
+ 
+
+config BUILD_CHANNEL_QOS
+	bool "Downlink rate control "
+	default n
+			select BUILD_IPROUTE2
+			select BUILD_IPROUTE2_TC
+	help
+		Support Downlink rate control 
+ 
+
+

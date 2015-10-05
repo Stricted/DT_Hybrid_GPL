@@ -1,0 +1,10 @@
+[settings]
+functionname=hi_kernel_mpcp_stop;  
+attributenum=0;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+
+[help]
+usage: stop								        ; 停止mpcp,建议不要使用		
+

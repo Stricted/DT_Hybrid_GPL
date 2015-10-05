@@ -1,0 +1,18 @@
+[settings]
+functionname=hi_voip_cli_event_mask;  
+attributenum=4;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chanid>     type<uint>   range<0x0,0xFFFFFFFF>   default<0>; /*通道号*/
+attribute=alias<direct>     type<uint>   range<0x0,0xFFFFFFFF>   default<1>; /*方向*/
+attribute=alias<mask0>      type<uint>   range<0x0,0xFFFFFFFF>   default<0xFFFFFFFF>; /*标志0*/
+attribute=alias<mask1>      type<uint>   range<0x0,0xFFFFFFFF>   default<0xFFFFFFFF>; /*标志1*/
+
+[help]
+usage: event_mask                ; 事件上报掩码配置
+       event_mask -v chanid 0    ; 通道号
+       event_mask -v direct 0    ; 方向
+       event_mask -v mask0 0     ; 标志0
+       event_mask -v mask1 0     ; 标志1
+

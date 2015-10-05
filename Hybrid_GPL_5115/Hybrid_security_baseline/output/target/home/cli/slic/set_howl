@@ -1,0 +1,15 @@
+[settings]
+functionname=hi_slic_set_howl;  
+attributenum=4;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<freq>        type<uint>    range<0,0xFFFFFFFF>      default<950>;  /*频率*/
+attribute=alias<vol>         type<uint>    range<0,0xFFFFFFFF>      default<0x592b>;  /*幅度*/
+
+[help]
+typedef struct
+{
+    hi_uint32 ui_freq; /* 频率 */
+    hi_uint32 ui_vol;  /* 幅度 */
+}hi_kernel_slic_howl_para_s;

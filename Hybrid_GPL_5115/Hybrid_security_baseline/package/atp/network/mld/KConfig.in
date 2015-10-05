@@ -1,0 +1,7 @@
+config MLD
+	tristate "MLD"
+	default y
+config MLD_SNOOPING
+	tristate "MLD Snooping"
+	default y
+	depends on MLD

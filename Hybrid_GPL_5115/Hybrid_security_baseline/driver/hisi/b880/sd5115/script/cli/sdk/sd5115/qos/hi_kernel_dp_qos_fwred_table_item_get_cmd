@@ -1,0 +1,36 @@
+[settings]
+functionname = hi_kernel_dp_qos_fwred_table_item_get_cmd;
+attributenum = 11;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<temp_id>     type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<color_type>  type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<color>       type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<thr0>        type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<thr1>        type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<thr2>        type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<thr3>        type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<p0>          type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<p1>          type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<p2>          type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<p3>          type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+
+
+[help]
+typedef struct
+{
+    uint ui_temp_id;   /* WREDÄ£°åID: FWRED[0,15] GWRED[0,3] */
+
+    HI_DP_QOS_WRED_TEMP_COLOR_TYPE_E em_color_type;
+    uint                             ui_color; /* color_type²»Í¬ui_colorµÄ·¶Î§²»Í¬, ÏêÏ¸¼û: */
+    uint                             ui_thr0;  /* WRED¶ªÆúãĞÖµ0 */
+    uint                             ui_thr1;  /* WRED¶ªÆúãĞÖµ1 */
+    uint                             ui_thr2;  /* WRED¶ªÆúãĞÖµ2 */
+    uint                             ui_thr3;  /* WRED¶ªÆúãĞÖµ3 */
+
+    uint ui_p0;           /* WRED¶ªÆú¸ÅÂÊ0 */
+    uint ui_p1;           /* WRED¶ªÆú¸ÅÂÊ1 */
+    uint ui_p2;           /* WRED¶ªÆú¸ÅÂÊ2 */
+    uint ui_p3;           /* WRED¶ªÆú¸ÅÂÊ3 */
+} hi_dp_qos_wred_table_item_s;

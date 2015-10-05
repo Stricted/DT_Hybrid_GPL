@@ -1,0 +1,3 @@
+config BUILD_FFMPEG
+    bool "Support ffmpeg image/audio/video codec"
+    default n

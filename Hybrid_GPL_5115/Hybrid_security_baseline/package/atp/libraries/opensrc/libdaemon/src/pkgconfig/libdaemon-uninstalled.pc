@@ -1,0 +1,8 @@
+libdir=/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/libraries/opensrc/libdaemon/src/libdaemon/.libs
+includedir=/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/libraries/opensrc/libdaemon/src
+
+Name: libdaemon
+Description: a lightweight C library that eases the writing of UNIX daemons
+Version: 0.14
+Libs: -L${libdir} -R${libdir} -ldaemon
+Cflags: -D_REENTRANT -I${includedir}

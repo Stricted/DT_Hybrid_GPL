@@ -1,0 +1,10 @@
+[settings]
+functionname=0xF7002004;
+attributenum=1;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000809>; /*х╚╬ждё©И*/
+
+[help]
+void

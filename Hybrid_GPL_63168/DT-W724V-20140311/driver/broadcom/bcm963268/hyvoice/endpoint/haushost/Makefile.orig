@@ -1,0 +1,33 @@
+###################################################################################
+#
+#    Copyright 2000  Broadcom Corporation
+#    All Rights Reserved
+#    No portions of this material may be reproduced in any form without the
+#    written permission of:
+#             Broadcom Corporation
+#             16215 Alton Parkway
+#             P.O. Box 57013
+#             Irvine, California 92619-7013
+#    All information contained in this document is Broadcom Corporation
+#    company private, proprietary, and trade secret.
+#
+###################################################################################
+
+obj-m := haushost.o
+haushost-objs := haushost-lib.a
+
+HAUSLIB_SUBDIR   =  lib
+HAUSLIB_NAME     =  libhausware
+
+$(obj)/haushost-lib.a:
+	echo $(src);
+	echo $(HAUSLIB_SUBDIR);
+	cp -f $(XCHANGE_DIR)/dslx/lib/LinuxKernel/$(XCHANGE_BUILD_APP)/$(HAUSLIB_NAME).a $(src)/$(HAUSLIB_SUBDIR)/$(HAUSLIB_NAME).lib;
+
+ifeq ($(strip $(BRCM_VOICE_NONDIST)),y) 
+	cd	$(src)/$(HAUSLIB_SUBDIR);									\
+   $(LD) -G 0 -r -s --no-whole-archive -u halPcmEnable -u halApmEnable -u halPcmDisable -u halApmDisable -u halDectIStartDectBuffProcessing -u halDectIStopDectBuffProcessing -u lhapiProcessEntrySync -u hapiInit -u hapiIOctl -u hapiAsyncIOctl -u hapiOpen -u halPcmInit -u halApmInit -u halPcmDeinit -u halApmDeinit -u hapiClose -u icpSetCount -u KNL_RunReadyThreads --start-group $(src)/$(HAUSLIB_SUBDIR)/$(HAUSLIB_NAME).lib --end-group -o $(obj)/haushost-lib.a
+else
+	cd	$(src)/$(HAUSLIB_SUBDIR);									\
+   $(LD) -G 0 -r -s --no-whole-archive -u lhapiProcessEntrySync -u lhapiKnlScheduleReadyThreads -u hapiInit -u hapiIOctl -u hapiAsyncIOctl -u hapiOpen -u hapiClose -u KNL_RunReadyThreads --start-group $(src)/$(HAUSLIB_SUBDIR)/$(HAUSLIB_NAME).lib --end-group -o $(obj)/haushost-lib.a
+endif

@@ -1,0 +1,29 @@
+[settings]
+functionname = hi_kernel_dp_l2_vlan_bc_add_cmd;
+attributenum = 4;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<vlan>     type<uint>   range<0x0,0xFFFFFFFF>   default<0>; 
+attribute=alias<fid>      type<uint>   range<0x0,0xFFFFFFFF>   default<0>; 
+attribute=alias<egr>      type<uint>   range<0x0,0xFFFFFFFF>   default<0>; 
+attribute=alias<valid>    type<uint>   range<0x0,0xFFFFFFFF>   default<0>; 
+
+
+[help]
+typedef struct  
+{
+    uint    ui_vlan;                /* 0 - 4095   ,Ë÷Òý */
+    hi_dp_l2_bc_egr_info_s  st_egr;
+}hi_dp_l2_bc_egr_s;
+
+typedef struct  
+{
+    uint            ui_fid;
+    HI_DP_PORT_E    em_egr;
+    HI_BOOL_E       em_valid;
+}hi_dp_l2_bc_egr_info_s;
+
+
+
+

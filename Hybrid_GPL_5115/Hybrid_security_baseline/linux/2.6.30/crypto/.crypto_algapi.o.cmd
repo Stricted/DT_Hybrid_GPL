@@ -1,0 +1,1 @@
+cmd_crypto/crypto_algapi.o := /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/bin/arm-hsan-linux-uclibcgnueabi-ld -EL    -r -o crypto/crypto_algapi.o crypto/algapi.o crypto/scatterwalk.o crypto/proc.o 

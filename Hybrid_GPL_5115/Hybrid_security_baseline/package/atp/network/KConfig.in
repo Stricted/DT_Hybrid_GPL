@@ -1,0 +1,21 @@
+menu "Network Linux Kernel Extension"
+source "package/atp/network/igmp/KConfig.in"
+source "package/atp/network/mld/KConfig.in"
+source "package/atp/network/firewall/KConfig.in"
+config PORT_SCAN
+	bool "port scan"
+	default y
+config ATP_DROP_ARP
+	bool "drop the arp packages"
+	default y
+	help
+		 the arp package is from wan to lan, br to wan.
+config RESERVE_CT_SESSION
+	bool "Reserve some session for certain bussiness"
+	default n
+config IP_NF_TARGET_PORT_TRIGGERING
+	bool "Sure to support port_trigger"
+	default n 
+	depends on BCM963268
+endmenu
+

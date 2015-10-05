@@ -1,0 +1,65 @@
+[settings]
+functionname=0xF7002004;
+attributenum=36;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000505>; /*全局模块*/
+attribute=alias<ui_fid>       type<uint>   range<0,191>  default<0x00000000>;
+attribute=alias<em_valid>       type<int>   range<0x0,0x01>  default<0x00000000>;
+attribute=alias<em_eof>       type<int>   range<0x0,0x01>  default<0x00000000>;
+attribute=alias<em_age_en>       type<int>   range<0x0,0x01>  default<0x00000000>;
+attribute=alias<em_g0>       type<int>   range<0x0,0x1D>  default<0x00000000>;
+attribute=alias<ui_key0>       type<uint>   range<0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_mask0>       type<uint>   range<0,31>  default<0x00000000>;
+attribute=alias<em_g0_match_mode>       type<int>   range<0x0,0x01>  default<0x00000000>;
+attribute=alias<em_g1>       type<int>   range<0x0,0x1D>  default<0x00000000>;
+attribute=alias<ui_key1>       type<uint>   range<0,0xFFFF>  default<0x00000000>;
+attribute=alias<ui_mask1>       type<uint>   range<0,15>  default<0x00000000>;
+attribute=alias<em_g1_match_mode>       type<int>   range<0x0,0x01>  default<0x00000000>;
+attribute=alias<u_igr>       type<uint>   range<0x0,0x3F>  default<0x00000000>;
+attribute=alias<em_label>       type<int>   range<0x0,0x07>  default<0x00000000>;
+attribute=alias<em_tag_act>       type<int>   range<0x0,0x02>  default<0x00000000>;
+attribute=alias<em_cvlan_act>       type<int>   range<0x0,0x03>  default<0x00000000>;
+attribute=alias<ui_cvlan_value>       type<uint>   range<0,4095>  default<0x00000000>;
+attribute=alias<em_svlan_act>       type<int>   range<0x0,0x03>  default<0x00000000>;
+attribute=alias<ui_svlan_value>       type<uint>   range<0,4095>  default<0x00000000>;
+attribute=alias<em_cpri_act>       type<int>   range<0x0,0x05>  default<0x00000000>;
+attribute=alias<ui_cpri_value>       type<uint>   range<0,7>  default<0x00000000>;
+attribute=alias<em_s8021p_act>       type<int>   range<0x0,0x05>  default<0x00000000>;
+attribute=alias<ui_s8021p_value>       type<uint>   range<0,7>  default<0x00000000>;
+attribute=alias<em_trans_act>       type<int>   range<0x0,0x09>  default<0x00000000>;
+attribute=alias<em_trans_egr>       type<int>   range<0x0,0x08>  default<0x00000000>;
+attribute=alias<ui_trans_reason>       type<uint>   range<0,15>  default<0x00000000>;
+attribute=alias<ui_l3_rep_index>       type<uint>   range<0,255>  default<0x00000000>;
+attribute=alias<em_vlan_mark_en>       type<int>   range<0x0,0x01>  default<0x00000000>;
+attribute=alias<ui_vlan_mark_value>       type<uint>   range<0,4095>  default<0x00000000>;
+attribute=alias<em_pri_mark_en>       type<int>   range<0x0,0x01>  default<0x00000000>;
+attribute=alias<ui_pri_mark_value>       type<uint>   range<0,7>  default<0x00000000>;
+attribute=alias<em_pppoe_add_en>       type<int>   range<0x0,0x01>  default<0x00000000>;
+attribute=alias<em_car_en>       type<int>   range<0x0,0x01>  default<0x00000000>;
+attribute=alias<em_arl_fid_en>       type<int>   range<0x0,0x01>  default<0x00000000>;
+attribute=alias<em_mac_learn_en>       type<int>   range<0x0,0x01>  default<0x00000000>;
+
+
+[help]
+
+typedef struct 
+{
+    /* 索引 : 即流ID */
+    uint    ui_fid;                         /* 0 - 191 */
+
+    HI_BOOL_E   em_valid;                   /* 表项有效标志 */   
+    HI_BOOL_E   em_eof;                     /* 组合流结束标志符 */    
+    HI_BOOL_E   em_age_en;                  /* 表项老化使能 */
+
+    /* 匹配规则 */
+    hi_dp_flow_efc_rule_s   st_rule;        /* 匹配规则 */
+
+    /* 分类操作指示 */
+    HI_DP_FLOW_LABEL_E      em_label;       /* 分类标签，用于确定流操作类型   */
+
+    /* TAG等分类操作行为 */    
+    hi_dp_flow_efc_act_s    st_act;         /* 对应行为 */
+
+}hi_dp_flow_efc_table_item_s;

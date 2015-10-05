@@ -1,0 +1,15 @@
+menu "Product Startup config"
+
+config ATP_BOOTP_WAIT_TIME
+	int "atp bootp wait time"
+	default 120
+	help
+	  set bootp wait time (seconds)
+	  
+config ATP_MULTI_UPG_STARTUP_SYSTEM
+	int "multi upg start system"
+	default 1
+	help
+	  set after multi upg start from which system.1:main system.2:slave system.
+endmenu
+

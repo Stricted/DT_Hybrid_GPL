@@ -1,0 +1,83 @@
+#
+# drivers/mtd/nand/hinfc301/Kconfig
+# add by caizhiyong 2010.11.04
+#
+
+menu "Hisilicon NAND Controller device Support"
+
+config MTD_HISI_SD5115_NFC
+    bool "Support SD5115 NAND Controller device"
+    depends on MTD_NAND
+    depends on HISI_SD5115
+    select YAFFS_FS
+    select MISC_FILESYSTEMS
+    select MTD_BLOCK
+    select YAFFS_YAFFS2
+    help
+	 Hisilicon NAND Controller device Support
+      
+config MTD_HISI_SD5115_NFC_REG_BASE_ADDRESS
+	hex "nand controller's register base address"
+	depends on MTD_HISI_SD5115_NFC
+	default 0x10A30000
+	help
+	  register base address of nand controller
+
+config MTD_HISI_SD5115_NFC_BUFFER_BASE_ADDRESS
+	hex "nand controller's buffer base address"
+	depends on MTD_HISI_SD5115_NFC
+	default 0x20000000
+	help
+	  buffer base address of nand controller
+	  
+config MTD_HISI_SD5115_NFC_PERIPHERY_REGBASE
+	hex "nand controller's peripher base address"
+	depends on MTD_HISI_SD5115_NFC
+	default 0x0
+	help
+	  peripher base address of nand controller,for clk setting
+
+config MTD_HISI_SD5115_NFC_MAX_CHIP
+    int "number of nand flash chip (1,4)"
+	depends on MTD_HISI_SD5115_NFC
+    default 1
+    help
+      nand controller v301 device only support 1 or 2 nand flash chip,
+      your should not config other value.   
+    
+config MTD_HISI_SD5115_NFC_DBG_PROC_FILE
+    bool "debug: create /proc/nand file"
+	depends on MTD_HISI_SD5115_NFC
+    help
+      export /proc/nand file for debug.
+      
+config MTD_HISI_SD5115_NFC_DBG_EC_NOTICE
+    bool "debug: notice uncorrectable error"
+	depends on MTD_HISI_SD5115_NFC
+    help
+      notice nand uncorrectable error
+      
+choice
+    prompt "Pagesize and Ecc Type Select"
+    
+config MTD_HISI_SD5115_NFC_HARDWARE_PAGESIZE_ECC
+    bool "Hardware"
+	depends on MTD_HISI_SD5115_NFC
+    help
+      pagesize and ecc type use hardware config
+      
+config MTD_HISI_SD5115_NFC_AUTO_PAGESIZE_ECC
+    bool "Auto"
+	depends on MTD_HISI_SD5115_NFC
+    help
+      pagesize and ecc type use hardware config
+      
+config MTD_HISI_SD5115_NFC_PAGESIZE_AUTO_ECC_NONE
+    bool "Pagesize Auto, Ecc None"
+	depends on MTD_HISI_SD5115_NFC
+    help
+      select pagesize 2K, ecc none.
+     
+endchoice
+
+endmenu

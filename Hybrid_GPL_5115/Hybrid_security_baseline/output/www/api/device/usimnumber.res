@@ -1,0 +1,1 @@
+vpath="api/modem_1/mynum"E5element="Msisdn"

@@ -1,0 +1,13 @@
+kernel//home/liyupeng/zengyao/6.13/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/ethernet/bcm963268/bcm_enet.ko
+kernel//home/liyupeng/zengyao/6.13/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/pktflow/bcm963268/pktflow.ko
+kernel//home/liyupeng/zengyao/6.13/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/bpm/bcm963268/bcm_bpm.ko
+kernel//home/liyupeng/zengyao/6.13/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/ingqos/bcm963268/bcm_ingqos.ko
+kernel//home/liyupeng/zengyao/6.13/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/vlan/bcm963268/bcmvlan.ko
+kernel//home/liyupeng/zengyao/6.13/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/pcmshim/pcmshim.ko
+kernel//home/liyupeng/zengyao/6.13/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/fap/bcm963268/bcmfap.ko
+kernel//home/liyupeng/zengyao/6.13/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/wlan/bcm963268/wl.ko
+kernel//home/liyupeng/zengyao/6.13/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/../hyvoice/endpoint/endpointdd.ko
+kernel//home/liyupeng/zengyao/6.13/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/adsl/adsldd.ko
+kernel//home/liyupeng/zengyao/6.13/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/xtmcfg/bcm963268/bcmxtmcfg.ko
+kernel//home/liyupeng/zengyao/6.13/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/pwrmngt/bcm963268/pwrmngtd.ko
+kernel//home/liyupeng/zengyao/6.13/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/tms/bcm963268/nciTMSkmod.ko

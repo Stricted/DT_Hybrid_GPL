@@ -1,0 +1,104 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="copyright" content="(C) Copyright 2005">
+<meta name="DC.rights.owner" content="(C) Copyright 2005">
+<meta name="DC.Type" content="task">
+<meta name="DC.Title" content="Sharing Files on USB Storage Device">
+<meta name="abstract" content="With USB storage services, you can view, modify, add or delete the shared file(s) on the USB device.">
+<meta name="description" content="With USB storage services, you can view, modify, add or delete the shared file(s) on the USB device.">
+<meta name="DC.Relation" scheme="URI" content="../../usermanual/advanced/advanced_configuration.html">
+<meta name="DC.Relation" scheme="URI" content="../../usermanual/parameters/parameters_storage_services.html">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="advanced_storage_services_1">
+<meta name="DC.Language" content="en-us">
+<link rel="stylesheet" type="text/css" href="../../../public_sys-resources/commonltr.css">
+<script language="javascript" type="text/javascript" src="../../../public_sys-resources/ExpandCollapse.js"></script><script type="text/javascript" src="../../../../language/lang_en_us.js"></script>
+<title>Sharing Files on USB Storage Device</title>
+</head>
+<body style="clear:both; padding-left:10px; padding-top:5px; padding-right:5px; padding-bottom:5px"><a name="advanced_storage_services_1"></a><a name="advanced_storage_services_1"></a>
+
+
+<div id="navigation" class="navigation">
+<ul>
+<li><a href="../../usermanual/legal/instance_legal_notice_fmc_lte.html">Legal Notice</a></li>
+<li><a href="../../usermanual/sms/sms_management.html">SMS Management</a></li>
+<li><a href="../../usermanual/network/network_configuration.html">Network Connection Configuration</a></li>
+<li><a href="../../usermanual/pin/pin_management.html">PIN Code Management</a></li>
+<li><a href="../../usermanual/advanced/advanced_configuration.html">Advanced Configuration</a></li>
+<li><a href="../../usermanual/maintenance/maintenance_device.html">Device Maintenance</a></li>
+<li><a href="../../usermanual/parameters/parameters_ui.html">UI Reference</a></li>
+<li><a href="../../usermanual/faq/faq.html">FAQ</a></li>
+<li><a href="../../usermanual/gpl/gpl.html">GPL WRITTEN OFFER</a></li>
+<li><a href="../../usermanual/abbreviations/abbreviations.html">Acronyms and Abbreviations</a></li>
+</ul>
+</div>
+<div id="right">
+<h1 class="topictitle1">Sharing Files on USB Storage Device</h1>
+
+
+<div class="taskbody"><p>With USB storage services, you can view, modify, add or delete the shared file(s) on the USB device.</p>
+
+<a name="advanced_storage_services_1__1.3.1"></a><a name="1.3.1"></a><h4 class="sectiontitle">Prerequisite</h4>
+<div class="p"><p>Before this operation, please ensure that a USB device has been connect to <span><span class="uicontrol"><b><script>dw(common_3g_wireless_modem);</script></b></span></span>. The <span><span class="uicontrol"><b><script>dw(common_3g_wireless_modem);</script></b></span></span> can recognize
+a maximum of 11 logical partitions.</p>
+</div>
+
+<a name="advanced_storage_services_1__1.3.2"></a><a name="1.3.2"></a><h4 class="sectiontitle">Procedure</h4>
+<ol>
+<li><span><span>Select</span> <span class="menucascade"><b><span class="uicontrol"><script>dw(common_settings);</script></span></b> &gt; <b><span class="uicontrol"><script>dw(common_advanced);</script></span></b> &gt; <b><span class="uicontrol"><script>dw(Label_storage_services);</script></span></b></span>.</span></li>
+<li><span>Check one or both of the <span class="uicontrol"><b><script>dw(Label_enable_samba);</script></b></span> and <span class="uicontrol"><b><script>dw(Label_enable_ftpserver);</script></b></span> to enable Storage Services. Click <span class="uicontrol"><b><script>dw(common_apply);</script></b></span>.</span></li>
+<li><span>Click <span class="uicontrol"><b><script>dw(common_add);</script></b></span> to add a shared path and configure the parameters. For details about the parameters, see <span><a href="../../usermanual/parameters/parameters_storage_services.html">Storage Services</a></span>.</span></li>
+<li><span><span>Click</span> <span class="uicontrol"><b><script>dw(common_apply);</script></b></span>.</span>
+<p><div class="note"><img src="../../../public_sys-resources/icon-note.gif"><span class="notetitle"> NOTE: </span><div class="notebody"><p>You can edit or delete an existed item by click the <span class="uicontrol"><b><script>dw(common_edit);</script></b></span> or <span class="uicontrol"><b><script>dw(common_delete);</script></b></span> button behind it.</p>
+</div></div>
+</p>
+</li>
+</ol>
+
+<a name="advanced_storage_services_1__1.3.3"></a><a name="1.3.3"></a><h4 class="sectiontitle">Postrequisites</h4>
+<div class="p"><div class="note"><img src="../../../public_sys-resources/icon-note.gif"><span class="notetitle"> NOTE: </span><div class="notebody"><ul>
+<li>The following operation are taking a computer with Windows 7 operating system as an example. </li>
+<li>Please do NOT disconnect the USB device to the <span><span class="uicontrol"><b><script>dw(common_3g_wireless_modem);</script></b></span></span> IMMEDIATELY when you just have add, modify or delete file(s), Wait 5 seconds for the operation to take effect.</li>
+<li>If you can not see the effect of the USB device after you add, modify or delete file(s), you should manually refresh the folder (right click on the blank of the folder and choose <span class="uicontrol"><b>refresh</b></span>), to see the effect that have been taken.</li>
+<li>If you are using a computer with Windows XP operating system, please access the USB device by IPv4 address. The IPv6 is not well supported by Windows XP, you may failed to access by IPv6 address. </li>
+</ul>
+</div></div>
+<p><strong>View the shared file by Samba.</strong></p>
+<ol>
+<li>Power on the computer.</li>
+<li>Connect the computer to <span><span class="uicontrol"><b><script>dw(common_3g_wireless_modem);</script></b></span></span> via wired way or Wi-Fi way.</li>
+<li>Choose <span class="menucascade"><b><span class="uicontrol">Start</span></b> &gt; <b><span class="uicontrol">Run</span></b></span>, enter the IP address
+of the <span><span class="uicontrol"><b><script>dw(common_3g_wireless_modem);</script></b></span></span> (default IPv4 address: <strong>\\<span>192.168.1.1</span></strong>, default IPv6 address: <strong><span>\\[fe80::1]</span></strong>), and then press <span class="uicontrol"><b>Enter</b></span>.</li>
+<li>Enter the user name and password you have configured in the <span class="uicontrol"><b><script>dw(Label_storage_services);</script></b></span> page.</li>
+<li>View the shared files.</li>
+</ol>
+<p><strong>View the shared file by FTP Server.</strong></p>
+<ol>
+<li>Power on the computer.</li>
+<li>Connect the computer to <span><span class="uicontrol"><b><script>dw(common_3g_wireless_modem);</script></b></span></span> via wired way or Wi-Fi way.</li>
+<li>Launch a web browser and enter <strong>ftp://<span>192.168.1.1</span></strong> (IPv4) or <strong><span>ftp://[fe80::1]</span></strong> (IPv6) to log in to the
+management page.</li>
+<li>Enter the user name and password you have configured in the <span class="uicontrol"><b><script>dw(Label_storage_services);</script></b></span> page.</li>
+<li>View the shared files.</li>
+</ol>
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../../usermanual/advanced/advanced_configuration.html">Advanced Configuration</a></div>
+</div>
+<div class="relref"><strong>Related reference</strong><br>
+<div><a href="../../usermanual/parameters/parameters_storage_services.html" title="You can connect a USB storage device to the <script>dw(common_3g_wireless_modem);</script>, so that multiple computers in your home networks can access data in the USB storage device through the network simultaneously.">Storage Services</a></div>
+</div>
+</div>
+
+</div></body>
+</html>

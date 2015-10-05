@@ -1,0 +1,4 @@
+START_CHILLI=1
+DHCPIF=br1
+CONFFILE="/var/fon/chilli.conf"
+STATUSFILE="/var/fon/fon_status"

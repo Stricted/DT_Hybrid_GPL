@@ -1,0 +1,5 @@
+config ATP_CT_CLEAN
+    tristate "Support ATP Conntrack Clean"
+    help
+      delete conntrack by forward rule
+    default y

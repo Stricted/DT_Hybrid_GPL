@@ -1,0 +1,3 @@
+config BUILD_ESMTP
+	bool "Support Esmtp"
+	default N

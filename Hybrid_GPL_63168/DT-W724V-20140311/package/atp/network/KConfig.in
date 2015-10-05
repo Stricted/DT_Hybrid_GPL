@@ -1,0 +1,42 @@
+menu "Network Linux Kernel Extension"
+source "package/atp/network/igmp/KConfig.in"
+source "package/atp/network/mld/KConfig.in"
+source "package/atp/network/qos/KConfig.in"
+source "package/atp/network/firewall/KConfig.in"
+source "package/atp/network/pppc/KConfig.in"
+source "package/atp/network/hybrid/KConfig.in"
+config PORT_SCAN
+	bool "port scan"
+	default y
+config ATP_PORT_SCAN
+	bool "port scan"
+	default y
+config ATP_DROP_ARP
+	bool "drop the arp packages"
+	default y
+	help
+	    the arp package is from wan to lan, br to wan.
+config ATP_DROP_NS
+	bool "drop the ns packages form lan to wan"
+	default y
+	help
+	    See DTS2012021404606 for more detail.
+	depends on ATP_KERNEL_3_4
+config RESERVE_CT_SESSION
+	bool "Reserve some session for certain bussiness"
+	default n
+config IP_NF_TARGET_PORT_TRIGGERING
+	bool "Sure to support port_trigger"
+	default n 
+	depends on BCM963268
+config ATP_DROP_OTHER_PF_PACKET
+    bool "support to drop other hosts' packets received via PF_PACKET sockets"
+	default y
+	help
+	    On default, a PF_PACKET socket will receive and process other hosts's packets. Kernel will drop these packets if this macro is open. You can see DTS2012122804018 for detail.
+    depends on ATP_KERNEL_3_4
+config SIPALG_RECOREDDSTIP
+	bool "Support record sip alg dst ip(siproxd)"
+	default n
+endmenu
+

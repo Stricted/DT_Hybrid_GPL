@@ -1,0 +1,1 @@
+vpath="InternetGatewayDevice.UserInterface.X_Web"E5element="CurrentLanguage"ATPelement="CurrentLanguage"

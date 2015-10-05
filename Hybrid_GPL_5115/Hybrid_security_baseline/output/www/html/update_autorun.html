@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../css/main.css" />
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/update_autorun.js"></script>
+<title></title>
+</head>
+
+<body>
+<div id="all_content" class="body_bg">
+    <div class="login_head_div">
+        <div id="logo"></a></div>
+        <div class="language">
+            <input type="text" id="lang" class="input" value="English" readonly="readonly"/>
+            <div id="language_list" class="lang_option"></div>
+        </div>
+    </div>
+    <div class="center_box">
+    	<div class="center_box_main">
+            <div class="update_title"> 
+				<script type="text/javascript">
+					dw(update_pc_assistant_title);
+				</script> 
+            </div>
+            <div class="update_img update_img_dim">
+            	<div class="update_img_dim update_img_filter">&nbsp;</div>
+            </div>
+            <div class="title_info">
+                <div class="update_notice"> 
+					<script type="text/javascript">
+						dw(update_pc_assistant_update);
+					</script> 
+                </div>
+                <div id="pc_assistant_update_button"> 
+					<script type="text/javascript">
+						create_button(IDS_common_download, "pc_assistant_update_download");
+					</script>
+                    <iframe id="index_istall_tray" class="download_iframe" src="" width="1" height="1"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"  class="footer"></div>
+</div>
+<noscript><div class="noscript_text">Your browser does not support JavaScript.</div></noscript>
+</body>
+</html>

@@ -1,0 +1,1 @@
+cmd_net/l2tp/built-in.o :=  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/bin/mips-unknown-linux-uclibc-ld  -m elf32btsmip   -r -o net/l2tp/built-in.o net/l2tp/l2tp_core.o net/l2tp/l2tp_ppp.o net/l2tp/l2tp_debugfs.o 

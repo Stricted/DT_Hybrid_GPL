@@ -1,0 +1,24 @@
+menu "Package Image"
+config BUILD_PKGIMAGE
+	bool "Package Image"
+	default y
+
+config PKGIMAGE_FLASH_BLOCK_SIZE
+	int "Flash block size for package image"
+	default "65536"
+	depends on BUILD_PKGIMAGE
+
+if BUILD_PKGIMAGE
+source "package/atp/hosttool/package/pkg/Config.in"
+if BROADCOM_CHIP
+source "package/atp/hosttool/package/bcm/Config.in"
+source "package/atp/hosttool/package/addecc/Config.in"
+endif
+if HISI_CHIP
+source "package/atp/hosttool/package/hisi_addecc/Config.in"
+endif
+source "package/atp/hosttool/package/mlzma/Config.in"
+source "package/atp/hosttool/package/qlzma/Config.in"
+source "package/atp/hosttool/package/sign/Config.in"
+endif
+endmenu

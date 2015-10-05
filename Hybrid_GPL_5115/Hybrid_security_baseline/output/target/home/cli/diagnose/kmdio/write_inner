@@ -1,0 +1,18 @@
+[settings]
+functionname=hi_kernel_misc_util_inner_mdiowrite;  
+attributenum=4;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<phy_addr>     type<uint>   range<0,0xFFFFFFFF>    default<0x0>;
+attribute=alias<reg_addr>     type<uint>   range<0,0xFFFFFFFF>    default<0x0>;
+attribute=alias<data>    	  type<short>  range<0,0xFFFF>        default<0x0>;
+attribute=alias<resv>         type<short>  range<0,0xFFFF>  	  default<0x0>;
+
+[help]
+typedef struct{
+    hi_uint32   ui_phy_addr;
+    hi_uint32   ui_reg_addr;
+    hi_ushort16 us_data;
+    hi_ushort16 us_resv;
+}hi_kernel_mdio_data_s;

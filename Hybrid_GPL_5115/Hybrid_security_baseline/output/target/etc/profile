@@ -1,0 +1,70 @@
+# /*******************************************************************************
+# Edit History of Huawei: 
+# <修改人>     <修改时间>    <问题单号>          <修改描述>
+# q00186737    2013/01/18    DTS2013011702860    [B880]不能透传OM log 
+# *******************************************************************************/
+# /etc/profile: system-wide .profile file for the Bourne shells
+
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+export PATH
+
+mount -t tmpfs none /dev
+mount -t proc /proc /proc
+mount -t tmpfs none /var
+mount -t tmpfs none /tmp
+mount -t tmpfs none /mnt
+makedevs -d /etc/devicetable /
+
+mknod /dev/qmitty0 c 234 0
+mknod /dev/qmitty1 c 234 1
+startbsp
+
+cp /etc/passwd1 /var/passwd
+cp /etc/group1 /var/group
+#cp /etc/wifi.txt /var/wifi.txt
+#wl msglevel 1 1>/dev/null 2>&1
+#wl phymsglevel 1 1>/dev/null 2>&1
+#wlconf wl0 down /var/wifi.txt
+echo 32  > /proc/sys/kernel/msgmni
+#add by wangpu for run up usbdiagd
+test -e /bin/usbdiagd && usbdiagd &
+
+mount -t usbfs none /proc/bus/usb
+
+echo "Loading drivers and kernel modules... "
+#add by c00164495 for HG622u multi acsurl 2011-01-30
+ echo > /var/acsurl
+ ifconfig lo 127.0.0.1 netmask 255.0.0.0 broadcast 127.255.255.255 up
+
+#add for support chinese charset and ntfs fat ntfs filesystem 
+#test -e /lib/kernel/fs/fat/fat.ko && insmod /lib/kernel/fs/fat/fat.ko
+#test -e /lib/kernel/fs/vfat/vfat.ko && insmod /lib/kernel/fs/vfat/vfat.ko
+#test -e /lib/kernel/fs/ntfs/ntfs.ko && insmod /lib/kernel/fs/ntfs/ntfs.ko
+#test -e /lib/kernel/fs/nls/nls_cp936.ko && insmod /lib/kernel/fs/nls/nls_cp936.ko
+ 
+ #test -e /lib/kernel/drivers/net/usb/qmitty.ko && insmod /lib/kernel/drivers/net/usb/qmitty.ko
+ test -e /lib/kernel/drivers/net/usb/ndistty.ko && insmod /lib/kernel/drivers/net/usb/ndistty.ko
+
+ #test -e /lib/kernel/drivers/net/usb/usbnet.ko && insmod /lib/kernel/drivers/net/usb/usbnet.ko
+ #test -e /lib/kernel/drivers/net/usb/rmnet_ethernet.ko && insmod /lib/kernel/drivers/net/usb/rmnet_ethernet.ko 
+ test -e /lib/kernel/drivers/net/usb/hw_cdc_driver.ko && insmod /lib/kernel/drivers/net/usb/hw_cdc_driver.ko
+ test -e /lib/kernel/drivers/usb/serial/option.ko && insmod /lib/kernel/drivers/usb/serial/option.ko
+ test -e /lib/kernel/fs/fuse/fuse.ko && insmod /lib/kernel/fs/fuse/fuse.ko
+ 
+ test -e /lib/extra/hi_kextdev.ko && insmod  /lib/extra/hi_kextdev.ko
+
+hi_cli /home/cli/wan/add_ext -v vifname bcm-ssid0 devname ra0 phyport 9
+# hi_cli /home/cli/accel/napt_setdev -v ifname ra0 flags 0x111
+hi_cli /home/cli/wan/add_ext -v vifname vrmnet0 devname rmnet0 phyport 10
+# hi_cli /home/cli/accel/napt_setdev -v ifname rmnet0 flags 0x111
+
+#keyled started before cms 
+#test -e /bin/keyled && keyled&
+# DTS2013011702860 q00186737 2013-01-18 begin
+test -e /bin/usbom && usbom &
+# DTS2013011702860 q00186737 2013-01-18 end
+mic
+
+echo "Done"
+
+

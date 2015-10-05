@@ -1,0 +1,72 @@
+[settings]
+functionname=0xF7002004;
+attributenum=31;
+attributeflag = 1;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       				type<uint>    range<0x0,0xFFFFFFFF>  	   default<0x00000D07>; /*全局模块*/
+attribute=alias<cap_rxall>                  type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<cap_rxeth>                  type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<cap_rxcpu>                  type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<cap_rxpon>                  type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<cap_txall>                  type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<cap_drop>                   type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<cap_nodrop>                 type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<cap_onlytocpu>              type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<cap_cpytocpu>               type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<cap_match>                  type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<cap_thru>                   type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<cap_lrn>                    type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<cap_spri_rmk>               type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<cap_cpri_rmk>               type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<spec_untag>                 type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<spec_pritag>                type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<spec_arp>                   type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<spec_rarp>                  type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<spec_bpdu>                  type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<spec_eapol>                 type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<spec_igmp>                  type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<spec_icmp>                  type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<spec_dhcp>                  type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<spec_pppoe_dis>             type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<spec_pppoe_ses>             type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<spec_ipv6>                  type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<spec_8023ah>                type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<spec_8021ag>                type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<vlanmk_mis>                 type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+attribute=alias<primk_mis>                  type<uint>    range<0x0,0xFFFFFFFF>        default<0x00000000>;
+
+[help]
+typedef struct 
+{
+    uint cap_rxall;          /* 从EFC模块接收的报文个数统计                 */
+    uint cap_rxeth;          /* 从EFC接收的来自ETH的报文个数统计            */
+    uint cap_rxcpu;          /* 从EFC接收的来自CPU的报文个数统计            */
+    uint cap_rxpon;          /* 从EFC接收的来自PON的报文个数统计            */
+    uint cap_txall;           /* 向NAPT发送的报文个数统计                   */
+    uint cap_drop;           /* CAP模块(出口)丢弃的报文个数统计             */
+    uint cap_nodrop;         /* CAP模块(出口)不丢弃的报文个数统计           */
+    uint cap_onlytocpu;      /* CAP模块(出口)提交给CPU的报文个数统计        */
+    uint cap_cpytocpu;       /* CAP模块(出口)拷贝给CPU的报文个数统计        */
+    uint cap_match;          /* CAP模块(出口)指定转发的报文个数统计         */
+    uint cap_thru;           /* CAP模块(出口)透传的报文个数统计             */
+    uint cap_lrn;            /* CAP模块指示学习的报文个数统计               */
+    uint cap_spri_rmk;       /* CAP模块对外层优先级remarking的报文个数统计  */
+    uint cap_cpri_rmk;       /* CAP模块对内层优先级marking的报文个数统计    */
+    uint spec_untag;         /* 捕获到Untag报文的数目                       */   
+    uint spec_pritag;        /* 捕获到优先级tag报文的数目                   */   
+    uint spec_arp;           /* 捕获到ARP报文的数目                         */   
+    uint spec_rarp;          /* 捕获到RARP报文的数目                        */   
+    uint spec_bpdu;          /* 捕获到BPDU报文的数目                        */   
+    uint spec_eapol;         /* 捕获到EAPOL报文的数目                       */   
+    uint spec_igmp;          /* 捕获到IGMP报文的数目                        */   
+    uint spec_icmp;          /* 捕获到ICMP报文的数目                        */   
+    uint spec_dhcp;          /* 捕获到DHCP报文的数目                        */   
+    uint spec_pppoe_dis;     /* 捕获到PPPoE Discovery报文的数目             */   
+    uint spec_pppoe_ses;     /* 捕获到PPPoE Session报文的数目               */   
+    uint spec_ipv6;          /* 捕获到IPv6报文的数目                        */   
+    uint spec_8023ah;        /* 捕获到802.3ah报文的数目                     */    
+    uint spec_8021ag;        /* 捕获到802.1ag报文的数目                     */    
+    uint vlanmk_mis;           
+    uint primk_mis;          
+}hi_dp_logic_cap_cnt_s;

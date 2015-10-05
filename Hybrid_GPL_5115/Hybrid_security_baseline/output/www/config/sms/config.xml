@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!-- 特性开关(默认显示、开启) 1(开启)/0(关闭)-->
+    <enable>1</enable>
+    <!-- 一页显示短信条数。默认20，默认显示取值范围[1,50]，整型 -->
+    <pagesize>5</pagesize>        
+    <!-- 最大群发数。默认50，取值范围[1,50]，整型 -->
+    <maxphone>10</maxphone>
+    <!-- 特殊语种定制。默认0，取值范围｛0,1,2,3｝,整型 1 turkish 2 spanish 3 Portuguese-->
+    <smscharlang>0</smscharlang>
+    <!-- 本地短信容量。默认1000，取值范围[1,x]，整型 -->
+    <localmax>500</localmax>
+    <!-- 短信有效期，默认10752（最大值）取值范围[1-10752]，整型 -->
+    <validity>10752</validity>
+    <!-- 是否有导入功能-->
+    <import_enabled>0</import_enabled>
+    <!--是否支持短信中心号码-->
+    <sms_center_enabled>1</sms_center_enabled>
+    <!--是否支持短有效期-->
+    <sms_validity_enabled>0</sms_validity_enabled>
+</config>

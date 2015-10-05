@@ -1,0 +1,66 @@
+config BUILD_USB
+	bool "USB"
+	default y
+	help
+	  Select support for usb
+
+if BUILD_USB
+menu "USB Supported Selection"
+config BUILD_USBMOUNT
+	bool "USBMOUNT"
+	select BUILD_USBMOUNTCMS
+	default y
+	help
+	  Select support for usbmount service
+
+if BUILD_USBMOUNT
+menu "USBMOUNT Supported Selection"
+
+#ÉèÖÃ×Ö·û¼¯
+config BUILD_USBMOUNT_CHARACTER
+	bool "USBMOUNT CHARACTER"
+	default n
+	help
+		Select support for character set
+
+if BUILD_USBMOUNT_CHARACTER
+choice
+	prompt "Choose Character type"
+	default ATP_USBMOUNT_CHARACTER_SET_CP936
+	help 
+		Select character set
+
+	config ATP_USBMOUNT_CHARACTER_SET_CP936
+		bool "set character-set as cp936"
+	config ATP_USBMOUNT_CHARACTER_SET_CP864
+		bool "set character-set as cp864"
+
+endchoice
+
+config ATP_USBMOUNT_CHARACTER_SET
+	string
+	default "cp936" if ATP_USBMOUNT_CHARACTER_SET_CP936
+	default "cp864" if ATP_USBMOUNT_CHARACTER_SET_CP864
+	depends on (ATP_USBMOUNT_CHARACTER_SET_CP936 ||  ATP_USBMOUNT_CHARACTER_SET_CP864)
+	help
+
+	   
+endif
+
+endmenu
+endif
+
+config BUILD_DISCONNECT_DEVICE
+    bool "support disconnect usb device"
+    help
+      support disconnect usb device
+    default n
+	
+source "package/atp/applications/usbstorage/Config.in"
+source "package/atp/applications/usbprinter/Config.in"
+source "package/atp/applications/usbmngr/Config.in"
+endmenu
+
+endif
+
+

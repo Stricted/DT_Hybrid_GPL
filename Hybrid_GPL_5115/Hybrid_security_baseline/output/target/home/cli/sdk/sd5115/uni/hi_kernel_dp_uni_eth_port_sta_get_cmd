@@ -1,0 +1,27 @@
+[settings]
+functionname = hi_kernel_dp_uni_eth_port_sta_get_cmd;
+attributenum = 6;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<index>          type<uint>       range<0x0,0xFFFFFFFF>        default<0>;
+attribute=alias<link_sta>       type<uint>       range<0x0,0xFFFFFFFF>        default<0>;
+attribute=alias<work_mode>      type<uint>       range<0x0,0xFFFFFFFF>        default<0>;
+attribute=alias<auto_neg_sta>   type<uint>       range<0x0,0xFFFFFFFF>        default<0>;
+attribute=alias<rx_eee_sta>     type<uint>       range<0x0,0xFFFFFFFF>        default<0>;
+attribute=alias<tx_eee_sta>     type<uint>       range<0x0,0xFFFFFFFF>        default<0>;
+
+
+
+[help]
+typedef struct
+{
+    uint                        ui_index;
+    HI_DP_ETH_LINK_STA_E        em_link_sta;
+    HI_DP_ETH_WORK_MODE_E       em_work_mode;
+    HI_DP_ETH_AUTONEGO_STA_E    em_autonego_sta;
+    HI_DP_ETH_EEE_STA_E         em_eee_sta[HI_DP_ETH_DIRECTION_TYPE_NUM];
+    
+}hi_dp_uni_eth_port_sta_s;
+
+

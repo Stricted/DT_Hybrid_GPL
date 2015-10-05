@@ -1,0 +1,758 @@
+menu "Button config"
+config BUTTON_RESET
+		bool "BUTTON_RESET"
+		default n
+		help
+			Enable this option if you need reset button
+	  
+if 	BUTTON_RESET
+config BUTTON_RESET_MODE
+	int "BUTTON_RESET_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_RESET_ACTIVE_PIN
+	int "BUTTON_RESET_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_RESET_ACTIVE_PIN_STATE
+	int "BUTTON_RESET_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_RESET_POLLTIME_PART1
+	int "BUTTON_RESET_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_RESET_POLLTIME_PART2
+	int "BUTTON_RESET_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_RESET_COUNTSTEP1
+	int "BUTTON_RESET_COUNTSTEP1 7 for 1 second"
+	default "7"
+	help
+	  Enable this 
+	  
+config BUTTON_RESET_COUNTSTEP2
+	int "BUTTON_RESET_COUNTSTEP2"
+	default "48"
+	help
+	  Enable this 
+endif	##end of BUTTON_RESET	
+
+config BUTTON_WLAN
+		bool "BUTTON_WLAN"
+		default n
+		help
+			Enable this option if you need wlan button
+
+if 	BUTTON_WLAN
+config BUTTON_WLAN_MODE
+	int "BUTTON_WLAN_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_WLAN_ACTIVE_PIN
+	int "BUTTON_WLAN_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_WLAN_ACTIVE_PIN_STATE
+	int "BUTTON_WLAN_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_WLAN_POLLTIME_PART1
+	int "BUTTON_WLAN_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_WLAN_POLLTIME_PART2
+	int "BUTTON_WLAN_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_WLAN_COUNTSTEP1
+	int "BUTTON_WLAN_COUNTSTEP1"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_WLAN_COUNTSTEP2
+	int "BUTTON_WLAN_COUNTSTEP2"
+	default "0"
+	help
+	  Enable this 
+endif	##end of BUTTON_WLAN	
+
+config BUTTON_WLAN5G
+		bool "BUTTON_WLAN5G"
+		default n
+		help
+			Enable this option if you need wlan5G button
+
+if 	BUTTON_WLAN5G
+config BUTTON_WLAN5G_MODE
+	int "BUTTON_WLAN5G_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_WLAN5G_ACTIVE_PIN
+	int "BUTTON_WLAN5G_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_WLAN5G_ACTIVE_PIN_STATE
+	int "BUTTON_WLAN5G_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_WLAN5G_POLLTIME_PART1
+	int "BUTTON_WLAN5G_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_WLAN5G_POLLTIME_PART2
+	int "BUTTON_WLAN5G_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_WLAN5G_COUNTSTEP1
+	int "BUTTON_WLAN5G_COUNTSTEP1"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_WLAN5G_COUNTSTEP2
+	int "BUTTON_WLAN5G_COUNTSTEP2"
+	default "0"
+	help
+	  Enable this 
+endif	##end of BUTTON_WLAN5G	
+
+config BUTTON_WPS
+		bool "BUTTON_WPS"
+		default n
+		help
+			Enable this option if you need WPS button
+
+if 	BUTTON_WPS
+config BUTTON_WPS_MODE
+	int "BUTTON_WPS_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_WPS_ACTIVE_PIN
+	int "BUTTON_WPS_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_WPS_ACTIVE_PIN_STATE
+	int "BUTTON_WPS_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_WPS_POLLTIME_PART1
+	int "BUTTON_WPS_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_WPS_POLLTIME_PART2
+	int "BUTTON_WPS_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_WPS_COUNTSTEP1
+	int "BUTTON_WPS_COUNTSTEP1"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_WPS_COUNTSTEP2
+	int "BUTTON_WPS_COUNTSTEP2"
+	default "0"
+	help
+	  Enable this 
+endif	##end of BUTTON_WPS	
+
+config BUTTON_DECT
+		bool "BUTTON_DECT"
+		default n
+		help
+			Enable this option if you need DECT button
+
+if 	BUTTON_DECT
+config BUTTON_DECT_MODE
+	int "BUTTON_DECT_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_DECT_ACTIVE_PIN
+	int "BUTTON_DECT_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_DECT_ACTIVE_PIN_STATE
+	int "BUTTON_DECT_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_DECT_POLLTIME_PART1
+	int "BUTTON_DECT_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_DECT_POLLTIME_PART2
+	int "BUTTON_DECT_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_DECT_COUNTSTEP1
+	int "BUTTON_DECT_COUNTSTEP1"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_DECT_COUNTSTEP2
+	int "BUTTON_DECT_COUNTSTEP2"
+	default "0"
+	help
+	  Enable this 
+endif	##end of BUTTON_DECT	
+
+config BUTTON_DECTPAGE
+		bool "BUTTON_DECTPAGE"
+		default n
+		help
+			Enable this option if you need DECTPAGE button
+
+if 	BUTTON_DECTPAGE
+config BUTTON_DECTPAGE_MODE
+	int "BUTTON_DECTPAGE_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_DECTPAGE_ACTIVE_PIN
+	int "BUTTON_DECTPAGE_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_DECTPAGE_ACTIVE_PIN_STATE
+	int "BUTTON_DECTPAGE_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_DECTPAGE_POLLTIME_PART1
+	int "BUTTON_DECTPAGE_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_DECTPAGE_POLLTIME_PART2
+	int "BUTTON_DECTPAGE_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_DECTPAGE_COUNTSTEP1
+	int "BUTTON_DECTPAGE_COUNTSTEP1"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_DECTPAGE_COUNTSTEP2
+	int "BUTTON_DECTPAGE_COUNTSTEP2"
+	default "0"
+	help
+	  Enable this 
+endif	##end of BUTTON_DECTPAGE	
+
+config BUTTON_LCD
+		bool "BUTTON_LCD"
+		default n
+		help
+			Enable this option if you need LCD button
+
+if 	BUTTON_LCD
+config BUTTON_LCD_MODE
+	int "BUTTON_LCD_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_LCD_ACTIVE_PIN
+	int "BUTTON_LCD_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_LCD_ACTIVE_PIN_STATE
+	int "BUTTON_LCD_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_LCD_POLLTIME_PART1
+	int "BUTTON_LCD_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_LCD_POLLTIME_PART2
+	int "BUTTON_LCD_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_LCD_COUNTSTEP1
+	int "BUTTON_LCD_COUNTSTEP1"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_LCD_COUNTSTEP2
+	int "BUTTON_LCD_COUNTSTEP2"
+	default "0"
+	help
+	  Enable this 
+endif	##end of BUTTON_LCD	
+
+config BUTTON_LCDPAGE
+		bool "BUTTON_LCDPAGE"
+		default n
+		help
+			Enable this option if you need LCDPAGE button
+
+if 	BUTTON_LCDPAGE
+config BUTTON_LCDPAGE_MODE
+	int "BUTTON_LCDPAGE_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_LCDPAGE_ACTIVE_PIN
+	int "BUTTON_LCDPAGE_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_LCDPAGE_ACTIVE_PIN_STATE
+	int "BUTTON_LCDPAGE_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_LCDPAGE_POLLTIME_PART1
+	int "BUTTON_LCDPAGE_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_LCDPAGE_POLLTIME_PART2
+	int "BUTTON_LCDPAGE_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_LCDPAGE_COUNTSTEP1
+	int "BUTTON_LCDPAGE_COUNTSTEP1"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_LCDPAGE_COUNTSTEP2
+	int "BUTTON_LCDPAGE_COUNTSTEP2"
+	default "0"
+	help
+	  Enable this 
+endif	##end of BUTTON_LCDPAGE	
+
+config BUTTON_LCDESURE
+		bool "BUTTON_LCDESURE"
+		default n
+		help
+			Enable this option if you need LCDESURE button
+
+if 	BUTTON_LCDESURE
+config BUTTON_LCDESURE_MODE
+	int "BUTTON_LCDESURE_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_LCDESURE_ACTIVE_PIN
+	int "BUTTON_LCDESURE_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_LCDESURE_ACTIVE_PIN_STATE
+	int "BUTTON_LCDESURE_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_LCDESURE_POLLTIME_PART1
+	int "BUTTON_LCDESURE_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_LCDESURE_POLLTIME_PART2
+	int "BUTTON_LCDESURE_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_LCDESURE_COUNTSTEP1
+	int "BUTTON_LCDESURE_COUNTSTEP1"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_LCDESURE_COUNTSTEP2
+	int "BUTTON_LCDESURE_COUNTSTEP2"
+	default "0"
+	help
+	  Enable this 
+endif	##end of BUTTON_LCDESURE	
+
+config BUTTON_OTHER1
+		bool "BUTTON_OTHER1"
+		default n
+		help
+			Enable this option if you need OTHER1 button
+
+if 	BUTTON_OTHER1
+config BUTTON_OTHER1_MODE
+	int "BUTTON_OTHER1_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER1_ACTIVE_PIN
+	int "BUTTON_OTHER1_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER1_ACTIVE_PIN_STATE
+	int "BUTTON_OTHER1_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER1_POLLTIME_PART1
+	int "BUTTON_OTHER1_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER1_POLLTIME_PART2
+	int "BUTTON_OTHER1_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER1_COUNTSTEP1
+	int "BUTTON_OTHER1_COUNTSTEP1"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER1_COUNTSTEP2
+	int "BUTTON_OTHER1_COUNTSTEP2"
+	default "0"
+	help
+	  Enable this 
+endif	##end of BUTTON_OTHER1	
+
+config BUTTON_OTHER2
+		bool "BUTTON_OTHER2"
+		default n
+		help
+			Enable this option if you need OTHER2 button
+
+if 	BUTTON_OTHER2
+config BUTTON_OTHER2_MODE
+	int "BUTTON_OTHER2_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER2_ACTIVE_PIN
+	int "BUTTON_OTHER2_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER2_ACTIVE_PIN_STATE
+	int "BUTTON_OTHER2_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER2_POLLTIME_PART1
+	int "BUTTON_OTHER2_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER2_POLLTIME_PART2
+	int "BUTTON_OTHER2_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER2_COUNTSTEP1
+	int "BUTTON_OTHER2_COUNTSTEP1"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER2_COUNTSTEP2
+	int "BUTTON_OTHER2_COUNTSTEP2"
+	default "0"
+	help
+	  Enable this 
+endif	##end of BUTTON_OTHER2	
+
+config BUTTON_OTHER3
+		bool "BUTTON_OTHER3"
+		default n
+		help
+			Enable this option if you need OTHER3 button
+
+if 	BUTTON_OTHER3
+config BUTTON_OTHER3_MODE
+	int "BUTTON_OTHER3_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER3_ACTIVE_PIN
+	int "BUTTON_OTHER3_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER3_ACTIVE_PIN_STATE
+	int "BUTTON_OTHER3_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER3_POLLTIME_PART1
+	int "BUTTON_OTHER3_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER3_POLLTIME_PART2
+	int "BUTTON_OTHER3_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER3_COUNTSTEP1
+	int "BUTTON_OTHER3_COUNTSTEP1"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER3_COUNTSTEP2
+	int "BUTTON_OTHER3_COUNTSTEP2"
+	default "0"
+	help
+	  Enable this 
+endif	##end of BUTTON_OTHER1	
+
+config BUTTON_OTHER4
+		bool "BUTTON_OTHER4"
+		default n
+		help
+			Enable this option if you need OTHER4 button
+
+if 	BUTTON_OTHER4
+config BUTTON_OTHER4_MODE
+	int "BUTTON_OTHER4_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER4_ACTIVE_PIN
+	int "BUTTON_OTHER4_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER4_ACTIVE_PIN_STATE
+	int "BUTTON_OTHER4_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER4_POLLTIME_PART1
+	int "BUTTON_OTHER4_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER4_POLLTIME_PART2
+	int "BUTTON_OTHER4_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER4_COUNTSTEP1
+	int "BUTTON_OTHER4_COUNTSTEP1"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER4_COUNTSTEP2
+	int "BUTTON_OTHER4_COUNTSTEP2"
+	default "0"
+	help
+	  Enable this 
+endif	##end of BUTTON_OTHER4	
+
+config BUTTON_OTHER5
+		bool "BUTTON_OTHER5"
+		default n
+		help
+			Enable this option if you need OTHER5 button
+
+if 	BUTTON_OTHER5
+config BUTTON_OTHER5_MODE
+	int "BUTTON_OTHER5_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER5_ACTIVE_PIN
+	int "BUTTON_OTHER5_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER5_ACTIVE_PIN_STATE
+	int "BUTTON_OTHER5_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER5_POLLTIME_PART1
+	int "BUTTON_OTHER5_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER5_POLLTIME_PART2
+	int "BUTTON_OTHER5_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER5_COUNTSTEP1
+	int "BUTTON_OTHER5_COUNTSTEP1"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER5_COUNTSTEP2
+	int "BUTTON_OTHER5_COUNTSTEP2"
+	default "0"
+	help
+	  Enable this 
+endif	##end of BUTTON_OTHER1	
+
+config BUTTON_OTHER6
+		bool "BUTTON_OTHER6"
+		default n
+		help
+			Enable this option if you need OTHER1 button
+
+if 	BUTTON_OTHER6
+config BUTTON_OTHER6_MODE
+	int "BUTTON_OTHER6_MODE 0 for gpio ,1 for irq"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER6_ACTIVE_PIN
+	int "BUTTON_OTHER6_ACTIVE_PIN enter the pin for gpio or irq"
+	default "-1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER6_ACTIVE_PIN_STATE
+	int "BUTTON_OTHER6_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER6_POLLTIME_PART1
+	int "BUTTON_OTHER6_POLLTIME multiply HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER6_POLLTIME_PART2
+	int "BUTTON_OTHER6_POLLTIME divide HZ"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER6_COUNTSTEP1
+	int "BUTTON_OTHER6_COUNTSTEP1"
+	default "1"
+	help
+	  Enable this 
+	  
+config BUTTON_OTHER6_COUNTSTEP2
+	int "BUTTON_OTHER6_COUNTSTEP2"
+	default "0"
+	help
+	  Enable this 
+endif	##end of BUTTON_OTHER6	
+
+config BUTTON_POPUP_RESTORE_DEF
+		bool "BUTTON_POPUP_RESTORE_DEF"
+		default n
+		help
+			Enable this option if you need to restore default by poping up button
+	
+endmenu

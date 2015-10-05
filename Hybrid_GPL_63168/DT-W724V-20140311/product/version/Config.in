@@ -1,0 +1,157 @@
+menu "Product Version config"
+
+config BUILD_FOR_HARDWARE_IAMGE
+	bool "build image for hardware"
+	help
+	build image for hardware
+
+if BUILD_FOR_HARDWARE_IAMGE
+
+config BUILD_ATP_DEBUG_IAMGE
+	bool
+	default y
+endif	
+
+config BUILD_FOR_CHINA_TEST
+	bool "build image for China test"
+	help
+	build image for China test
+
+if BUILD_FOR_CHINA_TEST
+
+config BUILD_ATP_DEBUG_IAMGE
+	bool
+	default y
+endif	
+
+if y != BUILD_FOR_HARDWARE_IAMGE
+if y != BUILD_FOR_CHINA_TEST
+choice
+	prompt "Image Build Edit"
+	
+config BUILD_ATP_RELEASE_IAMGE
+	bool "build release image"
+	help
+	build release image 
+	
+config BUILD_ATP_DEBUG_IAMGE
+	bool "build debug image"
+	help
+	build debug image 
+	
+config BUILD_ATP_ACS_IAMGE
+	bool "build acs image"
+	help
+	build acs image 
+	
+endchoice
+endif	
+endif
+	
+config HGW_PRODUCTTYPE
+	string "HGW_PRODUCTTYPE"
+	default "HGW"
+
+config HGW_PRODUCTNAME
+	string "HGW_PRODUCTNAME"
+	default "ATP"
+	
+config HGW_PRODUCTCLASS
+	string "HGW_PRODUCTCLASS"
+	default "ATP"
+	
+config HGW_SOFTVERSION
+	string "HGW_SOFTVERSION"
+	default "V100R005C01B002"
+	
+config HGW_BATCHNUMBER
+	string "HGW_BATCHNUMBER"
+	default "ATPV100R005C01B002"
+	
+config HGW_RELEASE
+	string "HGW_RELEASE"
+	default "ATPV100R005C01B002"
+
+config HGW_RELEASE_CUSTOMER
+	string "HGW_RELEASE_CUSTOMER"
+	default "ATPV100R005C01B002"
+	
+config HGW_RELEASE_ENGINEERING
+	string "HGW_RELEASE_ENGINEERING"
+	default "ATPV100R005C01B002"
+	
+config HGW_RELEASE_ACS
+	string "HGW_RELEASE_ACS"
+	default "ATPV100R005C01B002"
+	
+config HGW_SOFTVERSION_WEB
+	string
+	default $(HGW_RELEASE_CUSTOMER) if BUILD_ATP_RELEASE_IAMGE
+	default $(HGW_RELEASE_ENGINEERING) if BUILD_ATP_DEBUG_IAMGE
+	default $(HGW_RELEASE_ACS) if BUILD_ATP_ACS_IAMGE
+	help
+	  This is the softversion show on the web page.	
+if BUILD_DECT_VOICE
+config HGW_DECT_VERSION
+	string "HGW_DECT_VERSION"
+	default "3.00.0"
+	help
+		DECT version
+endif	
+
+config HGW_I2C_VERSION
+	string "HGW_I2C_VERSION"
+	depends on ATP_HYBRID
+	default "1.0.0"
+	help
+		I2C version
+
+config HGW_SD5115_BOOT_VERSION
+	string "HGW_SD5115_BOOT_VERSION"
+	depends on ATP_HYBRID
+	default "1.0.0"
+	help
+		SD5115_BOOT version
+
+config HGW_LTE_VERSION
+	string "HGW_LTE_VERSION"
+	depends on ATP_HYBRID
+	default "1.0.0"
+	help
+		LTE version
+
+config PCB_VERSION
+	string "PCB_VERSION"
+	default "PCB 1.0"
+	help
+		HUAWEI HARDWARE VERSION
+		
+config ATP_MANUFACTURER
+	string "ATP_MANUFACTURER"
+	default "Huawei"
+	help
+		manufacturer
+		
+config BUILD_CUSTOMER_VERSION
+	bool "BUILD_CUSTOMER_VERSION"
+	default n	
+	help
+	support cutomer version
+	
+if BUILD_CUSTOMER_VERSION
+menu "Customer Version Supported Selection"
+config HGW_PRODUCT_TYPE
+	string "HGW_PRODUCTTYPE"
+	default ""
+	help
+		Product type, use in the product version.
+		
+config HGW_CUSTOMER_CPU_VERSION
+	string "HGW_CUSTOMER_CPU_VERSION"
+	default ""
+	help
+		Customer CPU version.
+endmenu
+endif
+endmenu
+

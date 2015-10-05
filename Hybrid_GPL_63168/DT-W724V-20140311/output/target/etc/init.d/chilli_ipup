@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Add Total Users
+/bin/foncontrl incfilevalue /var/fon/stats/total/users
+
+# Add Total NAU
+/bin/foncontrl incfilevalue /var/fon/stats/total/nau
+
+# Add Session UsersOnline
+/bin/foncontrl incfilevalue /var/fon/stats/session/usersonline
+
+# Add Session Users
+/bin/foncontrl incfilevalue /var/fon/stats/session/users
+
+# Add Session NAU
+/bin/foncontrl incfilevalue /var/fon/stats/session/nau
+
+exit 0

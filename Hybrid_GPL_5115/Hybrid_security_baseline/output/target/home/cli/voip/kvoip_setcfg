@@ -1,0 +1,13 @@
+[settings]
+functionname=hi_voip_cli_kernel_print_setcfg;  
+attributenum=2;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<dbgflag>      type<uint>   range<0x0,0xFFFFFFFF>   default<0>; /*dbg参数*/
+attribute=alias<printflag>    type<uchar>  range<0x0,0xFF>   	   default<0>; /*print参数*/
+
+[help]
+usage: kvoip_setcfg               ; 配置内核态打印参数   
+       kvoip_setcfg -v dbgflag 0   ; dbg参数
+       kvoip_setcfg -v printflag 0  ; print参数

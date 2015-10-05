@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link type="text/css" rel="stylesheet" href="../css/main.css" />
+        <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+        <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+        <script type="text/javascript" src="../js/refresh.js"></script>
+        <script type="text/javascript" src="../js/wanstatus.js"></script>
+        <title></title>
+    </head>
+    <body>
+<div id="all_content" class="body_bg_connection">
+    <div class="maintitle">
+        <h1 id="title_label_wanstatus">
+            <script type="text/javascript">dw(wan_label_wan_status);</script>
+        </h1>
+    </div>
+    <table class="diviceInfo_table" id="wireless_status" cellpadding="0" cellspacing="0" border="0" style="display:none">
+        <tr>
+            <td><script type="text/javascript">dw(dialup_label_network_type);dw(common_colon);</script></td>
+            <td id="wan_networktype" class="info_value"></td>
+        </tr>
+        <tr>
+            <td><script type="text/javascript">dw(system_label_service_status);dw(common_colon);</script></td>
+            <td id="wan_servicestatus" class="info_value"></td>
+        </tr>
+    </table>
+    <div class="maintitle">
+        <h2><script type="text/javascript">dw(label_ipv4_wanstatus);</script></h2>
+    </div>
+    <table class="diviceInfo_table" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td>
+                <script type="text/javascript">dw(dialup_label_ip_address);dw(common_colon);</script>
+            </td>
+            <td id="wan_ipv4_ipaddress" class="info_value"></td>
+        </tr>
+        <tr>
+            <td><script type="text/javascript">dw(dhcp_ipv6_dns_server);dw(common_colon);</script></td>
+            <td id="wan_ipv4_primarydnsserver" class="info_value"></td>
+        </tr>
+        <tr>
+            <td><script type="text/javascript">dw(dhcp_ipv6_dns_seconds);dw(common_colon);</script></td>
+            <td id="wan_ipv4_secondarydnsserver" class="info_value"></td>
+        </tr>
+      </table>
+    <div class="maintitle" id="wanstatus_ipv6_title" style="display: none;">
+        <h2><script type="text/javascript">dw(wanstatus_label_ipv6wanstatus);</script></h2>
+      </div>
+    <table class="diviceInfo_table" id="wanstatus_ipv6_table" cellpadding="0" cellspacing="0" border="0" style="display: none;">
+        <tr>
+            <td>
+                <script type="text/javascript">dw(dialup_label_ip_address);dw(common_colon);</script>
+            </td>
+            <td id="wan_ipv6_ipaddress" class="info_value"></td>
+        </tr>
+        <tr>
+            <td><script type="text/javascript">dw(wanstatus_label_defaultgateway);dw(common_colon)</script></td>
+            <td id="wan_defaultgateway" class="info_value"></td>
+        </tr>
+        <tr>
+            <td><script type="text/javascript">dw(dhcp_ipv6_dns_server);dw(common_colon);</script></td>
+            <td id="wan_ipv6_primarydnsserver" class="info_value"></td>
+        </tr>
+        <tr>
+            <td><script type="text/javascript">dw(dhcp_ipv6_dns_seconds);dw(common_colon);</script></td>
+            <td id="wan_ipv6_secondarydnsserver" class="info_value"></td>
+        </tr>
+    </table>
+</div>
+    <noscript>
+        <div class="noscript_text">
+            Your browser does not support JavaScript.
+        </div>
+    </noscript>
+    </body>
+</html>

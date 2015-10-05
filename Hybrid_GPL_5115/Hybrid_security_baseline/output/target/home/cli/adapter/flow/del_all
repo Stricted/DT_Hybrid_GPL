@@ -1,0 +1,9 @@
+[settings]
+functionname = hi_adapter_cli_flow_del_all;
+attributenum = 0;
+attributeflag= 1;
+
+[parameter]
+
+[help]
+NULL

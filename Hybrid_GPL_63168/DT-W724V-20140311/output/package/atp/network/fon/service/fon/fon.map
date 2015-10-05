@@ -1,0 +1,1141 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+uaddr               0x400             aaa.o
+laclist             0x4               file.o
+gconfig             0x31c             file.o
+hostname            0x100             network.o
+lnslist             0x4               file.o
+from                0x10              network.o
+kernel_support      0x4               network.o
+tunnels             0xc               xl2tpd.o
+server              0x10              network.o
+events              0x4               scheduler.o
+dial_no_tmp         0x4               xl2tpd.o
+args                0x4               xl2tpd.o
+server_socket       0x4               network.o
+rand_source         0x4               xl2tpd.o
+deflac              0x4               file.o
+deflns              0x4               file.o
+control_fd          0x4               xl2tpd.o
+filerr              0x50              file.o
+
+Discarded input sections
+
+ .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .reginfo       0x0000000000000000       0x18 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .reginfo       0x0000000000000000       0x18 aaa.o
+ .debug_info    0x0000000000000000     0x18e2 aaa.o
+ .debug_abbrev  0x0000000000000000      0x316 aaa.o
+ .debug_loc     0x0000000000000000      0x7ea aaa.o
+ .debug_aranges
+                0x0000000000000000       0x20 aaa.o
+ .debug_ranges  0x0000000000000000       0x40 aaa.o
+ .debug_line    0x0000000000000000      0x5e5 aaa.o
+ .debug_str     0x0000000000000000      0xa5f aaa.o
+ .debug_frame   0x0000000000000000      0x12c aaa.o
+ .reginfo       0x0000000000000000       0x18 avp.o
+ .debug_info    0x0000000000000000     0x20ed avp.o
+ .debug_abbrev  0x0000000000000000      0x24e avp.o
+ .debug_loc     0x0000000000000000     0x1702 avp.o
+ .debug_aranges
+                0x0000000000000000       0x20 avp.o
+ .debug_line    0x0000000000000000      0xdfc avp.o
+ .debug_str     0x0000000000000000      0x975 avp.o
+ .debug_frame   0x0000000000000000      0x350 avp.o
+ .reginfo       0x0000000000000000       0x18 avpsend.o
+ .debug_info    0x0000000000000000     0x15db avpsend.o
+ .debug_abbrev  0x0000000000000000      0x1be avpsend.o
+ .debug_loc     0x0000000000000000      0xa8c avpsend.o
+ .debug_aranges
+                0x0000000000000000       0x20 avpsend.o
+ .debug_line    0x0000000000000000      0x4d3 avpsend.o
+ .debug_str     0x0000000000000000      0x7d4 avpsend.o
+ .debug_frame   0x0000000000000000      0x330 avpsend.o
+ .reginfo       0x0000000000000000       0x18 call.o
+ .debug_info    0x0000000000000000     0x14da call.o
+ .debug_abbrev  0x0000000000000000      0x256 call.o
+ .debug_loc     0x0000000000000000      0x60c call.o
+ .debug_aranges
+                0x0000000000000000       0x20 call.o
+ .debug_ranges  0x0000000000000000       0x18 call.o
+ .debug_line    0x0000000000000000      0x4ad call.o
+ .debug_str     0x0000000000000000      0x83b call.o
+ .debug_frame   0x0000000000000000      0x104 call.o
+ .reginfo       0x0000000000000000       0x18 control.o
+ .debug_info    0x0000000000000000     0x1c4b control.o
+ .debug_abbrev  0x0000000000000000      0x31a control.o
+ .debug_loc     0x0000000000000000     0x12ec control.o
+ .debug_aranges
+                0x0000000000000000       0x20 control.o
+ .debug_line    0x0000000000000000      0xccd control.o
+ .debug_str     0x0000000000000000      0xa8a control.o
+ .debug_frame   0x0000000000000000      0x1b4 control.o
+ .reginfo       0x0000000000000000       0x18 file.o
+ .debug_info    0x0000000000000000     0x3508 file.o
+ .debug_abbrev  0x0000000000000000      0x38f file.o
+ .debug_loc     0x0000000000000000     0x2391 file.o
+ .debug_aranges
+                0x0000000000000000       0x20 file.o
+ .debug_ranges  0x0000000000000000       0x60 file.o
+ .debug_line    0x0000000000000000      0x8e4 file.o
+ .debug_str     0x0000000000000000      0xc6e file.o
+ .debug_frame   0x0000000000000000      0x544 file.o
+ .reginfo       0x0000000000000000       0x18 md5.o
+ .debug_info    0x0000000000000000      0x264 md5.o
+ .debug_abbrev  0x0000000000000000       0xfd md5.o
+ .debug_loc     0x0000000000000000      0x848 md5.o
+ .debug_aranges
+                0x0000000000000000       0x20 md5.o
+ .debug_line    0x0000000000000000      0x271 md5.o
+ .debug_str     0x0000000000000000      0x107 md5.o
+ .debug_frame   0x0000000000000000       0xa8 md5.o
+ .reginfo       0x0000000000000000       0x18 misc.o
+ .debug_info    0x0000000000000000     0x1855 misc.o
+ .debug_abbrev  0x0000000000000000      0x2b6 misc.o
+ .debug_loc     0x0000000000000000      0x648 misc.o
+ .debug_aranges
+                0x0000000000000000       0x20 misc.o
+ .debug_line    0x0000000000000000      0x504 misc.o
+ .debug_str     0x0000000000000000      0xa76 misc.o
+ .debug_frame   0x0000000000000000      0x1ac misc.o
+ .reginfo       0x0000000000000000       0x18 network.o
+ .debug_info    0x0000000000000000     0x1e8b network.o
+ .debug_abbrev  0x0000000000000000      0x36c network.o
+ .debug_loc     0x0000000000000000      0xb0f network.o
+ .debug_aranges
+                0x0000000000000000       0x20 network.o
+ .debug_ranges  0x0000000000000000       0x80 network.o
+ .debug_line    0x0000000000000000      0x744 network.o
+ .debug_str     0x0000000000000000      0xc64 network.o
+ .debug_frame   0x0000000000000000      0x190 network.o
+ .reginfo       0x0000000000000000       0x18 pty.o
+ .debug_info    0x0000000000000000      0x22e pty.o
+ .debug_abbrev  0x0000000000000000       0x9f pty.o
+ .debug_loc     0x0000000000000000      0x211 pty.o
+ .debug_aranges
+                0x0000000000000000       0x20 pty.o
+ .debug_line    0x0000000000000000       0x98 pty.o
+ .debug_str     0x0000000000000000      0x15f pty.o
+ .debug_frame   0x0000000000000000       0x78 pty.o
+ .reginfo       0x0000000000000000       0x18 scheduler.o
+ .debug_info    0x0000000000000000      0x768 scheduler.o
+ .debug_abbrev  0x0000000000000000      0x2a4 scheduler.o
+ .debug_loc     0x0000000000000000      0x3aa scheduler.o
+ .debug_aranges
+                0x0000000000000000       0x20 scheduler.o
+ .debug_ranges  0x0000000000000000       0x18 scheduler.o
+ .debug_line    0x0000000000000000      0x30f scheduler.o
+ .debug_str     0x0000000000000000      0x3d3 scheduler.o
+ .debug_frame   0x0000000000000000       0xd0 scheduler.o
+ .reginfo       0x0000000000000000       0x18 getdevstats.o
+ .debug_info    0x0000000000000000     0x13f7 getdevstats.o
+ .debug_abbrev  0x0000000000000000      0x2a4 getdevstats.o
+ .debug_loc     0x0000000000000000      0x43f getdevstats.o
+ .debug_aranges
+                0x0000000000000000       0x20 getdevstats.o
+ .debug_ranges  0x0000000000000000       0x60 getdevstats.o
+ .debug_line    0x0000000000000000      0x502 getdevstats.o
+ .debug_str     0x0000000000000000     0x1b41 getdevstats.o
+ .debug_frame   0x0000000000000000       0x84 getdevstats.o
+ .reginfo       0x0000000000000000       0x18 xl2tpd.o
+ .debug_info    0x0000000000000000     0x2400 xl2tpd.o
+ .debug_abbrev  0x0000000000000000      0x3b5 xl2tpd.o
+ .debug_loc     0x0000000000000000      0xfef xl2tpd.o
+ .debug_aranges
+                0x0000000000000000       0x28 xl2tpd.o
+ .debug_ranges  0x0000000000000000       0xf0 xl2tpd.o
+ .debug_line    0x0000000000000000      0xa8b xl2tpd.o
+ .debug_str     0x0000000000000000     0x1aab xl2tpd.o
+ .debug_frame   0x0000000000000000      0x2ac xl2tpd.o
+ .reginfo       0x0000000000000000       0x18 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+LOAD aaa.o
+LOAD avp.o
+LOAD avpsend.o
+LOAD call.o
+LOAD control.o
+LOAD file.o
+LOAD md5.o
+LOAD misc.o
+LOAD network.o
+LOAD pty.o
+LOAD scheduler.o
+LOAD getdevstats.o
+LOAD xl2tpd.o
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/staging/lib/libgplutil.so
+LOAD ../chillout/.libs/libchillout.so
+LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/staging/lib/libgcc_s.so
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/libc.so
+START GROUP
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libc.so.0
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/uclibc_nonshared.a
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/ld-uClibc.so.0
+END GROUP
+LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/staging/lib/libgcc_s.so
+LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+                0x0000000000400000                PROVIDE (__executable_start, 0x400000)
+                0x0000000000400114                . = (0x400000 + SIZEOF_HEADERS)
+
+.interp         0x0000000000400114       0x14
+ *(.interp)
+ .interp        0x0000000000400114       0x14 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.reginfo        0x0000000000400128       0x18
+ *(.reginfo)
+ .reginfo       0x0000000000400128       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.dynamic        0x0000000000400140       0xf0
+ *(.dynamic)
+ .dynamic       0x0000000000400140       0xf0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x0000000000400140                _DYNAMIC
+
+.hash           0x0000000000400230      0x684
+ *(.hash)
+ .hash          0x0000000000400230      0x684 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym         0x00000000004008b4      0xda0
+ *(.dynsym)
+ .dynsym        0x00000000004008b4      0xda0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.dynstr         0x0000000000401654      0x8bc
+ *(.dynstr)
+ .dynstr        0x0000000000401654      0x8bc /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.gnu.version    0x0000000000401f10      0x1b4
+ *(.gnu.version)
+ .gnu.version   0x0000000000401f10      0x1b4 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.gnu.version_d  0x00000000004020c4        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.gnu.version_r  0x00000000004020c4       0x20
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x00000000004020c4       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.rel.dyn        0x00000000004020e4        0x0
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ *(.rel.dyn)
+ .rel.dyn       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.bss       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x00000000004020e4                PROVIDE (__rel_iplt_start, .)
+ *(.rel.iplt)
+                0x00000000004020e4                PROVIDE (__rel_iplt_end, .)
+                0x00000000004020e4                PROVIDE (__rela_iplt_start, .)
+                0x00000000004020e4                PROVIDE (__rela_iplt_end, .)
+
+.rela.dyn       0x00000000004020e4        0x0
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+                0x00000000004020e4                PROVIDE (__rel_iplt_start, .)
+                0x00000000004020e4                PROVIDE (__rel_iplt_end, .)
+                0x00000000004020e4                PROVIDE (__rela_iplt_start, .)
+ *(.rela.iplt)
+                0x00000000004020e4                PROVIDE (__rela_iplt_end, .)
+
+.rel.plt        0x00000000004020e4        0x0
+ *(.rel.plt)
+ .rel.plt       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.rela.plt
+ *(.rela.plt)
+
+.init           0x00000000004020e4       0x6c
+ *(.init)
+ .init          0x00000000004020e4       0x1c /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x00000000004020e4                _init
+ .init          0x0000000000402100       0x24 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .init          0x0000000000402124       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .init          0x0000000000402144        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.plt            0x0000000000402150        0x0
+ *(.plt)
+ .plt           0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000402150    0x12920
+                0x0000000000402150                _ftext = .
+ *(.text.unlikely .text.*_unlikely)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ .text.startup  0x0000000000402150       0x54 xl2tpd.o
+                0x0000000000402150                main
+ *(.text.hot .text.hot.*)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ *fill*         0x00000000004021a4        0xc 00000000
+ .text          0x00000000004021b0       0x60 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x00000000004021b0                __start
+ .text          0x0000000000402210        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .text          0x0000000000402210      0x130 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .text          0x0000000000402340      0xcb0 aaa.o
+                0x0000000000402340                init_addr
+                0x0000000000402368                mk_challenge
+                0x000000000040237c                reserve_addr
+                0x0000000000402410                unreserve_addr
+                0x00000000004024ac                get_addr
+                0x0000000000402560                get_secret
+                0x00000000004028a4                handle_challenge
+                0x0000000000402a44                get_lns
+                0x0000000000402ae4                encrypt_avp
+                0x0000000000402d28                decrypt_avp
+ .text          0x0000000000402ff0     0x3760 avp.o
+                0x0000000000402ff0                call_serno_avp
+                0x0000000000403154                ignore_avp
+                0x00000000004031d0                wrong_length
+                0x000000000040324c                receive_window_size_avp
+                0x00000000004033dc                call_physchan_avp
+                0x0000000000403578                tx_speed_avp
+                0x00000000004036fc                rx_speed_avp
+                0x0000000000403880                packet_delay_avp
+                0x00000000004039ec                assigned_call_avp
+                0x0000000000403c14                assigned_tunnel_avp
+                0x0000000000403da4                chalresp_avp
+                0x0000000000403f48                challenge_avp
+                0x0000000000404110                vendor_avp
+                0x0000000000404330                sub_address_avp
+                0x000000000040455c                dialed_number_avp
+                0x0000000000404788                dialing_number_avp
+                0x00000000004049a8                hostname_avp
+                0x0000000000404bc8                frame_type_avp
+                0x0000000000404d70                bearer_type_avp
+                0x0000000000404f1c                firmware_rev_avp
+                0x00000000004050ac                bearer_caps_avp
+                0x0000000000405274                framing_caps_avp
+                0x000000000040543c                protocol_version_avp
+                0x00000000004055e0                result_code_avp
+                0x0000000000405884                seq_reqd_avp
+                0x0000000000405a0c                rand_vector_avp
+                0x0000000000405bac                message_type_avp
+                0x00000000004060f4                handle_avps
+ .text          0x0000000000406750      0xcc0 avpsend.o
+                0x0000000000406750                add_header
+                0x000000000040678c                add_message_type_avp
+                0x00000000004067f8                add_protocol_avp
+                0x0000000000406858                add_frame_caps_avp
+                0x00000000004068cc                add_bearer_caps_avp
+                0x0000000000406940                add_firmware_avp
+                0x00000000004069a4                add_hostname_avp
+                0x0000000000406a48                add_vendor_avp
+                0x0000000000406ae4                add_tunnelid_avp
+                0x0000000000406b50                add_avp_rws
+                0x0000000000406bbc                add_challenge_avp
+                0x0000000000406c4c                add_chalresp_avp
+                0x0000000000406cdc                add_randvect_avp
+                0x0000000000406d6c                add_result_code_avp
+                0x0000000000406e34                add_callid_avp
+                0x0000000000406ea0                add_serno_avp
+                0x0000000000406f20                add_bearer_avp
+                0x0000000000406fa0                add_frame_avp
+                0x0000000000407020                add_txspeed_avp
+                0x00000000004070a0                add_rxspeed_avp
+                0x0000000000407120                add_physchan_avp
+                0x00000000004071a0                add_ppd_avp
+                0x000000000040720c                add_seqreqd_avp
+                0x0000000000407248                add_minbps_avp
+                0x00000000004072c8                add_maxbps_avp
+                0x0000000000407348                add_number_avp
+ .text          0x0000000000407410      0xe90 call.o
+                0x0000000000407410                new_payload
+                0x0000000000407488                recycle_payload
+                0x00000000004074d8                add_payload_hdr
+                0x00000000004075dc                read_packet
+                0x0000000000407888                destroy_call
+                0x0000000000407a38                call_close
+                0x0000000000407ee4                new_call
+                0x0000000000408030                get_tunnel
+                0x000000000040806c                get_call
+ .text          0x00000000004082a0     0x3a10 control.o
+                0x00000000004082a0                new_outgoing
+                0x000000000040831c                recycle_outgoing
+                0x0000000000408384                add_fcs
+                0x0000000000408404                add_control_hdr
+                0x000000000040848c                hello
+                0x0000000000408550                control_zlb
+                0x00000000004085fc                control_finish
+                0x000000000040aaf4                check_control
+                0x000000000040aee8                check_payload
+                0x000000000040b120                expand_payload
+                0x000000000040b358                send_zlb
+                0x000000000040b474                write_packet
+                0x000000000040b7e4                handle_special
+                0x000000000040b91c                find_closecall
+                0x000000000040b9b4                get_callnum
+                0x000000000040b9d8                handle_packet
+ .text          0x000000000040bcb0     0x2390 file.o
+                0x000000000040bcb0                set_lns
+                0x000000000040bdc4                set_authfile
+                0x000000000040be84                set_pppoptfile
+                0x000000000040bf00                set_hostname
+                0x000000000040bf7c                set_authname
+                0x000000000040c004                new_lns
+                0x000000000040c0ec                new_lac
+                0x000000000040c1cc                yesno
+                0x000000000040c2b0                set_boolean
+                0x000000000040c31c                set_ipsec_saref
+                0x000000000040c3c4                set_exclusive
+                0x000000000040c430                set_assignip
+                0x000000000040c49c                set_debugstate
+                0x000000000040c508                set_debugtunnel
+                0x000000000040c574                set_debugpacket
+                0x000000000040c5e0                set_debugnetwork
+                0x000000000040c64c                set_debugavp
+                0x000000000040c6b8                set_userspace
+                0x000000000040c724                set_accesscontrol
+                0x000000000040c790                set_redial
+                0x000000000040c7fc                set_papchap
+                0x000000000040c958                set_debug
+                0x000000000040c9d8                set_lbit
+                0x000000000040ca4c                set_challenge
+                0x000000000040cac0                set_hbit
+                0x000000000040cb34                set_passwdauth
+                0x000000000040cba0                set_defaultroute
+                0x000000000040cc0c                set_flow
+                0x000000000040cce4                set_autodial
+                0x000000000040cd50                set_int
+                0x000000000040cdc0                set_hello_retransmission_delay
+                0x000000000040cde0                set_retransmission_delay
+                0x000000000040ce00                set_max_retries
+                0x000000000040ce20                set_hello_delay
+                0x000000000040ce40                set_rmax
+                0x000000000040cefc                set_rws
+                0x000000000040d078                set_rtimeout
+                0x000000000040d134                set_port
+                0x000000000040d198                set_string
+                0x000000000040d1cc                set_range
+                0x000000000040d498                set_lac
+                0x000000000040d514                set_iprange
+                0x000000000040d590                set_ip
+                0x000000000040d62c                set_remoteaddr
+                0x000000000040d690                set_localaddr
+                0x000000000040d704                set_listenaddr
+                0x000000000040d770                set_rand_sys
+                0x000000000040d7b8                set_rand_dev
+                0x000000000040d7d0                set_rand_egd
+                0x000000000040d820                set_rand_source
+                0x000000000040d998                parse_config
+                0x000000000040dec0                init_config
+ .text          0x000000000040e040      0xfa0 md5.o
+                0x000000000040e040                byteReverse
+                0x000000000040e080                MD5Init
+                0x000000000040e0bc                MD5Transform
+                0x000000000040ed6c                MD5Final
+                0x000000000040ee88                MD5Update
+ .text          0x000000000040efe0      0x890 misc.o
+                0x000000000040efe0                init_log
+                0x000000000040f000                l2tp_log
+                0x000000000040f0c0                set_error
+                0x000000000040f150                new_buf
+                0x000000000040f1f0                recycle_buf
+                0x000000000040f204                bufferDump
+                0x000000000040f3c8                do_packet_dump
+                0x000000000040f528                swaps
+                0x000000000040f530                toss
+                0x000000000040f578                safe_copy
+                0x000000000040f5cc                add_opt
+                0x000000000040f688                opt_destroy
+                0x000000000040f6cc                get_egd_entropy
+                0x000000000040f6d4                get_sys_entropy
+                0x000000000040f738                get_dev_entropy
+                0x000000000040f7e0                get_entropy
+ .text          0x000000000040f870     0x1a90 network.o
+                0x000000000040fdb8                clear_network
+                0x000000000040fe20                init_server_socket
+                0x0000000000410114                init_network
+                0x0000000000410524                extract
+                0x0000000000410584                fix_hdr
+                0x00000000004105e8                dethrottle
+                0x00000000004105f0                udp_xmit
+                0x0000000000410740                control_xmit
+                0x0000000000410958                build_fdset
+                0x0000000000410b4c                network_thread
+ .text          0x0000000000411300      0x320 pty.o
+                0x0000000000411300                getPtyMaster_pty
+                0x0000000000411434                getPtyMaster_ptmx
+                0x0000000000411568                getPtyMaster
+ .text          0x0000000000411620      0x560 scheduler.o
+                0x0000000000411620                alarm_handler
+                0x00000000004117a8                init_scheduler
+                0x0000000000411858                schedule_lock
+                0x00000000004118a4                schedule_unlock
+                0x00000000004118f8                schedule
+                0x0000000000411a94                aschedule
+                0x0000000000411b1c                deschedule
+ .text          0x0000000000411b80      0x750 getdevstats.o
+                0x0000000000411dd4                ATP_UTIL_get_dev_stats
+ .text          0x00000000004122d0     0x2750 xl2tpd.o
+                0x00000000004122d0                null_handler
+                0x00000000004122d8                death_handler
+                0x0000000000412428                child_handler
+                0x0000000000412660                init_tunnel_list
+                0x0000000000412670                show_status
+                0x0000000000412a8c                status_handler
+                0x0000000000412a94                start_pppd
+                0x0000000000413084                destroy_tunnel
+                0x00000000004132c0                l2tp_call
+                0x0000000000413484                magic_lac_tunnel
+                0x0000000000413530                lac_call
+                0x0000000000413670                magic_lac_dial
+                0x00000000004137e8                lac_hangup
+                0x00000000004138c0                lac_disconnect
+                0x000000000041398c                new_tunnel
+                0x0000000000413b58                do_control
+                0x000000000041401c                usage
+                0x0000000000414080                init_args
+                0x0000000000414470                daemonize
+                0x000000000041459c                consider_pidfile
+                0x0000000000414750                init
+ .text          0x0000000000414a20       0x50 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .text          0x0000000000414a70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ *(.gnu.warning)
+ *(.mips16.fn.*)
+ *(.mips16.call.*)
+
+.MIPS.stubs     0x0000000000414a70      0x600
+ .MIPS.stubs    0x0000000000414a70      0x600 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x0000000000414a70                bind
+                0x0000000000414a80                gethostbyname
+                0x0000000000414a90                calloc
+                0x0000000000414aa0                chillout_init
+                0x0000000000414ab0                __errno_location
+                0x0000000000414ac0                open
+                0x0000000000414ad0                usleep
+                0x0000000000414ae0                memcpy
+                0x0000000000414af0                connect
+                0x0000000000414b00                uname
+                0x0000000000414b10                sleep
+                0x0000000000414b20                bcopy
+                0x0000000000414b30                getsockname
+                0x0000000000414b40                strcat
+                0x0000000000414b50                feof
+                0x0000000000414b60                chillout_accept
+                0x0000000000414b70                openlog
+                0x0000000000414b80                chillout_finish
+                0x0000000000414b90                __cmsg_nxthdr
+                0x0000000000414ba0                setenv
+                0x0000000000414bb0                strcasecmp
+                0x0000000000414bc0                ATP_UTIL_GetSysTime
+                0x0000000000414bd0                malloc
+                0x0000000000414be0                setitimer
+                0x0000000000414bf0                strrchr
+                0x0000000000414c00                strncmp
+                0x0000000000414c10                __uClibc_main
+                0x0000000000414c20                ioctl
+                0x0000000000414c30                strlen
+                0x0000000000414c40                sendto
+                0x0000000000414c50                ptsname
+                0x0000000000414c60                fcntl
+                0x0000000000414c70                sendmsg
+                0x0000000000414c80                snprintf
+                0x0000000000414c90                dup2
+                0x0000000000414ca0                read
+                0x0000000000414cb0                chillout_write
+                0x0000000000414cc0                execv
+                0x0000000000414cd0                select
+                0x0000000000414ce0                _exit
+                0x0000000000414cf0                __fputc_unlocked
+                0x0000000000414d00                getpid
+                0x0000000000414d10                sigprocmask
+                0x0000000000414d20                fclose
+                0x0000000000414d30                setsockopt
+                0x0000000000414d40                strncat
+                0x0000000000414d50                fopen
+                0x0000000000414d60                gethostname
+                0x0000000000414d70                ATP_FON_Gethostbyname
+                0x0000000000414d80                chillout_read
+                0x0000000000414d90                time
+                0x0000000000414da0                strtok
+                0x0000000000414db0                write
+                0x0000000000414dc0                close
+                0x0000000000414dd0                fputc
+                0x0000000000414de0                setsid
+                0x0000000000414df0                unlockpt
+                0x0000000000414e00                mkfifo
+                0x0000000000414e10                fgets
+                0x0000000000414e20                sigaction
+                0x0000000000414e30                strncpy
+                0x0000000000414e40                tcsetattr
+                0x0000000000414e50                sigaddset
+                0x0000000000414e60                tcgetattr
+                0x0000000000414e70                unlink
+                0x0000000000414e80                memset
+                0x0000000000414e90                inet_ntoa
+                0x0000000000414ea0                perror
+                0x0000000000414eb0                bzero
+                0x0000000000414ec0                fprintf
+                0x0000000000414ed0                recvmsg
+                0x0000000000414ee0                memcmp
+                0x0000000000414ef0                vsnprintf
+                0x0000000000414f00                syslog
+                0x0000000000414f10                sigemptyset
+                0x0000000000414f20                sprintf
+                0x0000000000414f30                socket
+                0x0000000000414f40                rand
+                0x0000000000414f50                exit
+                0x0000000000414f60                fork
+                0x0000000000414f70                raise
+                0x0000000000414f80                strcmp
+                0x0000000000414f90                waitpid
+                0x0000000000414fa0                free
+                0x0000000000414fb0                atoi
+                0x0000000000414fc0                strchr
+                0x0000000000414fd0                strerror
+                0x0000000000414fe0                srand
+                0x0000000000414ff0                printf
+                0x0000000000415000                strdup
+                0x0000000000415010                signal
+                0x0000000000415020                pipe
+                0x0000000000415030                strcpy
+                0x0000000000415040                kill
+                0x0000000000415050                grantpt
+
+.fini           0x0000000000415070       0x4c
+ *(.fini)
+ .fini          0x0000000000415070       0x1c /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x0000000000415070                _fini
+ .fini          0x000000000041508c       0x24 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .fini          0x00000000004150b0        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+                0x00000000004150bc                PROVIDE (__etext, .)
+                0x00000000004150bc                PROVIDE (_etext, .)
+                0x00000000004150bc                PROVIDE (etext, .)
+
+.rodata         0x00000000004150c0     0x5680
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x00000000004150c0      0x1a1 aaa.o
+                                        0x1a8 (size before relaxing)
+ *fill*         0x0000000000415261        0xf 00
+ .rodata        0x0000000000415270       0x20 aaa.o
+ .rodata.str1.4
+                0x0000000000415290     0x1b62 avp.o
+                                       0x1b68 (size before relaxing)
+ *fill*         0x0000000000416df2        0xe 00
+ .rodata        0x0000000000416e00      0x220 avp.o
+ .rodata.str1.4
+                0x0000000000417020        0xe avpsend.o
+                                         0x10 (size before relaxing)
+ *fill*         0x000000000041702e        0x2 00
+ .rodata.str1.4
+                0x0000000000417030      0x28d call.o
+                                        0x290 (size before relaxing)
+ *fill*         0x00000000004172bd        0x3 00
+ .rodata        0x00000000004172c0       0x40 call.o
+ .rodata.str1.4
+                0x0000000000417300     0x11b5 control.o
+                                       0x11d8 (size before relaxing)
+ *fill*         0x00000000004184b5        0xb 00
+ .rodata        0x00000000004184c0      0x180 control.o
+ .rodata.str1.4
+                0x0000000000418640      0x70f file.o
+                                        0x73c (size before relaxing)
+ *fill*         0x0000000000418d4f        0x1 00
+ .rodata        0x0000000000418d50       0x50 file.o
+ .rodata.str1.4
+                0x0000000000418da0      0x142 misc.o
+                                        0x148 (size before relaxing)
+ *fill*         0x0000000000418ee2        0xe 00
+ .rodata        0x0000000000418ef0       0x20 misc.o
+ .rodata.str1.4
+                0x0000000000418f10      0x67a network.o
+                                        0x6ac (size before relaxing)
+ *fill*         0x000000000041958a        0x6 00
+ .rodata        0x0000000000419590       0x80 network.o
+ .rodata.str1.4
+                0x0000000000419610      0x141 pty.o
+                                        0x144 (size before relaxing)
+ *fill*         0x0000000000419751        0xf 00
+ .rodata        0x0000000000419760       0x40 pty.o
+ .rodata.str1.4
+                0x00000000004197a0       0x43 scheduler.o
+                                         0x44 (size before relaxing)
+ *fill*         0x00000000004197e3        0xd 00
+ .rodata        0x00000000004197f0       0x10 scheduler.o
+ .rodata.str1.4
+                0x0000000000419800      0x1a1 getdevstats.o
+                                        0x1a4 (size before relaxing)
+ *fill*         0x00000000004199a1        0x3 00
+ .rodata.str1.4
+                0x00000000004199a4      0xc80 xl2tpd.o
+                                        0xccc (size before relaxing)
+ *fill*         0x000000000041a624        0xc 00
+ .rodata        0x000000000041a630      0x110 xl2tpd.o
+
+.rodata1
+ *(.rodata1)
+
+.sdata2
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+
+.sbss2
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+
+.eh_frame_hdr   0x000000000041a740        0x0
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.eh_frame       0x000000000041a740        0x4
+ *(.eh_frame)
+ .eh_frame      0x000000000041a740        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .eh_frame      0x000000000041a740        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x000000000041a744                . = (ALIGN (0x10000) - ((0x10000 - .) & 0xffff))
+                0x000000000042b000                . = DATA_SEGMENT_ALIGN (0x10000, 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x000000000042b000        0x0
+                0x000000000042b000                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x000000000042b000                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x000000000042b000        0x0
+                0x000000000042b000                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x000000000042b000                PROVIDE (__init_array_end, .)
+
+.fini_array     0x000000000042b000        0x0
+                0x000000000042b000                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array)
+                0x000000000042b000                PROVIDE (__fini_array_end, .)
+
+.ctors          0x000000000042b000        0x8
+ *crtbegin.o(.ctors)
+ .ctors         0x000000000042b000        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ .ctors         0x000000000042b004        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+
+.dtors          0x000000000042b008        0x8
+ *crtbegin.o(.dtors)
+ .dtors         0x000000000042b008        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ .dtors         0x000000000042b00c        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+                0x000000000042b00c                __DTOR_END__
+
+.jcr            0x000000000042b010        0x4
+ *(.jcr)
+ .jcr           0x000000000042b010        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .jcr           0x000000000042b010        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+                0x000000000042b014                . = DATA_SEGMENT_RELRO_END (., 0x0)
+
+.data           0x000000000042b020      0x860
+                0x000000000042b020                _fdata = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000000000042b020       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x000000000042b020                data_start
+                0x000000000042b020                __data_start
+ .data          0x000000000042b030        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .data          0x000000000042b030        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .data          0x000000000042b030        0x0 aaa.o
+ .data          0x000000000042b030        0x0 avp.o
+ .data.rel.local
+                0x000000000042b030       0x90 avp.o
+                0x000000000042b030                cdn_result_codes
+                0x000000000042b05c                stopccn_result_codes
+                0x000000000042b07c                msgtypes
+ .data.rel      0x000000000042b0c0      0x280 avp.o
+                0x000000000042b0c0                avps
+ .data          0x000000000042b340        0x0 avpsend.o
+ .data          0x000000000042b340        0x0 call.o
+ .data          0x000000000042b340      0x210 control.o
+                0x000000000042b340                global_serno
+                0x000000000042b344                ppp_crc16_table
+ .data          0x000000000042b550        0x0 file.o
+ .data.rel      0x000000000042b550      0x198 file.o
+                0x000000000042b550                words
+ *fill*         0x000000000042b6e8        0x8 00
+ .data          0x000000000042b6f0        0x0 md5.o
+ .data          0x000000000042b6f0        0x0 misc.o
+ .data          0x000000000042b6f0        0x0 network.o
+ .data.rel.local
+                0x000000000042b6f0      0x168 network.o
+ *fill*         0x000000000042b858        0x8 00
+ .data          0x000000000042b860       0x10 pty.o
+ .data          0x000000000042b870        0x0 scheduler.o
+ .data          0x000000000042b870        0x0 getdevstats.o
+ .data          0x000000000042b870       0x10 xl2tpd.o
+                0x000000000042b870                g_lChilloutSend
+                0x000000000042b874                ppd
+                0x000000000042b878                max_tunnels
+ .data          0x000000000042b880        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .data          0x000000000042b880        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.rld_map        0x000000000042b880        0x4
+ .rld_map       0x000000000042b880        0x4 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x000000000042b880                __RLD_MAP
+
+.data1
+ *(.data1)
+
+.got.plt        0x000000000042b884        0x0
+ *(.got.plt)
+ .got.plt       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x000000000042b884                . = .
+                0x0000000000433880                _gp = (ALIGN (0x10) + 0x7ff0)
+
+.got            0x000000000042b890      0x350
+ *(.got)
+ .got           0x000000000042b890      0x350 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x000000000042b890                _GLOBAL_OFFSET_TABLE_
+
+.sdata          0x000000000042bbe0        0x4
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x000000000042bbe0        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+                0x000000000042bbe0                __dso_handle
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+                0x000000000042bbe4                _edata = .
+                0x000000000042bbe4                PROVIDE (edata, .)
+                0x000000000042bbe4                __bss_start = .
+                0x000000000042bbe4                _fbss = .
+
+.sbss           0x000000000042bbe4       0x2c
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ *(.scommon)
+ .scommon       0x000000000042bbe4       0x10 file.o
+                0x000000000042bbe4                laclist
+                0x000000000042bbe8                lnslist
+                0x000000000042bbec                deflac
+                0x000000000042bbf0                deflns
+ .scommon       0x000000000042bbf4        0x8 network.o
+                0x000000000042bbf4                kernel_support
+                0x000000000042bbf8                server_socket
+ .scommon       0x000000000042bbfc        0x4 scheduler.o
+                0x000000000042bbfc                events
+ .scommon       0x000000000042bc00       0x10 xl2tpd.o
+                0x000000000042bc00                dial_no_tmp
+                0x000000000042bc04                args
+                0x000000000042bc08                rand_source
+                0x000000000042bc0c                control_fd
+
+.bss            0x000000000042bc10     0x2d28
+ *(.dynbss)
+ .dynbss        0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000000000042bc10        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .bss           0x000000000042bc10        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .bss           0x000000000042bc10       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .bss           0x000000000042bc30        0x0 aaa.o
+ .bss           0x000000000042bc30        0x0 avp.o
+ .bss           0x000000000042bc30        0x0 avpsend.o
+ .bss           0x000000000042bc30     0x1010 call.o
+ .bss           0x000000000042cc40     0x1000 control.o
+ .bss           0x000000000042dc40        0x0 file.o
+ .bss           0x000000000042dc40        0x0 md5.o
+ .bss           0x000000000042dc40        0x0 misc.o
+ .bss           0x000000000042dc40       0x10 network.o
+                0x000000000042dc40                chillout
+ .bss           0x000000000042dc50        0x0 pty.o
+ .bss           0x000000000042dc50       0x20 scheduler.o
+ .bss           0x000000000042dc70      0x420 getdevstats.o
+ .bss           0x000000000042e090       0x10 xl2tpd.o
+                0x000000000042e090                waiting_first_cid
+                0x000000000042e094                switch_io
+ .bss           0x000000000042e0a0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .bss           0x000000000042e0a0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ *(COMMON)
+ COMMON         0x000000000042e0a0      0x400 aaa.o
+                0x000000000042e0a0                uaddr
+ COMMON         0x000000000042e4a0      0x36c file.o
+                0x000000000042e4a0                gconfig
+                0x000000000042e7bc                filerr
+ COMMON         0x000000000042e80c      0x120 network.o
+                0x000000000042e80c                hostname
+                0x000000000042e90c                from
+                0x000000000042e91c                server
+ COMMON         0x000000000042e92c        0xc xl2tpd.o
+                0x000000000042e92c                tunnels
+                0x000000000042e938                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x000000000042e938                . = ALIGN (0x4)
+                0x000000000042e938                . = ALIGN (0x4)
+                0x000000000042e938                _end = .
+                0x000000000042e938                PROVIDE (end, .)
+                0x000000000042e938                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.pdr            0x0000000000000000     0x1b40
+ .pdr           0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .pdr           0x0000000000000020       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .pdr           0x0000000000000060        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .pdr           0x0000000000000060      0x140 aaa.o
+ .pdr           0x00000000000001a0      0x380 avp.o
+ .pdr           0x0000000000000520      0x340 avpsend.o
+ .pdr           0x0000000000000860      0x120 call.o
+ .pdr           0x0000000000000980      0x200 control.o
+ .pdr           0x0000000000000b80      0x680 file.o
+ .pdr           0x0000000000001200       0xa0 md5.o
+ .pdr           0x00000000000012a0      0x200 misc.o
+ .pdr           0x00000000000014a0      0x1c0 network.o
+ .pdr           0x0000000000001660       0x60 pty.o
+ .pdr           0x00000000000016c0       0xe0 scheduler.o
+ .pdr           0x00000000000017a0       0x80 getdevstats.o
+ .pdr           0x0000000000001820      0x2e0 xl2tpd.o
+ .pdr           0x0000000000001b00        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .pdr           0x0000000000001b00       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.comment        0x0000000000000000       0x30
+ *(.comment)
+ .comment       0x0000000000000000       0x11 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000011       0x1f /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+                                         0x20 (size before relaxing)
+ .comment       0x0000000000000000       0x20 aaa.o
+ .comment       0x0000000000000000       0x20 avp.o
+ .comment       0x0000000000000000       0x20 avpsend.o
+ .comment       0x0000000000000000       0x20 call.o
+ .comment       0x0000000000000000       0x20 control.o
+ .comment       0x0000000000000000       0x20 file.o
+ .comment       0x0000000000000000       0x20 md5.o
+ .comment       0x0000000000000000       0x20 misc.o
+ .comment       0x0000000000000000       0x20 network.o
+ .comment       0x0000000000000000       0x20 pty.o
+ .comment       0x0000000000000000       0x20 scheduler.o
+ .comment       0x0000000000000000       0x20 getdevstats.o
+ .comment       0x0000000000000000       0x20 xl2tpd.o
+ .comment       0x0000000000000000       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .comment       0x0000000000000000       0x12 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo .zdebug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames .zdebug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges .zdebug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames .zdebug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.* .zdebug_info)
+
+.debug_abbrev
+ *(.debug_abbrev .zdebug_abbrev)
+
+.debug_line
+ *(.debug_line .zdebug_line)
+
+.debug_frame
+ *(.debug_frame .zdebug_frame)
+
+.debug_str
+ *(.debug_str .zdebug_str)
+
+.debug_loc
+ *(.debug_loc .zdebug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo .zdebug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames .zdebug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames .zdebug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames .zdebug_typenames)
+
+.debug_varnames
+ *(.debug_varnames .zdebug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes .zdebug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges .zdebug_ranges)
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ *(.gnu.attributes)
+ .gnu.attributes
+                0x0000000000000000       0x10 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .gnu.attributes
+                0x0000000000000010       0x10 aaa.o
+ .gnu.attributes
+                0x0000000000000020       0x10 avp.o
+ .gnu.attributes
+                0x0000000000000030       0x10 avpsend.o
+ .gnu.attributes
+                0x0000000000000040       0x10 call.o
+ .gnu.attributes
+                0x0000000000000050       0x10 control.o
+ .gnu.attributes
+                0x0000000000000060       0x10 file.o
+ .gnu.attributes
+                0x0000000000000070       0x10 md5.o
+ .gnu.attributes
+                0x0000000000000080       0x10 misc.o
+ .gnu.attributes
+                0x0000000000000090       0x10 network.o
+ .gnu.attributes
+                0x00000000000000a0       0x10 pty.o
+ .gnu.attributes
+                0x00000000000000b0       0x10 scheduler.o
+ .gnu.attributes
+                0x00000000000000c0       0x10 getdevstats.o
+ .gnu.attributes
+                0x00000000000000d0       0x10 xl2tpd.o
+ .gnu.attributes
+                0x00000000000000e0       0x10 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+
+.gptab.sdata
+ *(.gptab.data)
+ *(.gptab.sdata)
+
+.gptab.sbss
+ *(.gptab.bss)
+ *(.gptab.sbss)
+
+.mdebug.abi32   0x000000000042e938        0x0
+ *(.mdebug.abi32)
+ .mdebug.abi32  0x000000000042e938        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .mdebug.abi32  0x000000000042e938        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .mdebug.abi32  0x000000000042e938        0x0 aaa.o
+ .mdebug.abi32  0x000000000042e938        0x0 avp.o
+ .mdebug.abi32  0x000000000042e938        0x0 avpsend.o
+ .mdebug.abi32  0x000000000042e938        0x0 call.o
+ .mdebug.abi32  0x000000000042e938        0x0 control.o
+ .mdebug.abi32  0x000000000042e938        0x0 file.o
+ .mdebug.abi32  0x000000000042e938        0x0 md5.o
+ .mdebug.abi32  0x000000000042e938        0x0 misc.o
+ .mdebug.abi32  0x000000000042e938        0x0 network.o
+ .mdebug.abi32  0x000000000042e938        0x0 pty.o
+ .mdebug.abi32  0x000000000042e938        0x0 scheduler.o
+ .mdebug.abi32  0x000000000042e938        0x0 getdevstats.o
+ .mdebug.abi32  0x000000000042e938        0x0 xl2tpd.o
+ .mdebug.abi32  0x000000000042e938        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .mdebug.abi32  0x000000000042e938        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.mdebug.abiN32
+ *(.mdebug.abiN32)
+
+.mdebug.abi64
+ *(.mdebug.abi64)
+
+.mdebug.abiO64
+ *(.mdebug.abiO64)
+
+.mdebug.eabi32
+ *(.mdebug.eabi32)
+
+.mdebug.eabi64
+ *(.mdebug.eabi64)
+
+.gcc_compiled_long32
+ *(.gcc_compiled_long32)
+
+.gcc_compiled_long64
+ *(.gcc_compiled_long64)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(.libs/xl2tpd elf32-tradbigmips)

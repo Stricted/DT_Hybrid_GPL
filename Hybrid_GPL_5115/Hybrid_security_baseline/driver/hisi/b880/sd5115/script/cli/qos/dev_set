@@ -1,0 +1,19 @@
+[settings]
+functionname = hi_kernel_qos_cmd_device_set;
+attributenum = 2;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<ifname>        type<string>  range<0,16>           default<nas0>;
+attribute=alias<bandwidth>     type<uint>    range<0,0xFFFFFFFF>   default<0xFFFFFFFF>;
+
+
+[help]
+
+typedef struct
+{
+    hi_uchar8   uc_ifname[16]; 
+    hi_uint32   ui_bandwidth; 
+}hi_kernel_qos_api_device_s; 
+
+

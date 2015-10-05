@@ -1,0 +1,70 @@
+<div id="header_turnbg" class="head_div head_dim">
+    <div class="head_dim head_filter">
+        <div class="logo">
+            <a href="#"></a>
+        </div>
+        <div id="union_main_menu" class="main_menu">
+            <ul>
+                <li id="menu_index">
+                    <a id="home" href="home.html">
+                    <span></span>
+                    </a>
+                </li>
+                <li id="menu_connection">
+                    <a id="connection" href="connectionstatus.html">
+                    <span></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="help">
+            <span>
+                <select id="lang">
+                </select>
+            </span>
+            <span>
+                <a id=help_url href="#" target="_blank">
+                <span id="help_span"></span>
+                </a>
+            </span>
+            <span>
+                <span class="username">
+                    <span id="username_span" style="display:none"></span>
+                </span>
+            </span>
+            <span>
+                <span class="logout">
+                    <span id="logout_span"></span>
+                </span>
+            </span>
+        </div>
+        <div class="tools">
+            <ul>
+                <li id="sim_signal_gif" class="nav03">
+                    <span id="tooltip_sim"></span>
+                </li>
+                <li id="plmn_gif" class="nav04">
+                    <span id="tooltip_plmn"></span>
+                </li>
+                <li id="wan_gif" class="nav05">
+                    <span id="tooltip_wan"></span>
+                </li>
+                <li id="wifi_gif" class="nav06">
+                    <span id="tooltip_wifi"></span>
+                </li>
+                <!--li id="battery_gif" class="nav07">
+                    <span id="tooltip_battery"></span>
+                </li-->
+                <!--li id="station_gif" class="nav08">
+                    <span id="tooltip_station"></span>
+                </li-->
+            </ul>
+        </div>
+        <script type="text/javascript">
+            log.debug("header.html enter");
+            $(document).ready( function() {
+                getUserManualUrl();
+            });
+        </script>
+    </div>
+</div>

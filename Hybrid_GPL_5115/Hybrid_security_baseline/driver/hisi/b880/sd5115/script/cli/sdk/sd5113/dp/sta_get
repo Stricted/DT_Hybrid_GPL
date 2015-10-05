@@ -1,0 +1,41 @@
+[settings]
+functionname=0xF7002005;
+attributenum=14;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       			type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000102>; /*全局模块*/
+attribute=alias<year>         			type<uint>   range<0x0,0xFFFFFFFF>  default<0>;            
+attribute=alias<month>        			type<uint>   range<0x0,0xFFFFFFFF>  default<0>;
+attribute=alias<day>          			type<uint>   range<0x0,0xFFFFFFFF>  default<0>;        
+attribute=alias<chip_id>      			type<uint>   range<0x0,0xFFFFFFFF>  default<0>;         
+attribute=alias<base_line>    			type<uint>   range<0x0,0xFFFFFFFF>  default<0>;       
+attribute=alias<sub_version>  			type<uint>   range<0x0,0xFFFFFFFF>  default<0>;
+attribute=alias<vendor_id>    			type<uint>   range<0x0,0xFFFFFFFF>  default<0>;    
+attribute=alias<em_reset_type>    		type<int>    range<0x0,0x01>  		default<0>;  
+attribute=alias<em_chip_version>    	type<int>    range<0x0,0x02>  		default<0>;
+attribute=alias<uc_softare_version>   	type<binary> range<0,64>  			default<0>;    
+attribute=alias<em_ecspll_update_flag>  type<int>    range<0x0,0x01>  		default<0>;  
+attribute=alias<em_usb1_link>    		type<int>    range<0x0,0x01>  		default<0>;
+attribute=alias<em_usb2_link>    		type<int>    range<0x0,0x01>  		default<0>;
+
+[help]
+/*状态查询*/
+typedef struct
+{   
+    /*芯片版本相关信息*/
+    uint ui_year;                                  /*DATE*/            
+    uint ui_month;    
+    uint ui_day;                                 
+    uint ui_chip_id;                               /*32'h51130100*/                                                       
+    uint ui_base_line;                             /*基线版本号*/  
+    uint ui_sub_version;                           /*子版本号*/
+    uint ui_vendor_id;                             /*厂商ID*/                  
+    HI_SYSCTL_HARD_RESET_TYPE_E em_reset_type;     /*上一次硬件复位类型*/
+    HI_CHIP_VERSION_E em_chip_version;                  /* 芯片A/B版本 */
+    uchar uc_softare_version[HI_SOFTWARE_VERSION_LEN];  /* 软件版本 */
+    HI_BOOL_E em_ecspll_update_flag;
+
+    HI_BOOL_E em_usb1_link;                        /* USB 端口1连接状态 */
+    HI_BOOL_E em_usb2_link;                        /* USB 端口2连接状态 */
+} hi_sysctl_sta_s;

@@ -1,0 +1,15 @@
+[settings]
+functionname=hi_voip_cli_modify_conference_user;  
+attributenum=3;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chanid>         type<uint>   range<0x0,0xFFFFFFFF>   default<0>; /*通道号*/
+attribute=alias<confid>         type<uint>   range<0x0,0xFFFFFFFF>   default<0>; /*会议ID*/
+attribute=alias<confuserctrl>   type<uint>   range<0x0,0xFFFFFFFF>   default<0>; /*修改会议成员控制参数*/
+
+[help]
+usage: modify_conference_user                   ; 添加会议室成员    
+       modify_conference_user -v chanid 0       ; 通道号
+       modify_conference_user -v confid 0       ; 会议ID
+       modify_conference_user -v confuserctrl 0 ; 修改会议成员控制参数

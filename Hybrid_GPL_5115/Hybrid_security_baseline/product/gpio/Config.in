@@ -1,0 +1,8 @@
+menu "GPIO Config"
+
+# GPIO applications
+source "product/gpio/button/Config.in"
+source "product/gpio/led/LedConfig.in"
+source "product/gpio/customize/Config.in"
+
+endmenu

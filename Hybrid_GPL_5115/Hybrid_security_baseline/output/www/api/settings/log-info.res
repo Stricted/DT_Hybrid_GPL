@@ -1,0 +1,1 @@
+vpath="InternetGatewayDevice.X_SyslogConfig"E5element="LogEnable|LogLevel|LogServer|PrimaryServerAddress|PrimaryServerPort|SecondServerAddress|SecondServerPort"ATPelement="Enable|Level|LogServerEnable|MainServer|MainServerPort|MinorServer|MinorServerPort"

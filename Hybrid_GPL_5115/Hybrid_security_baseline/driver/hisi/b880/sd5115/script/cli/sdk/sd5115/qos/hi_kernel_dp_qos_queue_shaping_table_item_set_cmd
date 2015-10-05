@@ -1,0 +1,27 @@
+[settings]
+functionname = hi_kernel_dp_qos_queue_shaping_table_item_set_cmd;
+attributenum = 7;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<qid>         type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<enable>      type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<shp_type>    type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<adj_dir>     type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<adj_len>     type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<cir>         type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<cbs>         type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+
+
+[help]
+typedef struct
+{
+    uint ui_qid;      /* Ë÷Òý: ¶ÓÁÐID */
+
+    HI_BOOL_E            em_enable;
+    HI_DP_QOS_SHP_TYPE_E em_shp_type;
+    HI_DP_DIR_E          em_adj_dir;
+    uint                 ui_adj_len;
+    uint                 ui_cir;
+    uint                 ui_cbs;
+} hi_dp_qos_queue_shaping_table_item_s;

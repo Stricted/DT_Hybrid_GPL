@@ -1,0 +1,72 @@
+#/*===========================================================================
+#Edit History of Huawei: 
+#<修改人>      <时间>      <问题单号>         <简要描述>
+#q00186737         2012-12-27    DTS2012122706342        [880]更换下载控制的GPIO
+#x81004082         2013-01-25    DTS2013012503244        射频校验参数不能够保存 
+#===========================================================================*/
+#!/bin/sh
+################################################################################
+
+# cat /etc/jffs.img > /dev/mtdblock1
+cat /etc/jffs.img > /dev/mtdblock2
+# cat /etc/jffs.img > /dev/mtdblock3
+# cat /etc/jffs.img > /dev/mtdblock4
+
+# mount -t jffs2 /dev/mtdblock2 /var/module
+mount -t jffs2 -o ro /dev/mtdblock8 /www
+mount -t jffs2 /dev/mtdblock2 /config
+mount -t jffs2 /dev/mtdblock12 /fota
+mount -t jffs2 /dev/mtdblock13 /coredump
+test ! -e /www/defaultcfg.xml && umount /www
+cat /etc/router.version > /var/b890.version
+cat /www/web.version >> /var/b890.version
+
+# mount -t jffs2 /dev/mtdblock4 /var/middleware
+
+echo "Loading SDK modules"
+
+insmod  /lib/extra/hi_mdio.ko
+insmod  /lib/extra/hi_sysctl.ko
+insmod  /lib/extra/hi_gpio.ko
+insmod  /lib/extra/hi_gpio_int.ko
+insmod  /lib/extra/hi_i2c.ko
+insmod  /lib/extra/hi_timer.ko
+insmod  /lib/extra/hi_spi.ko
+insmod  /lib/extra/hi_dma.ko
+insmod  /lib/extra/hi_ioctl_sysctl.ko
+insmod  /lib/extra/hi_ioctl_interface.ko
+insmod  /lib/extra/hi_dp.ko
+insmod  /lib/extra/hi_ioctl_dp.ko
+
+echo "Loading HSAN modules"
+
+insmod  /lib/extra/hi_kbasic.ko
+insmod  /lib/extra/hi_kmisc.ko
+insmod  /lib/extra/hi_keth.ko
+insmod  /lib/extra/hi_kveth.ko
+insmod  /lib/extra/hi_kphy.ko
+insmod  /lib/extra/hi_kgpio.ko
+insmod  /lib/extra/hi_hw.ko
+test -e /lib/extra/hi_kvoip.ko && insmod  /lib/extra/hi_kvoip.ko
+test -e /lib/extra/hi_kslic.ko && insmod  /lib/extra/hi_kslic.ko
+insmod  /lib/extra/hi_kqos.ko
+insmod  /lib/extra/hi_kaccel_drv.ko
+insmod  /lib/extra/hi_kaccel.ko
+
+
+
+echo "Loading WLAN modules"
+# <DTS2013012503244 x81004082 2013/1/25 begin*/
+insmod /lib/extra/rt5390ap.ko data_addr=0x0 cali_dev_name=/dev/mtdblock9
+# DTS2013012503244 x81004082 2013/1/25 end> */
+cp /etc/Wireless/RT2860AP/RT2860AP.dat /var/RT2860AP.dat
+ifconfig ra0 up
+ifconfig br0 up
+brctl addif br0 ra0
+hi_system &
+
+# hi_cli /home/cli/accel/napt_setdev -v ifname nas1   flags 0x111
+# hi_cli /home/cli/accel/napt_setdev -v ifname eth0.2 flags 0x111
+
+hi_wancmd &
+test -e /lib/extra/hi_kslic_qos.ko && insmod  /lib/extra/hi_kslic_qos.ko

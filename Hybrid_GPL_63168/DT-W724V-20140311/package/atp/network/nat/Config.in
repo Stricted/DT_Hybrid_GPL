@@ -1,0 +1,84 @@
+config BUILD_NAT
+	bool "NAT"
+	default y
+	help
+	  Support NAT basic function
+
+if BUILD_NAT
+menu "ATP NAT Supported Selection"
+
+config BUILD_ALLCONENAT
+	bool "ALLCONENAT"
+	depends on BUILD_NAT
+	help 
+	  Support all cone nat function
+
+config BUILD_CONENAT
+	bool "CONENAT"
+	depends on BUILD_NAT
+	help 
+	  Support cone nat function
+
+config BUILD_PORTTRIGGER
+	bool "PORTTRIGGER"
+	depends on BUILD_NAT
+	help 
+	  Support porttrigger function	  
+
+if BUILD_PORTTRIGGER
+menu "ATP Port Trigger Supported Selection"
+
+config BUILD_NAT_PORT_TRG_RANGE
+    bool "NAT port trigger range"
+    help
+      nat port trigger range
+    default n
+    depends on BUILD_PORTTRIGGER
+
+endmenu
+endif
+
+config BUILD_PORTMAPPING
+    bool "PORTMAPPING & DMZ"
+    help
+      Support port mapping
+    default y
+    depends on BUILD_NAT
+
+config BUILD_MULTI_INTERNAL_PORTMAPPING
+	bool "Portmapping with multi-internal-port support"
+	help
+	  Support portmapping with multi-internal-port
+	default n
+	depends on BUILD_NAT && BUILD_PORTMAPPING
+
+config BUILD_NAT_HOST_PORT_MAP
+    bool "NAT host port mapping"
+    help
+      nat host port mapping
+    default n
+    depends on BUILD_NAT
+  
+config BUILD_PORTMAPPING_APPLICATION
+	bool "Support portmapping application"
+	default n
+	depends on BUILD_PORTMAPPING
+	help
+	  Support portmapping application management.
+	  
+config BUILD_NAT_PORTMAPPING_RULES_WITH_SAMENAME
+	bool "Support one portmapping name have more rules"
+	default n
+	depends on BUILD_PORTMAPPING && MTK_CHIP
+	help
+	  Support one portmapping name have more rules.
+	  
+config BUILD_MULTINAT
+	bool "MULTINAT"
+	depends on BUILD_NAT
+	help 
+	  Support multiplenat function	
+	  
+source "package/atp/network/nat/cms/Config.in"
+endmenu
+endif

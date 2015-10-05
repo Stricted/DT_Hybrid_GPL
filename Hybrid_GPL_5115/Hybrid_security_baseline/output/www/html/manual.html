@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link type="text/css" rel="stylesheet" href="../css/main.css" />
+        <link rel="icon" href="../res/favicon.ico">
+        <link rel="shortcut icon" href="../res/favicon.ico">
+        <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+        <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>  
+        <script type="text/javascript" src="../js/redirect.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+        <script type="text/javascript" src="../js/manual.js"></script>  
+        <script type="text/javascript" src="../js/sha256.js"></script>
+        <title></title>
+    </head>
+
+    <body>
+    <div id="all_content" class="body_bg">
+        <div class="login_head_div">
+            <div id="logo"></div>
+            <div class="language_no3g">
+                <span>
+                    <select id="lang"></select>
+                </span>
+            </div>
+        </div>
+        <div class="no3g_content_box">
+            <div id="nocard_message" class="no3g_message">
+                <h1 class="fontsize">
+                    <script type="text/javascript">dw(manual);</script>
+                </h1>
+                <div id="simlockcontent" class="simlockcontent" >
+                    <h1 class = 'contentfontsize'>
+                        <script type="text/javascript">dw(manual_content);</script>
+                    </h1>
+                    <div id="manual_table">
+                        <table>
+                            <tr>
+                                <th width="150" height="60">
+                                    <script type="text/javascript">dw(samba_label_username);dw(common_colon);</script>
+                                </th>
+                                <td id="login_username_td" colspan="2" width="200px"><select id="login_username" class="input_select"></select></td>
+                            </tr>
+                            <tr valign="top">
+                                <th height="50">
+                                    <script type="text/javascript">dw(common_password);dw(common_colon);</script>
+                                </th>
+                                <td width="200px"><input id="login_password" type="password" class="input_style" maxlength="15"/></td>
+                                <td width="150px"><script type="text/javascript">create_button(common_login, "login", "disable_btn");</script></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div id="footer"  class="footer"></div>
+    </div>
+    <noscript>
+        <div class="noscript_text">
+            Your browser does not support JavaScript.
+        </div>
+    </noscript>
+</body>
+</html>

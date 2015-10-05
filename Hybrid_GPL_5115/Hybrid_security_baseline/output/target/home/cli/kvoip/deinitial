@@ -1,0 +1,9 @@
+[settings]
+functionname = hi_kernel_voip_deinitial;
+attributenum = 0;
+attributeflag = 1 ;
+
+[parameter]
+
+[help]
+usage: deinitial ; »•≥ı ºªØ

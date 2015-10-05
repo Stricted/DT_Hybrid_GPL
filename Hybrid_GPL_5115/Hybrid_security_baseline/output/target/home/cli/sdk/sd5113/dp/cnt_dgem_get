@@ -1,0 +1,41 @@
+[settings]
+functionname=0xF7002004;
+attributenum=15;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       			type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000D1B>; /*È«¾ÖÄ£¿é*/
+attribute=alias<dn_portfilt_cnt>        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<aesin_fffull_cnt>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<aesout_fffull_cnt>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<dgem_fffull_cnt>        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<flt_tdm_rxcnt>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tdm_rxcnt>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tdm_dropcnt>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<tdm_fullcnt>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<eth_cnt>                type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<omci_cnt>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<multi_rxcnt>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<omci_rxcnt>             type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<eth_rxcnt>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<dgem_gemport_cnt>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+
+[help]
+typedef struct 
+{
+    uint    dn_portfilt_cnt;  
+    uint    aesin_fffull_cnt; 
+    uint    aesout_fffull_cnt;
+    uint    dgem_fffull_cnt;  
+    uint    flt_tdm_rxcnt;    
+    uint    tdm_rxcnt;    
+    uint    tdm_dropcnt;  
+    uint    tdm_fullcnt;  
+    uint    eth_cnt;     
+    uint    omci_cnt;     
+    uint    multi_rxcnt;  
+    uint    omci_rxcnt;   
+    uint    eth_rxcnt;    
+    uint    dgem_gemport_cnt;
+    
+}hi_dp_logic_dgem_cnt_s;

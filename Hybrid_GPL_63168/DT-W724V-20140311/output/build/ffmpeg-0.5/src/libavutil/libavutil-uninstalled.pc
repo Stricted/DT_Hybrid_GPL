@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=${pcfiledir}
+includedir=/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/build/ffmpeg-0.5/src
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 49.15.0
+Requires: 
+Conflicts:
+Libs: ${libdir}/libavutil.a 
+Cflags: -I${includedir}

@@ -1,0 +1,5 @@
+menu "Applications Linux Kernel Extension"
+source "package/atp/applications/ledservice/KConfig.in"
+source "package/atp/applications/datacard/KConfig.in"
+endmenu
+

@@ -1,0 +1,685 @@
+
+Discarded input sections
+
+ .reginfo       0x0000000000000000       0x18 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/attr.o
+ .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/document.o
+ .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/element.o
+ .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixml.o
+ .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlmembuf.o
+ .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlparser.o
+ .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/namedNodeMap.o
+ .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/node.o
+ .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/nodeList.o
+ .reginfo       0x0000000000000000       0x18 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+ .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/attr.o
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/document.o
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/element.o
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixml.o
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlmembuf.o
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlparser.o
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/namedNodeMap.o
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/node.o
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/nodeList.o
+LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgcc_s.so
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/libc.so
+START GROUP
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libc.so.0
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/uclibc_nonshared.a
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/ld-uClibc.so.0
+END GROUP
+LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgcc_s.so
+LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+                0x00000000000000d4                . = (0x0 + SIZEOF_HEADERS)
+
+.reginfo        0x00000000000000d4       0x18
+ *(.reginfo)
+ .reginfo       0x00000000000000d4       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.dynamic        0x00000000000000ec       0xe8
+ *(.dynamic)
+ .dynamic       0x00000000000000ec       0xe8 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x00000000000000ec                _DYNAMIC
+
+.hash           0x00000000000001d4      0x450
+ *(.hash)
+ .hash          0x00000000000001d4      0x450 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym         0x0000000000000624      0x8f0
+ *(.dynsym)
+ .dynsym        0x0000000000000624      0x8f0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+
+.dynstr         0x0000000000000f14      0xb33
+ *(.dynstr)
+ .dynstr        0x0000000000000f14      0xb33 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+
+.gnu.version    0x0000000000001a48      0x11e
+ *(.gnu.version)
+ .gnu.version   0x0000000000001a48      0x11e /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+
+.gnu.version_d  0x0000000000001b68        0x0 load address 0x0000000000001b66
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+
+.gnu.version_r  0x0000000000001b68       0x20
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000000001b68       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+
+.rel.dyn        0x0000000000001b88       0x10
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ *(.rel.dyn)
+ .rel.dyn       0x0000000000001b88       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rel.iplt)
+
+.rela.dyn
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rela.iplt)
+
+.rel.plt        0x0000000000001b98        0x0
+ *(.rel.plt)
+ .rel.plt       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+
+.rela.plt
+ *(.rela.plt)
+
+.init           0x0000000000001b98       0x78
+ *(.init)
+ .init          0x0000000000001b98       0x1c /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x0000000000001b98                _init
+ .init          0x0000000000001bb4       0x28 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ .init          0x0000000000001bdc       0x28 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+ .init          0x0000000000001c04        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.plt            0x0000000000001c10        0x0
+ *(.plt)
+ .plt           0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000001c10     0x7650
+                0x0000000000001c10                _ftext = .
+ *(.text.unlikely .text.*_unlikely)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ *(.text.hot .text.hot.*)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000001c10        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .text          0x0000000000001c10      0x150 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ .text          0x0000000000001d60       0x60 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/attr.o
+                0x0000000000001d60                ixmlAttr_init
+                0x0000000000001d8c                ixmlAttr_free
+ .text          0x0000000000001dc0      0xaf0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/document.o
+                0x0000000000001e48                ixmlDocument_init
+                0x0000000000001e64                ixmlDocument_free
+                0x0000000000001e8c                ixmlDocument_importNode
+                0x0000000000001f40                ixmlDocument_createElementEx
+                0x0000000000002044                ixmlDocument_createElement
+                0x000000000000207c                ixmlDocument_createDocumentEx
+                0x0000000000002130                ixmlDocument_createDocument
+                0x0000000000002168                ixmlDocument_createTextNodeEx
+                0x0000000000002260                ixmlDocument_createTextNode
+                0x0000000000002298                ixmlDocument_createAttributeEx
+                0x0000000000002380                ixmlDocument_createAttribute
+                0x00000000000023c0                ixmlDocument_createAttributeNSEx
+                0x00000000000024b0                ixmlDocument_createAttributeNS
+                0x00000000000024e8                ixmlDocument_createCDATASectionEx
+                0x00000000000025e0                ixmlDocument_createCDATASection
+                0x0000000000002618                ixmlDocument_createElementNSEx
+                0x00000000000026fc                ixmlDocument_createElementNS
+                0x0000000000002734                ixmlDocument_getElementsByTagName
+                0x0000000000002778                ixmlDocument_getElementsByTagNameNS
+                0x00000000000027c4                ixmlDocument_getElementById
+ .text          0x00000000000028b0      0xde0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/element.o
+                0x00000000000028b0                ixmlElement_init
+                0x00000000000028dc                ixmlElement_getTagName
+                0x00000000000028f0                ixmlElement_setTagName
+                0x0000000000002984                ixmlElement_getAttribute
+                0x0000000000002a00                ixmlElement_removeAttribute
+                0x0000000000002a98                ixmlElement_getAttributeNode
+                0x0000000000002b0c                ixmlElement_setAttributeNode
+                0x0000000000002c40                ixmlElement_setAttribute
+                0x0000000000002dac                ixmlElement_removeAttributeNode
+                0x0000000000002e78                ixmlElement_getElementsByTagName
+                0x0000000000002eb8                ixmlElement_getAttributeNS
+                0x0000000000002f60                ixmlElement_removeAttributeNS
+                0x0000000000003024                ixmlElement_getAttributeNodeNS
+                0x00000000000030c4                ixmlElement_setAttributeNodeNS
+                0x0000000000003204                ixmlElement_setAttributeNS
+                0x00000000000034f4                ixmlElement_getElementsByTagNameNS
+                0x000000000000353c                ixmlElement_hasAttribute
+                0x00000000000035b8                ixmlElement_hasAttributeNS
+                0x0000000000003660                ixmlElement_free
+ .text          0x0000000000003690      0xdb0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixml.o
+                0x0000000000004144                ixmlLoadDocumentEx
+                0x0000000000004178                ixmlLoadDocument
+                0x00000000000041b0                ixmlPrintDocument
+                0x0000000000004228                ixmlPrintNode
+                0x0000000000004288                ixmlDocumenttoString
+                0x0000000000004300                ixmlNodetoString
+                0x0000000000004360                ixmlRelaxParser
+                0x000000000000437c                ixmlParseBufferEx
+                0x00000000000043bc                ixmlParseBuffer
+                0x00000000000043f4                ixmlCloneDOMString
+                0x0000000000004418                ixmlFreeDOMString
+ .text          0x0000000000004440      0x4b0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlmembuf.o
+                0x0000000000004538                ixml_membuf_init
+                0x0000000000004598                ixml_membuf_destroy
+                0x00000000000045f4                ixml_membuf_assign
+                0x00000000000046c8                ixml_membuf_assign_str
+                0x000000000000471c                ixml_membuf_insert
+                0x0000000000004834                ixml_membuf_append_str
+                0x000000000000488c                ixml_membuf_append
+ .text          0x00000000000048f0     0x2900 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlparser.o
+                0x0000000000005a4c                Parser_isValidXmlName
+                0x0000000000005b28                Parser_setErrorChar
+                0x0000000000005b40                Parser_freeNodeContent
+                0x0000000000005bf0                Parser_setNodePrefixAndLocalName
+                0x0000000000005d2c                Parser_LoadDocument
+ .text          0x00000000000071f0      0x2d0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/namedNodeMap.o
+                0x00000000000071f0                ixmlNamedNodeMap_init
+                0x0000000000007248                ixmlNamedNodeMap_getLength
+                0x000000000000726c                ixmlNamedNodeMap_item
+                0x00000000000072ec                ixmlNamedNodeMap_getNamedItem
+                0x00000000000073ac                ixmlNamedNodeMap_free
+                0x00000000000073f8                ixmlNamedNodeMap_addToNamedNodeMap
+ .text          0x00000000000074c0     0x1b00 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/node.o
+                0x00000000000077ec                ixmlNode_init
+                0x0000000000007844                ixmlCDATASection_init
+                0x0000000000007860                ixmlNode_free
+                0x0000000000007970                ixmlCDATASection_free
+                0x0000000000007998                ixmlNode_getNodeName
+                0x00000000000079ac                ixmlNode_getLocalName
+                0x00000000000079c0                ixmlNode_getNamespaceURI
+                0x00000000000079d4                ixmlNode_getPrefix
+                0x00000000000079e8                ixmlNode_getNodeValue
+                0x00000000000079fc                ixmlNode_setNodeValue
+                0x0000000000007a78                ixmlNode_getNodeType
+                0x0000000000007a8c                ixmlNode_getParentNode
+                0x0000000000007aa0                ixmlNode_getFirstChild
+                0x0000000000007ab4                ixmlNode_getLastChild
+                0x0000000000007adc                ixmlNode_getPreviousSibling
+                0x0000000000007af0                ixmlNode_getNextSibling
+                0x0000000000007d98                ixmlNode_getOwnerDocument
+                0x0000000000007dac                ixmlNode_compare
+                0x0000000000007eb4                ixmlNode_removeChild
+                0x0000000000007f78                ixmlNode_appendChild
+                0x000000000000809c                ixmlNode_insertBefore
+                0x0000000000008200                ixmlNode_replaceChild
+                0x0000000000008340                ixmlNode_getChildNodes
+                0x00000000000083f0                ixmlNode_getAttributes
+                0x00000000000084b0                ixmlNode_hasChildNodes
+                0x00000000000084c8                ixmlNode_hasAttributes
+                0x00000000000084f0                ixmlNode_getElementsByTagName
+                0x00000000000085f8                ixmlNode_getElementsByTagNameNS
+                0x0000000000008770                ixmlNode_setNodeName
+                0x0000000000008d58                ixmlNode_cloneNode
+                0x0000000000008ea0                ixmlNode_setNodeProperties
+ .text          0x0000000000008fc0      0x240 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/nodeList.o
+                0x0000000000008fc0                ixmlNodeList_init
+                0x0000000000009018                ixmlNodeList_addToNodeList
+                0x0000000000009100                ixmlNodeList_length
+                0x000000000000911c                ixmlNodeList_item
+                0x00000000000091b0                ixmlNodeList_free
+ .text          0x0000000000009200       0x60 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+ .text          0x0000000000009260        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ *(.gnu.warning)
+ *(.mips16.fn.*)
+ *(.mips16.call.*)
+
+.MIPS.stubs     0x0000000000009260      0x150
+ .MIPS.stubs    0x0000000000009260      0x150 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x0000000000009260                memcpy
+                0x0000000000009270                realloc
+                0x0000000000009280                malloc
+                0x0000000000009290                strncmp
+                0x00000000000092a0                strlen
+                0x00000000000092b0                strncasecmp
+                0x00000000000092c0                __assert
+                0x00000000000092d0                memmove
+                0x00000000000092e0                fclose
+                0x00000000000092f0                fread
+                0x0000000000009300                fopen
+                0x0000000000009310                strncpy
+                0x0000000000009320                memset
+                0x0000000000009330                fseek
+                0x0000000000009340                strstr
+                0x0000000000009350                strcmp
+                0x0000000000009360                ftell
+                0x0000000000009370                free
+                0x0000000000009380                strchr
+                0x0000000000009390                strdup
+
+.fini           0x00000000000093b0       0x50
+ *(.fini)
+ .fini          0x00000000000093b0       0x1c /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x00000000000093b0                _fini
+ .fini          0x00000000000093cc       0x28 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ .fini          0x00000000000093f4        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+                0x0000000000009400                PROVIDE (__etext, .)
+                0x0000000000009400                PROVIDE (_etext, .)
+                0x0000000000009400                PROVIDE (etext, .)
+
+.rodata         0x0000000000009400      0x8c0
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x0000000000009400       0x23 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/document.o
+                                         0x24 (size before relaxing)
+ *fill*         0x0000000000009423        0x1 00
+ .rodata.str1.4
+                0x0000000000009424       0x92 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/element.o
+                                         0x94 (size before relaxing)
+ *fill*         0x00000000000094b6        0xa 00
+ .rodata        0x00000000000094c0       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/element.o
+ .rodata.str1.4
+                0x00000000000094e0       0x9c /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixml.o
+                                         0xa0 (size before relaxing)
+ *fill*         0x000000000000957c        0x4 00
+ .rodata        0x0000000000009580       0x30 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixml.o
+ .rodata.str1.4
+                0x00000000000095b0       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlmembuf.o
+                                         0x54 (size before relaxing)
+ .rodata        0x00000000000095f0       0x70 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlmembuf.o
+ .rodata.str1.4
+                0x0000000000009660      0x1ec /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlparser.o
+                                        0x254 (size before relaxing)
+ *fill*         0x000000000000984c        0x4 00
+ .rodata        0x0000000000009850      0x110 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlparser.o
+ .rodata.str1.4
+                0x0000000000009960       0x27 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/namedNodeMap.o
+                                         0x28 (size before relaxing)
+ *fill*         0x0000000000009987        0x9 00
+ .rodata        0x0000000000009990       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/namedNodeMap.o
+ .rodata.str1.4
+                0x00000000000099b0      0x162 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/node.o
+                                        0x184 (size before relaxing)
+ *fill*         0x0000000000009b12        0xe 00
+ .rodata        0x0000000000009b20      0x130 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/node.o
+ .rodata.str1.4
+                0x0000000000009c50       0x38 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/nodeList.o
+ *fill*         0x0000000000009c88        0x8 00
+ .rodata        0x0000000000009c90       0x30 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/nodeList.o
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr   0x0000000000009cc0        0x0
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.eh_frame       0x0000000000009cc0        0x4
+ *(.eh_frame)
+ .eh_frame      0x0000000000009cc0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ .eh_frame      0x0000000000009cc0        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x0000000000009cc4                . = (ALIGN (0x10000) - ((0x10000 - .) & 0xffff))
+                0x000000000001a000                . = DATA_SEGMENT_ALIGN (0x10000, 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array
+ *(SORT(.init_array.*))
+ *(.init_array)
+
+.fini_array
+ *(SORT(.fini_array.*))
+ *(.fini_array)
+
+.ctors          0x000000000001a000        0x8
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ .ctors         0x000000000001a000        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ .ctors         0x000000000001a004        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+
+.dtors          0x000000000001a008        0x8
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ .dtors         0x000000000001a008        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ .dtors         0x000000000001a00c        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+                0x000000000001a00c                __DTOR_END__
+
+.jcr            0x000000000001a010        0x4
+ *(.jcr)
+ .jcr           0x000000000001a010        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ .jcr           0x000000000001a010        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+                0x000000000001a014                . = DATA_SEGMENT_RELRO_END (., 0x0)
+
+.data           0x000000000001a020      0x530
+                0x000000000001a020                _fdata = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000000000001a020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .data          0x000000000001a020        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ .data          0x000000000001a020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/attr.o
+ .data          0x000000000001a020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/document.o
+ .data          0x000000000001a020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/element.o
+ .data          0x000000000001a020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixml.o
+ .data          0x000000000001a020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlmembuf.o
+ .data          0x000000000001a020      0x530 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlparser.o
+ .data          0x000000000001a550        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/namedNodeMap.o
+ .data          0x000000000001a550        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/node.o
+ .data          0x000000000001a550        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/nodeList.o
+ .data          0x000000000001a550        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+ .data          0x000000000001a550        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.data1
+ *(.data1)
+
+.got.plt        0x000000000001a550        0x0
+ *(.got.plt)
+ .got.plt       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x000000000001a550                . = .
+                0x0000000000022540                _gp = (ALIGN (0x10) + 0x7ff0)
+
+.got            0x000000000001a550      0x178
+ *(.got)
+ .got           0x000000000001a550      0x178 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x000000000001a550                _GLOBAL_OFFSET_TABLE_
+
+.sdata          0x000000000001a6c8        0x4
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x000000000001a6c8        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+                0x000000000001a6c8                __dso_handle
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+                0x000000000001a6cc                _edata = .
+                0x000000000001a6cc                PROVIDE (edata, .)
+                0x000000000001a6cc                __bss_start = .
+                0x000000000001a6cc                _fbss = .
+
+.sbss
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ *(.scommon)
+
+.bss            0x000000000001a6d0       0x30
+ *(.dynbss)
+ .dynbss        0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000000000001a6d0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .bss           0x000000000001a6d0       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ .bss           0x000000000001a6f0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/attr.o
+ .bss           0x000000000001a6f0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/document.o
+ .bss           0x000000000001a6f0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/element.o
+ .bss           0x000000000001a6f0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixml.o
+ .bss           0x000000000001a6f0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlmembuf.o
+ .bss           0x000000000001a6f0       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlparser.o
+ .bss           0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/namedNodeMap.o
+ .bss           0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/node.o
+ .bss           0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/nodeList.o
+ .bss           0x000000000001a700        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+ .bss           0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ *(COMMON)
+                0x000000000001a700                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x000000000001a700                . = ALIGN (0x4)
+                0x000000000001a700                . = ALIGN (0x4)
+                0x000000000001a700                _end = .
+                0x000000000001a700                PROVIDE (end, .)
+                0x000000000001a700                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.pdr            0x0000000000000000     0x11a0
+ .pdr           0x0000000000000000       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .pdr           0x0000000000000040        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ .pdr           0x0000000000000040       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/attr.o
+ .pdr           0x0000000000000080      0x2a0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/document.o
+ .pdr           0x0000000000000320      0x260 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/element.o
+ .pdr           0x0000000000000580      0x1e0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixml.o
+ .pdr           0x0000000000000760      0x100 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlmembuf.o
+ .pdr           0x0000000000000860      0x260 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlparser.o
+ .pdr           0x0000000000000ac0       0xc0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/namedNodeMap.o
+ .pdr           0x0000000000000b80      0x540 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/node.o
+ .pdr           0x00000000000010c0       0xa0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/nodeList.o
+ .pdr           0x0000000000001160        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+ .pdr           0x0000000000001160       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.comment        0x0000000000000000       0x30
+ *(.comment)
+ .comment       0x0000000000000000       0x11 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000011       0x1f /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+                                         0x20 (size before relaxing)
+ .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/attr.o
+ .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/document.o
+ .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/element.o
+ .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixml.o
+ .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlmembuf.o
+ .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlparser.o
+ .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/namedNodeMap.o
+ .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/node.o
+ .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/nodeList.o
+ .comment       0x0000000000000000       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+ .comment       0x0000000000000000       0x12 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo .zdebug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames .zdebug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges .zdebug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames .zdebug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.* .zdebug_info)
+
+.debug_abbrev
+ *(.debug_abbrev .zdebug_abbrev)
+
+.debug_line
+ *(.debug_line .zdebug_line)
+
+.debug_frame
+ *(.debug_frame .zdebug_frame)
+
+.debug_str
+ *(.debug_str .zdebug_str)
+
+.debug_loc
+ *(.debug_loc .zdebug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo .zdebug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames .zdebug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames .zdebug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames .zdebug_typenames)
+
+.debug_varnames
+ *(.debug_varnames .zdebug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes .zdebug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges .zdebug_ranges)
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ *(.gnu.attributes)
+ .gnu.attributes
+                0x0000000000000000       0x10 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ .gnu.attributes
+                0x0000000000000010       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/attr.o
+ .gnu.attributes
+                0x0000000000000020       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/document.o
+ .gnu.attributes
+                0x0000000000000030       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/element.o
+ .gnu.attributes
+                0x0000000000000040       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixml.o
+ .gnu.attributes
+                0x0000000000000050       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlmembuf.o
+ .gnu.attributes
+                0x0000000000000060       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlparser.o
+ .gnu.attributes
+                0x0000000000000070       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/namedNodeMap.o
+ .gnu.attributes
+                0x0000000000000080       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/node.o
+ .gnu.attributes
+                0x0000000000000090       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/nodeList.o
+ .gnu.attributes
+                0x00000000000000a0       0x10 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+
+.gptab.sdata
+ *(.gptab.data)
+ *(.gptab.sdata)
+
+.gptab.sbss
+ *(.gptab.bss)
+ *(.gptab.sbss)
+
+.mdebug.abi32   0x000000000001a700        0x0
+ *(.mdebug.abi32)
+ .mdebug.abi32  0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .mdebug.abi32  0x000000000001a700        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ .mdebug.abi32  0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/attr.o
+ .mdebug.abi32  0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/document.o
+ .mdebug.abi32  0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/element.o
+ .mdebug.abi32  0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixml.o
+ .mdebug.abi32  0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlmembuf.o
+ .mdebug.abi32  0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/ixmlparser.o
+ .mdebug.abi32  0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/namedNodeMap.o
+ .mdebug.abi32  0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/node.o
+ .mdebug.abi32  0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/nodeList.o
+ .mdebug.abi32  0x000000000001a700        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+ .mdebug.abi32  0x000000000001a700        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+
+.mdebug.abiN32
+ *(.mdebug.abiN32)
+
+.mdebug.abi64
+ *(.mdebug.abi64)
+
+.mdebug.abiO64
+ *(.mdebug.abiO64)
+
+.mdebug.eabi32
+ *(.mdebug.eabi32)
+
+.mdebug.eabi64
+ *(.mdebug.eabi64)
+
+.gcc_compiled_long32
+ *(.gcc_compiled_long32)
+
+.gcc_compiled_long64
+ *(.gcc_compiled_long64)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/libupnp/ixml/libixml.so elf32-tradbigmips)

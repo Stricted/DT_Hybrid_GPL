@@ -1,0 +1,5 @@
+config BUILD_LIBICONV
+    bool "Support libiconv"
+    default n
+    help
+      For charset translate.

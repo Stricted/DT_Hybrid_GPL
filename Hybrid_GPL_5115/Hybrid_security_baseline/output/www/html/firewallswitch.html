@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="../css/main.css" type="text/css" />
+        <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+        <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+        <script type="text/javascript" src="../js/refresh.js"></script>
+        <script type="text/javascript" src="../js/firewallswitch.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <div id="all_content" class="bodybg">
+        <input type="text" id="focus_hidden" style="display:none" value="focus">
+            <div class="maintitle">
+                <h1 id="title_label_firewallswitch">
+                <script type="text/javascript">dw(firewall_label_firewall_switch);</script>
+                </h1>
+            </div>
+            <div class="main_content">
+                <p>
+                    <script type="text/javascript">dw(firewall_help_firewall_switch);dw("<br>" + common_note + common_colon +security_label_firewall_reboot_hint);</script>
+                </p>
+                <div class="firewall">
+                    <div class="radio">
+                        <input type="checkbox" id="checkbox_FirewallMainSwitch" name="firewallswitch"/>
+                        <span>
+                            <script type="text/javascript">dw(firewall_label_firewall_enable)</script>
+                        </span>
+                    </div>
+                    <div id="ckdiv">
+                        <div class="radio">
+                            <input type="checkbox" id="checkbox_FirewallIPFilterSwitch" name="firewallswitch"/>
+                            <span>
+                                <script type="text/javascript">dw(firewall_label_ip_address_filter_enable)</script>
+                            </span>
+                        </div>
+                        <div class="radio">
+                            <input type="checkbox" id="checkbox_FirewallWanPortPingSwitch" name="firewallswitch"/>
+                            <span>
+                                <script type="text/javascript">dw(firewall_label_wan_port_ping_disable)</script>
+                            </span>
+                        </div>
+                        <div class="radio">
+                            <input type="checkbox" id="checkbox_FirewallLanMacFilterSwitch" name="firewallswitch"/>
+                            <span>
+                                <script type="text/javascript">dw(firewall_label_lan_mac_address_filter_enable)</script>
+                            </span>
+                        </div>
+                        <div class="radio">
+                            <input type="checkbox" id="checkbox_FirewallUrlFilterSwitch" name="firewallswitch"/>
+                            <span>
+                                <script type="text/javascript">dw(firewall_label_URL_Filter_enable)</script>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="apply_button">
+                    <script type="text/javascript">create_button(common_apply,"apply_button");</script>
+                </div>
+                <br/><br/><br/><br/><br/><br/>
+                <p><script type="text/javascript">dw(label_firewall_attack_protecting_help);dw("<br>" + common_note + common_colon +security_label_firewall_reboot_hint);</script></p>
+                <div class="firewall">
+                    <div class="radio">
+                        <input type="checkbox" id="checkbox_FirewallICMP" name="firewallattack"/>
+                        <span>
+                            <script type="text/javascript">dw(label_firewall_enable_icmp)</script>
+                        </span>
+                    </div>
+                    <div class="radio">
+                        <input type="checkbox" id="checkbox_FirewallSYN" name="firewallattack"/>
+                        <span>
+                            <script type="text/javascript">dw(label_firewall_enable_syn)</script>
+                        </span>
+                    </div>
+                    <div class="radio">
+                        <input type="checkbox" id="checkbox_FirewallARP" name="firewallattack"/>
+                        <span>
+                            <script type="text/javascript">dw(label_firewall_enable_arp)</script>
+                        </span>
+                    </div>
+                </div>
+                <div class="apply_button">
+                    <script type="text/javascript">create_button(common_apply,"attack_button");</script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+[settings]
+functionname=0xF7002004;
+attributenum=3;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       			 type<uint>   range<0x0,0xFFFFFFFF>  default<0x0000f001>; /*È«¾ÖÄ£¿é*/
+attribute=alias<l_start_address>         type<uint>   range<0x0,0xFFFFFFFF>  default<0x10>;
+attribute=alias<l_length>         		 type<uint>   range<0x0,0xFFFFFFFF>  default<0x10>;
+
+[help]
+typedef struct
+{
+    uint    l_start_address;                 
+    uint    l_length;             
+
+}get_info;

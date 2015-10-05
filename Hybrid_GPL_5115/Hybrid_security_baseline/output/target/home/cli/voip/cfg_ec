@@ -1,0 +1,27 @@
+[settings]
+functionname=hi_voip_cli_cfg_ec;  
+attributenum=10;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chanid>      type<uint>       range<0x0,0xFFFFFFFF>   default<0x0>     ; /*通道号*/
+                                                                                       
+attribute=alias<ecenable>    type<ushort>     range<0x0,0xFFFF>       default<0x1>     ; /*EC使能*/
+attribute=alias<erl>         type<ushort>     range<0x0,0xFFFF>       default<0x3>     ; /*ERL*/
+attribute=alias<clear>       type<ushort>     range<0x0,0xFFFF>       default<0x0>     ; /*清空寄存器标志*/
+attribute=alias<hpenable>    type<ushort>     range<0x0,0xFFFF>       default<0x1>     ; /*高通滤波器使能*/
+attribute=alias<nlpenable>   type<ushort>     range<0x0,0xFFFF>       default<0x1>     ; /*NLP使能*/
+attribute=alias<agcenable>   type<ushort>     range<0x0,0xFFFF>       default<0x0>     ; /*AGC使能*/
+attribute=alias<cngenable>   type<ushort>     range<0x0,0xFFFF>       default<0x1>     ; /*CNG使能*/
+attribute=alias<hreset>      type<ushort>     range<0x0,0xFFFF>       default<0x0>     ; /*H系数复位*/
+attribute=alias<hfreeze>     type<ushort>     range<0x0,0xFFFF>       default<0x0>     ; /*H系数冻结*/
+
+
+[help]
+usage: cfg_ec                      ; 配置EC参数
+       cfg_ec -v chanid 0x0        ; 通道号
+       cfg_ec -v ecenable 0x0      ; EC开关
+       cfg_ec -v erl 0x3           ; ERL配置值，默认为3
+       cfg_ec -v nlpenable 0xd     ; NLP开关
+       cfg_ec -v cngenable 0xfff3  ; CNG开关
+       

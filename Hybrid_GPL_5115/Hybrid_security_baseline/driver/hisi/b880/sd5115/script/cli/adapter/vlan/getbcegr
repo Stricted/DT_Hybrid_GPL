@@ -1,0 +1,34 @@
+[settings]
+functionname = hi_adapter_cli_lsw_vlan_get_vlanbcegr;
+attributenum = 3;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<vlan>        type<ushort>   range<0x0,0xfff>              default<0>;
+attribute=alias<res>         type<ushort>   range<0x0,0x0>                default<0>;
+attribute=alias<portmap>     type<uint>     range<0x0,0xffffffff>         default<0>;
+
+[help]
+typedef struct
+{
+    hi_ushort16 us_vlan;
+    hi_ushort16 us_res;
+    hi_uint32   ui_portmap; /*以bit位形式表示，为1则表示该端口在此vlan中*/
+}hi_lsw_vlan_get_port_s;
+
+/*端口号定义*/
+typedef enum
+{
+    HI_LSW_PORT_GE0_E   = 0,
+    HI_LSW_PORT_FE1_E   = 1,
+    HI_LSW_PORT_FE2_E   = 2,
+    HI_LSW_PORT_FE3_E   = 3,
+    HI_LSW_PORT_FE4_E   = 4,
+    HI_LSW_PORT_PON_E   = 5,
+    HI_LSW_PORT_CPU_E   = 6,
+    HI_LSW_PORT_MAX_E,
+}hi_lsw_port_e;
+
+
+
+

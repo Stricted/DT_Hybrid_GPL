@@ -1,0 +1,30 @@
+[settings]
+functionname = hi_kernel_dp_l2_mc_del_cmd;
+attributenum = 6;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<mc_id>       type<uint>    range<0x0,0xFFFFFFFF>    default<0>; 
+attribute=alias<mc_port>     type<uint>    range<0x0,0xFFFFFFFF>    default<0>;
+attribute=alias<mac>         type<mac>                              default<00:e0:fc:55:55:5a>;
+attribute=alias<arg>         type<ushort>  range<0x0,0xFFFF>        default<0>;
+attribute=alias<vlan>        type<uint>    range<0x0,0xFFFFFFFF>    default<0>;
+attribute=alias<untag_en>    type<uint>    range<0x0,0xFFFFFFFF>    default<0>;
+
+
+[help]
+
+typedef struct  
+{
+    uint    ui_mc_id;                   /* 0 - 255;HI_DP_TRANS_MC_LIST_E有效 */
+    hi_dp_port_u u_mc_port;             /* 组播用户;HI_DP_TRANS_MC_PORTMAP_E有效 */
+    
+    uchar   uc_mac[6];       
+    ushort  us_arg;  
+    uint    ui_vlan;
+    HI_BOOL_E em_untag_en;
+    
+}hi_dp_l2_mc_s;
+
+
+

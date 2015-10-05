@@ -1,0 +1,7 @@
+config BUILD_HISI_BOOT
+	bool "Support HISI Boot"
+	
+config BOOTLOADER_VENDOR
+	string 
+	default "HISILICON"
+	depends on BUILD_HISI_BOOT

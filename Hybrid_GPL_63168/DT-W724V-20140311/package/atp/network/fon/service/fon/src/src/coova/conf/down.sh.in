@@ -1,0 +1,14 @@
+#!/bin/sh
+# Coova Chilli - David Bird <david@coova.com>
+# Licensed under the GPL, see http://coova.org/
+# down.sh /dev/tun0 192.168.0.10 255.255.255.0
+
+TUNTAP=$(basename $DEV)
+
+. @SYSCONFDIR@/chilli/functions
+
+[ -e "@VARRUN@/chilli.$TUNTAP.iptables" ] && sh @VARRUN@/chilli.$TUNTAP.iptables 2>/dev/null
+rm -f @VARRUN@/chilli.$TUNTAP.iptables 2>/dev/null
+
+# site specific stuff optional
+[ -e @SYSCONFDIR@/chilli/ipdown.sh ] && . @SYSCONFDIR@/chilli/ipdown.sh

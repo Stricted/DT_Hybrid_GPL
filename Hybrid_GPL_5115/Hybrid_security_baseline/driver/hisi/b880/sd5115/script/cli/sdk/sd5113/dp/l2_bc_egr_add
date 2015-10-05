@@ -1,0 +1,21 @@
+[settings]
+functionname=0xF7002004;
+attributenum=5;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       	type<uint>   	range<0x0,0xFFFFFFFF>  	default<0x0000070D>; /*全局模块*/
+attribute=alias<ui_vlan>       	type<uint>   	range<0x0,0x00000FFF>  	default<0x00000000>;
+attribute=alias<ui_fid>       	type<uint>   	range<0x0,0xFFFFFFFF>  	default<0x00000000>;
+attribute=alias<em_egr>       	type<int>   	range<0x0,0x08>  		default<0x00000000>;
+attribute=alias<em_valid>       type<int>  		range<0x0,0x01>  		default<0x00000000>;
+
+
+[help]
+typedef struct  
+{
+    uint    ui_vlan;                /* 0 - 4095   ,索引 */
+
+    hi_dp_l2_bc_egr_info_s  st_egr;
+
+}hi_dp_l2_bc_egr_s;

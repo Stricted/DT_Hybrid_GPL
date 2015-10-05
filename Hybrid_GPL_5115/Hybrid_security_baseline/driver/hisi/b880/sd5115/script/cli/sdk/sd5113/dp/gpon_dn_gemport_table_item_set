@@ -1,0 +1,25 @@
+[settings]
+functionname=0xF7002004;
+attributenum=6;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       		  type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000203>; /*全局模块*/
+attribute=alias<ui_gem_port_id>       type<uint>   range<0x0,0x00000FFF>  default<0x00000000>;
+attribute=alias<ui_pri_remarking>     type<uint>   range<0x0,0x07>  	  default<0x00000000>;
+attribute=alias<em_local>       	  type<int>    range<0x0,0x01>  	  default<0x00000000>;
+attribute=alias<em_aes_en>       	  type<int>    range<0x0,0x01>  	  default<0x00000000>;
+attribute=alias<em_type>       		  type<int>    range<0x0,0x04>  	  default<0x00000000>;
+
+[help]
+/* 下行GEMPORT 表项结构 */
+typedef struct
+{
+     uint           ui_gem_port_id;                 /* gem port id, 表项索引 0 - 4095 */
+
+     uint           ui_pri_remarking;               /* 下行优先级remarking配置0 - 7   */   
+     HI_BOOL_E      em_local;                       /* 是否本地port                   */        
+     HI_BOOL_E      em_aes_en;                      /* 是否加密                       */        
+     HI_DP_GPON_DN_PORT_TYPE_E   em_type;           /* 端口类型                       */             
+     
+}hi_dp_gpon_dn_gemport_table_item_s;

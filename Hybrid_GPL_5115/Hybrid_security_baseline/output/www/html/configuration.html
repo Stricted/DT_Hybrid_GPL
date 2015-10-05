@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="../css/main.css" type="text/css" />
+        <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+        <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+        <script type="text/javascript" src="../js/refresh.js"></script>
+        <script type="text/javascript" src="../js/configuration.js"></script>
+        <title></title>
+    </head>
+
+    <body>
+        <div id="all_content" class="body_bg_log">
+                            <div class="maintitle">
+                                <h1 id="title_label_configuration">
+                                <script type="text/javascript">dw(system_label_backup_restore);</script>
+                                </h1>
+                            </div>
+                            <div class="main_content">
+                                <div>
+                                    <h2>
+                                    <script type="text/javascript">dw(system_label_backup);</script>
+                                    </h2>
+                                    <p>
+                                        <script type="text/javascript">dw(system_help_backup_configuration);</script>
+                                    </p>
+                                    <script type="text/javascript">create_button(system_label_backup,"save_button");</script>
+                                </div>
+                                <hr class="content_hr" />
+                                <div>
+                                    <h2>
+                                    <script type="text/javascript">dw(common_restore);</script>
+                                    </h2>
+                                    <iframe id="update_post_page" name="update_post_page" scrolling="no" frameborder="0" width="0" height="0"></iframe>
+                                    <form method="post" action="/api/nvramul.cgi" enctype="multipart/form-data" name="resore_form" id = "resore_form" target="update_post_page">
+                                        <p><script type="text/javascript">dw(system_label_restore_configuration);</script></p>
+                                        <input type="hidden" name="cur_path" id="cur_path" value="">
+                                        <input type="hidden" name="page" id="page" value="configuration.html">
+                                        <input type="file" id="restore_file" name="restore_file" />
+                                        <input type="hidden" id="upload_year" name="upload_year" value="" />
+                                        <input type="hidden" id="upload_month" name="upload_month" value="" />
+                                        <input type="hidden" id="upload_day" name="upload_day" value="" />
+                                        <input type="hidden" id="upload_hours" name="upload_hours" value="" />
+                                        <input type="hidden" id="upload_minutes" name="upload_minutes" value="" />
+                                        <input type="hidden" id="upload_secondes" name="upload_secondes" />
+                                        <input type = "hidden" name = "randomNum" id = "randomNum" value = ""/>
+                                        <div class="restore_button">
+                                            <script type="text/javascript">create_button(common_restore,"restore_button");</script>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--main_content end-->
+        </div>
+    </body>
+</html>

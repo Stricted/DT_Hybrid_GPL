@@ -1,0 +1,36 @@
+[settings]
+functionname=0xF7002004;
+attributenum=11;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       			type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000808>; /*全局模块*/
+attribute=alias<ui_speedup_req>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_speedup_succ>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_fst_pkt>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_disable_tocpu>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_outnet_drop>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_outnet_tocpu>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_dn_fail_drop>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_dn_fail_tocpu>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_up_idx>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_dn_idx>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+
+
+[help]
+typedef struct
+{
+    uint ui_speedup_req;    /* NAPT加速请求报文计数 */
+    uint ui_speedup_succ;   /* NAPT加速成功报文计数 */
+
+    uint ui_fst_pkt;        /* NAPT加速首包转交CPU计数 */
+    uint ui_disable_tocpu;  /* 加速关闭时NAPT将报文转交CPU计数 */
+    uint ui_outnet_drop;    /* 下行外网过滤丢弃计数 */
+    uint ui_outnet_tocpu;   /* 下行外网过滤交CPU处理计数 */
+    uint ui_dn_fail_drop;   /* 下行报文查找连接失败，指示直接丢弃计数 */
+    uint ui_dn_fail_tocpu;  /* 下行报文查找连接失败，指示直接交CPU处理计数 */
+
+    uint ui_up_idx;         /* 上行指定L2_IDX匹配NAPT表项的报文个数统计 */
+    uint ui_dn_idx;         /* 下行指定L2_IDX匹配NAPT表项的报文个数统计 */
+    
+}hi_dp_l3_cnt_s;

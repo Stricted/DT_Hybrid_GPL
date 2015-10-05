@@ -1,0 +1,18 @@
+[settings]
+functionname = hi_kernel_dp_qos_fwred_map_table_item_set_cmd;
+attributenum = 3;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<qid>          type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<valid>        type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<fw_temp_id>   type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+
+
+[help]
+typedef struct
+{
+    uint      ui_qid;
+    HI_BOOL_E em_vld;
+    uint      ui_fw_temp_id;
+} hi_dp_qos_fwred_map_table_item_s;

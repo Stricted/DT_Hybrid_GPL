@@ -1,0 +1,30 @@
+#!/bin/sh
+
+echo "**** Autotools Add New Msg File Wizard ****"
+echo " This script will generate msgtype definition file"
+echo " of a new package to ATP."
+echo
+
+# Usage
+# $1 - Package path
+# $2 - Pacakge name
+
+mkdir -p $1/msg
+
+upcase_module=`echo ${2} | tr '[:lower:]' '[:upper:]'`
+
+# Generate modulemsgtypes.h
+touch $1/msg/$2msgtypes.h
+cat << EOF > $1/msg/$2msgtypes.h
+#ifndef __ATP_${upcase_module}_MSGTYPES_H__
+#define __ATP_${upcase_module}_MSGTYPES_H__
+
+enum ATP_${upcase_module}_MSGTYPES_EN
+{
+    ATP_MSG_${upcase_module}_START = ATP_MSG_CATEGORY_DEF(ATP_MODULE_${upcase_module}),
+} ;
+#endif // End of __ATP_${upcase_module}_MSGTYPES_H__
+
+EOF
+
+echo "Generate succeeded."

@@ -1,0 +1,47 @@
+[settings]
+functionname = hi_kernel_dp_uni_attr_set_cmd;
+attributenum = 15;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<stp_mode>         type<uint>       range<0x0,0xFFFFFFFF>         default<0>;                               
+attribute=alias<igr_en>           type<uint>       range<0x0,0xFFFFFFFF>         default<0>; 
+attribute=alias<igr_gid>          type<uint>       range<0x0,0xFFFFFFFF>         default<0>; 
+attribute=alias<igr_pri>          type<uint>       range<0x0,0xFFFFFFFF>         default<0>; 
+attribute=alias<igr_tcont>        type<uint>       range<0x0,0xFFFFFFFF>         default<0>; 
+attribute=alias<igr_gemport>      type<uint>       range<0x0,0xFFFFFFFF>         default<0>; 
+attribute=alias<igr_sport>        type<uint>       range<0x0,0xFFFFFFFF>         default<0>; 
+attribute=alias<igr_dport>        type<uint>       range<0x0,0xFFFFFFFF>         default<0>; 
+attribute=alias<egr_en>           type<uint>       range<0x0,0xFFFFFFFF>         default<0>; 
+attribute=alias<egr_gid>          type<uint>       range<0x0,0xFFFFFFFF>         default<0>; 
+attribute=alias<egr_pri>          type<uint>       range<0x0,0xFFFFFFFF>         default<0>; 
+attribute=alias<egr_tcont>        type<uint>       range<0x0,0xFFFFFFFF>         default<0>; 
+attribute=alias<egr_gemport>      type<uint>       range<0x0,0xFFFFFFFF>         default<0>; 
+attribute=alias<egr_sport>        type<uint>       range<0x0,0xFFFFFFFF>         default<0>; 
+attribute=alias<egr_dport>        type<uint>       range<0x0,0xFFFFFFFF>         default<0>; 
+
+[help]
+typedef struct
+{
+    HI_DP_ETH_STP_MODE_E    em_stp_mode;
+    hi_dp_mirror_attr_s     st_mirror_attr;
+}hi_dp_uni_attr_s;
+
+
+typedef struct
+{
+    hi_dp_mirror_s  st_igr_mir;
+    hi_dp_mirror_s  st_egr_mir;
+}hi_dp_mirror_attr_s;
+
+
+typedef struct
+{
+    HI_BOOL_E       em_enable;
+    uint            ui_gid;
+    uint            ui_pri;
+    uint            ui_tcont;
+    uint            ui_gemport;
+    HI_DP_PORT_E    em_sport;
+    HI_DP_PORT_E    em_dport;
+}hi_dp_mirror_s;

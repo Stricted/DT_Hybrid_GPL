@@ -1,0 +1,217 @@
+menu "bcm963268 chip components selection"
+config BCM_ENDPOINT
+	tristate "Support Bcm Voice Endpoint Driver"
+	default m
+	depends on BUILD_VOICE
+	help
+	  Enable this option if you need support broadcom endpoint
+	  
+config BCM_BPM
+	tristate "Support bcm bpm"
+	default m
+	help
+	  Enable this option if you need support broadcom bpm
+	  	  
+config ETHERNET
+	tristate "Support bcm ethernet"
+	default m
+	help
+	  Enable this option if you need support broadcom ethernet
+	  
+config BCM_GMAC
+	bool "Support for GMAC"
+	default 0
+	help
+	  Enable this option if you need support broadcom gmac
+	  
+if ETHERNET
+menu "ETHERNET detail configurations"
+config BCM_EXT_SWITCH
+	int "Support bcm external lanswitch"
+	default 0
+	help
+	  Enable this option if you need support broadcom external lanswitch
+	  
+config BRCM_EXT_SWITCH_REV
+	string "Support bcm ext lanswitch rev"
+	default ""
+	help
+	  Enable this option if you need support broadcom ext lanswitch rev
+
+	
+endmenu
+endif	  
+	  
+
+config BCM_PKTFLOW
+	tristate "Support bcm pktflow"
+	default m
+	help
+	  Enable this option if you need support broadcom pktflow
+
+config BRCM_DRIVER_FAP
+	bool "Support bcm driver fap"
+	default y
+	help
+	  Enable this option if you need support broadcom driver fap
+	  
+config BCM_FAP
+	tristate "Support for Forward Assist Processor (FAP)"
+	default m
+	help
+		Say 'M' to include support for FAP.
+		Static compile not supported.
+
+config BCM_FAP_GSO
+        bool "Support GSO in FAP"
+        depends on BCM_FAP
+
+	  
+config BCM_INGQOS
+	tristate "Support bcm ingqos"
+	default m
+	help
+	  Enable this option if you need support broadcom ingqos	  
+
+config BRCM_P8021AG
+	bool "Support bcm p8021ag"
+	default y
+	help
+	  Enable this option if you need support broadcom p8021ag
+
+config BCM_VLAN
+	tristate "Support bcm vlan"
+	default n
+	help
+	  Enable this option if you need support broadcom vlan
+	  
+config DRIVER_QOS
+	bool "Bcm driver Qos"
+	default n
+	help
+	  Support Driver Ingress Qos
+	  
+config DSCP_QOS
+	bool "Dscp statistics Qos"
+	default n
+	help
+	  Support Dscp statistics
+
+config WLAN
+	tristate "Support bcm wlan"
+	default m
+	help
+	  Enable this option if you need support broadcom wlan
+
+config WLAN_DT	  
+	bool "Support DT W724v wlan"
+	depends on WLAN
+	default n
+	help
+	  Enable this option if you need support DT W724v broadcom wlan
+  
+	  
+config VDSL_VECTORING
+	bool "Support VDSL Vectoring"
+	default n
+	help
+	  Support VDSL Vectoring
+	
+config ADSL_ANNEX_B
+	bool "Support ADSL Annex-B"
+	default n
+	help
+	  Support ADSL Annex-B
+config BCM_DSL_GINP_RTX
+	tristate "Support for DSL_GINP_RTX"
+	default n
+	help
+	  Support for DSL_GINP_RTX
+	  	  
+config BCM_PWRMNGT
+	tristate "Support for Power Management"
+	default n
+	help
+	  Support Broadcom power save
+
+config BCM_ETH_PWRSAVE
+    bool "Support for Ethernet Auto Power Down and Sleep"
+	default n
+	help
+	  Support for Ethernet Auto Power Down and Sleep  
+		  
+config BCM_ETH_HWAPD_PWRSAVE
+    bool "Support for Ethernet HW Auto Power Down for external PHYs"
+	default n
+	help
+	  Support for Ethernet HW Auto Power Down for external PHYs  
+		
+config BCM_HOSTMIPS_PWRSAVE
+    bool "Support for PWRMNGT MIPS clock divider"
+	default n
+	help
+	  Support for PWRMNGT MIPS clock divider
+		
+config BCM_DDR_SELF_REFRESH_PWRSAVE
+    bool "Support for DRAM Self Refresh mode"
+	default n
+	help
+	  Support for DRAM Self Refresh mode
+		
+config BCM_AVS_PWRSAVE
+    bool "Support for Automatic Voltage Scaling"
+	default n
+	help
+	  Support for Automatic Voltage Scaling
+		
+config BCM_1V2REG_AUTO_SHUTDOWN
+	bool "Support for Automatically Shutting down Internal 1.2V Regulator"
+	default n
+	help
+	  Support for Automatically Shutting down Internal 1.2V Regulator
+		 
+config BCM_1V8REG_ALWAYS_SHUTDOWN
+	bool "Support for Internal 1P8 VREG is forced to be shutdown"
+	depends on BCM963268
+	
+config BCM_TMS
+	tristate "Support bcm tms"
+	default m
+	help
+	  Enable this option if you need support broadcom tms
+		  
+	  
+if WLAN
+menu "WLAN detail configurations"
+config WIRESSTOOLS
+	bool "Support bcm wirelesstools"
+	default y
+	help
+	  Enable this option if you need support broadcom wirelesstools
+	  
+config BCMACS
+	bool "Support bcm bcmacs"
+	default y
+	help
+	  Enable this option if you need support broadcom bcmacs
+
+config WPS
+	bool "Support bcm wps"
+	default y
+	help
+	  Enable this option if you need support broadcom wps
+
+config MBSS
+	bool "Support bcm mbss"
+	default y
+	help
+	  Enable this option if you need support broadcom wbss
+	
+config WLAN_BUTTON
+	bool "Support bcm wlan button"
+	default y
+	help
+	  Enable this option if you need support broadcom wlan button
+endmenu
+endif
+endmenu

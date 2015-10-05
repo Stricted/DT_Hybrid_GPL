@@ -1,0 +1,9 @@
+#! /bin/sh
+# libtool 2.x
+libtoolize --force --copy
+aclocal
+autoconf
+autoheader
+automake --add-missing
+automake
+

@@ -1,0 +1,1 @@
+cmd_arch/arm/boot/uImage := /bin/sh /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/scripts/mkuboot.sh -A arm -O linux -T kernel -C none -a 0x81000000 -e 0x81000000 -n 'Linux-2.6.30' -d arch/arm/boot/zImage arch/arm/boot/uImage

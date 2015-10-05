@@ -1,0 +1,2 @@
+kernel/drivers/net/usb/hw_cdc_driver.ko
+kernel/drivers/net/usb/ndistty.ko

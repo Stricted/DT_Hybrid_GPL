@@ -1,0 +1,12 @@
+#obj-y := boardparms.o bcm63xx_led.o
+
+
+##/*Added by l00135113@20120225 for support 257*/
+ifeq ($(BRCM_EXT_SWITCH_REV),"a0")
+EXTRA_CFLAGS += -DSUPPORT_TDE
+endif
+
+EXTRA_CFLAGS += -I. -I$(DRIVER_HUAWEI_DIR)/include -I$(KERNEL_DIR)/include \
+                -I$(DRIVER_HUAWEI_BHAL_ADAPTER_DIR) -I$(INC_FLASHCONF_DIR) -I$(INC_DRIVER_VENDOR_DIR) -I$(INC_APP_DIR)
+EXTRA_CFLAGS += -DBOARD_VERSION=\"$(BOARD_VERSION)\"
+EXTRA_CFLAGS += -DPCB_VERSION=\"$(PCB_VERSION)\"

@@ -1,0 +1,21 @@
+config BUILD_HYBRID
+	bool "Hybrid Access"
+    default y
+	help
+	  hybrid access Service
+
+if BUILD_HYBRID
+menu "ATP HYBRID Supported Selection"
+config BUILD_HYBRID_BONDING
+	bool "Hybrid Bonding"
+    default y
+	select BUILD_NAT_CT_CLEAN
+	help
+	  hybrid bonding service
+config BUILD_HYBRID_GREACCEL
+	bool "Hybrid gre accel"
+    default y
+	help
+	  hybrid gre accel	  
+endmenu
+endif

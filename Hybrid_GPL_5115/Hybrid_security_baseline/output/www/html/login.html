@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link type="text/css" rel="stylesheet" href="../css/main.css" />
+        <link rel="icon" href="../res/favicon.ico">
+        <link rel="shortcut icon" href="../res/favicon.ico">
+        <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+        <script type="text/javascript" src="../lib/jquery.cookies.2.2.0.js"></script>
+        <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>
+        <script type="text/javascript" src="../js/redirect.js"></script>
+        <script type="text/javascript" src="../js/validation.js"></script>
+        <script type="text/javascript" src="../js/login.js"></script>
+        <script type="text/javascript" src="../js/sha256.js"></script>
+        <title></title>
+    </head>
+
+    <body>
+        <div id="all_content" class="body_bg">
+            <div class="login_head_div">
+                <div id="logo"></div>
+                <div class="help">
+                    <span>
+                        <select id="lang"></select>
+                    </span>
+                    <span>
+                        <a id="help_url" target="_blank" href="#">
+                            <span id="help_span">
+                                <script type="text/javascript">dw(common_help);</script>
+                            </span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div class="login_box">
+                <div class="tools_login">
+                    <div class="info_dialog_top"></div>
+                    <div class="info_dialog_content">
+                        <div class="info_dialog_header">
+                            <span id="show_login">
+                                <script type="text/javascript">dw(common_login);</script>
+                            </span>
+                        </div>
+                        <div class="info_dialog_table_login">
+                            <table>
+                                <tr>
+                                    <th width="150" height="60">
+                                        <script type="text/javascript">dw(samba_label_username);dw(common_colon);</script>
+                                    </th>
+                                    <td id="login_username_td"><select id="login_username" class="input_select"></select></td>
+                                </tr>
+                                <tr valign="top">
+                                    <th height="50">
+                                        <script type="text/javascript">dw(common_password);dw(common_colon);</script>
+                                    </th>
+                                    <td><input id="login_password" type="password" class="input_style" maxlength="15"/></td>
+                                </tr>
+                            </table>
+                            <div class="login_button" align="center"> 
+                                <script type="text/javascript">create_button(common_ok, "login", "disable_btn");</script>
+                            </div>
+                        </div>
+                        <div class="info_dialog_bottom"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer"  class="footer">
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready( function() {
+                getUserManualUrl("login");
+            });
+        </script>
+    </body>
+</html>

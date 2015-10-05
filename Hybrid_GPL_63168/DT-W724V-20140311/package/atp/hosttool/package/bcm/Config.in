@@ -1,0 +1,3 @@
+config BUILD_BCMPKG
+	bool "BCM Package Tools"
+	default y

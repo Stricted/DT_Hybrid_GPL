@@ -1,0 +1,1 @@
+cmd_drivers/i2c/built-in.o :=  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/bin/arm-hsan-linux-uclibcgnueabi-ld -EL    -r -o drivers/i2c/built-in.o drivers/i2c/busses/built-in.o drivers/i2c/chips/built-in.o drivers/i2c/algos/built-in.o 

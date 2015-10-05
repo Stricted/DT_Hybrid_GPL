@@ -1,0 +1,1 @@
+cmd_net/sched/sch_wrr.o := /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/bin/arm-hsan-linux-uclibcgnueabi-ld -EL    -r -o net/sched/sch_wrr.o net/sched/wrr.o net/sched/wrr_proxydict.o 

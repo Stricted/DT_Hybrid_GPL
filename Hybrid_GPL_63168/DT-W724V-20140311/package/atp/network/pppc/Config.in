@@ -1,0 +1,133 @@
+config BUILD_PPPC
+	bool "PPPC"
+	default dynamic
+	help
+	  Support  pppc.
+
+if BUILD_PPPC
+menu "ATP PPPC Supported Selection"
+
+config BUILD_PPPoA
+	bool "PPPoA"
+	default dynamic
+	depends on BUILD_PPPC
+	help
+		Support pppoa.
+		
+config BUILD_PPPoS
+	bool "PPPoS"
+	default dynamic
+	depends on BUILD_PPPC
+	help
+		Support pppos.
+		
+config BUILD_PPPC6
+	bool "PPPC6"
+	default dynamic
+	depends on BUILD_IPV6 && BUILD_PPPC
+	help
+		Support pppc6.
+		
+config BUILD_PPP_STATICIP
+	bool "PPP_STATICIP"
+	default dynamic
+	depends on BUILD_PPPC
+	help
+		Support static ip request.
+			
+		
+config BUILD_PPP_ISP
+	bool "PPP_ISP"
+	default dynamic
+	depends on BUILD_PPPC
+	help
+		Support if it is ISP or not .
+		
+config BUILD_PPP_DEFAULTUSER
+	bool "PPP_DEFAULTUSER"
+	default dynamic
+	depends on BUILD_PPPC
+	help
+		Support if it is a default user or not.
+config BUILD_PPP_TRIGGERDEMAND
+	bool "PPP_TRIGGERDEMAND"
+	default dynamic
+	depends on BUILD_PPPC
+	help
+		Support if trigger dial when process come up.		
+		
+config BUILD_PPP_DEMAND_RCVPACKET
+	bool "PPP_DEMAND_RCVPACKET"
+	default dynamic
+	depends on BUILD_PPPC
+	help
+		Support if receive packet trigger demand mode	
+		
+config BUILD_PPP_TAG_MACUNIQ
+	bool "PPP_TAG_MACUNIQ"
+	default dynamic
+	depends on BUILD_PPPC
+	help
+		Support if host uniq tag set with local mac	
+		
+config BUILD_PPP_LOG_BT_HHUB3
+	bool "PPP_LOG_BT_HHUB3"
+	default dynamic
+	depends on BUILD_PPPC
+	help
+		Support BT log.			
+
+config BUILD_PPP_REDISCON_BT_HHUB3
+	bool "PPP_REDISCON_BT_HHUB3"
+	default dynamic
+	depends on BUILD_PPPC
+	help
+		Support when disconnet link,it will send 5 PADT to BRAS.
+
+config BUILD_PPP_PLUGDSL_CRASH_BT_HHUB3
+	bool "PPP_PLUGDSL_CRASH_BT_HHUB3"
+	default n
+	depends on BUILD_PPPC
+	help
+		Fix the BT issue of pluging  and unpluging  dsl line cause the system crash .
+config BUILD_PPP_TOGGLE_DT_W723V
+	bool "PPP_TOGGLE_DT_W723V"
+	default y
+	depends on BUILD_PPPC
+	help
+		Support toggle vlan 0 and vlan 7 for DT pppc .
+config BUILD_PPP_DYN_DIAL
+	bool "PPP V4 V6 dynamic dial, for W724V, see TOCPE0056.pdf"
+	default n
+	depends on BUILD_PPPC
+	help
+		Support DT W724V .
+		
+config BUILD_PPP_IGMP_DIAL
+	bool "support DT W724v IGMP traffic"
+	depends on BUILD_PPPC
+	default n
+	
+config BUILD_PPP_DT_TOCPE0056
+	bool "Support DT W724V TOCPE0056.pdf"
+	default n
+	depends on SUPPORT_ATP_PPP_DYN_DIAL
+	help
+		Support DT W724V TOCPE0056.pdf.
+
+config BUILD_PPP_ON_DEMAND_ALL_IN_ONE_BRIDGE
+	bool "PPP more than one V4 dial on demand in one bridge"
+	default n
+	depends on BUILD_PPPC
+	help
+		Support more than one V4 dial on demand in one bridge.
+				
+config BUILD_PPP_RALINK_ATM
+	bool "PPP_RALINK_ATM"
+	default n
+	depends on BUILD_PPPC && MTK_CHIP
+	help
+		Support TC3162U and RT63365 .
+		
+endmenu
+endif

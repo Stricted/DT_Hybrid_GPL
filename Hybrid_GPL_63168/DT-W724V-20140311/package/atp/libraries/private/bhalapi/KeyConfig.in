@@ -1,0 +1,61 @@
+# Auto Gen By ATP 
+############ KEY1 ####################
+config BUILD_BHALAPI_EQUIPPARAM_ENC
+	bool "Support Equipment Param Encrypt"
+	select BUILD_SECLIB
+	default y
+if BUILD_BHALAPI_EQUIPPARAM_ENC
+menu "Set Equipment Param Encrypt Key"
+
+
+choice
+	prompt "Symmetric Algorithm Choice"
+	help
+	  Select Symmetric Algorithm.
+
+	config BUILD_BHALAPI_KEY1_3DES
+		bool "3DES"
+		select BUILD_MINISSL_DES3
+				
+	config BUILD_BHALAPI_KEY1_AES
+		bool "AES"
+		select BUILD_MINISSL_AES
+	
+endchoice
+
+config BUILD_BHALAPI_KEY1_KEYSIZE
+	int "Key Size"
+
+choice 
+	prompt "Key Store"
+	default BUILD_BHALAPI_KEY1_STORE_ALL_KEY
+	config BUILD_BHALAPI_KEY1_STORE_NO_KEY
+		bool "No Store All Key"
+	config BUILD_BHALAPI_KEY1_STORE_ALL_KEY
+		bool "Store All Key"
+	config BUILD_BHALAPI_KEY1_STORE_PUBLIC_KEY
+		bool "Store Public Key"
+		depends on !BUILD_BHALAPI_KEY1_SYMMETRIC
+	config BUILD_BHALAPI_KEY1_STORE_PRIVATE_KEY
+		bool "Store Private Key"
+		depends on !BUILD_BHALAPI_KEY1_SYMMETRIC
+endchoice
+	
+config BUILD_BHALAPI_KEY1_ALGID
+	hex 
+	default "0x20000" if BUILD_BHALAPI_KEY1_3DES
+	default "0x20001" if BUILD_BHALAPI_KEY1_AES
+	default "0x40000" if BUILD_BHALAPI_KEY1_RSA
+	default "0x80000" if BUILD_BHALAPI_KEY1_MD5WITHRSA
+	default "0x80001" if BUILD_BHALAPI_KEY1_SHA2WITHRSA
+	default "0x80002" if BUILD_BHALAPI_KEY1_SHA4WITHRSA
+
+config BUILD_BHALAPI_KEY1_STORE
+	int
+	default 0 if BUILD_BHALAPI_KEY1_STORE_NO_KEY
+	default 1 if BUILD_BHALAPI_KEY1_STORE_ALL_KEY
+	default 2 if BUILD_BHALAPI_KEY1_STORE_PUBLIC_KEY
+	default 3 if BUILD_BHALAPI_KEY1_STORE_PRIVATE_KEY
+endmenu
+endif
+	

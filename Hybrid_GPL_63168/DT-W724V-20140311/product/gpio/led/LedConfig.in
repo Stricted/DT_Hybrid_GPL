@@ -1,0 +1,1072 @@
+menu "Led config"
+config LED_DEFAULT_COLOR_WHITE
+		bool "LED DEFAULT COLOR WHITE"
+		default n
+		help
+			Enable white led to be default led
+			
+config LED_POWER
+		bool "LED POWER"
+		default n
+		help
+			Enable this option if you need to wan led
+	  
+if 	LED_POWER
+config LED_POWER_MODE
+	int "LED_POWER_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_POWER_ACTIVE_PIN
+	int "LED_POWER_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_POWER_ACTIVE_PIN_STATE
+	int "LED_POWER_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_POWER_FAIL_PIN
+	int "LED_POWER_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_POWER_FAIL_PIN_STATE
+	int "LED_POWER_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_POWER		
+
+config LED_ADSL
+		bool "LED ADSL no.1"
+		default n
+		help
+			Enable this option if you need to ADSL led no.1
+	  
+if 	LED_ADSL
+config LED_ADSL_MODE
+	int "LED_ADSL_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_ADSL_ACTIVE_PIN
+	int "LED_ADSL_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_ADSL_ACTIVE_PIN_STATE
+	int "LED_ADSL_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_ADSL_FAIL_PIN
+	int "LED_ADSL_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_ADSL_FAIL_PIN_STATE
+	int "LED_ADSL_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 	
+
+config LED_ADSL2
+		bool "LED ADSL no.2"
+		default n
+		help
+			Enable this option if you need to ADSL led no.2
+	  
+if 	LED_ADSL2
+config LED_ADSL2_MODE
+	int "LED_ADSL2_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_ADSL2_ACTIVE_PIN
+	int "LED_ADSL2_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_ADSL2_ACTIVE_PIN_STATE
+	int "LED_ADSL2_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_ADSL2_FAIL_PIN
+	int "LED_ADSL2_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_ADSL2_FAIL_PIN_STATE
+	int "LED_ADSL2_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_ADSL2
+endif	##end of LED_ADSL
+
+config LED_WLAN_ENABLE
+		bool "LED WLAN_ENABLE"
+		default n
+		help
+			Enable this option if you need to wan led
+	  
+if 	LED_WLAN_ENABLE
+config LED_WLAN_ENABLE_MODE
+	int "LED_WLAN_ENABLE_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_WLAN_ENABLE_ACTIVE_PIN
+	int "LED_WLAN_ENABLE_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_WLAN_ENABLE_ACTIVE_PIN_STATE
+	int "LED_WLAN_ENABLE_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_WLAN_ENABLE_FAIL_PIN
+	int "LED_WLAN_ENABLE_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_WLAN_ENABLE_FAIL_PIN_STATE
+	int "LED_WLAN_ENABLE_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_WLAN_ENABLE	
+
+
+config LED_WLAN
+		bool "LED WLAN"
+		default n
+		help
+			Enable this option if you need to wlan led
+	  
+if 	LED_WLAN
+config LED_WLAN_MODE
+	int "LED_WLAN_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_WLAN_ACTIVE_PIN
+	int "LED_WLAN_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_WLAN_ACTIVE_PIN_STATE
+	int "LED_WLAN_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_WLAN_FAIL_PIN
+	int "LED_WLAN_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_WLAN_FAIL_PIN_STATE
+	int "LED_WLAN_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_WLAN
+	
+config LED_WLAN5G_ENABLE
+		bool "LED WLAN5G_ENABLE"
+		default n
+		help
+			Enable this option if you need to wan led
+	  
+if 	LED_WLAN5G_ENABLE
+config LED_WLAN5G_ENABLE_MODE
+	int "LED_WLAN5G_ENABLE_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_WLAN5G_ENABLE_ACTIVE_PIN
+	int "LED_WLAN5G_ENABLE_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_WLAN5G_ENABLE_ACTIVE_PIN_STATE
+	int "LED_WLAN5G_ENABLE_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_WLAN5G_ENABLE_FAIL_PIN
+	int "LED_WLAN5G_ENABLE_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_WLAN5G_ENABLE_FAIL_PIN_STATE
+	int "LED_WLAN5G_ENABLE_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_WLAN5G_ENABLE	
+
+
+config LED_WLAN5G
+		bool "LED WLAN5G"
+		default n
+		help
+			Enable this option if you need to wlan led
+	  
+if 	LED_WLAN5G
+config LED_WLAN5G_MODE
+	int "LED_WLAN5G_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_WLAN5G_ACTIVE_PIN
+	int "LED_WLAN5G_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_WLAN5G_ACTIVE_PIN_STATE
+	int "LED_WLAN5G_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_WLAN5G_FAIL_PIN
+	int "LED_WLAN5G_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_WLAN5G_FAIL_PIN_STATE
+	int "LED_WLAN5G_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_WLAN5G
+	
+config LED_WPS
+		bool "LED WPS"
+		default n
+		help
+			Enable this option if you need to WPS led
+	  
+if 	LED_WPS
+config LED_WPS_MODE
+	int "LED_WPS_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_WPS_ACTIVE_PIN
+	int "LED_WPS_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_WPS_ACTIVE_PIN_STATE
+	int "LED_WPS_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_WPS_FAIL_PIN
+	int "LED_WPS_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_WPS_FAIL_PIN_STATE
+	int "LED_WPS_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_WPS		
+
+config LED_USB
+		bool "LED USB"
+		default n
+		help
+			Enable this option if you need to wan led
+	  
+if 	LED_USB
+config LED_USB_MODE
+	int "LED_USB_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_USB_ACTIVE_PIN
+	int "LED_USB_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_USB_ACTIVE_PIN_STATE
+	int "LED_USB_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_USB_FAIL_PIN
+	int "LED_USB_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_USB_FAIL_PIN_STATE
+	int "LED_USB_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_USB	
+
+config LED_LAN_1
+		bool "LED LAN no.1"
+		default n
+		help
+			Enable this option if you need LAN led, no. 1
+	  
+if 	LED_LAN_1
+config LED_LAN_1_MODE
+	int "LED_LAN_1 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_LAN_1_ACTIVE_PIN
+	int "LED_LAN_1_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_LAN_1_ACTIVE_PIN_STATE
+	int "LED_LAN_1_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_LAN_1_FAIL_PIN
+	int "LED_LAN_1_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_LAN_1_FAIL_PIN_STATE
+	int "LED_LAN_1_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+config LED_LAN_2
+		bool "LED LAN no.2"
+		default n
+		help
+			Enable this option if you need LAN led, no. 2
+			
+if 	LED_LAN_2
+config LED_LAN_2_MODE
+	int "LED_LAN_2_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_LAN_2_ACTIVE_PIN
+	int "LED_LAN_2_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_LAN_2_ACTIVE_PIN_STATE
+	int "LED_LAN_2_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_LAN_2_FAIL_PIN
+	int "LED_LAN_2_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_LAN_2_FAIL_PIN_STATE
+	int "LED_LAN_2_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+
+config LED_LAN_3
+	bool "LED LAN no.3"
+	default n
+	help
+		Enable this option if you need LAN led, no. 3
+	  
+if 	LED_LAN_3
+config LED_LAN_3_MODE
+	int "LED_LAN_3 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_LAN_3_ACTIVE_PIN
+	int "LED_LAN_3_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_LAN_3_ACTIVE_PIN_STATE
+	int "LED_LAN_3_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_LAN_3_FAIL_PIN
+	int "LED_LAN_3_FAIL_PIN enter the pin for serial or normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_LAN_3_FAIL_PIN_STATE
+	int "LED_LAN_3_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+config LED_LAN_4
+		bool "LED LAN no.4"
+		default n
+		help
+			Enable this option if you need LAN led, no. 4
+	  
+if 	LED_LAN_4
+config LED_LAN_4_MODE
+	int "LED_LAN_4 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_LAN_4_ACTIVE_PIN
+	int "LED_LAN_4_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_LAN_4_ACTIVE_PIN_STATE
+	int "LED_LAN_4_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_LAN_4_FAIL_PIN
+	int "LED_LAN_4_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_LAN_4_FAIL_PIN_STATE
+	int "LED_LAN_4_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+config LED_LAN_5
+		bool "LED VOIP no.5"
+		default n
+		help
+			Enable this option if you need voip led, no. 5
+			
+if 	LED_LAN_5
+config LED_LAN_5_MODE
+	int "LED_LAN_5 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_LAN_5_ACTIVE_PIN
+	int "LED_LAN_5_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_LAN_5_ACTIVE_PIN_STATE
+	int "LED_LAN_5_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_LAN_5_FAIL_PIN
+	int "LED_LAN_5_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_LAN_5_FAIL_PIN_STATE
+	int "LED_LAN_5_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_LAN_5	  
+endif	##end of LED_LAN_4	  
+endif	##end of LED_LAN_3	
+endif	##end of LED_LAN_2	  
+endif	##end of LED_LAN_1			
+
+
+
+config LED_WAN
+		bool "LED WAN"
+		default n
+		help
+			Enable this option if you need to wan led
+	  
+if 	LED_WAN
+config LED_WAN_MODE
+	int "LED_WAN_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_WAN_ACTIVE_PIN
+	int "LED_WAN_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_WAN_ACTIVE_PIN_STATE
+	int "LED_WAN_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_WAN_FAIL_PIN
+	int "LED_WAN_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_WAN_FAIL_PIN_STATE
+	int "LED_WAN_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_WAN	
+
+
+config LED_HPNA
+		bool "LED HPNA"
+		default n
+		help
+			Enable this option if you need to HPNA led
+	  
+if 	LED_HPNA
+config LED_HPNA_MODE
+	int "LED_HPNA_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_HPNA_ACTIVE_PIN
+	int "LED_HPNA_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_HPNA_ACTIVE_PIN_STATE
+	int "LED_HPNA_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_HPNA_FAIL_PIN
+	int "LED_HPNA_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_HPNA_FAIL_PIN_STATE
+	int "LED_HPNA_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_HPNA	
+	
+config LED_HSPA
+		bool "LED HSPA"
+		default n
+		help
+			Enable this option if you need to HSPA led
+	  
+if 	LED_HSPA
+config LED_HSPA_MODE
+	int "LED_HSPA_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_HSPA_ACTIVE_PIN
+	int "LED_HSPA_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_HSPA_ACTIVE_PIN_STATE
+	int "LED_HSPA_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_HSPA_FAIL_PIN
+	int "LED_HSPA_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_HSPA_FAIL_PIN_STATE
+		int "LED_HSPA_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_HSPA
+
+
+config LED_PPP
+		bool "LED PPP"
+		default n
+		help
+			Enable this option if you need to HSPA led
+	  
+if 	LED_PPP
+config LED_PPP_MODE
+	int "LED_PPP_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_PPP_ACTIVE_PIN
+	int "LED_PPP_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_PPP_ACTIVE_PIN_STATE
+	int "LED_PPP_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_PPP_FAIL_PIN
+	int "LED_PPP_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_PPP_FAIL_PIN_STATE
+		int "LED_PPP_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_PPP
+
+
+config LED_INTERNET
+		bool "LED INTERNET"
+		default n
+		help
+			Enable this option if you need to INTERNET led
+	  
+if 	LED_INTERNET
+config LED_INTERNET_MODE
+	int "LED_INTERNET_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_INTERNET_ACTIVE_PIN
+	int "LED_INTERNET_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_INTERNET_ACTIVE_PIN_STATE
+	int "LED_INTERNET_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_INTERNET_FAIL_PIN
+	int "LED_INTERNET_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_INTERNET_FAIL_PIN_STATE
+		int "LED_INTERNET_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_INTERNET
+
+
+config LED_BL_POWER
+		bool "LED BL_POWER"
+		default n
+		help
+			Enable this option if you need to HSPA led
+	  
+if 	LED_BL_POWER
+config LED_BL_POWER_MODE
+	int "LED_PPP_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_BL_POWER_ACTIVE_PIN
+	int "LED_BL_POWER_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_BL_POWER_ACTIVE_PIN_STATE
+	int "LED_BL_POWER_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_BL_POWER_FAIL_PIN
+	int "LED_BL_POWER_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_BL_POWER_FAIL_PIN_STATE
+		int "LED_BL_POWER_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_BL_POWER
+
+
+config LED_BL_RESETCFG
+		bool "LED BL_RESETCFG"
+		default n
+		help
+			Enable this option if you need to BL_RESETCFG led
+	  
+if 	LED_BL_RESETCFG
+config LED_BL_RESETCFG_MODE
+	int "LED_BL_RESETCFG_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_BL_RESETCFG_ACTIVE_PIN
+	int "LED_BL_RESETCFG_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_BL_RESETCFG_ACTIVE_PIN_STATE
+	int "LED_BL_RESETCFG_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_BL_RESETCFG_FAIL_PIN
+	int "LED_BL_RESETCFG_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_BL_RESETCFG_FAIL_PIN_STATE
+		int "LED_BL_RESETCFG_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_BL_RESETCFG
+
+
+config LED_BL_RESTOP
+		bool "LED BL_RESTOP"
+		default n
+		help
+			Enable this option if you need to BL_RESTOP led
+	  
+if 	LED_BL_RESTOP
+config LED_BL_RESTOP_MODE
+	int "LED_BL_RESTOP_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_BL_RESTOP_ACTIVE_PIN
+	int "LED_BL_RESTOP_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_BL_RESTOP_ACTIVE_PIN_STATE
+	int "LED_BL_RESTOP_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_BL_RESTOP_FAIL_PIN
+	int "LED_BL_RESTOP_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_BL_RESTOP_FAIL_PIN_STATE
+		int "LED_BL_RESTOP_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_BL_RESTOP
+
+config LED_DECT
+		bool "LED DECT"
+		default n
+		help
+			Enable this option if you need to DECT led
+	  
+if 	LED_DECT
+config LED_DECT_MODE
+	int "LED_DECT_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+
+config LED_DECT_ACTIVE_PIN
+	int "LED_DECT_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_DECT_ACTIVE_PIN_STATE
+	int "LED_DECT_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_DECT_FAIL_PIN
+	int "LED_DECT_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_DECT_FAIL_PIN_STATE
+		int "LED_DECT_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_DECT
+
+config LED_POTS
+		bool "LED POTS"
+		default n
+		help
+			Enable this option if you need to POTS led
+	  
+if 	LED_POTS
+config LED_POTS_MODE
+	int "LED_POTS_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+
+config LED_POTS_ACTIVE_PIN
+	int "LED_POTS_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_POTS_ACTIVE_PIN_STATE
+	int "LED_POTS_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_POTS_FAIL_PIN
+	int "LED_POTS_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_POTS_FAIL_PIN_STATE
+		int "LED_POTS_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_POTS
+
+config LED_sesWLAN
+		bool "LED sesWLAN"
+		default n
+		help
+			Enable this option if you need to sesWLAN led
+	  
+if 	LED_sesWLAN
+config LED_sesWLAN_MODE
+	int "LED_sesWLAN_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+
+config LED_sesWLAN_ACTIVE_PIN
+	int "LED_sesWLAN_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_sesWLAN_ACTIVE_PIN_STATE
+	int "LED_sesWLAN_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_sesWLAN_FAIL_PIN
+	int "LED_sesWLAN_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_sesWLAN_FAIL_PIN_STATE
+		int "LED_sesWLAN_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_sesWLAN
+
+config LED_VOIP_1
+		bool "LED VOIP no.1"
+		default n
+		help
+			Enable this option if you need voip led, no. 1
+	  
+if 	LED_VOIP_1
+config LED_VOIP_1_MODE
+	int "LED_VOIP_1 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_VOIP_1_ACTIVE_PIN
+	int "LED_VOIP_1_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_VOIP_1_ACTIVE_PIN_STATE
+	int "LED_VOIP_1_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_VOIP_1_FAIL_PIN
+	int "LED_VOIP_1_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_VOIP_1_FAIL_PIN_STATE
+	int "LED_VOIP_1_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+config LED_VOIP_2
+		bool "LED VOIP no.2"
+		default n
+		help
+			Enable this option if you need voip led, no. 2
+			
+if 	LED_VOIP_2
+config LED_VOIP_2_MODE
+	int "LED_VOIP_2_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_VOIP_2_ACTIVE_PIN
+	int "LED_VOIP_2_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_VOIP_2_ACTIVE_PIN_STATE
+	int "LED_VOIP_2_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_VOIP_2_FAIL_PIN
+	int "LED_VOIP_2_FAIL_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config LED_VOIP_2_FAIL_PIN_STATE
+	int "LED_VOIP_2_FAIL_PIN_STATE 0 for low and 1 for high,3 for no fail"
+	default "3"
+	help
+	  Enable this 
+	  
+endif	##end of LED_VOIP_2	  
+endif	##end of LED_VOIP_1		
+
+menu "SERVICE_LED"
+source "product/gpio/led/ServiceLedConfig.in"
+endmenu
+## FOR LTE LED
+menu "LTE_LED"
+source "product/gpio/led/LteLedConfig.in"
+endmenu
+endmenu

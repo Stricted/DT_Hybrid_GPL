@@ -1,0 +1,139 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-cn" xml:lang="zh-cn">
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+   
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+<meta name="copyright" content="(C) 版权 2005">
+<meta name="DC.rights.owner" content="(C) 版权 2005">
+<meta name="DC.Type" content="reference">
+<meta name="DC.Title" content="特殊应用程序">
+<meta name="abstract" content="对于视频会议、网络电话、网络游戏等应用程序，在客户端向因特网服务器请求连接的同时，服务器也需要向客户端发起连接。但在默认情况下，因特网服务器向局域网客户端发起的连接请求时， <script>dw(common_3g_wireless_modem);</script>相应的端口并没有打开，导致连接中断。 通过设置端口触发功能，当局域网中有此类请求时，应用程序向触发端口发起连接，会触发<script>dw(common_3g_wireless_modem);</script>打开相应的端口，从而保证该程序的正常使用。">
+<meta name="description" content="对于视频会议、网络电话、网络游戏等应用程序，在客户端向因特网服务器请求连接的同时，服务器也需要向客户端发起连接。但在默认情况下，因特网服务器向局域网客户端发起的连接请求时， <script>dw(common_3g_wireless_modem);</script>相应的端口并没有打开，导致连接中断。 通过设置端口触发功能，当局域网中有此类请求时，应用程序向触发端口发起连接，会触发<script>dw(common_3g_wireless_modem);</script>打开相应的端口，从而保证该程序的正常使用。">
+<meta name="DC.Relation" scheme="URI" content="../../usermanual/parameters/parameters_security.html">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="parameters_special_applications_1">
+<meta name="DC.Language" content="zh-cn">
+<link rel="stylesheet" type="text/css" href="../../../public_sys-resources/commonltr.css">
+<script language="javascript" type="text/javascript" src="../../../public_sys-resources/ExpandCollapse.js"></script><script type="text/javascript" src="../../../../language/lang_zh_cn.js"></script>
+<title>特殊应用程序</title>
+</head>
+<body style="clear:both; padding-left:10px; padding-top:5px; padding-right:5px; padding-bottom:5px"><a name="parameters_special_applications_1"></a><a name="parameters_special_applications_1"></a>
+
+
+<div id="navigation" class="navigation">
+<ul>
+<li><a href="../../usermanual/legal/instance_legal_notice_fmc_lte.html">法律声明</a></li>
+<li><a href="../../usermanual/sms/sms_management.html">短信管理</a></li>
+<li><a href="../../usermanual/network/network_configuration.html">互联网连接设置</a></li>
+<li><a href="../../usermanual/pin/pin_management.html">PIN 码管理</a></li>
+<li><a href="../../usermanual/advanced/advanced_configuration.html">高级设置</a></li>
+<li><a href="../../usermanual/maintenance/maintenance_device.html">设备维护</a></li>
+<li><a href="../../usermanual/parameters/parameters_ui.html">UI 参考</a></li>
+<li><a href="../../usermanual/faq/faq.html">FAQ</a></li>
+<li><a href="../../usermanual/gpl/gpl.html">GPL 开源声明</a></li>
+<li><a href="../../usermanual/abbreviations/abbreviations.html">缩略语</a></li>
+</ul>
+</div>
+<div id="right">
+<h1 class="topictitle1">特殊应用程序</h1>
+
+
+<div><p>对于视频会议、网络电话、网络游戏等应用程序，在客户端向因特网服务器请求连接的同时，服务器也需要向客户端发起连接。但在默认情况下，因特网服务器向局域网客户端发起的连接请求时， <span><span class="uicontrol">&#8220;<script>dw(common_3g_wireless_modem);</script>&#8221;</span></span>相应的端口并没有打开，导致连接中断。 通过设置端口触发功能，当局域网中有此类请求时，应用程序向触发端口发起连接，会触发<span><span class="uicontrol">&#8220;<script>dw(common_3g_wireless_modem);</script>&#8221;</span></span>打开相应的端口，从而保证该程序的正常使用。</p>
+
+<div class="section"><h4 class="sectiontitle"><span>操作路径</span></h4><p><span class="menucascade">&#8220;<span class="uicontrol"><script>dw(common_settings);</script></span> &gt; <span class="uicontrol"><script>dw(firewall_label_security);</script></span> &gt; <span class="uicontrol"><script>dw(firewall_label_special_application);</script></span>
+&#8221;</span></p>
+</div>
+
+<div class="section"><h4 class="sectiontitle"><span>参数说明</span></h4><ul>
+<li><span class="uicontrol">&#8220;<script>dw(specialapp_commonport);</script>&#8221;</span>：<p>选择一个定义好的应用规则进行浏览或修改，或者保留<span class="uicontrol">&#8220;<script>dw(firewall_label_select);</script>&#8221;</span>的选中状态，新增一个自定义的应用程序规则。</p>
+</li>
+<li><span class="uicontrol">&#8220;<script>dw(firewall_label_name);</script>&#8221;</span>：<p>输入自定义应用程序规则名。</p>
+</li>
+<li><span class="uicontrol">&#8220;<script>dw(firewall_label_status);</script>&#8221;</span>：<p>选择是否启用该规则。</p>
+</li>
+<li><span class="uicontrol">&#8220;<script>dw(firewall_label_trigger_protocol);</script>&#8221;</span>：<p>选择局域网计算机的应用程序向因特网发起连接的协议类型。</p>
+</li>
+<li><span class="uicontrol">&#8220;<script>dw(specialapp_trigger_port_start);</script>&#8221;</span>/<span class="uicontrol">&#8220;<script>dw(specialapp_trigger_port_end);</script>&#8221;</span>：<p>设置局域网计算机的应用程序向因特网发起连接的端口号。</p>
+</li>
+<li><span class="uicontrol">&#8220;<script>dw(specialapp_open_port_start);</script>&#8221;</span>/<span class="uicontrol">&#8220;<script>dw(specialapp_open_port_end);</script>&#8221;</span>：<p>设置打开端口号。当应用程序通过触发端口成功发起连接后， <span><span class="uicontrol">&#8220;<script>dw(common_3g_wireless_modem);</script>&#8221;</span></span> 打开对应的打开端口，因特网服务器可通过打开端口与局域网计算机建立连接。</p>
+</li>
+<li><span class="uicontrol">&#8220;<script>dw(common_save);</script>&#8221;</span>：<p><span>单击保存设置。</span></p>
+</li>
+<li><span class="uicontrol">&#8220;<script>dw(common_apply);</script>&#8221;</span>:<p><span>单击使设置生效。</span></p>
+</li>
+</ul>
+</div>
+
+<div class="example"><a name="parameters_special_applications_1__1.3.3"></a><a name="1.3.3"></a><h4 class="sectiontitle">设置 MSN 在线游戏</h4><p>假设局域网中的一台计算机，使用端口 47624 通过 TCP 协议连接到 MSN 游戏服务器。游戏开始后，MSN 游戏服务器将会使用端口 2400 使用 TCP 协议连接局域网中的该台计算机。为使游戏正常运行，您需要参照以下设置新增一条特殊应用程序规则。</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="border" border="1" rules="all">
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" width="14.326647564469914%"><p><span class="uicontrol">&#8220;<script>dw(firewall_label_name);</script>&#8221;</span></p>
+</td>
+
+<td class="cellrowborder" valign="top" width="14.183381088825215%"><p><span class="uicontrol">&#8220;<script>dw(firewall_label_status);</script> &#8221;</span></p>
+</td>
+
+<td class="cellrowborder" valign="top" width="14.326647564469914%"><p><span class="uicontrol">&#8220;<script>dw(firewall_label_trigger_protocol);</script> &#8221;</span></p>
+</td>
+
+<td class="cellrowborder" valign="top" width="14.183381088825215%"><p><span class="uicontrol">&#8220;<script>dw(specialapp_trigger_port_start);</script>&#8221;</span></p>
+</td>
+
+<td class="cellrowborder" valign="top" width="14.326647564469914%"><p><span class="uicontrol">&#8220;<script>dw(specialapp_trigger_port_end);</script>&#8221;</span></p>
+</td>
+
+<td class="cellrowborder" valign="top" width="14.326647564469914%"><p><span class="uicontrol">&#8220;<script>dw(specialapp_open_port_start);</script>&#8221;</span></p>
+</td>
+
+<td class="cellrowborder" valign="top" width="14.326647564469914%"><p><span class="uicontrol">&#8220;<script>dw(specialapp_open_port_end);</script>&#8221;</span></p>
+</td>
+
+</tr>
+
+<tr>
+<td class="cellrowborder" valign="top" width="14.326647564469914%"><p>MSN Gaming Zone</p>
+</td>
+
+<td class="cellrowborder" valign="top" width="14.183381088825215%"><p><span class="uicontrol">&#8220;<script>dw(common_on);</script>&#8221;</span></p>
+</td>
+
+<td class="cellrowborder" valign="top" width="14.326647564469914%"><p><span class="uicontrol">&#8220;<script>dw(firewall_label_tcp);</script>&#8221;</span></p>
+</td>
+
+<td class="cellrowborder" valign="top" width="14.183381088825215%"><p>47624</p>
+</td>
+
+<td class="cellrowborder" valign="top" width="14.326647564469914%"><p>47624</p>
+</td>
+
+<td class="cellrowborder" valign="top" width="14.326647564469914%"><p>2300</p>
+</td>
+
+<td class="cellrowborder" valign="top" width="14.326647564469914%"><p>2556</p>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+</div>
+<div class="note"><img src="../../../public_sys-resources/icon-note.gif"><span class="notetitle"> 说明： </span><div class="notebody"><p><span class="uicontrol">&#8220;<script>dw(firewall_label_trigger_port);</script> &#8221;</span>、<span class="uicontrol">&#8220;<script>dw(firewall_label_trigger_protocol);</script> &#8221;</span>和<span class="uicontrol">&#8220;<script>dw(firewall_label_open_port);</script> &#8221;</span>的详细信息，请联系您的游戏服务提供商。</p>
+</div></div>
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>父主题：</strong> <a href="../../usermanual/parameters/parameters_security.html">安全</a></div>
+</div>
+</div>
+
+</div></body>
+</html>

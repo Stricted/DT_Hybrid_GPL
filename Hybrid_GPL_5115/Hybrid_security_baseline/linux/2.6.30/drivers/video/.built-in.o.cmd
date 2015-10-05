@@ -1,0 +1,1 @@
+cmd_drivers/video/built-in.o :=  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/bin/arm-hsan-linux-uclibcgnueabi-ld -EL    -r -o drivers/video/built-in.o drivers/video/fb_notify.o drivers/video/backlight/built-in.o drivers/video/display/built-in.o 

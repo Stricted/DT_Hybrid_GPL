@@ -1,0 +1,23 @@
+config BUILD_ALG
+	bool "ALG"
+	default y
+	help
+	  Support  ALG.	
+	      
+if BUILD_ALG
+menu "ATP ALG Supported Selection"
+
+config BUILD_SIPPXY
+	bool "Sip alg"
+	default y
+	depends on BUILD_ALG
+
+source "package/atp/network/alg/service/siproxd/Config.in"
+
+config BUILD_SIPPXY_RECORDDSTIP
+	bool "record dst ip"
+	select SIPALG_RECOREDDSTIP
+	default n
+	depends on BUILD_SIPROXYD 
+endmenu
+endif

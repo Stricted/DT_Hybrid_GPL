@@ -1,0 +1,11 @@
+[settings]
+functionname=hi_voip_cli_clear_sendmsg;  
+attributenum=0;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+
+[help]
+usage: clear_sendmsg                		;
+
+

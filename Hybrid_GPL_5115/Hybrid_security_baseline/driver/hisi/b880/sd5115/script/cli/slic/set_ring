@@ -1,0 +1,40 @@
+[settings]
+functionname=hi_kernel_slic_set_ring;  
+attributenum=4;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chip_idx>    type<uint>    range<0,1>      default<0x0>; /*芯片号*/
+attribute=alias<port_idx>    type<uint>    range<0,1>      default<0x0>; /*端口号*/
+
+attribute=alias<freq>        type<uint>    range<0,0xFFFFFFFF>      default<0>;  /*频率*/
+attribute=alias<vol>         type<uint>    range<0,0xFFFFFFFF>      default<1>;  /*幅度*/
+
+[help]
+typedef struct
+{
+    hi_uint32 ui_chip_idx;
+    hi_uint32 ui_port_idx;
+}hi_kernel_slic_chip_port_s;
+
+/* 播放振铃参数结构 */
+typedef struct
+{
+    hi_kernel_slic_chip_port_s st_chipport;
+    hi_uint32 ui_ringfre;       /* 铃声频率 */
+    hi_uint32 ui_ringvol;       /* 铃声幅度 */
+}hi_kernel_slic_ring_set_s;
+
+typedef enum
+{
+    HI_KERNEL_SLIC_RING_FREQ_16HZ_E = 0,
+    HI_KERNEL_SLIC_RING_FREQ_25HZ_E,
+    HI_KERNEL_SLIC_RING_FREQ_50HZ_E,
+}hi_kernel_slic_ring_freq_e;
+
+typedef enum
+{
+    HI_KERNEL_SLIC_RING_AMPLITUDE_74V_E = 0,
+    HI_KERNEL_SLIC_RING_AMPLITUDE_65V_E,
+    HI_KERNEL_SLIC_RING_AMPLITUDE_50V_E,
+}hi_kernel_slic_ring_amplitude_e;

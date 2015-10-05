@@ -1,0 +1,22 @@
+#!/bin/sh
+################################################################################
+
+# cat /etc/jffs.img > /dev/mtdblock1
+cat /etc/jffs.img > /dev/mtdblock2
+# cat /etc/jffs.img > /dev/mtdblock3
+# cat /etc/jffs.img > /dev/mtdblock4
+
+# mount -t jffs2 /dev/mtdblock2 /var/module
+# mount -t jffs2 /dev/mtdblock2 /config
+
+if busybox mount -t jffs2 /dev/mtdblock2 /config 2>/dev/null > /dev/null
+then
+echo "mount jffs2 success"
+else
+echo "no jffs2 block detected"
+/bin/boardtest
+fi
+
+
+# mount -t jffs2 /dev/mtdblock4 /var/middleware
+

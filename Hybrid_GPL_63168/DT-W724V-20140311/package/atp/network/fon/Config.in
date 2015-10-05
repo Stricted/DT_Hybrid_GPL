@@ -1,0 +1,5 @@
+config BUILD_FON
+    bool "FON FOR DT W724V"
+    default n
+    help
+      For FON support

@@ -1,0 +1,1 @@
+cmd_drivers/media/video/built-in.o :=  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/bin/mips-unknown-linux-uclibc-ld  -m elf32btsmip   -r -o drivers/media/video/built-in.o drivers/media/video/davinci/built-in.o 

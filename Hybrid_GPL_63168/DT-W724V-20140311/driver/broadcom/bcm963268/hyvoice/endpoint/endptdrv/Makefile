@@ -1,0 +1,125 @@
+#****************************************************************************
+#
+# Copyright © 2000-2008 Broadcom Corporation
+#
+# This program is the proprietary software of Broadcom Corporation and/or its
+# licensors, and may only be used, duplicated, modified or distributed
+# pursuant to the terms and conditions of a separate, written license
+# agreement executed between you and Broadcom (an "Authorized License").
+# Except as set forth in an Authorized License, Broadcom grants no license
+# (express or implied), right to use, or waiver of any kind with respect to
+# the Software, and Broadcom expressly reserves all rights in and to the
+# Software and all intellectual property rights therein.  IF YOU HAVE NO
+# AUTHORIZED LICENSE, THEN YOU HAVE NO RIGHT TO USE THIS SOFTWARE IN ANY WAY,
+# AND SHOULD IMMEDIATELY NOTIFY BROADCOM AND DISCONTINUE ALL USE OF THE
+# SOFTWARE.
+#
+# Except as expressly set forth in the Authorized License,
+#
+# 1.     This program, including its structure, sequence and organization,
+#        constitutes the valuable trade secrets of Broadcom, and you shall
+#        use all reasonable efforts to protect the confidentiality thereof,
+#        and to use this information only in connection with your use of
+#        Broadcom integrated circuit products.
+#
+# 2.     TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SOFTWARE IS PROVIDED
+#        "AS IS" AND WITH ALL FAULTS AND BROADCOM MAKES NO PROMISES,
+#        REPRESENTATIONS OR WARRANTIES, EITHER EXPRESS, IMPLIED, STATUTORY,
+#        OR OTHERWISE, WITH RESPECT TO THE SOFTWARE.  BROADCOM SPECIFICALLY
+#        DISCLAIMS ANY AND ALL IMPLIED WARRANTIES OF TITLE, MERCHANTABILITY,
+#        NONINFRINGEMENT, FITNESS FOR A PARTICULAR PURPOSE, LACK OF VIRUSES,
+#        ACCURACY OR COMPLETENESS, QUIET ENJOYMENT, QUIET POSSESSION OR
+#        CORRESPONDENCE TO DESCRIPTION. YOU ASSUME THE ENTIRE RISK ARISING
+#        OUT OF USE OR PERFORMANCE OF THE SOFTWARE.
+#
+# 3.     TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL BROADCOM
+#        OR ITS LICENSORS BE LIABLE FOR
+#        (i)  CONSEQUENTIAL, INCIDENTAL, SPECIAL, INDIRECT, OR EXEMPLARY
+#             DAMAGES WHATSOEVER ARISING OUT OF OR IN ANY WAY RELATING TO
+#             YOUR USE OF OR INABILITY TO USE THE SOFTWARE EVEN IF BROADCOM
+#             HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES; OR
+#        (ii) ANY AMOUNT IN EXCESS OF THE AMOUNT ACTUALLY PAID FOR THE
+#             SOFTWARE ITSELF OR U.S. $1, WHICHEVER IS GREATER. THESE
+#             LIMITATIONS SHALL APPLY NOTWITHSTANDING ANY FAILURE OF
+#             ESSENTIAL PURPOSE OF ANY LIMITED REMEDY.
+#
+###################################################################################
+
+obj-m := endptdrv.o
+endptdrv-objs := endptdrv-lib.a
+
+ENDPTDRV_SUBDIR   =  lib
+ENDPTDRV_LIBS     =  endptdrv
+XCHANGE_BUILD_EXTRA_CFLAGS = $(addprefix -D ,$(BRCM_VOICE_GLOBAL_CFLAGS))
+ifeq ($(strip $(BRCM_PROFILER_TOOL)),1)
+XCHANGE_BUILD_EXTRA_CFLAGS += $(addprefix -D , BRCM_PROFILER_ENABLED)
+endif
+ifeq ($(strip $(BRCM_VOICE_NONDIST)),y)
+XCHANGE_BUILD_EXTRA_CFLAGS += $(addprefix -D , ENDPOINT_DRIVER_NONDIST_BUILD)
+XCHANGE_BUILD_EXTRA_CFLAGS += BRCM_NONDIST_BUILD=1
+endif
+ifeq ($(strip $(BRCM_CHIP)),6328)
+XCHANGE_BUILD_EXTRA_CFLAGS += $(addprefix -D , BRCM_6828)
+endif
+ifeq ($(strip $(BRCM_CHIP)),6368)
+XCHANGE_BUILD_EXTRA_CFLAGS += $(addprefix -D , BRCM_6368)
+endif
+ifeq ($(strip $(BRCM_CHIP)),6816)
+XCHANGE_BUILD_EXTRA_CFLAGS += $(addprefix -D , BRCM_6816)
+endif
+ifeq ($(strip $(BRCM_CHIP)),6818)
+XCHANGE_BUILD_EXTRA_CFLAGS += $(addprefix -D , BRCM_6818)
+endif
+ifeq ($(strip $(BRCM_CHIP)),6828)
+XCHANGE_BUILD_EXTRA_CFLAGS += $(addprefix -D , BRCM_6828)
+endif
+ifeq ($(strip $(BRCM_CHIP)),68500)
+XCHANGE_BUILD_EXTRA_CFLAGS += $(addprefix -D , BRCM_68500)
+endif
+ifeq ($(strip $(BRCM_NTR_SUPPORT)),1)
+XCHANGE_BUILD_EXTRA_CFLAGS += $(addprefix -D , NTR_SUPPORT)
+endif
+ifeq ($(BRCM_IDECT_CALLMGR),1)
+XCHANGE_BUILD_EXTRA_CFLAGS += $(addprefix -D , BRCM_IDECT_CALLMGR)
+endif
+ifeq ($(BRCM_EDECT_CALLMGR),1)
+XCHANGE_BUILD_EXTRA_CFLAGS += $(addprefix -D , BRCM_EDECT_CALLMGR)
+endif
+
+#
+# Locale Selection
+#
+XCHANGE_BUILD_EXTRA_CFLAGS += $(LOCALEFLAGS_TYPE2)
+
+#
+# Channel configuration
+#
+XCHANGE_BUILD_EXTRA_CFLAGS += $(BRCM_DSP_CHAN_DEFINES_TYPE2)
+
+ifeq ($(CONFIG_BCM_ENDPOINT),m)
+XCHANGE_BUILD_EXTRA_CFLAGS += $(addprefix -D , MODULE)
+endif
+
+$(obj)/endptdrv-lib.a:
+
+	echo $(src);
+	echo $(ENDPTDRV_SUBDIR);
+	cd $(XCHANGE_DIR)/dslx;                                  \
+	$(XCHANGE_DIR)/dslx/build -a $(XCHANGE_BUILD_APP) -d $(XCHANGE_DSP_APP)$(XCHANGE_DSP_APP_EXTENSION) -t mta $(XCHANGE_BUILD_EXTRA_CFLAGS)
+
+	mkdir -p $(src)/$(ENDPTDRV_SUBDIR)
+
+	for i	in	$(ENDPTDRV_LIBS);	do								\
+		cp -f $(XCHANGE_DIR)/dslx/lib/LinuxKernel/$(XCHANGE_BUILD_APP)/mta/$$i.a $(src)/$(ENDPTDRV_SUBDIR)/$$i.lib;	\
+	done;																\
+
+	cd	$(src)/$(ENDPTDRV_SUBDIR);					\
+	for i	in	$(ENDPTDRV_LIBS);	do								\
+		$(AR)	x $$i.lib;											\
+	done;																
+
+	$(LD) -G 0 -r -s $(src)/$(ENDPTDRV_SUBDIR)/*.o -o $(obj)/endptdrv-lib.a
+	rm -f $(src)/$(ENDPTDRV_SUBDIR)/*.o
+	
+clean:
+	rm	-f	endptdrv.mod.c modules.order *.o *.a .*.cmd *.ko

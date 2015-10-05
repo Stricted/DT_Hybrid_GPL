@@ -1,0 +1,13 @@
+[settings]
+functionname=hi_kernel_voip_get_mailboxinfo;
+attributenum=5;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chan>         type<uint>   range<0x0,0x3>  default<0x00000000>;
+attribute=alias<mailboxid>    type<uint>   range<0x0,0x1>  default<0x00000000>;
+
+[help]
+usage: getmailboxinfo                         ; 获取邮箱信息
+	   getmailboxinfo -v chan      0xF0000000 ; 通道号
+       getmailboxinfo -v mailboxid 0xF3002000 ; 邮箱ID

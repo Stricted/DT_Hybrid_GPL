@@ -1,0 +1,31 @@
+config BUILD_BRIDGE
+	bool "BRIDGE"
+	help
+	  Support Bridge
+
+if BUILD_BRIDGE
+menu "ATP Bridge Supported Selection"
+
+config ATP_BRIDGE_MAX
+	int "Max number of Bridges table"
+	default "4"
+	depends on BUILD_BRIDGE
+	help
+		The maximum number of entries available in the Bridge table.
+	
+config ATP_BRIDGE_FILTER_MAX
+	int "Max number of Filters table"
+	default "30"
+	depends on BUILD_BRIDGE
+	help
+		The maximum number of entries available in the Filter table.
+
+config BUILD_ATH_WRAP
+	bool "Support WRAP on Atheros APs"
+	default n
+	depends on BUILD_BRIDGE
+	help
+		Atheros chip: support WRAP on APs - mods to bridge adding port tye.
+
+endmenu
+endif

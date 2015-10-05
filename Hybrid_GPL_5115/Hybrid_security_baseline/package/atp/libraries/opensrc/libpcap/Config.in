@@ -1,0 +1,5 @@
+config BUILD_LIBPCAP
+    bool "Support libpcap"
+    default n
+    help
+      For network traffic capture.

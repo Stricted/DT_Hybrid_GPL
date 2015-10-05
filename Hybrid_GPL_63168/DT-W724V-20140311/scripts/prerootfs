@@ -1,0 +1,29 @@
+#!/bin/sh
+TOP_DIR=`pwd`
+
+find $TARGET_DIR -name CVS | xargs rm -rf
+find $TARGET_DIR -name .svn | xargs rm -rf
+find $TARGET_DIR -name .empty | xargs rm -rf
+rm -rf $TARGET_DIR/var
+
+FLASH_NAND_FIRST_BLOCK_WITH_CFERAM=$1
+BUILD_FOR_HARDWARE_IAMGE=$2
+# for support 4.12 NANDFLASH
+echo "Support nand flash, use jffs2 file system."
+
+if [ "$FLASH_NAND_FIRST_BLOCK_WITH_CFERAM" = "1" ] ; then
+    rm -rf $TARGET_DIR/cferam.000	
+else
+    cp $TARGET_DIR/../images/cferam.bin $TARGET_DIR/cferam.000
+fi
+
+if [ "$BUILD_FOR_HARDWARE_IAMGE" = "y" ] ; then
+sed -in '/passwd1/d' $TARGET_DIR/etc/profile
+sed -in '/group1/d' $TARGET_DIR/etc/profile
+fi
+
+install -m 777 $TOP_DIR/fs/skeleton/etc/fstab $TARGET_DIR/etc/fstab
+echo -e "mtd:data\t/data\tjffs2\tdefaults\t0\t0\n" >> $TARGET_DIR/etc/fstab
+
+
+

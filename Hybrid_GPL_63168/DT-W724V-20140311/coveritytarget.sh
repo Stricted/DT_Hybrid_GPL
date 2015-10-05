@@ -1,0 +1,28 @@
+﻿#!/bin/bash
+set +x
+
+COMPILETARGETS="cups"
+CLEANTARGETS="cups-clean"
+
+if [ -n "$1" ]
+then
+	VENDORPARAMETER="VENDOR=$1"
+else
+    VENDORPARAMETER="VENDOR=W724v"
+fi
+
+if [ -n "$2" ]
+then
+	CUSTOMERPARAMETER="CUSTOMER=$2"
+else
+    CUSTOMERPARAMETER="CUSTOMER=dt"
+fi
+
+
+if [ "${CLEANTARGETS}" != "" ]
+then
+	make ${VENDORPARAMETER} ${CUSTOMERPARAMETER} ${CLEANTARGETS}
+fi
+
+make ${VENDORPARAMETER} ${CUSTOMERPARAMETER} ${COMPILETARGETS}
+

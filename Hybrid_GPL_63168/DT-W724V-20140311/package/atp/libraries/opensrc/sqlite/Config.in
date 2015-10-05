@@ -1,0 +1,13 @@
+config BUILD_SQLITE
+	bool "ATP sqlite"
+	help
+	  POSIX Access Control Lists, which are used to define more
+	  fine-grained discretionary access rights for files and
+	  directories.
+	  This package also provides libacl.
+	  
+config BUILD_LUA_SQLITE
+	bool "Support lua-sqite"
+	depends on BUILD_SQLITE
+	depends on BUILD_LUA
+	default n

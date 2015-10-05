@@ -1,0 +1,168 @@
+config BUILD_BUSYBOX
+	bool "ATP BUSYBOX"
+	select BUILD_LIBZ
+	select BUILD_SSL
+	default y
+	help
+	  POSIX Access Control Lists, which are used to define more
+	  fine-grained discretionary access rights for files and
+	  directories.
+	  This package also provides libacl.
+	  
+if BUILD_BUSYBOX
+menu "ATP BUSYBOX Supported Selection"
+
+# ATP all applications
+config BUILD_BUSYBOX_ATP_FTP
+	bool "Support ATP FTP"
+	default n
+
+config BUILD_BUSYBOX_ATP_FTP_ZIP
+	bool "Support ATP FTP ZIP"
+	default n
+	depends on BUILD_BUSYBOX_ATP_FTP
+
+config BUILD_BUSYBOX_TFTP
+	bool "Support TFTP Client"
+	default n
+
+config BUILD_BUSYBOX_ATP_TFTPD
+	bool "Support ATP TFTP SERVER"
+	default y
+	
+config BUILD_BUSYBOX_ATP_WGET
+	bool "Support ATP WGET"
+	default n
+
+config BUILD_BUSYBOX_ATP_WGET_HTTPS
+	bool "Support ATP WGET HTTPS"
+	default n
+	depends on BUILD_BUSYBOX_ATP_WGET
+	
+config BUILD_BUSYBOX_ATP_WGET_ZIP
+	bool "Support ATP WGET ZIP"
+	default n
+	depends on BUILD_BUSYBOX_ATP_WGET
+
+config BUILD_BUSYBOX_ATP_WGET_PUT
+	bool "Support put method,select it will not support post method"
+	default n
+	depends on BUILD_BUSYBOX_ATP_WGET
+	
+config BUILD_BUSYBOX_MV
+	bool "Support MV"
+	default n
+	
+config BUILD_BUSYBOX_FEATURE_IPV6
+	bool "Support Feature IPV6"
+	default y 
+	depends on BUILD_IPV6
+
+config BUILD_BUSYBOX_ATP_PING6
+	bool "Support ATP Ping6"
+	default y
+	depends on BUILD_IPV6
+	
+config BUILD_BUSYBOX_ATP_IFENSLAVE
+	bool "Support ATP ifenslave"
+	default n
+
+config BUILD_BUSYBOX_ATP_TRACEROUTE6
+	bool "Support ATP TraceRoute6"
+	default y
+	depends on BUILD_IPV6
+	
+config BUILD_BUSYBOX_SLEEP
+	bool "Support sleep"
+	default n
+
+config BUILD_BUSYBOX_SU
+	bool "Support SU"
+	default n
+
+config BUILD_BUSYBOX_CROND
+	bool "Support CROND"
+	default n
+	
+config BUILD_BUSYBOX_CRONTAB
+	bool "Support CRONTAB"
+	default n
+	depends on BUILD_BUSYBOX_CROND
+	
+config BUILD_BUSYBOX_DIFF
+	bool "Support DIFF"
+	default n	
+
+config BUILD_BUSYBOX_SED
+	bool "Support SED"
+	default n
+
+config BUILD_BUSYBOX_AWK
+	bool "Support AWK"
+	default n
+
+config BUILD_BUSYBOX_START_STOP_DAEMON
+	bool "Support Start-stop-daemon"
+	default n
+
+config BUILD_BUSYBOX_START_STOP_DAEMON_FANCY
+	bool "Support Start-stop-daemon Fancy"
+	default n
+	depends on BUILD_BUSYBOX_START_STOP_DAEMON
+
+config BUILD_BUSYBOX_START_STOP_DAEMON_LONG_OPTIONS
+	bool "Support Start-stop-daemon Long Options"
+	default n
+	depends on BUILD_BUSYBOX_START_STOP_DAEMON
+	depends on BUILD_BUSYBOX_GETOPT_LONG
+	
+config BUILD_BUSYBOX_GETOPT_LONG
+	bool "Support Long Options"
+	default n
+
+config BUILD_BUSYBOX_TRUE
+	bool "Support TRUE"
+	default n
+
+config BUILD_BUSYBOX_CUT
+	bool "Support CUT"
+	default n
+
+config BUILD_BUSYBOX_GREP
+	bool "Support Grep"
+	default n
+
+config BUILD_BUSYBOX_CHOWN
+	bool "Support CHOWN"
+	default n
+
+config BUILD_BUSYBOX_RMMOD
+	bool "Support RMMOD"
+	default n
+
+config BUILD_BUSYBOX_LN
+	bool "Support LN"
+	default n
+	
+config BUILD_BUSYBOX_SETCONSOLE
+	bool "Support Setconsole"
+	default n
+
+config BUILD_BUSYBOX_USLEEP
+	bool "Support usleep"
+	default n
+	
+config BUILD_BUSYBOX_ARPING
+	bool "Support Arping"
+	default n
+
+config BUILD_BUSYBOX_TAR
+	bool "Support tar"
+	default n
+	
+endmenu
+endif
+
+
+
+

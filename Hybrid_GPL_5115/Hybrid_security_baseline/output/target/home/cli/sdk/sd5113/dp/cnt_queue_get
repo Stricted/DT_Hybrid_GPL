@@ -1,0 +1,27 @@
+[settings]
+functionname=0xF7002004;
+attributenum=8;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       			type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000D0E>; /*全局模块*/
+attribute=alias<ui_qid>      			type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;     
+attribute=alias<ui_queue_in>          	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    /
+attribute=alias<ui_queue_out>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    
+attribute=alias<ui_drop_queue_tail>     type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;  
+attribute=alias<ui_drop_resource_low>   type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;   
+attribute=alias<ui_drop_flow_car_wred>  type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    
+attribute=alias<ui_drop_group_car_wred> type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    
+
+[help]
+/* QM 模块的统计信息: 队列调度统计  */
+typedef struct 
+{
+    uint    ui_qid;
+    uint    ui_queue_in;                     /* 入队成功统计                */
+    uint    ui_queue_out;                    /* 出队成功统计                */
+    uint    ui_drop_queue_tail;              /* 队列尾丢弃统计              */
+    uint    ui_drop_resource_low;            /* 资源不足丢弃统计            */
+    uint    ui_drop_flow_car_wred;           /* 基于流CAR的WRED丢弃统计     */
+    uint    ui_drop_group_car_wred;          /* 基于组CAR的WRED丢弃统计     */
+}hi_dp_logic_queue_cnt_s;

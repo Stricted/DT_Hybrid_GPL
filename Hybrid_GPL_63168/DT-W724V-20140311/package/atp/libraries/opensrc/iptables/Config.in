@@ -1,0 +1,17 @@
+config BUILD_IPTABLES
+	bool "iptables"
+	depends on BUILD_LINUX
+	default y
+	help
+	  Support iptables.
+
+if BUILD_IPTABLES
+config ATP_IPTABLES_VERSION
+       string
+	   default "1.4.16.3" if BR2_LINUX_KERNEL_VERSION = "3.4.11"
+	   default "1.4.12" if BR2_LINUX_KERNEL_VERSION = "2.6.36"
+	   default "1.4.0" if BR2_LINUX_KERNEL_VERSION = "2.6.30"
+	   default "1.4.0.1" if BR2_LINUX_KERNEL_VERSION = "2.6.21.5"
+	   help
+	     iptables' version
+endif

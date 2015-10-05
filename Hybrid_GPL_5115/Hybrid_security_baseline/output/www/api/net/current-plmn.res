@@ -1,0 +1,1 @@
+vpath="api/modem_1/currentplmn"E5element="State|Numeric|FullName|ShortName|Rat"

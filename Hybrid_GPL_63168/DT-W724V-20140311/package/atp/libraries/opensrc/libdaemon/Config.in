@@ -1,0 +1,5 @@
+config BUILD_LIBDAEMON
+    bool "Support libdaemon"
+    default n
+    help
+      For eases the writing of UNIX daemon.

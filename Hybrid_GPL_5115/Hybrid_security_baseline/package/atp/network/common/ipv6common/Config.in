@@ -1,0 +1,6 @@
+config BUILD_IPV6
+	bool "IPv6 common"
+	default y
+	help
+	  Support IPv6
+

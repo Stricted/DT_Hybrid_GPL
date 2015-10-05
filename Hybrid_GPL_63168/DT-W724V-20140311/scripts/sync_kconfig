@@ -1,0 +1,21 @@
+#!/bin/sh
+# Print additional version information for non-release trees.
+
+# Remove the content after token for the current kconfig file
+sed '/# ATP Linux Kernel Extension/q' $1 > tmp.txt
+
+# Append the content after the atp config file
+sed '0,/# ATP Linux Kernel Extension/d' $2 > tmp2.txt
+
+# Add CONFIG_ prefix
+python scripts/add_config_prefix.py "add_config" tmp2.txt
+
+# Add token if not exist
+python scripts/add_config_prefix.py tmp.txt
+
+# Append the content to the end current kconfig file
+cat tmp2.txt >> tmp.txt
+rm -f tmp2.txt
+
+# Move
+mv tmp.txt $1

@@ -1,0 +1,1 @@
+cmd_net/ipv4/netfilter/nf_conntrack_ipv4.o := /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/bin/mips-unknown-linux-uclibc-ld  -m elf32btsmip   -r -o net/ipv4/netfilter/nf_conntrack_ipv4.o net/ipv4/netfilter/nf_conntrack_l3proto_ipv4_compat.o net/ipv4/netfilter/nf_conntrack_l3proto_ipv4.o net/ipv4/netfilter/nf_conntrack_proto_icmp.o 

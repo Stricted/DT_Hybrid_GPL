@@ -1,0 +1,11 @@
+[settings]
+functionname = hi_kernel_dp_l2_vlan_del_cmd;
+attributenum = 1;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<vlan>     type<uint>       range<0x0,0xFFFFFFFF>              default<0>;
+
+
+[help]
+

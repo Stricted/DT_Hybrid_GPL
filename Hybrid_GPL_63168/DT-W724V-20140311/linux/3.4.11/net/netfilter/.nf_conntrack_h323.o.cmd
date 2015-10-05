@@ -1,0 +1,1 @@
+cmd_net/netfilter/nf_conntrack_h323.o := /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/bin/mips-unknown-linux-uclibc-ld  -m elf32btsmip   -r -o net/netfilter/nf_conntrack_h323.o net/netfilter/nf_conntrack_h323_main.o net/netfilter/nf_conntrack_h323_asn1.o 

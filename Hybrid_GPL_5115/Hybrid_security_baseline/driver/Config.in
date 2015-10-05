@@ -1,0 +1,65 @@
+menu "Hardware chip config"
+
+choice
+	prompt "Choose hardware chip"
+
+config BROADCOM_CHIP
+	bool "Support broadcom chip"
+	help
+	  Enable this option if you use broadcom chip
+
+config MTK_CHIP
+	bool "Support mtk chip"
+	help
+	  Enable this option if you use mtk chip
+
+config REALTEK_CHIP
+	bool "Support realtek chip"
+	help
+	  Enable this option if you use realtek chip
+
+config HISI_CHIP
+	bool "Support hisi Chip"
+	help
+		Enable this option if you use hisi chip
+
+config QUALCOMM_CHIP
+	bool "Support qualcomm chip"
+	help
+		Enable this option if you use qualcomm chip
+
+endchoice
+
+config CHIP_PRODUCT_NAME
+	string "chip product name"
+	depends on BROADCOM_CHIP || HISI_CHIP || MTK_CHIP || REALTEK_CHIP || QUALCOMM_CHIP
+	default "broadcom" if BROADCOM_CHIP=y
+	default "hisi" if HISI_CHIP=y
+	default "mtk" if MTK_CHIP=y
+	default "realtek" if REALTEK_CHIP=y
+	default "qualcomm" if QUALCOMM_CHIP=y
+	help
+	  This is the chip product name.	
+	
+#if BROADCOM_CHIP
+#	 source "package/atp/driver/broadcom/Config.in"
+#endif
+
+#if MTK_CHIP
+# 	source "package/atp/driver/mtk/Config.in"
+#endif
+
+#if REALTEK_CHIP
+# 	source "package/atp/driver/realtek/Config.in"
+#endif
+
+if HISI_CHIP
+	source "package/atp/driver/hisi/Config.in"
+endif
+
+#if QUALCOMM_CHIP
+# 	source "package/atp/driver/qualcomm/Config.in"	
+#endif
+	
+	source "package/atp/driver/component/Config.in"
+endmenu

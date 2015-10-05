@@ -1,0 +1,39 @@
+[settings]
+functionname=0xF7002004;
+attributenum=11;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       	type<uint>   	range<0x0,0xFFFFFFFF>  	default<0x00000502>; /*全局模块*/
+attribute=alias<ui_fcid>       	type<uint>   	range<0x0,0x02>  		default<0x00000000>;
+attribute=alias<ui_imask>       type<binary>   	range<0,80>  			default<0x00000000>;
+attribute=alias<ui_bitmask>     type<binary>   	range<0,80>  			default<0x00000000>;
+attribute=alias<ui_irule_0>     type<binary>   	range<0,80>  			default<0x00000000>;
+attribute=alias<em_irule_0_en>  type<int>      	range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<em_irule_0_igr> type<int>   	range<0x0,0x08>  		default<0x00000000>;
+attribute=alias<ui_irule_1>     type<binary>   	range<0,80>  			default<0x00000000>;
+attribute=alias<em_irule_1_en>  type<int>   	range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<em_irule_1_igr> type<int>   	range<0x0,0x08>  		default<0x00000000>;
+attribute=alias<em_valid>       type<int>   	range<0x0,0x01>  		default<0x00000000>;
+
+[help]
+typedef struct 
+{
+    uint    ui_fcid;               /* 0~2,共支持3条流 */
+
+    uint    ui_imask[HI_DP_FC_MATCH_BYTE_NUM];           /* 选择第0~63 字节, 最多可选择 20个 BYTE */  
+    uint    ui_bitmask[HI_DP_FC_MATCH_BYTE_NUM];         /* 选择出的20个BYTE的 ui_bitmask, 5 * 4BYTE(32bit) */  
+
+    /* 每个子表可以配置两条流规则, 每条规则的匹配域跟5 * 4BYTE 对应 */
+    uint    ui_irule_0[HI_DP_FC_MATCH_BYTE_NUM];         /* 匹配规则1使能 */    
+    HI_BOOL_E       em_irule_0_en;                       /* 匹配规则1使能 */   
+    HI_DP_PORT_E    em_irule_0_igr;                      /* 接收报文的源端口匹配 */
+
+    uint    ui_irule_1[HI_DP_FC_MATCH_BYTE_NUM];         /* 匹配规则1使能 */       
+    HI_BOOL_E       em_irule_1_en;                       /* 匹配规则1使能 */        
+    HI_DP_PORT_E    em_irule_1_igr;                      /* 接收报文的源端口匹配 */
+
+    HI_BOOL_E       em_valid;                            /* 表项有效标志 */ 
+
+}hi_dp_flow_fc_table_item_s;
+

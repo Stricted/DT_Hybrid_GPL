@@ -1,0 +1,346 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 02 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, big endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              REL (Relocatable file)
+  Machine:                           MIPS R3000
+  Version:                           0x1
+  Entry point address:               0x0
+  Start of program headers:          0 (bytes into file)
+  Start of section headers:          4200 (bytes into file)
+  Flags:                             0x50001007, noreorder, pic, cpic, o32, mips32
+  Size of this header:               52 (bytes)
+  Size of program headers:           0 (bytes)
+  Number of program headers:         0
+  Size of section headers:           40 (bytes)
+  Number of section headers:         17
+  Section header string table index: 14
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .text             PROGBITS        00000000 000040 000cd0 00  AX  0   0 16
+  [ 2] .rel.text         REL             00000000 00191c 000640 08     15   1  4
+  [ 3] .data             PROGBITS        00000000 000d10 000000 00  WA  0   0 16
+  [ 4] .bss              NOBITS          00000000 000d10 000000 00  WA  0   0 16
+  [ 5] .reginfo          MIPS_REGINFO    00000000 000d10 000018 18   A  0   0  4
+  [ 6] .pdr              PROGBITS        00000000 000d28 0001e0 00      0   0  4
+  [ 7] .rel.pdr          REL             00000000 001f5c 000078 08     15   6  4
+  [ 8] .mdebug.abi32     PROGBITS        00000000 000f08 000000 00      0   0  1
+  [ 9] .rodata.str1.4    PROGBITS        00000000 000f08 000074 01 AMS  0   0  4
+  [10] .rodata           PROGBITS        00000000 000f80 000030 00   A  0   0 16
+  [11] .rel.rodata       REL             00000000 001fd4 000048 08     15  10  4
+  [12] .comment          PROGBITS        00000000 000fb0 000024 01  MS  0   0  1
+  [13] .gnu.attributes   LOOS+ffffff5    00000000 000fd4 000010 00      0   0  1
+  [14] .shstrtab         STRTAB          00000000 000fe4 000084 00      0   0  1
+  [15] .symtab           SYMTAB          00000000 001310 0003a0 10     16  33  4
+  [16] .strtab           STRTAB          00000000 0016b0 000269 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings)
+  I (info), L (link order), G (group), x (unknown)
+  O (extra OS processing required) o (OS specific), p (processor specific)
+
+There are no section groups in this file.
+
+There are no program headers in this file.
+
+Relocation section '.rel.text' at offset 0x191c contains 200 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+00000000  00002205 R_MIPS_HI16       00000000   __gnu_local_gp
+00000008  00002206 R_MIPS_LO16       00000000   __gnu_local_gp
+0000000c  0000230b R_MIPS_CALL16     00000000   free
+00000020  00002205 R_MIPS_HI16       00000000   __gnu_local_gp
+00000028  00002206 R_MIPS_LO16       00000000   __gnu_local_gp
+00000034  0000250b R_MIPS_CALL16     00000000   strdup
+00000040  00002205 R_MIPS_HI16       00000000   __gnu_local_gp
+00000048  00002206 R_MIPS_LO16       00000000   __gnu_local_gp
+00000064  0000270b R_MIPS_CALL16     00000000   Parser_LoadDocument
+00000088  00002604 R_MIPS_26         00000040   ixmlParseBufferEx
+000000a0  00002205 R_MIPS_HI16       00000000   __gnu_local_gp
+000000a8  00002206 R_MIPS_LO16       00000000   __gnu_local_gp
+000000b8  0000270b R_MIPS_CALL16     00000000   Parser_LoadDocument
+000000dc  00002904 R_MIPS_26         000000a0   ixmlLoadDocumentEx
+000000f4  00002205 R_MIPS_HI16       00000000   __gnu_local_gp
+000000f8  00002206 R_MIPS_LO16       00000000   __gnu_local_gp
+00000100  00002c0b R_MIPS_CALL16     00000000   Parser_setErrorChar
+0000010c  00002205 R_MIPS_HI16       00000000   __gnu_local_gp
+00000114  00002206 R_MIPS_LO16       00000000   __gnu_local_gp
+00000150  00002d0b R_MIPS_CALL16     00000000   strlen
+0000015c  00000c05 R_MIPS_HI16       00000010   $LC2
+00000168  00000c06 R_MIPS_LO16       00000010   $LC2
+000001a4  00002e0b R_MIPS_CALL16     00000000   ixml_membuf_append
+000001ac  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000001bc  00002e0b R_MIPS_CALL16     00000000   ixml_membuf_append
+000001c8  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000001b4  00000d05 R_MIPS_HI16       00000000   $LC0
+000001d4  00000d06 R_MIPS_LO16       00000000   $LC0
+000001d8  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000001c4  00000e05 R_MIPS_HI16       00000008   $LC1
+000001e4  00000e06 R_MIPS_LO16       00000008   $LC1
+000001f8  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000001f4  00000f05 R_MIPS_HI16       00000018   $LC3
+00000204  00000f06 R_MIPS_LO16       00000018   $LC3
+00000208  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+0000019c  00001005 R_MIPS_HI16       00000020   $LC4
+00000214  00001006 R_MIPS_LO16       00000020   $LC4
+00000270  00002205 R_MIPS_HI16       00000000   __gnu_local_gp
+00000278  00002206 R_MIPS_LO16       00000000   __gnu_local_gp
+000002a8  00001105 R_MIPS_HI16       00000050   $LC13
+000002bc  00001106 R_MIPS_LO16       00000050   $LC13
+000002ac  00001205 R_MIPS_HI16       00000054   $LC14
+000002c0  00001206 R_MIPS_LO16       00000054   $LC14
+000002b0  00001305 R_MIPS_HI16       0000003c   $LC8
+000002c4  00001306 R_MIPS_LO16       0000003c   $LC8
+000002d4  0000300b R_MIPS_CALL16     00000000   ixmlNode_getNodeName
+000002e8  0000310b R_MIPS_CALL16     00000000   ixmlNode_getNodeValue
+000002fc  0000320b R_MIPS_CALL16     00000000   ixmlNode_getNodeType
+0000031c  00000b05 R_MIPS_HI16       00000000   .rodata
+00000324  00000b06 R_MIPS_LO16       00000000   .rodata
+00000368  00000204 R_MIPS_26         00000000   .text
+00000370  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000374  00001405 R_MIPS_HI16       00000028   $LC5
+00000378  00001406 R_MIPS_LO16       00000028   $LC5
+0000038c  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000003a0  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+0000039c  00001505 R_MIPS_HI16       00000034   $LC6
+000003ac  00001506 R_MIPS_LO16       00000034   $LC6
+000003b0  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000003b4  00001605 R_MIPS_HI16       00000038   $LC7
+000003b8  00001606 R_MIPS_LO16       00000038   $LC7
+000003cc  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000003e0  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000003dc  00001305 R_MIPS_HI16       0000003c   $LC8
+000003e4  00001306 R_MIPS_LO16       0000003c   $LC8
+000003f4  00000204 R_MIPS_26         00000000   .text
+00000404  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000400  00001705 R_MIPS_HI16       00000040   $LC9
+0000040c  00001706 R_MIPS_LO16       00000040   $LC9
+00000444  0000330b R_MIPS_CALL16     00000000   ixmlNode_getFirstChild
+00000448  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000460  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+0000045c  00001805 R_MIPS_HI16       00000044   $LC10
+0000046c  00001806 R_MIPS_LO16       00000044   $LC10
+00000474  00000204 R_MIPS_26         00000000   .text
+00000484  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000480  00001905 R_MIPS_HI16       00000048   $LC11
+00000490  00001906 R_MIPS_LO16       00000048   $LC11
+000004a0  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000004bc  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000004c0  00001a05 R_MIPS_HI16       0000004c   $LC12
+000004cc  00001a06 R_MIPS_LO16       0000004c   $LC12
+000004d8  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000004f0  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000504  00000204 R_MIPS_26         00000000   .text
+00000510  0000330b R_MIPS_CALL16     00000000   ixmlNode_getFirstChild
+00000524  0000320b R_MIPS_CALL16     00000000   ixmlNode_getNodeType
+00000538  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000548  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000560  0000330b R_MIPS_CALL16     00000000   ixmlNode_getFirstChild
+00000570  00000204 R_MIPS_26         00000000   .text
+00000580  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+0000057c  00001b05 R_MIPS_HI16       00000058   $LC15
+0000058c  00001b06 R_MIPS_LO16       00000058   $LC15
+00000598  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000005a8  0000340b R_MIPS_CALL16     00000000   ixmlNode_getNextSiblin
+000005bc  0000320b R_MIPS_CALL16     00000000   ixmlNode_getNodeType
+000005d0  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000005e0  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000005f8  0000340b R_MIPS_CALL16     00000000   ixmlNode_getNextSiblin
+00000610  0000320b R_MIPS_CALL16     00000000   ixmlNode_getNodeType
+00000678  00002205 R_MIPS_HI16       00000000   __gnu_local_gp
+00000680  00002206 R_MIPS_LO16       00000000   __gnu_local_gp
+000006ac  0000300b R_MIPS_CALL16     00000000   ixmlNode_getNodeName
+000006c0  0000310b R_MIPS_CALL16     00000000   ixmlNode_getNodeValue
+000006d4  0000320b R_MIPS_CALL16     00000000   ixmlNode_getNodeType
+00000708  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+0000071c  0000320b R_MIPS_CALL16     00000000   ixmlNode_getNodeType
+00000738  00000204 R_MIPS_26         00000000   .text
+00000754  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000750  00001805 R_MIPS_HI16       00000044   $LC10
+00000758  00001806 R_MIPS_LO16       00000044   $LC10
+00000768  00000204 R_MIPS_26         00000000   .text
+00000778  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000774  00001905 R_MIPS_HI16       00000048   $LC11
+00000784  00001906 R_MIPS_LO16       00000048   $LC11
+00000714  00001a05 R_MIPS_HI16       0000004c   $LC12
+00000788  00001a06 R_MIPS_LO16       0000004c   $LC12
+0000079c  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000007b4  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+000007b8  00001305 R_MIPS_HI16       0000003c   $LC8
+000007bc  00001306 R_MIPS_LO16       0000003c   $LC8
+000007cc  00000204 R_MIPS_26         00000000   .text
+000007d8  0000330b R_MIPS_CALL16     00000000   ixmlNode_getFirstChild
+000007ec  0000320b R_MIPS_CALL16     00000000   ixmlNode_getNodeType
+000007fc  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000800  00001205 R_MIPS_HI16       00000054   $LC14
+00000804  00001206 R_MIPS_LO16       00000054   $LC14
+00000814  0000330b R_MIPS_CALL16     00000000   ixmlNode_getFirstChild
+00000824  00000204 R_MIPS_26         00000000   .text
+00000834  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000830  00001b05 R_MIPS_HI16       00000058   $LC15
+00000838  00001b06 R_MIPS_LO16       00000058   $LC15
+0000084c  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000860  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+0000085c  00001205 R_MIPS_HI16       00000054   $LC14
+00000868  00001206 R_MIPS_LO16       00000054   $LC14
+00000888  0000320b R_MIPS_CALL16     00000000   ixmlNode_getNodeType
+000008c8  00002205 R_MIPS_HI16       00000000   __gnu_local_gp
+000008d0  00002206 R_MIPS_LO16       00000000   __gnu_local_gp
+000008f0  0000360b R_MIPS_CALL16     00000000   ixml_membuf_init
+00000904  00000204 R_MIPS_26         00000000   .text
+00000920  00002205 R_MIPS_HI16       00000000   __gnu_local_gp
+00000928  00002206 R_MIPS_LO16       00000000   __gnu_local_gp
+00000948  0000360b R_MIPS_CALL16     00000000   ixml_membuf_init
+00000960  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+0000095c  00001c05 R_MIPS_HI16       0000005c   $LC16
+00000964  00001c06 R_MIPS_LO16       0000005c   $LC16
+00000974  00000204 R_MIPS_26         00000000   .text
+00000994  00002205 R_MIPS_HI16       00000000   __gnu_local_gp
+0000099c  00002206 R_MIPS_LO16       00000000   __gnu_local_gp
+000009c8  0000300b R_MIPS_CALL16     00000000   ixmlNode_getNodeName
+000009dc  0000310b R_MIPS_CALL16     00000000   ixmlNode_getNodeValue
+000009f0  0000320b R_MIPS_CALL16     00000000   ixmlNode_getNodeType
+00000a24  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000a38  0000320b R_MIPS_CALL16     00000000   ixmlNode_getNodeType
+00000a54  00000204 R_MIPS_26         00000000   .text
+00000a70  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000a6c  00001805 R_MIPS_HI16       00000044   $LC10
+00000a74  00001806 R_MIPS_LO16       00000044   $LC10
+00000a84  00000204 R_MIPS_26         00000000   .text
+00000a94  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000a90  00001905 R_MIPS_HI16       00000048   $LC11
+00000aa0  00001906 R_MIPS_LO16       00000048   $LC11
+00000a30  00001a05 R_MIPS_HI16       0000004c   $LC12
+00000aa4  00001a06 R_MIPS_LO16       0000004c   $LC12
+00000ab8  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000ad0  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000ad4  00001305 R_MIPS_HI16       0000003c   $LC8
+00000ad8  00001306 R_MIPS_LO16       0000003c   $LC8
+00000ae8  00000204 R_MIPS_26         00000000   .text
+00000af4  0000330b R_MIPS_CALL16     00000000   ixmlNode_getFirstChild
+00000b08  0000320b R_MIPS_CALL16     00000000   ixmlNode_getNodeType
+00000b24  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000b20  00001105 R_MIPS_HI16       00000050   $LC13
+00000b2c  00001106 R_MIPS_LO16       00000050   $LC13
+00000b34  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000b30  00001205 R_MIPS_HI16       00000054   $LC14
+00000b38  00001206 R_MIPS_LO16       00000054   $LC14
+00000b48  0000330b R_MIPS_CALL16     00000000   ixmlNode_getFirstChild
+00000b58  00000204 R_MIPS_26         00000000   .text
+00000b68  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000b64  00001b05 R_MIPS_HI16       00000058   $LC15
+00000b6c  00001b06 R_MIPS_LO16       00000058   $LC15
+00000b80  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000b94  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000b90  00001105 R_MIPS_HI16       00000050   $LC13
+00000b9c  00001106 R_MIPS_LO16       00000050   $LC13
+00000bbc  0000320b R_MIPS_CALL16     00000000   ixmlNode_getNodeType
+00000bfc  00002205 R_MIPS_HI16       00000000   __gnu_local_gp
+00000c04  00002206 R_MIPS_LO16       00000000   __gnu_local_gp
+00000c24  0000360b R_MIPS_CALL16     00000000   ixml_membuf_init
+00000c38  00000204 R_MIPS_26         00000000   .text
+00000c54  00002205 R_MIPS_HI16       00000000   __gnu_local_gp
+00000c5c  00002206 R_MIPS_LO16       00000000   __gnu_local_gp
+00000c7c  0000360b R_MIPS_CALL16     00000000   ixml_membuf_init
+00000c94  00002f0b R_MIPS_CALL16     00000000   ixml_membuf_append_str
+00000c90  00001c05 R_MIPS_HI16       0000005c   $LC16
+00000c98  00001c06 R_MIPS_LO16       0000005c   $LC16
+00000ca8  00000204 R_MIPS_26         00000000   .text
+
+Relocation section '.rel.pdr' at offset 0x1f5c contains 15 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+00000000  00002102 R_MIPS_32         00000000   ixmlFreeDOMString
+00000020  00002402 R_MIPS_32         00000020   ixmlCloneDOMString
+00000040  00002602 R_MIPS_32         00000040   ixmlParseBufferEx
+00000060  00002802 R_MIPS_32         0000007c   ixmlParseBuffer
+00000080  00002902 R_MIPS_32         000000a0   ixmlLoadDocumentEx
+000000a0  00002a02 R_MIPS_32         000000d0   ixmlLoadDocument
+000000c0  00002b02 R_MIPS_32         000000f4   ixmlRelaxParser
+000000e0  00000202 R_MIPS_32         00000000   .text
+00000100  00000202 R_MIPS_32         00000000   .text
+00000120  00000202 R_MIPS_32         00000000   .text
+00000140  00003502 R_MIPS_32         000008c8   ixmlNodetoString
+00000160  00003702 R_MIPS_32         00000920   ixmlDocumenttoString
+00000180  00000202 R_MIPS_32         00000000   .text
+000001a0  00003802 R_MIPS_32         00000bfc   ixmlPrintNode
+000001c0  00003902 R_MIPS_32         00000c54   ixmlPrintDocument
+
+Relocation section '.rel.rodata' at offset 0x1fd4 contains 9 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+00000000  00000202 R_MIPS_32         00000000   .text
+00000004  00000202 R_MIPS_32         00000000   .text
+00000008  00000202 R_MIPS_32         00000000   .text
+0000000c  00000202 R_MIPS_32         00000000   .text
+00000010  00000202 R_MIPS_32         00000000   .text
+00000014  00000202 R_MIPS_32         00000000   .text
+00000018  00000202 R_MIPS_32         00000000   .text
+0000001c  00000202 R_MIPS_32         00000000   .text
+00000020  00000202 R_MIPS_32         00000000   .text
+
+There are no unwind sections in this file.
+
+Symbol table '.symtab' contains 58 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00000000     0 FILE    LOCAL  DEFAULT  ABS ixml.c
+     2: 00000000     0 SECTION LOCAL  DEFAULT    1 
+     3: 00000000     0 SECTION LOCAL  DEFAULT    3 
+     4: 00000000     0 SECTION LOCAL  DEFAULT    4 
+     5: 00000000     0 SECTION LOCAL  DEFAULT    8 
+     6: 00000000     0 SECTION LOCAL  DEFAULT    9 
+     7: 0000010c   356 FUNC    LOCAL  DEFAULT    1 copy_with_escape
+     8: 00000270  1032 FUNC    LOCAL  DEFAULT    1 ixmlPrintDomTreeRecursive
+     9: 00000678   592 FUNC    LOCAL  DEFAULT    1 ixmlDomTreetoString
+    10: 00000994   616 FUNC    LOCAL  DEFAULT    1 ixmlPrintDomTree
+    11: 00000000     0 SECTION LOCAL  DEFAULT   10 
+    12: 00000010     0 NOTYPE  LOCAL  DEFAULT    9 $LC2
+    13: 00000000     0 NOTYPE  LOCAL  DEFAULT    9 $LC0
+    14: 00000008     0 NOTYPE  LOCAL  DEFAULT    9 $LC1
+    15: 00000018     0 NOTYPE  LOCAL  DEFAULT    9 $LC3
+    16: 00000020     0 NOTYPE  LOCAL  DEFAULT    9 $LC4
+    17: 00000050     0 NOTYPE  LOCAL  DEFAULT    9 $LC13
+    18: 00000054     0 NOTYPE  LOCAL  DEFAULT    9 $LC14
+    19: 0000003c     0 NOTYPE  LOCAL  DEFAULT    9 $LC8
+    20: 00000028     0 NOTYPE  LOCAL  DEFAULT    9 $LC5
+    21: 00000034     0 NOTYPE  LOCAL  DEFAULT    9 $LC6
+    22: 00000038     0 NOTYPE  LOCAL  DEFAULT    9 $LC7
+    23: 00000040     0 NOTYPE  LOCAL  DEFAULT    9 $LC9
+    24: 00000044     0 NOTYPE  LOCAL  DEFAULT    9 $LC10
+    25: 00000048     0 NOTYPE  LOCAL  DEFAULT    9 $LC11
+    26: 0000004c     0 NOTYPE  LOCAL  DEFAULT    9 $LC12
+    27: 00000058     0 NOTYPE  LOCAL  DEFAULT    9 $LC15
+    28: 0000005c     0 NOTYPE  LOCAL  DEFAULT    9 $LC16
+    29: 00000000     0 SECTION LOCAL  DEFAULT    5 
+    30: 00000000     0 SECTION LOCAL  DEFAULT    6 
+    31: 00000000     0 SECTION LOCAL  DEFAULT   12 
+    32: 00000000     0 SECTION LOCAL  DEFAULT   13 
+    33: 00000000    32 FUNC    GLOBAL DEFAULT    1 ixmlFreeDOMString
+    34: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND __gnu_local_gp
+    35: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND free
+    36: 00000020    32 FUNC    GLOBAL DEFAULT    1 ixmlCloneDOMString
+    37: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND strdup
+    38: 00000040    60 FUNC    GLOBAL DEFAULT    1 ixmlParseBufferEx
+    39: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND Parser_LoadDocument
+    40: 0000007c    36 FUNC    GLOBAL DEFAULT    1 ixmlParseBuffer
+    41: 000000a0    48 FUNC    GLOBAL DEFAULT    1 ixmlLoadDocumentEx
+    42: 000000d0    36 FUNC    GLOBAL DEFAULT    1 ixmlLoadDocument
+    43: 000000f4    24 FUNC    GLOBAL DEFAULT    1 ixmlRelaxParser
+    44: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND Parser_setErrorChar
+    45: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND strlen
+    46: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND ixml_membuf_append
+    47: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND ixml_membuf_append_str
+    48: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND ixmlNode_getNodeName
+    49: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND ixmlNode_getNodeValue
+    50: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND ixmlNode_getNodeType
+    51: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND ixmlNode_getFirstChild
+    52: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND ixmlNode_getNextSibling
+    53: 000008c8    88 FUNC    GLOBAL DEFAULT    1 ixmlNodetoString
+    54: 00000000     0 NOTYPE  GLOBAL DEFAULT  UND ixml_membuf_init
+    55: 00000920   116 FUNC    GLOBAL DEFAULT    1 ixmlDocumenttoString
+    56: 00000bfc    88 FUNC    GLOBAL DEFAULT    1 ixmlPrintNode
+    57: 00000c54   116 FUNC    GLOBAL DEFAULT    1 ixmlPrintDocument
+
+No version information found in this file.

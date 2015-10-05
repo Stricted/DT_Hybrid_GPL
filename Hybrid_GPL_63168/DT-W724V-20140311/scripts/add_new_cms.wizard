@@ -1,0 +1,90 @@
+#!/bin/sh
+
+echo "**** Autotools Add New CMS Package Wizard ****"
+echo " This script will generate files to add a"
+echo " new cms package to ATP."
+echo
+
+# Usage
+# $1 - Feature path
+# $2 - Feature name
+
+mkdir -p $1/cms
+mkdir -p $1/cms/inc
+mkdir -p $1/cms/src
+
+upcase_module=`echo ${2} | tr '[:lower:]' '[:upper:]'`
+
+# Generate Makefile for the cms module
+touch $1/cms/inc/$2cmsapi.h
+touch $1/cms/src/$2cmsmsgproc.c
+touch $1/cms/src/$2cmsinit.c
+touch $1/cms/src/$2cms.c
+cat << EOF > $1/cms/src/Makefile
+################### depend objects
+OBJS = $2cmsmsgproc.o $2cmsinit.o $2cms.o
+
+#
+# CFLAGS
+#
+CFLAGS +=
+
+#
+# CPPFLAGS
+#
+CPPFLAGS +=
+
+#
+# LIBS
+#
+LIBS +=
+
+# include the rule.mak
+include \$(TOPDIR)/package/atp/rule.mak
+
+EOF
+
+# Generate Config.in for the cms module
+cat << EOF > $1/cms/Config.in
+config BUILD_${upcase_module}CMS
+	bool "Support $2 cms"
+	help
+	  Support $2 configuration management.
+EOF
+
+#Generate package.mk for the cms module
+cat << EOF > $1/cms/package.mk
+#############################################################
+#
+# $2cms
+#
+#############################################################
+
+#
+# Dependencies
+#
+${upcase_module}CMS_DEPENDENCIES =
+
+#############################################################
+### Version and change logs area
+${upcase_module}CMS_VERSION = V1.01
+define ${upcase_module}CMS_CHANGELOGS
+V1.00:
+	1. First release by `whoami`.
+
+endef
+#############################################################
+
+# Target name
+${upcase_module}CMS_TARGET = static
+
+# Target type
+${upcase_module}CMS_TYPE =cms
+
+# Target name
+${upcase_module}CMS_PROGRAM_NAME =$2cms
+
+\$(eval \$(call ATPTARGETS,$1/cms,$2cms))
+EOF
+
+echo "Generate succeeded."

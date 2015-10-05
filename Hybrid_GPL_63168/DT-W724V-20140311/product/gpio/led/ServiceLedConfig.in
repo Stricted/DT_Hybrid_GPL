@@ -1,0 +1,109 @@
+config LED_SERVICE_1
+		bool "LED SERVICE no.1"
+		default n
+		help
+			Enable this option if you need to expand current config flash area, no. 1
+	  
+if 	LED_SERVICE_1
+config LED_SERVICE_1_MODE
+	int "LED_SERVICE_1_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_SERVICE_1_ACTIVE_PIN1
+	int "LED_SERVICE_1_ACTIVE_PIN1 enter the pin for serial or normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_SERVICE_1_ACTIVE_PIN1_STATE
+	int "LED_SERVICE_1_ACTIVE_PIN1_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_SERVICE_2
+		bool "LED SERVICE no.2"
+		default n
+		help
+			Enable this option if you need to expand current config flash area, no. 2
+			
+if 	LED_SERVICE_2
+config LED_SERVICE_2_MODE
+	int "LED_SERVICE_2_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_SERVICE_2_ACTIVE_PIN1
+	int "LED_SERVICE_2_ACTIVE_PIN1 enter the pin for serial or normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_SERVICE_2_ACTIVE_PIN1_STATE
+	int "LED_SERVICE_2_ACTIVE_PIN1_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_SERVICE_3
+		bool "LED SERVICE no.3"
+		default n
+		help
+			Enable this option if you need to expand current config flash area, no. 3
+			
+if 	LED_SERVICE_3
+config LED_SERVICE_3_MODE
+	int "LED_SERVICE_3_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_SERVICE_3_ACTIVE_PIN1
+	int "LED_SERVICE_3_ACTIVE_PIN1 enter the pin for serial or normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_SERVICE_3_ACTIVE_PIN1_STATE
+	int "LED_SERVICE_3_ACTIVE_PIN1_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_SERVICE_4
+		bool "LED SERVICE no.4"
+		default n
+		help
+			Enable this option if you need to expand current config flash area, no. 4
+			
+if 	LED_SERVICE_4
+config LED_SERVICE_4_MODE
+	int "LED_SERVICE_4_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_SERVICE_4_ACTIVE_PIN1
+	int "LED_SERVICE_4_ACTIVE_PIN1 enter the pin for serial or normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LED_SERVICE_4_ACTIVE_PIN1_STATE
+	int "LED_SERVICE_4_ACTIVE_PIN1_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+endif	##end of LED_SERVICE_4	
+
+endif	##end of LED_SERVICE_3	
+  
+endif	##end of LED_SERVICE_2	  
+	  
+endif	##end of LED_SERVICE_1		
+
+

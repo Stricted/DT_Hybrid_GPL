@@ -1,0 +1,15 @@
+[settings]
+functionname=hi_kernel_slic_stop_howl;  
+attributenum=2;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chip_idx>    type<uint>    range<0,1>      default<0x0>; /*Ð¾Æ¬ºÅ*/
+attribute=alias<port_idx>    type<uint>    range<0,1>      default<0x0>; /*¶Ë¿ÚºÅ*/
+
+[help]
+typedef struct
+{
+    hi_uint32 ui_chip_idx;
+    hi_uint32 ui_port_idx;
+}hi_kernel_slic_chip_port_s;

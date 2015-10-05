@@ -1,0 +1,13 @@
+config DT_PPP_DYN_DIAL
+	bool "support DT W724v PPP dynamic dial"
+	default y
+config ATP_PPP_NAT_GATE
+	bool "support ppp don't forward packet before NAT opened"
+	default y
+	depends on ATP_KERNEL_3_4
+config ATP_PPP_FAST_DIAL
+	bool "support ppp fast dial"
+	default y
+	depends on ATP_KERNEL_3_4
+	help
+		see DTS2012090605186 or AU8D04132 for more detail

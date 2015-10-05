@@ -1,0 +1,16 @@
+menu "ATP Debug Supported Selection"
+config BUILD_COREDUMP
+	bool "Support coredump"
+	default n
+config ATP_COREDUMP_FILE_SIZE
+	int "define coredump file size(K)"
+	depends on 	BUILD_COREDUMP
+	default 200
+	
+config ATP_COREDUMP_DIR
+	string "define coredump dir"
+	depends on BUILD_COREDUMP
+	default "/config/coredump"
+	
+endmenu
+

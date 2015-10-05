@@ -1,0 +1,42 @@
+menu "Product Config"
+
+menu "Product Info" 
+config BUILD_PRODUCT_NAME
+	string "Product full name"
+	default "HG2XX"
+	help
+	  Config custom product full name
+
+config CONFIG_B880_PRODUCT
+	bool "b880 product"
+	select BUILD_USBOM if BUILD_FMC_DEBUG_VERSION
+
+#/* <DTS2013092310511 z00182709 2013/09/24 begin */
+config CONFIG_B881_PRODUCT
+	bool "b881 product"
+	select BUILD_USBOM if BUILD_FMC_DEBUG_VERSION
+#/* DTS2013092310511 z00182709 2013/09/24 end> */
+	
+config BOARD_ID
+	string  "Set Board Id"
+	help
+	  Set Board Id
+	  eg:963268_hg257
+		 963268_hg2xx
+		 
+config VOICE_BOARD_ID
+	string  "Set Voice Board Id"
+	help
+	  Set Voice Board Id
+	  eg:LE88536_THAL
+		 LE9530_LE88276
+endmenu		 
+	 
+source "product/version/Config.in"
+source "product/flash/Config.in"
+source "product/gpio/Config.in"
+source "product/startup/Config.in"
+source "product/image/Config.in"
+source "product/feature/Config.in"
+
+endmenu 

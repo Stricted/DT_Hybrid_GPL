@@ -1,0 +1,4 @@
+proc		/proc	proc	defaults    0	0
+
+mtd:data	/data	jffs2	defaults	0	0
+

@@ -1,0 +1,4 @@
+config ATP_NDIS_QMI
+	bool "Support QMI Interface"
+	default n
+	

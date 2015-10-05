@@ -1,0 +1,448 @@
+config BUILD_USBSTORAGE
+	bool "USBSTORAGE"
+	select BUILD_TR140
+	default y
+	help
+	  Select support for USBSTORAGE,such as TR140¡¢FTPServer¡¢Samba
+
+if BUILD_USBSTORAGE
+menu "USBStorage Supported Selection"
+
+config BUILD_NTFS_3G
+	bool "Support ntfs-3g"
+	default y
+	help
+	  Support  configuration management for ntfs-3g.
+
+config BUILD_FTP_UPGRADE
+    bool "FTP Upgrade"
+	select BUILD_BFTPD
+	default n
+	help
+		Support FTP Upgrade
+		
+config ATP_FTP_UPGRADE_MAX_IMAGESIZE
+    int "MAX image size (M) for FTP Upgrade"
+	depends on BUILD_FTP_UPGRADE
+	default 8
+	help
+		Support MAX size for FTP Upgrade 
+		
+###############FTP SERVER####################
+config BUILD_FTP_SERVER
+	bool "ftpserver"
+	select BUILD_BFTPD
+	default y
+	help
+		Select support for ftpserver
+		
+if (BUILD_FTP_SERVER || BUILD_FTP_UPGRADE)
+
+menu "FTP Feature Supported Selection"
+config BUILD_FTP_CONNECTION_NUM
+    int "max tcp connection num"
+	default 15
+	help
+		Set max connection number for ftpserver
+		
+config BUILD_FTP_GUEST
+    bool "ftp guest account"
+	default n
+	help
+		Support guest account
+		
+config BUILD_FTP_NO_SITE
+    bool "ftp not support site command"
+	default n
+	help
+		Not support site command
+		
+config BUILD_FTP_SERVER_ANONYUSER
+    bool "ftp support anonyuser"
+	default y
+	help
+		ftp support anonyuser
+		
+endmenu
+endif	
+
+config BUILD_FTPDS
+	bool "ATP FTPDS"
+	depends on BUILD_FTP_SERVER
+	help
+		Ftpds open source
+		
+if BUILD_FTPDS
+menu "FTPS Type Supported Selection"
+config BUILD_FTPDS_IMPLICIT
+	bool "Ftps Implicit"
+	default y
+	help
+		Select Implicit support for ftps
+endmenu
+endif
+
+config BUILD_FTP_ACCESS_CONTROL
+	bool "FTP Distinguish Access Control"
+	depends on BUILD_FTP_SERVER
+	help
+		Distinguish FTP,FTPSEX,FTPSIM Wan Access Control
+###############SAMBA SERVER####################
+config BUILD_SAMBA
+	bool "Support samba"
+	default y
+	help
+	  Support  configuration management for samba.
+	  
+config BUILD_SAMBA_PRINT
+	bool "Support samba printing (cups)"
+	default n
+	depends on BUILD_SAMBA&&BUILD_CUPS
+	help
+		Support samba_print,and samba as a server for printing.
+		
+config BUILD_SAMBA_SHARE
+	bool "Support samba share model"
+	default y
+	depends on BUILD_SAMBA
+	help
+		Support samba share model.
+		
+config BUILD_SAMBA_LOGIN_CONTROL
+	bool "Support samba login control"
+	default n
+	depends on BUILD_SAMBA
+	help
+		Support samba login control.
+
+config BUILD_SAMBA_GUEST
+	bool "Support samba guest account"
+	default n
+	depends on BUILD_SAMBA
+	help
+		Support samba guest account.
+		
+config BUILD_SAMBA_LOCAL_MASTER
+	bool "Support samba as local master browser"
+	default n
+	depends on BUILD_SAMBA
+	help
+		Support samba as local master browser.
+		
+config SAMBA_DEFAULT_DOMAINNAME
+	string  "Set samba default DomainName"
+	default "ATP.ip"
+	help
+	  Set samba default domainname
+	  
+config SAMBA_DEFAULT_NETBIOSNAME
+	string  "Set samba default netbiosname"
+	default "ATP"
+	help
+	  Set samba default netbiosname
+	  
+config SAMBA_DEFAULT_WORKGROUPNAME
+	string  "Set samba default workgroupname"
+	default "WORKGROUP"
+	help
+	  Set samba default workgroupname
+	  
+config ATP_WORKGROUP_NAME_CONFIG
+	bool "SUPPORT WORKGROUP NAME CONFIG"
+	default n
+	help
+		Support config workgroup name 
+		
+config ATP_USBSTORAGE_MAX_USER_NUM
+	int "MAX USER NUM"
+	default "6"
+	help
+		configure MAX USER NUM,0 represents non-restricted
+
+config ATP_USBSTORAGE_MAX_TERM_NUM_OF_EACH_USER
+	int "MAX TERMINATE NUM OF EACH USER ACCOUNT"
+	default "0"
+	help
+		configure MAX TERMINATE NUM of EACH USER ACCOUNT,0 represents non-restricted
+
+config ATP_USBSTORAGE_MAX_USER_NUM_OF_EACH_TERM
+	int "MAX USER NUM OF EACH TERMINATE"
+	default "0"
+	help
+		configure MAX USER NUM of EACH TERMINATE,0 represents non-restricted
+
+config ATP_USBSTORAGE_TOTAL_TRYING_FAIL_TIMES
+	int "MAX FAIL TIMES OF TRYING"
+	default "5"
+	help
+		configure MAX FAIL TIMES,0 represents non-restricted
+
+config ATP_USB_PHYSICALMED_MAX_NUM
+	int "MAX PHYSICAL MEDIA DISK NUM"
+	default "6"
+	help
+		configure PHYSICAL MEDIA DISK NUM
+
+config ATP_STORAGESERVICE_MAXFOLDERNUM
+	int "MAX FOLDER NUM"
+	default "200"
+	help
+		configure MAX FOLDER NUM
+
+config STOSER_HOSTDOMAIN_NAME_LEN
+	int "MAX HOSTDOMAIN NAME LEN"
+	default "16"
+	help
+		configure MAX HOSTDOMAIN NAME LEN		
+
+config STOSER_USER_HOST_LEN
+	int "MAX USER HOST NAME LEN"
+	default "9"
+	help
+		configure MAX USER HOST NAME LEN
+		
+config STOSER_DOMAIN_NAME_LEN
+	int "MAX DOMAIN NAME LEN"
+	default "7"
+	help
+		configure MAX DOMAIN NAME LEN
+		
+config STOSER_WORKGROUP_NAME_LEN
+	int "MAX WORKGROUP NAME LEN"
+	default "15"
+	help
+		configure MAX WORKGROUP NAME LEN
+		
+config STOSER_USERNAME_MAX_LEN
+	int "MAX USERNAME NAME LEN"
+	default "256"
+	help
+		configure MAX USERNAME NAME LEN
+		
+config STOSER_USERNAME_MIN_LEN
+	int "MIN USERNAME NAME LEN"
+	default "1"
+	help
+		configure MIN USERNAME NAME LEN
+		
+config STOSER_PASSWORD_MAX_LEN
+	int "MAX PASSWORD NAME LEN"
+	default "64"
+	help
+		configure MAX USERNAME NAME LEN
+		
+config STOSER_PASSWORD_MIN_LEN
+	int "MIN PASSWORD NAME LEN"
+	default "8"
+	help
+		configure MIN PASSWORD NAME LEN
+
+menu"set usbstorage username verify"
+
+config ATP_STOSER_USERNAME_VERIFY
+	bool "support usbstorage username verify"
+	default y
+		
+if ATP_STOSER_USERNAME_VERIFY
+	
+config ATP_STOSER_USERNAME_VERIFY_NUM	
+	bool "user name can have num :0-9"
+	default y
+	help
+	user name can have num :0-9
+	
+config ATP_STOSER_USERNAME_VERIFY_BIG_LETTER
+	bool "user name can have big letter:A-Z "
+	default n
+	help
+	user name can have big letter:A-Z
+	
+config ATP_STOSER_USERNAME_VERIFY_SMALL_LETTER
+	bool "user name can have small letter:a-z"
+	default y
+	help
+	user name can have small letter:a-z
+	
+config ATP_STOSER_USERNAME_VERIFY_HYPHEN	
+	bool "user name can have hyphen:'-'"
+	default n
+	help
+	user name can have hyphen:'-'
+	
+config ATP_STOSER_USERNAME_VERIFY_UNDERSCORE	
+	bool "user name can have underscore:'_'"
+	default n
+	help
+	user name can have underscore:'_'
+ 
+endif
+endmenu
+
+menu"set usbstorage username first word verify"
+config ATP_STOSER_USERNAME_FIRSTWORD_VERIFY
+	bool "support usbstorage username first word verify"
+	default y
+
+if ATP_STOSER_USERNAME_FIRSTWORD_VERIFY
+	
+config ATP_STOSER_USERNAME_FIRSTWORD_VERIFY_NOT_NUM	
+	bool "user name first word can't have num :0-9"
+	default y
+	help
+	user name first word can't have num :0-9
+	
+config ATP_STOSER_USERNAME_FIRSTWORD_VERIFY_NOT_BIG_LETTER
+	bool "user name first word can't have big letter:A-Z "
+	default n
+	help
+	user name first word can't have big letter:A-Z
+	
+config ATP_STOSER_USERNAME_FIRSTWORD_VERIFY_NOT_SMALL_LETTER
+	bool "user name first word can't have small letter:a-z"
+	default n
+	help
+	user name first word can't have small letter:a-z
+	
+config ATP_STOSER_USERNAME_FIRSTWORD_VERIFY_NOT_HYPHEN	
+	bool "user name first word can't have hyphen:'-'"
+	default n
+	help
+	user name first word can't have hyphen:'-'
+	
+config ATP_STOSER_USERNAME_FIRSTWORD_VERIFY_NOT_UNDERSCORE	
+	bool "user name first word can't have underscore:'_'"
+	default n
+	help
+	user name first word can't have underscore:'_'
+ 
+endif
+endmenu
+	
+menu"set usbstorage password verify"	
+config ATP_STOSER_PASSWORD_VERIFY
+	bool "support usbstorage password verify"
+	default y
+
+if ATP_STOSER_PASSWORD_VERIFY
+		
+config ATP_STOSER_PASSWORD_VERIFY_NUM	
+	bool "user password can have num :0-9"
+	default y
+	help
+	user password can have num :0-9
+	
+config ATP_STOSER_PASSWORD_VERIFY_BIG_LETTER
+	bool "user password can have big letter:A-Z "
+	default y
+	help
+	user password can have big letter:A-Z
+	
+config ATP_STOSER_PASSWORD_VERIFY_SMALL_LETTER
+	bool "user password can have small letter:a-z"
+	default y
+	help
+	user password can have small letter:a-z
+	
+config ATP_STOSER_PASSWORD_VERIFY_HYPHEN	
+	bool "user password can have hyphen:'-'"
+	default n
+	help
+	user password can have hyphen:'-'
+	
+config ATP_STOSER_PASSWORD_VERIFY_UNDERSCORE	
+	bool "user password can have underscore:'_'"
+	default y
+	help
+	user password can have underscore:'_'
+ 
+endif
+endmenu
+
+menu"set usbstorage password first word verify"
+config ATP_STOSER_PASSWORD_FIRSTWORD_VERIFY
+	bool "support usbstorage password first word verify"
+	default n
+
+if ATP_STOSER_PASSWORD_FIRSTWORD_VERIFY
+	
+config ATP_STOSER_PASSWORD_FIRSTWORD_VERIFY_NOT_NUM	
+	bool "user password first word can't have num :0-9"
+	default n
+	help
+	user password first word can't have num :0-9
+	
+config ATP_STOSER_PASSWORD_FIRSTWORD_VERIFY_NOT_BIG_LETTER
+	bool "user password first word can't have big letter:A-Z "
+	default n
+	help
+	user password first word can't have big letter:A-Z
+	
+config ATP_STOSER_PASSWORD_FIRSTWORD_VERIFY_NOT_SMALL_LETTER
+	bool "user password first word can't have small letter:a-z"
+	default n
+	help
+	user password first word can't have small letter:a-z
+	
+config ATP_STOSER_PASSWORD_FIRSTWORD_VERIFY_NOT_HYPHEN	
+	bool "user password first word can't have hyphen:'-'"
+	default n
+	help
+	user password first word can't have hyphen:'-'
+	
+config ATP_STOSER_PASSWORD_FIRSTWORD_VERIFY_NOT_UNDERSCORE	
+	bool "user password first word can't have underscore:'_'"
+	default n
+	help
+	user password first word can't have underscore:'_'
+ 
+endif
+endmenu
+		
+config ATP_WEB_STORAGESERVICE_FOLDERNAME_NEED_DECODE
+	bool "Support if when use web foldername need decode"
+	default y
+	help
+		Support if when use web foldername need decode.
+		
+config BUILD_ADDITION_FOLDER
+	bool "Support addition folder"
+	default n
+	help
+		Support addition folder.
+		
+config BUILD_STORAGESERVICE_GUEST_USER
+	bool "Support storage serveice guest user"
+	default n
+	help
+		Support storage serveice guest user
+		
+config BUILD_FTP_ACCESS_CONTROL
+	bool "Support FTP access control"
+	default n
+	help
+		Support FTP access control
+
+config BUILD_USER_FOLDER
+	bool "Support user folder"
+	default n
+	help
+		Support user folder
+
+config BUILD_GUEST_ACCESS
+	bool "Support guest access"
+	default n
+	help
+		Support guest access
+		
+endmenu
+endif
+
+config BUILD_BFTPD
+	bool "support bftpd"
+	help
+		bftpd open source
+		
+config BUILD_TR140
+	bool "support tr140"
+	help
+	  Select support for usbstoragecms

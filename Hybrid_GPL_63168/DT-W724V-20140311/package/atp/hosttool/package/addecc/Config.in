@@ -1,0 +1,10 @@
+config BUILD_ADDECC
+	bool "suport add ecc"
+	default n
+
+config NAND_ECC_TYPE
+	int "nand ecc type"
+	depends on BUILD_ADDECC
+	default 1
+	help 
+	    1bit-1,4bit-4,8bit-8,,12bit-12,16bit-16,24bit-24

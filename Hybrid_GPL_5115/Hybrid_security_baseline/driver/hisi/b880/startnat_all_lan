@@ -1,0 +1,2 @@
+hi_xpon 5
+hi_cli /home/cli/accel/accel_set -v sw 1 hw 0

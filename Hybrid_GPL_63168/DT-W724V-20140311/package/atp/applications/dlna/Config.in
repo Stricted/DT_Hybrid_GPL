@@ -1,0 +1,88 @@
+config BUILD_DMS
+    bool "Support DLNA Digital Media Server"
+    default n
+    select BUILD_FFMPEG
+    select BUILD_LIBICONV
+    select BUILD_LIBUPNP
+    select BUILD_SQLITE
+    help
+      POSIX Access Control Lists, which are used to define more
+      fine-grained discretionary access rights for files and
+      directories.
+      This package also provides libacl.
+
+if BUILD_DMS
+menu "ATP DMS Supported Selection"
+# ATP all applications
+
+config BUILD_DMS_IPV6
+    bool "Support IPV6 for DMS"
+    depends on BUILD_DMS
+    default n
+    select BUILD_LIBUPNP_V6
+
+config ATP_DMS_MAX_MEDIA_ITEM_D
+    int "Max number of media items."
+    depends on BUILD_DMS
+    default 10000
+
+config BUILD_MONITOR_MEDIA
+    bool "Support monitor changes of media content."
+    depends on BUILD_DMS
+    default n
+
+config BUILD_DMS_ICON
+    bool "Support ATP dms icon."
+    depends on BUILD_DMS
+    default n
+config BUILD_DMS_UPLOAD
+    bool "Support ATP dms upload."
+    depends on BUILD_DMS
+    default n
+
+config BUILD_DMS_FRIENDLY_NAME
+    string "Support to customize dms friendly name."
+    depends on BUILD_DMS
+    default n
+    
+config BUILD_UPNP_AV_2
+    bool "Support UPnP AV 2.0"
+    depends on BUILD_DMS
+    default y
+
+config BUILD_DMS_DYNAMIC_TOPFOLDER
+    bool "Support dynamic top folder"
+    depends on BUILD_DMS
+    default n
+
+config BUILD_DMS_PNPX
+    bool "Support microsoft PnP-X"
+    depends on BUILD_DMS_DYNAMIC_TOPFOLDER
+    default n
+
+if BUILD_DMS_PNPX
+menu "ATP DMS PnP-x Infomation"
+    config DMS_PNPX_VENDORID
+        string "PnP-x vendor ID"
+        depends on BUILD_DMS_PNPX
+        default "1234"
+
+    config DMS_PNPX_DEVICEID
+        string "PnP-x Device ID"
+        depends on BUILD_DMS_PNPX
+        default "725"
+
+    config DMS_PNPX_SUBSYSID
+        string "PnP-x SubSystem ID"
+        depends on BUILD_DMS_PNPX
+        default "01"
+
+    config DMS_PNPX_COMPATIBLEID
+        string "PnP-x compatible ID"
+        depends on BUILD_DMS_PNPX
+        default "PnPX_Compatible_Router_Huawei"
+endmenu
+endif
+
+endmenu
+endif

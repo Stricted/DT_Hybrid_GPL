@@ -1,0 +1,22 @@
+[settings]
+functionname=hi_kernel_slic_read_spi;  
+attributenum=5;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chip_idx>    type<uint>    range<0,1>      default<0x0>; /*芯片号*/
+attribute=alias<port_idx>    type<uint>    range<0,2>      default<0x0>; /*通道号*/
+
+attribute=alias<cmd>         type<uint>    range<0,0xFFFFFFFF>      default<0>;  /*寄存器基地址*/
+attribute=alias<len>         type<uint>    range<0,32>              default<1>;  /*读取长度*/
+attribute=alias<data>        type<binary>  range<0,32>              default<0>;  /*读取数据存放内存*/
+
+[help]
+typedef struct
+{
+    hi_uint32 ui_chip_idx;
+    hi_uint32 ui_port_idx;
+    hi_uint32 ui_cmd;
+    hi_uint32 ui_len;
+    hi_uchar8 auc_data[32];
+}hi_kernel_slic_readwrite_spi_s;

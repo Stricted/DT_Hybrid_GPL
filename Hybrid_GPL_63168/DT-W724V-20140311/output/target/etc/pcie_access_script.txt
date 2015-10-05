@@ -1,0 +1,40 @@
+#//PCIe_IP_BLK1000_MDIO_ADDR: 0x106e1100
+#//	bit31:20: CMD	0: no action; 1: initiates a read
+#//	bit19:16: PORT	PHYAD
+#//	bit15:0:  ADR	
+#//
+#//PCIe_IP_BLK1000_MDIO_WR_DATA: 0X106e1104
+#//	bit31:	  CMD	1: initiates a write; When a write is completed, this value read as '0'
+#//	bit30:0:  WDATA	
+#//
+#//PCIe_IP_BLK1000_MDIO_RD_DATA: 0x106e1108
+#//	bit31:	  CMD	1: indicates read complete; auto reset by a write to ADDR register
+#//	bit30:0:  RDATA	
+#//
+#//Reduce Tx signal strength from 63168
+#
+#//Following are console commands
+#
+#//Set PCIe global register to point to block 820
+#
+sw 0xb06e1100 0x0001001f	
+sw 0xb06e1104 0x80008200
+dw 0xb06e1104			#//Make sure write is complete
+#
+sw 0xb06e1100 0x0011001f
+dw 0xb06e1108
+#
+#//Set bit 9 of register 15 to 1.  This reduces drive strength to half swing
+sw 0xb06e1100 0x00110018
+dw 0xb06e1108			#//The original value should be 0x047B
+#
+sw 0xb06e1100 0x00010018
+sw 0xb06e1104 0x8000007f	#//Set bit 9
+#
+dw 0xb06e1104			#//Confirm write complete
+#
+sw 0xb06e1100 0x00110018	#//Readback to confirm write is correct
+dw 0xb06e1108
+#
+#
+#

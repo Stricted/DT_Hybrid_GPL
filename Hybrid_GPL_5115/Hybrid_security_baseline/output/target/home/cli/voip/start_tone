@@ -1,0 +1,15 @@
+[settings]
+functionname=hi_voip_cli_starttone;  
+attributenum=3;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chanid>     type<uint>   range<0,3>  default<0>; /*通道号*/
+attribute=alias<toneidx>    type<uint>   range<0,63> default<0>; /*simple tone index*/
+attribute=alias<direction>  type<uint>   range<1,3>  default<1>; /*放音方向*/
+
+[help]
+usage: start_tone                  ; 启动放音
+       start_tone -v chanid 2      ; 通道号2
+       start_tone -v toneidx 13    ; simple tone index 13
+       start_tone -v direction 1   ; TDM侧放音

@@ -1,0 +1,31 @@
+menu "Product Config"
+
+menu "Product Info" 
+config BUILD_PRODUCT_NAME
+	string "Product full name"
+	default "HG2XX"
+	help
+	  Config custom product full name
+	  
+config BOARD_ID
+	string  "Set Board Id"
+	help
+	  Set Board Id
+	  eg:963268_hg257
+		 963268_hg2xx
+		 
+config VOICE_BOARD_ID
+	string  "Set Voice Board Id"
+	help
+	  Set Voice Board Id
+	  eg:LE88536_THAL
+		 LE9530_LE88276
+endmenu		 
+	 
+source "product/version/Config.in"
+source "product/flash/Config.in"
+source "product/gpio/Config.in"
+source "product/startup/Config.in"
+source "product/image/Config.in"
+
+endmenu 

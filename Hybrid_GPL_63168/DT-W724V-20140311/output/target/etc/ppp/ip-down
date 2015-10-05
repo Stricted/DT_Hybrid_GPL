@@ -1,0 +1,12 @@
+#! /bin/sh
+# PPP session stop script
+
+echo "PPP session stop"
+
+# Notify Chilli to logout user
+IPADDR=$(cat /var/fon/$1)
+/usr/sbin/fonctl logout ip $IPADDR
+
+# echo 4 > /proc/sys/net/ipv4/netfilter/ip_conntrack_dns
+
+exit 0

@@ -1,0 +1,31 @@
+[settings]
+functionname=0xF7002004;
+attributenum=9;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>          type<uint>  range<0x0,0xFFFFFFFF>  default<0x00000401>; /*全局模块*/
+attribute=alias<ui_vlan>         type<uint>  range<0x0,0x0000FFFF>  default<0x00000000>;
+attribute=alias<em_ge0_en>       type<int>   range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<em_ge1_en>       type<int>   range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<em_fe0_en>       type<int>   range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<em_fe1_en>       type<int>   range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<em_fe2_en>       type<int>   range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<em_pon_en>       type<int>   range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<em_cpu_en>       type<int>   range<0x0,0x01>  		default<0x00000000>;
+
+[help]
+/typedef struct 
+* vlan 过滤表项 */
+{
+    uint    ui_vlan;
+    
+    HI_BOOL_E   em_ge0_en;
+    HI_BOOL_E   em_ge1_en;
+    HI_BOOL_E   em_fe0_en;
+    HI_BOOL_E   em_fe1_en;
+    HI_BOOL_E   em_fe2_en;
+    HI_BOOL_E   em_pon_en;
+    HI_BOOL_E   em_cpu_en;
+    
+}hi_dp_vlan_filter_table_item_s;

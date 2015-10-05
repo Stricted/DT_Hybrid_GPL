@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<config>
+    <!-- 页面上是否显示User name-->
+    <user_name_enabled>0</user_name_enabled>
+    
+    <!-- 是否支持user用户登录-->
+    <user_enabled>0</user_enabled>
+</config>

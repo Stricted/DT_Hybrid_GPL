@@ -1,0 +1,35 @@
+#!/bin/sh
+################################################################################
+
+# cat /etc/jffs.img > /dev/mtdblock1
+cat /etc/jffs.img > /dev/mtdblock2
+cat /etc/jffs.img > /dev/mtdblock12
+# cat /etc/jffs.img > /dev/mtdblock3
+# cat /etc/jffs.img > /dev/mtdblock4
+
+# mount -t jffs2 /dev/mtdblock2 /var/module
+# mount -t jffs2 /dev/mtdblock2 /config
+
+if busybox mount -t jffs2 /dev/mtdblock2 /config 2>/dev/null > /dev/null
+then
+echo "mount config jffs2 success"
+else
+echo "no config jffs2 block detected"
+fi
+
+if busybox mount -t jffs2 /dev/mtdblock12 /configback 2>/dev/null > /dev/null
+then
+echo "mount configback jffs2 success"
+else
+echo "no configback jffs2 block detected"
+fi
+
+mkdir -m 755 -p /var/lte_fota
+if busybox mount -t jffs2 /dev/mtdblock13 /var/lte_fota 2>/dev/null > /dev/null
+then
+echo "mount lte jffs2 success"
+else
+echo "no lte jffs2 block detected"
+fi
+
+# mount -t jffs2 /dev/mtdblock4 /var/middleware

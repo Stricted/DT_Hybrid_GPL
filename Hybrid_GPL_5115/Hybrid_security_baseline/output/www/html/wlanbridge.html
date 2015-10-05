@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+    <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+    <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+    <script type="text/javascript" src="../js/refresh.js"></script>
+    <script type="text/javascript" src="../js/wlanbridge.js"></script>
+    <script type="text/javascript" src="../js/validation.js"></script>
+    <title></title>
+</head>
+<body>
+<div id="all_content" class="body_bg_settings">
+<input id="focus_hidden" type="text" style="display:none" value="focus">
+                    <div class="maintitle">
+                        <h1 id="title_label_wlanbridge"><script type="text/javascript">dw(wlan_bridge_settings);</script></h1>
+                    </div>
+                    <div class="main_content">
+                        <div id="show_turn_on_wlan" style="display: none;">
+                            <p id="show_turn_on_info">
+                                <script type="text/javascript">dw(wlan_label_wlan_status+common_colon);</script>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <script type="text/javascript">dw(common_off);</script>
+                            </p>
+                            <script type="text/javascript">create_button(common_turn_on,"wlan_turn_on");</script>
+                        </div>
+                        <div id = "show_briage_main_content">
+                            <div>
+                                <table id="bridge_text">
+                                    <tr height="42">
+                                        <td width="200" valign='top' height='42'>
+                                            <label><script type="text/javascript">dw(wlan_bridge_restriction + common_colon)</script></label>                                        
+                                        </td>
+                                        <td valign='top' height='42'>
+                                            <select valign="top" id="bridge_select" class = "input_select" style="width:170px;">
+                                                <option id="wlan_lazy" value="0"><script type="text/javascript">dw(wlan_bridge_lazy)</script></option>
+                                                <option id="wlan_bridge" value="1"><script type="text/javascript">dw(wlan_mode_bridge)</script></option>
+                                                <option id="wlan_bridgeDisable" value="2"><script type="text/javascript">dw(common_disable)</script></option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr height="42" class="bridges_text" style="display: none;">
+                                        <td width="200" valign='top' height='42'>
+                                            <label><script type="text/javascript">dw(wlan_bridges)</script>:</label> 
+                                        </td>
+                                        <td width="200" valign='top' height='42'>
+                                            <label><script type="text/javascript">dw(wlan_bridge_peer_mac_address)</script></label> 
+                                        </td>
+                                        <td width="200" valign='top' height='42'  style="display: none;">
+                                            <label><script type="text/javascript">dw(wlan_bridge_linkstatus)</script></label>   
+                                        </td>
+                                    </tr>
+                                    <tr height="42" class="bridges_text" style="display: none;">
+                                        <td>
+                                            
+                                        </td>
+                                        <td width="200" valign='top' height='42'>
+                                            <input type="text" class="input_select" id="input_peerMacAddress0" style="width:170px;">
+                                            
+                                        </td>
+                                        <td  style="display: none;" width="200" height='42' valign='top' style="padding-top:5px;">
+                                            <span id="bridge_statusvalue0" />
+                                        </td>
+                                    </tr>
+                                    <tr height="42" class="bridges_text" style="display: none;">
+                                        <td>
+                                            
+                                        </td>
+                                        <td width="200" valign='top' height='42'>
+                                            <input type="text" class="input_select" id="input_peerMacAddress1" style="width:170px;">
+                                        </td>
+                                        <td  style="display: none;" width="200" valign='top' height='42' style="padding-top:5px;" >
+                                            <span id="bridge_statusvalue1"></span>  
+                                        </td>
+                                    </tr>
+                                    <tr height="42" class="bridges_text" style="display: none;">
+                                        <td>
+                                            
+                                        </td>
+                                        <td width="200" valign='top' height='42'>
+                                            <input type="text" class="input_select" id="input_peerMacAddress2" style="width:170px;">
+                                        </td>
+                                        <td  style="display: none;" width="200" valign='top' height='42' style="padding-top:5px;">
+                                            <span id="bridge_statusvalue2"></span>  
+                                        </td>
+                                    </tr>
+                                    <tr height="42" class="bridges_text" style="display: none;">
+                                        <td>
+                                            
+                                        </td>
+                                        <td width="200" valign='top' height='42'>
+                                            <input type="text" class="input_select" id="input_peerMacAddress3" style="width:170px;">
+                                        </td>
+                                        <td  style="display: none;" width="200" valign='top' height='42' style="padding-top:5px;">
+                                            <span id="bridge_statusvalue3" ></span> 
+                                        </td>
+                                    </tr>
+                                    <tr height="42" class="bridges_text" style="display: none;">
+                                        <td></td>
+                                        <td width="200" valign='top' height='42'>
+                                            <label class="wlan_bridge_label"><script type="text/javascript">dw(wlan_label_mac_address_example)</script></label>
+                                        </td>
+                                        <td width="200" valign='top' height='42'></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="apply_button">
+                                <script type="text/javascript">create_button(common_apply,"apply_button");</script>
+                            </div>
+                        </div>
+                    </div>
+</div>
+</body>
+</html>

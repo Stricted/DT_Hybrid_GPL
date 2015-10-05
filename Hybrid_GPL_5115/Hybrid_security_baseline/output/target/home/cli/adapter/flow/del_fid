@@ -1,0 +1,10 @@
+[settings]
+functionname = hi_adapter_cli_flow_del_fid;
+attributenum = 1;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<fid>     type<ushort>     range<0x0,0xffff>     		default<0>;
+
+[help]
+fid

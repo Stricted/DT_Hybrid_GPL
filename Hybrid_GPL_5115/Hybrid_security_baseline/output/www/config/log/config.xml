@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <Level>Error</Level>
+    <Level>Warning</Level>
+    <Level>Notice</Level>
+</config>

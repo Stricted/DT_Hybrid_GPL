@@ -1,0 +1,26 @@
+[settings]
+functionname=hi_voip_cli_cfg_agc;  
+attributenum=8;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chanid>             type<uint>    range<0x0,0xFFFFFFFF>       default<0x0>; /*通道号*/
+attribute=alias<agcdirec>           type<uint>    range<0x0,0xFFFFFFFF>       default<0x3>; /*增益方向*/
+
+attribute=alias<targetlevel_tdm>    type<short>     range<0x8000,0x7FFF>      default<0xFFEA>;   /*上行VQE长时间能量的目标值*/
+attribute=alias<slewgainup_tdm>     type<short>     range<0x8000,0x7FFF>      default<0xd>;      /*TDM侧的AGC增益的微调速度最大值*/
+attribute=alias<slewgaindown_tdm>   type<short>     range<0x8000,0x7FFF>      default<0xfff3>;   /*TDM侧的AGC增益的微调速度最小值*/
+attribute=alias<targetlevel_ip>     type<short>     range<0x8000,0x7FFF>      default<0xFFEA>;   /*下行VQE长时间能量的目标值*/
+attribute=alias<slewgainup_ip>      type<short>     range<0x8000,0x7FFF>      default<0xd>;      /*IP侧的AGC增益的微调速度最大值*/
+attribute=alias<slewgaindown_ip>    type<short>     range<0x8000,0x7FFF>      default<0xfff3>;   /*IP侧的AGC增益的微调速度最小值*/
+
+
+[help]
+
+usage: cfg_agc                             ; 配置AGC参数 
+       cfg_agc -v chanid 0x0               ; 通道号
+       cfg_agc -v agcdirec 0x3             ; 增益方向，双向配置
+       cfg_agc -v targetlevel_tdm 0x16     ; 上行VQE长时间能量的目标值
+       cfg_agc -v slewgainup_tdm 0xd       ; TDM侧的AGC增益的微调速度最大值
+       cfg_agc -v slewgaindown_tdm 0xfff3  ; TDM侧的AGC增益的微调速度最小值
+       

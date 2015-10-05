@@ -1,0 +1,214 @@
+[settings]
+functionname = hi_kernel_dp_flow_efc_table_item_set_cmd;
+attributenum = 51;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<index>              type<uint>     range<0x0,0xFFFFFFFF>   default<0>;      
+attribute=alias<fid>                type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<valid>              type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<eof>                type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<g0>                 type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<key0>               type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<mask0>              type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<g0_match_mode>      type<uint>     range<0x0,0xFFFFFFFF>   default<0x00000002>;  
+attribute=alias<g1>                 type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<key1>               type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<mask1>              type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<g1_match_mode>      type<uint>     range<0x0,0xFFFFFFFF>   default<0x00000002>;  
+attribute=alias<igr>                type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<mac>                type<mac>                              default<00:e0:fc:55:55:5a>;  
+attribute=alias<reser>              type<ushort>   range<0x0,0xFFFF>       default<0>;
+attribute=alias<ip>                 type<binary>   range<0,16>             default<"0x00">;  
+attribute=alias<label>              type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<label_pri>          type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<tag_act>            type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<cvlan_act>          type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<cvlan_value>        type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<svlan_act>          type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<svlan_value>        type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<cpri_act>           type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<cpri_value>         type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<spri_act>           type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<spri_value>         type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<trans_act>          type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<trans_egrs>         type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<trans_reason>       type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<l3_rep_index>       type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<vlan_mark_en>       type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<vlan_mark_value>    type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<pri_mark_en>        type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<pri_mark_value>     type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<pri_mode>           type<uint>     range<0x0,0xFFFFFFFF>   default<0x00000007>;  
+attribute=alias<car_en>             type<uint>     range<0x0,0xFFFFFFFF>   default<0x00000001>;  
+attribute=alias<arl_fid_en>         type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<pppoe_add_en>       type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<mac_learn_en>       type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<tcfl_rep_en>        type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<tfrt_index>         type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<ecar_en>            type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<ecar_id>            type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<stpid_rep_mode>     type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<ctpid_rep_mode>     type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<trans_vlan_mode>    type<uint>     range<0x0,0xFFFFFFFF>   default<0x00000005>;  
+attribute=alias<map_vlan_mode>      type<uint>     range<0x0,0xFFFFFFFF>   default<0x00000005>;  
+attribute=alias<color>              type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<statis_en>          type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<statis_id>          type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+                                      
+
+
+[help]
+typedef struct 
+{
+    /* BEGIN: Added by w00180499, 2012/2/13 */
+    /* 索引 : 对应fmap表表项序号 */
+    uint    ui_index;
+    /* END:   Added by w00180499, 2012/2/13 */
+    
+    uint    ui_fid;                         /* 0 - 404 */
+
+    HI_BOOL_E   em_valid;                   /* 表项有效标志 */   
+    HI_BOOL_E   em_eof;                     /* 组合流结束标志符 */    
+    //HI_BOOL_E   em_age_en;                  /* 表项老化使能 */
+
+    /* 匹配规则 */
+    hi_dp_flow_efc_rule_s   st_rule;        /* 匹配规则 */
+
+    /* 分类操作指示 */
+    HI_DP_FLOW_LABEL_E      em_label;       /* 分类标签，用于确定流操作类型   */
+    /* BEGIN: Added by shengjing, 2010/10/15   问题单号:SD5113V200新增*/
+    uint                    ui_label_pri;  /* 表项优先级，仅在同一Label内有效 */
+    /* END:   Added by shengjing, 2010/10/15 */
+
+    /* TAG等分类操作行为 */    
+    hi_dp_flow_efc_act_s    st_act;         /* 对应行为 */
+
+}hi_dp_flow_efc_table_item_s;
+
+
+typedef struct 
+{
+
+    /* 匹配域0 */
+    HI_DP_FLOW_CHARACTER_G0_E    em_g0;         /* 域选择组0          */
+    uint    ui_key0;                            /* 对应G0的匹配域     */ 
+
+    //uint    ui_mask0;                           /* K0域的mask         */
+    
+    HI_DP_MATCH_MODE_E   em_g0_match_mode;
+    
+
+    /* 匹配域1 */    
+    HI_DP_FLOW_CHARACTER_G1_E    em_g1;         /* 域选择组1          */
+    uint    ui_key1;                            /* 对应G1的匹配域     */
+
+    //uint    ui_mask1;                           /* K1域的mask         */
+    
+    HI_DP_MATCH_MODE_E   em_g1_match_mode;
+
+    hi_dp_port_u    u_igr;
+
+    uchar uc_mac[HI_DP_MAC_BYTE_NUM];         /* 仅G0为0x34/0x35时有效 */
+    uchar uc_ip[HI_DP_IPV6_ADDR_BYTE_NUM];    /* ipv6地址;仅G0为0x36/0x37时有效 */
+    
+}hi_dp_flow_efc_rule_s;
+
+
+typedef struct  
+{
+    /* tag  行为 */
+    HI_DP_TAG_ACT_E em_tag_act;             /* 报文TAG处理           */
+        
+    /* vlan   行为 */
+    HI_DP_VALN_ACT_E    em_cvlan_act;       /* 内层VLAN的操作        */   
+    uint    ui_cvlan_value;                 /* 内层VLAN操作值  */
+    HI_DP_VALN_ACT_E    em_svlan_act;       /* 外层VLAN的操作            */       
+    uint    ui_svlan_value;                 /* 外层VLAN的操作值       */ 
+
+    /* pri 行为 */
+    HI_DP_8021P_ACT_E   em_cpri_act;        /* 内层优先级的操作          */       
+    uint    ui_cpri_value;                  /* 内层优先级的操作值        */
+
+    HI_DP_8021P_ACT_E   em_s8021p_act;      /* 外层802.1p的操作          */        
+    uint    ui_s8021p_value;                /* 外层802.1p的操作值        */
+
+    /* 转发行为 */
+    HI_DP_TRANS_ACT_E   em_trans_act ;      /* 报文转发行为,包括了NAT,NAPT转发指示 */
+                                            /* SD5113V200有扩展 */
+    /*保留兼容,逐步废弃*/
+    //HI_DP_PORT_E    em_trans_egr;           /* 指定转发或下行路由的转发端口  */
+
+    /* BEGIN: Added by shengjing, 2010/10/16   问题单号:SD5113V200新增*/
+    hi_dp_port_u    u_trans_egrs;           /*指定转发,多端口*/  
+    /* END:   Added by shengjing, 2010/10/16 */
+
+    uint            ui_trans_reason;                /* 转发原因,主要用于捕获到CPU口的情况 */
+    
+    
+    /* 指向L3模块的NAPT/NAT 加速表索引 */
+    uint    ui_l3_rep_index;                /* NAT/ROUTE替换表索引,NAPT不需要,        */
+                                            /* NAT / ROUTE 根据此索引查询L3的SUBNET表以确定替换操作
+                                            而NAPT则直接查询SUBNET表以IP,PORT为匹配项 */
+                                            /* SD5113V200扩展为8bit；0-255 */
+
+
+
+    /* VLAN  mark (标记)行为 */
+    HI_BOOL_E   em_vlan_mark_en;            /* VLAN marking使能           */    
+    uint        ui_vlan_mark_value;             /* VLAN marking值             */
+    /* BEGIN: Added by shengjing, 2010/10/16   问题单号:SD5113V200新增*/
+    //HI_DP_VLAN_MODE_E  em_vlan_mode;        /* 基于流选择vlan模式， 配置值 = 枚举定义 + 1 */
+    /* END:   Added by shengjing, 2010/10/16 */
+
+    /* PRI  mark 行为 */    
+    HI_BOOL_E   em_pri_mark_en;             /* PRI marking使能            */    
+    uint    ui_pri_mark_value;              /* PRI marking值              */
+    /* BEGIN: Added by shengjing, 2010/10/16   问题单号:SD5113V200新增*/
+    HI_DP_PRI_MODE_E  em_pri_mode;           /* 基于流选择pri模式；配置值 = 枚举定义 + 1 */
+    /* END:   Added by shengjing, 2010/10/16 */
+
+    /* CAR 抑制指示 默认为TRUE */
+    HI_BOOL_E   em_car_en;                  /* 流做CAR标识        CAR在QOS模块     */
+    
+    /* 流查找ARL TAG操作使能 */    
+    HI_BOOL_E   em_arl_fid_en;              /* ARL FID动作使能         */  
+
+    /* Start: Add by G174254 2011/7/13 pppoe_add_en 
+          仅在V100 路由、NAT/NAPT 时才能使用到pppoe_add_en标志，
+          V200不再使用，为了兼容产品V100代码，暂时采用保留废弃的办法，
+          后续会逐步删除 */
+    HI_BOOL_E   em_pppoe_add_en;
+    /* End: Add by G174254 2011/7/13 pppoe_add_en */
+
+    /* 基于流的MAC地址学习使能 */   
+    HI_BOOL_E   em_mac_learn_en;            /* 基于流学习MAC使能           */
+
+    /* BEGIN: Added by shengjing, 2010/10/16   问题单号:SD5113V200新增*/
+    /* TC/FL修改 */
+    /*普通报文查tfrt_rep表,隧道报文查tunnel_tfrt_rep表*/
+    HI_BOOL_E   em_tcfl_rep_en;            /* TC/FL 指定修改使能 */
+    uint        ui_tfrt_index;             /* TFRT 查表索引*/
+
+    /* 基于流做car, ECAR */
+    HI_BOOL_E    em_ecar_en;                 /* ECAR使能 */
+    uint         ui_ecar_id;              /* ECAR ID,ECAR查表索引 */
+    /* END:   Added by shengjing, 2010/10/16 */
+
+    /* BEGIN: Added by shengjing, 2011/9/6   PN:5115新增*/
+    //HI_BOOL_E    em_capt_rtp_en;       /* 捕获RTP流使能 */
+
+    HI_DP_TPID_REP_MODE_E    em_stpid_rep_mode;    /* 外层tpid修改模式 */
+    HI_DP_TPID_REP_MODE_E    em_ctpid_rep_mode;    /* 内层tpid修改模式 */
+
+    HI_DP_VLAN_MODE_E   em_trans_vlan_mode;    /* 基于流的转发vlan模式 */
+    HI_DP_VLAN_MODE_E   em_map_vlan_mode;    /* 基于流的映射vlan模式 */
+
+    uint         ui_color;         /* 流的颜色 */ 
+
+    HI_BOOL_E    em_statis_en;        /* 流计数使能 */
+    uint         ui_statis_id;        /* 流统计表索引 */
+    /* END:   Added by shengjing, 2011/9/6 */
+ 
+}hi_dp_flow_efc_act_s;
+

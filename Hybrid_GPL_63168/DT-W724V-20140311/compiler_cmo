@@ -1,0 +1,1 @@
+rm -rf output/build/* && chmod 777 . -R && make openall-clean GPLREL=1 && make openall GPLREL=1

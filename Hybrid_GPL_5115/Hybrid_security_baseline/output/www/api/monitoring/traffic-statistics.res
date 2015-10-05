@@ -1,0 +1,1 @@
+vpath="api/modem_1/connectionstats"E5element="CurrentUpload|CurrentDownload|TotalUpload|TotalDownload|CurrentConnectTime"vpath="FakeResponseString"E5element="CurrentDownloadRate|CurrentUploadRate|TotalConnectTime"FakeResponseString="100|100|1000"

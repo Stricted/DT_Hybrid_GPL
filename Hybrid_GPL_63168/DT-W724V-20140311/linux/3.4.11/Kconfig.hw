@@ -1,0 +1,16 @@
+config ATP_USB_ADAPTOR
+	bool "atp usb adaptor"
+	default n
+
+config INTERNET_LED_SINGTEL
+	bool "Internet Led"
+	default n 
+	depends on BCM96362	
+		
+	
+config BCM96362_DAYINGGASP
+	bool "Implementation daying gasp"
+    depends on BCM96362
+	default n
+	help	
+	  This options enables the support of dayinggasp		  

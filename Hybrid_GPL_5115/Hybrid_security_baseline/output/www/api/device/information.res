@@ -1,0 +1,1 @@
+vpath="api/modem_1/Deviceinfo"E5element="DeviceName|SerialNumber|Imei|HardwareVersion|RouterHWVersion|SoftwareVersion|RouterSWVersion|WebUIVersion|Iccid|Imsi"vpath="api/modem_1/mynum"E5element="Msisdn"vpath="NoResponseString"E5element="Uptime|MacAddress1|MacAddress2|ProductFamilyClassify"NoResponse="NoResponseString"

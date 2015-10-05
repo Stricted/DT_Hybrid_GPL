@@ -1,0 +1,57 @@
+menu "Flash config"
+  
+choice
+	prompt "Choose flash type"
+	default BUILD_NANDFLASH
+
+config BUILD_NORFLASH
+	bool "support norflash"	
+	help
+	  Enable this option if you use norflash	
+	
+config BUILD_NANDFLASH
+	bool "support nandflash"	
+	help
+	  Enable this option if you use nandflash
+
+endchoice
+
+config FLASH_NAND_FIRST_BLOCK_WITH_CFERAM
+	bool "nand flash first block with cferam"
+	depends on BUILD_NANDFLASH
+	default n
+	help
+	  Set nand first block with cferam,bootloader with cfe_rom and cfe_ram.
+
+config FLASH_NAND_BLOCK_SIZE
+	int "nand flash block size"
+	depends on BUILD_NANDFLASH
+	default 16384
+	help
+	  Set nand flash block size,16384:16KB,131072:128KB.
+	  
+config FLASH_NAND_PAGE_SIZE
+	int "nand flash page size"
+	depends on BUILD_NANDFLASH
+	default 512
+	help
+	  Set nand flash page size,small page£º512byte,big page£º2048byte.
+	  
+config FLASH_NAND_OOB_SIZE
+	int "nand flash oob size"
+	depends on BUILD_NANDFLASH
+	default 16
+	help
+	  Set nand flash oob size,small page:16byte,big page:64byte.
+	  
+config BUILD_NANDFLASH_412
+	bool "support nandflash_412"
+	default y
+	depends on BUILD_NANDFLASH
+	help
+	  Enable this option if you use nandflash_412
+
+source "product/flash/FlashLayoutConfig.in"  
+
+endmenu 
+

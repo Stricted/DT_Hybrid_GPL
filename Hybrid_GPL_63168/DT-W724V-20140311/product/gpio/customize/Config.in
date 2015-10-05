@@ -1,0 +1,110 @@
+menu "Customize feature config"
+config GPIO_CTRL_POWER
+		bool "GPIO CTRL POWER"
+		default n
+		help
+			Enable this option if you need to control power module by GPIO
+	  
+if 	GPIO_CTRL_POWER
+config GPIO_CTRL_POWER_MODE
+	int "GPIO_CTRL_POWER_MODE 0 for serial ,1 for normal"
+	default "1"
+	help
+	  Enable this 
+	  
+config GPIO_CTRL_POWER_ACTIVE_PIN
+	int "GPIO_CTRL_POWER_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this 
+	  
+config GPIO_CTRL_POWER_ACTIVE_PIN_STATE
+	int "GPIO_CTRL_POWER_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+endif	##end of GPIO_CTRL_POWER
+
+config GPIO_CTRL_DECT_RST
+		bool "GPIO CTRL DECT RESET"
+		default n
+		help
+			Enable this option if you need to control DECT reset by GPIO
+	  
+if 	GPIO_CTRL_DECT_RST
+config GPIO_CTRL_DECT_RST_MODE
+	int "GPIO_CTRL_DECT_RST_MODE 0 for serial, 1 for normal"
+	default "1"
+	help
+	  Enable this to set GPIO pin mode
+	  
+config GPIO_CTRL_DECT_RST_ACTIVE_PIN
+	int "GPIO_CTRL_DECT_RST_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this to set GPIO pin
+	  
+config GPIO_CTRL_DECT_RST_ACTIVE_PIN_STATE
+	int "GPIO_CTRL_DECT_RST_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this to set GPIO active state
+	  
+endif	##end of GPIO_CTRL_DECT_RST
+
+config GPIO_CTRL_BCM4360_RF
+		bool "GPIO CTRL BCM4360 RF"
+		default n
+		help
+			Enable this option if you need to control BCM4360 RF by GPIO
+	  
+if 	GPIO_CTRL_BCM4360_RF
+config GPIO_CTRL_BCM4360_RF_MODE
+	int "GPIO_CTRL_BCM4360_RF_MODE 0 for serial, 1 for normal"
+	default "1"
+	help
+	  Enable this to set GPIO pin mode
+	  
+config GPIO_CTRL_BCM4360_RF_ACTIVE_PIN
+	int "GPIO_CTRL_BCM4360_RF_ACTIVE_PIN enter the pin for serial or normal"
+	default "-1"
+	help
+	  Enable this to set GPIO pin
+	  
+config GPIO_CTRL_BCM4360_RF_ACTIVE_PIN_STATE
+	int "GPIO_CTRL_BCM4360_RF_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this to set GPIO active state
+	  
+endif	##end of GPIO_CTRL_BCM4360_RF	
+
+config LED_SEQUENCE_BLINK
+		bool "LED SEQUENCE BLINK"
+		default n
+		help
+			Enable this option to sequence blink LED in startup
+
+if 	LED_SEQUENCE_BLINK
+config LED_SEQUENCE_BLINK_ORDER
+	string "LED_SEQUENCE_BLINK_ORDER for blink order"
+	default ""
+	help
+	  Enable this to set blink order
+	  
+config LED_SEQUENCE_BLINK_TIME
+	int "LED_SEQUENCE_BLINK_TIME for blink time interval"
+	default "0"
+	help
+	  Enable this to set blink time interval
+	  
+config LED_SEQUENCE_BLINK_NUMS
+	int "LED_SEQUENCE_BLINK_NUMS for blink Led numbers"
+	default "0"
+	help
+	  Enable this to set blink LED numbers
+	  
+endif	##end of LED_SEQUENCE_BLINK	
+
+endmenu

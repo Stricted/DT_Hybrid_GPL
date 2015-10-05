@@ -1,0 +1,31 @@
+[settings]
+functionname=hi_voip_cli_cfg_composedtone;  
+attributenum=45;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<toneidx>    type<uint>   range<0x0,0xFFFFFFFF>        default<0x00>
+attribute=alias<name>       type<string> range<0,32>                  default<0x00>
+attribute=alias<loop>       type<uint>   range<0x0,0xFFFFFFFF>        default<0x02>
+attribute=alias<voicepath>  type<uint>   range<0x0,0xFFFFFFFF>        default<0x3e8>
+attribute=alias<cnt>        type<uint>   range<0x1,0xFFFFFFFF>        default<0x03>
+
+attribute=alias<tone0>      type<uint>   range<0x0,0xFFFFFFFF>        default<0x00>
+attribute=alias<tone1>      type<uint>   range<0x0,0xFFFFFFFF>        default<0x01>
+attribute=alias<tone2>      type<uint>   range<0x0,0xFFFFFFFF>        default<0x02>
+attribute=alias<tone3>      type<uint>   range<0x0,0xFFFFFFFF>        default<0x00>
+attribute=alias<tone4>      type<uint>   range<0x0,0xFFFFFFFF>        default<0x00>
+attribute=alias<tone5>      type<uint>   range<0x0,0xFFFFFFFF>        default<0x00>
+attribute=alias<tone6>      type<uint>   range<0x0,0xFFFFFFFF>        default<0x00>
+attribute=alias<tone7>      type<uint>   range<0x0,0xFFFFFFFF>        default<0x00>
+
+
+[help]
+usage: cfg_composedtone                                 ; 配置单音信息  
+       cfg_composedtone -v toneidx 1                    ; 音index
+       cfg_composedtone -v name test	   				; 音名字
+       cfg_composedtone -v loop  1                      ; 循环两次（1+1）
+       cfg_composedtone -v voicepath  50                ; voicepath 500ms
+       cfg_composedtone -v cnt  2                       ; composed tone 中包含两个单音
+       cfg_composedtone -v tone0 1                      ; 单音0的index是1
+      

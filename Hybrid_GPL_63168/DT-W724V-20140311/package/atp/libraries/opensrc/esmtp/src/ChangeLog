@@ -1,0 +1,364 @@
+2009-12-24  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, configure.ac: Bump version. Document.
+
+	* Makefile.am, configure.ac: Get it building correctly with latest autotools.
+
+2009-12-24  José Fonseca <jfonseca@vmware.com>
+
+	* main.c: Make force_mda in the esmtprc to work with the -t option (based on
+	patch by Sourav K. Mandal).  force_mda in the esmtprc does not work with the
+	-t option passed to esmtp, because rcfile_parse is called after
+	message_parse_headers is called in the -t handling.  Of course,
+	message_parse_headers relies on the esmtprc to have been parsed already in
+	order to denote all recipients as local when force_mda is specified.
+
+2009-12-16  José Fonseca <jfonseca@users.sourceforge.net>
+
+	* NEWS, configure.ac: Bump version number.
+
+2009-06-27  José Fonseca <jfonseca@users.sourceforge.net>
+
+	* NEWS, esmtprc.5, lexer.l, local.c, local.h, main.c, parser.y: Force mail to
+	be delivered by the MDA.  SF patch 2489938.
+
+2009-03-28  José Fonseca <jfonseca@users.sourceforge.net>
+
+	* NEWS: Update the news.
+
+	* .gitignore: Ignore derived files.
+
+	* esmtp-wrapper: Use locking in esmtp-wrapper (Phil Sutter).  Prevents
+	multiple background deliveries in parallel, and a race condition.
+
+2008-11-14  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, README: Update mutt option name in the user manual (Wu Fengguang).
+
+2008-10-09  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* README: Use ESMTP MTA instead, to try to distinguish from the protocol. 
+	libESMTP -> ESMTP was not a good naming choice but too late to change now...
+
+	* NEWS, autogen.sh, configure.ac: Bump version for release.
+
+2008-09-17  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, esmtprc.5, lexer.l, parser.y, smtp.c, smtp.h: Option to disable
+	Message-ID header (Phil Sutter).
+
+2008-07-10  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS: Update news.
+
+	* smtp.c: Fix NTLM authentication (Nils Rennebarth).
+
+2007-09-03  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, configure.ac: Bump version for release.
+
+	* esmtp-wrapper: Handle mailq's -q option (Phil Sutter).
+
+	* README: Wrapper script documentation (Phil Sutter).
+
+2007-08-15  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, message.c: Handle CR-LF newline endings when parsing the headers.
+
+2007-08-08  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* Makefile.am: Distribute the esmtp-wrapper script.
+
+	* esmtp-wrapper: Minor corrections.
+
+	* NEWS, TODO, esmtp-wrapper: Wrapper script for off-line mail delivery (Phil
+	Sutter).
+
+2007-08-07  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* README: Update the Thawte certificate in the Gmail instructions (Oscar
+	Fernandez).
+
+2007-01-29  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* AUTHORS, README, lexer.l, message.c, message.h, parser.y, sample.esmtprc,
+	xmalloc.h: Convert to UTF-8.
+
+2007-01-27  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* esmtp.1: Describe -I in man page for sendmail (Reuben Thomas).
+
+	* NEWS, local.c: Prevent segfault expanding %F in the MDA string when the
+	reverse path is not specified.
+
+	* esmtprc.5: Fix spelling.
+
+	* NEWS, smtp.c: Use a reasonable default for the reverse path when one is not
+	specified, instead of an empty one.
+
+	* main.c: Fix gcc warning.
+
+2006-03-18  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* autogen.sh, configure.ac: Update to automake-1.9.
+
+	* NEWS, README: Document how to get CA certifcates.
+
+	* esmtp.1, esmtprc.5: Use only ASCII codes.
+
+2006-02-08  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, README: Tips for adding missing Date: headers in messages for local
+	delivery (Bruce Schultz).
+
+2005-08-04  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* TODO: Mention a test suite.
+
+	* NEWS, esmtp.1, esmtprc.5: Corrections to the manpages (Reuben Thomas).
+
+2005-03-10  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS: Prepare for release.
+
+	* NEWS, local.c: Do not pass multiple address to the MDA quoted as a single
+	argument (Kusanagi Kouichi).
+
+2005-02-15  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, esmtprc.5, lexer.l, main.c, main.h, parser.y, smtp.c, smtp.h: Allow
+	to set helo-name. Allow to send out local mail as remote mail by adding a
+	qualifying domain name. Allow forcing envelope-from and Sender headers. Drop
+	possible admin-added sgid priveleges to be dropped after reading the config.
+	(Bernhard Link)
+
+	* NEWS, configure.ac, parser.y: Enforce strict permissions on configuration
+	file (Tiago Macambira).
+
+	* NEWS, acinclude.m4, configure.ac, main.c: Don't require getopt_long (based
+	on SASAJIMA and Dirk Tilger patches).
+
+	* configure.ac: Nonstandard libesmtp dir (Dirk Tilger).
+
+	* autogen.sh: Force usage of automake-1.7
+
+2005-01-11  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* Makefile.am: Idem.
+
+	* configure.ac, parser.y: Fix place of esmtprc config file: esmtprc should
+	put in $sysconfdir, but it's always put in /etc (Sasajima).
+
+2004-06-29  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* smtp.c: Disable SMTP AUTH if no username is given.
+
+2004-06-23  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* TODO: Update TODO file. Remove debian packaging scripts.
+
+2004-02-18  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* TODO, local.c, parser.y: Fail when no configuration file is found. Fix typo
+	in the lexer. Fix compiler warning.
+
+2004-01-13  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, TODO, lexer.l, parser.y, smtp.c, smtp.h: Add a 'postconnect' keyword
+	to execute a command after closing a SMTP connection.
+
+	* esmtp.1, esmtprc.5: Document when and how the local MDA is invoked. Fix
+	some typos.
+
+	* autogen.sh, configure.ac: Tell configure.ac to generate a config.h instead
+	of a long gcc comand line.
+
+2003-11-16  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, acinclude.m4, configure.ac: Minor version bump. Use libesmtp-config
+	for libESMTP flags detection. Cleaned configure.ac.
+
+2003-11-14  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, configure.ac: Bump version for release.
+
+2003-11-07  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, smtp.c: Don't call smtp_starttls_set_password_cb() unless StartTLS is
+	enabled (Maurice Galland).
+
+2003-11-06  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, esmtp.spec: RedHat RPM spec file (Robert Scheck).
+
+2003-11-03  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* AUTHORS, NEWS, README, TODO, autogen.sh, message.c, smtp.c: Detailed
+	documentation on how to use the StartTLS extension. Handle StarTLS events.
+	Fixed some compiler warnings.
+
+2003-10-17  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, esmtprc.5, lexer.l, parser.y, sample.esmtprc, smtp.c, smtp.h: New
+	'preconnect' keyword to execute a command prior to opening an SMTP connection
+	(Daniel Richard G.).
+
+	* Makefile.am, configure.ac: Several fixes to the autotools scripts. (Daniel
+	Richard G.)
+
+	* smtp.c: Fix compiler warning. (Daniel Richard G.)
+
+2003-10-04  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, README, configure.ac, esmtp.1, esmtprc.5, lexer.l, message.c,
+	parser.y, smtp.c: Version bump. New 'default' keyword for indentities
+	(Vitezslav Batrla). Documentation updates.
+
+2003-08-11  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* smtp.c: Don't fail when libesmtp is compiled without openssl support
+	(tox@centrum.cz).
+
+2003-07-15  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* esmtp.1, esmtprc.5: Detect the MDA for debconf. Minor documentation
+	enhancements. Add the [forgoten] esmtprc.5 manpage.
+
+2003-07-14  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* Makefile.am, NEWS, local.c, message.c, message.h, smtp.c: Check th MDA
+	return status.  Fixed a bug the input buffering which when using the '-t'
+	option and piping the input caused the parsed headers to be lost. Undo the
+	inclusion of the debian directory and the source package. Tweak the
+	dpkggen.sh script.
+
+	* Makefile.am, NEWS, README, TODO, esmtp.1: Add a man page for the
+	configuration file.
+
+	* configure.ac: Bump patch level version.
+
+	* Makefile.am: Further debian packaging fixes. Include debian directory on
+	the source package.
+
+2003-07-12  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS: Debian packaging fixes.
+
+	* README.mutt: Remove README.mutt - its information is now included in README
+
+2003-07-05  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* esmtp.1, local.c, main.c: Minor fixes to the man page. Fixed some minor
+	memory leaks.
+
+	* NEWS, README, TODO, esmtp.1: Spelling corrections.
+
+	* NEWS, README: Remove the rationale from the manual. Add timestamps to the
+	version log.
+
+	* Makefile.am, NEWS, README, TODO, esmtp.1, local.c, main.c, message.c,
+	message.h, rfc822.c, sample.esmtprc, smtp.c, smtp.h: Better documentation.
+	Support for more sendmail options. Error verification for libESMTP calls.
+
+2003-07-04  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* AUTHORS, Makefile.am, esmtp.1: Removed Brian Stafford from the authors for
+	sake of consistency - the code from his orginal libESMTP example has been
+	pratically rewritten and there are many other people which code I took here.
+	These sources are all referred in the sources. Add some missing source files
+	to automake sources.
+
+	* local.c, main.c, main.h, message.c, parser.y, rcfile.h, smtp.c: Search for
+	the global configuration file. Do not make the CRLF line translation for the
+	MDA pipe.
+
+2003-07-03  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* Makefile.am, NEWS, TODO, local.c, main.c, sample.esmtprc: Documentation and
+	packaging fixes for the latest changes.
+
+	* lexer.l, local.c, local.h, main.c, message.c, message.h, parser.y,
+	rfc822.c, smtp.c, smtp.h, xmalloc.h: Exit with an error code immediately
+	whenever an error. Extensive use of xmalloc and friends.
+
+	* Makefile.am, TODO, esmtp.1, esmtp.h, lexer.l, list.h, local.c, local.h,
+	main.c, main.h, message.c, message.h, parser.y, rfc822.c, rfc822.h, smtp.c,
+	smtp.h: Modularization of the code. Hability to get the recipients from the
+	message headers. Local delivery via a MDA.
+
+2003-06-27  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* Makefile.am, TODO, configure.ac, esmtp.1, main.c: Include the sendmail
+	compatibility executables symlinks and the respective man pages.
+
+2003-06-24  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, esmtp.1: Beautification of the manpage. Updated the news.
+
+	* acinclude.m4, autogen.sh, configure.ac: Fixes to the configure script to
+	cope with different pthread and getopt libraries in order to compile on
+	FreeBSD and possibly also on other platforms (Tim Hemel).
+
+2003-05-18  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, README.mutt, autogen.sh, configure.ac, sample.esmtprc: Bumped to
+	version 0.4.  Added Debian packaging.  Fixes to the autogen.sh script. 
+	Mentioned some caveats in the documentation.
+
+2003-02-24  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* Makefile.am: Add esmtp.h to esmtp sources.
+
+2003-02-11  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* NEWS, TODO, esmtp.1, esmtp.h, lexer.l, main.c, parser.y, sample.esmtprc:
+	Support for identities and custom configuration files based on patch by
+	Jerome <freejazz@gmx.fr>.  Respective documentation updates.  The use of '='
+	in the configuration file was made optional.
+
+2002-11-09  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* README.mutt, TODO, esmtp.1, main.c: Implemented the '-X' option. Use of
+	event_cb for the verbose output.
+
+	* main.c: Fix bug where legitimate '-q' options could be considered invalid.
+
+	* README, README.mutt, TODO, lexer.l, main.c, parser.y: Source formatting
+	fixes.
+
+	* README.mutt: Mention the envelope sender flag in README.mutt.
+
+2002-11-05  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* configure.ac, main.c: Version bump. Minor code reordering.
+
+2002-10-10  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* configure.ac: Use updated autotools syntax. Generate bzip2 tarballs
+
+2002-10-03  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* Makefile.am: Tell automake to include the man pages in the source package
+
+2002-09-29  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* configure.ac: Bumped program version to 0.2
+
+	* esmtp.1, main.c, parser.y: Removed the BUGS section of the man page. Fixed
+	a dipplicate case statement. Added yyerror declaration to fixe the mismathced
+	declaration warning.
+
+	* AUTHORS, README, README.mutt, TODO: Several documentions fixes and
+	additions.
+
+	* esmtp.1, main.c: Better handling of the -b options and update of the man
+	page. Use sendmail exit codes.
+
+	* README.mutt: README.mutt example used a deprecated option '-m'
+
+	* esmtp.1: Some small corrections to the man page
+
+2002-09-26  José Fonseca <jrfonseca@users.sourceforge.net>
+
+	* COPYING, INSTALL, Makefile.am, README.mutt, TODO, autogen.sh, configure.ac,
+	esmtp.1, lexer.l, main.c, parser.y, sample.esmtprc: Initial revision

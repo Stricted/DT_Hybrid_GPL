@@ -1,0 +1,11 @@
+[settings]
+functionname=hi_kernel_accel_bridge_cmdtype_dump;  
+attributenum=0;
+attributeflag = 0 ;   //0:close 1:open
+
+[parameter]
+
+[help]
+
+
+

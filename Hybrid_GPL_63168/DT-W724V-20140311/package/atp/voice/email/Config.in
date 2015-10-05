@@ -1,0 +1,5 @@
+config BUILD_FETCHEMAIL
+	bool "Fetch Email"
+	default n
+	help
+	  Support Fetch Email

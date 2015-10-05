@@ -1,0 +1,13 @@
+[settings]
+functionname=hi_kernel_ploam_pwd_set;  
+attributenum=1;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<pwd>          type<binary> range<0,10>            default<0x01 0x02 0x03 0x04 0x05 0x06 0x07 0x08 0x09 0x0a>;
+
+[help]
+usage: setpwd								                             ; ÉèÖÃÈ±Ê¡×¢²áÃÜÂë
+	   setpwd -v pwd "0x01 0x02 0x03 0x04 0x05 0x06 0x07 0x08 0x09 0x0a" ; ÉèÖÃÖ¸¶¨×¢²áÃÜÂë
+
+

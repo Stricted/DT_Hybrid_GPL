@@ -1,0 +1,12 @@
+config BUILD_IPROUTE2
+	bool "iproute2"
+	default y
+	help
+	  Support iproute.
+	  
+config BUILD_IPROUTE2_TC
+	bool "TC"
+	default y
+	depends on BUILD_IPROUTE2
+	help
+	  Support tc.

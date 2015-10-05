@@ -1,0 +1,15 @@
+config BUILD_LEDSERVICE
+	bool "Support Led Service"
+	default n
+
+menu "WAN LED Status Selection"
+config WS323_MULTIWAN_LED_STATUS
+	bool "MultiWAN led Status"
+	default n
+	depends on BUILD_LEDSERVICE
+endmenu
+
+config BUILD_DT_W724V_ONLINE_LED
+	bool "Support W724v online led"
+	depends on BUILD_LEDSERVICE
+	default n

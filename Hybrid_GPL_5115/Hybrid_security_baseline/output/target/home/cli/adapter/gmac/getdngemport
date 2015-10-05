@@ -1,0 +1,27 @@
+[settings]
+functionname=hi_adapter_cli_gmac_get_down_gemport_type;
+attributenum=3;
+attributeflag = 1 ;
+
+[parameter]
+attribute=alias<gemport>  type<ushort>   range<0x0,0xfff>     default<1>;
+attribute=alias<res>      type<ushort>   range<0x0,0x0>       default<0>;
+attribute=alias<type>     type<uint>     range<0x0,0x4>       default<3>;
+
+
+[help]
+typedef struct
+{
+    hi_ushort16 us_gemport;
+    hi_ushort16 us_resv;
+    hi_lsw_gpon_dn_port_type_e em_type;
+}hi_gmac_dn_gemport_s;
+
+typedef enum
+{
+    HI_LSW_GPON_DN_MC_PORT_E  = 0,       /* 用于承载组播以太帧（包括CESoP帧）的Port */
+    HI_LSW_GPON_DN_OMCI_PORT_E ,         /* 用于承载OMCI信元的Port */
+    HI_LSW_GPON_DN_TDM_PORT_E  ,         /* 用于承载TDMoGEM帧（即Native TDM帧）的Port */
+    HI_LSW_GPON_DN_ETH_PORT_E,           /* 用于承载其他以太帧的Port */
+    HI_LSW_GPON_DN_PRBS_PORT_E ,         /* 用于承载PRBS校验报文 */    
+}hi_lsw_gpon_dn_port_type_e;

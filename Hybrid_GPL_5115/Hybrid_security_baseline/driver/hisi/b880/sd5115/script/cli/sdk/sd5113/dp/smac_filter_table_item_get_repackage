@@ -1,0 +1,22 @@
+[settings]
+functionname=0xF7002004;
+attributenum=4;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       		  type<uint>     range<0x0,0xFFFFFFFF>  default<0x00000402>; /*È«¾ÖÄ£¿é*/
+attribute=alias<em_port>       		  type<int>      range<0x0,0x08>        default<0x00000000>;
+attribute=alias<em_filter_mode>       type<int>      range<0x0,0x03>        default<0x00000000>;
+attribute=alias<st_item>              type<binary>   range<0,96>            default<0x00000000>;
+
+
+[help]
+typedef struct 
+{
+      HI_DP_PORT_E  em_port;
+
+      HI_DP_SMAC_FILTER_MODE_E  em_filter_mode;
+    
+      hi_dp_smac_filter_list_s  st_item[HI_DP_SMAC_FILTER_LIST_NUM];
+    
+}hi_dp_smac_filter_table_item_s;

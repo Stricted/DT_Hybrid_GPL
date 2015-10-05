@@ -1,0 +1,15 @@
+[settings]
+functionname=hi_kernel_napt_wandev_get;
+attributenum=2;
+attributeflag = 1;
+
+[parameter]
+attribute=alias<ifname>       type<string> range<0x0,16> 	      default<nas0>;
+attribute=alias<phyport>      type<uint>   range<0x0,0xFFFFFFFF>  default<5>;
+
+[help]
+typedef struct
+{
+    hi_uchar8 uc_ifname[HI_KERNEL_NAPT_MAX_WANDEV_NAME_LEN]; 
+    hi_uint32 ui_phyport; 
+}hi_kernel_napt_wandev_s; 

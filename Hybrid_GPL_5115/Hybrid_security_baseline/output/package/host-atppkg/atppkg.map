@@ -1,0 +1,450 @@
+Archive member included because of file (symbol)
+
+/usr/lib/libc_nonshared.a(elf-init.oS)
+                              /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o (__libc_csu_fini)
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+ .debug_aranges
+                0x0000000000000000       0x20 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+ .debug_pubnames
+                0x0000000000000000       0x25 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+ .debug_info    0x0000000000000000       0xfa /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+ .debug_abbrev  0x0000000000000000       0x5f /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+ .debug_line    0x0000000000000000       0x82 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+ .debug_str     0x0000000000000000       0xf5 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crti.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/i586-suse-linux/4.3/crtbegin.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/z00250609/hybrid/5115_GPL/Hybrid_security_baseline/output/package/host-atppkg/genFactoryPartition.o
+ .group         0x0000000000000000        0x8 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .debug_abbrev  0x0000000000000000       0xd6 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .debug_info    0x0000000000000000      0x11a /usr/lib/libc_nonshared.a(elf-init.oS)
+ .debug_line    0x0000000000000000       0x7e /usr/lib/libc_nonshared.a(elf-init.oS)
+ .debug_frame   0x0000000000000000       0x4c /usr/lib/libc_nonshared.a(elf-init.oS)
+ .debug_loc     0x0000000000000000       0x6b /usr/lib/libc_nonshared.a(elf-init.oS)
+ .debug_pubnames
+                0x0000000000000000       0x3a /usr/lib/libc_nonshared.a(elf-init.oS)
+ .debug_aranges
+                0x0000000000000000       0x20 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .debug_str     0x0000000000000000       0xdb /usr/lib/libc_nonshared.a(elf-init.oS)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/i586-suse-linux/4.3/crtend.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+LOAD /usr/lib/gcc/i586-suse-linux/4.3/../../../crti.o
+LOAD /usr/lib/gcc/i586-suse-linux/4.3/crtbegin.o
+LOAD /home/z00250609/hybrid/5115_GPL/Hybrid_security_baseline/output/package/host-atppkg/genFactoryPartition.o
+LOAD /usr/lib/gcc/i586-suse-linux/4.3/../../../libm.so
+LOAD /usr/lib/gcc/i586-suse-linux/4.3/libgcc.a
+LOAD /usr/lib/gcc/i586-suse-linux/4.3/libgcc_s.so
+LOAD /usr/lib/gcc/i586-suse-linux/4.3/../../../libc.so
+START GROUP
+LOAD /lib/libc.so.6
+LOAD /usr/lib/libc_nonshared.a
+LOAD /lib/ld-linux.so.2
+END GROUP
+LOAD /usr/lib/gcc/i586-suse-linux/4.3/libgcc.a
+LOAD /usr/lib/gcc/i586-suse-linux/4.3/libgcc_s.so
+LOAD /usr/lib/gcc/i586-suse-linux/4.3/crtend.o
+LOAD /usr/lib/gcc/i586-suse-linux/4.3/../../../crtn.o
+                0x0000000008048000                PROVIDE (__executable_start, 0x8048000)
+                0x0000000008048154                . = (0x8048000 + SIZEOF_HEADERS)
+
+.interp         0x0000000008048154       0x13
+ *(.interp)
+ .interp        0x0000000008048154       0x13 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+
+.note.ABI-tag   0x0000000008048168       0x20
+ .note.ABI-tag  0x0000000008048168       0x20 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+
+.note.SuSE      0x0000000008048188       0x18
+ .note.SuSE     0x0000000008048188       0x18 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+
+.note.gnu.build-id
+                0x00000000080481a0       0x24
+ *(.note.gnu.build-id)
+ .note.gnu.build-id
+                0x00000000080481a0       0x24 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+
+.hash           0x00000000080481c4       0x98
+ *(.hash)
+ .hash          0x00000000080481c4       0x98 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+
+.gnu.hash       0x000000000804825c       0x30
+ *(.gnu.hash)
+ .gnu.hash      0x000000000804825c       0x30 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+
+.dynsym         0x000000000804828c      0x130
+ *(.dynsym)
+ .dynsym        0x000000000804828c      0x130 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+
+.dynstr         0x00000000080483bc      0x11d
+ *(.dynstr)
+ .dynstr        0x00000000080483bc      0x11d /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+
+.gnu.version    0x00000000080484da       0x26
+ *(.gnu.version)
+ .gnu.version   0x00000000080484da       0x26 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+
+.gnu.version_d  0x0000000008048500        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000000000000        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+
+.gnu.version_r  0x0000000008048500       0x30
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000008048500       0x30 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+
+.rel.dyn        0x0000000008048530       0x20
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ .rel.text      0x0000000000000000        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x0000000008048530        0x8 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.bss       0x0000000008048538       0x18 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+ *(.rel.ifunc)
+
+.rel.plt        0x0000000008048550       0x68
+ *(.rel.plt)
+ .rel.plt       0x0000000008048550       0x68 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+                0x00000000080485b8                PROVIDE (__rel_iplt_start, .)
+ *(.rel.iplt)
+ .rel.iplt      0x0000000000000000        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+                0x00000000080485b8                PROVIDE (__rel_iplt_end, .)
+
+.init           0x00000000080485b8       0x30
+ *(.init)
+ .init          0x00000000080485b8       0x22 /usr/lib/gcc/i586-suse-linux/4.3/../../../crti.o
+                0x00000000080485b8                _init
+ .init          0x00000000080485da        0x5 /usr/lib/gcc/i586-suse-linux/4.3/crtbegin.o
+ .init          0x00000000080485df        0x5 /usr/lib/gcc/i586-suse-linux/4.3/crtend.o
+ .init          0x00000000080485e4        0x4 /usr/lib/gcc/i586-suse-linux/4.3/../../../crtn.o
+
+.plt            0x00000000080485e8       0xe0
+ *(.plt)
+ .plt           0x00000000080485e8       0xe0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+                0x00000000080485f8                fputs@@GLIBC_2.0
+                0x0000000008048618                strncpy@@GLIBC_2.0
+                0x0000000008048628                __libc_start_main@@GLIBC_2.0
+                0x0000000008048638                getopt_long@@GLIBC_2.0
+                0x0000000008048648                fseek@@GLIBC_2.0
+                0x0000000008048658                fclose@@GLIBC_2.1
+                0x0000000008048668                strcpy@@GLIBC_2.0
+                0x0000000008048678                ftell@@GLIBC_2.0
+                0x0000000008048688                fprintf@@GLIBC_2.0
+                0x0000000008048698                fputc@@GLIBC_2.0
+                0x00000000080486a8                strcmp@@GLIBC_2.0
+                0x00000000080486b8                exit@@GLIBC_2.0
+ *(.iplt)
+ .iplt          0x0000000000000000        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+
+.text           0x00000000080486d0      0x4bc
+ *(.text.unlikely .text.*_unlikely)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00000000080486d0       0x24 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+                0x00000000080486d0                _start
+ .text          0x00000000080486f4        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crti.o
+ *fill*         0x00000000080486f4        0xc 90909090
+ .text          0x0000000008048700       0x83 /usr/lib/gcc/i586-suse-linux/4.3/crtbegin.o
+ *fill*         0x0000000008048783        0x1 90909090
+ .text          0x0000000008048784      0x360 /home/z00250609/hybrid/5115_GPL/Hybrid_security_baseline/output/package/host-atppkg/genFactoryPartition.o
+                0x0000000008048784                GetOffset
+                0x00000000080487a2                GetPartionSize
+                0x00000000080487b5                BuildFactoryPartition
+                0x00000000080487b6                main
+                0x0000000008048aad                GetImageSize
+ *fill*         0x0000000008048ae4        0xc 90909090
+ .text          0x0000000008048af0       0x6a /usr/lib/libc_nonshared.a(elf-init.oS)
+                0x0000000008048af0                __libc_csu_fini
+                0x0000000008048b00                __libc_csu_init
+ .text.__i686.get_pc_thunk.bx
+                0x0000000008048b5a        0x4 /usr/lib/libc_nonshared.a(elf-init.oS)
+                0x0000000008048b5a                __i686.get_pc_thunk.bx
+ *fill*         0x0000000008048b5e        0x2 90909090
+ .text          0x0000000008048b60       0x2a /usr/lib/gcc/i586-suse-linux/4.3/crtend.o
+ *fill*         0x0000000008048b8a        0x2 90909090
+ .text          0x0000000008048b8c        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crtn.o
+ *(.gnu.warning)
+
+.fini           0x0000000008048b8c       0x1c
+ *(.fini)
+ .fini          0x0000000008048b8c       0x13 /usr/lib/gcc/i586-suse-linux/4.3/../../../crti.o
+                0x0000000008048b8c                _fini
+ .fini          0x0000000008048b9f        0x5 /usr/lib/gcc/i586-suse-linux/4.3/crtbegin.o
+ .fini          0x0000000008048ba4        0x4 /usr/lib/gcc/i586-suse-linux/4.3/../../../crtn.o
+                0x0000000008048ba8                PROVIDE (__etext, .)
+                0x0000000008048ba8                PROVIDE (_etext, .)
+                0x0000000008048ba8                PROVIDE (etext, .)
+
+.rodata         0x0000000008048ba8      0x246
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x0000000008048ba8        0x4 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+                0x0000000008048ba8                _fp_hw
+ .rodata.cst4   0x0000000008048bac        0x4 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+                0x0000000008048bac                _IO_stdin_used
+ .rodata.str1.1
+                0x0000000008048bb0      0x23e /home/z00250609/hybrid/5115_GPL/Hybrid_security_baseline/output/package/host-atppkg/genFactoryPartition.o
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr   0x0000000008048df0       0x1c
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x0000000008048df0       0x1c /usr/lib/libc_nonshared.a(elf-init.oS)
+
+.eh_frame       0x0000000008048e0c       0x58
+ *(.eh_frame)
+ .eh_frame      0x0000000008048e0c       0x54 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .eh_frame      0x0000000008048e60        0x4 /usr/lib/gcc/i586-suse-linux/4.3/crtend.o
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x0000000008048e64                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
+                0x0000000008049ef4                . = (0x1000 DATA_SEGMENT_ALIGN 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x0000000008049ef4        0x0
+                0x0000000008049ef4                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x0000000008049ef4                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x0000000008049ef4        0x0
+                0x0000000008049ef4                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x0000000008049ef4                PROVIDE (__init_array_end, .)
+
+.fini_array     0x0000000008049ef4        0x0
+                0x0000000008049ef4                PROVIDE (__fini_array_start, .)
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+                0x0000000008049ef4                PROVIDE (__fini_array_end, .)
+
+.ctors          0x0000000008049ef4        0x8
+ *crtbegin.o(.ctors)
+ .ctors         0x0000000008049ef4        0x4 /usr/lib/gcc/i586-suse-linux/4.3/crtbegin.o
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ .ctors         0x0000000008049ef8        0x4 /usr/lib/gcc/i586-suse-linux/4.3/crtend.o
+
+.dtors          0x0000000008049efc        0x8
+ *crtbegin.o(.dtors)
+ .dtors         0x0000000008049efc        0x4 /usr/lib/gcc/i586-suse-linux/4.3/crtbegin.o
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ .dtors         0x0000000008049f00        0x4 /usr/lib/gcc/i586-suse-linux/4.3/crtend.o
+                0x0000000008049f00                __DTOR_END__
+
+.jcr            0x0000000008049f04        0x4
+ *(.jcr)
+ .jcr           0x0000000008049f04        0x0 /usr/lib/gcc/i586-suse-linux/4.3/crtbegin.o
+ .jcr           0x0000000008049f04        0x4 /usr/lib/gcc/i586-suse-linux/4.3/crtend.o
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic        0x0000000008049f08       0xe8
+ *(.dynamic)
+ .dynamic       0x0000000008049f08       0xe8 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+                0x0000000008049f08                _DYNAMIC
+
+.got            0x0000000008049ff0        0x4
+ *(.got)
+ .got           0x0000000008049ff0        0x4 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+ *(.igot)
+                0x0000000008049ff4                . = (. DATA_SEGMENT_RELRO_END 0xc)
+
+.got.plt        0x0000000008049ff4       0x40
+ *(.got.plt)
+ .got.plt       0x0000000008049ff4       0x40 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+                0x0000000008049ff4                _GLOBAL_OFFSET_TABLE_
+ *(.igot.plt)
+ .igot.plt      0x0000000000000000        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+
+.data           0x000000000804a034      0x1d8
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000000000804a034        0x4 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+                0x000000000804a034                data_start
+                0x000000000804a034                __data_start
+ .data          0x000000000804a038        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crti.o
+ .data          0x000000000804a038        0x4 /usr/lib/gcc/i586-suse-linux/4.3/crtbegin.o
+                0x000000000804a038                __dso_handle
+ .data          0x000000000804a03c      0x1cd /home/z00250609/hybrid/5115_GPL/Hybrid_security_baseline/output/package/host-atppkg/genFactoryPartition.o
+                0x000000000804a03c                g_ulFlashLayoutBegin
+                0x000000000804a0ac                ucff
+ *fill*         0x000000000804a209        0x3 00
+ .data          0x000000000804a20c        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .data          0x000000000804a20c        0x0 /usr/lib/gcc/i586-suse-linux/4.3/crtend.o
+ .data          0x000000000804a20c        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crtn.o
+
+.data1
+ *(.data1)
+                0x000000000804a20c                _edata = .
+                0x000000000804a20c                PROVIDE (edata, .)
+                0x000000000804a20c                __bss_start = .
+
+.bss            0x000000000804a220       0x1c
+ *(.dynbss)
+ *fill*         0x000000000804a220        0x0 00
+ .dynbss        0x000000000804a220        0xc /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+                0x000000000804a220                optind@@GLIBC_2.0
+                0x000000000804a224                stderr@@GLIBC_2.0
+                0x000000000804a228                optarg@@GLIBC_2.0
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000000000804a22c        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+ .bss           0x000000000804a22c        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crti.o
+ .bss           0x000000000804a22c        0x8 /usr/lib/gcc/i586-suse-linux/4.3/crtbegin.o
+ .bss           0x000000000804a234        0x8 /home/z00250609/hybrid/5115_GPL/Hybrid_security_baseline/output/package/host-atppkg/genFactoryPartition.o
+                0x000000000804a234                uc00
+ .bss           0x000000000804a23c        0x0 /usr/lib/libc_nonshared.a(elf-init.oS)
+ .bss           0x000000000804a23c        0x0 /usr/lib/gcc/i586-suse-linux/4.3/crtend.o
+ .bss           0x000000000804a23c        0x0 /usr/lib/gcc/i586-suse-linux/4.3/../../../crtn.o
+ *(COMMON)
+                0x000000000804a23c                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x000000000804a23c                . = ALIGN (0x4)
+                0x000000000804a23c                . = ALIGN (0x4)
+                0x000000000804a23c                _end = .
+                0x000000000804a23c                PROVIDE (end, .)
+                0x000000000804a23c                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment.SUSE.OPTs
+                0x0000000000000000        0x6
+ .comment.SUSE.OPTs
+                0x0000000000000000        0x6 /home/z00250609/hybrid/5115_GPL/Hybrid_security_baseline/output/package/host-atppkg/genFactoryPartition.o
+
+.comment        0x0000000000000000       0x39
+ *(.comment)
+ .comment       0x0000000000000000       0x39 /usr/lib/gcc/i586-suse-linux/4.3/../../../crt1.o
+                                         0x3a (size before relaxing)
+ .comment       0x0000000000000000       0x3a /usr/lib/gcc/i586-suse-linux/4.3/../../../crti.o
+ .comment       0x0000000000000000       0x3a /usr/lib/gcc/i586-suse-linux/4.3/crtbegin.o
+ .comment       0x0000000000000000       0x3a /home/z00250609/hybrid/5115_GPL/Hybrid_security_baseline/output/package/host-atppkg/genFactoryPartition.o
+ .comment       0x0000000000000000       0x3a /usr/lib/gcc/i586-suse-linux/4.3/crtend.o
+ .comment       0x0000000000000000       0x3a /usr/lib/gcc/i586-suse-linux/4.3/../../../crtn.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(/home/z00250609/hybrid/5115_GPL/Hybrid_security_baseline/output/package/host-atppkg/genFactoryPartition elf32-i386)

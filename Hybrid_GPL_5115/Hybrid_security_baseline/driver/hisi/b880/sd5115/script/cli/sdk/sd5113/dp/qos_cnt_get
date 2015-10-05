@@ -1,0 +1,57 @@
+[settings]
+functionname=0xF7002004;
+attributenum=22;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       			type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000A18>; /*全局模块*/
+attribute=alias<ui_scar_all>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_scar_cpu_drop>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_scar_local_drop>     type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_scar_bc_drop>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_scar_uuc_drop>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_fcar_all>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_gcar_all>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_fcar_yellow>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_fcar_red>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_gcar_yellow>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_gcar_red>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_total_share_used>    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_find_qid_fail>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_cpucar_pri7_drop>    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_cpucar_pri6_drop>    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_cpucar_pri5_drop>    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_cpucar_pri4_drop>    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_cpucar_pri3_drop>    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_cpucar_pri2_drop>    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_cpucar_pri1_drop>    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_cpucar_pri0_drop>    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+
+[help]
+typedef struct 
+{
+    uint    ui_scar_all;                       /* 参加简单流量抑制的报文个数   */
+    uint    ui_scar_cpu_drop;                  /* SCAR TO_CPU 丢包             */
+    uint    ui_scar_local_drop;                /* SCAR本地转发丢包             */
+    uint    ui_scar_bc_drop;                   /* SCAR广播丢包                 */
+    uint    ui_scar_uuc_drop;                  /* SCAR未知单播丢包             */
+    uint    ui_fcar_all;                       /* 参与第一级CAR的报文个数      */
+    uint    ui_gcar_all;                       /* 参与第二级CAR的报文个数      */
+    uint    ui_fcar_yellow;                    /* 第一级CAR的黄色报文个数      */
+    uint    ui_fcar_red;                       /* 第一级CAR的红色报文个数      */
+    uint    ui_gcar_yellow;                    /* 第二级CAR的黄色报文个数      */
+    uint    ui_gcar_red;                       /* 第二级CAR的红色报文个数      */
+    uint    ui_total_share_used;               /* 队列共享空间已使用统计       */
+    uint    ui_find_qid_fail;                  /* 报文获取QID失败统计          */
+
+    uint    ui_cpucar_pri7_drop;
+    uint    ui_cpucar_pri6_drop;
+    uint    ui_cpucar_pri5_drop;
+    uint    ui_cpucar_pri4_drop;
+    uint    ui_cpucar_pri3_drop;
+    uint    ui_cpucar_pri2_drop;
+    uint    ui_cpucar_pri1_drop;
+    uint    ui_cpucar_pri0_drop;
+
+}hi_dp_qos_cnt_s;
+

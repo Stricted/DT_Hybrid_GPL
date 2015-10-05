@@ -1,0 +1,1 @@
+vpath="api/modem_1/pinoperate"E5element="OperateType|CurrentPin|NewPin|PukCode"

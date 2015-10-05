@@ -1,0 +1,124 @@
+[settings]
+functionname=0xF7002004;
+attributenum=56;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       			type<uint>    range<0x0,0xFFFFFFFF>  default<0x00000D11>; /*全局模块*/
+attribute=alias<not_tocpu>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 不转交CPU的报文     */
+attribute=alias<efc0_matched>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc1_matched>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc2_matched>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc3_matched>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc4_matched>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc5_matched>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc6_matched>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc7_matched>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc8_matched>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc9_matched>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc10_matched>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc11_matched>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc12_matched>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc13_matched>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc14_matched>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<efc15_matched>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义EFC匹配交CPU原因  */
+attribute=alias<unmatched_napt>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 为NAPT进行EFC匹配失败   */
+attribute=alias<un_tag>                  type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* UNTAG报文               */
+attribute=alias<vlan_tag>                type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* VLAN TAG报文            */
+attribute=alias<pri_tag>                 type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* PRI UNTAG报文           */
+attribute=alias<broad_cast>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 广播报文                */
+attribute=alias<igmp>                    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 组播报文                */
+attribute=alias<ip_option>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* IP报文带OPTION          */
+attribute=alias<arp>                     type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* ARP报文                 */
+attribute=alias<rarp>                    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* RARP报文                */
+attribute=alias<pppoe_dis>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* PPPOE DISCOVERY报文     */
+attribute=alias<eapol>                   type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* EAPOL报文               */
+attribute=alias<bpdu>                    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* BPDU报文                */
+attribute=alias<dhcp>                    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* DHCP报文                */
+attribute=alias<ipv6>                    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* IPV6报文                */
+attribute=alias<icmp>                    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* ICMP报文                */
+attribute=alias<custom_type0>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义捕获的报文        */
+attribute=alias<custom_type1>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义捕获的报文        */
+attribute=alias<custom_type2>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义捕获的报文        */
+attribute=alias<custom_type3>            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 自定义捕获的报文        */
+attribute=alias<pppoe_ses>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* PPPOE SESSION报文       */
+attribute=alias<port_moved>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 静态表项的端口发生移动  */
+attribute=alias<mac_learn>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 报文提交给CPU学习       */
+attribute=alias<fail_learn>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 逻辑学习报文失败        */
+attribute=alias<fail_search>             type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 逻辑查表失败            */
+attribute=alias<succ_search>             type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 逻辑查表成功            */
+attribute=alias<napt_accel_on>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* NAPT加速开启时首包提交  */
+attribute=alias<napt_accel_off>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* NAPT加速关闭时报文提交  */
+attribute=alias<unmatched_napt_outnet>   type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* NAPT的OUTNET表不匹配    */
+attribute=alias<oam_1ag_y1731>           type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 802.1ag / Y.1731报文    */
+attribute=alias<oam_3ah>                 type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 802.3ah报文             */
+attribute=alias<pdelay_req>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* Pdelay_req报文捕获交CPU */
+attribute=alias<pdelay_resp>             type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* Pdelay_resp报文捕获交CPU */
+attribute=alias<pdelay_resp_fllow_up>    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* Pdelay_resp_follow_up报文捕获交CPU */
+attribute=alias<management>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* Management报文交CPU */
+attribute=alias<signaling>               type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* Signaling报文交CPU */
+attribute=alias<announce>                type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* Announce报文交CPU */
+attribute=alias<other_1588>              type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* 其他1588协议报文交CPU */
+attribute=alias<napt_down_fail>          type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;         /* NAPT下行查表失败交CPU */
+
+[help]
+/* QM 模块的统计信息: 交CPU原因  */
+typedef struct  
+{
+    uint  not_tocpu;                        /* 不转交CPU的报文     */
+    uint  efc0_matched;                     /* 自定义EFC匹配交CPU原因  */
+    uint  efc1_matched;                     /* 自定义EFC匹配交CPU原因  */
+    uint  efc2_matched;                     /* 自定义EFC匹配交CPU原因  */
+    uint  efc3_matched;                     /* 自定义EFC匹配交CPU原因  */
+    uint  efc4_matched;                     /* 自定义EFC匹配交CPU原因  */
+    uint  efc5_matched;                     /* 自定义EFC匹配交CPU原因  */
+    uint  efc6_matched;                     /* 自定义EFC匹配交CPU原因  */
+    uint  efc7_matched;                     /* 自定义EFC匹配交CPU原因  */
+    uint  efc8_matched;                     /* 自定义EFC匹配交CPU原因  */
+    uint  efc9_matched;                     /* 自定义EFC匹配交CPU原因  */
+    uint  efc10_matched;                    /* 自定义EFC匹配交CPU原因  */
+    uint  efc11_matched;                    /* 自定义EFC匹配交CPU原因  */
+    uint  efc12_matched;                    /* 自定义EFC匹配交CPU原因  */
+    uint  efc13_matched;                    /* 自定义EFC匹配交CPU原因  */
+    uint  efc14_matched;                    /* 自定义EFC匹配交CPU原因  */
+    uint  efc15_matched;                    /* 自定义EFC匹配交CPU原因  */
+    uint  unmatched_napt;                   /* 为NAPT进行EFC匹配失败   */
+    uint  un_tag;                           /* UNTAG报文               */
+    uint  vlan_tag;                         /* VLAN TAG报文            */
+    uint  pri_tag;                          /* PRI UNTAG报文           */
+    uint  broad_cast;                       /* 广播报文                */
+    uint  igmp;                             /* 组播报文                */
+    uint  ip_option;                        /* IP报文带OPTION          */
+    uint  arp;                              /* ARP报文                 */
+    uint  rarp;                             /* RARP报文                */
+    uint  pppoe_dis;                        /* PPPOE DISCOVERY报文     */
+    uint  eapol;                            /* EAPOL报文               */
+    uint  bpdu;                             /* BPDU报文                */
+    uint  dhcp;                             /* DHCP报文                */
+    uint  ipv6;                             /* IPV6报文                */
+    uint  icmp;                             /* ICMP报文                */
+    uint  custom_type0;                     /* 自定义捕获的报文        */
+    uint  custom_type1;                     /* 自定义捕获的报文        */
+    uint  custom_type2;                     /* 自定义捕获的报文        */
+    uint  custom_type3;                     /* 自定义捕获的报文        */
+    uint  pppoe_ses;                        /* PPPOE SESSION报文       */
+    uint  port_moved;                       /* 静态表项的端口发生移动  */
+    uint  mac_learn;                        /* 报文提交给CPU学习       */
+    uint  fail_learn;                       /* 逻辑学习报文失败        */
+    uint  fail_search;                      /* 逻辑查表失败            */
+    uint  succ_search;                      /* 逻辑查表成功            */
+    uint  napt_accel_on;                    /* NAPT加速开启时首包提交  */
+    uint  napt_accel_off;                   /* NAPT加速关闭时报文提交  */
+    uint  unmatched_napt_outnet;            /* NAPT的OUTNET表不匹配    */
+    uint  oam_1ag_y1731;                    /* 802.1ag / Y.1731报文    */
+    uint  oam_3ah;                          /* 802.3ah报文             */
+    uint  pdelay_req;                       /* Pdelay_req报文捕获交CPU */
+    uint  pdelay_resp;                      /* Pdelay_resp报文捕获交CPU */
+    uint  pdelay_resp_fllow_up;             /* Pdelay_resp_follow_up报文捕获交CPU */
+    uint  management;                       /* Management报文交CPU */
+    uint  signaling;                        /* Signaling报文交CPU */
+    uint  announce;                         /* Announce报文交CPU */
+    uint  other_1588;                       /* 其他1588协议报文交CPU */
+    uint  napt_down_fail;                   /* NAPT下行查表失败交CPU */
+
+}hi_dp_logic_tocpu_reason_cnt_s;

@@ -1,0 +1,25 @@
+config BUILD_MLD
+	bool "MLD"
+ 	default y
+	help
+	  Multicast Listener Discovery
+	depends on BUILD_IPV6  
+
+if BUILD_MLD
+menu "ATP MLD Supported Selection"
+
+choice
+	prompt "Choose MLD SNOOPING solution"
+	default BUILD_MLD_SNOOPING
+	depends on BUILD_MLD
+	
+	config BUILD_BR_MLD_SNOOP
+        bool "BROADCOM MLD snoop"
+
+	config BUILD_MLD_SNOOPING
+        bool "ATP MLD snooping"
+
+endchoice
+
+endmenu
+endif

@@ -1,0 +1,16 @@
+menu "Package Image"
+config BUILD_PKGIMAGE
+	bool "Package Image"
+	default y
+
+if BUILD_PKGIMAGE
+source "package/atp/hosttool/package/pkg/Config.in"
+if BROADCOM_CHIP
+source "package/atp/hosttool/package/bcm/Config.in"
+endif
+source "package/atp/hosttool/package/mlzma/Config.in"
+source "package/atp/hosttool/package/qlzma/Config.in"
+source "package/atp/hosttool/package/sign/Config.in"
+source "package/atp/hosttool/package/addecc/Config.in"
+endif
+endmenu

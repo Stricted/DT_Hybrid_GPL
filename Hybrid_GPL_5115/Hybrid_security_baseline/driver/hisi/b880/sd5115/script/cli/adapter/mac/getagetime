@@ -1,0 +1,15 @@
+[settings]
+functionname = hi_adapter_cli_lsw_mac_get_agetime;
+attributenum = 2;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<agetime>            type<ushort>   range<0x0,0xfff>              default<0x12c>;
+attribute=alias<res>                type<ushort>   range<0x0,0x0>                default<0>;
+
+[help]
+typedef struct
+{
+    hi_ushort16  us_agetime;
+    hi_ushort16  us_res;
+}hi_lsw_mac_agetime_s;

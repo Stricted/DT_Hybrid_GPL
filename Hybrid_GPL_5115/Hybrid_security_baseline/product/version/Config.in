@@ -1,0 +1,77 @@
+menu "Product Version config"
+	
+choice
+	prompt "Release Image Build Edit"
+	
+config BUILD_ATP_RELEASE_IAMGE
+	bool "build releader image"
+	depends on !BUILD_FMC_DEBUG_VERSION
+	help
+	build release image 
+	
+config BUILD_ATP_DEBUG_IAMGE
+	bool "build debug image"
+	depends on BUILD_FMC_DEBUG_VERSION
+	help
+	build debug image 
+	
+config BUILD_ATP_ACS_IAMGE
+	bool "build acs image"
+	depends on !BUILD_FMC_DEBUG_VERSION
+	help
+	build acs image 
+	
+endchoice
+	
+
+config HGW_PRODUCTTYPE
+	string "HGW_PRODUCTTYPE"
+	default "HGW"
+
+config HGW_PRODUCTNAME
+	string "HGW_PRODUCTNAME"
+	default "ATP"
+	
+config HGW_PRODUCTCLASS
+	string "HGW_PRODUCTCLASS"
+	default "ATP"
+	
+config HGW_SOFTVERSION
+	string "HGW_SOFTVERSION"
+	default "V100R005C01B002"
+	
+config HGW_BATCHNUMBER
+	string "HGW_BATCHNUMBER"
+	default "ATPV100R005C01B002"
+	
+config HGW_RELEASE
+	string "HGW_RELEASE"
+	default "ATPV100R005C01B002"
+
+config HGW_RELEASE_CUSTOMER
+	string "HGW_RELEASE_CUSTOMER"
+	default "ATPV100R005C01B002"
+	
+config HGW_RELEASE_ENGINEERING
+	string "HGW_RELEASE_ENGINEERING"
+	default "ATPV100R005C01B002"
+	
+config HGW_RELEASE_ACS
+	string "HGW_RELEASE_ACS"
+	default "ATPV100R005C01B002"
+	
+config HGW_SOFTVERSION_WEB
+	string
+	default $(HGW_RELEASE_CUSTOMER) if BUILD_ATP_RELEASE_IAMGE
+	default $(HGW_RELEASE_ENGINEERING) if BUILD_ATP_DEBUG_IAMGE
+	default $(HGW_RELEASE_ACS) if BUILD_ATP_ACS_IAMGE
+	help
+	  This is the softversion show on the web page.	
+	
+config PCB_VERSION
+	string "PCB_VERSION"
+	default "PCB 1.0"
+	help
+		HUAWEI HARDWARE VERSION
+endmenu
+

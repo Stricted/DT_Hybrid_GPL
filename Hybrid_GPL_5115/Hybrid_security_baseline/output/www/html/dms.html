@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link type="text/css" rel="stylesheet" href="../css/main.css" />
+        <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+        <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+        <script type="text/javascript" src="../js/refresh.js"></script>
+        <script type="text/javascript" src="../js/dms.js"></script>
+        <script type="text/javascript" src="../js/dms_table.js"></script>
+        <title></title>
+    </head>
+
+    <body>
+        <div id="all_content" class="body_bg_settings">
+            <input type="text" id="focus_hidden" style="display:none" value="focus">
+                                <div class="maintitle">
+                                    <h1 id="title_label_dms"><script type="text/javascript">dw(dms_label_dms);</script></h1>
+                                </div>
+
+                                <div class="main_content">
+                                    <div>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr height="30">
+                                                <td width="5%">
+                                                    <input name="enable_dms" id="enable_dms" type="checkbox" value="" />
+                                                </td>
+                                                <td width="95%">
+                                                    <script type="text/javascript">dw(enable_dms);</script>
+                                                </td>
+                                            </tr>
+                                            <tr height="30">
+                                                <td>
+                                                    <input name="auto_infomation" id="auto_infomation" type="checkbox" value="" />
+                                                </td>
+                                                <td>
+                                                    <script type="text/javascript">dw(dms_auto_infomation);</script>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div style="margin-top: 30px">
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td width="5%"></td>
+                                                <td width="95%">
+                                                    <h2><script type="text/javascript">dw(share_directory);</script></h2>
+                                                </td>
+                                            </tr>
+                                         </table>
+                                         <table id="share_directory_list" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr class="add_item_control">
+                                                <td width="5%">
+                                                    <input name="share_directory" id="share_directory" type="checkbox" value="" />
+                                                </td>
+                                                <td width="55%">
+                                                    <input id="share_directory_input" name="share_directory_input" type="text" width="100%" size="20" maxlength='256'/>
+                                                </td>
+                                                <td width="15%">
+                                                    <script type="text/javascript">create_button(common_delete, "button_delete");</script>
+                                                </td>
+                                                <td width="15%">
+                                                    <script type="text/javascript">create_button(common_browse, "button_browse");</script>
+                                                </td>
+                                                <td width="10%">
+                                                    <script type="text/javascript">create_button(common_add, "button_add");</script>
+                                                </td>
+                                         </tr>
+                                        </table>
+                                    </div>
+                                    <div class="apply_button"> 
+                                        <script type="text/javascript">create_button(common_apply, "apply");</script>
+                                    </div>
+                                </div>
+                            </div>
+    </body>
+</html>

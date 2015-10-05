@@ -1,0 +1,46 @@
+[settings]
+functionname = hi_adapter_cli_lsw_mac_get;
+attributenum = 6;
+attributeflag= 1;
+[parameter]
+attribute=alias<valid>             type<uchar>       range<0x0,0x1>                      default<0>;
+attribute=alias<ageen>               type<uchar>      range<0x0,0x1>                      default<0>;
+attribute=alias<vlan>              type<ushort>     range<0x0,0xfff>                    default<0>;
+attribute=alias<mac>               type<mac>                                            default<00:00:00:00:00:00>;
+attribute=alias<untag>             type<uchar>>     range<0x0,0x1>                      default<0>;
+attribute=alias<resv>              type<uchar>      range<0x0,0x0>                      default<0>;
+attribute=alias<port>              type<uint>       range<0x0,0x7>                      default<0>;
+
+[help]
+typedef struct
+{
+    hi_uchar8   uc_valid;
+    hi_uchar8   uc_ageen;
+    hi_ushort16 us_vlan;
+    hi_uchar8   uc_mac[6];
+    hi_uchar8   uc_untag;
+    hi_uchar8   uc_resv;
+    hi_lsw_port_e   em_egr;
+}hi_lsw_mac_item_s;
+
+/*¶Ë¿ÚºÅ¶¨Òå*/
+typedef enum
+{
+    HI_LSW_PORT_GE0_E   = 0,
+    HI_LSW_PORT_FE1_E   = 1,
+    HI_LSW_PORT_FE2_E   = 2,
+    HI_LSW_PORT_FE3_E   = 3,
+    HI_LSW_PORT_FE4_E   = 4,
+    HI_LSW_PORT_PON_E   = 5,
+    HI_LSW_PORT_CPU_E   = 6,
+    HI_LSW_PORT_MAX_E,
+}hi_lsw_port_e;
+
+
+
+
+
+
+
+
+

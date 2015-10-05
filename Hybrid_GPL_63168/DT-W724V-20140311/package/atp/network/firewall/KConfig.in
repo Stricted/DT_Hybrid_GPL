@@ -1,0 +1,7 @@
+config FIREWALL
+	tristate "FIREWALL"
+	default y
+config FIREWALL_LOG
+	bool "Support Firewall log"
+	default y
+	depends on FIREWALL

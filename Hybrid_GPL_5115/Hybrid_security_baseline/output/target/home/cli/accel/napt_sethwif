@@ -1,0 +1,13 @@
+[settings]
+functionname=hi_kernel_napt_device_set;
+attributenum=1;
+attributeflag = 1;
+
+[parameter]
+attribute=alias<ifname>       type<string> range<0x0,16> 	  default<eth0>;
+
+[help]
+typedef struct hi_kernel_napt_hwif_cmdtype
+{
+    hi_char8 ac_ifname[16];
+} hi_kernel_napt_hwif_cmdtype;

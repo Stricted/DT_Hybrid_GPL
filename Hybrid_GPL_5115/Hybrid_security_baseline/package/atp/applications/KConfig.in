@@ -1,0 +1,4 @@
+menu "Applications Linux Kernel Extension"
+source "package/atp/applications/datacard/KConfig.in"
+endmenu
+

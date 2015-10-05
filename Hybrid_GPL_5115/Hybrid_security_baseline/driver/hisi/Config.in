@@ -1,0 +1,11 @@
+config ATP_CHIP_NAME
+	string "Set hisi Chip"
+	default "sd5115"
+
+config BUILD_HISI_LAN2WAN
+	bool "eth0.2 set to nas1"
+	default n
+
+config ATP_SUPPORT_4M_NORFLASH_PROTECT
+	bool "4Mb norFLASH write protect"
+	default n 

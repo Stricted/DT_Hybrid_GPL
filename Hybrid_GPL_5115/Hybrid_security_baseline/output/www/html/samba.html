@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="../css/main.css" />
+    <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+    <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+    <script type="text/javascript" src="../js/refresh.js"></script>
+    <script type="text/javascript" src="../js/validation.js"></script>
+    <script type="text/javascript" src="../js/aes128.js"></script>
+    <script type="text/javascript" src="../js/samba.js"></script>
+    <script type="text/javascript" src="../js/samba_table.js"></script>
+    <title></title>
+</head>
+    
+<body>
+<input type="text" id="focus_hidden" style="display:none" value="focus">
+<div id="all_content" class="body_bg_settings">
+    <div class="maintitle">
+        <h1 id="title_label_storageservices"><script type="text/javascript">dw(Label_storage_services);</script></h1>
+    </div>
+    <div class="main_content">
+        <p><script type="text/javascript">dw(ftpservice_aclsetting_help);</script></p>
+        <div style="min-height:150px">
+            <table width="300" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td height="28" width="24">
+                        <input name="enable_samba" id="enable_samba" type="checkbox" value=""/>
+                    </td>
+                    <td>
+                        <script type="text/javascript">dw(Label_enable_samba);</script>
+                    </td>
+                </tr>
+            </table>
+            <table width="300" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td height="28" width="24">
+                        <input name="enable_ftpserver" id="enable_ftpserver" type="checkbox" value=""/>
+                    </td>
+                    <td>
+                        <script type="text/javascript">dw(Label_enable_ftpserver);</script>
+                    </td>
+                </tr>
+            </table>
+            <div class="apply_button">
+            <script type="text/javascript">create_button(common_apply,"apply_enable", "disable_btn");</script>
+            </div>
+        </div>
+        
+        <div id="samba_add_item" style="margin-top: 10px" >
+            <table width="600" cellspacing="0" cellpadding="0" id="service_list">
+                <tr>
+                    <th width="100" height="30">
+                        <script type="text/javascript">
+                            dw(samba_label_username);
+                        </script>
+                    </th>
+                    <th width="150">
+                        <script type="text/javascript">
+                            dw(samba_label_directory);
+                        </script>
+                    </th>
+                    <th width="120">                            
+                        <script type="text/javascript">
+                            dw(samba_label_right);
+                        </script>
+                    </th>
+                    <th width="150">
+                        <script type="text/javascript">
+                            dw(common_options);
+                        </script>
+                    </th>
+                </tr>
+            </table>
+            <div style="margin-top: 10px">
+                <script type="text/javascript">create_button(common_add,"add_item");</script>
+            </div>
+        </div>
+        <div class="apply_button">
+            <script type="text/javascript">create_button(common_apply,"apply", "disable_btn");</script>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

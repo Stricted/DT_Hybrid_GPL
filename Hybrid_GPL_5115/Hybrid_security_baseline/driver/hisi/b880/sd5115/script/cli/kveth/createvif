@@ -1,0 +1,17 @@
+[settings]
+functionname=hi_kernel_vif_cmdtype_vif_create;  
+attributenum=3;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<fatherifname> type<string> range<0x0,32> 	  default<eth0>;
+attribute=alias<ifname>       type<string> range<0x0,32>      default<lan1>;
+attribute=alias<type>         type<uint>   range<0,5>         default<1>;
+
+[help]
+typedef struct
+{
+    hi_uchar8 uc_fatherifname[HI_KERNEL_VIF_NAMELEN];
+    hi_uchar8 uc_ifname[HI_KERNEL_VIF_NAMELEN];
+    hi_uint32 ui_type;  /*接口类型HI_KERNEL_NETWORK_VIF_TYPE_ROOTNODE*/
+}hi_kernel_vif_cmdtype_vif_s;

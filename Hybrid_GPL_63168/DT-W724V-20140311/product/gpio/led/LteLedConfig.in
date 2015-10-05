@@ -1,0 +1,163 @@
+config LINK_LTE_LED
+		bool "LINK LTE LED"
+		default n
+		help
+			Enable this option if you need to expand current config flash area, no. 1
+	  
+if 	LINK_LTE_LED
+config LINK_LTE_LED_MODE
+	int "LINK_LTE_LED_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LINK_LTE_LED_ACTIVE_PIN
+	int "LINK_LTE_LED_ACTIVE_PIN enter the pin for serial or normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config LINK_LTE_LED_ACTIVE_PIN_STATE
+	int "LINK_LTE_LED_ACTIVE_PIN_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+	  
+config ONLINE_LTE_WHITE1
+		bool "ONLINE LTE LED SERVICE no.1"
+		default n
+		help
+			Enable this option if you need to expand current config flash area, no. 2
+			
+if 	ONLINE_LTE_WHITE1
+config ONLINE_LTE_WHITE_1_MODE
+	int "ONLINE_LTE_WHITE_1_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config ONLINE_LTE_WHITE_1_ACTIVE_PIN1
+	int "ONLINE_LTE_WHITE_1_ACTIVE_PIN1 enter the pin for serial or normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config ONLINE_LTE_WHITE_1_ACTIVE_PIN1_STATE
+	int "ONLINE_LTE_WHITE_1_ACTIVE_PIN1_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+
+config ONLINE_LTE_WHITE2
+		bool "ONLINE LTE LED SERVICE no.1"
+		default n
+		help
+			Enable this option if you need to expand current config flash area, no. 2
+			
+if 	ONLINE_LTE_WHITE2
+config ONLINE_LTE_WHITE_2_MODE
+	int "ONLINE_LTE_WHITE_2_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config ONLINE_LTE_WHITE_2_ACTIVE_PIN1
+	int "ONLINE_LTE_WHITE_2_ACTIVE_PIN1 enter the pin for serial or normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config ONLINE_LTE_WHITE_2_ACTIVE_PIN1_STATE
+	int "ONLINE_LTE_WHITE_2_ACTIVE_PIN1_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+
+config ONLINE_LTE_WHITE3
+	bool "ONLINE LTE LED SERVICE no.1"
+	default n
+	help
+		Enable this option if you need to expand current config flash area, no. 2
+			
+if 	ONLINE_LTE_WHITE3
+config ONLINE_LTE_WHITE_3_MODE
+	int "ONLINE_LTE_WHITE_3_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config ONLINE_LTE_WHITE_3_ACTIVE_PIN1
+	int "ONLINE_LTE_WHITE_3_ACTIVE_PIN1 enter the pin for serial or normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config ONLINE_LTE_WHITE_3_ACTIVE_PIN1_STATE
+	int "ONLINE_LTE_WHITE_3_ACTIVE_PIN1_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this 
+
+config ONLINE_LTE_WHITE4
+	bool "ONLINE LTE LED SERVICE no.4"
+	default n
+	help
+		Enable this option if you need to expand current config flash area, no. 2
+			
+if 	ONLINE_LTE_WHITE4
+config ONLINE_LTE_WHITE_4_MODE
+	int "ONLINE_LTE_WHITE_4_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config ONLINE_LTE_WHITE_4_ACTIVE_PIN1
+	int "ONLINE_LTE_WHITE_4_ACTIVE_PIN1 enter the pin for serial or normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config ONLINE_LTE_WHITE_4_ACTIVE_PIN1_STATE
+	int "ONLINE_LTE_WHITE_4_ACTIVE_PIN1_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this
+
+config ONLINE_LTE_WHITE5
+	bool "ONLINE LTE LED SERVICE no.5"
+	default n
+	help
+		Enable this option if you need to expand current config flash area, no. 2
+			
+if 	ONLINE_LTE_WHITE5
+config ONLINE_LTE_WHITE_5_MODE
+	int "ONLINE_LTE_WHITE_5_MODE 0 for serial ,1 for normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config ONLINE_LTE_WHITE_5_ACTIVE_PIN1
+	int "ONLINE_LTE_WHITE_5_ACTIVE_PIN1 enter the pin for serial or normal"
+	default "0"
+	help
+	  Enable this 
+	  
+config ONLINE_LTE_WHITE_5_ACTIVE_PIN1_STATE
+	int "ONLINE_LTE_WHITE_5_ACTIVE_PIN1_STATE 0 for low and 1 for high"
+	default "0"
+	help
+	  Enable this	  
+
+endif   ##end of LINK_LTE_LED
+
+endif	##end of ONLINE_LTE_WHITE1
+
+endif	##end of ONLINE_LTE_WHITE2	
+
+endif	##end of ONLINE_LTE_WHITE3	
+  
+endif	##end of ONLINE_LTE_WHITE4	  
+	  
+endif	##end of ONLINE_LTE_WHITE5		
+
+

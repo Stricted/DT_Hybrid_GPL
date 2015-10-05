@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+<ntpServerNum>5</ntpServerNum>
+<ntpServers>
+    <ntpServer>clock.fmt.he.net</ntpServer>
+    <ntpServer>clock.nyc.he.net</ntpServer>
+    <ntpServer>clock.sjc.he.net</ntpServer>
+    <ntpServer>clock.via.net</ntpServer>
+    <ntpServer>ntp1.tummy.com</ntpServer>
+    <ntpServer>time.cachenetworks.com</ntpServer>
+    <ntpServer>time.nist.gov</ntpServer>
+</ntpServers>
+</config>

@@ -1,0 +1,9 @@
+#ifndef __ATP_CUPSPRINT_MSGTYPES_H__
+#define __ATP_CUPSPRINT_MSGTYPES_H__
+
+#define ATP_SYS_CUPSRINTER_PORT_D (631)
+
+#define ATP_CBBID_CUPSPRINT_NAME       "cupsd"
+
+#endif // End of __ATP_CUPS_MSGTYPES_H__
+

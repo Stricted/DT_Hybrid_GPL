@@ -1,0 +1,31 @@
+[settings]
+functionname=0xF7002004;
+attributenum=10;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000D13>; /*È«¾ÖÄ£¿é*/
+attribute=alias<bm_stat>      	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;     
+attribute=alias<ge0_fba>        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    /
+attribute=alias<ge1_fba>        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    
+attribute=alias<fe2_fba>        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;  
+attribute=alias<fe3_fba>        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;   
+attribute=alias<fe4_fba>        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    
+attribute=alias<pon_fba>        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    
+attribute=alias<cpu_fba>        type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;    
+attribute=alias<bm_debug>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;   
+
+[help]
+typedef struct 
+{
+    uint bm_stat;     
+    uint ge0_fba;
+    uint ge1_fba;
+    uint fe2_fba;
+    uint fe3_fba;
+    uint fe4_fba;
+    uint pon_fba;
+    uint cpu_fba;
+    uint bm_debug;   
+ 
+}hi_dp_logic_bm_cnt_s;

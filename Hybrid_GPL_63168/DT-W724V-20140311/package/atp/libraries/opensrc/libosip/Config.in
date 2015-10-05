@@ -1,0 +1,3 @@
+config BUILD_LIBOSIP
+    bool "Support libosip2"
+    default n

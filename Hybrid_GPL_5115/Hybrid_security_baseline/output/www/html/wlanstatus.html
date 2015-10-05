@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link type="text/css" rel="stylesheet" href="../css/main.css" />
+        <script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+        <script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+        <script type="text/javascript" src="../js/refresh.js"></script>
+        <script type="text/javascript" src="../js/wlanstatus.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <div id="all_content" class="body_bg_connection">
+                            <div class="maintitle">
+                                <h1 id="title_label_wlanstatus"><script type="text/javascript">dw(wlan_label_wlan_status);</script></h1>
+                            </div>
+                            <br/>
+                            <table class="diviceInfo_table" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td>
+                                        <script type="text/javascript">dw(wlan_label_wlan_status);dw(common_colon);</script>
+                                    </td>
+                                    <td id="wlan_status" class="info_value"></td>
+                                    <td id="wlan_status_switch" style="display:none"><script type="text/javascript">create_button("","button_turn");</script></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <script type="text/javascript">dw(wlan_label_current_wifi_user);dw(common_colon);</script>
+                                    </td>
+                                    <td id="wlan_currentwifiuser" class="info_value"></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <br><br>
+                            <div id="show_wlan_list">
+                                <div class="maintitle"></div>
+                                <br>
+                                <table id="table_wlanlist" class="table_status" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th>
+                                            <script type="text/javascript">dw(wlanstatus_label_ssidname);</script>
+                                        </th>
+                                        <th>
+                                            <script type="text/javascript">dw(wlan_label_mac_address);</script>
+                                        </th>
+                                        <th>
+                                            <script type="text/javascript">dw(wlanstatus_label_associatedtime);</script>
+                                        </th>
+                                    </tr>
+                                </table>
+                                <div id="refresh" class="refresh">
+                                    <script type="text/javascript">create_button(common_refresh, 'button_refresh');</script>
+                                </div>
+                            </div>
+        </div>
+        <noscript>
+            <div class="noscript_text">
+                Your browser does not support JavaScript.
+            </div>
+        </noscript>
+    </body>
+</html>

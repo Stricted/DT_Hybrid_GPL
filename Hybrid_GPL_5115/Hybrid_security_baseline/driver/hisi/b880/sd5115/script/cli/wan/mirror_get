@@ -1,0 +1,17 @@
+[settings]
+functionname = hi_port_mirror_get;
+attributenum = 2;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<sport>    type<uint>     range<0,0xFFFFFFFF>   default<0>;
+attribute=alias<dport>    type<uint>     range<0,0xFFFFFFFF>   default<0>;
+
+[help]
+
+typedef struct
+{
+    hi_uint32 ui_sport; 
+    hi_uint32 ui_dport; 
+    hi_uint32 ui_enable; 
+}hi_port_mirror_info_s;

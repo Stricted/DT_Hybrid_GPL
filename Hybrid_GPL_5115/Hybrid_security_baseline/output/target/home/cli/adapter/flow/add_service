@@ -1,0 +1,50 @@
+[settings]
+functionname = hi_adapter_cli_flow_add_service;
+attributenum = 41;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<mask>     type<uint>      range<0x0,0xffffffff>		default<1>;
+attribute=alias<mode>     type<uint>      range<0x0,0x5>     		default<0>;
+attribute=alias<spri>     type<uchar>     range<0x0,0x7>      		default<0>;
+attribute=alias<cpri>     type<uchar>     range<0x0,0x7>      		default<0>;
+attribute=alias<iptos>    type<uchar>     range<0x0,0x7>            default<0>;
+attribute=alias<tagsum>   type<uchar>     range<0x0,0x2>            default<0>;
+attribute=alias<igr>      type<uchar>     range<0x0,0x7>      		default<1>;
+attribute=alias<llid>     type<uchar>     range<0x0,0x7>      		default<0>;
+attribute=alias<gemport>  type<ushort>    range<0x0,0xffff>   		default<0>;
+attribute=alias<dmac>     type<mac>                          		default<00:00:00:00:00:00>;
+attribute=alias<dmask>    type<mac>                          		default<ff:ff:ff:ff:ff:ff>;
+attribute=alias<smac>     type<mac>                          		default<00:00:00:00:00:00>;
+attribute=alias<smask>    type<mac>                          		default<ff:ff:ff:ff:ff:ff>;
+attribute=alias<dip>      type<ip>                                  default<192.168.0.123>;
+attribute=alias<dipmask>  type<mask>                                default<255.255.255.0>;
+attribute=alias<sip>      type<ip>                                  default<192.168.0.123>;
+attribute=alias<sipmask>  type<mask>                                default<255.255.255.0>;
+attribute=alias<dport>    type<ushort>    range<0x0,0xffff>         default<0>;
+attribute=alias<dpmask>   type<ushort>    range<0x0,0xffff>         default<0>;
+attribute=alias<sport>    type<ushort>    range<0x0,0xffff>         default<0>;
+attribute=alias<spmask>   type<ushort>    range<0x0,0xffff>         default<0>;
+attribute=alias<ethtype>  type<ushort>    range<0x0,0xffff>         default<0>;
+attribute=alias<session>  type<ushort>    range<0x0,0xffff>         default<0>;
+attribute=alias<stpid>    type<ushort>    range<0x0,0xffff>         default<0x8100>;
+attribute=alias<ctpid>    type<ushort>    range<0x0,0xffff>         default<0x8100>;
+attribute=alias<svlan>    type<ushort>    range<0x0,0xffff>         default<0>;
+attribute=alias<cvlan>    type<ushort>    range<0x0,0xffff>         default<0>;
+attribute=alias<reason>   type<uchar>     range<0x0,0x7>            default<0>;
+attribute=alias<ippro>    type<uchar>     range<0x0,0x7>            default<0>;
+attribute=alias<ipver>    type<uchar>     range<0x0,0x7>            default<0>;
+attribute=alias<tagtype>  type<uchar>     range<0x0,0x2>      		default<0>;
+attribute=alias<flag>     type<uint>      range<0x0,0xffffffff>     default<0>;
+attribute=alias<outport>  type<uint>      range<0x0,0x7>      		default<0>;
+attribute=alias<pppoe>    type<uchar>     range<0x0,0xff>      		default<0>;
+attribute=alias<cpri1>    type<uchar>     range<0x0,0x7>      		default<0>;
+attribute=alias<spri1>    type<uchar>     range<0x0,0x7>     		default<0>;
+attribute=alias<recv3>    type<uchar>     range<0x0,0x0>      		default<0>;
+attribute=alias<cvlan1>   type<ushort>    range<0x0,0xffff>         default<0>;
+attribute=alias<svlan1>   type<ushort>    range<0x0,0xffff>         default<0>;
+attribute=alias<transact> type<uint>      range<0x0,0x9>      		default<0>;
+attribute=alias<fid>      type<short>     range<0x0,0xffff>    		default<0>;
+attribute=alias<recv4>    type<short>     range<0x0,0x0>      		default<0>;
+
+[help]

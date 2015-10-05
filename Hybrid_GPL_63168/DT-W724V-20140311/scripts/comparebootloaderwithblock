@@ -1,0 +1,16 @@
+#!/bin/sh
+TOP_DIR=`pwd`
+
+test -f ${TOP_DIR}/output/images/cferom.bin && echo "" || echo "=============there is no bootloader!================="
+
+BOOTLOADER_LEN_STRING=`du -b ${TOP_DIR}/output/images/cferom.bin`
+for letter in $BOOTLOADER_LEN_STRING;
+do 
+	BOOTLOADER_LEN_BYTE=$letter;
+	break;
+done
+
+FLASH_NAND_BLOCK_SIZE=$1
+
+test $BOOTLOADER_LEN_BYTE -lt $FLASH_NAND_BLOCK_SIZE && echo "" || exit 1
+

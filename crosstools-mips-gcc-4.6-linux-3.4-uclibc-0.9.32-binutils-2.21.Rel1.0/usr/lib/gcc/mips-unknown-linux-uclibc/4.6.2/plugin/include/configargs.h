@@ -1,0 +1,7 @@
+/* Generated automatically. */
+static const char configuration_arguments[] = "/home/dslsqa/rel1.0/src/buildroot-2011.11/output/toolchain/gcc-4.6.2/configure --prefix=/opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu --target=mips-unknown-linux-uclibc --enable-languages=c,c++ --with-sysroot=/opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/mips-unknown-linux-uclibc/sysroot --with-build-time-tools=/opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/mips-unknown-linux-uclibc/bin --disable-__cxa_atexit --enable-target-optspace --disable-libgomp --with-gnu-ld --disable-libssp --disable-multilib --disable-tls --enable-shared --with-gmp=/opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr --with-mpfr=/opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr --with-mpc=/opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr --enable-threads --disable-decimal-float --with-float=soft --with-abi=32 --with-tune=mips32 --with-arch=mips32 --with-pkgversion='Buildroot 2011.11' --with-bugurl=http://bugs.buildroot.net/";
+static const char thread_model[] = "posix";
+
+static const struct {
+  const char *name, *value;
+} configure_default_options[] = { { "abi", "32" }, { "arch", "mips32" }, { "tune", "mips32" }, { "float", "soft" }, { "llsc", "llsc" }, { "synci", "no-synci" } };

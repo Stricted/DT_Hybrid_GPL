@@ -1,0 +1,11 @@
+[settings]
+functionname=hi_kernel_netlink_dump;
+attributenum=0;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+
+[help]
+usage: kdump                     ; 打印knetlink的hash表所有信息,注意需要先打开
+								   调试打印开关允许打印输出
+

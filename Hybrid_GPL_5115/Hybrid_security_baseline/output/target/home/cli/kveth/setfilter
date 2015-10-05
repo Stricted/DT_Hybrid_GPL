@@ -1,0 +1,23 @@
+[settings]
+functionname=hi_kernel_vif_cmdtype_filter_set;  
+attributenum=5;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<en>          type<uint>     range<0,1>        default<1>;
+attribute=alias<tpid_en>     type<uchar>    range<0,1>        default<0>;
+attribute=alias<dev_en>      type<uchar>    range<0,1>        default<0>;
+attribute=alias<tpid>        type<ushort>   range<0,0xFFFF>   default<0x8889>;
+attribute=alias<dev>         type<string>   range<0,32>       default<nas0>;
+
+
+[help]
+#define HI_KERNEL_VIF_NAMELEN                       32
+typedef struct
+{
+    hi_uint32   ui_filter_en; 
+    hi_uchar8   uc_tpid_en; 
+    hi_uchar8   uc_dev_en; 
+    hi_ushort16 us_tpid; 
+    hi_uchar8   uc_ifname[HI_KERNEL_VIF_NAMELEN]; 
+}hi_kernel_vif_pkt_filter_s; 

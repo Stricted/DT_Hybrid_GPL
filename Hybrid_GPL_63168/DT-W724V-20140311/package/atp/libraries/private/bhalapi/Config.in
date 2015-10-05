@@ -1,0 +1,60 @@
+menu "ATP BHAL"
+source "package/atp/libraries/private/bhalapi/KeyConfig.in"
+
+config DT_MAC_SUPPORT
+	bool "DT_MAC_SUPPORT"
+	default n
+	help
+	  Support datacard service.
+	  
+config SUPPORT_BHAL_WITHOUTPRINT
+	bool "bhal without print log"
+	default n
+	help
+	  bhal without print log
+
+config BUILD_BOARD_TYPE_DETECT
+	bool "support boadr type detect"
+	default n	
+	help
+	  support support boadr type detect
+#START ADD: l00252599 FOR SUPPORT GPIO I2C 2013-09-05
+config BUILD_GPIO_I2C
+	bool "support gpio i2c"
+	default n	
+	help
+	  support support gpio i2c	  
+#END ADD: l00252599 FOR SUPPORT GPIO I2C 2013-09-05
+config BUILD_WATCHDOG
+	bool "support watch dog"
+	default n	
+	help
+	  support watch dog
+
+config BUILD_WATCHDOG_TIMER
+	int "Watch Dog Timer"
+	default "60"
+	depends on BUILD_WATCHDOG
+	help
+		Watch Dog Timer
+	
+if 	DT_MAC_SUPPORT
+
+choice
+	prompt "Choose DT Custom Product"
+	default DT_W724V_MAC_SUPPORT
+	
+config DT_W724V_MAC_SUPPORT
+	bool "support W724v MAC distribute"	
+	help
+	  Enable this option if your custom DT product is W724v	
+
+config DT_W723V_MAC_SUPPORT
+	bool "support W723v MAC distribute"	
+	help
+	  Enable this option if your custom DT product is W723v	
+
+endchoice 
+
+endif	##end of GPIO_CTRL_BCM4360_RF	
+endmenu	

@@ -1,0 +1,42 @@
+[settings]
+commandtype      = 0xF80058B3 ;
+attributenum     = 3 ;
+displayattribute = 1 ;
+
+[parameter]
+attribute=alias<port>            type<uint>     range<0x0,0x7>                default<0>;
+attribute=alias<mac>             type<mac>                                    default<00:00:00:00:00:00>;
+attribute=alias<res>             type<ushort>    range<0x0,0x0>                default<0>;
+
+[help]
+typedef struct
+{
+    hi_lsw_port_e em_port;
+    hi_uchar8     uc_mac[HI_LSW_MAC_LEN];
+    hi_ushort16   res;
+}hi_lsw_blackmac_s;
+
+#define HI_LSW_MAC_LEN 6
+
+
+/*¶Ë¿ÚºÅ¶¨Òå*/
+typedef enum
+{
+    HI_LSW_PORT_GE0_E   = 0,
+    HI_LSW_PORT_FE1_E   = 1,
+    HI_LSW_PORT_FE2_E   = 2,
+    HI_LSW_PORT_FE3_E   = 3,
+    HI_LSW_PORT_FE4_E   = 4,
+    HI_LSW_PORT_PON_E   = 5,
+    HI_LSW_PORT_CPU_E   = 6,
+    HI_LSW_PORT_MAX_E,
+}hi_lsw_port_e;
+
+
+
+
+
+
+
+
+

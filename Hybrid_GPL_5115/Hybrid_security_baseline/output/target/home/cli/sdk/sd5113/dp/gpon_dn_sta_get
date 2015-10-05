@@ -1,0 +1,24 @@
+[settings]
+functionname=0xF7002004;
+attributenum=7;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       			type<uint>  range<0x0,0xFFFFFFFF>  	default<0x00000206>; /*全局模块*/
+attribute=alias<em_current_key>       	type<int>   range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<em_fec_en>       		type<int>   range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<em_key_exchange_en>     type<int>   range<0x0,0x01> 		default<0x00000000>;
+attribute=alias<em_prbs_sync>       	type<int>   range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<em_los_status>       	type<int>   range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<em_lof_status>       	type<int>   range<0x0,0x01>  		default<0x00000000>;
+
+[help]
+typedef struct
+{      
+    HI_DP_GPON_DN_KEY_E em_current_key;   /* 指示当前使用的是密钥A还是密钥B */
+    HI_BOOL_E em_fec_en;                  /* 下行帧FEC（Forward Error Correction）解码开关 */
+    HI_BOOL_E em_key_exchange_en;         /* 下行密钥切换使能,注意CPU不能清0,硬件切换后会自动清0 */
+    HI_BOOL_E em_prbs_sync;               /* PRBS的同步状态 */
+    HI_DP_ALARM_STATE_E em_los_status;/* c00133939 ADD 20100604 */
+    HI_DP_ALARM_STATE_E em_lof_status;/* c00133939 ADD 20100625 */
+} hi_dp_gpon_dn_sta_s;

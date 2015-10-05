@@ -1,0 +1,112 @@
+config BUILD_ATSERVER
+	bool
+	help
+		Select support for datacard service about atserver
+
+config BUILD_ATSERVERSDK
+	bool
+	help
+	  Select the atserver sdk support
+
+config BUILD_ATCMD
+	bool
+	help
+	  Select support for datacard service about atcmd
+
+config BUILD_ATCMDSDK
+	bool
+	help
+	  Select support for datacard service about atcmd sdk
+
+config BUILD_VOPCLIENT
+   bool
+   help
+      Select support for datacard service about vop client
+
+config BUILD_AT
+	bool "DATACARD"
+	select BUILD_ATSERVER
+	select BUILD_ATSERVERSDK
+	select BUILD_ATCMD
+	select BUILD_ATCMDSDK
+	select BUILD_ATSHARED
+	select BUILD_VOPCLIENT
+	default n
+	help
+	  Select support for datacard service
+	  
+config BUILD_NDIS
+	bool "Support Qmi Interface"
+	depends on BUILD_AT
+    select ATP_NDIS_QMI
+	default n
+	help
+	  Select support NDIS interface
+config BUILD_CUSTOM_FMC_PRODUCT
+	bool "Support fmc product atserver"
+	depends on BUILD_AT
+	default y
+	help
+	  Select support FMC server	  
+	  
+config BUILD_LTE_FIRST
+	bool "support LTE first"
+	depends on BUILD_NDIS
+	default n	
+	help
+	  Select support LTE first	  
+	  
+config BUILD_3G_FIRST
+	bool "support 3G first"
+	depends on BUILD_AT
+	default y	
+	help
+	  Select support 3G first
+
+config BUILD_PIN_MNG
+	bool "support auto active pin"
+	depends on BUILD_AT
+	default y	
+	help
+	  Select support auto active pin
+
+config BUILD_MULTI_PIN_MNG
+	bool "support auto multi active pin"
+	depends on BUILD_PIN_MNG
+	default y	
+	help
+	  Select support auto multi active pin
+
+if BUILD_AT
+menu "Atserver Supported Selection"
+config ATSERVER_INTERVAL_TIME
+	int "The Time of Check system info"
+	default "10"
+	help
+		configure time of check sysinfo
+endmenu
+endif
+config BUILD_NDIS
+	bool "Support Qmi Interface"
+	depends on BUILD_AT	
+	default n
+	help
+	  Select support NDIS interface
+
+config BUILD_FMC_AT
+	bool "support FMC atserver from B683"
+	default y
+	help 
+	  select this open FMC at server from B683
+
+config BUILD_VOICEMAIL
+	bool "support voicemail"
+	default y
+	help 
+	  select this open voicemail
+	  
+config BUILD_FMC
+	bool "support ATP FMC"
+	default y
+	help 
+	  select this ATP FMC AT

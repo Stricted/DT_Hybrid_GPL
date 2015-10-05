@@ -1,0 +1,83 @@
+[settings]
+functionname=0xF7002004;
+attributenum=30;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       			type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000508>; /*全局模块*/
+attribute=alias<ui_efc_age_proc>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_age>      		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_unhit>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_hit_act>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_hit_map>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_fid0>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_fid1>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_fid2>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_rmk_svlan>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_rmk_cvlan>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_rmk_spri>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_rmk_cpri>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_add_tag>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_del_tag>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_pcnt_rmk_svlan>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_pcnt_rmk_cvlan>      type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_pcnt_rmk_spri>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_pcnt_rmk_cpri>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_tocpu>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_drop>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_indicate_fwd>    type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_route>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_nat>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_napt>       		type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_add_pppoe>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_efc_multi_match>     type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_sfc_unhit>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_sfc_fail_drop>       type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<st_point_field>       	type<binary> range<0,48>  			default<0x00000000>;
+
+[help]
+typedef struct 
+{
+    uint ui_efc_age_proc;           /* 流老化处理计数  */
+    uint ui_efc_age;                /* EFC表项老化统计                   */
+    
+    uint ui_efc_unhit;              /* 在EFC流分类中没有产生任何匹配报文个数统计                     */
+    uint ui_efc_hit_act;            /* EFC报文匹配后执行ACTION（LABEL 为0～5）的报文个数             */
+    uint ui_efc_hit_map;            /* EFC报文匹配，LABEL 值为GEM PORT 映射的LABEL 值的报文个数统计  */
+    
+    uint ui_efc_fid0;               /* EFC匹配指定FID0报文个数统计       */
+    uint ui_efc_fid1;               /* EFC匹配指定FID1报文个数统计       */
+    uint ui_efc_fid2;               /* EFC匹配指定FID2报文个数统计       */
+    
+    uint ui_efc_rmk_svlan;          /* EFC匹配指定SVLAN Remarking统计           */
+    uint ui_efc_rmk_cvlan;          /* EFC匹配指定CVLAN Remarking统计           */
+    uint ui_efc_rmk_spri;           /* EFC匹配指定SPriority Remarking统计       */
+    uint ui_efc_rmk_cpri;           /* EFC匹配指定CPriority Remarking统计       */
+    uint ui_efc_add_tag;            /* EFC报文匹配执行ACTION 为添加Tag 报文头的报文个数统计  */
+    uint ui_efc_del_tag;            /* EFC报文匹配执行ACTION 为删除Tag 报文头的报文个数统计  */
+    uint ui_pcnt_rmk_svlan;         /* 指定SVLAN Remarking 的报文数目统计，其SVLAN
+                                       值由属性em_svlan_rmk_pcnt_en 指定，当该属性
+                                       配置成使能状态时，并且进行SVLAN Remarking 操作
+                                       的报文的修改后的SVLAN 等于属性ui_pcnt_svlan配置的值时，此统计有计数。 */
+    uint ui_pcnt_rmk_cvlan;
+    uint ui_pcnt_rmk_spri;
+    uint ui_pcnt_rmk_cpri;
+    
+    uint ui_efc_tocpu;              /* EFC报文匹配执行ACTION 为TOCPU 的报文个数统计          */
+    uint ui_efc_drop;               /* EFC报文匹配执行ACTION 为丢弃的报文个数统计            */
+    uint ui_efc_indicate_fwd;       /* EFC报文匹配执行ACTION 为指定转发计数  */
+    
+    uint ui_efc_route;              /* EFC报文匹配执行ACTION 为Router/NAT 的报文个数统计     */
+    uint ui_efc_nat;                /* EFC报文匹配执行ACTION 为Router/NAT 的报文个数统计     */
+    uint ui_efc_napt;               /* EFC报文匹配执行ACTION 为NAPT 的报文个数统计           */
+    uint ui_efc_add_pppoe;          /* EFC报文匹配执行ACTION 为添加PPPoE 报文头的报文个数    */
+    
+    uint ui_efc_multi_match;        /* EFC报文命中多条流规则的报文个数统计                   */
+
+    uint ui_sfc_unhit;              /* SFC简单流分类（CLASSIFY）失败的报文个数 */
+    uint ui_sfc_fail_drop;          /* 上行简单流分类失败丢包  */
+
+    /* 特定转发原因计数 */
+    hi_dp_efc_trans_reason_cnt_s st_tran_reason[HI_DP_EFC_TRAN_REASON_NUM];
+
+}hi_dp_flow_cnt_s;

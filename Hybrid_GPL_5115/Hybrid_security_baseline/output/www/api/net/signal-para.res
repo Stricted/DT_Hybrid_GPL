@@ -1,0 +1,1 @@
+vpath="api/modem_1/signalpara"E5element="rscp|ecio|lac|rssi|cell_id"

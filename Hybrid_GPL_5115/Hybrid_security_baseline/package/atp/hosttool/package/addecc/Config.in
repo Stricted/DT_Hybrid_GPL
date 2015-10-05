@@ -1,0 +1,5 @@
+config BUILD_ADDECC
+	bool "suport add ecc"
+	default n
+
+

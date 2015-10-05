@@ -1,0 +1,47 @@
+HW-DT-HYBRID-RELEASE-20130814.tar.gz
+1) Merge fix/updates from DT-W724 products, "wl ifstats", DSLCPE_HUAWEI, obss coex band switch issue 
+2) 6.30.163.39.cpe4.14L02.H01
+
+HW-DT-HYBRID-RELEASE-20131014.tar.gz
+1) Merge CSP676629: enable "wl shmem xx xxx" for tune frameburst size and txop time
+2) Merge CSP673654:Power Per Rate Srom mapping incorrect for 40Mhz
+3) Merge CSP652951 wifi converage and throughput issue in Telmex
+4) 6.30.163.39.cpe4.14L02.H02
+
+HW-DT-HYBRID-RELEASE-20131122.tar.gz
+1) Upgrade to 4.14L.04rc1 with modification for known issues
+2) 6.37.14.4803.cpe4.14L04rc1.H03-kdb
+
+HW-DT-HYBRID-RELEASE-20131210.tar.gz
+1) Upgrade to 4.14L.04 formal release
+2) Only update three opensource files, no o_save included
+3) H04
+
+HW-DT-HYBRID-RELEASE-20131220.tar.gz
+1) keep _olpc = FALSE for CSP737385
+2) #EXTRA_CFLAGS    += -DDSLCPE_KTHREAD_TIMER for CSP734886
+3) H05
+
+HW-DT-HYBRID-RELEASE-20131225.tar.gz
+1) wl_linux.c, set rxq_dispatched to 0, when wl is down
+2) H06
+
+HW-DT-HYBRID-RELEASE-20140124.tar.gz
+1) emfc.c/emfc_ipv6.c, use skb_unshare to duplicate multicast packets for wifi own. That's WAR,since we found shared buf would be modified by outside and corrupt encryption.
+2) CSP746357
+3) H07
+
+HW-DT-HYBRID-RELEASE-20140129.tar.gz
+1) mute mac first, when doing csa.
+2) CSP742617
+3) H08
+
+HW-DT-HWBRID-RELEASE-20140220.tar.gz
+1) can not set back to DFS channel within specified period(30min)
+2) CSP760663
+3) H09
+
+HW-DT-HYBRID-RELEASE-20140320.tar.gz
+1) can not scan, when mac mode is enable
+2) CSP765741
+4) H10

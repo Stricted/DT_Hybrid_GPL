@@ -1,0 +1,21 @@
+[settings]
+functionname = hi_wancmd_add;
+attributenum = 3;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<fatherifname>  type<string>  range<0,32>        default<nas0>;
+attribute=alias<ifname>        type<string>  range<0,32>        default<nas0_0>;
+attribute=alias<vid>           type<uint>    range<1,0xFFF>     default<0>;
+
+[help]
+
+#define HI_WANCMD_MAX_DEV_NAME_LEN 32
+
+typedef struct
+{
+    hi_uchar8 uc_fatherifname[HI_WANCMD_MAX_DEV_NAME_LEN]; 
+    hi_uchar8 uc_ifname[HI_WANCMD_MAX_DEV_NAME_LEN]; 
+    hi_uint32 ui_vid; 
+}hi_wancmd_info_s; 
+

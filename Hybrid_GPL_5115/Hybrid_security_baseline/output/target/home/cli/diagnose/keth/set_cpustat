@@ -1,0 +1,18 @@
+[settings]
+functionname=hi_kernel_eth0_cmdtype_set_cpustat;
+attributenum=4;
+attributeflag = 1;   //0:close 1:open
+
+[parameter]
+attribute=alias<total_used>   type<binary>   range<0,0x8>           default<0x0>;
+attribute=alias<total_all>    type<binary>   range<0,0x8>           default<0x0>;
+attribute=alias<usage>        type<uint>     range<0,0xFFFFFFFF>    default<0x0>;
+attribute=alias<maxusage>     type<uint>     range<0,0xFFFFFFFF>    default<0x46>;
+
+[help]
+typedef struct {
+    hi_ulong64 ul_total_used;
+    hi_ulong64 ul_total_all;
+    hi_uint32  ui_usage;
+    hi_uint32  ui_maxusage;
+}hi_kernel_eth0_cpu_s;

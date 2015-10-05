@@ -1,0 +1,12 @@
+[settings]
+functionname=hi_voip_cli_query_rtcp_state;  
+attributenum=1;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<chanid>      type<uint>   range<0x0,0xFFFFFFFF>   default<0>; /*通道号*/
+
+[help]
+usage: query_rtcp                		; 查询RTCP统计
+       query_rtcp -v chanid 0           ; channel id
+       

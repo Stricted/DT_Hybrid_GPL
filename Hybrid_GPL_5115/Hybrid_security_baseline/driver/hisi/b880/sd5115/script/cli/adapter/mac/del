@@ -1,0 +1,27 @@
+[settings]
+functionname = hi_adapter_cli_lsw_mac_del;
+attributenum = 5;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<vlan>              type<ushort>     range<0x0,0xffff>                   default<1>;
+attribute=alias<mac>               type<mac>                                            default<00:00:00:00:00:00>;
+attribute=alias<untag>             type<uchar>      range<0x0,0x1>                      default<0>;
+attribute=alias<res>               type<uchar>      range<0x0,0x0>                      default<0>;
+attribute=alias<res1>              type<ushort>     range<0x0,0x0>                      default<0>;
+
+
+[help]
+typedef struct
+{
+    hi_ushort16   us_vlan;
+    hi_uchar8     uc_mac[HI_LSW_MAC_LEN];
+    hi_uchar8    uc_untag;
+    hi_uchar8       uc_res;
+    hi_ushort16     us_res1;
+}hi_lsw_mac_del_s;
+
+
+
+
+

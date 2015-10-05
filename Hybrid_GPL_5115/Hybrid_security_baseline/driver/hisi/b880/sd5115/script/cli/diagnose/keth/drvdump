@@ -1,0 +1,12 @@
+[settings]
+functionname=hi_kernel_eth0_drv_glbdump;
+attributenum=0;
+attributeflag =0;   //0:close 1:open
+
+[parameter]
+
+
+[help]
+usage: 
+
+

@@ -1,0 +1,41 @@
+ifeq ($(strip $(BRCM_CHIP)),)
+BRCM_CHIP=$(word 2, $(subst /net/wl/bcm9,/net/wl/bcm9 ,$(shell pwd "-L")))
+endif
+
+BIN = $(shell cat bin_to_keep)
+
+save_binary: wl.o
+	cp -f wl.o wl$(BRCM_CHIP)-$(CONFIG_BCM_CPU_ARCH_NAME).o_save
+	for x in $(BIN); do \
+		if [ -e $$x ]; then \
+			cp -f $$x $$x.save; \
+		else \
+			echo "info:$$xx does not exist"; \
+		fi; \
+	done
+
+release:
+	sort files_to_keep > files_to_keep.sort
+	comm -23 files_all files_to_keep.sort > files_to_delete
+	for x in $$(cat files_to_delete); do \
+		if [ -e $$x ]; then \
+			rm -f $$x; \
+		fi; \
+	done
+	for x in $(BIN); do \
+		mv -f $$x.save $$x; \
+	done
+	find . -name "*.o" -exec rm -f "{}" ";"
+	find . -depth -type d -empty -exec rmdir "{}" ";"
+	rm -rf build
+	rm -f files_to_keep.sort
+	rm -f files_all
+	rm -f files_to_delete
+
+create_list:
+	for x in $(BIN); do \
+		rm -f $$x; \
+		rm -f $$x.save; \
+		rm -f *.o_save; \
+	done
+	find . -type f | sort > files_all

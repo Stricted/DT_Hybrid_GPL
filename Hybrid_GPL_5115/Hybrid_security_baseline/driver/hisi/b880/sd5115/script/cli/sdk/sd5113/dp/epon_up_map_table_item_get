@@ -1,0 +1,18 @@
+[settings]
+functionname=0xF7002004;
+attributenum=3;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       			type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000F02>; /*全局模块*/
+attribute=alias<ui_sfid>        	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_llid_index>       	type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+
+
+[help]
+/* 上行GEMPORT 映射表表项结构 */
+typedef struct
+{
+    uint ui_sfid;           /* 流分类ID, 索引 */
+    uint ui_llid_index;     /* LLID索引 */
+}hi_dp_epon_up_map_table_item_s;

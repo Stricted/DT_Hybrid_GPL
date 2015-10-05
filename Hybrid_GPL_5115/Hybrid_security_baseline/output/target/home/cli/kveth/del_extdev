@@ -1,0 +1,16 @@
+[settings]
+functionname=hi_kernel_ext_dev_del;  
+attributenum=2;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<vifname>             type<string>   range<0,32>           default<wl0>;
+attribute=alias<devname>             type<string>   range<0,32>           default<bcm-ssid0>;
+
+[help]
+#define HI_KERNEL_EXT_DEVNAME_LEN     32
+typedef struct
+{
+    hi_char8 ac_vifname[HI_KERNEL_EXT_DEVNAME_LEN];
+    hi_char8 ac_devname[HI_KERNEL_EXT_DEVNAME_LEN];
+}hi_kernel_ext_dev_cmd_s;

@@ -1,0 +1,29 @@
+[settings]
+functionname = hi_vlancmd_set;
+attributenum = 4;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<flag>    type<uint>     range<0x0,0xFFFFFFFF>   default<0>;
+attribute=alias<vlan>    type<uint>     range<0x0,0xFFFFFFFF>   default<0>;
+attribute=alias<oldvlan> type<uint>     range<0x0,0xFFFFFFFF>   default<0>;
+attribute=alias<ifname>  type<string>   range<0,32>             default<eth0>;
+
+[help]
+
+#define HI_VLANCMD_MAX_DEV_NAME_LEN 32
+
+typedef enum
+{
+    HI_VLANCMD_DEFWAN_E = 0,/* 对缺省WAN的VLAN操作,将WAN缺省VLAN设置为输入的ui_vlan,芯片自动删除oldvlan,无须输入ui_oldvlan*/
+    HI_VLANCMD_WAN_E,       /* 对WAN口添加一个ui_vlan, 同时删除之前的ui_oldvlan,需要输入ui_oldvlan*/
+    HI_VLANCMD_LAN_E,       /* 对LAN口添加一个ui_vlan, 同时删除之前的ui_oldvlan,同时自动设置当前端口缺省vlan,,无须输入ui_oldvlan*/
+}hi_vlancmd_flag_e;
+
+typedef struct
+{
+    hi_vlancmd_flag_e em_flag; /* defwan/wan/lan */
+    hi_uint32         ui_vlan;
+    hi_uint32         ui_oldvlan;
+    hi_uchar8         uc_devname[HI_VLANCMD_MAX_DEV_NAME_LEN];
+}hi_vlancmd_info_s; 

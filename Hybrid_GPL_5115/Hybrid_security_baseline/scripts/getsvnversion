@@ -1,0 +1,23 @@
+#!/bin/sh
+# Print additional version information for non-release trees.
+
+usage() {
+	echo "Usage: $0" >&2
+	exit 1
+}
+
+# Check for svn and a svn repo.
+if rev=`LANG=C svn info 2>/dev/null | grep '^Last Changed Rev'`; then
+	rev=`echo $rev | awk '{print $NF}'`
+	changes=`LANG=C svn status 2>/dev/null | grep '^[AMD]' | wc -l`
+
+	# Are there uncommitted changes?
+	if [ $changes != 0 ]; then
+		printf -- 'svn%s%s' "$rev" -dirty
+	else
+		printf -- 'svn%s' "$rev"
+	fi
+
+	# All done with svn
+	exit
+fi

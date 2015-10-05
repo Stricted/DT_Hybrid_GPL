@@ -1,0 +1,871 @@
+################################################################################
+# ATP package infrastructure
+#
+# This file implements an infrastructure that eases development of
+# package .mk files. It should be used for all non-autotools based
+# packages. Autotools-based packages should use the specialized
+# autotools infrastructure in package/Makefile.autotools.in.
+#
+# See the Buildroot documentation for details on the usage of this
+# infrastructure
+#
+# In terms of implementation, this generic infrastructure requires the
+# .mk file to specify:
+#
+#   1. Metadata informations about the package: name, version,
+#      download URL, etc.
+#
+#   2. Description of the commands to be executed to configure, build
+#      and install the package
+#
+# The autotools infrastructure specializes this generic infrastructure
+# by already implementing the configure, build and install steps.
+################################################################################
+
+define newline
+
+
+endef
+
+
+ATP_EMPTY:=<
+
+define GET_MSGFILE_NAME
+       headerfilename=`ls $(1)/*.h`
+       echo "$(1)=$(2)" >> $(3)
+endef
+
+CLEAN_ATP_ENVS=CROSS_COMPILE="$(TARGET_CROSS)" \
+		STAGING_DIR="$(STAGING_DIR)" \
+		TARGET_DIR="$(TARGET_DIR)" \
+		TOPDIR="$(TOPDIR)" \
+		BR2_ARCH="$(BR2_ARCH)" \
+		ATP_DEBUG="$(ATP_DEBUG)" \
+		CUSTOMER="$(CUSTOMER)" \
+		VENDOR="$(VENDOR)" \
+		CONFIG_DIR="$(CONFIG_DIR)"
+
+TARGET_ATP_ENVS=CROSS_COMPILE="$(TARGET_CROSS)" \
+		AR="$(TARGET_AR)" \
+		AS="$(TARGET_AS)" \
+		LD="$(TARGET_LD)" \
+		NM="$(TARGET_NM)" \
+		CC="$(TARGET_CC)" \
+		GCC="$(TARGET_CC)" \
+		CPP="$(TARGET_CPP)" \
+		CXX="$(TARGET_CXX)" \
+		FC="$(TARGET_FC)" \
+		RANLIB="$(TARGET_RANLIB)" \
+		STRIP="$(TARGET_STRIP)" \
+		OBJCOPY="$(TARGET_OBJCOPY)" \
+		OBJDUMP="$(TARGET_OBJDUMP)" \
+		STAGING_DIR="$(STAGING_DIR)" \
+		TARGET_DIR="$(TARGET_DIR)" \
+		TOPDIR="$(TOPDIR)" \
+		BR2_ARCH="$(BR2_ARCH)" \
+		ATP_DEBUG="$(ATP_DEBUG)" \
+		CUSTOMER="$(CUSTOMER)" \
+		VENDOR="$(VENDOR)" \
+		CONFIG_DIR="$(CONFIG_DIR)"
+
+HOST_ATP_ENVS=AR="$(HOSTAR)" \
+		AS="$(HOSTAS)" \
+		LD="$(HOSTLD)" \
+		NM="$(HOSTNM)" \
+		CC="$(HOSTCC)" \
+		GCC="$(HOSTCC)" \
+		CXX="$(HOSTCXX)" \
+		CPP="$(HOSTCPP)" \
+		CFLAGS="$(HOST_CFLAGS)" \
+		CXXFLAGS="$(HOST_CXXFLAGS)" \
+		LDFLAGS="$(HOST_LDFLAGS)" \
+		TOPDIR="$(TOPDIR)" \
+		BR2_ARCH="$(BR2_ARCH)" \
+		ATP_DEBUG="$(ATP_DEBUG)" \
+		CONFIG_DIR="$(CONFIG_DIR)"\
+		LD_LIBRARY_PATH="$(HOST_DIR)/usr/lib:$(LD_LIBRARY_PATH)"
+
+ATPMESSAGE = echo "$(ATPTERM_BOLD)>>> $$($(1)_NAME) $($(1)_VERSION) $(2)$(ATPTERM_RESET)"
+
+ATP_XML_ESCAPE = echo "$(1)" | sed "s/\&\&/\&amp;\&amp;/"
+
+################################################################################
+# ATP_PACKAGE_REPORT -- report package information into xml file
+#
+#  argument 1 is the lowercase package name
+#  argument 2 is the package directory prefix
+#  argument 3 is the package type
+#  argument 4 is the package license
+#  argument 5 is the package makefile dir
+#  argument 6 is the package dependency
+#  argument 7 is the package dependmacro
+#  argument 8 is the package compiled program name
+#  argument 9 is the package makefile target
+#  argument 10 is the package index
+#  argument 11 is the package SUPPORT_TR098
+#  argument 12 is the package SUPPORT_TR181
+#  argument 13 is the package KEYNUM
+#  argument 14 is the package UID
+################################################################################
+define ATP_PACKAGE_REPORT
+	@echo "  <submodule>" >> $(TOPDIR)/report.xml
+	@echo "    <title>$(1)</title>" >> $(TOPDIR)/report.xml
+	@echo "    <id>$(10)</id>" >> $(TOPDIR)/report.xml
+	@echo "    <feature></feature>" >> $(TOPDIR)/report.xml
+	@echo "    <type>$(3)</type>" >> $(TOPDIR)/report.xml
+	@echo "    <owner></owner>" >> $(TOPDIR)/report.xml
+	@echo "    <group></group>" >> $(TOPDIR)/report.xml
+	@echo "    <license>$(4)</license>" >> $(TOPDIR)/report.xml
+	@echo "    <directory>$(2)</directory>" >> $(TOPDIR)/report.xml
+	@echo "    <sourcedir>$(5)</sourcedir>" >> $(TOPDIR)/report.xml
+	@echo "    <dependency>$(6)</dependency>" >> $(TOPDIR)/report.xml
+	@echo "    <dependmacro>" >> $(TOPDIR)/report.xml
+	@$(call ATP_XML_ESCAPE,$(7)) >> $(TOPDIR)/report.xml
+	@echo "    </dependmacro>" >> $(TOPDIR)/report.xml
+	@echo "    <program>$(8)</program>" >> $(TOPDIR)/report.xml
+	@echo "    <target>$(9)</target>" >> $(TOPDIR)/report.xml
+	@echo "    <tr098>$(11)</tr098>" >> $(TOPDIR)/report.xml
+	@echo "    <tr181>$(12)</tr181>" >> $(TOPDIR)/report.xml
+	@echo "    <keynum>$(13)</keynum>" >> $(TOPDIR)/report.xml
+	@echo "    <uid>$(14)</uid>" >> $(TOPDIR)/report.xml
+	@echo "  </submodule>" >> $(TOPDIR)/report.xml
+endef
+
+ifneq ("$(ATP_CI)", "")
+ATPTERM_BOLD :=
+ATPTERM_RESET :=
+else
+ATPTERM_BOLD := $(shell tput smso)
+ATPTERM_RESET := $(shell tput rmso)
+endif
+
+################################################################################
+# ATPTARGETS_INNER -- generates the make targets needed to build a
+# generic package
+#
+#  argument 1 is the lowercase package name including an HOST_ prefix
+#             for host packages
+#  argument 2 is the uppercase package name, including an HOST_ prefix
+#             for host packages
+#  argument 3 is the package directory prefix
+#  argument 4 is the type (targets or required or BUILD_xx)
+#  argument 5 is the uppercase package name, without the HOST_ prefix
+#             for host packages
+#  argument 6 is target or host
+################################################################################
+define ATPTARGETS_INNER
+
+$(2)_NAME			=  $(1)
+$(2)_DIR	= $(3)
+ifeq ($(6),host)
+$(2)_BDIR=$(O)/package/$(1)
+else
+$(2)_BDIR	=$(O)/$(3)
+endif
+ifeq ($$($(2)_AFTER_EXTR_SRC),)
+ifeq ($$($(5)_MAKEFILE_DIR),)
+$(2)_SRC_DIR =$$($(2)_DIR)/src
+$(5)_MAKEFILE_DIR=src
+else
+$(2)_SRC_DIR =$$($(2)_DIR)/$$($(5)_MAKEFILE_DIR)
+endif
+else
+ifeq ($$($(5)_MAKEFILE_DIR),)
+$(2)_SRC_DIR =$$($(2)_AFTER_EXTR_SRC)/src
+$(5)_MAKEFILE_DIR=src
+else
+$(2)_SRC_DIR =$$($(2)_AFTER_EXTR_SRC)/$$($(5)_MAKEFILE_DIR)
+endif
+endif
+ifeq ($$($(5)_PROGRAM_NAME),)
+$(2)_REAL_PROGRAM_NAME =$(call DOWNCASE,$(5))
+else
+$(2)_REAL_PROGRAM_NAME =$$($(5)_PROGRAM_NAME)
+endif
+
+ifeq ($$($(2)_TARGET),shared)
+$(2)_FULL_PROGRAM_NAME =lib$$($(2)_REAL_PROGRAM_NAME).so
+$(2)_IS_LIBRARY=dynamic
+$(2)_IS_DYNAMIC=-fPIC
+else
+ifeq ($$($(2)_TARGET),pub_lib)
+$(2)_FULL_PROGRAM_NAME =lib$$($(2)_REAL_PROGRAM_NAME).so
+$(2)_IS_LIBRARY=dynamic
+$(2)_IS_DYNAMIC=-fPIC
+else
+ifeq ($$($(2)_TARGET),static)
+$(2)_FULL_PROGRAM_NAME =lib$$($(2)_REAL_PROGRAM_NAME).a
+$(2)_IS_LIBRARY=static
+else
+ifeq ($$($(2)_TARGET),pub_liba)
+$(2)_FULL_PROGRAM_NAME =lib$$($(2)_REAL_PROGRAM_NAME).a
+$(2)_IS_LIBRARY=static
+else
+$(2)_FULL_PROGRAM_NAME =$$($(2)_REAL_PROGRAM_NAME)
+$(2)_IS_LIBRARY=no
+endif
+endif
+endif
+endif
+
+$(2)_VERSION_STR ="$(2)-$$($(2)_FULL_PROGRAM_NAME)-$($(2)_VERSION)-$(SVNVERSION)"
+
+$$($(2)_BDIR):
+	@mkdir -p $$($(2)_BDIR)
+
+# Unpack the archive
+$$($(2)_BDIR)/.stamp_extracted: $$($(2)_BDIR)
+	$(Q)if [ -d $($(2)_AFTER_EXTR_SRC) ]; then \
+	echo "not need extract!";\
+	else \
+	$(call ATPMESSAGE,$(2),"Extracting $$(1)"); \
+	mkdir -p $($(2)_AFTER_EXTR_SRC); \
+	cd $($(2)_AFTER_EXTR_SRC); \
+	$($(2)_TAR_EXTRACT_OPT) $($(2)_TAR_SRC); \
+	fi
+	$(Q)touch $$@;
+
+# 1. Install inc/*.h to the sysroot by default
+# 2. Or do the PACKAGE_INSTALL_HEADER_CMDS if specified
+# 3. Install *msgtypes.h if exists, and it will also update the msgtypeswrapper.h
+$$($(2)_BDIR)/.stamp_installheaders: $$($(2)_BDIR)
+ifneq ($$($(2)_INSTALL_HEADER_CMDS),)
+	$(Q)$($(2)_INSTALL_HEADER_CMDS)
+else
+	$(Q)if [ -d $(3)/inc ]; then \
+	echo ""; \
+	$(foreach b, $(notdir $(wildcard $(3)/inc/*.h)), \
+	install -m 777 $(3)/inc/$b $(STAGING_DIR)/usr/include;\
+	install -m 777 $(3)/inc/$b $(HOST_DIR)/usr/include;) \
+	fi
+endif
+	$(Q)if [ -d $(3)/msg ]; then \
+	mkdir -p $(STAGING_DIR)/usr/include/msg; \
+	mkdir -p $(HOST_DIR)/usr/include/msg;\
+	$(foreach b, $(notdir $(wildcard $(3)/msg/*msgtypes.h)), \
+	install -m 777 $(3)/msg/$b $(STAGING_DIR)/usr/include/msg; \
+	touch $(STAGING_DIR)/usr/include/msgtypeswrapper.h; \
+	$(SED) "/$(b)/d" $(STAGING_DIR)/usr/include/msgtypeswrapper.h; \
+	echo "#include \"msg/$(b)\"" >> $(STAGING_DIR)/usr/include/msgtypeswrapper.h; \
+	install -m 777 $(3)/msg/$b $(HOST_DIR)/usr/include/msg; \
+	touch $(HOST_DIR)/usr/include/msgtypeswrapper.h; \
+	$(SED) "/$(b)/d" $(HOST_DIR)/usr/include/msgtypeswrapper.h; \
+	echo "#include \"msg/$(b)\"" >> $(HOST_DIR)/usr/include/msgtypeswrapper.h; \
+	) \
+	fi
+	$(Q)touch $$@; 
+
+$$($(2)_BDIR)/.stamp_installtarget: $$($(2)_BDIR)
+	$(Q)$(call ATPMESSAGE,$(2),"Installing targets")
+ifneq ($$($(2)_INSTALL_TARGET_CMDS),)
+	$(Q)$($(2)_INSTALL_TARGET_CMDS)
+else
+ifneq ($$($(2)_IS_LIBRARY),no)
+	$(Q)if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) $(STAGING_DIR)/lib; \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) $(TARGET_DIR)/lib; \
+	if [ -f $$($(2)_BDIR)/$$($(2)_REAL_PROGRAM_NAME).map ]; then \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_REAL_PROGRAM_NAME).map $(BINARIES_DIR)/sysmap; \
+	fi;\
+	echo ""; \
+	else \
+	if [ -f $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) ]; then \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) $(STAGING_DIR)/lib; \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) $(TARGET_DIR)/lib; \
+	else \
+	echo $(error) $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) not exist! exit 1; \
+	fi; \
+	fi
+else
+	$(Q)if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) $(STAGING_DIR)/bin; \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) $(TARGET_DIR)/bin; \
+	$(TARGET_STRIP) $(STAGING_DIR)/bin/$$($(2)_FULL_PROGRAM_NAME); \
+	$(TARGET_STRIP) $(TARGET_DIR)/bin/$$($(2)_FULL_PROGRAM_NAME); \
+	if [ -f $$($(2)_BDIR)/$$($(2)_REAL_PROGRAM_NAME).map ]; then \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_REAL_PROGRAM_NAME).map $(BINARIES_DIR)/sysmap; \
+	fi;\
+	echo ""; \
+	else \
+	if [ -f $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) ]; then \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) $(STAGING_DIR)/bin; \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) $(TARGET_DIR)/bin; \
+	$(TARGET_STRIP) $(STAGING_DIR)/bin/$$($(2)_FULL_PROGRAM_NAME); \
+	$(TARGET_STRIP) $(TARGET_DIR)/bin/$$($(2)_FULL_PROGRAM_NAME); \
+	else \
+	echo $(error) $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) not exist! exit 1; \
+	fi; \
+	fi
+endif
+endif
+	$(Q)touch $$@
+
+$$($(2)_BDIR)/.stamp_installhost: $$($(2)_BDIR)
+	$(Q)$(call ATPMESSAGE,$(2),"Installing host")
+ifneq ($$($(2)_INSTALL_TARGET_CMDS),)
+	$(Q)$($(2)_INSTALL_TARGET_CMDS)
+else
+ifneq ($$($(2)_IS_LIBRARY),no)
+	$(Q)if [ -f $$($(2)_BDIR)/Makefile ]; then \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) $(HOST_DIR)/usr/lib; \
+	else \
+	if [ -f $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) ]; then \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) $(HOST_DIR)/usr/lib; \
+	else \
+	echo $(error) $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) not exist! exit 1; \
+	fi; \
+	fi
+else
+	$(Q)if [ -f $$($(2)_BDIR)/Makefile ]; then \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) $(HOST_DIR)/usr/bin; \
+	echo ""; \
+	else \
+	if [ -f $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) ]; then \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) $(HOST_DIR)/usr/bin; \
+	echo ""; \
+	else \
+	echo $(error) $$($(2)_BDIR)/$$($(2)_FULL_PROGRAM_NAME) not exist! exit 1; \
+	fi; \
+	fi
+endif
+endif
+	
+$(1)-doc:
+ifneq ($$($(2)_HAS_DOC),)
+	$(Q)$(call ATPMESSAGE,$(2),"Generating documentation ...")
+	$(Q)if [ -d $(3)/inc ]; then \
+	mkdir -p $(TOPDIR)/output/documentation/include; \
+	$(foreach b, $(notdir $(wildcard $(3)/inc/*.h)), \
+	install -m 777 $(3)/inc/$b $(TOPDIR)/output/documentation/include;) \
+	fi
+	$(Q)if [ -d $(3)/msg ]; then \
+	mkdir -p $(TOPDIR)/output/documentation/include/msg; \
+	$(foreach b, $(notdir $(wildcard $(3)/msg/*msgtypes.h)), \
+	install -m 777 $(3)/msg/$b $(TOPDIR)/output/documentation/include/msg; \
+	touch $(TOPDIR)/output/documentation/include/msgtypeswrapper.h; \
+	$(SED) "/$(b)/d" $(TOPDIR)/output/documentation/include/msgtypeswrapper.h; \
+	echo "#include \"msg/$(b)\"" >> $(TOPDIR)/output/documentation/include/msgtypeswrapper.h; \
+	) \
+	fi
+else
+	$(Q)$(call ATPMESSAGE,$(2),"No documentation available ...")
+endif
+
+# Configure
+$$($(2)_BDIR)/.stamp_atpkconfigured: $$($(2)_BDIR)
+ifneq ($$($(2)_LINUX_CONFIGURE_CMDS),)
+	$(Q)$(call ATPMESSAGE,$(2),"Configuring...")
+	$(Q)echo $$($(2)_BDIR) >> $(KERNEL_CONFIG_FILE).verify
+	$(Q)$($(2)_LINUX_CONFIGURE_CMDS)
+	$(Q)$(call ATPMESSAGE,$(2),"DONE! from $$($(2)_BDIR)")
+endif
+$$($(2)_BDIR)/.stamp_atpappconfigured: $$($(2)_BDIR)
+ifneq ($$($(2)_CONFIGURE_CMDS),)
+	$(Q)$(call ATPMESSAGE,$(2),"Configuring ...")
+	$(Q)$($(2)_CONFIGURE_CMDS)
+	$(Q)$(call ATPMESSAGE,$(2),"DONE!")
+endif
+
+	
+# human-friendly targets and target sequencing
+ifeq ($$($(2)_TYPE),atpkconfig)
+$(1): $$($(2)_BDIR)/.stamp_atpkconfigured
+else
+$(1): $(1)-atpappconfig $(1)-install
+endif
+
+$(1)-extract: $$($(2)_BDIR)/.stamp_extracted
+$(1)-atpkconfig: $$($(2)_BDIR)/.stamp_atpkconfigured
+$(1)-atpappconfig: $$($(2)_BDIR)/.stamp_atpappconfigured
+
+ifeq ($(6),host)
+$(1)-install: $(1)-build $$($(2)_BDIR)/.stamp_installhost
+$(1)-install-headers: $$($(2)_BDIR)/.stamp_installheaders
+else
+$(1)-install: $(1)-build $$($(2)_BDIR)/.stamp_installtarget
+$(1)-install-headers: $$($(2)_BDIR)/.stamp_installheaders
+endif
+
+$(1)-remove-headers:
+	@rm -f $$($(2)_BDIR)/.stamp_installheaders
+	@rm -f $$($(2)_BDIR)/.stamp_installhostsource
+
+$(1)-remove-target:
+	@rm -f $$($(2)_BDIR)/.stamp_installtarget	
+	
+$(1)-build:	$(1)-depends $(1)-install-headers
+	$(Q)$(call ATPMESSAGE,$(2),"Building")
+ifneq ($$($(2)_BUILD_CMDS),)
+	$(Q)$($(2)_BUILD_CMDS)
+else
+ifeq ($(6),host)
+ifneq ($$($(2)_TARGET),)
+	$(Q)if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	$(HOST_ATP_ENVS) O=$$($(2)_BDIR)/ PROGRAM_NAME=$$($(2)_REAL_PROGRAM_NAME) IS_DYNAMIC="$$($(2)_IS_DYNAMIC)" CMSLIBS="$$(CMSTARGETS_LIBS)" ATPFLAGS="-DMODULE_VERSION=\\\"$$($(5)_VERSION_STR)\\\" -D$(5)_MODULE_VERSION=\\\"$$($(5)_VERSION_STR)\\\" -DATP_HOST_TOOL=1 -DSUPPORT_DESKTOP $$($(2)_FLAGS)" $(MAKE1) -C $$($(2)_SRC_DIR) $$($(2)_TARGET); \
+	fi
+else
+	$(Q)if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	$(HOST_ATP_ENVS) O=$$($(2)_BDIR)/ PROGRAM_NAME=$$($(2)_REAL_PROGRAM_NAME) IS_DYNAMIC="$$($(2)_IS_DYNAMIC)" CMSLIBS="$$(CMSTARGETS_LIBS)" ATPFLAGS="-DMODULE_VERSION=\\\"$$($(5)_VERSION_STR)\\\" -D$(5)_MODULE_VERSION=\\\"$$($(5)_VERSION_STR)\\\" -DATP_HOST_TOOL=1 -DSUPPORT_DESKTOP $$($(2)_FLAGS)" $(MAKE1) -C $$($(2)_SRC_DIR) dynamic; \
+	fi
+endif
+else
+ifneq ($$($(2)_TARGET),)
+	$(Q)if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	$(TARGET_ATP_ENVS) O=$$($(2)_BDIR)/ PROGRAM_NAME=$$($(2)_REAL_PROGRAM_NAME) IS_DYNAMIC="$$($(2)_IS_DYNAMIC)" CMSLIBS="$$(CMSTARGETS_LIBS)" WEBLIBS="$$(WEBTARGETS_LIBS)" CLILIBS="$$(CLITARGETS_LIBS)" ATPFLAGS="-DMODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" -D$(2)_MODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" $$($(2)_FLAGS)" $(MAKE1) -C $$($(2)_SRC_DIR) $$($(2)_TARGET); \
+	fi
+else
+	$(Q)if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	$(TARGET_ATP_ENVS) O=$$($(2)_BDIR)/ PROGRAM_NAME=$$($(2)_REAL_PROGRAM_NAME) IS_DYNAMIC="$$($(2)_IS_DYNAMIC)" CMSLIBS="$$(CMSTARGETS_LIBS)" WEBLIBS="$$(WEBTARGETS_LIBS)" CLILIBS="$$(CLITARGETS_LIBS)" ATPFLAGS="-DMODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" -D$(2)_MODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" $$($(2)_FLAGS)" $(MAKE1) -C $$($(2)_SRC_DIR) dynamic; \
+	fi
+endif
+endif
+endif
+
+$(1)-test-clean:
+	$(Q)if [ -f $(3)/test/Makefile ]; then \
+	$(CLEAN_ATP_ENVS) O=$$($(2)_BDIR)/ PROGRAM_NAME=$$($(2)_REAL_PROGRAM_NAME)-test $(MAKE1) -C $(3)/test clean; \
+	fi
+
+$(1)-test-install:
+ifneq ($$($(2)_TEST_INSTALL_CMDS),)
+	$(Q)$($(2)_TEST_INSTALL_CMDS)
+endif
+	
+$(1)-test-run: $(1)-test-install
+	$(Q)if [ -f $(TARGET_DIR)/bin/$$($(2)_REAL_PROGRAM_NAME)-test ]; then \
+	mkdir -p $(TOPDIR)/output/testreport; \
+	cd $(TARGET_DIR)/bin; \
+	LD_LIBRARY_PATH="../lib" ./$$($(2)_REAL_PROGRAM_NAME)-test; \
+	mv DTCenter.xml $(TOPDIR)/output/testreport/$(1)-test-report.xml; \
+	fi
+	
+$(1)-test-gdb:
+	$(Q)cd $(TARGET_DIR)/bin;\
+	LD_LIBRARY_PATH="../lib" gdb ./$$($(2)_REAL_PROGRAM_NAME)-test
+	
+$(1)-test: $(1) dtcenter
+	$(Q)if [ -f $(3)/test/Makefile ]; then \
+	$(TARGET_ATP_ENVS) O=$$($(2)_BDIR)/ PROGRAM_NAME=$$($(2)_REAL_PROGRAM_NAME)-test CMSLIBS="$$(CMSTARGETS_LIBS)" ATPFLAGS="-DMODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" -D$(2)_MODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\"" $(MAKE1) -C $(3)/test dynamic; \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_REAL_PROGRAM_NAME)-test $(STAGING_DIR)/bin; \
+	install -m 777 $$($(2)_BDIR)/$$($(2)_REAL_PROGRAM_NAME)-test $(TARGET_DIR)/bin; \
+	fi
+
+$(1)-gentest:
+	$(TOPDIR)/scripts/add_new_test.wizard $$($(2)_DIR) $(1)
+
+$(1)-genkconfig:
+	$(TOPDIR)/scripts/add_new_keyconfig.wizard $$($(2)_DIR) $(2) $$($(2)_KEYNUM)
+
+$$($(2)_BDIR)/.genkey:
+	$(Q)if [ -d $(TOPDIR)/$(ATP_CERTIFICATE_DIR) ]; then \
+	$(foreach n,1 2 3 4 5 6 7 8 9 10, \
+		if [ $(n) -le $$($(2)_KEYNUM) ]; then \
+			if [ "$(BUILD_$(2)_KEY$(n)_COMPILE_UPDATE)" = "y" ]; then \
+				$(KEYGEN_CMD) -a $(BUILD_$(2)_KEY$(n)_ALGID) -s $(BUILD_$(2)_KEY$(n)_KEYSIZE) -S $(BUILD_$(2)_KEY$(n)_STORE) -n $(n) -m $($(2)_INDEX) -o $(TOPDIR)/$(ATP_CERTIFICATE_DIR)/$(1)_key$(n).pem;\
+				echo "update key$(n)";\
+			else \
+				if [ -f $(TOPDIR)/$(ATP_CERTIFICATE_DIR)/$(1)_key$(n).pem ]; then \
+					echo "key$(n) has gen";\
+				else \
+					$(KEYGEN_CMD) -a $(BUILD_$(2)_KEY$(n)_ALGID) -s $(BUILD_$(2)_KEY$(n)_KEYSIZE) -S $(BUILD_$(2)_KEY$(n)_STORE) -n $(n) -m $($(2)_INDEX) -o $(TOPDIR)/$(ATP_CERTIFICATE_DIR)/$(1)_key$(n).pem;\
+					echo "gen key$(n)";\
+				fi; \
+			fi;\
+		fi;\
+	)\
+	else \
+	echo "Please create $(TOPDIR)/$(ATP_CERTIFICATE_DIR) directory and try again.";\
+	fi
+	$(Q)touch $$@
+	
+$(1)-genkey: $$($(2)_BDIR)/.genkey
+$(1)-genkey-clean:
+	$(Q)rm -f $$($(2)_BDIR)/.genkey
+
+$(1)-gdb:	
+	$(Q)$(BR2_TOOLCHAIN_EXTERNAL_PATH)/bin/$(call qstrip,$(BR2_TOOLCHAIN_EXTERNAL_PREFIX))-gdb $(TARGET_DIR)/bin/$$($(2)_REAL_PROGRAM_NAME) -cd $(TARGET_DIR)
+
+$(1)-depends:		$$($(2)_DEPENDENCIES)
+
+$(1)-show-depends:
+		@echo $$($(2)_DEPENDENCIES)
+
+$(1)-changelog:
+	@echo '/*'
+	@echo -e '$(subst $(newline),\n,$($(2)_CHANGELOGS))'
+	@echo '*/'
+	@echo "#define $(2)_MODULE_VERSION	\"$(2) <$$($(2)_FULL_PROGRAM_NAME)> $($(2)_VERSION)\""
+	@echo ''
+
+$(1)-clean: $$($(2)_CLEAN_DEPENDENCIES)
+	$(Q)$(call ATPMESSAGE,$(2),"Cleaning up")
+	$(Q)rm -f $$($(2)_BDIR)/.stamp_*
+	$(Q)if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	$(CLEAN_ATP_ENVS) O=$$($(2)_BDIR)/ PROGRAM_NAME=$$($(2)_REAL_PROGRAM_NAME) $(MAKE1) -C $$($(2)_SRC_DIR) clean; \
+	fi
+ifeq ($$($(2)_TYPE),atpkconfig)
+	$(Q)$(call ATPMESSAGE,$(2),"Cleaning katpconfig more..")
+	$(Q)if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	@find $(3) $(RCS_FIND_IGNORE) \
+	\( -name '*.[oas]' -o -name '*.ko' -o -name '.*.cmd' \
+	-o -name '.*.d' -o -name '.*.tmp' -o -name '*.mod.c' \
+	-o -name '*.symtypes' -o -name 'modules.order' \
+	-o -name 'Module.markers' -o -name '.tmp_*.o.*' \) \
+	-type f -print | xargs rm -f;\
+	fi
+endif	
+	
+ifneq ($$($(2)_CLEAN_CMDS),)
+	$(Q)$(call ATPMESSAGE,$(2),"Cleaning more..")
+	$(Q)$($(2)_CLEAN_CMDS)
+endif
+
+	@if [ -d $(3)/msg ]; then \
+	if [ -f $(STAGING_DIR)/usr/include/msgtypeswrapper.h ]; then \
+	echo ""; \
+	$(foreach b, $(notdir $(wildcard $(3)/msg/*msgtypes.h)), \
+	rm -f $(STAGING_DIR)/usr/include/msg/$b; \
+	$(SED) "/$(b)/d" $(STAGING_DIR)/usr/include/msgtypeswrapper.h; \
+	) \
+	fi; \
+	fi
+
+	@if [ -d $(3)/msg ]; then \
+	if [ -f $(HOST_DIR)/usr/include/msgtypeswrapper.h ]; then \
+	echo ""; \
+	$(foreach b, $(notdir $(wildcard $(3)/msg/*msgtypes.h)), \
+	rm -f $(HOST_DIR)/usr/include/msg/$b; \
+	$(SED) "/$(b)/d" $(HOST_DIR)/usr/include/msgtypeswrapper.h; \
+	) \
+	fi; \
+	fi
+
+$(1)-branch: $(1)
+ifneq ($$($(2)_LICENSE),)
+	$(Q)if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	cp $$($(2)_SRC_DIR)/$$($(2)_FULL_PROGRAM_NAME) $(3)/; \
+	$(TARGET_ATP_ENVS) $(MAKE1) -C $$($(2)_SRC_DIR) clean;\
+	cd $$($(2)_SRC_DIR); \
+	tar zcf $(1).tar.gz *; \
+	mv $(1).tar.gz ../; \
+	rm -fr *; \
+	fi
+	$(Q)mv $(3)/$$($(2)_FULL_PROGRAM_NAME) $$($(2)_SRC_DIR)/
+	$(Q)mv $(3)/$(1).tar.gz $$($(2)_SRC_DIR)/
+endif
+
+$(1)-branch-binary: 
+	$(Q)$(call ATPMESSAGE,$(2),"Branch binary ")
+ifneq ($$($(2)_BRANCH_BINARY_CMDS),)
+	$(Q)$($(2)_BRANCH_BINARY_CMDS)
+else
+	$(Q)if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	cd $$($(2)_SRC_DIR); \
+	rm -fr *; \
+	fi
+endif
+
+$(1)-permissions-table:
+	$(Q)$(call ATPMESSAGE,$(2),"Permissions table ")
+ifneq ($$($(2)_PERMISSIONS_TABLE),)
+ifneq ($$($(2)_UID),)
+	$(Q)python scripts/create_permissions_table.py $(1) 0 $$($(2)_UID) $$($(2)_PERMISSIONS_TABLE) $(TOPDIR)
+else
+	$(Q)python scripts/create_permissions_table.py $(1) 2000 $$($(2)_INDEX) $$($(2)_PERMISSIONS_TABLE) $(TOPDIR)
+endif
+endif
+
+ifneq ($(ATP_REPORT),)
+$(1)-report:
+	$(Q)$(call ATP_PACKAGE_REPORT,$(1),$(3),$($(2)_TYPE),$($(2)_LICENSE),$($(2)_MAKEFILE_DIR),$($(2)_DEPENDENCIES),$(4),$($(2)_PROGRAM_NAME),$($(2)_TARGET),$($(2)_INDEX),$($(2)_SUPPORT_TR098),$($(2)_SUPPORT_TR181),$($(2)_KEYNUM),$($(2)_UID))
+
+REPORT_TARGETS += $(1)-report
+endif
+
+$(1)-all: $(1)-pclint
+	$(Q)if [ -d $$($(2)_SRC_DIR)/.svn ]; then \
+		echo "Existing module."; \
+		if [ ! -d $$($(2)_BDIR)/$(SVNVERSION) ]; then \
+			mkdir -p $$($(2)_BDIR)/$(SVNVERSION); \
+			cd $$($(2)_BDIR)/$(SVNVERSION); \
+			python $(TOPDIR)/package/atp/hosttool/citools/src/svndownpackage.py $$($(2)_SRC_DIR) $(SVNVERSION) $(TOPDIR); \
+			cd -; \
+		fi ; \
+		echo "" > $$($(2)_BDIR)/old_monitor_report.xml; \
+		echo "" > $$($(2)_BDIR)/new_monitor_report.xml; \
+		echo "Do soucre monitor for old source code now ..."; \
+		python package/atp/hosttool/citools/src/sourcemonitor.py $$($(2)_BDIR)/$(SVNVERSION) $$($(2)_BDIR)/$(SVNVERSION)/$$($(2)_MAKEFILE_DIR) $(1) $$($(2)_BDIR)/old_monitor_report.xml; \
+		echo "Do soucre monitor for new source code now ..."; \
+		python package/atp/hosttool/citools/src/sourcemonitor.py $$($(2)_BDIR) $(TOPDIR)/$$($(2)_SRC_DIR) $(1) $$($(2)_BDIR)/new_monitor_report.xml; \
+		echo "Do macro analysis for old source code now ..."; \
+		echo "<macros>" > $(TOPDIR)/tmp_macro_report.xml; \
+		$(TARGET_ATP_ENVS) PACKAGE_NAME=$(1) O=$$($(2)_BDIR)/$(SVNVERSION)/ PROGRAM_NAME=$$($(2)_REAL_PROGRAM_NAME) IS_DYNAMIC="$$($(2)_IS_DYNAMIC)" SUBMODLIBS="$(patsubst %,-l%,$($(1)-submod))" ATPFLAGS="-DMODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" -D$(2)_MODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" $$($(2)_FLAGS)" $(MAKE) -C $$($(2)_BDIR)/$(SVNVERSION)/$$($(2)_MAKEFILE_DIR) macro_analysis; \
+		echo "</macros>" >> $(TOPDIR)/tmp_macro_report.xml; \
+		mv $(TOPDIR)/tmp_macro_report.xml $$($(2)_BDIR)/old_macro_report.xml; \
+		echo "Do macro analysis for new source code now ..."; \
+		echo "<macros>" > $(TOPDIR)/tmp_macro_report.xml; \
+		$(TARGET_ATP_ENVS) PACKAGE_NAME=$(1) O=$$($(2)_BDIR)/ PROGRAM_NAME=$$($(2)_REAL_PROGRAM_NAME) IS_DYNAMIC="$$($(2)_IS_DYNAMIC)" SUBMODLIBS="$(patsubst %,-l%,$($(1)-submod))" ATPFLAGS="-DMODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" -D$(2)_MODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" $$($(2)_FLAGS)" $(MAKE) -C $$($(2)_SRC_DIR) macro_analysis; \
+		echo "</macros>" >> $(TOPDIR)/tmp_macro_report.xml; \
+		mv $(TOPDIR)/tmp_macro_report.xml $$($(2)_BDIR)/new_macro_report.xml; \
+	else \
+		echo "Do souce monitor now ..."; \
+		rm -f $$($(2)_BDIR)/old_monitor_report.xml; \
+		rm -f $$($(2)_BDIR)/old_macro_report.xml; \
+		echo "" > $$($(2)_BDIR)/new_monitor_report.xml; \
+		python package/atp/hosttool/citools/src/sourcemonitor.py $$($(2)_BDIR) $(TOPDIR)/$$($(2)_SRC_DIR) $(1) $$($(2)_BDIR)/new_monitor_report.xml; \
+		echo "Do macro analysis now ..."; \
+		echo "" > $(TOPDIR)/tmp_macro_report.xml; \
+		$(TARGET_ATP_ENVS) PACKAGE_NAME=$(1) O=$$($(2)_BDIR)/ PROGRAM_NAME=$$($(2)_REAL_PROGRAM_NAME) IS_DYNAMIC="$$($(2)_IS_DYNAMIC)" SUBMODLIBS="$(patsubst %,-l%,$($(1)-submod))" ATPFLAGS="-DMODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" -D$(2)_MODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" $$($(2)_FLAGS)" $(MAKE) -C $$($(2)_SRC_DIR) macro_analysis; \
+		mv $(TOPDIR)/tmp_macro_report.xml $$($(2)_BDIR)/new_macro_report.xml; \
+	fi
+	$(Q)python package/atp/hosttool/citools/src/allcheck_report.py $$($(2)_BDIR)/$(1)_lint_report.txt $$($(2)_BDIR)/new_monitor_report.xml $$($(2)_BDIR)/new_macro_report.xml $$($(2)_BDIR)/old_monitor_report.xml $$($(2)_BDIR)/old_macro_report.xml
+
+$(1)-macro:
+	$(Q)-if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	$(TARGET_ATP_ENVS) PACKAGE_NAME=$(1) O=$$($(2)_BDIR)/ PROGRAM_NAME=$$($(2)_REAL_PROGRAM_NAME) IS_DYNAMIC="$$($(2)_IS_DYNAMIC)" SUBMODLIBS="$(patsubst %,-l%,$($(1)-submod))" ATPFLAGS="-DMODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" -D$(2)_MODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" $$($(2)_FLAGS)" $(MAKE) -C $$($(2)_SRC_DIR) macro_analysis; \
+	fi
+
+$(1)-macro-clean:
+	$(Q)-if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	$(TARGET_ATP_ENVS) PACKAGE_NAME=$(1) O=$$($(2)_BDIR)/ PROGRAM_NAME=$$($(2)_REAL_PROGRAM_NAME) IS_DYNAMIC="$$($(2)_IS_DYNAMIC)" SUBMODLIBS="$(patsubst %,-l%,$($(1)-submod))" ATPFLAGS="-DMODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" -D$(2)_MODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" $$($(2)_FLAGS)" $(MAKE) -C $$($(2)_SRC_DIR) macro_clean; \
+	fi
+
+$(1)-pclint:
+	$(Q)-if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	$(TARGET_ATP_ENVS) PACKAGE_NAME=$(1) O=$$($(2)_BDIR)/ PROGRAM_NAME=$$($(2)_REAL_PROGRAM_NAME) IS_DYNAMIC="$$($(2)_IS_DYNAMIC)" SUBMODLIBS="$(patsubst %,-l%,$($(1)-submod))" ATPFLAGS="-DMODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" -D$(2)_MODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" -DATP_MODULE_IDX=$($(2)_INDEX) -DATP_MODULE_NAME=$(1) $$($(2)_FLAGS)" $(MAKE) -C $$($(2)_SRC_DIR) pclint; \
+	fi
+
+$(1)-pclint-clean:
+	$(Q)-if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	$(TARGET_ATP_ENVS) PACKAGE_NAME=$(1) O=$$($(2)_BDIR)/ PROGRAM_NAME=$$($(2)_REAL_PROGRAM_NAME) IS_DYNAMIC="$$($(2)_IS_DYNAMIC)" SUBMODLIBS="$(patsubst %,-l%,$($(1)-submod))" ATPFLAGS="-DMODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" -D$(2)_MODULE_VERSION=\\\"$$($(2)_VERSION_STR)\\\" $$($(2)_FLAGS)" $(MAKE) -C $$($(2)_SRC_DIR) pclint_clean; \
+	fi
+
+$(1)-monitor:
+	$(Q)-if [ -f $$($(2)_SRC_DIR)/Makefile ]; then \
+	python package/atp/hosttool/citools/src/sourcemonitor.py $$($(2)_BDIR) $(TOPDIR)/$$($(2)_SRC_DIR) $(1) $(TOPDIR)/tmp_monitor_report.xml; \
+	fi
+
+$(1)-count:
+	@chmod +x $(TOPDIR)/package/atp/hosttool/citools/src/cloc
+	$(Q)python package/atp/hosttool/citools/src/cloc.py $(TOPDIR)/package/atp/hosttool/citools/src/cloc $(TOPDIR)/$$($(2)_SRC_DIR) $(1) $(TOPDIR)/tmp_count_report.xml
+
+# Compute the name of the Kconfig option that correspond to the
+# package being enabled. We handle three cases: the special Linux
+# kernel case, the bootloaders case, and the normal packages case.
+$(2)_KCONFIG_VAR = BUILD_$(2)
+
+# Check if $(4) is something like BUILD_***
+ifneq ($$($$($(2)_KCONFIG_VAR)),y)
+ifneq ($(4),)
+ifneq ($(4),host)
+ifneq ($(4),targets)
+ifneq ($(4),required)
+# depends on BUILD_OTHER
+$(2)_KCONFIG_VAR =$(4)
+endif
+endif
+endif
+endif
+endif
+
+$(2)_KCONFIG_REAL_VAR =n
+
+# Check if it is a required package
+ifeq ($$($$($(2)_KCONFIG_VAR)),y)
+$(2)_KCONFIG_REAL_VAR =y
+endif
+ifeq ($(4),required)
+$(2)_KCONFIG_REAL_VAR =y
+endif
+
+# add package to the general list of targets if requested by the buildroot
+# configuration
+
+ifeq ($$($(2)_KCONFIG_REAL_VAR),y)
+
+ifeq ($$($(5)_TYPE),kernel)
+BRANCHKERNELTARGETS += $(1)-branch-binary
+else
+ifeq ($$($(5)_TYPE),cms)
+BRANCHHUWEIPRIVATETARGETS += $(1)-branch-binary
+else
+ifeq ($$($(5)_TYPE),web)
+BRANCHHUWEIPRIVATETARGETS += $(1)-branch-binary
+else
+ifeq ($$($(5)_TYPE),cli)
+BRANCHHUWEIPRIVATETARGETS += $(1)-branch-binary
+else
+ifeq ($$($(5)_LICENSE),"ATP core")
+BRANCHATPCORETARGETS += $(1)-branch-binary
+else
+ifeq ($$($(5)_LICENSE),"Huawei private")
+BRANCHHUWEIPRIVATETARGETS += $(1)-branch-binary
+else
+ifeq ($$($(5)_LICENSE), "BRCM")
+BRANCHHUWEIPRIVATETARGETS += $(1)-branch-binary
+else
+ifeq ($$($(5)_LICENSE), "BSD")
+BRANCHSAFEOPENSOURCETARGETS += $(1)-branch-binary
+else
+ifeq ($$($(5)_LICENSE), BSD)
+BRANCHSAFEOPENSOURCETARGETS += $(1)-branch-binary
+else
+ifeq ($$($(5)_LICENSE),"MIT")
+BRANCHSAFEOPENSOURCETARGETS += $(1)-branch-binary
+else
+ifeq ($$($(5)_LICENSE), MIT)
+BRANCHSAFEOPENSOURCETARGETS += $(1)-branch-binary
+else
+ifneq ($$($(5)_LICENSE),)
+BRANCHOPENSOURCETARGETS += $(1)-branch-binary
+else
+BRANCHUNDEFINETARGETS += $(1)-branch-binary
+endif
+endif
+endif
+endif
+endif
+endif
+endif
+endif
+endif
+endif
+endif
+endif
+
+ifneq ($$($(2)_PERMISSIONS_TABLE),)
+PETABLETARGETS += $(1)-permissions-table
+endif
+
+ifneq ($$($(2)_KEYNUM),)
+GENKEYTARGETS += $(1)-genkey
+endif
+
+ifneq ($$($(2)_INDEX),)
+CBBIDTARGETS += $(2)
+endif
+
+ifeq ($$($(2)_TYPE),atpkconfig)
+KCONFIGTARGETS += $(1)
+else 					# Else of atpkconfig
+ifeq ($$($(2)_TYPE),cms)
+
+ifneq ($(BUILD_TR181),)
+
+ifeq ($$($(2)_SUPPORT_TR181),y)
+CMSTARGETS += $(1)
+TESTTARGETS += $(1)-test
+endif
+
+else 			# Else of BUILD_TR181
+
+ifeq ($$($(2)_SUPPORT_TR181),y)
+ifeq ($$($(2)_SUPPORT_TR098),y)
+CMSTARGETS += $(1)
+TESTTARGETS += $(1)-test
+endif
+else
+CMSTARGETS += $(1)
+TESTTARGETS += $(1)-test
+endif
+
+endif
+
+else 					# Else of cms
+ifeq ($$($(2)_TYPE),kernel)
+KERNELTARGETS += $(1)
+HUAWEI_DRIVERS_DIR += $(TOPDIR)/$$($(2)_SRC_DIR)/
+else 					# Else of kernel
+ifeq ($$($(2)_TYPE),web)
+WEBTARGETS += $(1)
+else					# Else of web
+ifeq ($$($(2)_TYPE),cli)
+CLITARGETS += $(1)
+else 					# Else of cli
+ifeq ($$($(2)_TYPE),html)
+HTMLTARGETS += $(1)	    # Else of html
+else
+ifeq ($(4),targets)
+TESTTARGETS += $(1)-test
+TARGETS += $(1)
+else 					# Else of targets
+TESTTARGETS += $(1)-test
+ATARGETS += $(1)
+endif 					# End of targets
+endif					# End of html
+endif 					# End of cli
+endif                   		# End of web
+endif 					# End of kernel
+endif 					# End of cms
+endif 					# End of atpkconfig
+
+endif 					# End of $(2)_KCONFIG_VAR
+
+endef # ATPTARGETS_INNER
+
+################################################################################
+# ATPTARGETS -- the target generator macro for generic packages
+#
+# Argument 1 is the package directory prefix [mandatory]
+# Argument 2 is the lowercase package name   [mandatory]
+# Argument 3 is the package type   			 [optional]
+#   1: targets
+#   2: required
+#   3: BUILD_***
+################################################################################
+
+define ATPTARGETS
+# In the case of target packages, keep the package name "pkg"
+ifeq ($(4),host)
+$(call ATPTARGETS_INNER,host-$(2),$(call UPPERCASE,host-$(2)),$(1),$(3),$(call UPPERCASE,$(2)),host)
+else
+$(call ATPTARGETS_INNER,$(2),$(call UPPERCASE,$(2)),$(1),$(3),$(call UPPERCASE,$(2)),target)
+endif
+endef
+
+define ATP_KCONFIG_ENABLE_OPT
+@if [ `grep -w -c "$(1)" $(2).verify` -ge 1 ]; then\
+if [ `grep -w -c "$(1) =y" $(2).verify` -ne `grep -w -c "$(1)" $(2).verify` ]; then \
+$(error) echo "$(1) is conflit .Info: "; \
+grep -n -2 "\$(1)\b" $(2).verify; \
+exit 26; \
+fi \
+else \
+$(SED) "/# $(1) is not set/d" $(2);\
+$(SED) "/$(1)=/d" $(2);\
+echo "$(1)=y" >> $(2);\
+echo "$(1) =y" >> $(2).verify; \
+fi
+endef
+
+define ATP_KCONFIG_SET_OPT
+@if [ `grep -w -c "$(1)" $(3).verify` -ge 1 ]; then\
+if [ `grep -w -c "$(1) =$(2)" $(3).verify` -ne `grep -w -c "$(1)" $(3).verify` ]; then \
+$(error) echo "$(1) is conflit .Info: "; \
+grep -n -2 "\$(1)\b" $(3).verify; \
+exit 26; \
+fi \
+else \
+$(SED) "/# $(1) is not set/d" $(3);\
+$(SED) "/$(1)=/d" $(3);\
+echo "$(1)=$(2)" >> $(3);\
+echo "$(1) =$(2)" >> $(3).verify; \
+fi
+endef
+
+define ATP_KCONFIG_DISABLE_OPT
+@if [ `grep -w -c "$(1)" $(2).verify` -ge 1 ]; then\
+if [ `grep -w -c "# $(1) is not set" $(2).verify` -ne `grep -w -c "$(1)" $(2).verify` ]; then \
+$(error) echo "$(1) is conflit .Info: "; \
+grep -n -2 "\$(1)\b" $(2).verify; \
+exit 26; \
+fi \
+else \
+$(SED) "/# $(1) is not set/d" $(2);\
+$(SED) "/$(1)=/d" $(2);\
+echo "# $(1) is not set" >> $(2);\
+echo "# $(1) is not set" >> $(2).verify; \
+fi
+endef
+
+# :mode=makefile:

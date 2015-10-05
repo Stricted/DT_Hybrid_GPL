@@ -1,0 +1,39 @@
+[settings]
+functionname = hi_kernel_dp_l2_mac_table_item_get_cmd;
+attributenum = 9;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<index>       type<uint>     range<0x0,0xFFFFFFFF>   default<0>; 
+attribute=alias<mac>         type<mac>                              default<00:e0:fc:55:55:5a>;
+attribute=alias<reserved>    type<ushort>   range<0x0,0xFFFF>       default<0>; 
+attribute=alias<vlan>        type<uint>     range<0x0,0xFFFFFFFF>   default<0>; 
+attribute=alias<untag_en>    type<uint>     range<0x0,0xFFFFFFFF>   default<0>; 
+attribute=alias<fid>         type<uint>     range<0x0,0xFFFFFFFF>   default<0>; 
+attribute=alias<egr>         type<uint>     range<0x0,0xFFFFFFFF>   default<0>; 
+attribute=alias<age_en>      type<uint>     range<0x0,0xFFFFFFFF>   default<0>; 
+attribute=alias<valid>       type<uint>     range<0x0,0xFFFFFFFF>   default<0>; 
+
+
+[help]
+typedef struct 
+{
+    uint    ui_index;    
+
+    uchar   uc_mac[6];
+    /* Promblem Number: SDK整改     Author:z53794,   Date:2010/9/8 
+       Description    : 改写为ushort类型*/
+    //uchar   uc_reserved[2];   
+    ushort  us_reserved;
+    /* end of SDK整改 Date:2010/9/8 */
+    
+    uint    ui_vlan;
+    HI_BOOL_E em_untag_en;
+    uint    ui_fid;                 /* FID，用来查找VLAN ACTION表  */
+    hi_dp_port_u    u_egr;          /* 对于组播报文,表示组播复制索引,即组播ID */
+    HI_BOOL_E   em_age_en;
+    
+    HI_BOOL_E  em_valid;
+    
+}hi_dp_l2_mac_table_item_s; 
+

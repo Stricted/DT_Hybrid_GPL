@@ -1,0 +1,41 @@
+[settings]
+commandtype      = 0xF80058A1 ;
+attributenum     = 2 ;
+displayattribute = 1 ;
+
+[parameter]
+attribute=alias<egr>          type<uint>    range<0x0,0x0D>       default<0>;
+attribute=alias<schmode>      type<uint>    range<0x0,0x1>        default<0>;
+
+[help]
+typedef struct
+{
+    hi_lsw_qos_egr_e           em_egr;
+    hi_lsw_qos_sch_mode_e  em_schmode;
+}hi_lsw_port_schmode_s;
+
+/* 队列出口 */
+typedef enum {
+    HI_LSW_QOS_EGR_TCONT0_E  = 0,
+    HI_LSW_QOS_EGR_TCONT1_E,
+    HI_LSW_QOS_EGR_TCONT2_E,
+    HI_LSW_QOS_EGR_TCONT3_E,
+    HI_LSW_QOS_EGR_TCONT4_E,
+    HI_LSW_QOS_EGR_TCONT5_E,
+    HI_LSW_QOS_EGR_TCONT6_E,
+    HI_LSW_QOS_EGR_TCONT7_E, 
+    
+    HI_LSW_QOS_EGR_GE0_E,
+    HI_LSW_QOS_EGR_GE1_E,
+    HI_LSW_QOS_EGR_FE2_E,
+    HI_LSW_QOS_EGR_FE3_E,
+    HI_LSW_QOS_EGR_FE4_E,    
+    
+    HI_LSW_QOS_EGR_CPU_E,        
+}hi_lsw_qos_egr_e;
+
+/* 队列调度模式 */
+typedef enum {
+    HI_LSW_QOS_SCH_SP_MODE_E = 0,        /* SP调度模式 */
+    HI_LSW_QOS_SCH_WRR_MODE_E,           /* WRR调度模式 */
+}hi_lsw_qos_sch_mode_e;

@@ -1,0 +1,27 @@
+config IGMP
+	tristate "IGMP"
+	default y
+config IGMP_SNOOPING
+	tristate "IGMP Snooping"
+	default y
+	depends on IGMP
+config BR_IGMP_STATISTIC
+	bool "IGMP support statistic"
+	default n	
+	depends on IGMP
+config IGMP_ENG_DT
+	bool "IGMP support DT ENG STAT"
+	default n	
+	depends on IGMP
+config IGMP_MAX_MSF
+    int "IGMP max source for v3"
+    help
+      igmp max source number
+    default 10
+    depends on IGMP
+config IGMP_MAX_GROUP_NUMBER
+    int "IGMP max groups number"
+    help
+      igmp max groups number
+    default 32
+    depends on IGMP

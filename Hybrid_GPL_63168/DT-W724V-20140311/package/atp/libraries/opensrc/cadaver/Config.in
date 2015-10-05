@@ -1,0 +1,3 @@
+config BUILD_CADAVER
+	bool "Support WebDAV Client"
+	default n

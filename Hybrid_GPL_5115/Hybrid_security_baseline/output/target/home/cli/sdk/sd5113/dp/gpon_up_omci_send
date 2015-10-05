@@ -1,0 +1,21 @@
+[settings]
+functionname=0xF7002004;
+attributenum=4;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       		type<uint>   	range<0x0,0xFFFFFFFF>  	default<0x00000B02>; /*全局模块*/
+attribute=alias<em_sync_en>       	type<int>   	range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<ui_length>       	type<uint>   	range<0x0,0xFFFFFFFF>  	default<0x00000008>;
+attribute=alias<uc_data>       		type<binary>   	range<0,256>  			default<0x00000000>;
+
+[help]
+typedef struct
+{
+    /* ADD 增加操作同步开关 */
+    HI_BOOL_E   em_sync_en;
+    uint        ui_length;         /* 消息长度 */
+
+    uchar  uc_data[HI_DP_OMCI_MSG_MAX_LEN];
+    
+} hi_omci_message_s;

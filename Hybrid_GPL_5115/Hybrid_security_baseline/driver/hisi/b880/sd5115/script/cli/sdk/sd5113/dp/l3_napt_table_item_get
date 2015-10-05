@@ -1,0 +1,60 @@
+[settings]
+functionname=0xF7002004;
+attributenum=22;
+attributeflag = 1 ;   //0:close 1:open
+
+[parameter]
+attribute=alias<module>       		            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000806>; /*全局模块*/
+attribute=alias<ui_index>      	 	            type<uint>   range<0,511>  			default<0x00000000>;
+attribute=alias<em_valid_0>       	            type<int>    range<0x0,0x02>  		default<0x00000000>;
+attribute=alias<em_age_en>       	            type<int>    range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<ui_age>       		            type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_subnet_ip>                   type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<ui_subnet_port>                 type<uint>   range<0x0,0xFFFF>  	default<0x00000000>;
+attribute=alias<ui_outnet_ip_index>             type<uint>   range<0,7>  			default<0x00000000>;
+attribute=alias<ui_outnet_port_0>               type<uint>   range<0,0xFFFF>  		default<0x00000000>;
+attribute=alias<em_proto>       	            type<int>    range<0x0,0x03>  		default<0x00000000>;
+attribute=alias<ui_dn_rep_index>                type<uint>   range<0,63>  			default<0x00000000>;
+attribute=alias<ui_up_rep_index>                type<uint>   range<0,63>  			default<0x00000000>;
+attribute=alias<em_uni_port>       	            type<int>    range<0x0,0x08>  		default<0x00000000>;
+attribute=alias<em_valid_1>       	            type<int>    range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<em_ip_valid>       	            type<int>    range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<ui_ip_mask>       	            type<uint>   range<0x0,0x1F>  		default<0x00000000>;
+attribute=alias<ui_outnet_ip>                   type<uint>   range<0x0,0xFFFFFFFF>  default<0x00000000>;
+attribute=alias<em_port_valid>                  type<int>    range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<ui_outnet_port_1>               type<uint>   range<0x0,0xFFFF>  	default<0x00000000>;
+attribute=alias<em_ex_outnet_filter_en>         type<int>    range<0x0,0x01>  		default<0x00000000>;
+attribute=alias<ui_ex_outnet_filter_index>      type<uint>   range<0,63>  			default<0x00000000>;
+attribute=alias<em_outnet_unhit_act>            type<int>    range<0x0,0x09>  		default<0x00000001>;
+
+[help]
+typedef struct 
+{
+    uint    ui_index;                          
+
+    HI_BOOL_E   em_valid;                   /* 表项有效位 */
+
+    HI_BOOL_E   em_age_en;                  /* 静态标示位 */
+    uint    ui_age;                         /* 表项年龄 */
+
+    uint    ui_subnet_ip;                   /* 该Napt连接中子网主机的IP地址 */    
+    uint    ui_subnet_port;                 /* 该Napt连接中子网主机的TCP/UDP端口号 */     
+    
+    uint    ui_outnet_ip_index;             /* 外网IP INDEX   */  
+    uint    ui_outnet_port;                 /* 该Napt连接对应的外网端口,即HGU WAN口Napt TCP/UDP端口号 */         
+
+    HI_DP_L3_IP_PROTO_E   em_proto;         /* 该Napt连接中允许通过的IP报文协议类型 */
+
+    uint    ui_dn_rep_index;                /* 作为索引完成下行Napt报文的Napt转换 */
+    uint    ui_up_rep_index;                /* 该索引提供给Txdma完成上行Napt报文的Napt转换 */
+
+    HI_DP_PORT_E    em_uni_port;            /* 用户侧端口信息 */
+
+    hi_dp_l3_outnet_filter_s st_base_outnet_filter;     /* 外网限制指示, 实际配置到对应的基本OUTNET表 */
+
+    HI_BOOL_E   em_ex_outnet_filter_en;                 /* 扩展外网过滤  */
+    uint    ui_ex_outnet_filter_index;                  /* 0-63  */
+
+    HI_DP_TRANS_ACT_E          em_outnet_unhit_act;     /* 下行OUTNET UNHIT的转发策略,只有丢弃和转CPU两种选择 */     
+                                                                                             
+}hi_dp_l3_napt_table_item_s;

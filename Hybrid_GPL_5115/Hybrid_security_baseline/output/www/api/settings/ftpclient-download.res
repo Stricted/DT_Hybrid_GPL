@@ -1,0 +1,1 @@
+vpath="InternetGatewayDevice.DeviceInfo.X_FtpClient.{i}"E5element="UserName|PassWord|Port|DownLoadUrl|LocalPath|Status"ATPelement="UserName|PassWord|Port|DownLoadUrl|LocalPath|Status"multi="ftps|ftp"

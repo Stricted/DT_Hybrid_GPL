@@ -1,0 +1,24 @@
+[settings]
+functionname = hi_kernel_dp_qos_qmap_table_item_get_cmd;
+attributenum = 5;
+attributeflag= 1;
+
+[parameter]
+attribute=alias<egr>         type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<group_id>    type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<pri>         type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<valid>       type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+attribute=alias<qid>         type<uint>     range<0x0,0xFFFFFFFF>   default<0>;  
+
+
+[help]
+/* ∂”¡–”≥…‰±Ì */
+typedef struct
+{
+    HI_DP_QOS_EGR_E em_egr;
+    uint            ui_group_id;
+    uint            ui_pri;
+
+    HI_BOOL_E em_valid;
+    uint      ui_qid;
+} hi_dp_qos_qmap_table_item_s;

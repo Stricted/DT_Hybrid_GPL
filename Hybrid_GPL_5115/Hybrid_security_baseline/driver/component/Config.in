@@ -1,0 +1,16 @@
+config BUILD_COMPONENT
+	bool "Support Hardware Component"
+	default n
+	
+#menu "Hardware Component Set"
+config BUILD_COMPONENT_WLAN
+	bool "Support Componet Wlan"
+	default n
+	depends on BUILD_COMPONENT
+	
+config BUILD_COMPONENT_WLAN_CHIP
+	string "Component wlan Chip"
+	default "bcm43217" if HISI_CHIP
+	depends on BUILD_COMPONENT_WLAN
+	
+#endmenu

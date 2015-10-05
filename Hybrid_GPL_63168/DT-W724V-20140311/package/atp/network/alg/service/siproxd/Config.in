@@ -1,0 +1,5 @@
+config BUILD_SIPROXYD
+    bool "Support SIP ALG through opensource siproxyd"
+    depends on BUILD_SIPPXY
+	select BUILD_LIBOSIP
+    default n

@@ -1,0 +1,92 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="copyright" content="(C) Copyright 2005">
+<meta name="DC.rights.owner" content="(C) Copyright 2005">
+<meta name="DC.Type" content="reference">
+<meta name="DC.Title" content="Storage Services">
+<meta name="abstract" content="You can connect a USB storage device to the <script>dw(common_3g_wireless_modem);</script>, so that multiple computers in your home networks can access data in the USB storage device through the network simultaneously.">
+<meta name="description" content="You can connect a USB storage device to the <script>dw(common_3g_wireless_modem);</script>, so that multiple computers in your home networks can access data in the USB storage device through the network simultaneously.">
+<meta name="DC.Relation" scheme="URI" content="../../usermanual/parameters/parameters_advanced.html">
+<meta name="DC.Relation" scheme="URI" content="../../usermanual/advanced/advanced_storage_services.html">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="parameters_storage_services_1">
+<meta name="DC.Language" content="en-us">
+<link rel="stylesheet" type="text/css" href="../../../public_sys-resources/commonltr.css">
+<script language="javascript" type="text/javascript" src="../../../public_sys-resources/ExpandCollapse.js"></script><script type="text/javascript" src="../../../../language/lang_en_us.js"></script>
+<title>Storage Services</title>
+</head>
+<body style="clear:both; padding-left:10px; padding-top:5px; padding-right:5px; padding-bottom:5px"><a name="parameters_storage_services_1"></a><a name="parameters_storage_services_1"></a>
+
+
+<div id="navigation" class="navigation">
+<ul>
+<li><a href="../../usermanual/legal/instance_legal_notice_fmc_lte.html">Legal Notice</a></li>
+<li><a href="../../usermanual/sms/sms_management.html">SMS Management</a></li>
+<li><a href="../../usermanual/network/network_configuration.html">Network Connection Configuration</a></li>
+<li><a href="../../usermanual/pin/pin_management.html">PIN Code Management</a></li>
+<li><a href="../../usermanual/advanced/advanced_configuration.html">Advanced Configuration</a></li>
+<li><a href="../../usermanual/maintenance/maintenance_device.html">Device Maintenance</a></li>
+<li><a href="../../usermanual/parameters/parameters_ui.html">UI Reference</a></li>
+<li><a href="../../usermanual/faq/faq.html">FAQ</a></li>
+<li><a href="../../usermanual/gpl/gpl.html">GPL WRITTEN OFFER</a></li>
+<li><a href="../../usermanual/abbreviations/abbreviations.html">Acronyms and Abbreviations</a></li>
+</ul>
+</div>
+<div id="right">
+<h1 class="topictitle1">Storage Services</h1>
+
+
+<div><p>You can connect a USB storage device to the <span><span class="uicontrol"><b><script>dw(common_3g_wireless_modem);</script></b></span></span>, so that multiple computers in your home networks can access data in the USB storage device through the network
+simultaneously.</p>
+
+<div class="section"><h4 class="sectiontitle"><span>Configuring Path</span></h4><p><span class="menucascade"><b><span class="uicontrol"><script>dw(common_settings);</script></span></b> &gt; <b><span class="uicontrol"><script>dw(common_advanced);</script></span></b> &gt; <b><span class="uicontrol"><script>dw(Label_storage_services);</script></span></b>
+</span></p>
+</div>
+
+<div class="section"><h4 class="sectiontitle"><span>Parameters Description</span></h4><ul>
+<li><span id="parameters_storage_services_1__d40e34"><a name="parameters_storage_services_1__d40e34"></a><a name="d40e34"></a><span class="uicontrol"><b><script>dw(Label_enable_samba);</script></b></span>: </span><p>After the shared Samba service is enabled, you can also access data in the USB storage device by accessing the shared directory. Visit \\<span>192.168.1.1</span> (also the IP address of your <span><span class="uicontrol"><b><script>dw(common_3g_wireless_modem);</script></b></span></span>) to access the shared directory.</p>
+<div class="note"><img src="../../../public_sys-resources/icon-note.gif"><span class="notetitle"> NOTE: </span><div class="notebody"><p id="parameters_storage_services_1__d40e45"><a name="parameters_storage_services_1__d40e45"></a><a name="d40e45"></a>The Samba service is often used
+on home networks. Because some network devices may not support Samba, other computers on the Internet may fail to access shared data through the Samba service.</p>
+</div></div>
+</li>
+<li><span class="uicontrol"><b><script>dw(Label_enable_ftpserver);</script></b></span>: <p>After the shared FTP service is enabled, you can securely and easily access data in the USB storage device by accessing the FTP server. Visit ftp://<span>192.168.1.1</span> to access the shared directory.</p>
+</li>
+<li><span class="uicontrol"><b><script>dw(samba_label_username);</script></b></span>: <p>Enter username used to access the shared directory.</p>
+</li>
+<li><span class="uicontrol"><b><script>dw(common_password);</script></b></span>: <p>Enter password used to access the shared directory.</p>
+</li>
+<li><span class="uicontrol"><b><script>dw(samba_label_right);</script></b></span>: <ul>
+<li><span class="uicontrol"><b><script>dw(sd_label_read_only);</script></b></span>:<p>Only allowed clients to read the file(s) in the shared directory.</p>
+</li>
+<li><span class="uicontrol"><b><script>dw(sd_label_read_write);</script></b></span>: <p>Allow clients to read and write file(s) in the shared directory.</p>
+</li>
+</ul>
+</li>
+<li><span class="uicontrol"><b><script>dw(samba_label_directory);</script></b></span>: <p>Browse and select shared directory.</p>
+</li>
+<li><span class="uicontrol"><b><script>dw(common_save);</script></b></span>: <p><span>Click to save the settings.</span></p>
+</li>
+<li><span class="uicontrol"><b><script>dw(common_apply);</script></b></span>:<p><span>Click to make the settings take effect.</span></p>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div>
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="../../usermanual/parameters/parameters_advanced.html">Advanced</a></div>
+</div>
+<div class="reltasks"><strong>Related tasks</strong><br>
+<div><a href="../../usermanual/advanced/advanced_storage_services.html" title="With USB storage services, you can view, modify, add or delete the shared file(s) on the USB device.">Sharing Files on USB Storage Device</a></div>
+</div>
+</div>
+
+</div></body>
+</html>

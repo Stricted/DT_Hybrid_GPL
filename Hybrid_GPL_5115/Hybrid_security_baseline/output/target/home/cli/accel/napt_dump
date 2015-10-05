@@ -1,0 +1,9 @@
+[settings]
+functionname=hi_kernel_napt_dump;
+attributenum=0;
+attributeflag = 1;
+
+[parameter]
+
+[help]
+dump all conntrack

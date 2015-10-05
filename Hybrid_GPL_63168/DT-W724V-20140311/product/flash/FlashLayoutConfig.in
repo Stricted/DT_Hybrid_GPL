@@ -1,0 +1,309 @@
+
+config ATP_KILO_SIZE
+	int "ATP_KILO_SIZE"	
+	default "1024"
+	help
+	  Set KILO_SIZE if you want to change the default config,else no need to change it
+config BHAL_FLASH_BASE_ADDR
+	hex "FLASH Base Address"
+	default "0xB8000000"
+	help 
+		Set Flash Base Address
+
+config ATP_BHAL_FLASH_OFFSET
+	int "flash layout begin offset(in ATP_KILO_SIZE)"
+	default "0"
+	help 
+		hisi chip first block reservered
+	
+config ATP_BHAL_BOOTLOADER_SIZE
+	int "bootloader size(in ATP_KILO_SIZE)"	
+	default "16"
+	help
+	  Set bootloader size
+	  
+config ATP_BHAL_MAIN_TAG_SIZE
+	int "main filesystem tag area size(in ATP_KILO_SIZE)"	
+	default "16"
+	help
+	  Set main tag flash area size
+	  
+config ATP_BHAL_SLAVE_TAG_SIZE
+	int "slave filesystem tag area size(in ATP_KILO_SIZE)"	
+	default "16"
+	help
+	  Set slave tag flash area size
+	  
+config ATP_BHAL_MAIN_KERNEL_SIZE
+	int "main kernel flash area size(in ATP_KILO_SIZE)"	
+	default "0"
+	help
+	  Set main kernel flash area size
+	  
+config ATP_BHAL_MAIN_FS_SIZE
+	int "main filesystem flash area size(in ATP_KILO_SIZE)"	
+	default "14816"
+	help
+	  Set main filesystem flash area size
+	  
+config SYSTEM_TYPE
+		int "system type"
+		default "1"
+		help
+			1:double system 2:single system 3:big small endian system
+
+config ATP_BHAL_SLAVE_KERNEL_SIZE
+	int "slave kernel flash area size(in ATP_KILO_SIZE)"	
+	default ATP_BHAL_MAIN_KERNEL_SIZE if DOUBLE_SYSTEM
+	help
+	  Set slave kernel flash area size	  
+	  
+config ATP_BHAL_SLAVE_FS_SIZE
+	int "slave filesystem flash area size(in KILO_SIZE)"	
+	default ATP_BHAL_MAIN_FS_SIZE if DOUBLE_SYSTEM
+	help
+	  Set slave filesystem flash area size	
+
+config ATP_BHAL_MAIN_WEB_FS_SIZE
+    int "main web flash area size(in ATP_KILO_SIZE)"
+	default 0
+
+config ATP_BHAL_SLAVE_WEB_FS_SIZE
+    int "slave web flash area size(in ATP_KILO_SIZE)"
+	default 0
+	  
+config MIDDLE_WARE
+		bool "support middle ware"
+		default n
+		help
+			Enable this option if you support middle ware
+
+	  
+config ATP_BHAL_MIDDLEWARE_FS_SIZE
+	int "middle ware flash area size(in ATP_KILO_SIZE)"	
+	default "0"
+	default "0" if ATP_MIDDLE_WARE
+	help
+	  Set slave filesystem flash area size	
+	  
+config ATP_BHAL_MODULE_FS_SIZE
+	int "module upgrade flash area size(in ATP_KILO_SIZE)"	
+	default "0"
+	help
+	  Set module upgrade flash area size
+
+config ATP_BHAL_RESERVED_SIZE
+	int "reserved flash area size(in ATP_KILO_SIZE)"	
+	default "0"
+	help
+	  Set reserved flash area size	  
+
+config ATP_BHAL_CURRENT_CONFIG_SIZE
+	int "corrent config flash area size(in ATP_KILO_SIZE)"	
+	default "64"
+	help
+	  Set corrent config flash area size
+
+  
+
+config ATP_BHAL_CUSTOMIZE_CONFIG_SIZE
+	int "customize config flash area size(in ATP_KILO_SIZE)"	
+	default "0"
+	help
+	  Set customize config flash area size		  
+
+  
+	 
+config ATP_BHAL_FACTORY_CONFIG_SIZE
+	int "factory config flash area size(in ATP_KILO_SIZE)"	
+	default "64"
+	help
+	  Set factory config flash area size
+
+
+config ATP_BHAL_TEMP_PARAM_SIZE
+	int "temp param config flash area size(in ATP_KILO_SIZE)"	
+	default "128"
+	help
+	  Set temp param config flash area size
+	  
+
+
+config ATP_BHAL_TR069_CERT_AUTH_FILE_SIZE
+	int "tr069 cert auth file flash area size(in ATP_KILO_SIZE)"	
+	default "128"
+	help
+	  Set tr069 cert auth file flash area size		 
+
+config ATP_BHAL_LOG_AREA_SIZE
+	int "log flash area size(in ATP_KILO_SIZE)"	
+	default "128"
+	help
+	  Set log flash area size
+
+config ATP_BHAL_CRASH_DUMP_SIZE
+	int "crash dump log flash area size(in ATP_KILO_SIZE)"	
+	default "128"
+	help
+	  Set crash dump log flash area size	  
+
+config ATP_BHAL_PPP_SESSION_SIZE
+	int "ppp session flash area size(in ATP_KILO_SIZE)"	
+	default "64"
+	help
+	  Set ppp session flash area size
+ 
+	
+config ATP_BHAL_DECT_PHONEBOOK_SIZE
+	int "dect phonebook flash area size(in ATP_KILO_SIZE)"	
+	default "256"
+	help
+	  Set dect phonebook flash area size
+	  
+config ATP_BHAL_DECT_CALIBRATE_SIZE
+	int "dect calibrate flash area size(in ATP_KILO_SIZE)"	
+	default "16"
+	help
+	  Set dect calibrate flash area size
+
+config ATP_BHAL_CONFIG_RESERVED_SIZE
+	int "config reserved flash area size(in ATP_KILO_SIZE)"	
+	default "0"
+	help
+	  Set config reserved flash area size	
+
+config ATP_BHAL_CONFIG_BACK_SIZE
+	int "config back flash area size(in ATP_KILO_SIZE)"	
+	default "0"
+	help
+	  Set config back flash area size
+	  
+config ATP_BHAL_CONFIG_BACK_RESERVED_SIZE
+	int "config back reserved flash area size(in ATP_KILO_SIZE)"	
+	default "0"
+	help
+	  Set config back reserved flash area size
+	 
+config ATP_BHAL_FIXED_PARAM_SIZE
+	int "equip param config flash area size(in ATP_KILO_SIZE)"	
+	default "128"
+	help
+	  Set equip param config flash area size	 
+	
+config ATP_BHAL_WLANRF_PARAM_SIZE
+	int "wlanRF param config flash area size(in ATP_KILO_SIZE)"	
+	default "0"
+	help
+	  Set wlanRF param config flash area size	 
+	  
+config ATP_BHAL_UPG_FLAG_SIZE
+	int "upgrade system flag flash area size(in ATP_KILO_SIZE)"	
+	default "16"
+	help
+	  Set upgrade system flag flash area size		  
+	  
+config ATP_BHAL_BBT_SIZE
+	int "The Bad Block Table partition is last and is a constant size.(in ATP_KILO_SIZE)"	
+	default "1024"
+	help
+	  Set Bad Block Table partition area size	
+	  
+config ATP_BHAL_FLASH_TOTAL_SIZE
+	int "Flash total size(in ATP_KILO_SIZE)"	
+	default "32768"
+	help
+	  Set Flash total size	
+
+menu "Config expand flash area"  
+config BHAL_CURRENT_CONFIG_EXPAND_1
+		bool "expand the current config flash area, no. 1"
+		default n
+		help
+			Enable this option if you need to expand current config flash area, no. 1
+	  
+if 	BHAL_CURRENT_CONFIG_EXPAND_1
+config ATP_BHAL_CURRENT_CONFIG_1_SIZE
+	int "expand the first corrent config flash area(in ATP_KILO_SIZE)"
+	default "0"
+	help
+	  Enable this 
+
+config BHAL_CURRENT_CONFIG_1_INDEX
+	int "Count the first expand corrent config flash area no. of all the expand flash area(in KILO_SIZE)"
+	default "0"
+	help
+	  Enable this 
+	  
+	  
+config BHAL_CURRENT_CONFIG_EXPAND_2
+		bool "expand the current config flash area, no. 2"
+		default n
+		help
+			Enable this option if you need to expand current config flash area, no. 2
+			
+if 	BHAL_CURRENT_CONFIG_EXPAND_2
+config ATP_BHAL_CURRENT_CONFIG_2_SIZE
+	int "expand the second corrent config flash area(in ATP_KILO_SIZE)"
+	default "0"
+	help
+	  Enable this option 
+
+config BHAL_CURRENT_CONFIG_2_INDEX
+	int "Count the second expand corrent config flash area no. of all the expand flash area(in ATP_KILO_SIZE)"
+	default "0"
+	help
+	  Enable this 
+	  
+endif	##end of BHAL_CURRENT_CONFIG_EXPAND_2	  
+	  
+endif	##end of   BHAL_CURRENT_CONFIG_EXPAND_1		
+
+
+config BHAL_LOG_AREA_EXPAND_1
+		bool "expand the log flash area, no. 1"
+		default n
+		help
+			Enable this option if you need to expand log flash area, no. 1
+	  
+if 	BHAL_LOG_AREA_EXPAND_1
+config ATP_BHAL_LOG_AREA_SIZE_1
+	int "expand the first log flash area(in ATP_KILO_SIZE)"
+	default "0"
+	help
+	  Enable this 
+
+config BHAL_LOG_AREA_1_INDEX
+	int "Count the first expand log flash area no. of all the expand flash area(in ATP_KILO_SIZE)"
+	default "0"
+	help
+	  Enable this 
+	  
+	  
+config BHAL_LOG_AREA_EXPAND_2
+		bool "expand the log flash area, no. 2"
+		default n
+		help
+			Enable this option if you need to expand log flash area, no. 2
+			
+if 	BHAL_LOG_AREA_EXPAND_2
+config ATP_BHAL_LOG_AREA_SIZE_2
+	int "expand the second log flash area(in ATP_KILO_SIZE)"
+	default "0"
+	help
+	  Enable this option 
+
+config BHAL_LOG_AREA_2_INDEX
+	int "Count the second expand log flash area no. of all the expand flash area(in ATP_KILO_SIZE)"
+	default "0"
+	help
+	  Enable this 
+	  
+endif	##end of BHAL_LOG_AREA_EXPAND_2	  
+	  
+endif	##end of   BHAL_LOG_AREA_EXPAND_1	
+
+ 
+endmenu
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" />
+<title></title>
+<script type="text/javascript" src="../lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../lib/log4javascript_lite.js"></script>
+<script type="text/javascript" src="../lib/jquery.qtip.js"></script>
+<script type="text/javascript" src="../js/refresh.js"></script>
+<script type="text/javascript" src="../js/validation.js"></script>
+<script type="text/javascript" src="../js/lanipfilter.js"></script>
+</head>
+<body >
+<div id="all_content" class="body_bg_settings">
+        <input type="text" id="focus_hidden" style="display:none" value="focus">
+                <div class="maintitle">
+                    <h1 id="title_label_lanipfilter"><script type="text/javascript">dw(firewall_label_lan_ip_filter);</script></h1>
+                </div>
+                <div class="main_content">
+                    <p><script type="text/javascript">dw(firewall_help_ip_filter);</script></p>
+                    <ul class="text_list">
+                        <li><script type="text/javascript">dw("<strong>" + firewall_label_lan_or_wan_port + common_colon + "</strong>" + " " + firewall_help_lan_or_wan_port);</script></li>
+                        <li><script type="text/javascript">dw("<strong>" + common_note + common_colon + "</strong>" + " " + security_label_firewall_reboot_hint);</script></li>
+                    </ul>
+                    <br/>
+                    <div class="mac_address"> 
+                        <span>
+                            <script type="text/javascript">dw(firewall_label_lan_ip_filter +" "+ dialup_label_mode + common_colon);</script>
+                        </span>
+                        <select class = "input_select" id="select_ip_allow_deny">
+                            <option value = "1"><script type="text/javascript">dw(wlan_label_allow);</script></option>
+                            <option value = "2"><script type="text/javascript">dw(wlan_label_deny);</script></option>
+                        </select>
+                    </div>
+                    <br/>
+                    <span>
+                        <h2>
+                            <script type="text/javascript">dw(firewall_label_lan_ip_filter_list);</script>
+                        </h2>
+                    </span>
+                    <table cellpadding="0" cellspacing="0" id="service_list">
+                        <tr>
+                            <th width="90" height="30"><script type="text/javascript">dw(firewall_label_lan_ip_address);</script></th>
+                            <th width="80"><script type="text/javascript">dw(firewall_label_lan_port);</script></th>
+                            <th width="100" class="wanth"><script type="text/javascript">dw(firewall_label_wan_ip_address);</script></th>
+                            <th width="70" class="wanth"><script type="text/javascript">dw(firewall_label_wan_port);</script></th>
+                            <th width="60"><script type="text/javascript">dw(firewall_label_protocol);</script></th>
+                            <th width="80"><script type="text/javascript">dw(firewall_label_status);</script></th>
+                            <th width="130"><script type="text/javascript">dw(common_options);</script></th>
+                        </tr>
+                    </table>
+                    <br />
+                    <script type="text/javascript">create_button(common_add, "add_item");</script>
+                    <div class="apply_button"> 
+                        <script type="text/javascript">
+                            create_button(common_apply, "apply");
+                        </script>
+                    </div>
+                </div>
+</div>
+</body>
+</html>

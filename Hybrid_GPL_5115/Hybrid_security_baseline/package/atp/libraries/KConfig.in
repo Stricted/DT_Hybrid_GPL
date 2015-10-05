@@ -1,0 +1,4 @@
+menu "Libraries Linux Kernel Extension"
+source "package/atp/libraries/opensrc/ebtables/KConfig.in"
+endmenu
+

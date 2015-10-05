@@ -1,0 +1,77 @@
+#!/bin/bash
+set +x
+
+if [ -n "$1" ]
+then
+	VENDORPARAMETER="VENDOR=$1"
+else
+    VENDORPARAMETER=""
+fi
+
+if [ -n "$2" ]
+then
+	if [ "$2" != "atp" ]
+	then
+		CUSTOMERPARAMETER="CUSTOMER=$2"
+	else
+		CUSTOMERPARAMETER=""
+	fi
+else
+    CUSTOMERPARAMETER=""
+fi
+
+ATPICPCIPARAMETER="ATP_CI=y"
+
+BUILDHEADERFOLDERNAME="output"
+BUILDHEADERFOLDER="./"${BUILDHEADERFOLDERNAME}
+TARGETHEADERFOLDER=${BUILDHEADERFOLDER}/staging/usr/include
+
+if ! [ -d "${BUILDHEADERFOLDER}" ]
+then
+    mkdir -p ${BUILDHEADERFOLDER}
+fi
+
+RECLAIMFOLDER="outputheader"
+OUTPUTHEADERFOLDERNAME="output_headers"
+OUTPUTHEADERFOLDER="./"${OUTPUTHEADERFOLDERNAME}
+OUTPUTHEADERTARGET=${OUTPUTHEADERFOLDERNAME}.zip
+
+if [ -d "${OUTPUTHEADERFOLDER}" ]
+then
+    rm -rf ${OUTPUTHEADERFOLDER}
+fi
+
+if [ -f ./"${OUTPUTHEADERTARGET}" ]
+then
+    rm -rf ${OUTPUTHEADERTARGET}
+fi
+
+
+BUILDSTARTTIME=`eval date +%Y_%m_%d_%H_%M_%S`
+
+make ${VENDORPARAMETER} ${CUSTOMERPARAMETER} ${ATPICPCIPARAMETER}  clean
+make ${VENDORPARAMETER} ${CUSTOMERPARAMETER} ${ATPICPCIPARAMETER} icpcipretreatment 
+
+if ! [ -d "${TARGETHEADERFOLDER}" ]
+then
+    mkdir -p ${TARGETHEADERFOLDER}
+fi
+
+cp -rf ${TARGETHEADERFOLDER} ${OUTPUTHEADERFOLDER}
+
+#remove other files
+find "${OUTPUTHEADERFOLDER}" -type l | xargs rm -rf
+
+find "${OUTPUTHEADERFOLDER}" -name ".svn" | xargs rm -rf
+
+zip -r ${OUTPUTHEADERTARGET} ${OUTPUTHEADERFOLDER}
+
+rm -rf ${RECLAIMFOLDER}
+mkdir -p ${RECLAIMFOLDER}
+mv -f ${OUTPUTHEADERTARGET} ${RECLAIMFOLDER}
+
+BUILDENDTIME=`eval date +%Y_%m_%d_%H_%M_%S`
+
+echo "All headers build finished, start time : $BUILDSTARTTIME -> end time : $BUILDENDTIME"
+
+exit 0

@@ -1,0 +1,19 @@
+config ATP_HYBRID
+	tristate "HYBRID"
+	default y
+config ATP_HYBRID_REORDER
+	tristate "hybrid ReOrder"
+	default y
+	depends on ATP_HYBRID
+config ATP_HYBRID_GREACCEL
+	tristate "hybrid GRE acceleration"
+	default y
+	depends on ATP_HYBRID	
+config ATP_CONNAT_ACCEL
+	tristate "CONNAT acceleration"
+	default y	
+	depends on ATP_HYBRID	
+config ATP_HYBRID_TUNNEL_IDLE
+	tristate "hybrid GRE idle control"
+	default y
+	depends on ATP_HYBRID	

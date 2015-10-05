@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<config>
+    <!--apn_retry>1</apn_retry-->
+    <!--apn_retry_interval>300</apn_retry_interval-->
+    <connect_mode>0</connect_mode>
+    <roam_connect>0</roam_connect>
+    <max_idle_time>600</max_idle_time>
+    <mtu_size>1500</mtu_size>
+    <dialup_number>*99#</dialup_number>
+
+    <!-- 页面上是否显示dialup number-->
+    <dialup_number_enabled>1</dialup_number_enabled>
+    <!-- 页面上是否显示authentication-->
+    <authentication_info_enabled>1</authentication_info_enabled>
+    <!-- 页面上是否显示IP Address-->
+    <dialup_ipaddress_enabled>0</dialup_ipaddress_enabled>
+    <!-- 页面上是否显示MTU-->
+    <mtu_enabled>1</mtu_enabled>
+    <!--页面上是否显示Connection Mode-->
+    <connection_mode>1</connection_mode>
+    <!--页面上是否显示IP Type-->
+    <iptype>1</iptype>
+</config>

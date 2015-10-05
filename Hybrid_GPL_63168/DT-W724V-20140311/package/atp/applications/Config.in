@@ -1,0 +1,13 @@
+menu "ATP Applications"
+source "package/atp/applications/datacard/Config.in"
+source "package/atp/applications/usbmount/Config.in"
+source "package/atp/applications/filesystem/Config.in"
+source "package/atp/applications/dlna/Config.in"
+source "package/atp/applications/itunes/Config.in"
+source "package/atp/applications/ftpclient/Config.in"
+source "package/atp/applications/tr143/Config.in"
+source "package/atp/applications/ledservice/Config.in"
+source "package/atp/applications/powermanagement/Config.in"
+source "package/atp/applications/nas/Config.in"
+source "package/atp/applications/oam/Config.in"
+endmenu

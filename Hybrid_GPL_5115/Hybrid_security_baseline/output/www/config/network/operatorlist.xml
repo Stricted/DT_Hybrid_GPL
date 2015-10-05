@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OperatorList>
+    <Item plmn="00101" shortdescr="Test1-1"/>
+    <Item plmn="00102" shortdescr="Test1-2"/>
+    <Item plmn="00201" shortdescr="Test2-1"/>
+    <Item plmn="46008" shortdescr="CHN08"/>
+    <Item plmn="46060" shortdescr="CHN60"/>
+	<Item plmn="46000" shortdescr="中国移动"/>
+	<Item plmn="46001" shortdescr="中国联通"/>
+	<Item plmn="46002" shortdescr="中国移动"/>
+	<Item plmn="46003" shortdescr="中国电信"/>
+	<Item plmn="46005" shortdescr="中国电信"/>
+	<Item plmn="46006" shortdescr="中国联通"/>
+	<Item plmn="46007" shortdescr="中国移动"/>
+	<Item plmn="46011" shortdescr="中国电信"/>
+	<Item plmn="46020" shortdescr="中国铁通"/>
+    <Item plmn="015234" shortdescr="TalkTalk"/>
+    <Item plmn="20201" shortdescr="C-OTE"/> 
+    <Item plmn="20205" shortdescr="voda GR"/>
+    <Item plmn="20209" shortdescr="Q-TELCOM"/>
+    <Item plmn="20210" shortdescr="TIM"/>
+    <Item plmn="20404" shortdescr="voda NL"/>
+    <Item plmn="20408" shortdescr="NL KPN"/>
+    <Item plmn="20412" shortdescr="NL Tlfrt"/>
+    <Item plmn="20416" shortdescr="TMO NL"/>
+    <Item plmn="20420" shortdescr="Orange"/>
+    <Item plmn="20601" shortdescr="PROXI"/>
+    <Item plmn="20610" shortdescr="mobi*"/>
+    <Item plmn="20620" shortdescr="BASE"/>
+    <Item plmn="20605" shortdescr="Telenet"/>
+    <Item plmn="20801" shortdescr="Orange"/>
+    <Item plmn="20802" shortdescr="Contact"/>
+    <Item plmn="20810" shortdescr="SFR"/>
+    <Item plmn="20813" shortdescr="Contact"/>
+    <Item plmn="20820" shortdescr="BYTEL"/>
+    <Item plmn="20888" shortdescr="Contact"/>
+    <Item plmn="21210" shortdescr="MONACO"/>
+    <Item plmn="21303" shortdescr="M-AND"/>
+    <Item plmn="21401" shortdescr="voda ES"/>
+    <Item plmn="21402" shortdescr="TM España 2"/>
+    <Item plmn="21403" shortdescr="Orange"/>
+    <Item plmn="21404" shortdescr="YOIGO"/>
+    <Item plmn="21406" shortdescr="EUSKALTEL"/>
+    <Item plmn="21407" shortdescr="movistar"/>
+    <Item plmn="21419" shortdescr="simyo"/>
+    <Item plmn="21408" shortdescr="EUSKALTEL"/>              
+    <Item plmn="21601" shortdescr="pannon3G"/>
+    <Item plmn="21630" shortdescr="TMO H"/>
+    <Item plmn="21670" shortdescr="voda HU"/>
+    <Item plmn="21803" shortdescr="HT ERONET"/>
+    <Item plmn="21805" shortdescr="m:tel"/>
+    <Item plmn="21890" shortdescr="BHMobile"/>
+    <Item plmn="21901" shortdescr="T-Mobile"/>
+    <Item plmn="21902" shortdescr="Tele2 HR"/>
+    <Item plmn="21910" shortdescr="VIP"/>
+    <Item plmn="22001" shortdescr="Telenor"/>
+    <Item plmn="22002" shortdescr="ProMonte"/>
+    <Item plmn="22003" shortdescr="MTS"/>
+    <Item plmn="22004" shortdescr="TMO CG"/>
+    <Item plmn="22005" shortdescr="Vip SRB"/>
+    <Item plmn="22201" shortdescr="TIM"/>
+    <Item plmn="22210" shortdescr="voda IT"/>
+    <Item plmn="22288" shortdescr="I WIND"/>
+    <Item plmn="22298" shortdescr="3 ITA"/>
+    <Item plmn="22299" shortdescr="3 ITA"/>
+    <Item plmn="22601" shortdescr="VF-RO"/>
+    <Item plmn="22603" shortdescr="COSMOTE"/>
+    <Item plmn="22605" shortdescr="Digi"/>
+    <Item plmn="22610" shortdescr="ORANGE"/>
+    <Item plmn="22801" shortdescr="Swisscom"/>
+    <Item plmn="22802" shortdescr="Sunrise"/>
+    <Item plmn="22803" shortdescr="ORANGE"/>
+    <Item plmn="22807" shortdescr="In&amp;Phone"/>
+    <Item plmn="22808" shortdescr="T2"/>
+    <Item plmn="23001" shortdescr="TMO CZ"/>
+    <Item plmn="23002" shortdescr="O2 - CZ"/>
+    <Item plmn="23003" shortdescr="Vodafone"/>
+    <Item plmn="23101" shortdescr="Orange"/>
+    <Item plmn="23102" shortdescr="TMO SK"/>
+    <Item plmn="23106" shortdescr="O2 - SK"/>
+    <Item plmn="23201" shortdescr="A1"/>
+    <Item plmn="23203" shortdescr="TMA"/>
+    <Item plmn="23205" shortdescr="Orange A"/>
+    <Item plmn="23207" shortdescr="telering"/>
+    <Item plmn="23210" shortdescr="3 AT"/>
+    <Item plmn="23212" shortdescr="Orange A"/>
+    <Item plmn="23401"  shortdescr="UK01"/>
+    <Item plmn="23403"  shortdescr="ATL-VOD"/>
+    <Item plmn="23405"  shortdescr="C&amp;W"/>		 
+    <Item plmn="23407" shortdescr="C&amp;W UK"/>
+    <Item plmn="23410" shortdescr="O2 - UK"/>
+    <Item plmn="23415" shortdescr="voda UK"/>
+    <Item plmn="23419" shortdescr="PMN"/>
+    <Item plmn="23420" shortdescr="3 UK"/>
+    <Item plmn="23430" shortdescr="Virgin"/>
+    <Item plmn="23430" shortdescr="TMO UK"/>
+    <Item plmn="23431" shortdescr="TMO UK"/>
+    <Item plmn="23432" shortdescr="TMO UK"/>
+    <Item plmn="23433" shortdescr="Orange"/>
+    <Item plmn="23450" shortdescr="JT-Wave"/>
+    <Item plmn="23455" shortdescr="Sure"/>
+    <Item plmn="23458" shortdescr="MANX"/>
+    <Item plmn="23801" shortdescr="DK TDC"/>
+    <Item plmn="23802" shortdescr="TelenoDK"/>
+    <Item plmn="23806" shortdescr="3 DK"/>
+    <Item plmn="23820" shortdescr="TELIA"/>
+    <Item plmn="23830" shortdescr="Orange"/>
+    <Item plmn="23877" shortdescr="TelenoDK"/>
+    <Item plmn="24001" shortdescr="TELIA"/>
+    <Item plmn="24002" shortdescr="3 SE"/>
+    <Item plmn="24003" shortdescr="Orange"/>
+    <Item plmn="24004" shortdescr="SWE"/>
+    <Item plmn="24005" shortdescr="Sweden3G"/>
+    <Item plmn="24007" shortdescr="Tele2 SE"/>
+    <Item plmn="24008" shortdescr="TelenorS"/>
+    <Item plmn="24010" shortdescr="Spring"/>
+    <Item plmn="24201" shortdescr="TELENOR"/>
+    <Item plmn="24202" shortdescr="NetCom"/>
+    <Item plmn="24203"  shortdescr="T3"/>
+    <Item plmn="24205"  shortdescr="Mobile N"/>
+    <Item plmn="24403" shortdescr="dna"/>
+    <Item plmn="24405" shortdescr="elisa"/>
+    <Item plmn="24409" shortdescr="Finnet"/>
+    <Item plmn="24412" shortdescr="dna"/>
+    <Item plmn="24414" shortdescr="FI AMT"/>
+    <Item plmn="24491" shortdescr="SONERA"/>
+    <Item plmn="24601" shortdescr="OMT"/>
+    <Item plmn="24602" shortdescr="BITE"/>
+    <Item plmn="24603" shortdescr="Tele2 LT"/>
+    <Item plmn="24701" shortdescr="LMT"/>
+    <Item plmn="24702" shortdescr="Tele2 LV"/>
+    <Item plmn="24705" shortdescr="BITE LV"/>
+    <Item plmn="24801" shortdescr="EMT"/>
+    <Item plmn="24802" shortdescr="elisa"/>
+    <Item plmn="24803" shortdescr="Tele2 EE"/>
+    <Item plmn="43801" shortdescr="MTS"/>
+    <Item plmn="25001" shortdescr="MTS"/>
+    <Item plmn="25002" shortdescr="MegaFon"/>
+    <Item plmn="25004" shortdescr="RUS_SCN"/>
+    <Item plmn="25005" shortdescr="ETK"/>
+    <Item plmn="25007" shortdescr="SMARTS"/>
+    <Item plmn="25010" shortdescr="DTC"/>
+    <Item plmn="25011" shortdescr="ORENSOT"/>
+    <Item plmn="25012" shortdescr="BWC"/>
+    <Item plmn="25013" shortdescr="KUGSM"/>
+    <Item plmn="25015" shortdescr="SMARTS"/>
+    <Item plmn="25016" shortdescr="NTC"/>
+    <Item plmn="25017" shortdescr="Utel"/>
+    <Item plmn="25019" shortdescr="INDIGO"/>
+    <Item plmn="25020" shortdescr="TELE2 RU"/>
+    <Item plmn="25028" shortdescr="Beeline"/>
+    <Item plmn="25035" shortdescr="MOTIV"/>
+    <Item plmn="25037" shortdescr="KODOTEL"/>
+    <Item plmn="25039" shortdescr="Utel"/>
+    <Item plmn="25044" shortdescr="NC-GSM"/>
+    <Item plmn="25092" shortdescr="Primtel"/>
+    <Item plmn="25099" shortdescr="Beeline"/>
+    <Item plmn="25501" shortdescr="MTS UKR"/>
+    <Item plmn="25502" shortdescr="Beeline"/>
+    <Item plmn="25503" shortdescr="UA-KS"/>
+    <Item plmn="25505" shortdescr="GT"/>
+    <Item plmn="25506" shortdescr="life:)"/>
+    <!--Item plmn="25701" shortdescr="VELCOM"/-->
+    <Item plmn="25701" shortdescr="Velcom"/>
+    <Item plmn="25702" shortdescr="MTS"/>
+    <Item plmn="25704" shortdescr="life:) BY"/>
+    <Item plmn="25725" shortdescr="BeST"/> 
+    <Item plmn="25901" shortdescr="Orange"/>
+    <!--Item plmn="25902" shortdescr="MDCELL"/-->
+    <Item plmn="25902" shortdescr="Moldcell"/>
+    <Item plmn="25903" shortdescr="UNITE"/>
+    <Item plmn="25904" shortdescr="EVENTIS"/> 
+    <Item plmn="25905" shortdescr="UNITE"/>			
+    <Item plmn="26001" shortdescr="PLAY"/>
+    <Item plmn="26002" shortdescr="Era"/>
+    <Item plmn="26003" shortdescr="Orange"/>
+    <Item plmn="26006" shortdescr="PLAY"/>
+    <Item plmn="26201" shortdescr="Telekom"/>
+	<Item plmn="26202" shortdescr="Vodafone"/>
+    <Item plmn="26203" shortdescr="E-Plus"/>
+    <Item plmn="26207" shortdescr="o2 - de"/>
+    <Item plmn="26208" shortdescr="o2 - de"/>
+    <Item plmn="26213" shortdescr="Mobilcom"/> 
+    <Item plmn="26214" shortdescr="Group3G"/> 
+    <Item plmn="26601" shortdescr="GIBTEL"/>
+    <Item plmn="26606" shortdescr="CTS"/>
+    <Item plmn="26801" shortdescr="voda P"/>
+    <Item plmn="26803" shortdescr="OPTIM"/>
+    <Item plmn="26806" shortdescr="TMN"/>
+    <Item plmn="27001" shortdescr="LUXGSM"/>
+    <Item plmn="27077" shortdescr="TANGO"/>
+    <Item plmn="27099" shortdescr="Orange"/>
+    <Item plmn="27201" shortdescr="voda IE"/>
+    <Item plmn="27202" shortdescr="O2 - IRL"/>
+    <Item plmn="27203" shortdescr="METEOR"/>
+    <Item plmn="27205" shortdescr="3 IRL"/>
+    <Item plmn="27401" shortdescr="Síminn"/>
+    <Item plmn="27402" shortdescr="Vodafone"/>
+    <Item plmn="27403" shortdescr="Vodafone"/>
+    <Item plmn="27404" shortdescr="Viking"/>
+    <Item plmn="27407" shortdescr="IceCell"/>
+    <Item plmn="27408" shortdescr="On-waves"/>
+    <Item plmn="27411" shortdescr="NOVA"/>
+    <Item plmn="27412" shortdescr="Siminn"/>
+    <Item plmn="27601" shortdescr="A M C"/>
+    <Item plmn="27602" shortdescr="voda AL"/>
+    <Item plmn="27603" shortdescr="EAGLE AL"/>
+    <Item plmn="27604" shortdescr="PLUS AL"/>
+    <Item plmn="27801" shortdescr="voda MT"/>
+    <Item plmn="27821" shortdescr="gomobile"/>
+    <Item plmn="27877" shortdescr="3GT"/>
+    <Item plmn="28001" shortdescr="CYTAVODA"/>
+    <Item plmn="28010" shortdescr="MTN"/>
+    <Item plmn="28201" shortdescr="GCELL"/>
+    <Item plmn="28202" shortdescr="MAGTI"/>
+    <Item plmn="28204" shortdescr="BEELINE"/>
+    <!--Item plmn="2830" shortdescr="MTS Arm"/-->
+    <Item plmn="28300" shortdescr="MTS Arm"/> 
+    <Item plmn="28301" shortdescr="Beeline"/>
+    <Item plmn="28305" shortdescr="MTS Arm"/>
+    <Item plmn="28401" shortdescr="Mobiltel"/>
+    <Item plmn="284001" shortdescr="M-Tel"/>
+    <Item plmn="28403" shortdescr="vivatel"/>
+    <Item plmn="28405" shortdescr="GLOBUL"/>
+    <Item plmn="28601" shortdescr="TCELL"/>
+    <Item plmn="28602" shortdescr="VF TR"/>
+    <Item plmn="28603" shortdescr="AVEA"/>
+    <Item plmn="28604" shortdescr="TURK"/> 
+    <Item plmn="28801" shortdescr="FT-GSM"/>
+    <Item plmn="28802" shortdescr="VODAFONE"/>
+    <Item plmn="29001" shortdescr="TELE GRL"/>
+    <Item plmn="29266" shortdescr="SMT"/>
+    <Item plmn="29340" shortdescr="Si.mobil"/>
+    <Item plmn="29341" shortdescr="MOBITEL"/>
+    <Item plmn="29364" shortdescr="T-2"/>
+    <Item plmn="29370" shortdescr="TUS"/>
+    <Item plmn="29401" shortdescr="TMO MK"/>
+    <Item plmn="29402" shortdescr="ONE"/>
+    <Item plmn="29403" shortdescr="Vip MKD"/>
+    <Item plmn="29501" shortdescr="Swiss FL"/>
+    <Item plmn="29502" shortdescr="OFL"/>
+    <Item plmn="29505" shortdescr="FL1"/>
+    <Item plmn="29577" shortdescr="TANGO"/>
+    <Item plmn="30237" shortdescr="MICROCELL"/> 
+    <Item plmn="302220" shortdescr="TELUS"/>
+    <Item plmn="302350" shortdescr="FIRST"/> 
+    <Item plmn="302370" shortdescr="Fido"/>
+    <Item plmn="302380" shortdescr="DMTS"/>
+    <Item plmn="302490" shortdescr="WIND"/>
+    <Item plmn="302610" shortdescr="Bell"/>
+    <Item plmn="302660" shortdescr="MTS"/>
+    <Item plmn="302720" shortdescr="ROGERS"/>
+    <Item plmn="302730" shortdescr="TStarSol"/>
+    <Item plmn="30801" shortdescr="AMERIS"/>
+    <Item plmn="310-01" shortdescr="Cingular"/>
+    <Item plmn="31000" shortdescr="NEPW"/>
+    <Item plmn="31001" shortdescr="Pacific"/>
+    <Item plmn="31002" shortdescr="NEPW"/>
+    <Item plmn="31009" shortdescr="NEPW"/>
+    <Item plmn="31011" shortdescr="WTTCKy"/> 
+    <Item plmn="31015" shortdescr="Cingular"/> 
+    <Item plmn="31016" shortdescr="VSTREAM"/> 
+    <Item plmn="31017" shortdescr="Cingular"/> 
+    <Item plmn="31020" shortdescr="UnionTel"/>
+    <Item plmn="31021" shortdescr="VSTREAM"/> 
+    <Item plmn="31022" shortdescr="VSTREAM"/> 
+    <Item plmn="31023" shortdescr="VSTREAM"/> 
+    <Item plmn="31024" shortdescr="VSTREAM"/> 
+    <Item plmn="31025" shortdescr="VSTREAM"/> 
+    <Item plmn="31026" shortdescr="TMO"/>
+    <Item plmn="31027" shortdescr="Powertel"/> 
+    <Item plmn="31030" shortdescr="CENT USA"/>
+    <Item plmn="31031" shortdescr="T-Mobile"/>
+    <Item plmn="31032" shortdescr="IT&amp;E"/>
+    <Item plmn="31034" shortdescr="WestLink"/> 
+    <Item plmn="31040" shortdescr="CONCHO"/>
+    <Item plmn="31046" shortdescr="SIMMETRY"/>
+    <Item plmn="31053" shortdescr="WVW"/> 
+    <Item plmn="31058" shortdescr="VSTREAM"/> 
+    <Item plmn="31063" shortdescr="Choice"/> 
+    <Item plmn="31064" shortdescr="ARDGMC"/> 
+    <Item plmn="31070" shortdescr="HIGHLAND"/>
+    <Item plmn="31080" shortdescr="Corr"/>
+    <Item plmn="31090" shortdescr="Edge"/>
+    <Item plmn="310100" shortdescr="PLATEAU"/>
+    <Item plmn="310110" shortdescr="WTTCKy"/>
+    <Item plmn="310150" shortdescr="AT&amp;T"/>
+    <Item plmn="310160" shortdescr="T-Mobile"/>
+    <Item plmn="310170" shortdescr="AT&amp;T"/>
+    <Item plmn="310190" shortdescr="D-HARBOR"/>
+    <Item plmn="310200" shortdescr="TMO"/>
+    <Item plmn="310210" shortdescr="T-Mobile"/>
+    <Item plmn="310220" shortdescr="T-Mobile"/>
+    <Item plmn="310230" shortdescr="T-Mobile"/>
+    <Item plmn="310240" shortdescr="T-Mobile"/>
+    <Item plmn="310250" shortdescr="T-Mobile"/>
+    <Item plmn="310260" shortdescr="T-Mobile"/>
+    <Item plmn="310270" shortdescr="TMO"/>
+    <Item plmn="310300" shortdescr="iSmart"/>
+    <Item plmn="310310" shortdescr="VSTREAM"/> 
+    <!--Item plmn="310310" shortdescr="SunCom"/--> 
+    <Item plmn="310320" shortdescr="Cell"/>
+    <Item plmn="310330" shortdescr="Cell ONE"/> 
+    <Item plmn="310340" shortdescr="WestLink"/>
+    <Item plmn="310380" shortdescr="AT&amp;T"/>
+    <Item plmn="310390" shortdescr="CELL 1 ET"/>
+    <Item plmn="310400" shortdescr="iCAN_GSM"/>
+    <Item plmn="310410" shortdescr="AT&amp;T"/>
+    <Item plmn="310450" shortdescr="NECCI"/>
+    <Item plmn="310460" shortdescr="TMP"/> 
+    <Item plmn="310470" shortdescr="DOCOMOPA"/>
+    <Item plmn="310490" shortdescr="SunCom"/>
+    <Item plmn="310530" shortdescr="IWS"/>
+    <Item plmn="310560" shortdescr="Cell One"/>
+    <Item plmn="310570" shortdescr="Chinook"/>
+    <Item plmn="310580" shortdescr="VSTREAM"/>
+    <Item plmn="310590" shortdescr="ROAMING"/>
+    <Item plmn="310630" shortdescr="AMERLINK"/>
+    <Item plmn="310640" shortdescr="ARDGMC"/>
+    <Item plmn="310650" shortdescr="Jasper"/>
+    <Item plmn="310660" shortdescr="T-Mobile"/>
+    <Item plmn="310680" shortdescr="Dobson MI"/>
+    <Item plmn="310690" shortdescr="IMMIX"/>
+    <Item plmn="310700" shortdescr="BIGFOOT"/> 
+    <Item plmn="310710" shortdescr="ASTAC"/>
+    <Item plmn="310740" shortdescr="OTZ"/>
+    <Item plmn="310770" shortdescr="IWS"/>
+    <Item plmn="310790" shortdescr="Pinpoint"/>
+    <Item plmn="310800" shortdescr="VSTREAM"/>
+    <Item plmn="310870" shortdescr="PACE"/>
+    <Item plmn="310880" shortdescr="ACSIAC"/>
+    <Item plmn="310890" shortdescr="UNICEL"/>
+    <Item plmn="310900" shortdescr="TXCELL"/>
+    <Item plmn="310910" shortdescr="FCSI"/>
+    <Item plmn="310940" shortdescr="DCT"/>
+    <Item plmn="310950" shortdescr="XIT"/>
+    <!--Item plmn="3110" shortdescr="WILKES"/-->
+    <Item plmn="31100" shortdescr="WILKES"/> 
+    <Item plmn="311000" shortdescr="Mid-Tex"/> 
+    <Item plmn="31101" shortdescr="WILKES"/>
+    <Item plmn="31105" shortdescr="WILKES"/>
+    <Item plmn="31130" shortdescr="Indigo"/>
+    <Item plmn="31140" shortdescr="Commnet"/>
+    <Item plmn="31170" shortdescr="EASTER"/>
+    <Item plmn="31180" shortdescr="PINECell"/>
+    <Item plmn="31190" shortdescr="SXLP"/>
+    <Item plmn="311110" shortdescr="HPW"/>
+    <Item plmn="311130" shortdescr="C1AMARIL"/>
+    <Item plmn="311170" shortdescr="PetroCom"/>
+    <Item plmn="311190" shortdescr="C1ECI"/>
+    <Item plmn="311210" shortdescr="FARMERS"/>
+    <Item plmn="311240" shortdescr="CWCI"/>
+    <Item plmn="311250" shortdescr="iCAN_GSM"/>
+    <Item plmn="311260" shortdescr="MAURITEL"/>
+    <Item plmn="311310" shortdescr="LamarCel"/>
+    <Item plmn="311330" shortdescr="BTW"/>
+    <Item plmn="311360" shortdescr="STELERA"/>
+    <Item plmn="311370" shortdescr="GCI"/>
+    <Item plmn="311500" shortdescr="MOSAIC"/>
+    <Item plmn="311530" shortdescr="NCW"/>
+    <Item plmn="311540" shortdescr="ProxMo"/>
+    <Item plmn="311720" shortdescr="MainePCS"/>
+    <Item plmn="330110" shortdescr="Claro"/>
+    <Item plmn="37002" shortdescr="Claro"/>
+    <Item plmn="338070" shortdescr="Claro"/>
+    <Item plmn="33403" shortdescr="movistar"/>
+    <Item plmn="33420" shortdescr="TELCEL"/>
+    <Item plmn="33805" shortdescr="DIGICEL"/>
+    <Item plmn="33870" shortdescr="ClaroJam"/>
+    <Item plmn="338180" shortdescr="C&amp;W"/>
+    <Item plmn="34001" shortdescr="Orange"/>
+    <Item plmn="34002" shortdescr="ONLY"/>
+    <Item plmn="34003" shortdescr="CHIPPIE"/>
+    <Item plmn="34008" shortdescr="DAUPHIN"/>
+    <Item plmn="34020" shortdescr="DigicelF"/>
+    <Item plmn="342600" shortdescr="C&amp;W"/>
+    <Item plmn="342750" shortdescr="DIGICEL"/>
+    <Item plmn="342810" shortdescr="Cingular"/>
+    <Item plmn="34430" shortdescr="APUA-PCS"/>
+    <Item plmn="344920" shortdescr="C&amp;W"/>
+    <Item plmn="344930" shortdescr="Cingular"/>
+    <Item plmn="346140" shortdescr="LIME"/>
+    <Item plmn="348170" shortdescr="C&amp;W"/>
+    <Item plmn="348570" shortdescr="CCTBVI"/>
+    <Item plmn="350000" shortdescr="CELLONE"/>
+    <Item plmn="35002" shortdescr="M3 WIRELES"/>
+    <Item plmn="35010" shortdescr="Cingular"/>
+    <Item plmn="35230" shortdescr="DIGICEL"/>
+    <Item plmn="352110" shortdescr="C&amp;W"/>
+    <Item plmn="354860" shortdescr="LIME"/>
+    <Item plmn="356110" shortdescr="LIME"/>
+    <Item plmn="35830" shortdescr="Cingular"/>
+    <Item plmn="35850" shortdescr="DIGICEL"/>
+    <Item plmn="358110" shortdescr="C&amp;W"/>
+    <Item plmn="36010" shortdescr="Cingular"/>
+    <Item plmn="36070" shortdescr="DIGICEL"/>
+    <Item plmn="360110" shortdescr="C&amp;W"/>
+    <Item plmn="36251" shortdescr="Telcell"/>
+    <Item plmn="36269" shortdescr="CT GSM"/>
+    <Item plmn="36291" shortdescr="Setel"/>
+    <Item plmn="362630" shortdescr="Cingular"/>
+    <Item plmn="362951" shortdescr="CHIPPIE"/>
+    <Item plmn="36301" shortdescr="SETARGSM"/>
+    <Item plmn="36320" shortdescr="DIGICEL"/>
+    <Item plmn="36439" shortdescr="BaTelCel"/>
+    <Item plmn="365840" shortdescr="C&amp;W"/>
+    <Item plmn="36620" shortdescr="Cingular"/>
+    <Item plmn="366110" shortdescr="C&amp;W"/>
+    <Item plmn="36801" shortdescr="CUBACEL"/>
+    <Item plmn="37001" shortdescr="orange"/>
+    <Item plmn="37002" shortdescr="ClaroDOM"/>
+    <Item plmn="37201" shortdescr="VOILA"/>
+    <Item plmn="37412" shortdescr="TSTT"/>
+    <Item plmn="376350" shortdescr="C&amp;W"/>
+    <Item plmn="376352" shortdescr="ICOM TCI"/>
+    <Item plmn="376360" shortdescr="ICOM TCI"/>
+    <!--Item plmn="40001" shortdescr="ACELL"/-->
+    <Item plmn="40001" shortdescr="Azercell"/>
+    <Item plmn="40002" shortdescr="BKCELL"/>
+    <Item plmn="40004" shortdescr="Nar"/>
+    <Item plmn="40101" shortdescr="Beeline"/>
+    <Item plmn="40102" shortdescr="KCELL"/>
+    <Item plmn="40177" shortdescr="NEO"/>
+    <Item plmn="40211" shortdescr="B-Mobile"/>
+    <Item plmn="40277" shortdescr="TASHICELL"/>
+    <Item plmn="40401" shortdescr="Vodafone"/>
+    <Item plmn="40402" shortdescr="AirTel"/>
+    <Item plmn="40403" shortdescr="AirTel"/>
+    <Item plmn="40404" shortdescr="IDEA"/>
+    <Item plmn="40405" shortdescr="Vodafone"/>
+    <Item plmn="40407" shortdescr="IDEA"/>
+    <Item plmn="40409" shortdescr="RELIANCE"/>
+    <Item plmn="40410" shortdescr="AirTel"/>
+    <Item plmn="40411" shortdescr="Vodafone"/>
+    <Item plmn="40412" shortdescr="IDEA"/>
+    <Item plmn="40413" shortdescr="Vodafone"/>
+    <Item plmn="40414" shortdescr="SPICE"/>
+    <Item plmn="40415" shortdescr="Vodafone"/>
+    <Item plmn="40417" shortdescr="AIRCEL"/>
+    <Item plmn="40418" shortdescr="RELIANCE"/>
+    <Item plmn="40419" shortdescr="IDEA"/>
+    <Item plmn="40420" shortdescr="Vodafone"/>
+    <Item plmn="40421" shortdescr="BPL MOBILE"/>
+    <Item plmn="40422" shortdescr="IDEA"/>
+    <Item plmn="40424" shortdescr="IDEA"/>
+    <Item plmn="40425" shortdescr="AIRCEL"/>
+    <Item plmn="40427" shortdescr="Vodafone"/>
+    <Item plmn="40428" shortdescr="AIRCEL"/>
+    <Item plmn="40429" shortdescr="AIRCEL"/>
+    <Item plmn="40430" shortdescr="Vodafone"/>
+    <Item plmn="40431" shortdescr="AirTel"/>
+    <Item plmn="40433" shortdescr="AIRCEL"/>
+    <Item plmn="40434" shortdescr="CellOne"/>
+    <Item plmn="40435" shortdescr="AIRCEL"/>
+    <Item plmn="40436" shortdescr="RELIANCE"/>
+    <Item plmn="40437" shortdescr="AIRCEL"/>
+    <Item plmn="40438" shortdescr="CellOne"/>
+    <Item plmn="40440" shortdescr="AIRTEL"/>
+    <Item plmn="40441" shortdescr="AIRCEL"/>
+    <Item plmn="40442" shortdescr="AIRCEL"/>
+    <Item plmn="40443" shortdescr="Vodafone"/>
+    <Item plmn="40444" shortdescr="SPICE"/>
+    <Item plmn="40445" shortdescr="AirTel"/>
+    <Item plmn="40446" shortdescr="Vodafone"/>
+    <Item plmn="40449" shortdescr="AirTel"/>
+    <Item plmn="40450" shortdescr="RELIANCE"/>
+    <Item plmn="40451" shortdescr="CellOne"/>
+    <Item plmn="40452" shortdescr="RELIANCE"/>
+    <Item plmn="40453" shortdescr="CellOne"/>
+    <Item plmn="40454" shortdescr="CellOne"/>
+    <Item plmn="40455" shortdescr="CellOne"/>
+    <Item plmn="40456" shortdescr="IDEA"/>
+    <Item plmn="40457" shortdescr="CellOne"/>
+    <Item plmn="40458" shortdescr="CellOne"/>
+    <Item plmn="40459" shortdescr="CellOne"/>
+    <Item plmn="40460" shortdescr="Vodafone"/>
+    <Item plmn="40462" shortdescr="CellOne"/>
+    <Item plmn="40464" shortdescr="CellOne"/>
+    <Item plmn="40466" shortdescr="CellOne"/>
+    <Item plmn="40467" shortdescr="RELIANCE"/>
+    <Item plmn="40468" shortdescr="DOLPHIN"/>
+    <Item plmn="40469" shortdescr="DOLPHIN"/>
+    <Item plmn="40470" shortdescr="Oasis"/>
+    <Item plmn="40471" shortdescr="CellOne"/>
+    <Item plmn="40472" shortdescr="CellOne"/>
+    <Item plmn="40473" shortdescr="CellOne"/>
+    <Item plmn="40474" shortdescr="CellOne"/>
+    <Item plmn="40475" shortdescr="CellOne"/>
+    <Item plmn="40476" shortdescr="CellOne"/>
+    <Item plmn="40477" shortdescr="CellOne"/>
+    <Item plmn="40478" shortdescr="IDEA"/>
+    <Item plmn="40479" shortdescr="CellOne"/>
+    <Item plmn="40480" shortdescr="CellOne"/>
+    <Item plmn="40481" shortdescr="CellOne"/>
+    <Item plmn="40482" shortdescr="IDEA"/>
+    <Item plmn="40483" shortdescr="RELIANCE"/> 
+    <Item plmn="40484" shortdescr="Vodafone"/>
+    <Item plmn="40485" shortdescr="RELIANCE"/>
+    <Item plmn="40486" shortdescr="Vodafone"/>
+    <Item plmn="40487" shortdescr="IDEA"/>
+    <Item plmn="40488" shortdescr="Vodafone"/>
+    <Item plmn="40489" shortdescr="IDEA"/>
+    <Item plmn="40490" shortdescr="AirTel"/>
+    <Item plmn="40491" shortdescr="Aircel"/>
+    <Item plmn="40492" shortdescr="AirTel"/>
+    <Item plmn="40493" shortdescr="AirTel"/>
+    <Item plmn="40494" shortdescr="AirTel"/>
+    <Item plmn="40495" shortdescr="AirTel"/>
+    <Item plmn="40496" shortdescr="AirTel"/>
+    <Item plmn="40497" shortdescr="AirTel"/>
+    <Item plmn="40498" shortdescr="AirTel"/>
+    <Item plmn="40501" shortdescr="Reliance"/>
+    <Item plmn="40505" shortdescr="Reliance"/>
+    <Item plmn="40506" shortdescr="Reliance"/>
+    <Item plmn="40507" shortdescr="Reliance"/>
+    <Item plmn="40509" shortdescr="Reliance"/>
+    <Item plmn="40510" shortdescr="Reliance"/>
+    <Item plmn="40511" shortdescr="Reliance"/>
+    <Item plmn="40513" shortdescr="Reliance"/>
+    <Item plmn="40515" shortdescr="Reliance"/>
+    <Item plmn="40518" shortdescr="Reliance"/>
+    <Item plmn="40519" shortdescr="Reliance"/>
+    <Item plmn="40520" shortdescr="Reliance"/>
+    <Item plmn="40521" shortdescr="Reliance"/>
+    <Item plmn="40522" shortdescr="Reliance"/>
+    <Item plmn="40525" shortdescr="TATA DO"/>
+    <Item plmn="40527" shortdescr="TATA DO"/>
+    <Item plmn="40529" shortdescr="TATA DO"/>
+    <Item plmn="40530" shortdescr="TATA DO"/>
+    <Item plmn="40531" shortdescr="TATA DO"/>
+    <Item plmn="40532" shortdescr="TATA DO"/>
+    <Item plmn="40534" shortdescr="TATA DO"/>
+    <Item plmn="40535" shortdescr="TATA DO"/>
+    <Item plmn="40536" shortdescr="TATA DO"/>
+    <Item plmn="40537" shortdescr="TATA DO"/>
+    <Item plmn="40538" shortdescr="TATA DO"/>
+    <Item plmn="40539" shortdescr="TATA DO"/>
+    <Item plmn="40541" shortdescr="TATA DO"/>
+    <Item plmn="40542" shortdescr="TATA DO"/>
+    <Item plmn="40543" shortdescr="TATA DO"/>
+    <Item plmn="40544" shortdescr="TATA DO"/>
+    <Item plmn="40545" shortdescr="TATA DO"/>
+    <Item plmn="40546" shortdescr="TATA DO"/>
+    <Item plmn="40547" shortdescr="TATA DO"/>
+    <Item plmn="40551" shortdescr="AIRTEL"/>
+    <Item plmn="40552" shortdescr="AIRTEL"/>
+    <Item plmn="40553" shortdescr="AIRTEL"/>
+    <Item plmn="40554" shortdescr="AIRTEL"/>
+    <Item plmn="40555" shortdescr="AIRTEL"/>
+    <Item plmn="40556" shortdescr="Airtel"/>
+    <Item plmn="40566" shortdescr="Vodafone"/>
+    <Item plmn="40567" shortdescr="Vodafone"/>
+    <Item plmn="40570" shortdescr="IDEA"/>
+    <Item plmn="405750" shortdescr="Vodafone"/>
+    <Item plmn="405751" shortdescr="Vodafone"/>
+    <Item plmn="405752" shortdescr="Vodafone"/>
+    <Item plmn="405753" shortdescr="Vodafone"/>
+    <Item plmn="405754" shortdescr="Vodafone"/>
+    <Item plmn="405755" shortdescr="Vodafone"/>
+    <Item plmn="405756" shortdescr="Vodafone"/>
+    <Item plmn="405799" shortdescr="IDEA"/>
+    <Item plmn="405800" shortdescr="Aircel"/>
+    <Item plmn="405801" shortdescr="Aircel"/>
+    <Item plmn="405802" shortdescr="Aircel"/>
+    <Item plmn="405803" shortdescr="Aircel"/>
+    <Item plmn="405804" shortdescr="Aircel"/>
+    <Item plmn="405805" shortdescr="Aircel"/>
+    <Item plmn="405806" shortdescr="Aircel"/>
+    <Item plmn="405807" shortdescr="Aircel"/>
+    <Item plmn="405808" shortdescr="Aircel"/>
+    <Item plmn="405809" shortdescr="Aircel"/>
+    <Item plmn="405810" shortdescr="Aircel"/>
+    <Item plmn="405811" shortdescr="Aircel"/>
+    <Item plmn="405812" shortdescr="Aircel"/>
+    <Item plmn="405813" shortdescr="UNITECH"/>
+    <Item plmn="405814" shortdescr="UNITECH"/>
+    <Item plmn="405815" shortdescr="UNITECH"/>
+    <Item plmn="405816" shortdescr="UNITECH"/>
+    <Item plmn="405817" shortdescr="UNITECH"/>
+    <Item plmn="405818" shortdescr="UNITECH"/>
+    <Item plmn="405819" shortdescr="UNITECH"/>
+    <Item plmn="405820" shortdescr="UNITECH"/>
+    <Item plmn="405821" shortdescr="UNITECH"/>
+    <Item plmn="405822" shortdescr="UNITECH"/>
+    <Item plmn="405823" shortdescr="VIDEOCON"/>
+    <Item plmn="405824" shortdescr="VIDEOCON"/>
+    <Item plmn="405825" shortdescr="VIDEOCON"/>
+    <Item plmn="405827" shortdescr="VIDEOCON"/>
+    <Item plmn="405828" shortdescr="VIDEOCON"/>
+    <Item plmn="405829" shortdescr="VIDEOCON"/>
+    <Item plmn="405830" shortdescr="VIDEOCON"/>
+    <Item plmn="405831" shortdescr="VIDEOCON"/>
+    <Item plmn="405832" shortdescr="VIDEOCON"/>
+    <Item plmn="405833" shortdescr="VIDEOCON"/>
+    <Item plmn="405834" shortdescr="VIDEOCON"/>
+    <Item plmn="405835" shortdescr="VIDEOCON"/>
+    <Item plmn="405836" shortdescr="VIDEOCON"/>
+    <Item plmn="405837" shortdescr="VIDEOCON"/>
+    <Item plmn="405838" shortdescr="VIDEOCON"/>
+    <Item plmn="405839" shortdescr="VIDEOCON"/>
+    <Item plmn="405840" shortdescr="VIDEOCON"/>
+    <Item plmn="405841" shortdescr="VIDEOCON"/>
+    <Item plmn="405842" shortdescr="VIDEOCON"/>
+    <Item plmn="405843" shortdescr="VIDEOCON"/>
+    <Item plmn="405844" shortdescr="Unitech"/>
+    <Item plmn="404845" shortdescr="IDEA"/>
+    <Item plmn="404846" shortdescr="IDEA"/>
+    <Item plmn="404848" shortdescr="IDEA"/>
+    <Item plmn="404849" shortdescr="IDEA"/>
+    <Item plmn="404850" shortdescr="IDEA"/>
+    <Item plmn="404852" shortdescr="IDEA"/>
+    <Item plmn="404853" shortdescr="IDEA"/>
+    <Item plmn="404854" shortdescr="LoopMobile"/>
+    <Item plmn="404855" shortdescr="LoopMobile"/>
+    <Item plmn="404856" shortdescr="LoopMobile"/>
+    <Item plmn="404857" shortdescr="LoopMobile"/>
+    <Item plmn="404858" shortdescr="LoopMobile"/>
+    <Item plmn="404859" shortdescr="LoopMobile"/>
+    <Item plmn="404860" shortdescr="LoopMobile"/>
+    <Item plmn="404861" shortdescr="LoopMobile"/>
+    <Item plmn="404862" shortdescr="LoopMobile"/>
+    <Item plmn="404863" shortdescr="LoopMobile"/>
+    <Item plmn="404864" shortdescr="LoopMobile"/>
+    <Item plmn="404865" shortdescr="LoopMobile"/>
+    <Item plmn="404866" shortdescr="LoopMobile"/>
+    <Item plmn="404867" shortdescr="LoopMobile"/>
+    <Item plmn="404868" shortdescr="LoopMobile"/>
+    <Item plmn="404869" shortdescr="LoopMobile"/>
+    <Item plmn="404870" shortdescr="LoopMobile"/>
+    <Item plmn="404871" shortdescr="LoopMobile"/>
+    <Item plmn="404872" shortdescr="LoopMobile"/>
+    <Item plmn="404873" shortdescr="LoopMobile"/>
+    <Item plmn="404874" shortdescr="LoopMobile"/>
+    <Item plmn="405875" shortdescr="UNITECH"/>
+    <Item plmn="405876" shortdescr="UNITECH"/>
+    <Item plmn="405877" shortdescr="UNITECH"/>
+    <Item plmn="405878" shortdescr="UNITECH"/>
+    <Item plmn="405879" shortdescr="UNITECH"/>
+    <Item plmn="405880" shortdescr="UNITECH"/>
+    <Item plmn="405912" shortdescr="etisalat"/>
+    <Item plmn="405913" shortdescr="etisalat"/>
+    <Item plmn="405914" shortdescr="etisalat"/>
+    <Item plmn="405915" shortdescr="etisalat"/>
+    <Item plmn="405916" shortdescr="etisalat"/>
+    <Item plmn="405917" shortdescr="etisalat"/>
+    <Item plmn="405918" shortdescr="etisalat"/>
+    <Item plmn="405919" shortdescr="etisalat"/>
+    <Item plmn="405920" shortdescr="etisalat"/>
+    <Item plmn="405921" shortdescr="etisalat"/>
+    <Item plmn="405922" shortdescr="etisalat"/>
+    <Item plmn="405923" shortdescr="etisalat"/>
+    <Item plmn="405924" shortdescr="etisalat"/>
+    <Item plmn="405925" shortdescr="UNITECH"/>
+    <Item plmn="405926" shortdescr="UNITECH"/>
+    <Item plmn="405927" shortdescr="UNITECH"/>
+    <Item plmn="405928" shortdescr="UNITECH"/>
+    <Item plmn="405929" shortdescr="UNITECH"/>
+    <Item plmn="41001" shortdescr="Mobilink"/>
+    <Item plmn="41003" shortdescr="UFONE"/>
+    <!--Item plmn="41004" shortdescr="ZONG"/-->
+    <Item plmn="41004" shortdescr="CMPAK"/>
+    <Item plmn="41006" shortdescr="TELENOR"/>
+    <Item plmn="41007" shortdescr="WaridTel"/>
+    <Item plmn="41201" shortdescr="AWCC"/>
+    <Item plmn="41220" shortdescr="ROSHAN"/>
+    <Item plmn="41240" shortdescr="MTN"/>
+    <Item plmn="41250" shortdescr="Etisalat"/>
+    <Item plmn="41301" shortdescr="MOBITEL"/>
+    <Item plmn="41302" shortdescr="Dialog Telekom"/>
+    <Item plmn="41303" shortdescr="Etisalat"/>
+    <Item plmn="41305" shortdescr="Airtel"/>
+    <Item plmn="41308" shortdescr="Hutch"/>
+    <Item plmn="41401" shortdescr="MPTGSM"/>
+    <Item plmn="41501" shortdescr="alfa"/>
+    <Item plmn="41503" shortdescr="MTC LIBAN"/>
+    <Item plmn="41505" shortdescr="OM"/>
+    <Item plmn="41601" shortdescr="zain JO"/>
+    <Item plmn="41603" shortdescr="UMNIAH"/>
+    <Item plmn="41677" shortdescr="Orange JO"/>
+    <Item plmn="41701" shortdescr="SYRIATEL"/>
+    <Item plmn="41702" shortdescr="MTN"/>
+    <Item plmn="41709" shortdescr="MOBILE"/>
+    <!--Item plmn="4180" shortdescr="ASIACELL"/-->
+    <Item plmn="41802" shortdescr="SanaTel"/>
+    <Item plmn="41805" shortdescr="ASIACELL"/>
+    <Item plmn="41808" shortdescr="SanaTel"/>
+    <Item plmn="41820" shortdescr="zain IQ"/>
+    <Item plmn="41830" shortdescr="IRAQNA"/>
+    <Item plmn="41840" shortdescr="KOREK"/>
+    <Item plmn="41902" shortdescr="zain KW"/>
+    <Item plmn="41903" shortdescr="WATANIYA"/>
+    <Item plmn="41904" shortdescr="VIVA"/>
+    <Item plmn="42001" shortdescr="STC"/>
+    <Item plmn="42003" shortdescr="mobily"/>
+    <Item plmn="42004" shortdescr="Zain SA"/>
+    <Item plmn="42101" shortdescr="SABAFON"/>
+    <Item plmn="42102" shortdescr="MTN"/>
+    <Item plmn="421700" shortdescr="Y"/>
+    <Item plmn="42202" shortdescr="OMAN"/>
+    <Item plmn="42203" shortdescr="nawras"/>
+    <Item plmn="42402" shortdescr="ETISALAT"/>
+    <Item plmn="42403" shortdescr="du"/>
+    <Item plmn="42501" shortdescr="ORANGE"/>
+    <Item plmn="42502" shortdescr="Cellcom"/>
+    <Item plmn="42503" shortdescr="PCL"/>
+    <Item plmn="42505" shortdescr="JAWWAL"/>
+    <Item plmn="42506" shortdescr="WM"/>
+    <Item plmn="42601" shortdescr="BATELCO"/>
+    <Item plmn="42602" shortdescr="zain BH"/>
+    <Item plmn="42604" shortdescr="VIVA BH"/>
+    <Item plmn="42701" shortdescr="Qtel"/>
+    <Item plmn="42702" shortdescr="VF-QA"/>
+    <Item plmn="42888" shortdescr="UNTLMN"/>
+    <Item plmn="42899" shortdescr="MobiCom"/>
+    <Item plmn="42902" shortdescr="Ncell"/>
+    <Item plmn="43211" shortdescr="432 11"/>
+    <Item plmn="43214" shortdescr="KIFZO"/>
+    <Item plmn="43219" shortdescr="MTCE"/>
+    <Item plmn="43232" shortdescr="Taliya"/>
+    <Item plmn="43235" shortdescr="Irancell"/>
+    <Item plmn="43404" shortdescr="Beeline"/>
+    <Item plmn="43405" shortdescr="Ucell"/>
+    <Item plmn="43407" shortdescr="UZB MTS"/>
+    <Item plmn="43601" shortdescr="TCELL"/>
+    <Item plmn="43602" shortdescr="TCELL"/>
+    <Item plmn="43603" shortdescr="MLT"/>
+    <Item plmn="43604" shortdescr="Babilon"/>
+    <Item plmn="43605" shortdescr="BEELINE"/>
+    <Item plmn="43612" shortdescr="INDIGO-T"/>
+    <Item plmn="43691" shortdescr="BEELINE"/>
+    <Item plmn="43701" shortdescr="BITEL"/>
+    <Item plmn="43705" shortdescr="MEGACOM"/>
+    <Item plmn="43709" shortdescr="O"/>
+    <Item plmn="44000" shortdescr="EMOBILE"/>
+    <Item plmn="44010" shortdescr="DOCOMO"/>
+    <Item plmn="44020" shortdescr="SoftBank"/>
+    <Item plmn="45002" shortdescr="KT"/>
+    <Item plmn="45005" shortdescr="SKT"/>
+    <Item plmn="45008" shortdescr="KT"/>
+    <Item plmn="45201" shortdescr="Mobifone"/>
+    <Item plmn="45202" shortdescr="Vinaphone"/>
+    <Item plmn="45204" shortdescr="Viettel"/>
+    <Item plmn="45205" shortdescr="VNMOBILE"/>
+    <Item plmn="45207" shortdescr="Beeline"/>
+    <Item plmn="45400" shortdescr="CSL"/>
+    <Item plmn="45402" shortdescr="CSL"/>
+    <Item plmn="45403" shortdescr="3 HK" />
+    <Item plmn="45404" shortdescr="3(2G)"/>
+    <Item plmn="45406" shortdescr="SMC-Voda"/>
+    <Item plmn="45410" shortdescr="CSL"/>
+    <Item plmn="45412" shortdescr="CMHK"/>
+    <Item plmn="45415" shortdescr="454-15"/>
+    <Item plmn="45416" shortdescr="PCCW"/>
+    <Item plmn="45418" shortdescr="CSL"/>
+    <Item plmn="45419" shortdescr="PCCW"/>
+    <Item plmn="45500" shortdescr="SmarTone"/>
+    <Item plmn="45501" shortdescr="CTM"/>
+    <Item plmn="45503" shortdescr="HT Macau"/>
+    <Item plmn="45504" shortdescr="CTM"/>
+    <Item plmn="45505" shortdescr="3 Macau"/>
+    <Item plmn="45601" shortdescr="MT-KHM"/>
+    <Item plmn="45602" shortdescr="TMIC"/>
+    <Item plmn="45604" shortdescr="CADCOMMS"/>
+    <Item plmn="45605" shortdescr="STARCELL"/>
+    <Item plmn="45606" shortdescr="SMART"/>
+    <Item plmn="45608" shortdescr="Metfone"/>
+    <Item plmn="45609" shortdescr="Beeline"/>
+    <Item plmn="45618" shortdescr="Mfone"/>
+    <Item plmn="45701" shortdescr="LAO GSM"/>
+    <Item plmn="45702" shortdescr="ETLMNW"/>
+    <Item plmn="45703" shortdescr="UNITEL"/>
+    <Item plmn="45708" shortdescr="TIGO"/>
+    <Item plmn="46601" shortdescr="遠傳電信"/>
+    <Item plmn="46009" shortdescr="CHN09"/>
+    <Item plmn="46668" shortdescr="ACeS"/>
+    <Item plmn="46688" shortdescr="KGT"/>
+    <Item plmn="46689" shortdescr="威寶電信"/>
+    <Item plmn="46692" shortdescr="中華電信"/>
+    <!--Item plmn="46692" shortdescr="CHT"/-->
+    <Item plmn="46693" shortdescr="TW MOB"/>
+    <Item plmn="46697" shortdescr="台湾大哥大"/>
+    <Item plmn="46699" shortdescr="TransAsi"/>
+    <Item plmn="46703" shortdescr="SUNNET"/>
+    <!--Item plmn="47001" shortdescr="grameen"/-->
+    <Item plmn="47001" shortdescr="grameenphone"/>
+    <Item plmn="47002" shortdescr="AKTEL"/>
+    <Item plmn="47003" shortdescr="Banglalink"/>
+    <Item plmn="47004" shortdescr="bMobile"/>
+    <Item plmn="47007" shortdescr="WARID BD"/>
+    <Item plmn="47201" shortdescr="D-MOBILE"/>
+    <Item plmn="47202" shortdescr="WATANIYA"/>
+    <Item plmn="50212" shortdescr="MY MAXIS"/>
+    <Item plmn="50213" shortdescr="CELCOM"/>
+    <Item plmn="50216" shortdescr="DiGi"/>
+    <Item plmn="50218" shortdescr="U MOBILE"/>
+    <Item plmn="50219" shortdescr="CELCOM"/>
+    <Item plmn="50501" shortdescr="Telstra"/>
+    <Item plmn="50502" shortdescr="Virgin"/>
+    <Item plmn="50503" shortdescr="voda AU"/>
+    <Item plmn="50506" shortdescr="3TELSTRA"/>
+    <Item plmn="50510" shortdescr="NT"/>
+    <!--Item plmn="5100" shortdescr="ACeS"/-->
+    <Item plmn="51001" shortdescr="INDOSAT"/>
+    <Item plmn="51008" shortdescr="AXIS"/>
+    <Item plmn="51010" shortdescr="T-SEL"/>
+    <Item plmn="51011" shortdescr="XL"/>
+    <Item plmn="51021" shortdescr="INDOSAT"/>
+    <Item plmn="51089" shortdescr="3"/>
+    <Item plmn="510510" shortdescr="Mobile-8"/>
+    <Item plmn="51402" shortdescr="TT"/>
+    <Item plmn="51501" shortdescr="ISLACOM"/>
+    <Item plmn="51502" shortdescr="GLOBE"/>
+    <Item plmn="51503" shortdescr="SMART"/>
+    <Item plmn="51505" shortdescr="SUN"/>
+    <Item plmn="51511" shortdescr="ACeS"/>
+    <Item plmn="52001" shortdescr="TH GSM"/>
+    <Item plmn="52015" shortdescr="ACT-1900"/>
+    <Item plmn="52018" shortdescr="DTAC"/>
+    <Item plmn="52020" shortdescr="ACeS"/>
+    <Item plmn="52023" shortdescr="GSM 1800"/>
+    <Item plmn="52099" shortdescr="TRUE"/>
+    <Item plmn="52501" shortdescr="SingTel"/>
+    <Item plmn="52502" shortdescr="SingTel"/>
+    <Item plmn="52503" shortdescr="M1-3GSM"/>
+    <Item plmn="52505" shortdescr="STARHUB"/>
+    <Item plmn="52507" shortdescr="CallZone"/>
+    <Item plmn="52802" shortdescr="b-mobile"/>
+    <Item plmn="52811" shortdescr="DSTCom"/>			
+    <Item plmn="53001" shortdescr="voda NZ"/>
+    <Item plmn="53005" shortdescr="Telecom"/>
+    <Item plmn="53024" shortdescr="2degrees"/>
+    <Item plmn="53701" shortdescr="BMobile"/>
+    <Item plmn="537030" shortdescr="Digicel"/>
+    <Item plmn="53901" shortdescr="U-CALL"/>
+    <Item plmn="53988" shortdescr="Digicel"/>
+    <Item plmn="54001" shortdescr="BREEZE"/>
+    <Item plmn="54101" shortdescr="SMILE"/>
+    <Item plmn="54105" shortdescr="DIGICEL"/>
+    <Item plmn="54201" shortdescr="VODAFONE"/>
+    <Item plmn="544110" shortdescr="BSKY"/>
+    <Item plmn="54509" shortdescr="KI-FRIG"/> 
+    <Item plmn="54601" shortdescr="MOBNCL"/>
+    <Item plmn="54720" shortdescr="VINI"/>
+    <Item plmn="54801" shortdescr="KOKANET"/>
+    <Item plmn="54927" shortdescr="GO"/>
+    <Item plmn="55001" shortdescr="FSMTC"/>
+    <Item plmn="55280" shortdescr="PLWPMC"/>
+    <Item plmn="60201" shortdescr="MobiNiL"/>
+    <Item plmn="60202" shortdescr="voda EG"/>
+    <Item plmn="60203" shortdescr="etisalat"/>
+    <Item plmn="60301" shortdescr="Mobilis"/>
+    <Item plmn="60302" shortdescr="Djezzy"/>
+    <Item plmn="60303" shortdescr="NEDJMA"/>
+    <Item plmn="60400" shortdescr="MEDITEL"/>
+    <Item plmn="60401" shortdescr="IAM"/>
+    <Item plmn="60501" shortdescr="Orange"/>
+    <Item plmn="60502" shortdescr="TUNTEL"/>
+    <Item plmn="60503" shortdescr="TUNSIANA"/>
+    <Item plmn="60600" shortdescr="L"/>
+    <Item plmn="60601" shortdescr="Al Madar"/>
+    <Item plmn="60701" shortdescr="GAMCEL"/>
+    <Item plmn="60702" shortdescr="AFRICELL"/>
+    <Item plmn="60703" shortdescr="GMCOMIUM"/>
+    <Item plmn="60704" shortdescr="QC"/>
+    <Item plmn="60801" shortdescr="ALIZE"/>
+    <Item plmn="60802" shortdescr="SENTEL"/>
+    <Item plmn="60901" shortdescr="MATTEL"/>
+    <Item plmn="60910" shortdescr="MAURITEL"/>
+    <Item plmn="61001" shortdescr="MALITEL"/>
+    <Item plmn="61002" shortdescr="OML"/>
+    <Item plmn="61101" shortdescr="ORANGEGN"/>
+    <Item plmn="61102" shortdescr="LAGUI"/>
+    <Item plmn="61104" shortdescr="GNAreeba"/>
+    <Item plmn="61105" shortdescr="CellcomGN"/>
+    <Item plmn="61202" shortdescr="MOOV"/>
+    <Item plmn="61203" shortdescr="Orange"/>
+    <Item plmn="61204" shortdescr="KoZ"/>
+    <Item plmn="61205" shortdescr="MTN CI"/>
+    <Item plmn="61302" shortdescr="celtel"/>
+    <Item plmn="61401" shortdescr="SAHELCOM"/>
+    <Item plmn="61402" shortdescr="CELTEL"/>
+    <Item plmn="61403" shortdescr="TELECEL"/>
+    <Item plmn="61404" shortdescr="Orange"/>
+    <Item plmn="61501" shortdescr="TGCELL"/>
+    <Item plmn="61503" shortdescr="TELECEL"/>
+    <Item plmn="61602" shortdescr="TLCL-BEN"/>
+    <Item plmn="61603" shortdescr="MTN BENIN"/>
+    <Item plmn="616004" shortdescr="BBCOM"/>
+    <Item plmn="61605" shortdescr="GloBenin"/>
+    <Item plmn="61701" shortdescr="CELL +"/>
+    <Item plmn="61710" shortdescr="EMTEL"/>
+    <Item plmn="61801" shortdescr="LoneStar"/>
+    <Item plmn="61802" shortdescr="LIBERCEL"/>
+    <Item plmn="61803" shortdescr="Celcom"/>
+    <Item plmn="61807" shortdescr="Celcom"/>
+    <Item plmn="61901" shortdescr="CELTEL"/>
+    <Item plmn="61902" shortdescr="MILLICOM"/>
+    <Item plmn="61907" shortdescr="GreenN "/>
+    <Item plmn="62001" shortdescr="MTN"/>
+    <Item plmn="62002" shortdescr="ONEtouch"/>
+    <Item plmn="62003" shortdescr="tiGO GHANA"/>
+    <Item plmn="62006" shortdescr="Zain"/>
+    <Item plmn="62120" shortdescr="Zain NG"/>
+    <Item plmn="62130" shortdescr="MTN-NG"/>
+    <Item plmn="62140" shortdescr="Mtel"/>
+    <Item plmn="62150" shortdescr="glo"/>
+    <Item plmn="62160" shortdescr="EMTS NGA"/>
+    <Item plmn="62201" shortdescr="CELTEL"/>
+    <Item plmn="62302" shortdescr="Telecel"/>
+    <Item plmn="62304" shortdescr="NL-RCA"/>
+    <Item plmn="62401" shortdescr="MTN"/>
+    <Item plmn="62402" shortdescr="Orange"/>
+    <Item plmn="62501" shortdescr="CMOVEL"/>
+    <Item plmn="62502" shortdescr="T+"/>
+    <Item plmn="62601" shortdescr="CSTmovel"/>
+    <Item plmn="62701" shortdescr="GETESA"/>
+    <Item plmn="62703" shortdescr="HiTs-GE"/>
+    <Item plmn="62801" shortdescr="LIBERTIS"/>
+    <Item plmn="62802" shortdescr="TELECEL"/>
+    <Item plmn="62803" shortdescr="ZAIN"/>
+    <Item plmn="62901" shortdescr="CELTEL RC"/>
+    <Item plmn="62902" shortdescr="AZUR COG"/>
+    <Item plmn="62907" shortdescr="WARIDRC"/>
+    <Item plmn="62910" shortdescr="MTN-CG"/>
+    <Item plmn="63001" shortdescr="VODACOM"/>
+    <Item plmn="63002" shortdescr="CELTEL"/>
+    <Item plmn="63005" shortdescr="SCELL"/>
+    <Item plmn="63086" shortdescr="CCT"/>
+    <Item plmn="63089" shortdescr="Tigo"/>
+    <Item plmn="63102" shortdescr="UNITEL"/>
+    <Item plmn="63207" shortdescr="GTM"/>
+    <Item plmn="63202" shortdescr="MTN"/>
+    <Item plmn="63203" shortdescr="ORANGE BS"/>
+    <Item plmn="63301" shortdescr="C&amp;W SEY"/>
+    <Item plmn="63310" shortdescr="AIRTEL"/>
+    <Item plmn="63401" shortdescr="MobiTel"/>
+    <Item plmn="63402" shortdescr="MTN"/>
+    <Item plmn="63405" shortdescr="Vivacell"/>
+    <Item plmn="63510" shortdescr="RCELL"/>
+    <Item plmn="63512" shortdescr="RWTEL"/>
+    <Item plmn="63513" shortdescr="TIGO"/>
+    <Item plmn="63601" shortdescr="ET-MTN"/>
+    <Item plmn="63701" shortdescr="Tele"/>
+    <Item plmn="63704" shortdescr="SOMAFONE"/>
+    <Item plmn="63730" shortdescr="Golis"/>
+    <Item plmn="63740" shortdescr="MONTYSOM"/>
+    <Item plmn="63771" shortdescr="SOMTEL"/>
+    <Item plmn="63782" shortdescr="Telsom"/>
+    <Item plmn="63801" shortdescr="EVATIS"/>
+    <Item plmn="63902" shortdescr="SAF-COM"/>
+    <Item plmn="63903" shortdescr="CELTEL"/>
+    <Item plmn="63907" shortdescr="GSMTKL"/>
+    <Item plmn="64002" shortdescr="TIGO"/>
+    <Item plmn="64003" shortdescr="ZANTEL"/>
+    <Item plmn="64004" shortdescr="VodaCom"/>
+    <Item plmn="64005" shortdescr="celtel"/>
+    <Item plmn="64009" shortdescr="Hits TZ"/>
+    <Item plmn="64101" shortdescr="CELTEL"/>
+    <Item plmn="64110" shortdescr="MTN Uganda"/>
+    <Item plmn="64111" shortdescr="UTL"/>
+    <Item plmn="64114" shortdescr="OUL"/>
+    <Item plmn="64122" shortdescr="WaridTel"/>
+    <Item plmn="64201" shortdescr="EWB"/>
+    <Item plmn="64202" shortdescr="TEMPO-AF"/>
+    <Item plmn="64203" shortdescr="ONATEL"/>
+    <Item plmn="64207" shortdescr="SMART"/>
+    <Item plmn="64282" shortdescr="BDITL"/>
+    <Item plmn="64301" shortdescr="mCel"/>
+    <Item plmn="64304" shortdescr="VodaCom"/>
+    <Item plmn="64501" shortdescr="CELTEL"/>
+    <Item plmn="64502" shortdescr="MTN ZM"/>
+    <Item plmn="64601" shortdescr="ZAIN"/>
+    <Item plmn="64602" shortdescr="OrangeMG"/>
+    <Item plmn="64604" shortdescr="TELMA"/>
+    <Item plmn="64700" shortdescr="Orange"/>
+    <Item plmn="64702" shortdescr="OUTREMER"/>
+    <Item plmn="64710" shortdescr="SFR RU"/>
+    <Item plmn="64801" shortdescr="NETONE"/>
+    <Item plmn="64803" shortdescr="TELECEL"/>
+    <Item plmn="64804" shortdescr="ECONET"/>
+    <Item plmn="64901" shortdescr="MTCNAM"/>
+    <Item plmn="64903" shortdescr="Cell One"/>
+    <Item plmn="65001" shortdescr="TNM"/>
+    <Item plmn="65010" shortdescr="CELTEL"/>
+    <Item plmn="65101" shortdescr="Vodacom-LS"/>
+    <Item plmn="65102" shortdescr="EZI-CEL"/>
+    <Item plmn="65201" shortdescr="MASCOM"/>
+    <Item plmn="65202" shortdescr="Orange"/>
+    <Item plmn="65310" shortdescr="SwaziMTN"/>
+    <Item plmn="654001" shortdescr="HURI"/>
+    <Item plmn="65501" shortdescr="VODA"/>
+    <Item plmn="65502" shortdescr="8.ta"/>
+    <Item plmn="65507" shortdescr="Cell C"/>
+    <Item plmn="65510" shortdescr="MTN"/>
+    <Item plmn="70267" shortdescr="BTL"/>
+    <Item plmn="70401" shortdescr="ClaroGTM"/>
+    <Item plmn="70402" shortdescr="Internet Movil Tigo"/>
+    <Item plmn="70403" shortdescr="movistar"/>
+    <Item plmn="70601" shortdescr="ClaroSLV"/>
+    <Item plmn="70602" shortdescr="DIGICEL"/>
+    <Item plmn="70603" shortdescr="TM"/>
+    <Item plmn="70604" shortdescr="movistar"/>
+    <Item plmn="70801" shortdescr="ClaroHND"/>
+    <Item plmn="70802" shortdescr="CELTEL"/>
+    <Item plmn="708020" shortdescr="Tigo"/>
+    <Item plmn="708002" shortdescr="Tigo"/>
+    <Item plmn="708200" shortdescr="Tigo"/>   
+    <Item plmn="70830" shortdescr="HT - 200"/>
+    <Item plmn="71000" shortdescr="NICMS"/>
+    <Item plmn="71003" shortdescr="NICMS"/>
+    <Item plmn="71021" shortdescr="ClaroNIC"/>
+    <Item plmn="71030" shortdescr="TM Nicaragua"/>
+    <Item plmn="710730" shortdescr="SERCOM"/>
+    <Item plmn="71073" shortdescr="ClaroNIC"/>
+    <Item plmn="710300" shortdescr="movistar"/>
+    <Item plmn="71200" shortdescr="I.C.E."/>
+    <Item plmn="71201" shortdescr="I.C.E."/>
+    <Item plmn="71202" shortdescr="I.C.E."/>
+    <Item plmn="71401" shortdescr="PANCW"/>
+    <Item plmn="71402" shortdescr="TM Panamá"/>
+    <Item plmn="71403" shortdescr="CLARO PA"/>
+    <Item plmn="714020" shortdescr="movistar"/>
+    <Item plmn="71606" shortdescr="MOVISTAR"/>
+    <Item plmn="71610" shortdescr="ClaroPER"/>
+    <Item plmn="71617" shortdescr="NXT3"/>
+    <Item plmn="72207" shortdescr="movistar"/>
+    <!--Item plmn="72234" shortdescr="AR TP"/-->
+    <Item plmn="72234" shortdescr="Telecom Personal"/>
+    <Item plmn="722310" shortdescr="CLARO AR"/>
+    <Item plmn="72402" shortdescr="TIM"/>
+    <Item plmn="72403" shortdescr="TIM"/>
+    <Item plmn="72404" shortdescr="TIM"/>
+    <Item plmn="72405" shortdescr="Claro"/>
+    <Item plmn="72406" shortdescr="VIVO"/>
+    <Item plmn="72410" shortdescr="VIVO"/>
+    <Item plmn="72411" shortdescr="VIVO"/>
+    <Item plmn="72415" shortdescr="SCTL"/>
+    <Item plmn="72416" shortdescr="BrTCel"/>
+    <Item plmn="72423" shortdescr="VIVO"/>
+    <Item plmn="72424" shortdescr="AMAZONIA"/>
+    <Item plmn="72431" shortdescr="Oi"/>
+    <Item plmn="72432" shortdescr="CTBC"/>
+    <Item plmn="72433" shortdescr="CTBC"/>
+    <Item plmn="72434" shortdescr="CTBC"/>
+    <Item plmn="73001" shortdescr="ENTEL"/>
+    <Item plmn="73002" shortdescr="movistar"/>
+    <Item plmn="73003" shortdescr="ClaroCHL"/>
+    <Item plmn="73010" shortdescr="ENTEL"/>
+    <Item plmn="732101" shortdescr="COMCEL"/>
+    <Item plmn="732103" shortdescr="TIGO COL"/>
+    <Item plmn="73212" shortdescr="TM Colombia"/>
+    <Item plmn="732111" shortdescr="TIGO COL"/>
+    <Item plmn="732123" shortdescr="COL_TEMC"/>
+    <Item plmn="73401" shortdescr="DIGITEL "/>
+    <Item plmn="73402" shortdescr="DIGITEL"/>
+    <Item plmn="73403" shortdescr="DIGITEL"/>
+    <Item plmn="73404" shortdescr="movistar"/>
+    <Item plmn="73406" shortdescr="Movilnet"/>
+    <Item plmn="73601" shortdescr="VIVA"/>
+    <Item plmn="73602" shortdescr="EMOVIL"/>
+    <Item plmn="73603" shortdescr="Telecel"/>
+    <Item plmn="73801" shortdescr="DIGICEL"/>
+    <Item plmn="738002" shortdescr="CLNK PLS"/>
+    <Item plmn="74000" shortdescr="movistar"/>
+    <Item plmn="74001" shortdescr="PORTAGSM"/>
+    <Item plmn="74401" shortdescr="VOX"/>
+    <Item plmn="74402" shortdescr="CLARO PY"/>
+    <!--Item plmn="74404" shortdescr="Telecel"/-->
+    <Item plmn="74404" shortdescr="Tigo"/>
+    <Item plmn="74405" shortdescr="Personal"/>
+    <Item plmn="74602" shortdescr="TeleG"/>
+    <Item plmn="74603" shortdescr="DIGICEL"/>
+    <Item plmn="74604" shortdescr="UNIQA"/>
+    <Item plmn="74807" shortdescr="Movistar"/>
+    <Item plmn="74810" shortdescr="CLARO UY"/>
+    <Item plmn="74801" shortdescr="Antel"/>
+    <Item plmn="79502" shortdescr="TM CELL"/>
+    <Item plmn="750001" shortdescr="C&amp;W FLK "/>
+    <Item plmn="90105" shortdescr="Thuraya"/>
+    <Item plmn="90106" shortdescr="Thuraya"/>
+    <Item plmn="90112" shortdescr="MCP"/>
+    <Item plmn="90114" shortdescr="AeroMob"/>
+    <Item plmn="90115" shortdescr="OnAir"/>
+    <Item plmn="90117" shortdescr="Navitas"/>
+    <Item plmn="90118" shortdescr="WMS"/>
+    <Item plmn="90121" shortdescr="Seanet"/>
+</OperatorList>
