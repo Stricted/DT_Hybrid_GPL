@@ -52,7 +52,10 @@
 #include <time.h>
 
 #ifdef WIN32
-	#include "inet_pton.h"
+	#ifndef UPNP_USE_MSVCPP
+		/* VC Winsocks2 includes these functions */
+		#include "inet_pton.h"
+	#endif
 #else
 	#include <netdb.h>      /* for struct addrinfo */
 #endif
@@ -272,22 +275,6 @@ int token_cmp(
 	token *in1,
 	/*! [in] Second token object used for the comparison. */
 	token *in2);
-
-/*!
- * \brief Parses a string representing a host and port (e.g. "127.127.0.1:80"
- * or "localhost") and fills out a hostport_type struct with internet address
- * and a token representing the full host and port.
- *
- * Uses gethostbyname.
- */
-int parse_hostport(
-	/*! [in] String of characters representing host and port. */
-	const char *in,
-	/*! [in] Sets a maximum limit. */
-	size_t max,
-	/*! [out] Output parameter where the host and port are represented as
-	 * an internet address. */
-	hostport_type *out);
 
 /*!
  * \brief Removes http escaped characters such as: "%20" and replaces them with

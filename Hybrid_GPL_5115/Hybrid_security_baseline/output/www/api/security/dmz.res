@@ -1,1 +1,0 @@
-vpath="X_DMZ"E5element="DmzStatus|DmzIPAddress"ATPelement="DMZEnable|DMZHostIPAddress"multi="Dmz"

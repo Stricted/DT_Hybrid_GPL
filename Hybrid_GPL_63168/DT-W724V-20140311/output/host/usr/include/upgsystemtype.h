@@ -1,8 +1,0 @@
-#ifndef __SYSTEM_TYPE_H__
-#define __SYSTEM_TYPE_H__
-
-#define UGPDOUBLESYSTEM 1
-#define UGPSINGLESYSTEM 2
-#define UGPBIGSMALLENDIANSYSTEM 3
-
-#endif

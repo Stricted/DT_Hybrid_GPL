@@ -2,6 +2,7 @@
  *
  * Copyright (c) 2000-2003 Intel Corporation 
  * All rights reserved. 
+ * Copyright (c) 2012 France Telecom All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without 
  * modification, are permitted provided that the following conditions are met: 
@@ -164,8 +165,14 @@ IXML_Element *ixmlDocument_createElement(
 	const DOMString tagName)
 {
 	IXML_Element *newElement = NULL;
+	int ret = IXML_SUCCESS;
 
-	ixmlDocument_createElementEx(doc, tagName, &newElement);
+	ret = ixmlDocument_createElementEx(doc, tagName, &newElement);
+	if (ret != IXML_SUCCESS) {
+                IxmlPrintf(__FILE__, __LINE__, "ixmlDocument_createElement",
+			"Error %d\n", ret);
+		return NULL;
+        }
 	return newElement;
 }
 

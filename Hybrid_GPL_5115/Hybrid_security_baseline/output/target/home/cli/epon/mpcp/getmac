@@ -1,9 +1,0 @@
-[settings]
-functionname=hi_kernel_mpcp_get_lld0mac;  
-attributenum=1;
-attributeflag = 1 ;   //0:close 1:open
-
-[parameter]
-attribute=alias<mac>          type<mac>                           default<10:00:00:01:02:03>;
-
-[help]

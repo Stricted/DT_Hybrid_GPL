@@ -1,1 +1,0 @@
-cmd_drivers/mtd/brcmnand/built-in.o :=  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/bin/mips-unknown-linux-uclibc-ld  -m elf32btsmip   -r -o drivers/mtd/brcmnand/built-in.o drivers/mtd/brcmnand/bcm63xx-nand.o drivers/mtd/brcmnand/brcmnand_base.o drivers/mtd/brcmnand/brcmnand_bbt.o drivers/mtd/brcmnand/brcmnand_cet.o 

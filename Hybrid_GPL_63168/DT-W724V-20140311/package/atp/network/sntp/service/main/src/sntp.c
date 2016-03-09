@@ -1069,7 +1069,8 @@ static unsigned int SntpSetupConnection(char *ntpserver, int *ntpofd)
 	
         ret = ATP_UTIL_Lookup_A_and_AAAA(ntpserver, &hp, &hpv6);	
         if ((NULL != hpv6)
-        && ((VOS_TRUE == ATP_UTIL_IsWanV6Up()) || (VOS_TRUE == ATP_UTIL_IsLTEWanV6Up())))
+        && ((VOS_TRUE == ATP_UTIL_IsWanV6Up()) || (VOS_TRUE == ATP_UTIL_IsLTEWanV6Up()) 
+            || (ATP_UTIL_IsLTETunnel6Up())))
         {
             for (i = 0;(!ATP_UTIL_IsExistDefaultRoute(VOS_TRUE)) && i < SNTP_SERVER_WAITROUTE_TIMES; i++)
             {
@@ -1083,7 +1084,8 @@ static unsigned int SntpSetupConnection(char *ntpserver, int *ntpofd)
             SntpDebug("\r\n Parse ipv6 dns address : %s . FILE[%s] LINE[%u] \r\n",czTem,__FILE__,__LINE__);  
         }
         else if ((NULL != hp)
-        && ((VOS_TRUE == ATP_UTIL_IsWanV4Up()) || (VOS_TRUE == ATP_UTIL_IsLTEWanV4Up())))
+        && ((VOS_TRUE == ATP_UTIL_IsWanV4Up()) || (VOS_TRUE == ATP_UTIL_IsLTEWanV4Up()) 
+            || (ATP_UTIL_IsLTETunnel4Up())))
         {
             for (i = 0;(!ATP_UTIL_IsExistDefaultRoute(VOS_FALSE)) && i < SNTP_SERVER_WAITROUTE_TIMES; i++)
             {
@@ -1845,7 +1847,6 @@ int main(int argc, char **argv)
             connectNTPSrvTimeOutFlag = 0;    // set the connectNTPSrvTimeOutFlag to 0 befroe loop
             
             setup_connection = g_lSrcActive;
-            ATP_UTIL_GetSysTime(&stLastTime);
             
             /*建立连接*/
             if (setup_connection) 
@@ -1859,6 +1860,7 @@ int main(int argc, char **argv)
                     SntpDebug("SntpSetupConnection success\r\n");                
                 }
             }
+            ATP_UTIL_GetSysTime(&stLastTime);
             
             /*SNTP收发包交互*/
             if (start_connection)

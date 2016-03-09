@@ -1,1 +1,0 @@
-cmd_drivers/i2c/built-in.o :=  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/bin/mips-unknown-linux-uclibc-ld  -m elf32btsmip   -r -o drivers/i2c/built-in.o drivers/i2c/algos/built-in.o drivers/i2c/busses/built-in.o drivers/i2c/muxes/built-in.o 

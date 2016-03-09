@@ -1,6 +1,0 @@
-#!/bin/sh
-
-# Sub Session UsersOnline
-/bin/foncontrl decfilevalue /var/fon/stats/session/usersonline
-
-exit 0

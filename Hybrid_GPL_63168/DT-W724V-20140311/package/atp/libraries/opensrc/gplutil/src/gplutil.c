@@ -2103,6 +2103,44 @@ VOS_BOOL ATP_UTIL_IsWanV4Up(void)
     return (WAN_STATUS_CONNECTED == lDial);
 }
 
+#define ATP_GRE2_STATUS6_FILE    "/var/wan/gre2/status6"
+#define ATP_GRE2_STATUS_FILE     "/var/wan/gre2/status"
+VOS_BOOL ATP_UTIL_IsLTETunnel4Up(void)
+{ 
+    FILE        *pstFile = VOS_NULL;
+    VOS_CHAR    acStatus4[ATP_ACTUAL_LEN_32] = {0}; 
+    VOS_UINT32  ulLTETunnelStatus4 = 0;  
+    
+    pstFile = fopen(ATP_GRE2_STATUS_FILE, "r");
+    if (VOS_NULL != pstFile)
+    {
+        fgets(acStatus4, sizeof(acStatus4), pstFile);
+        ulLTETunnelStatus4 = (VOS_UINT32)atoi(acStatus4);
+        fclose(pstFile);
+        pstFile = VOS_NULL;
+    }        
+            
+    return (WAN_STATUS_CONNECTED == ulLTETunnelStatus4);   
+}
+
+VOS_BOOL ATP_UTIL_IsLTETunnel6Up(void)
+{ 
+    FILE        *pstFile = VOS_NULL;   
+    VOS_CHAR    acStatus6[ATP_ACTUAL_LEN_32] = {0};    
+    VOS_UINT32  ulLTETunnelStatus6 = 0;          
+    
+    pstFile = fopen(ATP_GRE2_STATUS6_FILE, "r");
+    if (VOS_NULL != pstFile)
+    {   
+        fgets(acStatus6, sizeof(acStatus6), pstFile);
+        ulLTETunnelStatus6 = (VOS_UINT32)atoi(acStatus6);
+        fclose(pstFile);
+        pstFile = VOS_NULL;
+    }
+           
+    return (WAN_STATUS_CONNECTED == ulLTETunnelStatus6);
+
+}
 #define ATP_SYS_READ_BUF_SIZE 128
 #define ATP_SYS_MEDIUM_LEN 240
 

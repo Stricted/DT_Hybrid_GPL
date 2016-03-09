@@ -44,14 +44,14 @@
 
 void linecopy(char dest[LINE_SIZE], const char *src)
 {
-	strncpy(dest, src, LINE_SIZE - 1);
+	strncpy(dest, src, LINE_SIZE - (size_t)1);
 	/* null-terminate if len(src) >= LINE_SIZE. */
 	dest[LINE_SIZE - 1] = '\0';
 }
 
 void namecopy(char dest[NAME_SIZE], const char *src)
 {
-	strncpy(dest, src, NAME_SIZE - 1);
+	strncpy(dest, src, NAME_SIZE - (size_t)1);
 	/* null-terminate if len(src) >= NAME_SIZE. */
 	dest[NAME_SIZE - 1] = '\0';
 }
@@ -60,7 +60,7 @@ void linecopylen(char dest[LINE_SIZE], const char *src, size_t srclen)
 {
 	size_t len;
 
-	len = srclen < (LINE_SIZE - 1) ? srclen : (LINE_SIZE - 1);
+	len = srclen < (LINE_SIZE - (size_t)1) ? srclen : (LINE_SIZE - (size_t)1);
 	strncpy(dest, src, len);
 	dest[len] = '\0';
 }

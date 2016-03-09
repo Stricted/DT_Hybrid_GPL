@@ -1,1 +1,0 @@
-vpath="InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.AssociatedDevice.{i}"E5element="AssociatedDeviceMACAddress"ATPelement="AssociatedDeviceMACAddress"

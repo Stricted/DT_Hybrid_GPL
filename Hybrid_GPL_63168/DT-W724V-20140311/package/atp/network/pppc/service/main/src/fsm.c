@@ -341,7 +341,6 @@ fsm_timeout(arg)
 {
     fsm *f = (fsm *) arg;
 
-    /*start:z00182249 for UDK0000287513：P004记录条件为当网关发的ipv6cp报文服务器没有回复时20130909*/
     if (PPP_IPV6CP==f->protocol)
 	{
 	    //单栈时只记录一次P004
@@ -353,6 +352,7 @@ fsm_timeout(arg)
 		
 		//双栈时一共记录5次，每重试一轮记录一次
 	    if ((f->ipv6_P004_cnt < 4)
+            &&(STARTING != ipcp_fsm[0].state)&&(INITIAL != ipcp_fsm[0].state)
 			&& (((DT_BURST_NUM + 1 == f->burst_counter) && (STAGE_BURST == f->dt_ncp_stage))
 			|| ((0 == f->penalty_burst_counter) && (f->penalty_counter > 0)&& (STAGE_PENALTY == f->dt_ncp_stage))))
     	{
@@ -360,7 +360,6 @@ fsm_timeout(arg)
 			f->ipv6_P004_cnt++;
     	}
 	}
-	/*End:z00182249 for UDK0000287513：P004记录条件为当网关发的ipv6cp报文服务器没有回复时20130909*/
 
     switch (f->state) {
     case CLOSING:

@@ -23,7 +23,7 @@ filerr              0x50              file.o
 
 Discarded input sections
 
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  .reginfo       0x0000000000000000       0x18 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
  .reginfo       0x0000000000000000       0x18 aaa.o
  .debug_info    0x0000000000000000     0x18e2 aaa.o
@@ -32,8 +32,8 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x20 aaa.o
  .debug_ranges  0x0000000000000000       0x40 aaa.o
- .debug_line    0x0000000000000000      0x5e5 aaa.o
- .debug_str     0x0000000000000000      0xa5f aaa.o
+ .debug_line    0x0000000000000000      0x59a aaa.o
+ .debug_str     0x0000000000000000      0xa46 aaa.o
  .debug_frame   0x0000000000000000      0x12c aaa.o
  .reginfo       0x0000000000000000       0x18 avp.o
  .debug_info    0x0000000000000000     0x20ed avp.o
@@ -41,8 +41,8 @@ Discarded input sections
  .debug_loc     0x0000000000000000     0x1702 avp.o
  .debug_aranges
                 0x0000000000000000       0x20 avp.o
- .debug_line    0x0000000000000000      0xdfc avp.o
- .debug_str     0x0000000000000000      0x975 avp.o
+ .debug_line    0x0000000000000000      0xdb1 avp.o
+ .debug_str     0x0000000000000000      0x95c avp.o
  .debug_frame   0x0000000000000000      0x350 avp.o
  .reginfo       0x0000000000000000       0x18 avpsend.o
  .debug_info    0x0000000000000000     0x15db avpsend.o
@@ -50,8 +50,8 @@ Discarded input sections
  .debug_loc     0x0000000000000000      0xa8c avpsend.o
  .debug_aranges
                 0x0000000000000000       0x20 avpsend.o
- .debug_line    0x0000000000000000      0x4d3 avpsend.o
- .debug_str     0x0000000000000000      0x7d4 avpsend.o
+ .debug_line    0x0000000000000000      0x488 avpsend.o
+ .debug_str     0x0000000000000000      0x7bb avpsend.o
  .debug_frame   0x0000000000000000      0x330 avpsend.o
  .reginfo       0x0000000000000000       0x18 call.o
  .debug_info    0x0000000000000000     0x14da call.o
@@ -60,8 +60,8 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x20 call.o
  .debug_ranges  0x0000000000000000       0x18 call.o
- .debug_line    0x0000000000000000      0x4ad call.o
- .debug_str     0x0000000000000000      0x83b call.o
+ .debug_line    0x0000000000000000      0x462 call.o
+ .debug_str     0x0000000000000000      0x822 call.o
  .debug_frame   0x0000000000000000      0x104 call.o
  .reginfo       0x0000000000000000       0x18 control.o
  .debug_info    0x0000000000000000     0x1c4b control.o
@@ -69,8 +69,8 @@ Discarded input sections
  .debug_loc     0x0000000000000000     0x12ec control.o
  .debug_aranges
                 0x0000000000000000       0x20 control.o
- .debug_line    0x0000000000000000      0xccd control.o
- .debug_str     0x0000000000000000      0xa8a control.o
+ .debug_line    0x0000000000000000      0xc50 control.o
+ .debug_str     0x0000000000000000      0xa71 control.o
  .debug_frame   0x0000000000000000      0x1b4 control.o
  .reginfo       0x0000000000000000       0x18 file.o
  .debug_info    0x0000000000000000     0x3508 file.o
@@ -79,8 +79,8 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x20 file.o
  .debug_ranges  0x0000000000000000       0x60 file.o
- .debug_line    0x0000000000000000      0x8e4 file.o
- .debug_str     0x0000000000000000      0xc6e file.o
+ .debug_line    0x0000000000000000      0x899 file.o
+ .debug_str     0x0000000000000000      0xc55 file.o
  .debug_frame   0x0000000000000000      0x544 file.o
  .reginfo       0x0000000000000000       0x18 md5.o
  .debug_info    0x0000000000000000      0x264 md5.o
@@ -89,7 +89,7 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x20 md5.o
  .debug_line    0x0000000000000000      0x271 md5.o
- .debug_str     0x0000000000000000      0x107 md5.o
+ .debug_str     0x0000000000000000       0xee md5.o
  .debug_frame   0x0000000000000000       0xa8 md5.o
  .reginfo       0x0000000000000000       0x18 misc.o
  .debug_info    0x0000000000000000     0x1855 misc.o
@@ -97,8 +97,8 @@ Discarded input sections
  .debug_loc     0x0000000000000000      0x648 misc.o
  .debug_aranges
                 0x0000000000000000       0x20 misc.o
- .debug_line    0x0000000000000000      0x504 misc.o
- .debug_str     0x0000000000000000      0xa76 misc.o
+ .debug_line    0x0000000000000000      0x4b9 misc.o
+ .debug_str     0x0000000000000000      0xa5d misc.o
  .debug_frame   0x0000000000000000      0x1ac misc.o
  .reginfo       0x0000000000000000       0x18 network.o
  .debug_info    0x0000000000000000     0x1e8b network.o
@@ -107,8 +107,8 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x20 network.o
  .debug_ranges  0x0000000000000000       0x80 network.o
- .debug_line    0x0000000000000000      0x744 network.o
- .debug_str     0x0000000000000000      0xc64 network.o
+ .debug_line    0x0000000000000000      0x6e0 network.o
+ .debug_str     0x0000000000000000      0xc4b network.o
  .debug_frame   0x0000000000000000      0x190 network.o
  .reginfo       0x0000000000000000       0x18 pty.o
  .debug_info    0x0000000000000000      0x22e pty.o
@@ -117,7 +117,7 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x20 pty.o
  .debug_line    0x0000000000000000       0x98 pty.o
- .debug_str     0x0000000000000000      0x15f pty.o
+ .debug_str     0x0000000000000000      0x146 pty.o
  .debug_frame   0x0000000000000000       0x78 pty.o
  .reginfo       0x0000000000000000       0x18 scheduler.o
  .debug_info    0x0000000000000000      0x768 scheduler.o
@@ -126,8 +126,8 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x20 scheduler.o
  .debug_ranges  0x0000000000000000       0x18 scheduler.o
- .debug_line    0x0000000000000000      0x30f scheduler.o
- .debug_str     0x0000000000000000      0x3d3 scheduler.o
+ .debug_line    0x0000000000000000      0x2c4 scheduler.o
+ .debug_str     0x0000000000000000      0x3ba scheduler.o
  .debug_frame   0x0000000000000000       0xd0 scheduler.o
  .reginfo       0x0000000000000000       0x18 getdevstats.o
  .debug_info    0x0000000000000000     0x13f7 getdevstats.o
@@ -136,8 +136,8 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x20 getdevstats.o
  .debug_ranges  0x0000000000000000       0x60 getdevstats.o
- .debug_line    0x0000000000000000      0x502 getdevstats.o
- .debug_str     0x0000000000000000     0x1b41 getdevstats.o
+ .debug_line    0x0000000000000000      0x485 getdevstats.o
+ .debug_str     0x0000000000000000     0x1b28 getdevstats.o
  .debug_frame   0x0000000000000000       0x84 getdevstats.o
  .reginfo       0x0000000000000000       0x18 xl2tpd.o
  .debug_info    0x0000000000000000     0x2400 xl2tpd.o
@@ -146,11 +146,11 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x28 xl2tpd.o
  .debug_ranges  0x0000000000000000       0xf0 xl2tpd.o
- .debug_line    0x0000000000000000      0xa8b xl2tpd.o
- .debug_str     0x0000000000000000     0x1aab xl2tpd.o
+ .debug_line    0x0000000000000000      0x9f5 xl2tpd.o
+ .debug_str     0x0000000000000000     0x1a92 xl2tpd.o
  .debug_frame   0x0000000000000000      0x2ac xl2tpd.o
  .reginfo       0x0000000000000000       0x18 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 Memory Configuration
 
@@ -159,8 +159,8 @@ Name             Origin             Length             Attributes
 
 Linker script and memory map
 
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
 LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
 LOAD aaa.o
 LOAD avp.o
@@ -175,67 +175,67 @@ LOAD pty.o
 LOAD scheduler.o
 LOAD getdevstats.o
 LOAD xl2tpd.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/staging/lib/libgplutil.so
+LOAD /usr1/xuhui/DT-W724V-20140311/output/staging/lib/libgplutil.so
 LOAD ../chillout/.libs/libchillout.so
 LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/staging/lib/libgcc_s.so
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/libc.so
+LOAD /usr1/xuhui/DT-W724V-20140311/output/staging/lib/libgcc_s.so
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/libc.so
 START GROUP
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libc.so.0
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/uclibc_nonshared.a
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/ld-uClibc.so.0
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libc.so.0
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/uclibc_nonshared.a
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/ld-uClibc.so.0
 END GROUP
 LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/staging/lib/libgcc_s.so
+LOAD /usr1/xuhui/DT-W724V-20140311/output/staging/lib/libgcc_s.so
 LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
                 0x0000000000400000                PROVIDE (__executable_start, 0x400000)
                 0x0000000000400114                . = (0x400000 + SIZEOF_HEADERS)
 
 .interp         0x0000000000400114       0x14
  *(.interp)
- .interp        0x0000000000400114       0x14 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .interp        0x0000000000400114       0x14 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .reginfo        0x0000000000400128       0x18
  *(.reginfo)
- .reginfo       0x0000000000400128       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .reginfo       0x0000000000400128       0x18 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
 
 .dynamic        0x0000000000400140       0xf0
  *(.dynamic)
- .dynamic       0x0000000000400140       0xf0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .dynamic       0x0000000000400140       0xf0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
                 0x0000000000400140                _DYNAMIC
 
 .hash           0x0000000000400230      0x684
  *(.hash)
- .hash          0x0000000000400230      0x684 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .hash          0x0000000000400230      0x684 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .gnu.hash
  *(.gnu.hash)
 
 .dynsym         0x00000000004008b4      0xda0
  *(.dynsym)
- .dynsym        0x00000000004008b4      0xda0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .dynsym        0x00000000004008b4      0xda0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .dynstr         0x0000000000401654      0x8bc
  *(.dynstr)
- .dynstr        0x0000000000401654      0x8bc /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .dynstr        0x0000000000401654      0x8bc /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .gnu.version    0x0000000000401f10      0x1b4
  *(.gnu.version)
- .gnu.version   0x0000000000401f10      0x1b4 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .gnu.version   0x0000000000401f10      0x1b4 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .gnu.version_d  0x00000000004020c4        0x0
  *(.gnu.version_d)
  .gnu.version_d
-                0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .gnu.version_r  0x00000000004020c4       0x20
  *(.gnu.version_r)
  .gnu.version_r
-                0x00000000004020c4       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x00000000004020c4       0x20 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .rel.dyn        0x00000000004020e4        0x0
  *(.rel.init)
@@ -250,13 +250,13 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  *(.rel.dtors)
  *(.rel.got)
  *(.rel.dyn)
- .rel.dyn       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .rel.dyn       0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
  *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
  *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
  *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
  *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
  *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
- .rel.bss       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .rel.bss       0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
                 0x00000000004020e4                PROVIDE (__rel_iplt_start, .)
  *(.rel.iplt)
                 0x00000000004020e4                PROVIDE (__rel_iplt_end, .)
@@ -287,22 +287,22 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
 
 .rel.plt        0x00000000004020e4        0x0
  *(.rel.plt)
- .rel.plt       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .rel.plt       0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .rela.plt
  *(.rela.plt)
 
 .init           0x00000000004020e4       0x6c
  *(.init)
- .init          0x00000000004020e4       0x1c /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .init          0x00000000004020e4       0x1c /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
                 0x00000000004020e4                _init
  .init          0x0000000000402100       0x24 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
  .init          0x0000000000402124       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .init          0x0000000000402144        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .init          0x0000000000402144        0xc /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 .plt            0x0000000000402150        0x0
  *(.plt)
- .plt           0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .plt           0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .iplt
  *(.iplt)
@@ -317,9 +317,9 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  *(.text.hot .text.hot.*)
  *(.text .stub .text.* .gnu.linkonce.t.*)
  *fill*         0x00000000004021a4        0xc 00000000
- .text          0x00000000004021b0       0x60 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .text          0x00000000004021b0       0x60 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
                 0x00000000004021b0                __start
- .text          0x0000000000402210        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .text          0x0000000000402210        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  .text          0x0000000000402210      0x130 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
  .text          0x0000000000402340      0xcb0 aaa.o
                 0x0000000000402340                init_addr
@@ -539,13 +539,13 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
                 0x000000000041459c                consider_pidfile
                 0x0000000000414750                init
  .text          0x0000000000414a20       0x50 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .text          0x0000000000414a70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .text          0x0000000000414a70        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
  *(.gnu.warning)
  *(.mips16.fn.*)
  *(.mips16.call.*)
 
 .MIPS.stubs     0x0000000000414a70      0x600
- .MIPS.stubs    0x0000000000414a70      0x600 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .MIPS.stubs    0x0000000000414a70      0x600 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
                 0x0000000000414a70                bind
                 0x0000000000414a80                gethostbyname
                 0x0000000000414a90                calloc
@@ -644,10 +644,10 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
 
 .fini           0x0000000000415070       0x4c
  *(.fini)
- .fini          0x0000000000415070       0x1c /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .fini          0x0000000000415070       0x1c /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
                 0x0000000000415070                _fini
  .fini          0x000000000041508c       0x24 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
- .fini          0x00000000004150b0        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .fini          0x00000000004150b0        0xc /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
                 0x00000000004150bc                PROVIDE (__etext, .)
                 0x00000000004150bc                PROVIDE (_etext, .)
                 0x00000000004150bc                PROVIDE (etext, .)
@@ -724,7 +724,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
 
 .eh_frame_hdr   0x000000000041a740        0x0
  *(.eh_frame_hdr)
- .eh_frame_hdr  0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .eh_frame_hdr  0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 .eh_frame       0x000000000041a740        0x4
  *(.eh_frame)
@@ -798,10 +798,10 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
 .data           0x000000000042b020      0x860
                 0x000000000042b020                _fdata = .
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x000000000042b020       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .data          0x000000000042b020       0x10 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
                 0x000000000042b020                data_start
                 0x000000000042b020                __data_start
- .data          0x000000000042b030        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .data          0x000000000042b030        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  .data          0x000000000042b030        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
  .data          0x000000000042b030        0x0 aaa.o
  .data          0x000000000042b030        0x0 avp.o
@@ -835,10 +835,10 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
                 0x000000000042b874                ppd
                 0x000000000042b878                max_tunnels
  .data          0x000000000042b880        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .data          0x000000000042b880        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .data          0x000000000042b880        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 .rld_map        0x000000000042b880        0x4
- .rld_map       0x000000000042b880        0x4 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .rld_map       0x000000000042b880        0x4 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
                 0x000000000042b880                __RLD_MAP
 
 .data1
@@ -846,13 +846,13 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
 
 .got.plt        0x000000000042b884        0x0
  *(.got.plt)
- .got.plt       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .got.plt       0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
                 0x000000000042b884                . = .
                 0x0000000000433880                _gp = (ALIGN (0x10) + 0x7ff0)
 
 .got            0x000000000042b890      0x350
  *(.got)
- .got           0x000000000042b890      0x350 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .got           0x000000000042b890      0x350 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
                 0x000000000042b890                _GLOBAL_OFFSET_TABLE_
 
 .sdata          0x000000000042bbe0        0x4
@@ -892,10 +892,10 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
 
 .bss            0x000000000042bc10     0x2d28
  *(.dynbss)
- .dynbss        0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .dynbss        0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x000000000042bc10        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
- .bss           0x000000000042bc10        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .bss           0x000000000042bc10        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .bss           0x000000000042bc10        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  .bss           0x000000000042bc10       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
  .bss           0x000000000042bc30        0x0 aaa.o
  .bss           0x000000000042bc30        0x0 avp.o
@@ -914,7 +914,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
                 0x000000000042e090                waiting_first_cid
                 0x000000000042e094                switch_io
  .bss           0x000000000042e0a0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .bss           0x000000000042e0a0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .bss           0x000000000042e0a0        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
  *(COMMON)
  COMMON         0x000000000042e0a0      0x400 aaa.o
                 0x000000000042e0a0                uaddr
@@ -953,8 +953,8 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  *(.stab.indexstr)
 
 .pdr            0x0000000000000000     0x1b40
- .pdr           0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
- .pdr           0x0000000000000020       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .pdr           0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .pdr           0x0000000000000020       0x40 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  .pdr           0x0000000000000060        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
  .pdr           0x0000000000000060      0x140 aaa.o
  .pdr           0x00000000000001a0      0x380 avp.o
@@ -970,11 +970,11 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  .pdr           0x00000000000017a0       0x80 getdevstats.o
  .pdr           0x0000000000001820      0x2e0 xl2tpd.o
  .pdr           0x0000000000001b00        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .pdr           0x0000000000001b00       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .pdr           0x0000000000001b00       0x40 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 .comment        0x0000000000000000       0x30
  *(.comment)
- .comment       0x0000000000000000       0x11 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .comment       0x0000000000000000       0x11 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
                                          0x12 (size before relaxing)
  .comment       0x0000000000000011       0x1f /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
                                          0x20 (size before relaxing)
@@ -992,7 +992,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  .comment       0x0000000000000000       0x20 getdevstats.o
  .comment       0x0000000000000000       0x20 xl2tpd.o
  .comment       0x0000000000000000       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .comment       0x0000000000000000       0x12 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .comment       0x0000000000000000       0x12 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 .debug
  *(.debug)
@@ -1095,7 +1095,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
 
 .mdebug.abi32   0x000000000042e938        0x0
  *(.mdebug.abi32)
- .mdebug.abi32  0x000000000042e938        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .mdebug.abi32  0x000000000042e938        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  .mdebug.abi32  0x000000000042e938        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
  .mdebug.abi32  0x000000000042e938        0x0 aaa.o
  .mdebug.abi32  0x000000000042e938        0x0 avp.o
@@ -1111,7 +1111,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  .mdebug.abi32  0x000000000042e938        0x0 getdevstats.o
  .mdebug.abi32  0x000000000042e938        0x0 xl2tpd.o
  .mdebug.abi32  0x000000000042e938        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .mdebug.abi32  0x000000000042e938        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .mdebug.abi32  0x000000000042e938        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 .mdebug.abiN32
  *(.mdebug.abiN32)

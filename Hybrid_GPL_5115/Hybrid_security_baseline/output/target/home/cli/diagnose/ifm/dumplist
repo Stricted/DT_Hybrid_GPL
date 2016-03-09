@@ -1,9 +1,0 @@
-[settings]
-functionname=hi_ifmsrv_dumplist;
-attributenum=0;
-attributeflag = 1 ;   //0:close 1:open
-
-[parameter]
-
-[help]
-usage: dump                      ; 

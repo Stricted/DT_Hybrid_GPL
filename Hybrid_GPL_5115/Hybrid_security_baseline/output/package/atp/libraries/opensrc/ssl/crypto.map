@@ -1,68 +1,68 @@
 Archive member included because of file (symbol)
 
 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_udivsi3.o)
-                              /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o (__aeabi_uidiv)
+                              /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o (__aeabi_uidiv)
 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_divsi3.o)
-                              /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o (__aeabi_idiv)
+                              /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o (__aeabi_idiv)
 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_dvmd_lnx.o)
                               /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_udivsi3.o) (__div0)
 
 Discarded input sections
 
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
  .note.GNU-stack
                 0x00000000        0x0 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtbeginS.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/aes.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/aes.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/arc4.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/arc4.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/certs.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/certs.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/debug.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/debug.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/dhm.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/dhm.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/havege.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/havege.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md2.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md2.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md4.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md4.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/padlock.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/padlock.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha4.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha4.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/timing.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/timing.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/xtea.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/xtea.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/camellia.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/camellia.o
  .note.GNU-stack
                 0x00000000        0x0 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_udivsi3.o)
  .debug_frame   0x00000000       0x2c /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_udivsi3.o)
@@ -89,7 +89,7 @@ Discarded input sections
  .note.GNU-stack
                 0x00000000        0x0 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtendS.o
  .note.GNU-stack
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
 
 Memory Configuration
 
@@ -98,43 +98,43 @@ Name             Origin             Length             Attributes
 
 Linker script and memory map
 
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
 LOAD /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtbeginS.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/aes.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/arc4.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/certs.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/debug.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/dhm.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/havege.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md2.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md4.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/padlock.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha4.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/timing.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/xtea.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/camellia.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/aes.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/arc4.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/certs.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/debug.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/dhm.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/havege.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md2.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md4.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/padlock.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha4.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/timing.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/xtea.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/camellia.o
 LOAD /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a
 LOAD /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/../../../../arm-hsan-linux-uclibcgnueabi/lib/libgcc_s.so
 START GROUP
 LOAD /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/../../../../arm-hsan-linux-uclibcgnueabi/lib/libgcc_s.so.1
 LOAD /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a
 END GROUP
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/libc.so
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/libc.so
 START GROUP
 LOAD /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/../../../../arm-hsan-linux-uclibcgnueabi/lib/libc.so.0
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/uclibc_nonshared.a
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/uclibc_nonshared.a
 LOAD /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/../../../../arm-hsan-linux-uclibcgnueabi/lib/ld-uClibc.so.0
 END GROUP
 LOAD /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a
@@ -144,7 +144,7 @@ LOAD /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-li
 LOAD /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a
 END GROUP
 LOAD /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtendS.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
+LOAD /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
                 0x000000b4                . = (0x0 + SIZEOF_HEADERS)
 
 .note.gnu.build-id
@@ -152,32 +152,32 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
 
 .hash           0x000000b4      0x6c4
  *(.hash)
- .hash          0x000000b4      0x6c4 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .hash          0x000000b4      0x6c4 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
 
 .gnu.hash
  *(.gnu.hash)
 
 .dynsym         0x00000778      0xea0
  *(.dynsym)
- .dynsym        0x00000778      0xea0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .dynsym        0x00000778      0xea0 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
 
 .dynstr         0x00001618      0xb31
  *(.dynstr)
- .dynstr        0x00001618      0xb31 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .dynstr        0x00001618      0xb31 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
 
 .gnu.version    0x0000214a        0x0
  *(.gnu.version)
- .gnu.version   0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .gnu.version   0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
 
 .gnu.version_d  0x0000214c        0x0
  *(.gnu.version_d)
  .gnu.version_d
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
 
 .gnu.version_r  0x0000214c        0x0
  *(.gnu.version_r)
  .gnu.version_r
-                0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+                0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
 
 .rel.dyn        0x0000214c       0x50
  *(.rel.init)
@@ -186,19 +186,19 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
  *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
  *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
  *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
- .rel.data.rel  0x0000214c        0x8 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .rel.data.rel  0x0000214c        0x8 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
  *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
  *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
  *(.rel.ctors)
  *(.rel.dtors)
  *(.rel.got)
- .rel.got       0x00002154       0x38 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .rel.got       0x00002154       0x38 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
  *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
  *(.rel.iplt)
  .rel.init_array
-                0x0000218c        0x8 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+                0x0000218c        0x8 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
  .rel.fini_array
-                0x00002194        0x8 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+                0x00002194        0x8 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
 
 .rela.dyn
  *(.rela.init)
@@ -216,20 +216,20 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
 
 .rel.plt        0x0000219c      0x508
  *(.rel.plt)
- .rel.plt       0x0000219c      0x508 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .rel.plt       0x0000219c      0x508 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
 
 .rela.plt
  *(.rela.plt)
 
 .init           0x000026a4       0x10
  *(.init)
- .init          0x000026a4        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .init          0x000026a4        0xc /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
                 0x000026a4                _init
- .init          0x000026b0        0x4 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
+ .init          0x000026b0        0x4 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
 
 .plt            0x000026b4      0x7a0
  *(.plt)
- .plt           0x000026b4      0x7a0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .plt           0x000026b4      0x7a0 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
 
 .iplt
  *(.iplt)
@@ -240,7 +240,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
  *(.text.startup .text.startup.*)
  *(.text.hot .text.hot.*)
  *(.text .stub .text.* .gnu.linkonce.t.*)
- .text          0x00002e54       0x3c /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .text          0x00002e54       0x3c /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
                 0x00002e54                _call_via_r0
                 0x00002e58                _call_via_r1
                 0x00002e5c                _call_via_r2
@@ -257,19 +257,19 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
                 0x00002e88                _call_via_sp
                 0x00002e8c                _call_via_lr
  .text          0x00002e90       0xa0 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtbeginS.o
- .text          0x00002f30     0x19ac /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/aes.o
+ .text          0x00002f30     0x19ac /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/aes.o
                 0x00003238                aes_setkey_enc
                 0x00003558                aes_crypt_ecb
                 0x00004564                aes_crypt_cfb128
                 0x00004630                aes_crypt_cbc
                 0x0000474c                aes_setkey_dec
- .text          0x000048dc       0xec /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/arc4.o
+ .text          0x000048dc       0xec /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/arc4.o
                 0x000048dc                arc4_setup
                 0x00004958                arc4_crypt
- .text          0x000049c8      0x34c /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
+ .text          0x000049c8      0x34c /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
                 0x000049c8                base64_encode
                 0x00004b68                base64_decode
- .text          0x00004d14     0x32c4 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
+ .text          0x00004d14     0x32c4 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
                 0x00004d14                mpi_lsb
                 0x00004d6c                mpi_msb
                 0x00004dd0                mpi_size
@@ -307,9 +307,9 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
                 0x00007b84                mpi_write_file
                 0x00007cbc                mpi_read_string
                 0x00007ed8                mpi_read_file
- .text          0x00007fd8        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/certs.o
- .text          0x00007fd8        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/debug.o
- .text          0x00007fd8     0x1164 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
+ .text          0x00007fd8        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/certs.o
+ .text          0x00007fd8        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/debug.o
+ .text          0x00007fd8     0x1164 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
                 0x00008424                des_setkey_enc
                 0x0000842c                des_setkey_dec
                 0x00008598                des_crypt_ecb
@@ -320,13 +320,13 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
                 0x00009094                des3_set3key_enc
                 0x000090cc                des3_set2key_dec
                 0x00009104                des3_set2key_enc
- .text          0x0000913c        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/dhm.o
- .text          0x0000913c     0x1ae8 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/havege.o
+ .text          0x0000913c        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/dhm.o
+ .text          0x0000913c     0x1ae8 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/havege.o
                 0x0000abb8                havege_rand
                 0x0000ac00                havege_init
- .text          0x0000ac24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md2.o
- .text          0x0000ac24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md4.o
- .text          0x0000ac24     0x1104 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
+ .text          0x0000ac24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md2.o
+ .text          0x0000ac24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md4.o
+ .text          0x0000ac24     0x1104 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
                 0x0000ac24                md5_starts
                 0x0000b870                md5_update
                 0x0000b928                md5_hmac_reset
@@ -337,7 +337,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
                 0x0000bba8                md5
                 0x0000bc00                md5_hmac_starts
                 0x0000bcc8                md5_hmac
- .text          0x0000bd28      0x440 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
+ .text          0x0000bd28      0x440 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
                 0x0000bd28                net_close
                 0x0000bd48                net_send
                 0x0000bd9c                net_recv
@@ -347,8 +347,8 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
                 0x0000be9c                net_accept
                 0x0000bf24                net_bind
                 0x0000c0a8                net_connect
- .text          0x0000c168        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/padlock.o
- .text          0x0000c168     0x10f8 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
+ .text          0x0000c168        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/padlock.o
+ .text          0x0000c168     0x10f8 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
                 0x0000c168                rsa_free
                 0x0000c1d4                rsa_init
                 0x0000c200                rsa_private
@@ -360,7 +360,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
                 0x0000cc84                rsa_check_pubkey
                 0x0000cd18                rsa_check_privkey
                 0x0000cfdc                rsa_gen_key
- .text          0x0000d260     0x1cc0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
+ .text          0x0000d260     0x1cc0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
                 0x0000d260                sha1_starts
                 0x0000ea38                sha1_update
                 0x0000eaf0                sha1_hmac_reset
@@ -371,7 +371,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
                 0x0000eda0                sha1
                 0x0000edf8                sha1_hmac_starts
                 0x0000eec0                sha1_hmac
- .text          0x0000ef20     0x343c /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
+ .text          0x0000ef20     0x343c /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
                 0x0000ef20                sha2_starts
                 0x00011dc4                sha2_update
                 0x00011e7c                sha2_hmac_reset
@@ -382,8 +382,8 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
                 0x000121c4                sha2
                 0x00012220                sha2_hmac_starts
                 0x000122f8                sha2_hmac
- .text          0x0001235c        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha4.o
- .text          0x0001235c      0xec0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+ .text          0x0001235c        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha4.o
+ .text          0x0001235c      0xec0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
                 0x0001235c                CRYPTO_new_ex_data
                 0x00012364                SSL_get_version
                 0x00012380                SSL_CTX_set_verify
@@ -398,9 +398,9 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
                 0x00013094                SSL_CTX_free
                 0x000130cc                SSL_CTX_load_verify_locations
                 0x00013114                SSL_accept_web
- .text          0x0001321c      0x9d8 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+ .text          0x0001321c      0x9d8 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
                 0x0001321c                ssl_handshake_server
- .text          0x00013bf4     0x22c8 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+ .text          0x00013bf4     0x22c8 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
                 0x00013bf4                ssl_fetch_input
                 0x00013c4c                ssl_flush_output
                 0x00013ca8                ssl_set_endpoint
@@ -434,12 +434,12 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
                 0x0001572c                ssl_write_change_cipher_spec
                 0x0001575c                ssl_write_certificate
                 0x00015918                ssl_derive_keys
- .text          0x00015ebc      0x198 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/timing.o
+ .text          0x00015ebc      0x198 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/timing.o
                 0x00015ebc                m_sleep
                 0x00015f3c                set_alarm
                 0x00015f88                get_timer
                 0x00015fe0                hardclock
- .text          0x00016054     0x3280 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
+ .text          0x00016054     0x3280 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
                 0x00016500                x509_crl_free
                 0x000165d4                x509_free
                 0x000167a8                x509parse_time_expired
@@ -456,8 +456,8 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
                 0x00018880                x509parse_crlfile
                 0x000188dc                x509parse_crt
                 0x00019278                x509parse_crtfile
- .text          0x000192d4        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/xtea.o
- .text          0x000192d4        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/camellia.o
+ .text          0x000192d4        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/xtea.o
+ .text          0x000192d4        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/camellia.o
  .text          0x000192d4      0x114 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_udivsi3.o)
                 0x000192d4                __udivsi3
                 0x000192d4                __aeabi_uidiv
@@ -469,7 +469,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
  .text          0x0001952c       0x14 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_dvmd_lnx.o)
                 0x0001952c                __div0
  .text          0x00019540        0x0 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtendS.o
- .text          0x00019540        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
+ .text          0x00019540        0x0 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
  *(.gnu.warning)
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
@@ -482,42 +482,42 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
 
 .fini           0x00019540       0x10
  *(.fini)
- .fini          0x00019540        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .fini          0x00019540        0xc /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
                 0x00019540                _fini
- .fini          0x0001954c        0x4 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
+ .fini          0x0001954c        0x4 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
                 0x00019550                PROVIDE (__etext, .)
                 0x00019550                PROVIDE (_etext, .)
                 0x00019550                PROVIDE (etext, .)
 
 .rodata         0x00019550     0x114c
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x00019550       0xc0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
- .rodata        0x00019610      0x2a0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
+ .rodata        0x00019550       0xc0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
+ .rodata        0x00019610      0x2a0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
  .rodata.str1.1
-                0x000198b0        0xa /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
+                0x000198b0        0xa /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
                                   0xb (size before relaxing)
  *fill*         0x000198ba        0x2 00
- .rodata        0x000198bc      0x880 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
- .rodata        0x0001a13c       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
+ .rodata        0x000198bc      0x880 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
+ .rodata        0x0001a13c       0x40 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
  .rodata.str1.1
-                0x0001a17c        0x3 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
+                0x0001a17c        0x3 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
  .rodata.str1.1
-                0x0001a17f        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
- .rodata        0x0001a18b       0x37 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
+                0x0001a17f        0xc /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
+ .rodata        0x0001a18b       0x37 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
  *fill*         0x0001a1c2        0x2 00
- .rodata        0x0001a1c4       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
+ .rodata        0x0001a1c4       0x40 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
  .rodata.str1.1
-                0x00000000        0x3 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
- .rodata        0x0001a204       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
+                0x00000000        0x3 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
+ .rodata        0x0001a204       0x40 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
  .rodata.str1.1
-                0x00000000        0x3 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
+                0x00000000        0x3 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
  .rodata.str1.1
-                0x0001a244       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
- .rodata        0x0001a25c        0x4 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+                0x0001a244       0x18 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+ .rodata        0x0001a25c        0x4 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
  .rodata.str1.1
-                0x0001a260       0xfa /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+                0x0001a260       0xfa /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
  .rodata.str1.1
-                0x0001a35a      0x342 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
+                0x0001a35a      0x342 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
                                 0x351 (size before relaxing)
 
 .rodata1
@@ -533,7 +533,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
 
 .eh_frame_hdr   0x0001a69c        0x0
  *(.eh_frame_hdr)
- .eh_frame_hdr  0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
+ .eh_frame_hdr  0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
 
 .eh_frame       0x0001a69c        0x4
  *(.eh_frame)
@@ -595,58 +595,58 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
 
 .dynamic        0x000226ac       0xc8
  *(.dynamic)
- .dynamic       0x000226ac       0xc8 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .dynamic       0x000226ac       0xc8 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
                 0x000226ac                _DYNAMIC
                 0x00022774                . = DATA_SEGMENT_RELRO_END (., 0x0)
 
 .got            0x00022774      0x2ac
  *(.got.plt)
- .got.plt       0x00022774      0x290 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .got.plt       0x00022774      0x290 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
                 0x00022774                _GLOBAL_OFFSET_TABLE_
  *(.igot.plt)
  *(.got)
- .got           0x00022a04       0x1c /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .got           0x00022a04       0x1c /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
  *(.igot)
 
 .data           0x00022a20       0x20
                 0x00022a20                PROVIDE (__data_start, .)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x00022a20        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .data          0x00022a20        0x0 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
  .data          0x00022a20        0x0 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtbeginS.o
  .data.rel      0x00022a20        0x4 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtbeginS.o
                 0x00022a20                __dso_handle
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/aes.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/arc4.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/certs.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/debug.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/dhm.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/havege.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md2.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md4.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/padlock.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha4.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
- .data          0x00022a24        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
- .data          0x00022a24       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/aes.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/arc4.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/certs.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/debug.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/dhm.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/havege.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md2.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md4.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/padlock.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha4.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+ .data          0x00022a24        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+ .data          0x00022a24       0x18 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
                 0x00022a24                ssl_default_ciphers
- .data          0x00022a3c        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/timing.o
- .data          0x00022a3c        0x4 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
+ .data          0x00022a3c        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/timing.o
+ .data          0x00022a3c        0x4 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
                 0x00022a3c                g_lSSL_CheckExpire
- .data          0x00022a40        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/xtea.o
- .data          0x00022a40        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/camellia.o
+ .data          0x00022a40        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/xtea.o
+ .data          0x00022a40        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/camellia.o
  .data          0x00022a40        0x0 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_udivsi3.o)
  .data          0x00022a40        0x0 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_divsi3.o)
  .data          0x00022a40        0x0 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_dvmd_lnx.o)
  .data          0x00022a40        0x0 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtendS.o
- .data          0x00022a40        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
+ .data          0x00022a40        0x0 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
 
 .data1
  *(.data1)
@@ -657,42 +657,42 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
 
 .bss            0x00022a40     0x224c
  *(.dynbss)
- .dynbss        0x00000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .dynbss        0x00000000        0x0 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x00022a40        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .bss           0x00022a40        0x0 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
  .bss           0x00022a40        0x1 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtbeginS.o
  *fill*         0x00022a41        0x3 00
- .bss           0x00022a44     0x222c /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/aes.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/arc4.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/certs.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/debug.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/dhm.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/havege.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md2.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md4.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/padlock.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
- .bss           0x00024c70        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha4.o
- .bss           0x00024c70        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
- .bss           0x00024c7c        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
- .bss           0x00024c7c        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
- .bss           0x00024c7c       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/timing.o
+ .bss           0x00022a44     0x222c /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/aes.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/arc4.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/certs.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/debug.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/dhm.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/havege.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md2.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md4.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/padlock.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
+ .bss           0x00024c70        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha4.o
+ .bss           0x00024c70        0xc /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+ .bss           0x00024c7c        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+ .bss           0x00024c7c        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+ .bss           0x00024c7c       0x10 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/timing.o
                 0x00024c88                alarmed
- .bss           0x00024c8c        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
- .bss           0x00024c8c        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/xtea.o
- .bss           0x00024c8c        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/camellia.o
+ .bss           0x00024c8c        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
+ .bss           0x00024c8c        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/xtea.o
+ .bss           0x00024c8c        0x0 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/camellia.o
  .bss           0x00024c8c        0x0 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_udivsi3.o)
  .bss           0x00024c8c        0x0 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_divsi3.o)
  .bss           0x00024c8c        0x0 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_dvmd_lnx.o)
  .bss           0x00024c8c        0x0 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtendS.o
- .bss           0x00024c8c        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
+ .bss           0x00024c8c        0x0 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
  *(COMMON)
                 0x00024c8c                . = ALIGN ((. != 0x0)?0x4:0x1)
                 0x00024c8c                _bss_end__ = .
@@ -724,94 +724,94 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
 
 .comment        0x00000000       0x5b
  *(.comment)
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
                                  0x2f (size before relaxing)
  .comment       0x0000002e       0x2d /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtbeginS.o
                                  0x2e (size before relaxing)
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/aes.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/arc4.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/certs.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/debug.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/dhm.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/havege.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md2.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md4.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/padlock.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha4.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/timing.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/xtea.o
- .comment       0x00000000       0x2e /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/camellia.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/aes.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/arc4.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/certs.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/debug.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/dhm.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/havege.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md2.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md4.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/padlock.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha4.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/timing.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/xtea.o
+ .comment       0x00000000       0x2e /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/camellia.o
  .comment       0x00000000       0x2e /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtendS.o
- .comment       0x00000000       0x2f /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
+ .comment       0x00000000       0x2f /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
 
 .ARM.attributes
                 0x00000000       0x2d
  .ARM.attributes
-                0x00000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
+                0x00000000       0x18 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crti.o
  .ARM.attributes
                 0x00000018       0x32 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtbeginS.o
  .ARM.attributes
-                0x0000004a       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/aes.o
+                0x0000004a       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/aes.o
  .ARM.attributes
-                0x0000007c       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/arc4.o
+                0x0000007c       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/arc4.o
  .ARM.attributes
-                0x000000ae       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
+                0x000000ae       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/base64.o
  .ARM.attributes
-                0x000000e0       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
+                0x000000e0       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/bignum.o
  .ARM.attributes
-                0x00000112       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/certs.o
+                0x00000112       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/certs.o
  .ARM.attributes
-                0x00000144       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/debug.o
+                0x00000144       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/debug.o
  .ARM.attributes
-                0x00000176       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
+                0x00000176       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/des.o
  .ARM.attributes
-                0x000001a8       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/dhm.o
+                0x000001a8       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/dhm.o
  .ARM.attributes
-                0x000001da       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/havege.o
+                0x000001da       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/havege.o
  .ARM.attributes
-                0x0000020c       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md2.o
+                0x0000020c       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md2.o
  .ARM.attributes
-                0x0000023e       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md4.o
+                0x0000023e       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md4.o
  .ARM.attributes
-                0x00000270       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
+                0x00000270       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/md5.o
  .ARM.attributes
-                0x000002a2       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
+                0x000002a2       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/net.o
  .ARM.attributes
-                0x000002d4       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/padlock.o
+                0x000002d4       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/padlock.o
  .ARM.attributes
-                0x00000306       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
+                0x00000306       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/rsa.o
  .ARM.attributes
-                0x00000338       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
+                0x00000338       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha1.o
  .ARM.attributes
-                0x0000036a       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
+                0x0000036a       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha2.o
  .ARM.attributes
-                0x0000039c       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha4.o
+                0x0000039c       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/sha4.o
  .ARM.attributes
-                0x000003ce       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+                0x000003ce       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
  .ARM.attributes
-                0x00000400       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+                0x00000400       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
  .ARM.attributes
-                0x00000432       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+                0x00000432       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
  .ARM.attributes
-                0x00000464       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/timing.o
+                0x00000464       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/timing.o
  .ARM.attributes
-                0x00000496       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
+                0x00000496       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/x509parse.o
  .ARM.attributes
-                0x000004c8       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/xtea.o
+                0x000004c8       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/xtea.o
  .ARM.attributes
-                0x000004fa       0x32 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/camellia.o
+                0x000004fa       0x32 /usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/camellia.o
  .ARM.attributes
                 0x0000052c       0x18 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/libgcc.a(_udivsi3.o)
  .ARM.attributes
@@ -821,7 +821,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
  .ARM.attributes
                 0x00000574       0x32 /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/crtendS.o
  .ARM.attributes
-                0x000005a6       0x16 /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
+                0x000005a6       0x16 /usr1/xuhui/Hybrid_security_baseline/output/host/usr/arm-unknown-linux-uclibcgnueabi/sysroot/usr/lib/crtn.o
 
 .debug
  *(.debug)
@@ -890,4 +890,4 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/u
  *(.note.GNU-stack)
  *(.gnu_debuglink)
  *(.gnu.lto_*)
-OUTPUT(/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/libcrypto.so elf32-littlearm)
+OUTPUT(/usr1/xuhui/Hybrid_security_baseline/output/package/atp/libraries/opensrc/ssl/libcrypto.so elf32-littlearm)

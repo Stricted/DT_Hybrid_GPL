@@ -1,1 +1,0 @@
-vpath="api/settings/ddns-status"E5element="ddns-status"

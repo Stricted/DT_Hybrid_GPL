@@ -191,7 +191,7 @@ unsigned int DtQosFonAtmImqEnqueue(unsigned uMark, struct sk_buff *pNBuffSkb, pN
             spin_unlock_bh(pxtmlock_tx);
             ret = imq_nf_queue(skb);
             spin_lock_bh(pxtmlock_tx);
-            if (1 != ret)
+            if (0 == ret)
             {
                 return 1;
             }
@@ -201,7 +201,7 @@ unsigned int DtQosFonAtmImqEnqueue(unsigned uMark, struct sk_buff *pNBuffSkb, pN
                 spin_unlock_bh(pxtmlock_tx);
                 ret = imq_nf_queue(skb);
                 spin_lock_bh(pxtmlock_tx);
-                if (1 != ret)
+                if (0 == ret)
                 {
                     return 1;
                 }                   

@@ -1,9 +1,0 @@
-[settings]
-functionname = hi_kernel_voip_display_chipstat;
-attributenum = 0;
-attributeflag = 1 ;
-
-[parameter]
-
-[help]
-usage: chipstat                     ; 

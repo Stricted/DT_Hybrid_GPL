@@ -72,9 +72,6 @@ static const char *Soap_Invalid_Action = "Invalid Action";
 static const char *Soap_Action_Failed = "Action Failed";
 static const char *Soap_Invalid_Var = "Invalid Var";
 
-const char *ContentTypeHeader =
-    "CONTENT-TYPE: text/xml; charset=\"utf-8\"\r\n";
-
 /*!
  * \brief This function retrives the name of the SOAP action.
  *
@@ -805,11 +802,10 @@ static void handle_invoke_action(
 				   action.ServiceID,
 				   &soap_event_callback, &cookie);
 
-	if (err_code != UPNP_E_SUCCESS)
-	{
-    	err_code = SOAP_INVALID_ACTION;
-	    goto error_handler;
-    }
+	if (err_code != UPNP_E_SUCCESS) {
+		err_code = SOAP_INVALID_ACTION;
+		goto error_handler;
+	}
 	namecopy(action.ActionName, action_name.buf);
 	linecopy(action.ErrStr, "");
 	action.ActionRequest = resp_node;

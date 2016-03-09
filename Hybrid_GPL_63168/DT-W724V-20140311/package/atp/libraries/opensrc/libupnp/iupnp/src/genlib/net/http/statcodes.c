@@ -2,6 +2,7 @@
  *
  * Copyright (c) 2000-2003 Intel Corporation
  * All rights reserved.
+ * Copyright (c) 2012 France Telecom All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -128,7 +129,7 @@ init_table( IN const char *encoded_str,
 
     for( i = 0; i < tbl_size; i++ ) {
         table[i] = s;
-        s += strlen( s ) + 1;   /* next entry */
+        s += strlen( s ) + (size_t)1;   /* next entry */
     }
 }
 

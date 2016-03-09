@@ -1,1 +1,0 @@
-#define CONFIG_ATP_FTP 1

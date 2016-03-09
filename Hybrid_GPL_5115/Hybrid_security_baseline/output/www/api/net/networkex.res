@@ -1,1 +1,0 @@
-vpath="api/modem_1/syscfgex"E5element="NetworkMode|NetworkBand|LTEBand"

@@ -1,1 +1,0 @@
-vpath="InternetGatewayDevice.Services.X_UPnP"E5element="UpnpStatus"ATPelement="Enable"

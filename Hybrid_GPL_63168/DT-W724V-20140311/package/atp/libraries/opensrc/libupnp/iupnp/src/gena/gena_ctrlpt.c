@@ -810,7 +810,9 @@ void gena_process_notification_event(
 
 	/* fill event struct */
 	tmpSID = UpnpClientSubscription_get_SID(subscription);
-	UPNP_STRNCPY(event_struct.Sid, UpnpString_get_String(tmpSID), sizeof(Upnp_SID));
+	memset(event_struct.Sid, 0, sizeof(event_struct.Sid));
+	strncpy(event_struct.Sid, UpnpString_get_String(tmpSID),
+		sizeof(event_struct.Sid) - 1);
 	event_struct.EventKey = eventKey;
 	event_struct.ChangedVariables = ChangedVars;
 

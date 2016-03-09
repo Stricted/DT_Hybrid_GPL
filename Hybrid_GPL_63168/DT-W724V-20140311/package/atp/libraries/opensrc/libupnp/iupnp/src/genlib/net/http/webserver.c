@@ -2,6 +2,7 @@
  *
  * Copyright (c) 2000-2003 Intel Corporation 
  * All rights reserved. 
+ * Copyright (c) 2012 France Telecom All rights reserved. 
  *
  * Redistribution and use in source and binary forms, with or without 
  * modification, are permitted provided that the following conditions are met: 
@@ -63,6 +64,10 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 
+#ifdef WIN32
+	 #define snprintf _snprintf
+#endif
+
 #include "avformat.h"
 
 #define WRITEFILE_DATA_BUFFER (256*1024)
@@ -88,7 +93,8 @@ struct document_type_t {
 };
 
 struct xml_alias_t {
-       struct  xml_alias_t* pnext;
+	/*! . */
+	struct xml_alias_t *pnext;
 	/*! name of DOC from root; e.g.: /foo/bar/mydesc.xml */
 	membuffer name;
 	/*! the XML document contents */
@@ -216,7 +222,7 @@ static struct document_type_t gMediaTypeList[NUM_MEDIA_TYPES];
 membuffer gDocumentRootDir;
 
 /*! XML document. */
-static struct xml_alias_t* gAliasDoc = NULL;
+static struct xml_alias_t *gAliasDoc = NULL;
 static ithread_mutex_t gWebMutex;
 extern int Http_Header_Num;
 extern str_int_entry Http_Header_Names[];
@@ -364,8 +370,8 @@ static UPNP_INLINE void alias_release(
 		ithread_mutex_unlock(&gWebMutex);
 		return;
 	}
-        assert(*alias->ct > 0);
-        *alias->ct -= 1;
+	assert(*alias->ct > 0);
+	*alias->ct -= 1;
 	if (*alias->ct <= 0) {
 		membuffer_destroy(&alias->doc);
 		membuffer_destroy(&alias->name);
@@ -374,40 +380,28 @@ static UPNP_INLINE void alias_release(
 	ithread_mutex_unlock(&gWebMutex);
 }
 
-
 /*!
  * \brief Initialize the global XML document. Allocate buffers for the XML
  * document.
  */
 static UPNP_INLINE void glob_alias_init(void)
 {
-/*	struct xml_alias_t *alias = &gAliasDoc;
-
-	membuffer_init(&alias->doc);
-	membuffer_init(&alias->name);
-	alias->ct = NULL;
-	alias->last_modified = 0;
-*/
     ithread_mutex_lock(&gWebMutex);
     struct xml_alias_t* temp = gAliasDoc, *pnext;
-    while( temp ){
+    while (temp) {
         pnext = temp->pnext;
-       // alias_release( temp );
-       (*temp->ct)--;
-       if( *temp->ct == 0 )
-       {
+        (*temp->ct)--;
+        if (*temp->ct == 0) {
             membuffer_destroy(&temp->doc);
             membuffer_destroy(&temp->name);
-	     free(temp->ct);
+	        free(temp->ct);
         }
-       free(temp);
-       temp = pnext;
+        free(temp);
+        temp = pnext;
     }
     gAliasDoc = NULL;
     ithread_mutex_unlock(&gWebMutex);
 }
-
-
 
 /*!
  * \brief Copy the contents of the global XML document into the local output
@@ -415,7 +409,7 @@ static UPNP_INLINE void glob_alias_init(void)
  */
 static void alias_grab(
 	/*! [out] XML alias object. */
-	struct xml_alias_t *alias, struct xml_alias_t* aliasRc )
+	struct xml_alias_t *alias, struct xml_alias_t *aliasRc)
 {
 	ithread_mutex_lock(&gWebMutex);
 	assert(is_valid_alias(aliasRc));
@@ -429,7 +423,7 @@ static struct xml_alias_t* find_alias_fromlist( const char* alias_name )
     ithread_mutex_lock(&gWebMutex);
     struct xml_alias_t* temp = gAliasDoc;
     while( temp ){
-        if (strcmp( alias_name, temp->name.buf ) == 0 ){
+        if (strcmp( alias_name, temp->name.buf ) == 0) {
             	ithread_mutex_unlock(&gWebMutex);
             return temp;
         }
@@ -439,27 +433,27 @@ static struct xml_alias_t* find_alias_fromlist( const char* alias_name )
     return NULL;
 }
 
-static void set_alias_tolist( struct xml_alias_t *alias )
+static void set_alias_tolist(struct xml_alias_t *alias)
 {
     
     struct xml_alias_t* temp = gAliasDoc, *last = NULL;
     ithread_mutex_lock(&gWebMutex);
-    while( temp ){
-        if (strcmp( alias->name.buf, temp->name.buf ) == 0 )
+    while (temp) {
+        if (strcmp( alias->name.buf, temp->name.buf ) == 0)
             break;
         last = temp;
         temp = last->pnext;
     }
-    if (last){
+    if (last) {
         last->pnext = alias;
-    }else{
+    }
+	else {
         gAliasDoc = alias;
     }
-    if (temp){
+    if (temp) {
        alias->pnext = temp->pnext;
        (*temp->ct)--;
-       if (*temp->ct==0)
-       {//可能被其他引用
+       if (*temp->ct==0) {
            membuffer_destroy(&temp->doc);
            membuffer_destroy(&temp->name);
            free(temp->ct);  
@@ -474,22 +468,23 @@ int web_server_set_alias(const char *alias_name,
 	time_t last_modified)
 {
 	int ret_code;
-	struct xml_alias_t* alias;
-       if (alias_name == NULL) {
+	struct xml_alias_t *alias;
+
+	if (alias_name == NULL) {
 		/* don't serve aliased doc anymore */
 		return 0;
 	}
-
-       
 	assert(alias_content != NULL);
-       //创建新的
-       alias = (struct xml_alias_t*)malloc( sizeof( struct xml_alias_t ) );
-       if ( alias == NULL )
-            return UPNP_E_OUTOF_MEMORY;
-       memset( alias, 0, sizeof(struct xml_alias_t ) );
+
+	alias = (struct xml_alias_t*)malloc( sizeof( struct xml_alias_t ) );
+	if (alias == NULL) {
+		return UPNP_E_OUTOF_MEMORY;
+	}
+	memset( alias, 0, sizeof(struct xml_alias_t ) );
 	membuffer_init(&alias->doc);
 	membuffer_init(&alias->name);
 	alias->ct = NULL;
+
 	do {
 		/* insert leading /, if missing */
 		if (*alias_name != '/')
@@ -504,8 +499,8 @@ int web_server_set_alias(const char *alias_name,
 		membuffer_attach(&alias->doc, (char *)alias_content,
 				 alias_content_length);
 		alias->last_modified = last_modified;
-              set_alias_tolist( alias );
-		/* save in module var */
+		set_alias_tolist(alias);
+
 		return 0;
 	} while (FALSE);
 	/* error handler */
@@ -548,21 +543,10 @@ int web_server_init()
 
 void web_server_destroy(void)
 {
-	int ret;
-
 	if (bWebServerState == WEB_SERVER_ENABLED) {
 		membuffer_destroy(&gDocumentRootDir);
-	//	alias_release(&gAliasDoc);
-
-    /*		ithread_mutex_lock(&gWebMutex);
-		memset(&gAliasDoc, 0, sizeof(struct xml_alias_t));
-		ithread_mutex_unlock(&gWebMutex);
-
-		ret = ithread_mutex_destroy(&gWebMutex);
-		assert(ret == 0);
-	*/
-	    glob_alias_init();
-	    bWebServerState = WEB_SERVER_DISABLED;
+		glob_alias_init();
+		bWebServerState = WEB_SERVER_DISABLED;
 	}
 }
 
@@ -684,9 +668,9 @@ static int isFileInVirtualDir(
 			} else {
 				if (strncmp(pCurVirtualDir->dirName, filePath,
 						webDirLen) == 0 &&
-				    (filePath[webDirLen] == '/' ||
-				     filePath[webDirLen] == '\0' ||
-				     filePath[webDirLen] == '?'))
+					(filePath[webDirLen] == '/' ||
+					 filePath[webDirLen] == '\0' ||
+					 filePath[webDirLen] == '?'))
 					return !0;
 			}
 		}
@@ -788,20 +772,21 @@ static int GetNextRange(
 	/*! gets the last byte of the token. */
 	off_t *LastByte)
 {
-    char *Tok;
-    int64_t F = -1;
-    int64_t L = -1;
+	char *Ptr;
+	char *Tok;
+	int64_t F = -1;
+	int64_t L = -1;
 
 	if (*SrcRangeStr == NULL)
 		return -1;
 	Tok = StrTok(SrcRangeStr, ",");
-	if (strstr(Tok, "-") == NULL)
+	if ((Ptr = strstr(Tok, "-")) == NULL)
 		return -1;
 
-    sscanf( Tok, "%"SCNd64"-%"SCNd64, &F, &L );
+	sscanf( Tok, "%"SCNd64"-%"SCNd64, &F, &L );
 
-    *FirstByte = (off_t)F;
-    *LastByte = (off_t)L;
+	*FirstByte = (off_t)F;
+	*LastByte = (off_t)L;
 
     return 1;
 }
@@ -1299,11 +1284,14 @@ static int CheckOtherHTTPHeaders(
 			case HDR_CONTENT_LENGTH:
 				RespInstr->RecvWriteSize = atoi(TmpBuf);
 				break;
-                case HDR_RANGE:
-                    RetCode = CreateHTTPRangeResponseHeader( TmpBuf,
-                                                                   finfo->file_length,
-                                                                   RespInstr ); 
-                    break;
+			case HDR_RANGE:
+				RetCode = CreateHTTPRangeResponseHeader( TmpBuf,
+					finfo->file_length, RespInstr);
+				if (RetCode != HTTP_OK) {
+					free(TmpBuf);
+					return RetCode;
+				}
+					break;
 			case HDR_ACCEPT_LANGUAGE:
 				if (header->value.length + 1 > sizeof(RespInstr->AcceptLanguageHeader)) {
 					size_t length = sizeof(RespInstr->AcceptLanguageHeader) - 1;
@@ -1464,6 +1452,7 @@ static int process_request(
 	       req->method == HTTPMETHOD_POST ||
 	       req->method == HTTPMETHOD_SIMPLEGET);
 	/* init */
+	memset(&finfo, 0, sizeof(finfo));
 	request_doc = NULL;
 	finfo.content_type = NULL;
 	alias_grabbed = FALSE;
@@ -1813,9 +1802,9 @@ static int http_RecvPostMessage(
 	int ok_on_close = FALSE;
 	size_t entity_offset = 0;
 	int num_read = 0;
-	int ret_code = HTTP_OK;
-	size_t lastSize;
-
+	int ret_code = 0;
+    size_t lastSize;
+       
 	if (Instr && Instr->IsVirtualFile) {
 		Fp = (virtualDirCallback.open) (filename, UPNP_WRITE);
 		if (Fp == NULL)
@@ -1826,10 +1815,18 @@ static int http_RecvPostMessage(
 			return HTTP_UNAUTHORIZED;
 	}
 	parser->position = POS_ENTITY;
-	Buf = malloc(WRITEFILE_DATA_BUFFER);
-	if (NULL == Buf) {
-		ret_code = HTTP_INTERNAL_SERVER_ERROR;
-		goto ExitFunction;
+    Buf = malloc(WRITEFILE_DATA_BUFFER);
+	if (NULL == Buf)
+	{
+		 if (Instr->IsVirtualFile) 
+    	{
+    		virtualDirCallback.close(Fp);
+    	} 
+    	else
+    	{
+    		fclose(Fp);
+    	}
+		return HTTP_INTERNAL_SERVER_ERROR;
 	}
 	do {
 		Data_Buf_Size = WRITEFILE_DATA_BUFFER;

@@ -222,8 +222,7 @@ void UpnpPrintf(
 #endif
 	;
 #else /* DEBUG */
-#define UpnpPrintf(DLevel,Module,DbgFileName,DbgLineNo,FmtStr, args...) 
-/*static UPNP_INLINE void UpnpPrintf(Upnp_LogLevel DLevel, Dbg_Module Module,
+static UPNP_INLINE void UpnpPrintf(Upnp_LogLevel DLevel, Dbg_Module Module,
 	const char *DbgFileName, int DbgLineNo, const char *FmtStr, ...)
 {
 	return;
@@ -232,7 +231,7 @@ void UpnpPrintf(
 	DbgFileName = DbgFileName;
 	DbgLineNo = DbgLineNo;
 	FmtStr = FmtStr;
-}*/
+}
 #endif /* DEBUG */
 
 /*!

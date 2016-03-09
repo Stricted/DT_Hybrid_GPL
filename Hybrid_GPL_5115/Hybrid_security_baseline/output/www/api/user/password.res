@@ -1,1 +1,0 @@
-vpath="api/modem_1/modifypwd"E5element="Username|CurrentPassword|NewPassword"

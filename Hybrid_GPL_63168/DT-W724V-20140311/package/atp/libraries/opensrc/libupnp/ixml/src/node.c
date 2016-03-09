@@ -2,6 +2,7 @@
  *
  * Copyright (c) 2000-2003 Intel Corporation 
  * All rights reserved. 
+ * Copyright (c) 2012 France Telecom All rights reserved. 
  *
  * Redistribution and use in source and binary forms, with or without 
  * modification, are permitted provided that the following conditions are met: 
@@ -90,9 +91,13 @@ static void ixmlNode_freeSingleNode(
 		if (nodeptr->localName != NULL) {
 			free(nodeptr->localName);
 		}
-		if (nodeptr->nodeType == eELEMENT_NODE) {
+		switch (nodeptr->nodeType ) {
+		case eELEMENT_NODE:
 			element = (IXML_Element *)nodeptr;
 			free(element->tagName);
+			break;
+		default:
+			break;
 		}
 		free(nodeptr);
 	}
@@ -280,7 +285,7 @@ unsigned short ixmlNode_getNodeType(IXML_Node *nodeptr)
 	if (nodeptr != NULL) {
 		return nodeptr->nodeType;
 	} else {
-		return eINVALID_NODE;
+		return (unsigned short)eINVALID_NODE;
 	}
 }
 
@@ -397,7 +402,8 @@ static BOOL ixmlNode_isParent(
 
 	assert(nodeptr != NULL && toFind != NULL);
 
-	found = toFind->parentNode == nodeptr;
+	if (nodeptr != NULL && toFind != NULL)
+		found = toFind->parentNode == nodeptr;
 
 	return found;
 }
@@ -422,17 +428,22 @@ static BOOL ixmlNode_allowChildren(
 	case eTEXT_NODE:
 	case eCDATA_SECTION_NODE:
 		return FALSE;
-		break;
 
 	case eELEMENT_NODE:
-		if (newChild->nodeType == eATTRIBUTE_NODE ||
-		    newChild->nodeType == eDOCUMENT_NODE) {
+		switch (newChild->nodeType) {
+		case eATTRIBUTE_NODE:
+		case eDOCUMENT_NODE:
 			return FALSE;
+		default:
+			break;
 		}
 	break;
 
 	case eDOCUMENT_NODE:
-		if (newChild->nodeType != eELEMENT_NODE) {
+		switch (newChild->nodeType) {
+		case eELEMENT_NODE:
+			break;
+		default:
 			return FALSE;
 		}
 
@@ -644,6 +655,7 @@ static IXML_Node *ixmlNode_cloneTextNode(
 	IXML_Node *nodeptr)
 {
 	IXML_Node *newNode = NULL;
+	int rc;
 
 	assert(nodeptr != NULL);
 
@@ -652,8 +664,16 @@ static IXML_Node *ixmlNode_cloneTextNode(
 		return NULL;
 	} else {
 		ixmlNode_init(newNode);
-		ixmlNode_setNodeName(newNode, nodeptr->nodeName);
-		ixmlNode_setNodeValue(newNode, nodeptr->nodeValue);
+		rc = ixmlNode_setNodeName(newNode, nodeptr->nodeName);
+		if (rc != IXML_SUCCESS) {
+			ixmlNode_free(newNode);
+			return NULL;
+		}
+		rc = ixmlNode_setNodeValue(newNode, nodeptr->nodeValue);
+		if (rc != IXML_SUCCESS) {
+			ixmlNode_free(newNode);
+			return NULL;
+		}
 		newNode->nodeType = eTEXT_NODE;
 	}
 
@@ -672,15 +692,24 @@ static IXML_CDATASection *ixmlNode_cloneCDATASect(
 	IXML_CDATASection *newCDATA = NULL;
 	IXML_Node *newNode;
 	IXML_Node *srcNode;
+	int rc;
 
 	assert(nodeptr != NULL);
 	newCDATA = (IXML_CDATASection *)malloc(sizeof (IXML_CDATASection));
 	if (newCDATA != NULL) {
 		newNode = (IXML_Node *)newCDATA;
-		ixmlNode_init(newNode);
+		ixmlCDATASection_init(newCDATA);
 		srcNode = (IXML_Node *)nodeptr;
-		ixmlNode_setNodeName(newNode, srcNode->nodeName);
-		ixmlNode_setNodeValue(newNode, srcNode->nodeValue);
+		rc = ixmlNode_setNodeName(newNode, srcNode->nodeName);
+		if (rc != IXML_SUCCESS) {
+			ixmlCDATASection_free(newCDATA);
+			return NULL;
+		}
+		rc = ixmlNode_setNodeValue(newNode, srcNode->nodeValue);
+		if (rc != IXML_SUCCESS) {
+			ixmlCDATASection_free(newCDATA);
+			return NULL;
+		}
 		newNode->nodeType = eCDATA_SECTION_NODE;
 	}
 
@@ -755,42 +784,32 @@ static IXML_Element *ixmlNode_cloneElement(
 
 
 /*!
- * \brief Returns a clone of a document node.
+ * \brief Returns a new document node.
  *
  * Currently, the IXML_Document struct is just a node, so this function
- * just mallocs the IXML_Document, sets the node type and name. Curiously,
- * the parameter nodeptr is not actually used.
+ * just mallocs the IXML_Document, sets the node type and name.
  *
- * \return A clone of a document node.
+ * \return A new document node.
  */
-static IXML_Document *ixmlNode_cloneDoc(
-	/*! [in] The \b Node to clone. */
-	IXML_Document *nodeptr)
+static IXML_Document *ixmlNode_newDoc(void)
 {
 	IXML_Document *newDoc;
 	IXML_Node *docNode;
 	int rc;
 
-	assert(nodeptr != NULL);
-
 	newDoc = (IXML_Document *)malloc(sizeof (IXML_Document));
-	if (newDoc == NULL) {
+	if (!newDoc)
 		return NULL;
-	}
-
 	ixmlDocument_init(newDoc);
 	docNode = (IXML_Node *)newDoc;
-
 	rc = ixmlNode_setNodeName(docNode, DOCUMENTNODENAME);
 	if (rc != IXML_SUCCESS) {
 		ixmlDocument_free(newDoc);
 		return NULL;
 	}
-
 	newDoc->n.nodeType = eDOCUMENT_NODE;
 
 	return newDoc;
-	nodeptr = nodeptr;
 }
 
 /*!
@@ -915,6 +934,8 @@ static IXML_Node *ixmlNode_cloneNodeTreeRecursive(
 		switch (nodeptr->nodeType) {
 		case eELEMENT_NODE:
 			newElement = ixmlNode_cloneElement((IXML_Element *)nodeptr);
+			if (newElement == NULL)
+				return NULL;
 			newElement->n.firstAttr = ixmlNode_cloneNodeTreeRecursive(
 				nodeptr->firstAttr, deep);
 			if (deep) {
@@ -935,6 +956,8 @@ static IXML_Node *ixmlNode_cloneNodeTreeRecursive(
 
 		case eATTRIBUTE_NODE:
 			newAttr = ixmlNode_cloneAttr((IXML_Attr *)nodeptr);
+			if (newAttr == NULL)
+				return NULL;
 			nextSib = ixmlNode_cloneNodeTreeRecursive(nodeptr->nextSibling, deep);
 			newAttr->n.nextSibling = nextSib;
 			if (nextSib != NULL) {
@@ -953,7 +976,9 @@ static IXML_Node *ixmlNode_cloneNodeTreeRecursive(
 			break;
 
 		case eDOCUMENT_NODE:
-			newDoc = ixmlNode_cloneDoc((IXML_Document *)nodeptr);
+			newDoc = ixmlNode_newDoc();
+			if (newDoc == NULL)
+				return NULL;
 			newNode = (IXML_Node *)newDoc;
 			if (deep) {
 				newNode->firstChild = ixmlNode_cloneNodeTreeRecursive(
@@ -1114,7 +1139,8 @@ IXML_NamedNodeMap *ixmlNode_getAttributes(IXML_Node *nodeptr)
 		return NULL;
 	}
 
-	if(nodeptr->nodeType == eELEMENT_NODE) {
+	switch(nodeptr->nodeType) {
+	case eELEMENT_NODE:
 		returnNamedNodeMap = (IXML_NamedNodeMap *)malloc(sizeof(IXML_NamedNodeMap));
 		if(returnNamedNodeMap == NULL) {
 			return NULL;
@@ -1132,7 +1158,7 @@ IXML_NamedNodeMap *ixmlNode_getAttributes(IXML_Node *nodeptr)
 			tempNode = tempNode->nextSibling;
 		}
 		return returnNamedNodeMap;
-	} else {
+	default:
 		/* if not an ELEMENT_NODE */
 		return NULL;
 	}
@@ -1152,8 +1178,13 @@ BOOL ixmlNode_hasChildNodes(IXML_Node *nodeptr)
 BOOL ixmlNode_hasAttributes(IXML_Node *nodeptr)
 {
 	if (nodeptr != NULL) {
-		if (nodeptr->nodeType == eELEMENT_NODE && nodeptr->firstAttr != NULL) {
-			return TRUE;
+		switch (nodeptr->nodeType) {
+		case eELEMENT_NODE:
+			if (nodeptr->firstAttr != NULL)
+				return TRUE;
+			break;
+		default:
+			break;
 		}
 	}
 

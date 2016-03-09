@@ -1,1 +1,0 @@
-vpath="api/modem_1/connection"E5element="ConnectionDevice|setDefaultProfile|setDefaultETH|RoamAutoConnectEnable"

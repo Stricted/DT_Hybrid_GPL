@@ -1,1 +1,0 @@
-vpath="InternetGatewayDevice.LANDevice.1.LANHostConfigManagement.X_SLAAC"E5element="SlaacSwitch|ConfigureMode|Prefix|PrefixLength|PreferredLifeTime|ValidLifeTime"ATPelement="RouterAdvertisementEnable|UseAllocatedWAN|Prefix|PrefixLength|Preferredlifetime|Validlifetime"

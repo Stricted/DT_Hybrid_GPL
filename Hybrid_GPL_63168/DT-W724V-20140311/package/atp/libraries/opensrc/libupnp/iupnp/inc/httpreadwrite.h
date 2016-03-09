@@ -45,7 +45,13 @@
 #define HTTP_DEFAULT_TIMEOUT	30
 
 #ifdef __cplusplus
-#extern "C" {
+extern "C" {
+#endif
+
+#ifdef WIN32
+struct tm *http_gmtime_r(const time_t *clock, struct tm *result);
+#else
+#define http_gmtime_r gmtime_r
 #endif
 
 int http_CancelHttpGet(IN void *Handle);

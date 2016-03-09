@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<config>
-	<dhcps>
-		<ipaddress>192.168.1.1</ipaddress>
-	</dhcps>
-	<landns>
-		<hgwurl>setup.com</hgwurl>
-	</landns>
-</config>

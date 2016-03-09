@@ -1,1 +1,0 @@
-cmd_drivers/usb/host/built-in.o :=  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/bin/mips-unknown-linux-uclibc-ld  -m elf32btsmip   -r -o drivers/usb/host/built-in.o drivers/usb/host/pci-quirks.o drivers/usb/host/ehci-hcd.o drivers/usb/host/ohci-hcd.o 

@@ -1,1 +1,0 @@
-vpath="InternetGatewayDevice.ManagementServer"E5element="STUNEnable|STUNServerAddress|STUNServerPort|STUNUsername|STUNPassword|STUNMaximumKeepAlivePeriod|STUNMinimumKeepAlivePeriod"ATPelement="STUNEnable|STUNServerAddress|STUNServerPort|STUNUsername|STUNPassword|STUNMaximumKeepAlivePeriod|STUNMinimumKeepAlivePeriod"

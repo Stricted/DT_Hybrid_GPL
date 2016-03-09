@@ -47,14 +47,14 @@ srcdir = .
 LD = /usr/bin/ld
 CC = /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/bin/mips-unknown-linux-uclibc-gcc
 AR = /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/bin/mips-unknown-linux-uclibc-ar
-CCOPT = -O2 -fpic -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include
+CCOPT = -O2 -fpic -I/usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include
 INCLS = -I. 
 DEFS = -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))"
 ADDLOBJS = 
 ADDLARCHIVEOBJS = 
 LIBS = 
-CFLAGS = -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include
-LDFLAGS = -L/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/staging/lib
+CFLAGS = -I/usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include
+LDFLAGS = -L/usr1/xuhui/DT-W724V-20140311/output/staging/lib
 DYEXT = so
 V_RPATH_OPT = -Wl,-rpath,
 PROG=libpcap

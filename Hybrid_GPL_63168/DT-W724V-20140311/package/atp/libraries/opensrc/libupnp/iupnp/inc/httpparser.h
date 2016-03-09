@@ -222,7 +222,7 @@ typedef struct {
 	parser_pos_t position;
 	int ent_position;
 	unsigned int content_length;
-	int chunk_size;
+	size_t chunk_size;
        /*! offset in the the raw message buffer, which contains the message body.
         *  preceding this are the headers of the messsage. */
 	size_t entity_start_position;
@@ -434,7 +434,7 @@ parse_status_t parser_append( INOUT http_parser_t* parser,
 *   PARSE_NO_MATCH -- failure to match pattern 'fmt'					
 *   PARSE_FAILURE	-- 'str' is bad input							
 ************************************************************************/
-int matchstr( IN char *str, IN size_t slen, IN const char* fmt, ... );
+parse_status_t matchstr( IN char *str, IN size_t slen, IN const char* fmt, ... );
 
 /************************************************************************
 * Function: raw_to_int													

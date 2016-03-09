@@ -1,7 +1,7 @@
 /*
  * Automatically generated C config: don't edit
  * Linux kernel version: 2.6.30
- * Sat Dec 13 11:35:11 2014
+ * Fri Feb 19 12:02:57 2016
  */
 #define AUTOCONF_INCLUDED
 #define CONFIG_FRAME_WARN 1024

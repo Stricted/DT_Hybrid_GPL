@@ -22,7 +22,7 @@ srcdir = .
 top_srcdir = ..
 
 
-prefix = /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/bin
+prefix = /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/bin
 exec_prefix = ${prefix}
 datarootdir = ${prefix}/share
 datadir = ${datarootdir}
@@ -52,12 +52,12 @@ MSGFMT_ = /usr/bin/msgfmt
 MSGFMT_no = /usr/bin/msgfmt
 MSGFMT_yes = /usr/bin/msgfmt
 MSGFMT = $(MSGFMT_$(USE_MSGCTXT))
-XGETTEXT_ = /usr/bin/xgettext
-XGETTEXT_no = /usr/bin/xgettext
-XGETTEXT_yes = /usr/bin/xgettext
+XGETTEXT_ = :
+XGETTEXT_no = :
+XGETTEXT_yes = :
 XGETTEXT = $(XGETTEXT_$(USE_MSGCTXT))
 MSGMERGE = msgmerge
-MSGMERGE_UPDATE = /usr/bin/msgmerge --update
+MSGMERGE_UPDATE = : --update
 MSGINIT = msginit
 MSGCONV = msgconv
 MSGFILTER = msgfilter

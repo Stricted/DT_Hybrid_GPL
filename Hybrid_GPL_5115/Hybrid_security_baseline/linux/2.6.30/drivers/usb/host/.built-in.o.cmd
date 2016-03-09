@@ -1,1 +1,0 @@
-cmd_drivers/usb/host/built-in.o :=  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/bin/arm-hsan-linux-uclibcgnueabi-ld -EL    -r -o drivers/usb/host/built-in.o drivers/usb/host/pci-quirks.o drivers/usb/host/ehci-hcd.o drivers/usb/host/ohci-hcd.o drivers/usb/host/hiusb-sd5115.o 

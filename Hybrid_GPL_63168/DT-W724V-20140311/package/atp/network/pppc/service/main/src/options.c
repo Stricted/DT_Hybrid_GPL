@@ -111,6 +111,7 @@ extern int g_iIpv4Mode;
 
 #endif
 
+#define AUTH_CONFIG_FILE "/var/wan/%s/authconfig"
 
 #ifdef SUPPORT_TD_CARD
 /* BEGIN: Added by y67514, 2009/1/12   PN:ET128*/
@@ -516,6 +517,56 @@ int setdevname_ppp(const char *cp)
 }
 #endif
 
+static int read_authconfig()
+{
+    VOS_CHAR acLine[PATHLENGTH*2] = {0};
+    VOS_CHAR acCmd[PATHLENGTH] = {0}; 
+    VOS_CHAR *p = NULL;    
+    FILE* pFile = NULL;   
+    VOS_CHAR *acUserNamePrefix = "username = ";
+    VOS_CHAR *acPasswdPrefix   = "password = ";
+    
+    snprintf(acCmd, sizeof(acCmd), AUTH_CONFIG_FILE,wanif_name);
+    
+    pFile = fopen(acCmd,"r");
+    if(NULL == pFile)
+    {
+        printf("open %s error",acCmd);
+        return VOS_NOK;
+    }
+
+    while(fgets(acLine,PATHLENGTH*2,pFile)!=NULL)
+    {
+        if(acLine[strlen(acLine)-1] == '\n')
+        {
+            acLine[strlen(acLine)-1] = '\0';//去掉'\n'
+        }        
+
+        p = strstr(acLine,acUserNamePrefix);        
+        if(NULL != p)
+        {
+            snprintf(user,sizeof(user), "%s", p+strlen(acUserNamePrefix));
+            snprintf(our_name, sizeof(our_name), "%s", p+strlen(acUserNamePrefix));
+            continue;
+        }
+
+        p = strstr(acLine,acPasswdPrefix);     
+        if(NULL != p)
+        {
+            snprintf(passwd, sizeof(passwd), "%s", p+strlen(acPasswdPrefix));
+            continue;
+        }
+    }
+    if(debug)
+    {
+        printf("user = \"%s\" len = %d \n",user,strlen(user));
+        printf("passwd = \"%s\" len = %d\n",passwd,strlen(passwd));
+    }
+    
+    fclose(pFile);   
+    unlink(acCmd); 
+    return VOS_OK;    
+}
 int processconfig(const char *cp)
 {
     FILE *fp =NULL;
@@ -554,6 +605,10 @@ int processconfig(const char *cp)
         printf("\nlog_name = %s wanif_name = %s\n",log_name,wanif_name);
     }
     snprintf(path, sizeof(path), "/var/wan/%s/config",wanif_name);
+    if(VOS_OK != read_authconfig())
+    {
+        printf("error reading authconfig!!\n");   
+    }
     if(debug)
     {
         printf("\npath = %s\n",path);
@@ -580,21 +635,8 @@ int processconfig(const char *cp)
         }
         /*end of ATP_Protocol 2007.11.20 for 解决与522nas接口同步问题 by zhuhui 67625 */
         else 
-#endif
-        if(NULL != (p = strstr(cmd,"username = ")))
-        {
-            snprintf(user,sizeof(user), "%s", p+strlen("username = "));
-            snprintf(our_name, sizeof(our_name), "%s", p+strlen("username = "));
-            if(debug)
-                printf("user = \"%s\" len = %d \n",user,strlen(user));
-        }
-        else if(NULL != (p = strstr(cmd,"password = ")))
-        {
-            snprintf(passwd, sizeof(passwd), "%s", p+strlen("password = "));
-            if(debug)
-                printf("passwd = \"%s\" len = %d\n",passwd,strlen(passwd));
-        }
-        else if(NULL != (p = strstr(cmd,"proxy = ")))
+#endif     
+        if(NULL != (p = strstr(cmd,"proxy = ")))
         {
             pppx = atoi(p+strlen("proxy = "));
         }

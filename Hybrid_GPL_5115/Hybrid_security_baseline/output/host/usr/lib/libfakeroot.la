@@ -17,7 +17,7 @@ old_library=''
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/lib -L/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/lib -ldl'
+dependency_libs=' -L/usr1/xuhui/Hybrid_security_baseline/output/host/lib -L/usr1/xuhui/Hybrid_security_baseline/output/host/usr/lib -ldl'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/lib'
+libdir='/usr1/xuhui/Hybrid_security_baseline/output/host/usr/lib'

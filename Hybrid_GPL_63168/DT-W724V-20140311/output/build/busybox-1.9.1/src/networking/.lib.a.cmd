@@ -1,1 +1,0 @@
-cmd_networking/lib.a := rm -f networking/lib.a; /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/bin/mips-unknown-linux-uclibc-ar  rcs networking/lib.a networking/ifconfig.o networking/interface.o networking/netstat.o networking/route.o networking/smuxctl.o networking/tftpd.o networking/traceroute.o networking/vconfig.o networking/zcip.o

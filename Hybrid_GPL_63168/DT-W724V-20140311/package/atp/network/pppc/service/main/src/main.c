@@ -78,6 +78,7 @@
 #include "pppcapi.h"
 
 #define PPP_CURDEVNAME "/var/curpppdevname"
+#define PRIVACY_BTN_PPPC_FLAG_FILE "var/pppc_privacy_btn"
 extern unsigned int ATP_UTIL_GetSysTime(struct timeval* pstTimeVal);
 extern unsigned int ATP_UTIL_VoiceGetSipInterval(void);
 
@@ -2117,6 +2118,16 @@ toggle_debug(sig)
 #endif
     //add by z67625
    //session_disconnect(ses);
+    if (0 == access(PRIVACY_BTN_PPPC_FLAG_FILE, F_OK))
+    {
+        setdialstatus(Discon); 
+        while (phase != PHASE_DEAD)
+        {   
+            handle_events();
+            get_input();
+        }
+        unlink(PRIVACY_BTN_PPPC_FLAG_FILE);
+    }   
     the_channel->disconnect();
     
     /*start of y42304 2008-2-15: 解决问题AU4D00391:*/

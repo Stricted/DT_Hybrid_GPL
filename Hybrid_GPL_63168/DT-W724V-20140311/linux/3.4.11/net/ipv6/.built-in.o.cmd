@@ -1,1 +1,0 @@
-cmd_net/ipv6/built-in.o :=  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/bin/mips-unknown-linux-uclibc-ld  -m elf32btsmip   -r -o net/ipv6/built-in.o net/ipv6/ipv6.o net/ipv6/tunnel6.o net/ipv6/netfilter/built-in.o net/ipv6/sit.o net/ipv6/ip6_tunnel.o net/ipv6/ip6_gre.o net/ipv6/addrconf_core.o net/ipv6/exthdrs_core.o net/ipv6/inet6_hashtables.o 

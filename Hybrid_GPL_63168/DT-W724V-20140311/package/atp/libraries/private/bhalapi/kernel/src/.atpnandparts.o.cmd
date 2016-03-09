@@ -1,8 +1,8 @@
-cmd_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o := /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/bin/mips-unknown-linux-uclibc-gcc -Wp,-MD,/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/.atpnandparts.o.d  -nostdinc -isystem /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include -Iarch/mips/include/generated -Iinclude  -include /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/include/linux/kconfig.h -D__KERNEL__ -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include -Iarch/mips/include/generated -Iinclude -include /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/include/linux/kconfig.h -D"VMLINUX_LOAD_ADDRESS=0x80010000" -D"DATAOFFSET=0" -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/staging/usr/include -O2 -mno-check-zero-division -mabi=32 -G 0 -mno-abicalls -fno-pic -pipe -msoft-float -ffreestanding -march=mips32 -Wa,-mips32 -Wa,--trap -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/mach-bcm963xx -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/../../bcmdrivers/opensource/include/bcm963xx -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/../../shared/opensource/include/bcm963xx -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/mach-generic -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO -I. -I/include -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/include -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/include -I/flash -I -I -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/staging/usr/include    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(atpnandparts)"  -D"KBUILD_MODNAME=KBUILD_STR(atpnandparts)" -c -o /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.c
+cmd_/usr1/xuhui/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o := /usr1/xuhui/DT-W724V-20140311/output/host/usr/bin/mips-unknown-linux-uclibc-gcc -Wp,-MD,/usr1/xuhui/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/.atpnandparts.o.d  -nostdinc -isystem /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include -I/usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include -Iarch/mips/include/generated -Iinclude  -include /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/include/linux/kconfig.h -D__KERNEL__ -I/usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include -Iarch/mips/include/generated -Iinclude -include /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/include/linux/kconfig.h -D"VMLINUX_LOAD_ADDRESS=0x80010000" -D"DATAOFFSET=0" -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -I/usr1/xuhui/DT-W724V-20140311/output/staging/usr/include -O2 -mno-check-zero-division -mabi=32 -G 0 -mno-abicalls -fno-pic -pipe -msoft-float -ffreestanding -march=mips32 -Wa,-mips32 -Wa,--trap -I/usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/mach-bcm963xx -I/usr1/xuhui/DT-W724V-20140311/linux/3.4.11/../../bcmdrivers/opensource/include/bcm963xx -I/usr1/xuhui/DT-W724V-20140311/linux/3.4.11/../../shared/opensource/include/bcm963xx -I/usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/mach-generic -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -fomit-frame-pointer -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO -I. -I/include -I/usr1/xuhui/DT-W724V-20140311/driver/broadcom/bcm963268/4.14L02/include -I/usr1/xuhui/DT-W724V-20140311/linux/3.4.11/include -I/flash -I -I -I/usr1/xuhui/DT-W724V-20140311/output/staging/usr/include    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(atpnandparts)"  -D"KBUILD_MODNAME=KBUILD_STR(atpnandparts)" -c -o /usr1/xuhui/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o /usr1/xuhui/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.c
 
-source_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o := /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.c
+source_/usr1/xuhui/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o := /usr1/xuhui/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.c
 
-deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o := \
+deps_/usr1/xuhui/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o := \
     $(wildcard include/config/html/partition.h) \
     $(wildcard include/config/index.h) \
     $(wildcard include/config/back/index.h) \
@@ -15,10 +15,10 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/librarie
     $(wildcard include/config/64bit.h) \
     $(wildcard include/config/bcm/kf/unaligned/exception.h) \
     $(wildcard include/config/mips/bcm963xx.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/types.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/types.h \
     $(wildcard include/config/64bit/phys/addr.h) \
   include/asm-generic/int-ll64.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/bitsperlong.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/bitsperlong.h \
   include/asm-generic/bitsperlong.h \
   include/linux/posix_types.h \
   include/linux/stddef.h \
@@ -34,13 +34,13 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/librarie
     $(wildcard include/config/optimize/inlining.h) \
     $(wildcard include/config/brcm/bounce.h) \
   include/linux/compiler-gcc4.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/posix_types.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/sgidefs.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/posix_types.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/sgidefs.h \
   include/asm-generic/posix_types.h \
   include/linux/uio.h \
   include/linux/notifier.h \
   include/linux/errno.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/errno.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/errno.h \
   include/asm-generic/errno-base.h \
   include/linux/mutex.h \
     $(wildcard include/config/debug/lock/alloc.h) \
@@ -58,11 +58,11 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/librarie
   include/linux/spinlock_types_raw.h \
     $(wildcard include/config/generic/lockbreak.h) \
     $(wildcard include/config/debug/spinlock.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/spinlock_types.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/byteorder.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/spinlock_types.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/byteorder.h \
   include/linux/byteorder/big_endian.h \
   include/linux/swab.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/swab.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/swab.h \
     $(wildcard include/config/cpu/mipsr2.h) \
   include/linux/byteorder/generic.h \
   include/linux/lockdep.h \
@@ -74,20 +74,20 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/librarie
   include/linux/spinlock_types_nort.h \
   include/linux/rwlock_types.h \
   include/linux/linkage.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/linkage.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/linkage.h \
   include/linux/atomic.h \
     $(wildcard include/config/arch/has/atomic/or.h) \
     $(wildcard include/config/generic/atomic64.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/atomic.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/atomic.h \
   include/linux/irqflags.h \
     $(wildcard include/config/irqsoff/tracer.h) \
     $(wildcard include/config/preempt/tracer.h) \
     $(wildcard include/config/trace/irqflags/support.h) \
   include/linux/typecheck.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/irqflags.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/irqflags.h \
     $(wildcard include/config/mips/mt/smtc.h) \
     $(wildcard include/config/irq/cpu.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/hazards.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/hazards.h \
     $(wildcard include/config/cpu/cavium/octeon.h) \
     $(wildcard include/config/cpu/mipsr1.h) \
     $(wildcard include/config/mips/alchemy.h) \
@@ -97,37 +97,37 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/librarie
     $(wildcard include/config/cpu/r5500.h) \
     $(wildcard include/config/cpu/rm9000.h) \
     $(wildcard include/config/cpu/sb1.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/cpu-features.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/cpu-features.h \
     $(wildcard include/config/32bit.h) \
     $(wildcard include/config/cpu/mipsr2/irq/vi.h) \
     $(wildcard include/config/cpu/mipsr2/irq/ei.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/cpu.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/cpu-info.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/cpu.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/cpu-info.h \
     $(wildcard include/config/mips/mt/smp.h) \
     $(wildcard include/config/bcm/kf/cpu/data/cpuid.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/cache.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/cache.h \
     $(wildcard include/config/mips/l1/cache/shift.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/mach-generic/kmalloc.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/mach-generic/kmalloc.h \
     $(wildcard include/config/dma/coherent.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/mach-bcm963xx/cpu-feature-overrides.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/barrier.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/mach-bcm963xx/cpu-feature-overrides.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/barrier.h \
     $(wildcard include/config/cpu/has/sync.h) \
     $(wildcard include/config/sgi/ip28.h) \
     $(wildcard include/config/cpu/has/wb.h) \
     $(wildcard include/config/weak/ordering.h) \
     $(wildcard include/config/weak/reordering/beyond/llsc.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/addrspace.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/addrspace.h \
     $(wildcard include/config/cpu/r8000.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/mach-generic/spaces.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/mach-generic/spaces.h \
     $(wildcard include/config/dma/noncoherent.h) \
     $(wildcard include/config/bcm/kf/fixaddr/top.h) \
     $(wildcard include/config/bcm968500.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/cmpxchg.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/war.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/cmpxchg.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/war.h \
     $(wildcard include/config/cpu/r4000/workarounds.h) \
     $(wildcard include/config/cpu/r4400/workarounds.h) \
     $(wildcard include/config/cpu/daddi/workarounds.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/mach-bcm963xx/war.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/mach-bcm963xx/war.h \
   include/asm-generic/cmpxchg-local.h \
   include/asm-generic/atomic-long.h \
   include/asm-generic/atomic64.h \
@@ -147,10 +147,10 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/librarie
   include/linux/sysinfo.h \
   /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/include/stdarg.h \
   include/linux/bitops.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/bitops.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/bug.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/bitops.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/bug.h \
     $(wildcard include/config/bug.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/break.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/break.h \
   include/asm-generic/bug.h \
     $(wildcard include/config/generic/bug.h) \
     $(wildcard include/config/generic/bug/relative/pointers.h) \
@@ -162,7 +162,7 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/librarie
   include/asm-generic/bitops/find.h \
     $(wildcard include/config/generic/find/first/bit.h) \
   include/asm-generic/bitops/sched.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/arch_hweight.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/arch_hweight.h \
   include/asm-generic/bitops/arch_hweight.h \
   include/asm-generic/bitops/const_hweight.h \
   include/asm-generic/bitops/le.h \
@@ -178,7 +178,7 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/librarie
     $(wildcard include/config/modules.h) \
     $(wildcard include/config/hotplug.h) \
   include/linux/dynamic_debug.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/div64.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/div64.h \
   include/asm-generic/div64.h \
   include/linux/spinlock.h \
     $(wildcard include/config/preempt.h) \
@@ -188,7 +188,7 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/librarie
     $(wildcard include/config/preempt/notifiers.h) \
   include/linux/thread_info.h \
     $(wildcard include/config/compat.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/thread_info.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/thread_info.h \
     $(wildcard include/config/page/size/4kb.h) \
     $(wildcard include/config/bcm/kf/thread/size/fix.h) \
     $(wildcard include/config/page/size/8kb.h) \
@@ -198,7 +198,7 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/librarie
     $(wildcard include/config/debug/stack/usage.h) \
     $(wildcard include/config/mips32/o32.h) \
     $(wildcard include/config/mips32/n32.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/processor.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/processor.h \
     $(wildcard include/config/cavium/octeon/cvmseg/size.h) \
     $(wildcard include/config/mips/mt/fpaff.h) \
     $(wildcard include/config/cpu/has/prefetch.h) \
@@ -214,17 +214,17 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/librarie
   include/linux/bitmap.h \
   include/linux/string.h \
     $(wildcard include/config/binary/printf.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/string.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/string.h \
     $(wildcard include/config/cpu/r3000.h) \
   include/linux/bug.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/cachectl.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/mipsregs.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/cachectl.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/mipsregs.h \
     $(wildcard include/config/cpu/vr41xx.h) \
     $(wildcard include/config/hugetlb/page.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/prefetch.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/prefetch.h \
   include/linux/stringify.h \
   include/linux/bottom_half.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/spinlock.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/spinlock.h \
   include/linux/rwlock.h \
   include/linux/spinlock_api_smp.h \
     $(wildcard include/config/inline/spin/lock.h) \
@@ -274,7 +274,7 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/librarie
   include/linux/seqlock.h \
   include/linux/completion.h \
   include/linux/wait.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/current.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/current.h \
   include/asm-generic/current.h \
   include/linux/debugobjects.h \
     $(wildcard include/config/debug/objects.h) \
@@ -311,17 +311,17 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/librarie
   include/linux/jiffies.h \
   include/linux/timex.h \
   include/linux/param.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/param.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/param.h \
   include/asm-generic/param.h \
     $(wildcard include/config/hz.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/timex.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/device.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/timex.h \
+  /usr1/xuhui/DT-W724V-20140311/linux/3.4.11/arch/mips/include/asm/device.h \
   include/linux/pm_wakeup.h \
   include/mtd/mtd-abi.h \
   include/linux/mtd/partitions.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/staging/usr/include/atpnandparts.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/staging/usr/include/kerneltag.h \
+  /usr1/xuhui/DT-W724V-20140311/output/staging/usr/include/atpnandparts.h \
+  /usr1/xuhui/DT-W724V-20140311/output/staging/usr/include/kerneltag.h \
 
-/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o: $(deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o)
+/usr1/xuhui/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o: $(deps_/usr1/xuhui/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o)
 
-$(deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o):
+$(deps_/usr1/xuhui/DT-W724V-20140311/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o):

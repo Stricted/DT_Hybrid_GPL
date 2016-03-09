@@ -106,13 +106,13 @@
 #define PACKAGE_NAME "libupnp"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "libupnp 1.6.12"
+#define PACKAGE_STRING "libupnp 1.6.18"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "libupnp"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "1.6.12"
+#define PACKAGE_VERSION "1.6.18"
 
 /* Define to necessary symbol if this constant uses a non-standard name on
    your system. */
@@ -127,6 +127,7 @@
 /* see upnpconfig.h */
 #ifdef SUPPORT_ATP_LIBUPNP_V6
     #define UPNP_ENABLE_IPV6  1
+    #define INET_IPV6   1
 #endif
 /* see upnpconfig.h */
 /*Adding a configure flag to disable GENA notification reordering as even
@@ -160,13 +161,13 @@
 #define UPNP_VERSION_MINOR 6
 
 /* see upnpconfig.h */
-#define UPNP_VERSION_PATCH 12
+#define UPNP_VERSION_PATCH 18
 
 /* see upnpconfig.h */
-#define UPNP_VERSION_STRING "1.6.12"
+#define UPNP_VERSION_STRING "1.6.18"
 
 /* Version number of package */
-#define VERSION "1.6.12"
+#define VERSION "1.6.18"
 
 /* File Offset size */
 #define _FILE_OFFSET_BITS 64

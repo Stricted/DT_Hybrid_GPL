@@ -1,6 +1,0 @@
-kernel/crypto/ecb.ko
-kernel/crypto/pcbc.ko
-kernel/drivers/scsi/scsi_wait_scan.ko
-kernel/drivers/net/usb/hw_cdc_driver.ko
-kernel/drivers/net/usb/ndistty.ko
-kernel/drivers/usb/serial/option.ko

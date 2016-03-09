@@ -95,6 +95,7 @@
 
 #define PPP_CHECK_STATUS_TIMEOUT 2
 
+#define ErrCodeFilePath "/var/InternetDiagnose"
 int baud_rate;
 static const char rcsid[] = RCSID;
 
@@ -2706,6 +2707,11 @@ void ppp_log_nak_code(const char *pszPacket, unsigned int ullen)
             acMsg[ullen] = 0;
         }
         ATP_LOG_LogItemPrint(ATP_PPPC_LOG_R001_56_0000, acMsg);
+		fp = fopen(ErrCodeFilePath,"w+");
+	    if(NULL != fp) {
+		    fprintf(fp,"err_code_r56_none");
+		    fclose(fp);
+	    }
 		/*start:z00182249 for UDK0000287513：P004记录条件为当网关发的ipv6cp报文服务器没有回复时20130909*/
         //ATP_LOG_LogItemPrint(ATP_SYS_LOG_PPP_LOG_FAIL_WITHOUT_INFO);
 		//*End:z00182249 for UDK0000287513：P004记录条件为当网关发的ipv6cp报文服务器没有回复时20130909*/
@@ -2766,9 +2772,21 @@ void ppp_log_nak_code(const char *pszPacket, unsigned int ullen)
             //增加错误码ERROR_CODE_0010 和ERROR_CODE_0011的处理,根据tocpe0041文档，这两种错误不需写入log
             case ERROR_CODE_0010:
             ATP_LOG_LogItemPrint(ATP_PPPC_LOG_R001_56_0000, acMsg);
+			/* 添 加 错 误 码对应的错误信息 */			
+			fp = fopen(ErrCodeFilePath,"w+");
+			if(NULL != fp) {
+				fprintf(fp,"err_code_r56_0010");
+				fclose(fp);
+			}
             break;
             case ERROR_CODE_0011:
             ATP_LOG_LogItemPrint(ATP_PPPC_LOG_R001_56_0000, acMsg);
+			/* 添 加 错 误 码对应的错误信息 */
+			fp = fopen(ErrCodeFilePath,"w+");
+			if(NULL != fp) {
+				fprintf(fp,"err_code_r56_0011");
+				fclose(fp);
+			}
             break;
             /*End of w723v 2012-5-7 9:55 for by z00190439*/
             case ERROR_CODE_0012:
@@ -2847,6 +2865,11 @@ void ppp_log_nak_code(const char *pszPacket, unsigned int ullen)
             default:
                 ulErr = 0;
                 ATP_LOG_LogItemPrint(ATP_PPPC_LOG_R001_56_0000, acMsg);
+				fp = fopen(ErrCodeFilePath,"w+");
+			    if(NULL != fp) {
+				    fprintf(fp,"err_code_r56_none");
+				    fclose(fp);
+			    }
                 break;
 
         }

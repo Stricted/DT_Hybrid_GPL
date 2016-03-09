@@ -1304,8 +1304,11 @@ ipv6cp_down_sig(int unit)
     {
         //ipv6cp_dhcp_pid = 0;
         ipv6cp_close(f->unit,"ipv6cp_close");
-        //ipv6cp_down(f);
-        //ipv6cp_finished(f);
+        sleep(4);
+
+        ipv6cp_fsm[f->unit].flags = OPT_RESTART;
+        ipv6cp_open(f->unit);
+
     }
 
 }

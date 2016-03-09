@@ -1,1 +1,0 @@
-cmd_util-linux/lib.a := rm -f util-linux/lib.a; /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/bin/arm-hsan-linux-uclibcgnueabi-ar  rcs util-linux/lib.a util-linux/fdisk.o util-linux/mount.o util-linux/umount.o

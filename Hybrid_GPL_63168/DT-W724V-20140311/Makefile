@@ -896,12 +896,12 @@ release-gpl:
 	rm -rf package/atp/network/fon/service/fon/src/src/fon-api
 	rm -rf package/atp/network/fon/service/fon/src/src/fonsmcd
 	
-userapp-clean:bftpd-clean brctl-clean busybox-clean  ebtables-clean iproute2-clean iptables-clean \
+userapp-clean:bftpd-clean brctl-clean busybox-clean ebtables-clean iproute2-clean iptables-clean \
 			siproxd-clean sntp-clean pppc-clean gplutil-clean ssl-clean osip-clean samba-clean ntfs-clean libpcap-clean fon-clean\
 			libdaemon-clean radvd-clean sntp-clean iupnp-clean ixml-clean threadutil-clean zlib-clean sqlite-clean\
 			lua-clean iconv-clean ffmpeg-clean fetchmail-clean cadaver-clean esmtp-clean cups-clean
 	
-userapp: gplutil bftpd brctl busybox  ebtables iproute2 iptables siproxd sntp ssl osip samba ntfs libdaemon \
+userapp: gplutil bftpd brctl busybox ebtables iproute2 iptables siproxd sntp ssl osip samba ntfs libdaemon \
 		 fon radvd sntp pppc iupnp ixml threadutil zlib sqlite lua iconv ffmpeg fetchmail cadaver esmtp cups
 		 
 openall: dirs  $(BASE_TARGETS) userapp linux

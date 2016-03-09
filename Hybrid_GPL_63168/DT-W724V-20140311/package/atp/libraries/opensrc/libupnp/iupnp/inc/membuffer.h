@@ -62,7 +62,7 @@ typedef struct {
 	/*! used to increase size; MUST be > 0; (read/write). */
 	size_t size_inc;
 	/*! default value of size_inc. */
-#define MEMBUF_DEF_SIZE_INC 5
+#define MEMBUF_DEF_SIZE_INC (size_t)5
 } membuffer;
 
 #ifdef __cplusplus

@@ -1,1 +1,0 @@
-vpath="InternetGatewayDevice.Services.StorageService.1.LogicalVolume.{i}"E5element="Status|DiskInfo"ATPelement="Enable|Name"multi="usbs|usb"

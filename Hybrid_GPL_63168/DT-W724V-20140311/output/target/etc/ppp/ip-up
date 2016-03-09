@@ -1,9 +1,0 @@
-#! /bin/sh
-# PPP session start script
-
-echo "PPP session start"
-
-# Clear TCP sessions
-# echo 4 > /proc/sys/net/ipv4/netfilter/ip_conntrack_dns
-
-exit 0

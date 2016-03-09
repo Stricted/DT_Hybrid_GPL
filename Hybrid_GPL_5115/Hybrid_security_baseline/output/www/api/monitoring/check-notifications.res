@@ -1,1 +1,0 @@
-vpath="api/modem_1/smsstate"E5element="UnreadMessage|SmsStorageFull"vpath="api/modem_1/updatestate"E5element="OnlineUpdateStatus"

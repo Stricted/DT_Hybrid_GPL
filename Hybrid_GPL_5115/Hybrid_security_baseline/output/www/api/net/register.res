@@ -1,1 +1,0 @@
-vpath="api/modem_1/register"E5element="Mode|Plmn|Rat"

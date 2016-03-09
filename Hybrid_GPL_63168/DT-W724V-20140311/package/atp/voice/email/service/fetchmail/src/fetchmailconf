@@ -1,2 +1,0 @@
-#! /bin/sh
-exec /usr/bin/python /usr/local/lib/python2.6/site-packages/fetchmailconf.py "$@"

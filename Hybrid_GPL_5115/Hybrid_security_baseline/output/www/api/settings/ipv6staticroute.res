@@ -1,1 +1,0 @@
-vpath="InternetGatewayDevice.Layer3Forwarding.X_IPv6Forwarding.{i}"E5element="Enable|DestIPAddress|PrefixLength|GatewayIPAddress|Interface|Status"ATPelement="Enable|DestIPAddress|PrefixLength|GatewayIPAddress|Interface|Status"multi="ipv6routes|ipv6route"

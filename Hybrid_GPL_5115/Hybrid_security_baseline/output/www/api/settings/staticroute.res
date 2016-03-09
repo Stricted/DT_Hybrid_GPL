@@ -1,1 +1,0 @@
-vpath="InternetGatewayDevice.Layer3Forwarding.Forwarding.{i}"E5element="DestIPAddress|GatewayIPAddress|DestSubnetMask|Interface"ATPelement="DestIPAddress|GatewayIPAddress|DestSubnetMask|Interface"multi="routes|route"

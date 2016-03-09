@@ -8,9 +8,9 @@
 SHELL = /bin/sh
 
 # Installation paths
-prefix = /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/bin
+prefix = /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/bin
 exec_prefix = ${prefix}
-libdir = /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib:/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib
+libdir = /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib:/usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib
 
 # Build paths
 
@@ -24,9 +24,9 @@ RANLIB = /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutil
 LIBTOOL = @LIBTOOL@
 
 # Flags
-CPPFLAGS = -DHAVE_CONFIG_H -I$(top_builddir) -I$(top_srcdir)/lib  -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/include  -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include -D_LARGEFILE64_SOURCE -DNE_LFS -DXML_BYTE_ORDER=21 -DXML_DTD -I$(top_srcdir)/lib/expat/xmlparse -I$(top_srcdir)/lib/expat/xmltok
+CPPFLAGS = -DHAVE_CONFIG_H -I$(top_builddir) -I$(top_srcdir)/lib  -I/usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/include  -I/usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include -D_LARGEFILE64_SOURCE -DNE_LFS -DXML_BYTE_ORDER=21 -DXML_DTD -I$(top_srcdir)/lib/expat/xmlparse -I$(top_srcdir)/lib/expat/xmltok
 CFLAGS = -g -O2 -I$(top_srcdir)/lib/neon -Wall -Wmissing-declarations -Wshadow -Wreturn-type -Wsign-compare -Wundef -Wpointer-arith -Wbad-function-cast -Wformat-security
-LDFLAGS =  -L/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib 
+LDFLAGS =  -L/usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib 
 NEON_LINK_FLAGS = 
 # Note: don't substitute  in here; during a bundled
 # build of this directory,  may include -lneon.

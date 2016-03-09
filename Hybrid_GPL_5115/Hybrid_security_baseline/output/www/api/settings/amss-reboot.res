@@ -1,1 +1,0 @@
-vpath="api/modem_1/amssreboot"E5element="Status"

@@ -2,33 +2,33 @@
 Discarded input sections
 
  .reginfo       0x0000000000000000       0x18 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
  .reginfo       0x0000000000000000       0x18 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 Memory Configuration
 
@@ -37,87 +37,87 @@ Name             Origin             Length             Attributes
 
 Linker script and memory map
 
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
 LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
 LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgcc_s.so
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/libc.so
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgcc_s.so
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/libc.so
 START GROUP
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libc.so.0
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/uclibc_nonshared.a
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/ld-uClibc.so.0
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libc.so.0
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/uclibc_nonshared.a
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/ld-uClibc.so.0
 END GROUP
 LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgcc_s.so
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgcc_s.so
 LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
                 0x00000000000000d4                . = (0x0 + SIZEOF_HEADERS)
 
 .reginfo        0x00000000000000d4       0x18
  *(.reginfo)
- .reginfo       0x00000000000000d4       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .reginfo       0x00000000000000d4       0x18 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
 
 .dynamic        0x00000000000000ec       0xe8
  *(.dynamic)
- .dynamic       0x00000000000000ec       0xe8 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .dynamic       0x00000000000000ec       0xe8 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
                 0x00000000000000ec                _DYNAMIC
 
 .hash           0x00000000000001d4      0x6f0
  *(.hash)
- .hash          0x00000000000001d4      0x6f0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .hash          0x00000000000001d4      0x6f0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
 
 .gnu.hash
  *(.gnu.hash)
 
 .dynsym         0x00000000000008c4      0xf50
  *(.dynsym)
- .dynsym        0x00000000000008c4      0xf50 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .dynsym        0x00000000000008c4      0xf50 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
 
 .dynstr         0x0000000000001814      0xbf7
  *(.dynstr)
- .dynstr        0x0000000000001814      0xbf7 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .dynstr        0x0000000000001814      0xbf7 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
 
 .gnu.version    0x000000000000240c      0x1ea
  *(.gnu.version)
- .gnu.version   0x000000000000240c      0x1ea /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .gnu.version   0x000000000000240c      0x1ea /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
 
 .gnu.version_d  0x00000000000025f8        0x0 load address 0x00000000000025f6
  *(.gnu.version_d)
  .gnu.version_d
-                0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
 
 .gnu.version_r  0x00000000000025f8       0x20
  *(.gnu.version_r)
  .gnu.version_r
-                0x00000000000025f8       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x00000000000025f8       0x20 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
 
 .rel.dyn        0x0000000000002618       0x10
  *(.rel.init)
@@ -132,7 +132,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  *(.rel.dtors)
  *(.rel.got)
  *(.rel.dyn)
- .rel.dyn       0x0000000000002618       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .rel.dyn       0x0000000000002618       0x10 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
  *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
  *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
@@ -160,51 +160,51 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
 
 .rel.plt        0x0000000000002628        0x0
  *(.rel.plt)
- .rel.plt       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .rel.plt       0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
 
 .rela.plt
  *(.rela.plt)
 
 .init           0x0000000000002628       0x78
  *(.init)
- .init          0x0000000000002628       0x1c /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .init          0x0000000000002628       0x1c /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
                 0x0000000000002628                _init
  .init          0x0000000000002644       0x28 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
  .init          0x000000000000266c       0x28 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
- .init          0x0000000000002694        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .init          0x0000000000002694        0xc /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 .plt            0x00000000000026a0        0x0
  *(.plt)
- .plt           0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .plt           0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
 
 .iplt
  *(.iplt)
 
-.text           0x00000000000026a0    0x1cbc0
+.text           0x00000000000026a0    0x1cbd0
                 0x00000000000026a0                _ftext = .
  *(.text.unlikely .text.*_unlikely)
  .text.unlikely
-                0x00000000000026a0      0x108 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
+                0x00000000000026a0      0x108 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
  *(.text.exit .text.exit.*)
  *(.text.startup .text.startup.*)
  *(.text.hot .text.hot.*)
  *(.text .stub .text.* .gnu.linkonce.t.*)
  *fill*         0x00000000000027a8        0x8 00000000
- .text          0x00000000000027b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .text          0x00000000000027b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  .text          0x00000000000027b0      0x150 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
- .text          0x0000000000002900     0x1830 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
+ .text          0x0000000000002900     0x1830 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
                 0x0000000000002cb4                aes_setkey_enc
                 0x0000000000003060                aes_setkey_dec
                 0x0000000000003238                aes_crypt_ecb
                 0x0000000000003e50                aes_crypt_cbc
                 0x0000000000003fdc                aes_crypt_cfb128
- .text          0x0000000000004130      0x100 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
+ .text          0x0000000000004130      0x100 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
                 0x0000000000004130                arc4_setup
                 0x00000000000041b0                arc4_crypt
- .text          0x0000000000004230      0x380 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
+ .text          0x0000000000004230      0x380 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
                 0x0000000000004230                base64_encode
                 0x00000000000043ec                base64_decode
- .text          0x00000000000045b0     0x4180 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
+ .text          0x00000000000045b0     0x4180 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
                 0x0000000000004ce8                mpi_init
                 0x0000000000004d30                mpi_free
                 0x0000000000004dd4                mpi_grow
@@ -242,9 +242,9 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
                 0x0000000000007af8                mpi_inv_mod
                 0x0000000000008044                mpi_is_prime
                 0x00000000000084a0                mpi_gen_prime
- .text          0x0000000000008730        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
- .text          0x0000000000008730        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
- .text          0x0000000000008730     0x1700 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
+ .text          0x0000000000008730        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
+ .text          0x0000000000008730        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
+ .text          0x0000000000008730     0x1700 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
                 0x0000000000008dfc                des_setkey_enc
                 0x0000000000008e18                des_setkey_dec
                 0x0000000000008e90                des3_set2key_enc
@@ -255,13 +255,13 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
                 0x00000000000093a4                des_crypt_cbc
                 0x0000000000009524                des3_crypt_ecb
                 0x0000000000009ca4                des3_crypt_cbc
- .text          0x0000000000009e30        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
- .text          0x0000000000009e30     0x1d60 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
+ .text          0x0000000000009e30        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
+ .text          0x0000000000009e30     0x1d60 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
                 0x000000000000bab4                havege_init
                 0x000000000000bb04                havege_rand
- .text          0x000000000000bb90        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
- .text          0x000000000000bb90        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
- .text          0x000000000000bb90     0x1630 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
+ .text          0x000000000000bb90        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
+ .text          0x000000000000bb90        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
+ .text          0x000000000000bb90     0x1630 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
                 0x000000000000ca80                md5_starts
                 0x000000000000cabc                md5_update
                 0x000000000000cc04                md5_finish
@@ -272,7 +272,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
                 0x000000000000d038                md5_hmac_finish
                 0x000000000000d0d4                md5_hmac_reset
                 0x000000000000d120                md5_hmac
- .text          0x000000000000d1c0      0x620 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
+ .text          0x000000000000d1c0      0x620 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
                 0x000000000000d1fc                net_connect
                 0x000000000000d300                net_bind
                 0x000000000000d4d0                net_accept
@@ -282,8 +282,8 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
                 0x000000000000d65c                net_recv
                 0x000000000000d704                net_send
                 0x000000000000d794                net_close
- .text          0x000000000000d7e0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
- .text          0x000000000000d7e0     0x1470 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
+ .text          0x000000000000d7e0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
+ .text          0x000000000000d7e0     0x1470 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
                 0x000000000000d7e0                rsa_init
                 0x000000000000d840                rsa_check_pubkey
                 0x000000000000d91c                rsa_check_privkey
@@ -295,7 +295,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
                 0x000000000000e5a8                rsa_pkcs1_verify
                 0x000000000000e894                rsa_free
                 0x000000000000e910                rsa_gen_key
- .text          0x000000000000ec50     0x20b0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
+ .text          0x000000000000ec50     0x20b0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
                 0x0000000000010594                sha1_starts
                 0x00000000000105dc                sha1_update
                 0x0000000000010724                sha1_finish
@@ -306,7 +306,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
                 0x0000000000010b7c                sha1_hmac_finish
                 0x0000000000010c18                sha1_hmac_reset
                 0x0000000000010c64                sha1_hmac
- .text          0x0000000000010d00     0x4450 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
+ .text          0x0000000000010d00     0x4450 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
                 0x0000000000014858                sha2_starts
                 0x000000000001492c                sha2_update
                 0x0000000000014a74                sha2_finish
@@ -317,7 +317,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
                 0x0000000000014f84                sha2_hmac_finish
                 0x000000000001505c                sha2_hmac_reset
                 0x00000000000150ac                sha2_hmac
- .text          0x0000000000015150     0x1aa0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
+ .text          0x0000000000015150     0x1aa0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
                 0x0000000000016060                sha4_starts
                 0x0000000000016200                sha4_update
                 0x0000000000016394                sha4_finish
@@ -328,7 +328,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
                 0x0000000000016a1c                sha4_hmac_finish
                 0x0000000000016af4                sha4_hmac_reset
                 0x0000000000016b44                sha4_hmac
- .text          0x0000000000016bf0     0x1070 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+ .text          0x0000000000016bf0     0x1070 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
                 0x0000000000016fcc                CRYPTO_new_ex_data
                 0x0000000000016fd4                SSL_get_version
                 0x0000000000016fec                SSL_CTX_new
@@ -342,181 +342,181 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
                 0x00000000000173bc                SSL_is_data_cached
                 0x00000000000173d4                SSL_accept
                 0x0000000000017400                ssl_handshake_client
- .text          0x0000000000017c60      0xa60 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+ .text          0x0000000000017c60      0xa70 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
                 0x0000000000017c60                ssl_handshake_server
- .text          0x00000000000186c0     0x2c30 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
-                0x0000000000018fbc                ssl_derive_keys
-                0x00000000000196dc                ssl_calc_verify
-                0x0000000000019914                ssl_fetch_input
-                0x0000000000019980                ssl_flush_output
-                0x00000000000199e4                ssl_write_record
-                0x0000000000019dc0                ssl_read_record
-                0x000000000001a378                ssl_write_certificate
-                0x000000000001a574                ssl_parse_certificate
-                0x000000000001a824                ssl_write_change_cipher_spec
-                0x000000000001a860                ssl_parse_change_cipher_spec
-                0x000000000001a8e8                ssl_write_finished
-                0x000000000001a9e4                ssl_parse_finished
-                0x000000000001ab58                ssl_init
-                0x000000000001ac74                ssl_set_endpoint
-                0x000000000001ac7c                ssl_set_authmode
-                0x000000000001ac84                ssl_set_rng
-                0x000000000001ac90                ssl_set_dbg
-                0x000000000001ac9c                ssl_set_bio
-                0x000000000001acb4                ssl_set_scb
-                0x000000000001acc0                ssl_set_session
-                0x000000000001acd0                ssl_set_ciphers
-                0x000000000001acd8                ssl_set_ca_chain
-                0x000000000001ace8                ssl_set_own_cert
-                0x000000000001acf4                ssl_set_dh_param
-                0x000000000001ad74                ssl_set_hostname
-                0x000000000001ae04                ssl_get_bytes_avail
-                0x000000000001ae1c                ssl_get_verify_result
-                0x000000000001ae24                ssl_get_cipher
-                0x000000000001af0c                ssl_handshake
-                0x000000000001af78                ssl_read
-                0x000000000001b09c                ssl_write
-                0x000000000001b15c                ssl_close_notify
-                0x000000000001b1e8                ssl_free
- .text          0x000000000001b2f0      0x200 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
-                0x000000000001b318                hardclock
-                0x000000000001b3b4                get_timer
-                0x000000000001b438                set_alarm
-                0x000000000001b490                m_sleep
- .text          0x000000000001b4f0     0x3d10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
-                0x000000000001c250                load_file
-                0x000000000001c388                x509parse_key
-                0x000000000001c954                x509parse_keyfile
-                0x000000000001ca40                x509parse_keyfileEx
-                0x000000000001cafc                x509parse_dn_gets
-                0x000000000001ce10                x509parse_cert_info
-                0x000000000001d2a4                x509parse_crl_info
-                0x000000000001d768                x509parse_time_expired
-                0x000000000001d81c                x509parse_revoked
-                0x000000000001d8ac                x509parse_verify
-                0x000000000001dc58                x509_free
-                0x000000000001dda4                x509parse_crt
-                0x000000000001e7f4                x509parse_crtfile
-                0x000000000001e894                x509_crl_free
-                0x000000000001e9d0                x509parse_crl
-                0x000000000001f158                x509parse_crlfile
- .text          0x000000000001f200        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
- .text          0x000000000001f200        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
- .text          0x000000000001f200       0x60 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
- .text          0x000000000001f260        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .text          0x00000000000186d0     0x2c30 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+                0x0000000000018fcc                ssl_derive_keys
+                0x00000000000196ec                ssl_calc_verify
+                0x0000000000019924                ssl_fetch_input
+                0x0000000000019990                ssl_flush_output
+                0x00000000000199f4                ssl_write_record
+                0x0000000000019dd0                ssl_read_record
+                0x000000000001a388                ssl_write_certificate
+                0x000000000001a584                ssl_parse_certificate
+                0x000000000001a834                ssl_write_change_cipher_spec
+                0x000000000001a870                ssl_parse_change_cipher_spec
+                0x000000000001a8f8                ssl_write_finished
+                0x000000000001a9f4                ssl_parse_finished
+                0x000000000001ab68                ssl_init
+                0x000000000001ac84                ssl_set_endpoint
+                0x000000000001ac8c                ssl_set_authmode
+                0x000000000001ac94                ssl_set_rng
+                0x000000000001aca0                ssl_set_dbg
+                0x000000000001acac                ssl_set_bio
+                0x000000000001acc4                ssl_set_scb
+                0x000000000001acd0                ssl_set_session
+                0x000000000001ace0                ssl_set_ciphers
+                0x000000000001ace8                ssl_set_ca_chain
+                0x000000000001acf8                ssl_set_own_cert
+                0x000000000001ad04                ssl_set_dh_param
+                0x000000000001ad84                ssl_set_hostname
+                0x000000000001ae14                ssl_get_bytes_avail
+                0x000000000001ae2c                ssl_get_verify_result
+                0x000000000001ae34                ssl_get_cipher
+                0x000000000001af1c                ssl_handshake
+                0x000000000001af88                ssl_read
+                0x000000000001b0ac                ssl_write
+                0x000000000001b16c                ssl_close_notify
+                0x000000000001b1f8                ssl_free
+ .text          0x000000000001b300      0x200 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
+                0x000000000001b328                hardclock
+                0x000000000001b3c4                get_timer
+                0x000000000001b448                set_alarm
+                0x000000000001b4a0                m_sleep
+ .text          0x000000000001b500     0x3d10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
+                0x000000000001c260                load_file
+                0x000000000001c398                x509parse_key
+                0x000000000001c964                x509parse_keyfile
+                0x000000000001ca50                x509parse_keyfileEx
+                0x000000000001cb0c                x509parse_dn_gets
+                0x000000000001ce20                x509parse_cert_info
+                0x000000000001d2b4                x509parse_crl_info
+                0x000000000001d778                x509parse_time_expired
+                0x000000000001d82c                x509parse_revoked
+                0x000000000001d8bc                x509parse_verify
+                0x000000000001dc68                x509_free
+                0x000000000001ddb4                x509parse_crt
+                0x000000000001e804                x509parse_crtfile
+                0x000000000001e8a4                x509_crl_free
+                0x000000000001e9e0                x509parse_crl
+                0x000000000001f168                x509parse_crlfile
+ .text          0x000000000001f210        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
+ .text          0x000000000001f210        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
+ .text          0x000000000001f210       0x60 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+ .text          0x000000000001f270        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
  *(.gnu.warning)
  *(.mips16.fn.*)
  *(.mips16.call.*)
 
-.MIPS.stubs     0x000000000001f260      0x290
- .MIPS.stubs    0x000000000001f260      0x290 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
-                0x000000000001f260                bind
-                0x000000000001f270                gethostbyname
-                0x000000000001f280                calloc
-                0x000000000001f290                __errno_location
-                0x000000000001f2a0                fcntl64
-                0x000000000001f2b0                fwrite
-                0x000000000001f2c0                memcpy
-                0x000000000001f2d0                connect
-                0x000000000001f2e0                gettimeofday
-                0x000000000001f2f0                malloc
-                0x000000000001f300                fopen64
-                0x000000000001f310                strlen
-                0x000000000001f320                snprintf
-                0x000000000001f330                read
-                0x000000000001f340                select
-                0x000000000001f350                memmove
-                0x000000000001f360                fclose
-                0x000000000001f370                setsockopt
-                0x000000000001f380                fread
-                0x000000000001f390                time
-                0x000000000001f3a0                write
-                0x000000000001f3b0                localtime
-                0x000000000001f3c0                close
-                0x000000000001f3d0                fgets
-                0x000000000001f3e0                ferror
-                0x000000000001f3f0                sscanf
-                0x000000000001f400                memset
-                0x000000000001f410                memcmp
-                0x000000000001f420                sprintf
-                0x000000000001f430                socket
-                0x000000000001f440                fseek
-                0x000000000001f450                strstr
-                0x000000000001f460                ftell
-                0x000000000001f470                accept
-                0x000000000001f480                free
-                0x000000000001f490                alarm
-                0x000000000001f4a0                listen
-                0x000000000001f4b0                printf
-                0x000000000001f4c0                signal
-                0x000000000001f4d0                shutdown
+.MIPS.stubs     0x000000000001f270      0x290
+ .MIPS.stubs    0x000000000001f270      0x290 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x000000000001f270                bind
+                0x000000000001f280                gethostbyname
+                0x000000000001f290                calloc
+                0x000000000001f2a0                __errno_location
+                0x000000000001f2b0                fcntl64
+                0x000000000001f2c0                fwrite
+                0x000000000001f2d0                memcpy
+                0x000000000001f2e0                connect
+                0x000000000001f2f0                gettimeofday
+                0x000000000001f300                malloc
+                0x000000000001f310                fopen64
+                0x000000000001f320                strlen
+                0x000000000001f330                snprintf
+                0x000000000001f340                read
+                0x000000000001f350                select
+                0x000000000001f360                memmove
+                0x000000000001f370                fclose
+                0x000000000001f380                setsockopt
+                0x000000000001f390                fread
+                0x000000000001f3a0                time
+                0x000000000001f3b0                write
+                0x000000000001f3c0                localtime
+                0x000000000001f3d0                close
+                0x000000000001f3e0                fgets
+                0x000000000001f3f0                ferror
+                0x000000000001f400                sscanf
+                0x000000000001f410                memset
+                0x000000000001f420                memcmp
+                0x000000000001f430                sprintf
+                0x000000000001f440                socket
+                0x000000000001f450                fseek
+                0x000000000001f460                strstr
+                0x000000000001f470                ftell
+                0x000000000001f480                accept
+                0x000000000001f490                free
+                0x000000000001f4a0                alarm
+                0x000000000001f4b0                listen
+                0x000000000001f4c0                printf
+                0x000000000001f4d0                signal
+                0x000000000001f4e0                shutdown
 
-.fini           0x000000000001f4f0       0x50
+.fini           0x000000000001f500       0x50
  *(.fini)
- .fini          0x000000000001f4f0       0x1c /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
-                0x000000000001f4f0                _fini
- .fini          0x000000000001f50c       0x28 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
- .fini          0x000000000001f534        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
-                0x000000000001f540                PROVIDE (__etext, .)
-                0x000000000001f540                PROVIDE (_etext, .)
-                0x000000000001f540                PROVIDE (etext, .)
+ .fini          0x000000000001f500       0x1c /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x000000000001f500                _fini
+ .fini          0x000000000001f51c       0x28 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ .fini          0x000000000001f544        0xc /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+                0x000000000001f550                PROVIDE (__etext, .)
+                0x000000000001f550                PROVIDE (_etext, .)
+                0x000000000001f550                PROVIDE (etext, .)
 
-.rodata         0x000000000001f540     0x1680
+.rodata         0x000000000001f550     0x1680
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x000000000001f540       0xc0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
+ .rodata        0x000000000001f550       0xc0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
  .rodata.str1.4
-                0x000000000001f600        0xd /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
+                0x000000000001f610        0xd /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
                                          0x14 (size before relaxing)
- *fill*         0x000000000001f60d        0x3 00
- .rodata        0x000000000001f610      0x2a0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
- .rodata        0x000000000001f8b0      0x880 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
+ *fill*         0x000000000001f61d        0x3 00
+ .rodata        0x000000000001f620      0x2a0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
+ .rodata        0x000000000001f8c0      0x880 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
  .rodata.str1.4
-                0x0000000000020130        0x3 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
+                0x0000000000020140        0x3 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
                                           0x4 (size before relaxing)
- *fill*         0x0000000000020133        0xd 00
- .rodata        0x0000000000020140       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
+ *fill*         0x0000000000020143        0xd 00
+ .rodata        0x0000000000020150       0x40 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
  .rodata.str1.4
-                0x0000000000020180        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
- *fill*         0x000000000002018c        0x4 00
- .rodata        0x0000000000020190       0xb0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
+                0x0000000000020190        0xc /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
+ *fill*         0x000000000002019c        0x4 00
+ .rodata        0x00000000000201a0       0xb0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
  .rodata.str1.4
-                0x0000000000000000        0x4 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
- .rodata        0x0000000000020240       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
+                0x0000000000000000        0x4 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
+ .rodata        0x0000000000020250       0x40 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
  .rodata.str1.4
-                0x0000000000000000        0x4 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
- .rodata        0x0000000000020280       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
+                0x0000000000000000        0x4 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
+ .rodata        0x0000000000020290       0x40 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
  .rodata.str1.4
-                0x0000000000000000        0x4 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
- .rodata        0x00000000000202c0      0x300 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
+                0x0000000000000000        0x4 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
+ .rodata        0x00000000000202d0      0x300 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
  .rodata.str1.4
-                0x00000000000205c0       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
- *fill*         0x00000000000205d8        0x8 00
- .rodata        0x00000000000205e0       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
- .rodata        0x0000000000020620       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+                0x00000000000205d0       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+ *fill*         0x00000000000205e8        0x8 00
+ .rodata        0x00000000000205f0       0x40 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+ .rodata        0x0000000000020630       0x40 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
  .rodata.str1.4
-                0x0000000000020660      0x104 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
- *fill*         0x0000000000020764        0xc 00
- .rodata        0x0000000000020770       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
- .rodata        0x0000000000020780       0xc0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
+                0x0000000000020670      0x104 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+ *fill*         0x0000000000020774        0xc 00
+ .rodata        0x0000000000020780       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+ .rodata        0x0000000000020790       0xc0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
  .rodata.str1.4
-                0x0000000000020840      0x380 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
+                0x0000000000020850      0x380 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
                                         0x394 (size before relaxing)
 
 .rodata1
  *(.rodata1)
 
-.eh_frame_hdr   0x0000000000020bc0        0x0
+.eh_frame_hdr   0x0000000000020bd0        0x0
  *(.eh_frame_hdr)
- .eh_frame_hdr  0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .eh_frame_hdr  0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
-.eh_frame       0x0000000000020bc0        0x4
+.eh_frame       0x0000000000020bd0        0x4
  *(.eh_frame)
- .eh_frame      0x0000000000020bc0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
- .eh_frame      0x0000000000020bc0        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
+ .eh_frame      0x0000000000020bd0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
+ .eh_frame      0x0000000000020bd0        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
 
 .gcc_except_table
  *(.gcc_except_table .gcc_except_table.*)
-                0x0000000000020bc4                . = (ALIGN (0x10000) - ((0x10000 - .) & 0xffff))
+                0x0000000000020bd4                . = (ALIGN (0x10000) - ((0x10000 - .) & 0xffff))
                 0x0000000000031000                . = DATA_SEGMENT_ALIGN (0x10000, 0x1000)
 
 .eh_frame
@@ -575,50 +575,50 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
 .data           0x0000000000031020       0x30
                 0x0000000000031020                _fdata = .
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  .data          0x0000000000031020        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
- .data          0x0000000000031020        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
- .data          0x0000000000031020       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+ .data          0x0000000000031020        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+ .data          0x0000000000031020       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
                 0x0000000000031020                ssl_default_ciphers
- .data          0x0000000000031040        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
- .data          0x0000000000031040       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
+ .data          0x0000000000031040        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
+ .data          0x0000000000031040       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
                 0x0000000000031040                g_lSSL_CheckExpire
- .data          0x0000000000031050        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
- .data          0x0000000000031050        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
+ .data          0x0000000000031050        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
+ .data          0x0000000000031050        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
  .data          0x0000000000031050        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
- .data          0x0000000000031050        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .data          0x0000000000031050        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 .data1
  *(.data1)
 
 .got.plt        0x0000000000031050        0x0
  *(.got.plt)
- .got.plt       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .got.plt       0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
                 0x0000000000031050                . = .
                 0x0000000000039040                _gp = (ALIGN (0x10) + 0x7ff0)
 
 .got            0x0000000000031050      0x2e8
  *(.got)
- .got           0x0000000000031050      0x2e8 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .got           0x0000000000031050      0x2e8 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
                 0x0000000000031050                _GLOBAL_OFFSET_TABLE_
 
 .sdata          0x0000000000031338        0x4
@@ -645,38 +645,38 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
 
 .bss            0x0000000000031340     0x2270
  *(.dynbss)
- .dynbss        0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .dynbss        0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0000000000031340        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .bss           0x0000000000031340        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  .bss           0x0000000000031340       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
- .bss           0x0000000000031360     0x2230 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
- .bss           0x0000000000033590        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
- .bss           0x0000000000033590       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
- .bss           0x00000000000335a0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
- .bss           0x00000000000335a0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
- .bss           0x00000000000335a0       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
+ .bss           0x0000000000031360     0x2230 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
+ .bss           0x0000000000033590        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
+ .bss           0x0000000000033590       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+ .bss           0x00000000000335a0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+ .bss           0x00000000000335a0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+ .bss           0x00000000000335a0       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
                 0x00000000000335a0                alarmed
- .bss           0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
- .bss           0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
- .bss           0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
+ .bss           0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
+ .bss           0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
+ .bss           0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
  .bss           0x00000000000335b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
- .bss           0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .bss           0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
  *(COMMON)
                 0x00000000000335b0                . = ALIGN ((. != 0x0)?0x4:0x1)
                 0x00000000000335b0                . = ALIGN (0x4)
@@ -704,69 +704,69 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  *(.stab.indexstr)
 
 .pdr            0x0000000000000000     0x1ca0
- .pdr           0x0000000000000000       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .pdr           0x0000000000000000       0x40 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  .pdr           0x0000000000000040        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
- .pdr           0x0000000000000040       0xc0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
- .pdr           0x0000000000000100       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
- .pdr           0x0000000000000140       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
- .pdr           0x0000000000000180      0x540 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
- .pdr           0x00000000000006c0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
- .pdr           0x00000000000006c0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
- .pdr           0x00000000000006c0      0x1a0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
- .pdr           0x0000000000000860        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
- .pdr           0x0000000000000860       0x60 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
- .pdr           0x00000000000008c0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
- .pdr           0x00000000000008c0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
- .pdr           0x00000000000008c0      0x160 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
- .pdr           0x0000000000000a20      0x140 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
- .pdr           0x0000000000000b60        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
- .pdr           0x0000000000000b60      0x160 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
- .pdr           0x0000000000000cc0      0x160 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
- .pdr           0x0000000000000e20      0x160 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
- .pdr           0x0000000000000f80      0x160 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
- .pdr           0x00000000000010e0      0x200 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
- .pdr           0x00000000000012e0       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
- .pdr           0x0000000000001300      0x4a0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
- .pdr           0x00000000000017a0       0xa0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
- .pdr           0x0000000000001840      0x420 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
- .pdr           0x0000000000001c60        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
- .pdr           0x0000000000001c60        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
+ .pdr           0x0000000000000040       0xc0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
+ .pdr           0x0000000000000100       0x40 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
+ .pdr           0x0000000000000140       0x40 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
+ .pdr           0x0000000000000180      0x540 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
+ .pdr           0x00000000000006c0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
+ .pdr           0x00000000000006c0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
+ .pdr           0x00000000000006c0      0x1a0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
+ .pdr           0x0000000000000860        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
+ .pdr           0x0000000000000860       0x60 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
+ .pdr           0x00000000000008c0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
+ .pdr           0x00000000000008c0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
+ .pdr           0x00000000000008c0      0x160 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
+ .pdr           0x0000000000000a20      0x140 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
+ .pdr           0x0000000000000b60        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
+ .pdr           0x0000000000000b60      0x160 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
+ .pdr           0x0000000000000cc0      0x160 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
+ .pdr           0x0000000000000e20      0x160 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
+ .pdr           0x0000000000000f80      0x160 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
+ .pdr           0x00000000000010e0      0x200 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+ .pdr           0x00000000000012e0       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+ .pdr           0x0000000000001300      0x4a0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+ .pdr           0x00000000000017a0       0xa0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
+ .pdr           0x0000000000001840      0x420 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
+ .pdr           0x0000000000001c60        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
+ .pdr           0x0000000000001c60        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
  .pdr           0x0000000000001c60        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
- .pdr           0x0000000000001c60       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .pdr           0x0000000000001c60       0x40 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 .comment        0x0000000000000000       0x30
  *(.comment)
- .comment       0x0000000000000000       0x11 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .comment       0x0000000000000000       0x11 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
                                          0x12 (size before relaxing)
  .comment       0x0000000000000011       0x1f /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
                                          0x20 (size before relaxing)
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
  .comment       0x0000000000000000       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
- .comment       0x0000000000000000       0x12 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .comment       0x0000000000000000       0x12 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 .debug
  *(.debug)
@@ -831,55 +831,55 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  .gnu.attributes
                 0x0000000000000000       0x10 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
  .gnu.attributes
-                0x0000000000000010       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
+                0x0000000000000010       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
  .gnu.attributes
-                0x0000000000000020       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
+                0x0000000000000020       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
  .gnu.attributes
-                0x0000000000000030       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
+                0x0000000000000030       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
  .gnu.attributes
-                0x0000000000000040       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
+                0x0000000000000040       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
  .gnu.attributes
-                0x0000000000000050       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
+                0x0000000000000050       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
  .gnu.attributes
-                0x0000000000000060       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
+                0x0000000000000060       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
  .gnu.attributes
-                0x0000000000000070       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
+                0x0000000000000070       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
  .gnu.attributes
-                0x0000000000000080       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
+                0x0000000000000080       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
  .gnu.attributes
-                0x0000000000000090       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
+                0x0000000000000090       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
  .gnu.attributes
-                0x00000000000000a0       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
+                0x00000000000000a0       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
  .gnu.attributes
-                0x00000000000000b0       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
+                0x00000000000000b0       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
  .gnu.attributes
-                0x00000000000000c0       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
+                0x00000000000000c0       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
  .gnu.attributes
-                0x00000000000000d0       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
+                0x00000000000000d0       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
  .gnu.attributes
-                0x00000000000000e0       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
+                0x00000000000000e0       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
  .gnu.attributes
-                0x00000000000000f0       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
+                0x00000000000000f0       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
  .gnu.attributes
-                0x0000000000000100       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
+                0x0000000000000100       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
  .gnu.attributes
-                0x0000000000000110       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
+                0x0000000000000110       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
  .gnu.attributes
-                0x0000000000000120       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
+                0x0000000000000120       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
  .gnu.attributes
-                0x0000000000000130       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+                0x0000000000000130       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
  .gnu.attributes
-                0x0000000000000140       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+                0x0000000000000140       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
  .gnu.attributes
-                0x0000000000000150       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+                0x0000000000000150       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
  .gnu.attributes
-                0x0000000000000160       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
+                0x0000000000000160       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
  .gnu.attributes
-                0x0000000000000170       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
+                0x0000000000000170       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
  .gnu.attributes
-                0x0000000000000180       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
+                0x0000000000000180       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
  .gnu.attributes
-                0x0000000000000190       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
+                0x0000000000000190       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
  .gnu.attributes
                 0x00000000000001a0       0x10 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
 
@@ -893,35 +893,35 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
 
 .mdebug.abi32   0x00000000000335b0        0x0
  *(.mdebug.abi32)
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  .mdebug.abi32  0x00000000000335b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbeginS.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/aes.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/arc4.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/base64.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/bignum.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/certs.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/debug.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/des.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/dhm.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/havege.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md2.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md4.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/md5.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/net.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/padlock.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/rsa.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha1.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha2.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/sha4.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_cli.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_srv.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/ssl_tls.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/timing.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/x509parse.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/xtea.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/camellia.o
  .mdebug.abi32  0x00000000000335b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtendS.o
- .mdebug.abi32  0x00000000000335b0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .mdebug.abi32  0x00000000000335b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 .mdebug.abiN32
  *(.mdebug.abiN32)
@@ -948,4 +948,4 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  *(.note.GNU-stack)
  *(.gnu_debuglink)
  *(.gnu.lto_*)
-OUTPUT(/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/libcrypto.so elf32-tradbigmips)
+OUTPUT(/usr1/xuhui/DT-W724V-20140311/output/package/atp/libraries/opensrc/ssl/libcrypto.so elf32-tradbigmips)

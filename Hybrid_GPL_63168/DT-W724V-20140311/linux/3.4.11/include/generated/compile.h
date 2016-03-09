@@ -1,7 +1,7 @@
-/* This file is auto generated, version 30 */
+/* This file is auto generated, version 60 */
 /* SMP PREEMPT */
 #define UTS_MACHINE "mips"
-#define UTS_VERSION "#30 SMP PREEMPT Tue Dec 16 17:28:51 CST 2014"
-#define LINUX_COMPILE_BY "zengyao"
-#define LINUX_COMPILE_HOST "linux-6g7k"
+#define UTS_VERSION "#60 SMP PREEMPT Fri Feb 19 14:20:11 CST 2016"
+#define LINUX_COMPILE_BY "xuhui"
+#define LINUX_COMPILE_HOST "WUH1000021922"
 #define LINUX_COMPILER "gcc version 4.6.2 (Buildroot 2011.11) "

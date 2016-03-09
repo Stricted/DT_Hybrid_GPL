@@ -1,1 +1,0 @@
-vpath="InternetGatewayDevice.Time"E5element="enable|status|NTPServer1|NTPServer2|NTPServer3|NTPServer4|NTPServer5|CurrentLocalTime|LocalTimeZoneName|X_Label"ATPelement="Enable|Status|NTPServer1|NTPServer2|NTPServer3|NTPServer4|NTPServer5|CurrentLocalTime|LocalTimeZoneName|X_Label"

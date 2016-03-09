@@ -1,1 +1,0 @@
-vpath="InternetGatewayDevice.LANDevice.1.WLANConfiguration.1"E5element="WifiCountry|WifiChannel|WifiMode|WifiTxPwrPcnt|Wifi11NGuardInterval"ATPelement="RegulatoryDomain|Channel|Standard|TransmitPower|X_Wlan11NGIControl"

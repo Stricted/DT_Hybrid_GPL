@@ -2,6 +2,7 @@
  *
  * Copyright (c) 2000-2003 Intel Corporation 
  * All rights reserved. 
+ * Copyright (c) 2012 France Telecom All rights reserved. 
  *
  * Redistribution and use in source and binary forms, with or without 
  * modification, are permitted provided that the following conditions are met: 
@@ -49,6 +50,7 @@
 #include <stdio.h>
 
 #ifdef WIN32
+	#define snprintf _snprintf
 #else
 	#include <sys/types.h>
 #endif
@@ -77,7 +79,7 @@ addrToString( IN const struct sockaddr *addr,
               OUT char *ipaddr_port,
               IN size_t ipaddr_port_size )
 {
-    char buf_ntop[64];
+    char buf_ntop[INET6_ADDRSTRLEN];
     int rc = 0;
 
     if( addr->sa_family == AF_INET ) {
@@ -225,12 +227,8 @@ static int config_description_doc(
 	IN const char *ip_str,
 	OUT char **root_path_str )
 {
-	int addNew = FALSE;
 	IXML_NodeList *baseList;
-	IXML_Element *element = NULL;
-	IXML_Element *newElement = NULL;
 	IXML_Node *textNode = NULL;
-	IXML_Node *rootNode = NULL;
 	IXML_Node *urlbase_node = NULL;
 	const char *urlBaseStr = "URLBase";
 	const DOMString domStr = NULL;
@@ -246,44 +244,15 @@ static int config_description_doc(
 	baseList = ixmlDocument_getElementsByTagName(doc, urlBaseStr);
 	if (baseList == NULL) {
 		/* urlbase not found -- create new one */
-#if 0 //l00161677, DLNA 1.5 need not urlbase
-		addNew = TRUE;
-		element = ixmlDocument_createElement(doc, urlBaseStr);
-		if (element == NULL) {
-			goto error_handler;
-		}
-#endif
 		if (membuffer_append_str(&url_str, "http://") != 0 ||
 		    membuffer_append_str(&url_str, ip_str) != 0 ||
 		    membuffer_append_str(&url_str, "/") != 0 ||
 		    membuffer_append_str(&root_path, "/") != 0) {
 			goto error_handler;
 		}
-#if 0 //l00161677, DLNA 1.5 need not urlbase
-		rootNode = ixmlNode_getFirstChild((IXML_Node *) doc);
-		if (rootNode == NULL) {
-			err_code = UPNP_E_INVALID_DESC;
-			goto error_handler;
-		}
-		err_code =
-		    ixmlNode_appendChild(rootNode, (IXML_Node *) element);
-		if (err_code != IXML_SUCCESS) {
-			goto error_handler;
-		}
-		textNode =
-		    ixmlDocument_createTextNode(doc, (char *)url_str.buf);
-		if (textNode == NULL) {
-			goto error_handler;
-		}
-		err_code =
-		    ixmlNode_appendChild((IXML_Node *) element, textNode);
-		if (err_code != IXML_SUCCESS) {
-			goto error_handler;
-		}
-#endif
 	} else {
 		/* urlbase found */
-		urlbase_node = ixmlNodeList_item(baseList, 0);
+		urlbase_node = ixmlNodeList_item(baseList, 0lu);
 		assert(urlbase_node != NULL);
 		textNode = ixmlNode_getFirstChild(urlbase_node);
 		if (textNode == NULL) {
@@ -323,7 +292,7 @@ static int config_description_doc(
 		}
 		/* add trailing '/' if missing */
 		if (url_str.buf[url_str.length - 1] != '/') {
-			if (membuffer_append(&url_str, "/", 1) != 0) {
+			if (membuffer_append(&url_str, "/", (size_t)1) != 0) {
 				goto error_handler;
 			}
 		}
@@ -336,9 +305,6 @@ static int config_description_doc(
 	err_code = UPNP_E_SUCCESS;
 
  error_handler:
-	if (err_code != UPNP_E_SUCCESS) {
-		ixmlElement_free(newElement);
-	}
 	ixmlNodeList_free(baseList);
 	membuffer_destroy(&root_path);
 	membuffer_destroy(&url_str);

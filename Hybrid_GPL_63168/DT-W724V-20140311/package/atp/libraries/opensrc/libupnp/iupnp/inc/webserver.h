@@ -46,7 +46,7 @@ struct SendInstruction
 	int IsVirtualFile;
 	int IsChunkActive;
 	int IsRangeActive;
-   int  IsTimeSeek;
+	int IsTimeSeek;
 	int IsTrailers;
 	char RangeHeader[200];
 	char AcceptLanguageHeader[200];

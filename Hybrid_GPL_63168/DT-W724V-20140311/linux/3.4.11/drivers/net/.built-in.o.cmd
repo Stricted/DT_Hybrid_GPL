@@ -1,1 +1,0 @@
-cmd_drivers/net/built-in.o :=  /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/bin/mips-unknown-linux-uclibc-ld  -m elf32btsmip   -r -o drivers/net/built-in.o drivers/net/ifb.o drivers/net/Space.o drivers/net/loopback.o drivers/net/tun.o drivers/net/ppp/built-in.o drivers/net/slip/built-in.o 

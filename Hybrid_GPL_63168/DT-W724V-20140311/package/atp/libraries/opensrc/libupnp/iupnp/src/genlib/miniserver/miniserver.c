@@ -204,15 +204,11 @@ int is_request_get_media( http_message_t * hmsg )
     http_header_t *header;
     uri_type *url;
 
-	/* 1.先判断是否包含"CONNECTION: close" */
 	node = ListHead( &hmsg->headers );
-	while( node != NULL )
-	{
+	while( node != NULL ) {
 		header = ( http_header_t * ) node->item;
-		if( !strncmp(header->name.buf, "CONNECTION", strlen("CONNECTION")) )
-		{
-			if( !strncmp(header->value.buf, "close", strlen("close")) )
-			{
+		if( !strncmp(header->name.buf, "CONNECTION", strlen("CONNECTION"))) {
+			if( !strncmp(header->value.buf, "close", strlen("close")) ) {
 				return 0;
 			}
 			break;
@@ -270,37 +266,26 @@ static void handle_request(
 		goto error_handler;
 	}
 	
-#if 1 /*Start of 维管组 2010-8-26 22:17 for #7.4.31.6: HTTP/1.1的GET和POST媒体文件等请求可支持断点续传  by tKF29060*/
-	while(((1 == hmsg->major_version) && (1 == hmsg->minor_version)) 
+	while (((1 == hmsg->major_version) && (1 == hmsg->minor_version)) 
 			&&((HTTPMETHOD_GET == hmsg->method) || (HTTPMETHOD_POST == hmsg->method) 
 			|| (HTTPMETHOD_HEAD == hmsg->method) || (HTTPMETHOD_SIMPLEGET == hmsg->method)) 
-			&& is_request_get_media(hmsg))
-	{
-		/* 连续操作最大间隔300秒 */
+			&& is_request_get_media(hmsg)) {
 		timeout = 300;
 		// read
-	    ret_code = http_RecvMessage( &info, &parser, HTTPMETHOD_UNKNOWN,
-	                                 &timeout, &http_error_code );
-	    if( ret_code != 0 ) {
-	    	/*Start of 维管组 2010-10-25 20:39 for STB移植DMS碰到的问题 by tKF29060
-			  问题:连续快速切换播放媒体会导致线程资源不足，请求被卡住。
-			  原因:对方Reset复位连接时,http_error_code值未初始化,handle_error处理时间太长,销毁连接释放资源不及时,导致连接数超标。
-			 */
+		httpmsg_destroy(hmsg);
+		ret_code = http_RecvMessage( &info, &parser, HTTPMETHOD_UNKNOWN, &timeout, &http_error_code );
+		if( ret_code != 0 ) {
 			http_error_code = 0;
-            /*End of 维管组 2010-10-25 20:39 for by tKF29060*/
-	        goto error_handler;
-	    }
+			goto error_handler;
+		}
 
-	    UpnpPrintf( UPNP_INFO, MSERV, __FILE__, __LINE__,
-	        "miniserver %d: PROCESSING...\n", connfd );
-	    // dispatch
-	    http_error_code = dispatch_request( &info, &parser );
-	    if( http_error_code != 0 ) {
-	        goto error_handler;
-	    }
+		UpnpPrintf( UPNP_INFO, MSERV, __FILE__, __LINE__, "miniserver %d: PROCESSING...\n", connfd );
+		// dispatch
+		http_error_code = dispatch_request( &info, &parser );
+		if (http_error_code != 0) {
+			goto error_handler;
+		}
 	}
-    /*End of 维管组 2010-8-26 22:17 for by tKF29060*/
-#endif	
 	
 	http_error_code = 0;
 
@@ -333,6 +318,8 @@ static UPNP_INLINE void schedule_request_job(
 {
 	struct mserv_request_t *request;
 	ThreadPoolJob job;
+
+	memset(&job, 0, sizeof(job));
 
 	request = (struct mserv_request_t *)malloc(
 		sizeof (struct mserv_request_t));
@@ -429,13 +416,13 @@ static int receive_from_stopSock(SOCKET ssock, fd_set *set)
 	socklen_t clientLen;
 	struct sockaddr_storage clientAddr;
 	char requestBuf[256];
-	char buf_ntop[64];
+	char buf_ntop[INET6_ADDRSTRLEN];
 
 	if (FD_ISSET(ssock, set)) {
 		clientLen = sizeof(clientAddr);
 		memset((char *)&clientAddr, 0, sizeof(clientAddr));
 		byteReceived = recvfrom(ssock, requestBuf,
-			25, 0, (struct sockaddr *)&clientAddr, &clientLen);
+			(size_t)25, 0, (struct sockaddr *)&clientAddr, &clientLen);
 		if (byteReceived > 0) {
 			requestBuf[byteReceived] = '\0';
 			inet_ntop(AF_INET,
@@ -472,7 +459,7 @@ static void RunMiniServer(
 	fd_set rdSet;
 	SOCKET maxMiniSock;
 	int ret = 0;
-	SOCKET stopSock = 0;
+	int stopSock = 0;
 
 	maxMiniSock = 0;
 	maxMiniSock = max(maxMiniSock, miniSock->miniServerSock4);
@@ -596,7 +583,7 @@ static int get_port(
 		*port = ntohs(((struct sockaddr_in6*)&sockinfo)->sin6_port);
 	}
 	UpnpPrintf(UPNP_INFO, MSERV, __FILE__, __LINE__,
-		"sockfd = %d, .... port = %u\n", sockfd, *port);
+		"sockfd = %d, .... port = %d\n", sockfd, (int)*port);
 
 	return 0;
 }
@@ -618,91 +605,94 @@ static int get_port(
  *	\li UPNP_E_SUCCESS: Success.
  */
 static int get_miniserver_sockets(
-    /*! [in] Socket Array. */
-    MiniServerSockArray *out,
-    /*! [in] port on which the server is listening for incoming IPv4
-     * connections. */
-    uint16_t listen_port4,
-    /*! [in] port on which the server is listening for incoming IPv6
-     * connections. */
-    uint16_t listen_port6)
-{
-    char errorBuffer[ERROR_BUFFER_LEN];
-    struct sockaddr_storage __ss_v4;
-    struct sockaddr_in* serverAddr4 = (struct sockaddr_in*)&__ss_v4;
-    SOCKET listenfd4;
-    SOCKET listenFilefd4;
-    uint16_t actual_port4 = 0;
-    uint16_t actual_File_port4 = 0;
+	/*! [in] Socket Array. */
+	MiniServerSockArray *out,
+	/*! [in] port on which the server is listening for incoming IPv4
+	 * connections. */
+	uint16_t listen_port4
 #ifdef UPNP_ENABLE_IPV6
-    struct sockaddr_storage __ss_v6;
-    struct sockaddr_in6* serverAddr6 = (struct sockaddr_in6*)&__ss_v6;
-    SOCKET listenfd6;
-    SOCKET listenFilefd6;
-    uint16_t actual_port6 = 0;
-    uint16_t actual_File_port6 = 0;
+	,
+	/*! [in] port on which the server is listening for incoming IPv6
+	 * connections. */
+	uint16_t listen_port6
 #endif
-    int ret_code;
-    int ret_codeFile;
-    int reuseaddr_on = 1;
-    int sockError = UPNP_E_SUCCESS;
-    int FilesockError = UPNP_E_SUCCESS;
-    int errCode = 0;
-
-    /* Create listen socket for IPv4/IPv6. An error here may indicate
-     * that we don't have an IPv4/IPv6 stack. */
-    listenfd4 = socket(AF_INET, SOCK_STREAM, 0);
-    if (listenfd4 == INVALID_SOCKET) {
-        return UPNP_E_OUTOF_SOCKET;
-    }
-    listenFilefd4 = socket(AF_INET, SOCK_STREAM, 0);
-    if (listenFilefd4 == INVALID_SOCKET) {
-		sock_close(listenfd4);
-        return UPNP_E_OUTOF_SOCKET;
-    }
+	)
+{
+	char errorBuffer[ERROR_BUFFER_LEN];
+	struct sockaddr_storage __ss_v4;
+	struct sockaddr_in* serverAddr4 = (struct sockaddr_in*)&__ss_v4;
+	SOCKET listenfd4;
+	SOCKET listenFilefd4;
+	uint16_t actual_port4 = 0u;
+	uint16_t actual_File_port4;
 #ifdef UPNP_ENABLE_IPV6
-    listenfd6 = socket(AF_INET6, SOCK_STREAM, 0);
-    if (listenfd6 == INVALID_SOCKET) {
+	struct sockaddr_storage __ss_v6;
+	struct sockaddr_in6* serverAddr6 = (struct sockaddr_in6*)&__ss_v6;
+	SOCKET listenfd6;
+	SOCKET listenFilefd6;
+	uint16_t actual_port6 = 0u;
+	uint16_t actual_File_port6;
+	int onOff;
+#endif
+	int ret_code;
+	int ret_codeFile;
+	int reuseaddr_on = 1;
+	int sockError = UPNP_E_SUCCESS;
+	int FilesockError = UPNP_E_SUCCESS;
+	int errCode = 0;
+
+	/* Create listen socket for IPv4/IPv6. An error here may indicate
+	 * that we don't have an IPv4/IPv6 stack. */
+	listenfd4 = socket(AF_INET, SOCK_STREAM, 0);
+	if (listenfd4 == INVALID_SOCKET) {
+		return UPNP_E_OUTOF_SOCKET;
+	}
+	listenFilefd4 = socket(AF_INET, SOCK_STREAM, 0);
+	if (listenFilefd4 == INVALID_SOCKET) {
+		return UPNP_E_OUTOF_SOCKET;
+	}
+#ifdef UPNP_ENABLE_IPV6
+	listenfd6 = socket(AF_INET6, SOCK_STREAM, 0);
+	if (listenfd6 == INVALID_SOCKET) {
 		sock_close(listenfd4);
-		sock_close(listenFilefd4);
-        return UPNP_E_OUTOF_SOCKET;
-    }
-    listenFilefd6 = socket(AF_INET6, SOCK_STREAM, 0);
-    if (listenFilefd6 == INVALID_SOCKET) {
+		return UPNP_E_OUTOF_SOCKET;
+	}
+	onOff = 1;
+	sockError = setsockopt(listenfd6, IPPROTO_IPV6, IPV6_V6ONLY,
+			 (char *)&onOff, sizeof(onOff));
+	if (sockError == SOCKET_ERROR) {
 		sock_close(listenfd4);
 		sock_close(listenfd6);
-		sock_close(listenFilefd4);
-        return UPNP_E_OUTOF_SOCKET;
-    }
+		return UPNP_E_SOCKET_BIND;
+	}
+	listenFilefd6 = socket(AF_INET6, SOCK_STREAM, 0);
+	if (listenFilefd6 == INVALID_SOCKET) {
+		sock_close(listenfd4);
+		sock_close(listenfd6);
+		return UPNP_E_OUTOF_SOCKET;
+	}
 #endif
-    /* As per the IANA specifications for the use of ports by applications
-     * override the listen port passed in with the first available. */
-    if (listen_port4 < APPLICATION_LISTENING_PORT) {
-        listen_port4 = APPLICATION_LISTENING_PORT;
-    }
+	/* As per the IANA specifications for the use of ports by applications
+	 * override the listen port passed in with the first available. */
+	if (listen_port4 < APPLICATION_LISTENING_PORT) {
+		listen_port4 = (uint16_t)APPLICATION_LISTENING_PORT;
+	}
 #ifdef UPNP_ENABLE_IPV6
-    if (listen_port6 < APPLICATION_LISTENING_PORT) {
-        listen_port6 = APPLICATION_LISTENING_PORT;
-    }
+	if (listen_port6 < APPLICATION_LISTENING_PORT) {
+		listen_port6 = (uint16_t)APPLICATION_LISTENING_PORT;
+	}
 #endif
-    memset(&__ss_v4, 0, sizeof (__ss_v4));
-    serverAddr4->sin_family = AF_INET;
-    //serverAddr4->sin_addr.s_addr = htonl(INADDR_ANY);
-    serverAddr4->sin_addr.s_addr = inet_addr(gIF_IPV4);
+	memset(&__ss_v4, 0, sizeof (__ss_v4));
+	serverAddr4->sin_family = (sa_family_t)AF_INET;
+	serverAddr4->sin_addr.s_addr = inet_addr(gIF_IPV4);
 #ifdef UPNP_ENABLE_IPV6
-    memset(&__ss_v6, 0, sizeof (__ss_v6));
-    serverAddr6->sin6_family = AF_INET6;
-
-    if(inet_pton(AF_INET6, gIF_IPV6, &serverAddr6->sin6_addr) != 1)
-    {
-        printf("inet_pton UPNP_E_SOCKET_BIND\n");   
-        sock_close(listenfd4);
-        sock_close(listenFilefd4);
-        sock_close(listenfd6);
-        sock_close(listenFilefd6);
-        return UPNP_E_SOCKET_BIND;
-    }
-    serverAddr6->sin6_scope_id = if_nametoindex(gIF_NAME);
+	memset(&__ss_v6, 0, sizeof (__ss_v6));
+	serverAddr6->sin6_family = (sa_family_t)AF_INET6;
+	if(inet_pton(AF_INET6, gIF_IPV6, &serverAddr6->sin6_addr) != 1) {
+		printf("inet_pton UPNP_E_SOCKET_BIND\n");
+		return UPNP_E_SOCKET_BIND;
+	}
+	serverAddr6->sin6_scope_id = if_nametoindex(gIF_NAME);
 #endif
     /* Getting away with implementation of re-using address:port and
      * instead choosing to increment port numbers.
@@ -985,7 +975,7 @@ static int get_miniserver_stopsock(
 	}
 	/* Bind to local socket. */
 	memset(&stop_sockaddr, 0, sizeof (stop_sockaddr));
-	stop_sockaddr.sin_family = AF_INET;
+	stop_sockaddr.sin_family = (sa_family_t)AF_INET;
 	stop_sockaddr.sin_addr.s_addr = inet_addr("127.0.0.1");
 	ret = bind(miniServerStopSock, (struct sockaddr *)&stop_sockaddr,
 		sizeof(stop_sockaddr));
@@ -1015,9 +1005,9 @@ static UPNP_INLINE void InitMiniServerSockArray(MiniServerSockArray *miniSocket)
 	miniSocket->ssdpSock4 = INVALID_SOCKET;
 	miniSocket->ssdpSock6 = INVALID_SOCKET;
 	miniSocket->ssdpSock6UlaGua = INVALID_SOCKET;
-	miniSocket->stopPort = 0;
-	miniSocket->miniServerPort4 = 0;
-	miniSocket->miniServerPort6 = 0;
+	miniSocket->stopPort = 0u;
+	miniSocket->miniServerPort4 = 0u;
+	miniSocket->miniServerPort6 = 0u;
 	miniSocket->ssdpReqSock4 = INVALID_SOCKET;
 	miniSocket->ssdpReqSock6 = INVALID_SOCKET;
 }
@@ -1036,7 +1026,12 @@ int StartMiniServer(
 	MiniServerSockArray *miniSocket;
 	ThreadPoolJob job;
 
-	if (gMServState != MSERV_IDLE) {
+	memset(&job, 0, sizeof(job));
+
+	switch (gMServState) {
+	case MSERV_IDLE:
+		break;
+	default:
 		/* miniserver running. */
 		return UPNP_E_INTERNAL_ERROR;
 	}
@@ -1049,7 +1044,11 @@ int StartMiniServer(
 #ifdef INTERNAL_WEB_SERVER
 	/* V4 and V6 http listeners. */
 	ret_code = get_miniserver_sockets(
-		miniSocket, *listen_port4, *listen_port6);
+		miniSocket, *listen_port4
+#ifdef UPNP_ENABLE_IPV6
+		, *listen_port6
+#endif
+		);
 	if (ret_code != UPNP_E_SUCCESS) {
 		free(miniSocket);
 		return ret_code;
@@ -1145,9 +1144,11 @@ int StopMiniServer()
 	char buf[256] = "ShutDown";
 	size_t bufLen = strlen(buf);
 
-	if(gMServState == MSERV_RUNNING) {
+	switch(gMServState) {
+	case MSERV_RUNNING:
 		gMServState = MSERV_STOPPING;
-	} else {
+		break;
+	default:
 		return 0;
 	}
 	sock = socket(AF_INET, SOCK_DGRAM, 0);
@@ -1158,17 +1159,17 @@ int StopMiniServer()
 			errorBuffer);
 		return 0;
 	}
-	while(gMServState != MSERV_IDLE) {
-		ssdpAddr.sin_family = AF_INET;
+	while(gMServState != (MiniServerState)MSERV_IDLE) {
+		ssdpAddr.sin_family = (sa_family_t)AF_INET;
 		ssdpAddr.sin_addr.s_addr = inet_addr("127.0.0.1");
 		ssdpAddr.sin_port = htons(miniStopSockPort);
 		sendto(sock, buf, bufLen, 0,
 			(struct sockaddr *)&ssdpAddr, socklen);
-		usleep(1000);
-		if (gMServState == MSERV_IDLE) {
+		usleep(1000u);
+		if (gMServState == (MiniServerState)MSERV_IDLE) {
 			break;
 		}
-		isleep(1);
+		isleep(1u);
 	}
 	sock_close(sock);
 

@@ -1,1 +1,0 @@
-cmd_lib/zlib_inflate/built-in.o :=  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/bin/arm-hsan-linux-uclibcgnueabi-ld -EL    -r -o lib/zlib_inflate/built-in.o lib/zlib_inflate/zlib_inflate.o 

@@ -1,1 +1,0 @@
-vpath="InternetGatewayDevice.ManagementServer"E5element="PeriodicInformEnable|PeriodicInformInterval|URL|Username|Password|ConnectionRequestUsername|ConnectionRequestPassword|X_SSLCertEnable|ConnectionRequestPort"ATPelement="PeriodicInformEnable|PeriodicInformInterval|URL|Username|Password|ConnectionRequestUsername|ConnectionRequestPassword|X_SSLCertEnable|X_ConnReqPort"

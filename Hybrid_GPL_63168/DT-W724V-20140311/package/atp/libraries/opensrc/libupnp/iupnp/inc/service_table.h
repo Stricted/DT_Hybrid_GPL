@@ -49,7 +49,7 @@ extern "C" {
 #include <stdio.h>
 #include <time.h>
 
-#define SID_SIZE  41
+#define SID_SIZE  (size_t)41
 
 #ifdef INCLUDE_DEVICE_APIS
 

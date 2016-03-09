@@ -37,6 +37,7 @@
  */
 
 #include "upnp.h"
+#include <errno.h>
 
 /* usually used to specify direction of parameters in functions */
 #ifndef IN
@@ -109,10 +110,11 @@ void linecopylen(
 #endif
 
 /* Size of the errorBuffer variable, passed to the strerror_r() function */
-#define ERROR_BUFFER_LEN 256
+#define ERROR_BUFFER_LEN (size_t)256
 
 /* C specific */
-#ifndef __cplusplus
+/* VC needs these in C++ mode too (do other compilers?) */
+#if !defined(__cplusplus) || defined(UPNP_USE_MSVCPP)
 	#ifdef WIN32
 		#ifndef S_ISREG
 			#define S_ISREG(m) (((m) & S_IFMT) == S_IFREG)
@@ -120,7 +122,9 @@ void linecopylen(
 		#ifndef S_ISDIR
 			#define S_ISDIR(m) (((m) & S_IFMT) == S_IFDIR)
 		#endif
-		#define EADDRINUSE		WSAEADDRINUSE
+		#ifndef EADDRINUSE		/* VS2010 has this defined */
+			#define EADDRINUSE		WSAEADDRINUSE
+		#endif
 		#define strcasecmp		stricmp
 		#define strncasecmp		strnicmp
 		#define sleep(a)		Sleep((a)*1000)
@@ -130,7 +134,7 @@ void linecopylen(
 		#define max(a, b)   (((a)>(b))? (a):(b))
 		#define min(a, b)   (((a)<(b))? (a):(b))
 	#endif /* WIN32 */
-#endif /* __cplusplus */
+#endif /* !defined(__cplusplus) || defined(UPNP_USE_MSVCPP) */
 
 #endif /* UTIL_H */
 

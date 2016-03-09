@@ -1,1 +1,0 @@
-vpath="api/modem_1/RedirectStatus"E5element="RedirectStatus"

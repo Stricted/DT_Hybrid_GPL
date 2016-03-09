@@ -1,9 +1,0 @@
-[settings]
-functionname  = hi_kernel_ffwd_start;
-attributenum  = 0;
-attributeflag = 0;
-
-[parameter]
-
-[help]
-start ffwd

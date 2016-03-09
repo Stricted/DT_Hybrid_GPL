@@ -1,3 +1,0 @@
-osip_md5c.lo: osip_md5c.c ../../include/osipparser2/osip_md5.h
-
-../../include/osipparser2/osip_md5.h:

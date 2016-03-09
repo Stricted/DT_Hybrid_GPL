@@ -1,1 +1,0 @@
-vpath="InternetGatewayDevice.DosAttack"E5element="SynFlooding|ArpAttack|IcmpFlooding"ATPelement="SynFlooding|ArpAttack|IcmpFlooding"

@@ -1,1 +1,0 @@
-vpath="api/modem_1/wanstatus"E5element="ExternalIPAddress|DNSServers|X_IPv6Address|X_IPv6DefaultGateway|X_IPv6DNSServers"

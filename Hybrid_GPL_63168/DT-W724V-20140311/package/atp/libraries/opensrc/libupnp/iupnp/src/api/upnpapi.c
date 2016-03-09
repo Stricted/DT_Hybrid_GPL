@@ -2,6 +2,7 @@
  *
  * Copyright (c) 2000-2003 Intel Corporation 
  * All rights reserved. 
+ * Copyright (C) 2011-2012 France Telecom All rights reserved. 
  *
  * Redistribution and use in source and binary forms, with or without 
  * modification, are permitted provided that the following conditions are met: 
@@ -85,8 +86,8 @@
 
 #ifndef IN6_IS_ADDR_ULA
 #define IN6_IS_ADDR_ULA(a) \
-		((((__const uint32_t *) (a))[0] & htonl(0xfe000000)) \
-		== htonl (0xfc000000))
+		((((__const uint32_t *) (a))[0] & htonl((uint32_t)0xfe000000)) \
+		== htonl ((uint32_t)0xfc000000))
 #endif /* IS ADDR ULA */
 
 /*! This structure is for virtual directory callbacks */
@@ -122,8 +123,7 @@ ThreadPool gRecvThreadPool;
 /*! Mini server thread pool. */
 ThreadPool gMiniServerThreadPool;
 
-/*文件传输线程池，laopeifeng 161677*/
-ThreadPool gMiniFileServerThreadPool;
+ThreadPool gMiniFileServerThreadPool; //[ATP Code]Thead pool of file transport.
 
 /*! Flag to indicate the state of web server */
 WebServerState bWebServerState = WEB_SERVER_DISABLED;
@@ -132,10 +132,10 @@ WebServerState bWebServerState = WEB_SERVER_DISABLED;
 char gIF_NAME[LINE_SIZE] = { '\0' };
 
 /*! Static buffer to contain interface IPv4 address. (extern'ed in upnp.h) */
-char gIF_IPV4[22]/* INET_ADDRSTRLEN*/ = { '\0' };
+char gIF_IPV4[INET_ADDRSTRLEN] = { '\0' };
 
 /*! Static buffer to contain interface IPv6 address. (extern'ed in upnp.h) */
-char gIF_IPV6[65]/* INET6_ADDRSTRLEN*/ = { '\0' };
+char gIF_IPV6[INET6_ADDRSTRLEN] = { '\0' };
 
 /*! Static buffer to contain interface ULA or GUA IPv6 address. (extern'ed in upnp.h) */
 char gIF_IPV6_ULA_GUA[INET6_ADDRSTRLEN] = { '\0' };
@@ -146,14 +146,12 @@ unsigned gIF_INDEX = (unsigned)-1;
 /*! local IPv4 port for the mini-server */
 unsigned short LOCAL_PORT_V4;
 
-/*IPv4文件传输端口*/
-unsigned short LOCAL_FILE_PORT_V4;
+unsigned short LOCAL_FILE_PORT_V4; //[ATP Code] V4 port of file transport.
 
 /*! local IPv6 port for the mini-server */
 unsigned short LOCAL_PORT_V6;
 
-/*IPv6文件传输端口*/
-unsigned short LOCAL_FILE_PORT_V6;
+unsigned short LOCAL_FILE_PORT_V6; //[ATP Code] V6 port of file transport.
 
 /*! UPnP device and control point handle table  */
 #define NUM_HANDLE 200
@@ -289,20 +287,20 @@ static int UpnpInitThreadPools(void)
 		ret = UPNP_E_INIT_FAILED;
 		goto exit_function;
 	}
-	
-    TPAttrSetMinThreads( &attr, 2);
+
+	TPAttrSetMinThreads( &attr, 2);
 
 	if (ThreadPoolInit(&gMiniServerThreadPool, &attr) != UPNP_E_SUCCESS) {
 		ret = UPNP_E_INIT_FAILED;
 		goto exit_function;
 	}
-	
-    TPAttrSetMinThreads( &attr, g_ulMaxChannels);
-    if( ThreadPoolInit( &gMiniFileServerThreadPool, &attr ) != UPNP_E_SUCCESS ) {
-        UpnpSdkInit = 0;
-        UpnpFinish();
-        return UPNP_E_INIT_FAILED;
-    }
+
+	TPAttrSetMinThreads( &attr, g_ulMaxChannels);
+	if( ThreadPoolInit( &gMiniFileServerThreadPool, &attr ) != UPNP_E_SUCCESS ) {
+		UpnpSdkInit = 0;
+		UpnpFinish();
+		return UPNP_E_INIT_FAILED;
+	}
 
 exit_function:
 	if (ret != UPNP_E_SUCCESS) {
@@ -460,7 +458,7 @@ int UpnpInit(const char *HostIP, unsigned short DestPort)
 
 	UpnpPrintf(UPNP_INFO, API, __FILE__, __LINE__,
 		"UpnpInit with HostIP=%s, DestPort=%d.\n", 
-		HostIP ? HostIP : "", DestPort);
+		HostIP ? HostIP : "", (int)DestPort);
 
 	/* Verify HostIP, if provided, or find it ourselves. */
 	memset(gIF_IPV4, 0, sizeof(gIF_IPV4));
@@ -605,9 +603,6 @@ static UPNP_INLINE void PrintThreadPoolStats(ThreadPool *tp,
 int UpnpFinish(void)
 {
     int i = 0;
-#ifdef INCLUDE_DEVICE_APIS
-	UpnpDevice_Handle device_handle;
-#endif
 #ifdef INCLUDE_CLIENT_APIS
 	UpnpClient_Handle client_handle;
 #endif
@@ -629,11 +624,8 @@ int UpnpFinish(void)
     PrintThreadPoolStats(&gMiniFileServerThreadPool, __FILE__, __LINE__, 
 	    "MiniFileServer Thread Pool");
 #ifdef INCLUDE_DEVICE_APIS
-//	if (GetDeviceHandleInfo(AF_INET, &device_handle, &temp) == HND_DEVICE)
-//		UpnpUnRegisterRootDevice(device_handle);
-//	if (GetDeviceHandleInfo(AF_INET6, &device_handle, &temp) == HND_DEVICE)
-        for ( i = 0; i < NUM_HANDLE; ++ i )
-	 {
+	for ( i = 0; i < NUM_HANDLE; ++ i )
+	{
 	    if (GetHandleInfo( i+1, &temp) == HND_DEVICE)
 	    {
 	        UpnpUnRegisterRootDevice( i+1 );
@@ -812,16 +804,11 @@ int UpnpRegisterRootDevice(
 	if (Hnd == NULL ||
 	    Fun == NULL ||
 	    DescUrl == NULL ||
-	    strlen(DescUrl) == 0) {
+	    strlen(DescUrl) == (size_t)0) {
 		retVal = UPNP_E_INVALID_PARAM;
 		goto exit_function;
 	}
 
-/*	if (UpnpSdkDeviceRegisteredV4 == 1) {
-		retVal = UPNP_E_ALREADY_REGISTERED;
-		goto exit_function;
-	}
-*/
 	*Hnd = GetFreeHandle();
 	if (*Hnd == UPNP_E_OUTOF_HANDLE) {
 		retVal = UPNP_E_OUTOF_MEMORY;
@@ -942,7 +929,7 @@ static int GetDescDocumentAndURL(
 	/* [out] . */
 	IXML_Document **xmlDoc,
 	/* [out] . */
-	char *descURL, void* cookie);
+	char descURL[LINE_SIZE], void* cookie);
 
 
 #ifdef INCLUDE_DEVICE_APIS
@@ -977,24 +964,7 @@ int UpnpRegisterRootDevice2(
 		retVal = UPNP_E_INVALID_PARAM;
 		goto exit_function;
 	}
-	/* Test for already regsitered IPV4. */
-/*	if (AddressFamily == AF_INET && UpnpSdkDeviceRegisteredV4 == 1) {
-		retVal = UPNP_E_ALREADY_REGISTERED;
-		goto exit_function;
-	}
-*/
-#if 0 //注释:本函数参照UpnpRegisterRootDevice3修改,但没有DescUrl参数无法比较
-	/* Test for already registered IPV6. IPV6 devices might register on multiple
-	 * IPv6 addresses (link local and GUA or ULA), so we must to check the
-	 * description URL in the HandleTable. */
-	while (handler_index < NUM_HANDLE && HandleTable[handler_index] != NULL) {
-		if (strcmp(((struct Handle_Info *)HandleTable[handler_index])->DescURL, DescUrl)) {
-			retVal = UPNP_E_ALREADY_REGISTERED;
-			goto exit_function;
-		}
-		handler_index++;
-	}
-#endif
+
 	*Hnd = GetFreeHandle();
 	if (*Hnd == UPNP_E_OUTOF_HANDLE) {
 		retVal = UPNP_E_OUTOF_MEMORY;
@@ -1504,7 +1474,7 @@ static int GetDescDocumentAndURL(
 	int config_baseURL,
 	int AddressFamily,
 	IXML_Document **xmlDoc,
-	char *descURL, void* cookie)
+	char descURL[LINE_SIZE], void *cookie)
 {
 	int retVal = 0;
 	char *membuf = NULL;
@@ -1518,18 +1488,20 @@ static int GetDescDocumentAndURL(
 	struct sockaddr_storage serverAddr;
 	int rc = UPNP_E_SUCCESS;
 
+	memset(aliasStr, 0, sizeof(aliasStr));
 	if (description == NULL)
 		return UPNP_E_INVALID_PARAM;
 	/* non-URL description must have configuration specified */
-	if (descriptionType != UPNPREG_URL_DESC && !config_baseURL)
+	if (descriptionType != (enum Upnp_DescType_e)UPNPREG_URL_DESC &&
+		!config_baseURL)
 		return UPNP_E_INVALID_PARAM;
 	/* Get XML doc and last modified time */
-	if (descriptionType == UPNPREG_URL_DESC) {
+	if (descriptionType == (enum Upnp_DescType_e)UPNPREG_URL_DESC) {
 		retVal = UpnpDownloadXmlDoc(description, xmlDoc);
 		if (retVal != UPNP_E_SUCCESS)
 			return retVal;
 		last_modified = time(NULL);
-	} else if (descriptionType == UPNPREG_FILENAME_DESC) {
+	} else if (descriptionType == (enum Upnp_DescType_e)UPNPREG_FILENAME_DESC) {
 		retVal = stat(description, &file_info);
 		if (retVal == -1)
 			return UPNP_E_FILE_NOT_FOUND;
@@ -1538,12 +1510,12 @@ static int GetDescDocumentAndURL(
 		fp = fopen(description, "rb");
 		if (fp == NULL)
 			return UPNP_E_FILE_NOT_FOUND;
-		membuf = (char *)malloc(fileLen + 1);
+		membuf = (char *)malloc(fileLen + (size_t)1);
 		if (membuf == NULL) {
 			fclose(fp);
 			return UPNP_E_OUTOF_MEMORY;
 		}
-		num_read = fread(membuf, 1, fileLen, fp);
+		num_read = fread(membuf, (size_t)1, fileLen, fp);
 		if (num_read != fileLen) {
 			fclose(fp);
 			free(membuf);
@@ -1553,14 +1525,15 @@ static int GetDescDocumentAndURL(
 		fclose(fp);
 		rc = ixmlParseBufferEx(membuf, xmlDoc);
 		free(membuf);
-	} else if (descriptionType == UPNPREG_BUF_DESC) {
+	} else if (descriptionType == (enum Upnp_DescType_e)UPNPREG_BUF_DESC) {
 		last_modified = time(NULL);
 		rc = ixmlParseBufferEx(description, xmlDoc);
 	} else {
 		return UPNP_E_INVALID_PARAM;
 	}
 
-	if (rc != IXML_SUCCESS && descriptionType != UPNPREG_URL_DESC) {
+	if (rc != IXML_SUCCESS &&
+		descriptionType != (enum Upnp_DescType_e)UPNPREG_URL_DESC) {
 		if (rc == IXML_INSUFFICIENT_MEMORY)
 			return UPNP_E_OUTOF_MEMORY;
 		else
@@ -1568,8 +1541,8 @@ static int GetDescDocumentAndURL(
 	}
 	/* Determine alias */
 	if (config_baseURL) {
-		if (descriptionType == UPNPREG_BUF_DESC) {
-			snprintf( aliasStr, sizeof(aliasStr), "description_v%d.xml", (unsigned int)cookie );
+		if (descriptionType == (enum Upnp_DescType_e)UPNPREG_BUF_DESC) {
+			snprintf(aliasStr, sizeof(aliasStr), "description_v%d.xml", (unsigned int)cookie);
 		} else {
 			/* URL or filename */
 			retVal = GetNameForAlias(description, &temp_str);
@@ -1582,7 +1555,7 @@ static int GetDescDocumentAndURL(
 				free(temp_str);
 				return UPNP_E_URL_TOO_BIG;
 			}
-			strcpy(aliasStr, temp_str);
+			snprintf(aliasStr, sizeof(aliasStr), "%s", temp_str);
 		}
 		if (AddressFamily == AF_INET) {
 			get_server_addr((struct sockaddr *)&serverAddr);
@@ -1604,7 +1577,7 @@ static int GetDescDocumentAndURL(
 			ixmlDocument_free(*xmlDoc);
 			return UPNP_E_URL_TOO_BIG;
 		}
-		strcpy(descURL, description);
+		snprintf(descURL, LINE_SIZE, "%s", description);
 	}
 
 	assert(*xmlDoc != NULL);
@@ -1620,11 +1593,12 @@ static int GetDescDocumentAndURL(
 	int config_baseURL,
 	int AddressFamily,
 	IXML_Document **xmlDoc,
-	char *descURL, void* cookie)
+	char descURL[LINE_SIZE], void *cookie)
 {
 	int retVal = 0;
 
-	if (descriptionType != UPNPREG_URL_DESC || config_baseURL) {
+	if (descriptionType != (enum Upnp_DescType_e)UPNPREG_URL_DESC ||
+		config_baseURL) {
 		return UPNP_E_NO_WEB_SERVER;
 	}
 
@@ -1632,10 +1606,10 @@ static int GetDescDocumentAndURL(
 		return UPNP_E_INVALID_PARAM;
 	}
 
-	if (strlen(description) > (LINE_SIZE - 1)) {
+	if (strlen(description) > LINE_SIZE - (size_t)1) {
 		return UPNP_E_URL_TOO_BIG;
 	}
-	strcpy(descURL, description);
+	snprintf(descURL, LINE_SIZE, "%s", description);
 
 	retVal = UpnpDownloadXmlDoc(description, xmlDoc);
 	if (retVal != UPNP_E_SUCCESS) {
@@ -3037,8 +3011,8 @@ int UpnpDownloadUrlItem(const char *url, char **outBuf, char *contentType)
 int UpnpDownloadXmlDoc(const char *url, IXML_Document **xmlDoc)
 {
 	int ret_code;
-	char *xml_buf = 0;
-	char content_type[LINE_SIZE] = {0};
+	char *xml_buf;
+	char content_type[LINE_SIZE];
 
 	if (url == NULL || xmlDoc == NULL) {
 		return UPNP_E_INVALID_PARAM;

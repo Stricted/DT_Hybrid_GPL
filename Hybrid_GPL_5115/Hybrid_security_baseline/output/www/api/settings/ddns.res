@@ -1,1 +1,0 @@
-vpath="InternetGatewayDevice.Services.X_DDNSConfiguration.{i}"E5element="enable|Provider|UserName|Password|ServicePort|Protocol|Server|DomainName|HostName|WanPath"ATPelement="Enable|Provider|Username|Password|ServicePort|Protocol|Server|DomainName|HostName|WanPath"multi="ddnss|ddns"

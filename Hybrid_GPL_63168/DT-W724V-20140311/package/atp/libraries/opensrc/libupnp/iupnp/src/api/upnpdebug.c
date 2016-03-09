@@ -118,6 +118,7 @@ int DebugAtThisLevel(Upnp_LogLevel DLevel, Dbg_Module Module)
 	    (Module == DOM && DEBUG_DOM) || (Module == HTTP && DEBUG_HTTP);
 
 	return ret;
+	Module = Module; /* VC complains about this being unreferenced */
 }
 
 void UpnpPrintf(Upnp_LogLevel DLevel,
@@ -129,14 +130,9 @@ void UpnpPrintf(Upnp_LogLevel DLevel,
 	if (!DebugAtThisLevel(DLevel, Module))
 		return;
 
-    if (DEBUG_TARGET)
-    {
-        if ((NULL == ErrFileHnd) || (NULL == InfoFileHnd))
-        {
-            return;
-        }
-    }
-		
+	if (DEBUG_TARGET && (NULL == ErrFileHnd || NULL == InfoFileHnd))
+		return;
+
 	ithread_mutex_lock(&GlobalDebugMutex);
 	va_start(ArgList, FmtStr);
 	if (!DEBUG_TARGET) {

@@ -49,6 +49,10 @@
 #include "upnpapi.h"
 #include "upnp_uuid.h"
 
+#ifdef WIN32
+	#define snprintf _snprintf
+#endif
+
 /*!
  * \brief Unregisters a device.
  *
@@ -1128,7 +1132,8 @@ static int create_url_list(
 	/*! [out] . */
 	URL_list *out)
 {
-    size_t URLcount = 0, URLTotalCount = 0;
+    size_t URLcount = 0;
+    size_t URLTotalCount = 0;
     size_t i;
     int return_code = 0;
     uri_type temp;

@@ -37,11 +37,11 @@ top_builddir = ../..
 #    files it finds in srcdir = ../../gettext-runtime/intl.
 
 
-prefix = /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/bin
+prefix = /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/bin
 exec_prefix = ${prefix}
 transform = s,x,x,
-libdir = /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib:/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib
-includedir = /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include
+libdir = /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib:/usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib
+includedir = /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include
 datarootdir = ${prefix}/share
 datadir = ${datarootdir}
 localedir = $(datadir)/locale
@@ -82,9 +82,9 @@ DEFS = -DLOCALEDIR=\"$(localedir)\" -DLOCALE_ALIAS_PATH=\"$(aliaspath)\" \
 -Dset_relocation_prefix=libintl_set_relocation_prefix \
 -Drelocate=libintl_relocate \
 -DDEPENDS_ON_LIBICONV=1 -DHAVE_CONFIG_H
-CPPFLAGS = -I$(top_builddir) -I$(top_srcdir)/lib  -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/include  -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include -D_LARGEFILE64_SOURCE -DNE_LFS -DXML_BYTE_ORDER=21 -DXML_DTD -I$(top_srcdir)/lib/expat/xmlparse -I$(top_srcdir)/lib/expat/xmltok
+CPPFLAGS = -I$(top_builddir) -I$(top_srcdir)/lib  -I/usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/include  -I/usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include -D_LARGEFILE64_SOURCE -DNE_LFS -DXML_BYTE_ORDER=21 -DXML_DTD -I$(top_srcdir)/lib/expat/xmlparse -I$(top_srcdir)/lib/expat/xmltok
 CFLAGS = -g -O2 -I$(top_srcdir)/lib/neon -Wall -Wmissing-declarations -Wshadow -Wreturn-type -Wsign-compare -Wundef -Wpointer-arith -Wbad-function-cast -Wformat-security -fvisibility=hidden
-LDFLAGS =  -L/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib  $(LDFLAGS_no)
+LDFLAGS =  -L/usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib  $(LDFLAGS_no)
 LDFLAGS_yes = -Wl,--export-all-symbols
 LDFLAGS_no =
 LIBS = 

@@ -1,1 +1,0 @@
-vpath="PortMapping.{i}"E5element="VirtualServerIPName|VirtualServerStatus|VirtualServerWanPort|VirtualServerLanPort|VirtualServerIPAddress|VirtualServerProtocol"ATPelement="PortMappingDescription|PortMappingEnabled|ExternalPort|InternalPort|InternalClient|PortMappingProtocol"multi="Servers|Server"

@@ -1,23 +1,23 @@
 Archive member included because of file (symbol)
 
 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
-                              /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o (__fixunsdfsi)
+                              /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o (__fixunsdfsi)
 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_addsub_df.o)
-                              /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o (__adddf3)
+                              /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o (__adddf3)
 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_mul_df.o)
-                              /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o (__muldf3)
+                              /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o (__muldf3)
 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_gt_df.o)
-                              /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o (__gtdf2)
+                              /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o (__gtdf2)
 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ge_df.o)
                               /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o) (__gedf2)
 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_si_to_df.o)
-                              /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o (__floatsidf)
+                              /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o (__floatsidf)
 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_df_to_si.o)
-                              /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o (__fixdfsi)
+                              /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o (__fixdfsi)
 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_thenan_df.o)
                               /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_addsub_df.o) (__thenan_df)
 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_usi_to_df.o)
-                              /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o (__floatunsidf)
+                              /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o (__floatunsidf)
 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_lshrdi3.o)
                               /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_addsub_df.o) (__lshrdi3)
 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ashldi3.o)
@@ -31,9 +31,9 @@ Archive member included because of file (symbol)
 
 Discarded input sections
 
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  .reginfo       0x0000000000000000       0x18 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
  .reginfo       0x0000000000000000       0x18 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
  .debug_info    0x0000000000000000       0xd9 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
  .debug_abbrev  0x0000000000000000       0x5d /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
@@ -159,7 +159,7 @@ Discarded input sections
  .debug_str     0x0000000000000000      0x1bc /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fpcmp_parts_df.o)
  .debug_frame   0x0000000000000000       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fpcmp_parts_df.o)
  .reginfo       0x0000000000000000       0x18 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .reginfo       0x0000000000000000       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .reginfo       0x0000000000000000       0x18 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 Memory Configuration
 
@@ -168,72 +168,72 @@ Name             Origin             Length             Attributes
 
 Linker script and memory map
 
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
 LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgplutil.so
+LOAD /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgplutil.so
 LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgcc_s.so
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/libc.so
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgcc_s.so
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/libc.so
 START GROUP
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libc.so.0
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/uclibc_nonshared.a
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/ld-uClibc.so.0
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libc.so.0
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/uclibc_nonshared.a
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/ld-uClibc.so.0
 END GROUP
 LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgcc_s.so
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib/libgcc_s.so
 LOAD /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
-LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+LOAD /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
                 0x0000000000400000                PROVIDE (__executable_start, 0x400000)
                 0x0000000000400114                . = (0x400000 + SIZEOF_HEADERS)
 
 .interp         0x0000000000400114       0x14
  *(.interp)
- .interp        0x0000000000400114       0x14 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .interp        0x0000000000400114       0x14 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .reginfo        0x0000000000400128       0x18
  *(.reginfo)
- .reginfo       0x0000000000400128       0x18 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .reginfo       0x0000000000400128       0x18 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
 
 .dynamic        0x0000000000400140       0xe8
  *(.dynamic)
- .dynamic       0x0000000000400140       0xe8 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .dynamic       0x0000000000400140       0xe8 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
                 0x0000000000400140                _DYNAMIC
 
-.hash           0x0000000000400228      0x284
+.hash           0x0000000000400228      0x28c
  *(.hash)
- .hash          0x0000000000400228      0x284 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .hash          0x0000000000400228      0x28c /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .gnu.hash
  *(.gnu.hash)
 
-.dynsym         0x00000000004004ac      0x5c0
+.dynsym         0x00000000004004b4      0x5e0
  *(.dynsym)
- .dynsym        0x00000000004004ac      0x5c0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .dynsym        0x00000000004004b4      0x5e0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
-.dynstr         0x0000000000400a6c      0x3f4
+.dynstr         0x0000000000400a94      0x424
  *(.dynstr)
- .dynstr        0x0000000000400a6c      0x3f4 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .dynstr        0x0000000000400a94      0x424 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
-.gnu.version    0x0000000000400e60       0xb8
+.gnu.version    0x0000000000400eb8       0xbc
  *(.gnu.version)
- .gnu.version   0x0000000000400e60       0xb8 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .gnu.version   0x0000000000400eb8       0xbc /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
-.gnu.version_d  0x0000000000400f18        0x0
+.gnu.version_d  0x0000000000400f74        0x0
  *(.gnu.version_d)
  .gnu.version_d
-                0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
-.gnu.version_r  0x0000000000400f18       0x20
+.gnu.version_r  0x0000000000400f74       0x20
  *(.gnu.version_r)
  .gnu.version_r
-                0x0000000000400f18       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x0000000000400f74       0x20 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
-.rel.dyn        0x0000000000400f38        0x0
+.rel.dyn        0x0000000000400f94        0x0
  *(.rel.init)
  *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
  *(.rel.fini)
@@ -246,20 +246,20 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  *(.rel.dtors)
  *(.rel.got)
  *(.rel.dyn)
- .rel.dyn       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .rel.dyn       0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
  *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
  *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
  *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
  *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
  *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
- .rel.bss       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
-                0x0000000000400f38                PROVIDE (__rel_iplt_start, .)
+ .rel.bss       0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x0000000000400f94                PROVIDE (__rel_iplt_start, .)
  *(.rel.iplt)
-                0x0000000000400f38                PROVIDE (__rel_iplt_end, .)
-                0x0000000000400f38                PROVIDE (__rela_iplt_start, .)
-                0x0000000000400f38                PROVIDE (__rela_iplt_end, .)
+                0x0000000000400f94                PROVIDE (__rel_iplt_end, .)
+                0x0000000000400f94                PROVIDE (__rela_iplt_start, .)
+                0x0000000000400f94                PROVIDE (__rela_iplt_end, .)
 
-.rela.dyn       0x0000000000400f38        0x0
+.rela.dyn       0x0000000000400f94        0x0
  *(.rela.init)
  *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
  *(.rela.fini)
@@ -275,177 +275,179 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
  *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
  *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
-                0x0000000000400f38                PROVIDE (__rel_iplt_start, .)
-                0x0000000000400f38                PROVIDE (__rel_iplt_end, .)
-                0x0000000000400f38                PROVIDE (__rela_iplt_start, .)
+                0x0000000000400f94                PROVIDE (__rel_iplt_start, .)
+                0x0000000000400f94                PROVIDE (__rel_iplt_end, .)
+                0x0000000000400f94                PROVIDE (__rela_iplt_start, .)
  *(.rela.iplt)
-                0x0000000000400f38                PROVIDE (__rela_iplt_end, .)
+                0x0000000000400f94                PROVIDE (__rela_iplt_end, .)
 
-.rel.plt        0x0000000000400f38        0x0
+.rel.plt        0x0000000000400f94        0x0
  *(.rel.plt)
- .rel.plt       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .rel.plt       0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .rela.plt
  *(.rela.plt)
 
-.init           0x0000000000400f38       0x6c
+.init           0x0000000000400f94       0x6c
  *(.init)
- .init          0x0000000000400f38       0x1c /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
-                0x0000000000400f38                _init
- .init          0x0000000000400f54       0x24 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
- .init          0x0000000000400f78       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .init          0x0000000000400f98        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .init          0x0000000000400f94       0x1c /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x0000000000400f94                _init
+ .init          0x0000000000400fb0       0x24 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .init          0x0000000000400fd4       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .init          0x0000000000400ff4        0xc /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
-.plt            0x0000000000400fa4        0x0
+.plt            0x0000000000401000        0x0
  *(.plt)
- .plt           0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .plt           0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
 
 .iplt
  *(.iplt)
 
-.text           0x0000000000400fb0     0x3f00
-                0x0000000000400fb0                _ftext = .
+.text           0x0000000000401000     0x3f30
+                0x0000000000401000                _ftext = .
  *(.text.unlikely .text.*_unlikely)
  *(.text.exit .text.exit.*)
  *(.text.startup .text.startup.*)
- .text.startup  0x0000000000400fb0     0x1220 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
-                0x0000000000400fb0                main
+ .text.startup  0x0000000000401000     0x1250 /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
+                0x0000000000401000                main
  *(.text.hot .text.hot.*)
  *(.text .stub .text.* .gnu.linkonce.t.*)
- .text          0x00000000004021d0       0x60 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
-                0x00000000004021d0                __start
- .text          0x0000000000402230        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
- .text          0x0000000000402230      0x130 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
- .text          0x0000000000402360     0x1a10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
-                0x0000000000403794                SntpTimeDiff
-                0x00000000004037c0                SntpUpdateTime
-                0x0000000000403c08                SntpAdjustTime
-                0x0000000000403c48                SntpSetTime
- .text          0x0000000000403d70       0xb0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
-                0x0000000000403d70                __fixunsdfsi
- .text          0x0000000000403e20      0x4b0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_addsub_df.o)
-                0x00000000004041ac                __adddf3
-                0x0000000000404238                __subdf3
- .text          0x00000000004042d0      0x300 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_mul_df.o)
-                0x00000000004042d0                __muldf3
- .text          0x00000000004045d0       0x90 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_gt_df.o)
-                0x00000000004045d0                __gtdf2
- .text          0x0000000000404660       0x90 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ge_df.o)
-                0x0000000000404660                __gedf2
- .text          0x00000000004046f0       0xc0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_si_to_df.o)
-                0x00000000004046f0                __floatsidf
- .text          0x00000000004047b0       0xc0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_df_to_si.o)
-                0x00000000004047b0                __fixdfsi
- .text          0x0000000000404870        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_thenan_df.o)
- .text          0x0000000000404870      0x110 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_usi_to_df.o)
-                0x0000000000404870                __floatunsidf
- .text          0x0000000000404980       0x40 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_lshrdi3.o)
-                0x0000000000404980                __lshrdi3
- .text          0x00000000004049c0       0x40 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ashldi3.o)
-                0x00000000004049c0                __ashldi3
- .text          0x0000000000404a00      0x240 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_pack_df.o)
-                0x0000000000404a00                __pack_d
- .text          0x0000000000404c40       0xf0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_unpack_df.o)
-                0x0000000000404c40                __unpack_d
- .text          0x0000000000404d30      0x130 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fpcmp_parts_df.o)
-                0x0000000000404d30                __fpcmp_parts_d
- .text          0x0000000000404e60       0x50 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .text          0x0000000000404eb0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .text          0x0000000000402250       0x60 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x0000000000402250                __start
+ .text          0x00000000004022b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .text          0x00000000004022b0      0x130 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .text          0x00000000004023e0     0x1a10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
+                0x0000000000403814                SntpTimeDiff
+                0x0000000000403840                SntpUpdateTime
+                0x0000000000403c88                SntpAdjustTime
+                0x0000000000403cc8                SntpSetTime
+ .text          0x0000000000403df0       0xb0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
+                0x0000000000403df0                __fixunsdfsi
+ .text          0x0000000000403ea0      0x4b0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_addsub_df.o)
+                0x000000000040422c                __adddf3
+                0x00000000004042b8                __subdf3
+ .text          0x0000000000404350      0x300 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_mul_df.o)
+                0x0000000000404350                __muldf3
+ .text          0x0000000000404650       0x90 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_gt_df.o)
+                0x0000000000404650                __gtdf2
+ .text          0x00000000004046e0       0x90 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ge_df.o)
+                0x00000000004046e0                __gedf2
+ .text          0x0000000000404770       0xc0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_si_to_df.o)
+                0x0000000000404770                __floatsidf
+ .text          0x0000000000404830       0xc0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_df_to_si.o)
+                0x0000000000404830                __fixdfsi
+ .text          0x00000000004048f0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_thenan_df.o)
+ .text          0x00000000004048f0      0x110 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_usi_to_df.o)
+                0x00000000004048f0                __floatunsidf
+ .text          0x0000000000404a00       0x40 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_lshrdi3.o)
+                0x0000000000404a00                __lshrdi3
+ .text          0x0000000000404a40       0x40 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ashldi3.o)
+                0x0000000000404a40                __ashldi3
+ .text          0x0000000000404a80      0x240 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_pack_df.o)
+                0x0000000000404a80                __pack_d
+ .text          0x0000000000404cc0       0xf0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_unpack_df.o)
+                0x0000000000404cc0                __unpack_d
+ .text          0x0000000000404db0      0x130 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fpcmp_parts_df.o)
+                0x0000000000404db0                __fpcmp_parts_d
+ .text          0x0000000000404ee0       0x50 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .text          0x0000000000404f30        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
  *(.gnu.warning)
  *(.mips16.fn.*)
  *(.mips16.call.*)
 
-.MIPS.stubs     0x0000000000404eb0      0x3d0
- .MIPS.stubs    0x0000000000404eb0      0x3d0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
-                0x0000000000404eb0                bind
-                0x0000000000404ec0                ATP_UTIL_Lookup_A_and_AAAA
-                0x0000000000404ed0                strtok_r
-                0x0000000000404ee0                ATP_MSG_SendSimpleMsg
-                0x0000000000404ef0                inet_aton
-                0x0000000000404f00                open
-                0x0000000000404f10                __ctype_b_loc
-                0x0000000000404f20                usleep
-                0x0000000000404f30                memcpy
-                0x0000000000404f40                connect
-                0x0000000000404f50                sleep
-                0x0000000000404f60                send
-                0x0000000000404f70                gettimeofday
-                0x0000000000404f80                atp_gethostbyname
-                0x0000000000404f90                ATP_UTIL_GetSysTime
-                0x0000000000404fa0                atol
-                0x0000000000404fb0                ATP_LOG_RecordItem
-                0x0000000000404fc0                strncmp
-                0x0000000000404fd0                __uClibc_main
-                0x0000000000404fe0                inet_pton
-                0x0000000000404ff0                recv
-                0x0000000000405000                strlen
-                0x0000000000405010                gmtime
-                0x0000000000405020                snprintf
-                0x0000000000405030                settimeofday
-                0x0000000000405040                read
-                0x0000000000405050                ATP_UTIL_SetFilterlistControlMark
-                0x0000000000405060                select
-                0x0000000000405070                getpid
-                0x0000000000405080                mktime
-                0x0000000000405090                fclose
-                0x00000000004050a0                ATP_UTIL_IsWanV4Up
-                0x00000000004050b0                fopen
-                0x00000000004050c0                ATP_MSG_Destroy
-                0x00000000004050d0                write
-                0x00000000004050e0                ATP_UTIL_IsLTEWanV4Up
-                0x00000000004050f0                localtime
-                0x0000000000405100                close
-                0x0000000000405110                ATP_UTIL_IsLTEWanV6Up
-                0x0000000000405120                fgets
-                0x0000000000405130                ATP_UTIL_IsExistDefaultRoute
-                0x0000000000405140                ATP_UTIL_ForkProcess
-                0x0000000000405150                memset
-                0x0000000000405160                if_nametoindex
-                0x0000000000405170                perror
-                0x0000000000405180                fprintf
-                0x0000000000405190                ATP_UTIL_IsWanV6Up
-                0x00000000004051a0                socket
-                0x00000000004051b0                exit
-                0x00000000004051c0                strcmp
-                0x00000000004051d0                free
-                0x00000000004051e0                atoi
-                0x00000000004051f0                strchr
-                0x0000000000405200                printf
-                0x0000000000405210                strdup
-                0x0000000000405220                puts
-                0x0000000000405230                ATP_MSG_Init
-                0x0000000000405240                signal
-                0x0000000000405250                inet_ntop
-                0x0000000000405260                adjtime
+.MIPS.stubs     0x0000000000404f30      0x3f0
+ .MIPS.stubs    0x0000000000404f30      0x3f0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x0000000000404f30                bind
+                0x0000000000404f40                ATP_UTIL_Lookup_A_and_AAAA
+                0x0000000000404f50                strtok_r
+                0x0000000000404f60                ATP_MSG_SendSimpleMsg
+                0x0000000000404f70                ATP_UTIL_IsLTETunnel6Up
+                0x0000000000404f80                inet_aton
+                0x0000000000404f90                open
+                0x0000000000404fa0                __ctype_b_loc
+                0x0000000000404fb0                usleep
+                0x0000000000404fc0                memcpy
+                0x0000000000404fd0                connect
+                0x0000000000404fe0                sleep
+                0x0000000000404ff0                send
+                0x0000000000405000                gettimeofday
+                0x0000000000405010                atp_gethostbyname
+                0x0000000000405020                ATP_UTIL_GetSysTime
+                0x0000000000405030                atol
+                0x0000000000405040                ATP_LOG_RecordItem
+                0x0000000000405050                strncmp
+                0x0000000000405060                __uClibc_main
+                0x0000000000405070                inet_pton
+                0x0000000000405080                recv
+                0x0000000000405090                strlen
+                0x00000000004050a0                gmtime
+                0x00000000004050b0                snprintf
+                0x00000000004050c0                settimeofday
+                0x00000000004050d0                read
+                0x00000000004050e0                ATP_UTIL_SetFilterlistControlMark
+                0x00000000004050f0                select
+                0x0000000000405100                getpid
+                0x0000000000405110                mktime
+                0x0000000000405120                fclose
+                0x0000000000405130                ATP_UTIL_IsWanV4Up
+                0x0000000000405140                fopen
+                0x0000000000405150                ATP_MSG_Destroy
+                0x0000000000405160                write
+                0x0000000000405170                ATP_UTIL_IsLTEWanV4Up
+                0x0000000000405180                localtime
+                0x0000000000405190                close
+                0x00000000004051a0                ATP_UTIL_IsLTEWanV6Up
+                0x00000000004051b0                fgets
+                0x00000000004051c0                ATP_UTIL_IsExistDefaultRoute
+                0x00000000004051d0                ATP_UTIL_ForkProcess
+                0x00000000004051e0                memset
+                0x00000000004051f0                if_nametoindex
+                0x0000000000405200                perror
+                0x0000000000405210                fprintf
+                0x0000000000405220                ATP_UTIL_IsWanV6Up
+                0x0000000000405230                socket
+                0x0000000000405240                ATP_UTIL_IsLTETunnel4Up
+                0x0000000000405250                exit
+                0x0000000000405260                strcmp
+                0x0000000000405270                free
+                0x0000000000405280                atoi
+                0x0000000000405290                strchr
+                0x00000000004052a0                printf
+                0x00000000004052b0                strdup
+                0x00000000004052c0                puts
+                0x00000000004052d0                ATP_MSG_Init
+                0x00000000004052e0                signal
+                0x00000000004052f0                inet_ntop
+                0x0000000000405300                adjtime
 
-.fini           0x0000000000405280       0x4c
+.fini           0x0000000000405320       0x4c
  *(.fini)
- .fini          0x0000000000405280       0x1c /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
-                0x0000000000405280                _fini
- .fini          0x000000000040529c       0x24 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
- .fini          0x00000000004052c0        0xc /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
-                0x00000000004052cc                PROVIDE (__etext, .)
-                0x00000000004052cc                PROVIDE (_etext, .)
-                0x00000000004052cc                PROVIDE (etext, .)
+ .fini          0x0000000000405320       0x1c /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+                0x0000000000405320                _fini
+ .fini          0x000000000040533c       0x24 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .fini          0x0000000000405360        0xc /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+                0x000000000040536c                PROVIDE (__etext, .)
+                0x000000000040536c                PROVIDE (_etext, .)
+                0x000000000040536c                PROVIDE (etext, .)
 
-.rodata         0x00000000004052d0      0x3f0
+.rodata         0x0000000000405370      0x3f0
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x00000000004052d0      0x2d0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
+                0x0000000000405370      0x2d0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
                                         0x2d4 (size before relaxing)
- .rodata        0x00000000004055a0       0xc0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
-                0x00000000004055b8                MILLION_D_I
-                0x00000000004055c0                MILLION_D
-                0x00000000004055c8                MILLION_L
-                0x00000000004055d0                NTP_SCALE_I
-                0x00000000004055d8                NTP_SCALE
-                0x00000000004055e0                UNIX_NTP_DIFF
- .rodata.cst8   0x0000000000405660       0x28 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
- .rodata.cst8   0x0000000000405688        0x8 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
- .rodata.cst8   0x0000000000405690        0x8 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_si_to_df.o)
- *fill*         0x0000000000405698        0x8 00
- .rodata        0x00000000004056a0       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_thenan_df.o)
-                0x00000000004056a0                __thenan_df
+ .rodata        0x0000000000405640       0xc0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
+                0x0000000000405658                MILLION_D_I
+                0x0000000000405660                MILLION_D
+                0x0000000000405668                MILLION_L
+                0x0000000000405670                NTP_SCALE_I
+                0x0000000000405678                NTP_SCALE
+                0x0000000000405680                UNIX_NTP_DIFF
+ .rodata.cst8   0x0000000000405700       0x28 /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
+ .rodata.cst8   0x0000000000405728        0x8 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
+ .rodata.cst8   0x0000000000405730        0x8 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_si_to_df.o)
+ *fill*         0x0000000000405738        0x8 00
+ .rodata        0x0000000000405740       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_thenan_df.o)
+                0x0000000000405740                __thenan_df
 
 .rodata1
  *(.rodata1)
@@ -456,19 +458,19 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
 .sbss2
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
 
-.eh_frame_hdr   0x00000000004056c0        0x0
+.eh_frame_hdr   0x0000000000405760        0x0
  *(.eh_frame_hdr)
- .eh_frame_hdr  0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .eh_frame_hdr  0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
-.eh_frame       0x00000000004056c0        0x4
+.eh_frame       0x0000000000405760        0x4
  *(.eh_frame)
- .eh_frame      0x00000000004056c0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
- .eh_frame      0x00000000004056c0        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .eh_frame      0x0000000000405760        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .eh_frame      0x0000000000405760        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
 
 .gcc_except_table
  *(.gcc_except_table .gcc_except_table.*)
-                0x00000000004056c4                . = (ALIGN (0x10000) - ((0x10000 - .) & 0xffff))
-                0x00000000004156c4                . = DATA_SEGMENT_ALIGN (0x10000, 0x1000)
+                0x0000000000405764                . = (ALIGN (0x10000) - ((0x10000 - .) & 0xffff))
+                0x0000000000415764                . = DATA_SEGMENT_ALIGN (0x10000, 0x1000)
 
 .eh_frame
  *(.eh_frame)
@@ -483,152 +485,152 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  *(.tbss .tbss.* .gnu.linkonce.tb.*)
  *(.tcommon)
 
-.preinit_array  0x00000000004156c4        0x0
-                0x00000000004156c4                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x0000000000415764        0x0
+                0x0000000000415764                PROVIDE (__preinit_array_start, .)
  *(.preinit_array)
-                0x00000000004156c4                PROVIDE (__preinit_array_end, .)
+                0x0000000000415764                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x00000000004156c4        0x0
-                0x00000000004156c4                PROVIDE (__init_array_start, .)
+.init_array     0x0000000000415764        0x0
+                0x0000000000415764                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array)
-                0x00000000004156c4                PROVIDE (__init_array_end, .)
+                0x0000000000415764                PROVIDE (__init_array_end, .)
 
-.fini_array     0x00000000004156c4        0x0
-                0x00000000004156c4                PROVIDE (__fini_array_start, .)
+.fini_array     0x0000000000415764        0x0
+                0x0000000000415764                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array)
-                0x00000000004156c4                PROVIDE (__fini_array_end, .)
+                0x0000000000415764                PROVIDE (__fini_array_end, .)
 
-.ctors          0x00000000004156c4        0x8
+.ctors          0x0000000000415764        0x8
  *crtbegin.o(.ctors)
- .ctors         0x00000000004156c4        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .ctors         0x0000000000415764        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
- .ctors         0x00000000004156c8        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .ctors         0x0000000000415768        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
 
-.dtors          0x00000000004156cc        0x8
+.dtors          0x000000000041576c        0x8
  *crtbegin.o(.dtors)
- .dtors         0x00000000004156cc        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .dtors         0x000000000041576c        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
  *crtbegin?.o(.dtors)
  *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
- .dtors         0x00000000004156d0        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
-                0x00000000004156d0                __DTOR_END__
+ .dtors         0x0000000000415770        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+                0x0000000000415770                __DTOR_END__
 
-.jcr            0x00000000004156d4        0x4
+.jcr            0x0000000000415774        0x4
  *(.jcr)
- .jcr           0x00000000004156d4        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
- .jcr           0x00000000004156d4        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .jcr           0x0000000000415774        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .jcr           0x0000000000415774        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
 
 .data.rel.ro
  *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
  *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
-                0x00000000004156d8                . = DATA_SEGMENT_RELRO_END (., 0x0)
+                0x0000000000415778                . = DATA_SEGMENT_RELRO_END (., 0x0)
 
-.data           0x00000000004156e0       0x30
-                0x00000000004156e0                _fdata = .
+.data           0x0000000000415780       0x30
+                0x0000000000415780                _fdata = .
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x00000000004156e0       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
-                0x00000000004156e0                data_start
-                0x00000000004156e0                __data_start
- .data          0x00000000004156f0        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
- .data          0x00000000004156f0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
- .data          0x00000000004156f0       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
-                0x00000000004156f0                refreshinterval
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_addsub_df.o)
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_mul_df.o)
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_gt_df.o)
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ge_df.o)
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_si_to_df.o)
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_df_to_si.o)
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_thenan_df.o)
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_usi_to_df.o)
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_lshrdi3.o)
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ashldi3.o)
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_pack_df.o)
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_unpack_df.o)
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fpcmp_parts_df.o)
- .data          0x0000000000415710        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .data          0x0000000000415710        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .data          0x0000000000415780       0x10 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x0000000000415780                data_start
+                0x0000000000415780                __data_start
+ .data          0x0000000000415790        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .data          0x0000000000415790        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .data          0x0000000000415790       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
+                0x0000000000415790                refreshinterval
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_addsub_df.o)
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_mul_df.o)
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_gt_df.o)
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ge_df.o)
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_si_to_df.o)
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_df_to_si.o)
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_thenan_df.o)
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_usi_to_df.o)
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_lshrdi3.o)
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ashldi3.o)
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_pack_df.o)
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_unpack_df.o)
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fpcmp_parts_df.o)
+ .data          0x00000000004157b0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .data          0x00000000004157b0        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
-.rld_map        0x0000000000415710        0x4
- .rld_map       0x0000000000415710        0x4 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
-                0x0000000000415710                __RLD_MAP
+.rld_map        0x00000000004157b0        0x4
+ .rld_map       0x00000000004157b0        0x4 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x00000000004157b0                __RLD_MAP
 
 .data1
  *(.data1)
 
-.got.plt        0x0000000000415714        0x0
+.got.plt        0x00000000004157b4        0x0
  *(.got.plt)
- .got.plt       0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
-                0x0000000000415714                . = .
-                0x000000000041d710                _gp = (ALIGN (0x10) + 0x7ff0)
+ .got.plt       0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x00000000004157b4                . = .
+                0x000000000041d7b0                _gp = (ALIGN (0x10) + 0x7ff0)
 
-.got            0x0000000000415720      0x160
+.got            0x00000000004157c0      0x168
  *(.got)
- .got           0x0000000000415720      0x160 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
-                0x0000000000415720                _GLOBAL_OFFSET_TABLE_
+ .got           0x00000000004157c0      0x168 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+                0x00000000004157c0                _GLOBAL_OFFSET_TABLE_
 
-.sdata          0x0000000000415880        0x4
+.sdata          0x0000000000415928        0x4
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0x0000000000415880        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
-                0x0000000000415880                __dso_handle
+ .sdata         0x0000000000415928        0x4 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+                0x0000000000415928                __dso_handle
 
 .lit8
  *(.lit8)
 
 .lit4
  *(.lit4)
-                0x0000000000415884                _edata = .
-                0x0000000000415884                PROVIDE (edata, .)
-                0x0000000000415884                __bss_start = .
-                0x0000000000415884                _fbss = .
+                0x000000000041592c                _edata = .
+                0x000000000041592c                PROVIDE (edata, .)
+                0x000000000041592c                __bss_start = .
+                0x000000000041592c                _fbss = .
 
 .sbss
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
  *(.scommon)
 
-.bss            0x0000000000415890      0x1f0
+.bss            0x0000000000415930      0x1f0
  *(.dynbss)
- .dynbss        0x0000000000000000        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .dynbss        0x0000000000000000        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0000000000415890        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
- .bss           0x0000000000415890        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
- .bss           0x0000000000415890       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
- .bss           0x00000000004158b0      0x1d0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
-                0x00000000004158b0                setup_connection
-                0x00000000004158b4                start_connection
-                0x00000000004158b8                utc_offset
-                0x00000000004158bc                g_stDstTz
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_addsub_df.o)
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_mul_df.o)
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_gt_df.o)
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ge_df.o)
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_si_to_df.o)
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_df_to_si.o)
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_thenan_df.o)
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_usi_to_df.o)
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_lshrdi3.o)
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ashldi3.o)
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_pack_df.o)
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_unpack_df.o)
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fpcmp_parts_df.o)
- .bss           0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .bss           0x0000000000415a80        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .bss           0x0000000000415930        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .bss           0x0000000000415930        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .bss           0x0000000000415930       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .bss           0x0000000000415950      0x1d0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
+                0x0000000000415950                setup_connection
+                0x0000000000415954                start_connection
+                0x0000000000415958                utc_offset
+                0x000000000041595c                g_stDstTz
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_addsub_df.o)
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_mul_df.o)
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_gt_df.o)
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ge_df.o)
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_si_to_df.o)
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_df_to_si.o)
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_thenan_df.o)
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_usi_to_df.o)
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_lshrdi3.o)
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ashldi3.o)
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_pack_df.o)
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_unpack_df.o)
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fpcmp_parts_df.o)
+ .bss           0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .bss           0x0000000000415b20        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
  *(COMMON)
-                0x0000000000415a80                . = ALIGN ((. != 0x0)?0x4:0x1)
-                0x0000000000415a80                . = ALIGN (0x4)
-                0x0000000000415a80                . = ALIGN (0x4)
-                0x0000000000415a80                _end = .
-                0x0000000000415a80                PROVIDE (end, .)
-                0x0000000000415a80                . = DATA_SEGMENT_END (.)
+                0x0000000000415b20                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x0000000000415b20                . = ALIGN (0x4)
+                0x0000000000415b20                . = ALIGN (0x4)
+                0x0000000000415b20                _end = .
+                0x0000000000415b20                PROVIDE (end, .)
+                0x0000000000415b20                . = DATA_SEGMENT_END (.)
 
 .stab
  *(.stab)
@@ -649,10 +651,10 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  *(.stab.indexstr)
 
 .pdr            0x0000000000000000      0x400
- .pdr           0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
- .pdr           0x0000000000000020       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .pdr           0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crt1.o
+ .pdr           0x0000000000000020       0x40 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
  .pdr           0x0000000000000060        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
- .pdr           0x0000000000000060      0x180 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
+ .pdr           0x0000000000000060      0x180 /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
  .pdr           0x00000000000001e0       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
  .pdr           0x0000000000000200       0x60 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_addsub_df.o)
  .pdr           0x0000000000000260       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_mul_df.o)
@@ -668,15 +670,15 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  .pdr           0x0000000000000380       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_unpack_df.o)
  .pdr           0x00000000000003a0       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fpcmp_parts_df.o)
  .pdr           0x00000000000003c0        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .pdr           0x00000000000003c0       0x40 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .pdr           0x00000000000003c0       0x40 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 .comment        0x0000000000000000       0x30
  *(.comment)
- .comment       0x0000000000000000       0x11 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .comment       0x0000000000000000       0x11 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
                                          0x12 (size before relaxing)
  .comment       0x0000000000000011       0x1f /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
                                          0x20 (size before relaxing)
- .comment       0x0000000000000000       0x20 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
+ .comment       0x0000000000000000       0x20 /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
  .comment       0x0000000000000000       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
  .comment       0x0000000000000000       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_addsub_df.o)
  .comment       0x0000000000000000       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_mul_df.o)
@@ -692,7 +694,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  .comment       0x0000000000000000       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_unpack_df.o)
  .comment       0x0000000000000000       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fpcmp_parts_df.o)
  .comment       0x0000000000000000       0x20 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .comment       0x0000000000000000       0x12 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .comment       0x0000000000000000       0x12 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 .debug
  *(.debug)
@@ -757,7 +759,7 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  .gnu.attributes
                 0x0000000000000000       0x10 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
  .gnu.attributes
-                0x0000000000000010       0x10 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
+                0x0000000000000010       0x10 /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
  .gnu.attributes
                 0x0000000000000020       0x10 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
  .gnu.attributes
@@ -797,27 +799,27 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  *(.gptab.bss)
  *(.gptab.sbss)
 
-.mdebug.abi32   0x0000000000415a80        0x0
+.mdebug.abi32   0x0000000000415b20        0x0
  *(.mdebug.abi32)
- .mdebug.abi32  0x0000000000415a80        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
- .mdebug.abi32  0x0000000000415a80        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_addsub_df.o)
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_mul_df.o)
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_gt_df.o)
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ge_df.o)
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_si_to_df.o)
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_df_to_si.o)
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_thenan_df.o)
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_usi_to_df.o)
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_lshrdi3.o)
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ashldi3.o)
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_pack_df.o)
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_unpack_df.o)
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fpcmp_parts_df.o)
- .mdebug.abi32  0x0000000000415a80        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
- .mdebug.abi32  0x0000000000415a80        0x0 /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
+ .mdebug.abi32  0x0000000000415b20        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crti.o
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtbegin.o
+ .mdebug.abi32  0x0000000000415b20        0x0 /usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp.o
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fixunsdfsi.o)
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_addsub_df.o)
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_mul_df.o)
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_gt_df.o)
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ge_df.o)
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_si_to_df.o)
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_df_to_si.o)
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_thenan_df.o)
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_usi_to_df.o)
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_lshrdi3.o)
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_ashldi3.o)
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_pack_df.o)
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_unpack_df.o)
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/libgcc.a(_fpcmp_parts_df.o)
+ .mdebug.abi32  0x0000000000415b20        0x0 /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/lib/gcc/mips-unknown-linux-uclibc/4.6.2/crtend.o
+ .mdebug.abi32  0x0000000000415b20        0x0 /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/lib/crtn.o
 
 .mdebug.abiN32
  *(.mdebug.abiN32)
@@ -844,4 +846,4 @@ LOAD /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips
  *(.note.GNU-stack)
  *(.gnu_debuglink)
  *(.gnu.lto_*)
-OUTPUT(/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp elf32-tradbigmips)
+OUTPUT(/usr1/xuhui/DT-W724V-20140311/output/package/atp/network/sntp/service/main/sntp elf32-tradbigmips)

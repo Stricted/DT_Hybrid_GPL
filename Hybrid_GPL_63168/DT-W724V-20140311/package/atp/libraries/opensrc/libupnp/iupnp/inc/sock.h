@@ -60,7 +60,7 @@ typedef struct
 } SOCKINFO;
 
 #ifdef __cplusplus
-#extern "C" {
+extern "C" {
 #endif
 
 /*!
@@ -74,7 +74,7 @@ static UPNP_INLINE int sock_close(
 {
 	int ret = -1;
 
-	if (sock != -1)
+	if (sock != INVALID_SOCKET)
 		ret = UpnpCloseSocket(sock);
 
 	return ret;
@@ -143,7 +143,7 @@ int sock_read(
 	/*! [out] Buffer to get data to. */
 	char* buffer,
 	/*! [in] Size of the buffer. */
-	int bufsize,
+	size_t bufsize,
 	/*! [in,out] timeout value. */
 	int *timeoutSecs);
 
@@ -161,7 +161,7 @@ int sock_write(
 	/*! [in] Buffer to send data from. */
 	const char *buffer,
 	/*! [in] Size of the buffer. */
-	int bufsize,
+	size_t bufsize,
 	/*! [in,out] timeout value. */
 	int *timeoutSecs);
 

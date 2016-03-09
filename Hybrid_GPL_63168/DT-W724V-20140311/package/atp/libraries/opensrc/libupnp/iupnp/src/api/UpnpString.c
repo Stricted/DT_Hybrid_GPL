@@ -47,6 +47,8 @@
 	{
 		size_t strsize = strnlen(__string, __n);
 		char *newstr = (char *)malloc(strsize + 1);
+		if (newstr == NULL)
+			return NULL;
 
 		strncpy(newstr, __string, strsize);
 		newstr[strsize] = 0;
@@ -72,7 +74,7 @@ struct SUpnpString
 UpnpString *UpnpString_new()
 {
 	/* All bytes are zero, and so is the length of the string. */
-	struct SUpnpString *p = calloc(1, sizeof (struct SUpnpString));
+	struct SUpnpString *p = calloc((size_t)1, sizeof (struct SUpnpString));
 	if (p == NULL) {
 		goto error_handler1;
 	}
@@ -81,7 +83,7 @@ UpnpString *UpnpString_new()
 #endif
 
 	/* This byte is zero, calloc does initialize it. */
-	p->m_string = calloc(1, 1);
+	p->m_string = calloc((size_t)1, (size_t)1);
 	if (p->m_string == NULL) {
 		goto error_handler2;
 	}
@@ -101,7 +103,7 @@ void UpnpString_delete(UpnpString *p)
 		
 	if (!q) return;
 
-	q->m_length = 0;
+	q->m_length = (size_t)0;
 
 	free(q->m_string);
 	q->m_string = NULL;
@@ -111,7 +113,7 @@ void UpnpString_delete(UpnpString *p)
 
 UpnpString *UpnpString_dup(const UpnpString *p)
 {
-	struct SUpnpString *q = calloc(1, sizeof (struct SUpnpString));
+	struct SUpnpString *q = calloc((size_t)1, sizeof (struct SUpnpString));
 	if (q == NULL) {
 		goto error_handler1;
 	}
@@ -182,7 +184,7 @@ error_handler1:
 
 void UpnpString_clear(UpnpString *p)
 {
-	((struct SUpnpString *)p)->m_length = 0;
+	((struct SUpnpString *)p)->m_length = (size_t)0;
 	/* No need to realloc now, will do later when needed. */
 	((struct SUpnpString *)p)->m_string[0] = 0;
 }

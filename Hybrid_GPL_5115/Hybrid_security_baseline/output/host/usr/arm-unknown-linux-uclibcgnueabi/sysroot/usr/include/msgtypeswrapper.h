@@ -38,4 +38,3 @@
 #include "msg/sntpmsgtypes.h"
 #include "msg/kcmsmonitormsgtypes.h"
 #include "msg/bhalmsgtypes.h"
-#include "msg/gplmsgtypes.h"

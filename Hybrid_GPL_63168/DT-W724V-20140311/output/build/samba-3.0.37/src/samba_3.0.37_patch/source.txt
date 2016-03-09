@@ -1,5 +1,0 @@
-﻿source:
-
-http://ftp.samba.org/pub/samba/patches/security/
-
-

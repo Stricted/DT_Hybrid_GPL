@@ -5,6 +5,7 @@
  *
  * Copyright (c) 2000-2003 Intel Corporation 
  * All rights reserved. 
+ * Copyright (c) 2012 France Telecom All rights reserved. 
  *
  * Redistribution and use in source and binary forms, with or without 
  * modification, are permitted provided that the following conditions are met: 
@@ -76,7 +77,8 @@ extern "C" {
 
 
 #define ITHREAD_STACK_MIN PTHREAD_STACK_MIN
-
+#define ITHREAD_CREATE_DETACHED PTHREAD_CREATE_DETACHED
+#define ITHREAD_CREATE_JOINABLE PTHREAD_CREATE_JOINABLE
 
 /***************************************************************************
  * Name: ithread_t
@@ -779,6 +781,22 @@ static UPNP_INLINE int ithread_cleanup_thread(void) {
 #define ithread_attr_setstacksize pthread_attr_setstacksize
 
   /****************************************************************************
+   * Function: ithread_attr_setdetachstate
+   *
+   *  Description:
+   *      Sets detach state of a thread attribute object.
+   *  Parameters:
+   *      ithread_attr_t *attr (must be valid non NULL pointer to
+   *      ithread_attr_t)
+   *      int detachstate (value of detachstate must be ITHREAD_CREATE_DETACHED
+   *      or ITHREAD_CREATE_JOINABLE)
+   *  Returns:
+   *      0 on success. Nonzero on failure.
+   *      See man page for pthread_attr_setdetachstate
+   ***************************************************************************/
+#define ithread_attr_setdetachstate pthread_attr_setdetachstate
+
+  /****************************************************************************
    * Function: ithread_create
    *
    *  Description:
@@ -922,7 +940,8 @@ static UPNP_INLINE int ithread_cleanup_thread(void) {
 #endif
 
 
-#if !defined(PTHREAD_MUTEX_RECURSIVE) && !defined(__DragonFly__)
+#if !defined(PTHREAD_MUTEX_RECURSIVE) && !defined(__DragonFly__) && !defined(UPNP_USE_MSVCPP)
+/* !defined(UPNP_USE_MSVCPP) should probably also have pthreads version check - but it's not clear if that is possible */
 /* NK: Added for satisfying the gcc compiler */
 EXPORT_SPEC int pthread_mutexattr_setkind_np(pthread_mutexattr_t *attr, int kind);
 #endif

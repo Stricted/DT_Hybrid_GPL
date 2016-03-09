@@ -2,6 +2,7 @@
  *
  * Copyright (c) 2000-2003 Intel Corporation 
  * All rights reserved. 
+ * Copyright (C) 2012 France Telecom All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without 
  * modification, are permitted provided that the following conditions are met: 
@@ -58,6 +59,7 @@
 
 #ifdef WIN32
 #include <string.h>
+#define snprintf _snprintf
 #endif /* WIN32 */
 
 /*!
@@ -98,6 +100,8 @@ void ssdp_handle_ctrlpt_msg(http_message_t *hmsg, struct sockaddr_storage *dest_
 	ResultData *threadData = NULL;
 	ThreadPoolJob job;
 
+	memset(&job, 0, sizeof(job));
+
 	/* we are assuming that there can be only one client supported at a time */
 	HandleReadLock();
 
@@ -128,7 +132,7 @@ void ssdp_handle_ctrlpt_msg(http_message_t *hmsg, struct sockaddr_storage *dest_
 		linecopylen(param.Date, hdr_value.buf, hdr_value.length);
 	}
 	/* dest addr */
-	memcpy(&param.DestAddr, dest_addr, sizeof(struct sockaddr_in));
+	memcpy(&param.DestAddr, dest_addr, sizeof(struct sockaddr_storage));
 	/* EXT */
 	param.Ext[0] = '\0';
 	if (httpmsg_find_hdr(hmsg, HDR_EXT, &hdr_value) != NULL) {
@@ -146,10 +150,10 @@ void ssdp_handle_ctrlpt_msg(http_message_t *hmsg, struct sockaddr_storage *dest_
 		linecopylen(param.Os, hdr_value.buf, hdr_value.length);
 	}
 	/* clear everything */
-	param.DeviceId[0] = '\0';
-	param.DeviceType[0] = '\0';
-	param.ServiceType[0] = '\0';
-       param.isRootDev = 0;
+	memset(param.DeviceId, 0, sizeof(param.DeviceId));
+	memset(param.DeviceType, 0, sizeof(param.DeviceType));
+	memset(param.ServiceType, 0, sizeof(param.ServiceType));
+	param.isRootDev = 0;
 	/* not used; version is in ServiceType */
 	param.ServiceVer[0] = '\0';
 	event.UDN[0] = '\0';
@@ -161,10 +165,9 @@ void ssdp_handle_ctrlpt_msg(http_message_t *hmsg, struct sockaddr_storage *dest_
 		hdr_value.buf[hdr_value.length] = '\0';
 		nt_found = (ssdp_request_type(hdr_value.buf, &event) == 0);
 		hdr_value.buf[hdr_value.length] = save_char;
-              if(event.RequestType == SSDP_ROOTDEVICE)
-              {
-                  param.isRootDev = 1;
-              }
+		if(event.RequestType == SSDP_ROOTDEVICE) {
+			param.isRootDev = 1;
+		}
 	}
 	usn_found = FALSE;
 	if (httpmsg_find_hdr(hmsg, HDR_USN, &hdr_value) != NULL) {
@@ -174,9 +177,11 @@ void ssdp_handle_ctrlpt_msg(http_message_t *hmsg, struct sockaddr_storage *dest_
 		hdr_value.buf[hdr_value.length] = save_char;
 	}
 	if (nt_found || usn_found) {
-		UPNP_STRNCPY(param.DeviceId, event.UDN, sizeof(param.DeviceId));
-		UPNP_STRNCPY(param.DeviceType, event.DeviceType, sizeof(param.DeviceType));
-		UPNP_STRNCPY(param.ServiceType, event.ServiceType, sizeof(param.ServiceType));
+		strncpy(param.DeviceId, event.UDN, sizeof(param.DeviceId) - 1);
+		strncpy(param.DeviceType, event.DeviceType,
+			sizeof(param.DeviceType) - 1);
+		strncpy(param.ServiceType, event.ServiceType,
+			sizeof(param.ServiceType) - 1);
 	}
 	/* ADVERT. OR BYEBYE */
 	if (hmsg->is_request) {
@@ -220,10 +225,9 @@ void ssdp_handle_ctrlpt_msg(http_message_t *hmsg, struct sockaddr_storage *dest_
 			st_found =
 			    ssdp_request_type(hdr_value.buf, &event) == 0;
 			hdr_value.buf[hdr_value.length] = save_char;
-                     if(event.RequestType == SSDP_ROOTDEVICE)
-                     {
-                         param.isRootDev = 1;
-                     }
+			if(event.RequestType == SSDP_ROOTDEVICE) {
+				param.isRootDev = 1;
+			}
 		}
 		if (hmsg->status_code != HTTP_OK ||
 		    param.Expires <= 0 ||
@@ -242,7 +246,6 @@ void ssdp_handle_ctrlpt_msg(http_message_t *hmsg, struct sockaddr_storage *dest_
 		/*hdr_value.buf[ hdr_value.length ] = '\0'; */
 		while (node != NULL) {
 			searchArg = node->item;
-			matched = 0;
 			/* check for match of ST header and search target */
 			switch (searchArg->requestType) {
 			case SSDP_ALL:
@@ -389,6 +392,7 @@ static int CreateClientRequestPacket(
 /*!
  * \brief
  */
+#ifdef UPNP_ENABLE_IPV6
 static int CreateClientRequestPacketUlaGua(
 	/*! [in,out] . */
 	char *RqstBuf,
@@ -461,6 +465,7 @@ static int CreateClientRequestPacketUlaGua(
 
 	return UPNP_E_SUCCESS;
 }
+#endif /* UPNP_ENABLE_IPV6 */
 
 /*!
  * \brief
@@ -537,7 +542,7 @@ int SearchByTarget(int Mx, char *St, void *Cookie)
 	struct Handle_Info *ctrlpt_info = NULL;
 	enum SsdpSearchType requestType;
 	unsigned long addrv4 = inet_addr(gIF_IPV4);
-	int max_fd = 0;
+	SOCKET max_fd = 0;
 	int retVal;
 
 	/*ThreadData *ThData; */
@@ -568,13 +573,13 @@ int SearchByTarget(int Mx, char *St, void *Cookie)
 #endif
 
 	memset(&__ss_v4, 0, sizeof(__ss_v4));
-	destAddr4->sin_family = AF_INET;
+	destAddr4->sin_family = (sa_family_t)AF_INET;
 	inet_pton(AF_INET, SSDP_IP, &destAddr4->sin_addr);
 	destAddr4->sin_port = htons(SSDP_PORT);
 
 #ifdef UPNP_ENABLE_IPV6
 	memset(&__ss_v6, 0, sizeof(__ss_v6));
-	destAddr6->sin6_family = AF_INET6;
+	destAddr6->sin6_family = (sa_family_t)AF_INET6;
 	inet_pton(AF_INET6, SSDP_IPV6_SITELOCAL, &destAddr6->sin6_addr);
 	destAddr6->sin6_port = htons(SSDP_PORT);
 	destAddr6->sin6_scope_id = gIF_INDEX;
@@ -587,11 +592,6 @@ int SearchByTarget(int Mx, char *St, void *Cookie)
 		return UPNP_E_INTERNAL_ERROR;
 	}
 	newArg = (SsdpSearchArg *) malloc(sizeof(SsdpSearchArg));
-	if (0 == newArg)
-	{
-		HandleUnlock();
-		return UPNP_E_INTERNAL_ERROR;
-	}
 	newArg->searchTarget = strdup(St);
 	newArg->cookie = Cookie;
 	newArg->requestType = requestType;
@@ -641,6 +641,9 @@ int SearchByTarget(int Mx, char *St, void *Cookie)
 		int NumCopy = 0;
 
 		while (NumCopy < NUM_SSDP_COPY) {
+			UpnpPrintf(UPNP_INFO, SSDP, __FILE__, __LINE__,
+				   ">>> SSDP SEND M-SEARCH >>>\n%s\n",
+				   ReqBufv6UlaGua);
 			sendto(gSsdpReqSocket6,
 			       ReqBufv6UlaGua, strlen(ReqBufv6UlaGua), 0,
 			       (struct sockaddr *)&__ss_v6,

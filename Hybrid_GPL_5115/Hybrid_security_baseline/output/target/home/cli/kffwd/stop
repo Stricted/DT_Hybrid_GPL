@@ -1,9 +1,0 @@
-[settings]
-functionname  = hi_kernel_ffwd_stop;
-attributenum  = 0;
-attributeflag = 0;
-
-[parameter]
-
-[help] 
-stop ffwd

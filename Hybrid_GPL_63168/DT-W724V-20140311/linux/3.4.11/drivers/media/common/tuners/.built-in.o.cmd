@@ -1,1 +1,0 @@
-cmd_drivers/media/common/tuners/built-in.o :=  rm -f drivers/media/common/tuners/built-in.o; /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/bin/mips-unknown-linux-uclibc-ar rcsD drivers/media/common/tuners/built-in.o

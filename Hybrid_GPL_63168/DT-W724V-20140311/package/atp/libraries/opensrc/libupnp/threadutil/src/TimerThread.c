@@ -2,6 +2,7 @@
  *
  * Copyright (c) 2000-2003 Intel Corporation 
  * All rights reserved. 
+ * Copyright (c) 2012 France Telecom All rights reserved. 
  *
  * Redistribution and use in source and binary forms, with or without 
  * modification, are permitted provided that the following conditions are met: 
@@ -84,6 +85,10 @@ static void *TimerThreadWorker(
         /* Get the next event if possible. */
         if (timer->eventQ.size > 0) {
             head = ListHead( &timer->eventQ );
+            if (head == NULL) {
+                ithread_mutex_unlock( &timer->mutex );
+                return NULL;
+            }
             nextEvent = ( TimerEvent * ) head->item;
             nextEventTime = nextEvent->eventTime;
         }
@@ -102,7 +107,7 @@ static void *TimerThreadWorker(
         }
         if (nextEvent) {
             timeToWait.tv_nsec = 0;
-            timeToWait.tv_sec = nextEvent->eventTime;
+            timeToWait.tv_sec = (long)nextEvent->eventTime;
             ithread_cond_timedwait( &timer->condition, &timer->mutex,
                                     &timeToWait );
         } else {
@@ -128,9 +133,10 @@ static int CalculateEventTime(
 
     assert( timeout != NULL );
 
-    if (type == ABS_SEC)
+    switch (type) {
+    case ABS_SEC:
         return 0;
-    else /*if (type == REL_SEC) */{
+    default: /* REL_SEC) */
         time(&now);
         ( *timeout ) += now;
         return 0;

@@ -1,7 +1,7 @@
-cmd_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o := /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/host/usr/bin/arm-hsan-linux-uclibcgnueabi-gcc -Wp,-MD,/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/.atpnandparts.o.d  -nostdinc -isystem /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/include -Iinclude  -I/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include -include include/linux/autoconf.h -D__KERNEL__ -Iinclude -I/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include -include include/linux/autoconf.h -mlittle-endian -Iarch/arm/mach-sd5115/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -I/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/staging/usr/include -O2 -marm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -mabi=aapcs-linux -mno-thumb-interwork -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -DCFG_LINUX_NET_PACKED -I. -I/include -I/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/driver/hisi///include -I/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/include -I/flash -I -I -I/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/staging/usr/include   -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(atpnandparts)"  -D"KBUILD_MODNAME=KBUILD_STR(atpnandparts)"  -c -o /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.c
+cmd_/usr1/xuhui/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o := /usr1/xuhui/Hybrid_security_baseline/output/host/usr/bin/arm-hsan-linux-uclibcgnueabi-gcc -Wp,-MD,/usr1/xuhui/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/.atpnandparts.o.d  -nostdinc -isystem /opt/toolchain_hisi/arm-hsan-linux-uclibcgnueabi/bin/../lib/gcc/arm-hsan-linux-uclibcgnueabi/4.4.6/include -Iinclude  -I/usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include -include include/linux/autoconf.h -D__KERNEL__ -Iinclude -I/usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include -include include/linux/autoconf.h -mlittle-endian -Iarch/arm/mach-sd5115/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -I/usr1/xuhui/Hybrid_security_baseline/output/staging/usr/include -O2 -marm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -mabi=aapcs-linux -mno-thumb-interwork -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -DCFG_LINUX_NET_PACKED -I. -I/include -I/usr1/xuhui/Hybrid_security_baseline/driver/hisi///include -I/usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/include -I/flash -I -I -I/usr1/xuhui/Hybrid_security_baseline/output/staging/usr/include   -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(atpnandparts)"  -D"KBUILD_MODNAME=KBUILD_STR(atpnandparts)"  -c -o /usr1/xuhui/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o /usr1/xuhui/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.c
 
-deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o := \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.c \
+deps_/usr1/xuhui/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o := \
+  /usr1/xuhui/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.c \
     $(wildcard include/config/index.h) \
   include/linux/mtd/mtd.h \
     $(wildcard include/config/mtd/partitions.h) \
@@ -12,7 +12,7 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
     $(wildcard include/config/lbd.h) \
     $(wildcard include/config/phys/addr/t/64bit.h) \
     $(wildcard include/config/64bit.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/types.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/types.h \
   include/asm-generic/int-ll64.h \
   include/linux/posix_types.h \
   include/linux/stddef.h \
@@ -26,7 +26,7 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
     $(wildcard include/config/optimize/inlining.h) \
     $(wildcard include/config/brcm/bounce.h) \
   include/linux/compiler-gcc4.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/posix_types.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/posix_types.h \
   include/linux/module.h \
     $(wildcard include/config/modules.h) \
     $(wildcard include/config/modversions.h) \
@@ -43,21 +43,21 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
     $(wildcard include/config/debug/list.h) \
   include/linux/poison.h \
   include/linux/prefetch.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/processor.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/processor.h \
     $(wildcard include/config/mmu.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/ptrace.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/ptrace.h \
     $(wildcard include/config/arm/thumb.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/hwcap.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/cache.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/hwcap.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/cache.h \
     $(wildcard include/config/aeabi.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/system.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/system.h \
     $(wildcard include/config/cpu/xsc3.h) \
     $(wildcard include/config/cpu/fa526.h) \
     $(wildcard include/config/cpu/sa1100.h) \
     $(wildcard include/config/cpu/sa110.h) \
     $(wildcard include/config/cpu/32v6k.h) \
   include/linux/linkage.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/linkage.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/linkage.h \
   include/linux/irqflags.h \
     $(wildcard include/config/trace/irqflags.h) \
     $(wildcard include/config/irqsoff/tracer.h) \
@@ -65,10 +65,10 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
     $(wildcard include/config/trace/irqflags/support.h) \
     $(wildcard include/config/x86.h) \
   include/linux/typecheck.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/irqflags.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/irqflags.h \
   include/asm-generic/cmpxchg-local.h \
   include/linux/stat.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/stat.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/stat.h \
   include/linux/time.h \
   include/linux/cache.h \
     $(wildcard include/config/arch/has/cache/line/size.h) \
@@ -87,7 +87,7 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
     $(wildcard include/config/generic/find/first/bit.h) \
     $(wildcard include/config/generic/find/last/bit.h) \
     $(wildcard include/config/generic/find/next/bit.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/bitops.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/bitops.h \
   include/asm-generic/bitops/non-atomic.h \
   include/asm-generic/bitops/fls64.h \
   include/asm-generic/bitops/sched.h \
@@ -98,15 +98,15 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
     $(wildcard include/config/arch/has/ilog2/u64.h) \
   include/linux/ratelimit.h \
   include/linux/param.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/param.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/param.h \
     $(wildcard include/config/hz.h) \
   include/linux/dynamic_debug.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/byteorder.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
   include/linux/swab.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/swab.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/swab.h \
   include/linux/byteorder/generic.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/bug.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/bug.h \
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/debug/bugverbose.h) \
   include/asm-generic/bug.h \
@@ -122,12 +122,12 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
     $(wildcard include/config/preempt/notifiers.h) \
   include/linux/thread_info.h \
     $(wildcard include/config/compat.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/thread_info.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/thread_info.h \
     $(wildcard include/config/arm/thumbee.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/fpstate.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/fpstate.h \
     $(wildcard include/config/vfpv3.h) \
     $(wildcard include/config/iwmmxt.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/domain.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/domain.h \
     $(wildcard include/config/io/36.h) \
   include/linux/stringify.h \
   include/linux/bottom_half.h \
@@ -139,10 +139,10 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
     $(wildcard include/config/generic/hardirqs.h) \
   include/linux/spinlock_up.h \
   include/linux/spinlock_api_up.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/atomic.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/atomic.h \
   include/asm-generic/atomic.h \
   include/linux/math64.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/div64.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/div64.h \
   include/linux/kmod.h \
   include/linux/gfp.h \
     $(wildcard include/config/zone/dma.h) \
@@ -167,7 +167,7 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
     $(wildcard include/config/holes/in/zone.h) \
     $(wildcard include/config/arch/has/holes/memorymodel.h) \
   include/linux/wait.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/current.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/current.h \
   include/linux/threads.h \
     $(wildcard include/config/nr/cpus.h) \
     $(wildcard include/config/base/small.h) \
@@ -180,12 +180,12 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
   include/linux/bitmap.h \
   include/linux/string.h \
     $(wildcard include/config/binary/printf.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/string.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/string.h \
   include/linux/pageblock-flags.h \
     $(wildcard include/config/hugetlb/page.h) \
     $(wildcard include/config/hugetlb/page/size/variable.h) \
   include/linux/bounds.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/page.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/page.h \
     $(wildcard include/config/cpu/copy/v3.h) \
     $(wildcard include/config/cpu/copy/v4wt.h) \
     $(wildcard include/config/cpu/copy/v4wb.h) \
@@ -193,7 +193,7 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
     $(wildcard include/config/cpu/copy/fa.h) \
     $(wildcard include/config/cpu/xscale.h) \
     $(wildcard include/config/cpu/copy/v6.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/glue.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/glue.h \
     $(wildcard include/config/cpu/arm610.h) \
     $(wildcard include/config/cpu/arm710.h) \
     $(wildcard include/config/cpu/abrt/lv4t.h) \
@@ -205,14 +205,14 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
     $(wildcard include/config/cpu/abrt/ev7.h) \
     $(wildcard include/config/cpu/pabrt/ifar.h) \
     $(wildcard include/config/cpu/pabrt/noifar.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/memory.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/memory.h \
     $(wildcard include/config/page/offset.h) \
     $(wildcard include/config/dram/size.h) \
     $(wildcard include/config/dram/base.h) \
   include/linux/const.h \
   arch/arm/mach-sd5115/include/mach/memory.h \
     $(wildcard include/config/hisi/sd5115/af/fpga.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/sizes.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/sizes.h \
   include/asm-generic/memory_model.h \
     $(wildcard include/config/sparsemem/vmemmap.h) \
   include/asm-generic/page.h \
@@ -221,7 +221,7 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
     $(wildcard include/config/memory/hotremove.h) \
   include/linux/notifier.h \
   include/linux/errno.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/errno.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/errno.h \
   include/asm-generic/errno.h \
   include/asm-generic/errno-base.h \
   include/linux/mutex.h \
@@ -240,12 +240,12 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
     $(wildcard include/config/debug/per/cpu/maps.h) \
   include/linux/smp.h \
     $(wildcard include/config/use/generic/smp/helpers.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/topology.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/topology.h \
   include/asm-generic/topology.h \
   include/linux/elf.h \
   include/linux/elf-em.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/elf.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/user.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/elf.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/user.h \
   include/linux/kobject.h \
   include/linux/sysfs.h \
   include/linux/kref.h \
@@ -262,7 +262,7 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
   include/linux/completion.h \
   include/linux/rcuclassic.h \
     $(wildcard include/config/rcu/cpu/stall/detector.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/local.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/local.h \
   include/asm-generic/local.h \
   include/linux/percpu.h \
     $(wildcard include/config/have/dynamic/per/cpu/area.h) \
@@ -277,11 +277,11 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
   include/trace/kmemtrace.h \
   include/linux/kmalloc_sizes.h \
   include/linux/pfn.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/percpu.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/percpu.h \
   include/asm-generic/percpu.h \
     $(wildcard include/config/have/setup/per/cpu/area.h) \
   include/linux/percpu-defs.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/module.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/module.h \
     $(wildcard include/config/arm/unwind.h) \
   include/linux/uio.h \
   include/linux/device.h \
@@ -291,7 +291,7 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
   include/linux/pm.h \
     $(wildcard include/config/pm/sleep.h) \
   include/linux/semaphore.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/device.h \
+  /usr1/xuhui/Hybrid_security_baseline/linux/2.6.30/arch/arm/include/asm/device.h \
     $(wildcard include/config/dmabounce.h) \
   include/linux/pm_wakeup.h \
     $(wildcard include/config/pm.h) \
@@ -301,9 +301,9 @@ deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/l
     $(wildcard include/config/brcmnand/mtd/extension.h) \
   include/linux/mtd/partitions.h \
     $(wildcard include/config/mtd/cmdline/parts.h) \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/staging/usr/include/atpnandparts.h \
-  /home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/output/staging/usr/include/kerneltag.h \
+  /usr1/xuhui/Hybrid_security_baseline/output/staging/usr/include/atpnandparts.h \
+  /usr1/xuhui/Hybrid_security_baseline/output/staging/usr/include/kerneltag.h \
 
-/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o: $(deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o)
+/usr1/xuhui/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o: $(deps_/usr1/xuhui/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o)
 
-$(deps_/home/zengyao/DT_Hybrid_GPL_1.00.052/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o):
+$(deps_/usr1/xuhui/Hybrid_security_baseline/package/atp/libraries/private/bhalapi/kernel/src/atpnandparts.o):

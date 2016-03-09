@@ -172,10 +172,8 @@ Upnp_Handle_Type GetDeviceHandleInfo(
 
 
 extern char gIF_NAME[LINE_SIZE];
-/*! INET_ADDRSTRLEN. */
-extern char gIF_IPV4[22];
-/*! INET6_ADDRSTRLEN. */
-extern char gIF_IPV6[65];
+extern char gIF_IPV4[INET_ADDRSTRLEN];
+extern char gIF_IPV6[INET6_ADDRSTRLEN];
 
 extern char gIF_IPV6_ULA_GUA[INET6_ADDRSTRLEN];
 
@@ -309,7 +307,6 @@ int PrintHandleInfo(
 
 extern WebServerState bWebServerState;
 
-#define UPNP_STRNCPY(dst, src, n)  do { strncpy((dst), (src), n-1); *((dst)+(n)-1) = 0; } while(0)
 
 #endif /* UPNPAPI_H */
 

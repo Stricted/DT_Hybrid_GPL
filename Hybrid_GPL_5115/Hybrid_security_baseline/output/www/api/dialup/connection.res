@@ -1,1 +1,0 @@
-vpath="api/modem_1/profileTrigger"E5element="MaxIdelTime|ConnectMode|MTU"vpath="api/modem_1/EthprofileTrigger"E5element="Wireline_ConnectMode"

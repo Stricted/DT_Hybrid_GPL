@@ -1,1 +1,0 @@
-vpath="api/modem_1/savepinstates_only"E5element="SimSavepinStatus|SimSavepinScid|SimSavepinPIN"

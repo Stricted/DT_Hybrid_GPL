@@ -1,1 +1,0 @@
-vpath="api/modem_1/syscfg"E5element="NetworkMode|NetworkBand"

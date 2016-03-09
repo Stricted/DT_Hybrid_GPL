@@ -1,8 +1,0 @@
-[settings]
-functionname=hi_kernel_cli_zarlink_slic_exit;  
-attributenum=0;
-attributeflag = 1 ;   //0:close 1:open
-
-[parameter]
-
-[help]

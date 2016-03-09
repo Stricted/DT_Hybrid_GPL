@@ -1,1 +1,0 @@
-vpath="api/modem_1/nat"E5element="NatStatus"ATPelement="NatStatus"

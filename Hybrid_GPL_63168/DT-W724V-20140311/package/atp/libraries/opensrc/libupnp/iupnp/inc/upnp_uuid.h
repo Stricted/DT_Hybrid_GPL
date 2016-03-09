@@ -1,5 +1,5 @@
-#ifndef UPNP_UUID_H
-#define UPNP_UUID_H
+#ifndef UUID_H
+#define UUID_H
 
 /*
  * Copyright (c) 1990- 1993, 1996 Open Software Foundation, Inc.

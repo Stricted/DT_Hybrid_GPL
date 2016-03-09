@@ -7,7 +7,7 @@ SHELL = /bin/sh
 
 
 # Installation paths.
-prefix = /home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/bin
+prefix = /usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/bin
 exec_prefix = ${prefix}
 bindir = ${exec_prefix}/bin
 mandir = ${datarootdir}/man
@@ -30,10 +30,10 @@ top_builddir = .
 # Toolchain settings.
 CC = /opt/toolchains/crosstools-mips-gcc-4.6-linux-3.4-uclibc-0.9.32-binutils-2.21/usr/bin/mips-unknown-linux-uclibc-gcc
 INCLUDES = -I$(top_srcdir)/src
-CPPFLAGS = -DHAVE_CONFIG_H -I$(top_builddir) -I$(top_srcdir)/lib  -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/include  -I/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include -D_LARGEFILE64_SOURCE -DNE_LFS -DXML_BYTE_ORDER=21 -DXML_DTD -I$(top_srcdir)/lib/expat/xmlparse -I$(top_srcdir)/lib/expat/xmltok -DLOCALEDIR=\"$(localedir)\"
+CPPFLAGS = -DHAVE_CONFIG_H -I$(top_builddir) -I$(top_srcdir)/lib  -I/usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/include  -I/usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/usr/include -D_LARGEFILE64_SOURCE -DNE_LFS -DXML_BYTE_ORDER=21 -DXML_DTD -I$(top_srcdir)/lib/expat/xmlparse -I$(top_srcdir)/lib/expat/xmltok -DLOCALEDIR=\"$(localedir)\"
 CFLAGS = -g -O2 -I$(top_srcdir)/lib/neon -Wall -Wmissing-declarations -Wshadow -Wreturn-type -Wsign-compare -Wundef -Wpointer-arith -Wbad-function-cast -Wformat-security
 ALL_CFLAGS = $(CPPFLAGS) $(INCLUDES) $(CFLAGS)
-LDFLAGS =  -L/home/zengyao/DT_Hybrid_GPL_1.00.052/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib 
+LDFLAGS =  -L/usr1/xuhui/DT-W724V-20140311/output/host/usr/mips-unknown-linux-uclibc/sysroot/lib 
 LIBS =  -Llib/neon -lneon -lssl_openssl -lcrypto_openssl  -lgplutil
 
 TARGET = $(PACKAGE)

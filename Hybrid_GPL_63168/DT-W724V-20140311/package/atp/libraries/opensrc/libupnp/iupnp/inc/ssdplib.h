@@ -72,7 +72,7 @@ typedef enum SsdpSearchType {
 	SSDP_SERVICE
 } SType;
 
-#define BUFSIZE   2500
+#define BUFSIZE   (size_t)2500
 #define SSDP_IP   "239.255.255.250"
 #define SSDP_IPV6_LINKLOCAL "FF02::C"
 #define SSDP_IPV6_SITELOCAL "FF05::C"
